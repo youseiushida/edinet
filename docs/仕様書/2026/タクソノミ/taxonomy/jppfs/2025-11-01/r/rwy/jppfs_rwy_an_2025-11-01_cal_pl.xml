@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_StatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfIncome"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_StatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeBeforeIncomeTaxes" xlink:label="IncomeBeforeIncomeTaxes"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLoss" xlink:to="IncomeBeforeIncomeTaxes" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncome" xlink:label="OrdinaryIncome"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="IncomeBeforeIncomeTaxes" xlink:to="OrdinaryIncome" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncome" xlink:label="OperatingIncome"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OrdinaryIncome" xlink:to="OperatingIncome" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeRailwayRWY" xlink:label="OperatingIncomeRailwayRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncome" xlink:to="OperatingIncomeRailwayRWY" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRailwayRWY" xlink:label="OperatingRevenueRailwayRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncomeRailwayRWY" xlink:to="OperatingRevenueRailwayRWY" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PassengerTransportationORRWY" xlink:label="PassengerTransportationORRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingRevenueRailwayRWY" xlink:to="PassengerTransportationORRWY" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_FreightTransportationORRWY" xlink:label="FreightTransportationORRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingRevenueRailwayRWY" xlink:to="FreightTransportationORRWY" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TrackageRevenueORRWY" xlink:label="TrackageRevenueORRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingRevenueRailwayRWY" xlink:to="TrackageRevenueORRWY" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransferOfRailroadLineORRWY" xlink:label="TransferOfRailroadLineORRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingRevenueRailwayRWY" xlink:to="TransferOfRailroadLineORRWY" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MiscellaneousIncomeOfTransportationORRWY" xlink:label="MiscellaneousIncomeOfTransportationORRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingRevenueRailwayRWY" xlink:to="MiscellaneousIncomeOfTransportationORRWY" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRailwayRWY" xlink:label="OperatingExpensesRailwayRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncomeRailwayRWY" xlink:to="OperatingExpensesRailwayRWY" order="2.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransportationExpensesOERWY" xlink:label="TransportationExpensesOERWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesRailwayRWY" xlink:to="TransportationExpensesOERWY" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AdvertisingExpensesOERWY" xlink:label="AdvertisingExpensesOERWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesRailwayRWY" xlink:to="AdvertisingExpensesOERWY" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_WelfareFacilitiesExpensesOERWY" xlink:label="WelfareFacilitiesExpensesOERWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesRailwayRWY" xlink:to="WelfareFacilitiesExpensesOERWY" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GeneralAndAdministrativeExpensesOERWY" xlink:label="GeneralAndAdministrativeExpensesOERWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesRailwayRWY" xlink:to="GeneralAndAdministrativeExpensesOERWY" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesOERWY" xlink:label="TaxesOERWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesRailwayRWY" xlink:to="TaxesOERWY" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationOERWY" xlink:label="DepreciationOERWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesRailwayRWY" xlink:to="DepreciationOERWY" order="6.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeRelatedRWY" xlink:label="OperatingIncomeRelatedRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncome" xlink:to="OperatingIncomeRelatedRWY" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRelatedRWY" xlink:label="OperatingRevenueRelatedRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncomeRelatedRWY" xlink:to="OperatingRevenueRelatedRWY" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRelatedRWY" xlink:label="OperatingExpensesRelatedRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncomeRelatedRWY" xlink:to="OperatingExpensesRelatedRWY" order="2.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingIncome" xlink:label="NonOperatingIncome"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OrdinaryIncome" xlink:to="NonOperatingIncome" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestAndDiscountsEarnedNOIRWY" xlink:label="InterestAndDiscountsEarnedNOIRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingIncome" xlink:to="InterestAndDiscountsEarnedNOIRWY" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnSecuritiesNOI" xlink:label="InterestOnSecuritiesNOI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingIncome" xlink:to="InterestOnSecuritiesNOI" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsIncomeNOI" xlink:label="DividendsIncomeNOI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingIncome" xlink:to="DividendsIncomeNOI" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfSecuritiesNOI" xlink:label="GainOnSalesOfSecuritiesNOI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingIncome" xlink:to="GainOnSalesOfSecuritiesNOI" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnValuationOfSecuritiesNOI" xlink:label="GainOnValuationOfSecuritiesNOI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingIncome" xlink:to="GainOnValuationOfSecuritiesNOI" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfGoodsNOIRWY" xlink:label="GainOnSalesOfGoodsNOIRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingIncome" xlink:to="GainOnSalesOfGoodsNOIRWY" order="6.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLandRentNOIRWY" xlink:label="RevenueLandRentNOIRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingIncome" xlink:to="RevenueLandRentNOIRWY" order="7.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MiscellaneousIncomeNOIRWY" xlink:label="MiscellaneousIncomeNOIRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingIncome" xlink:to="MiscellaneousIncomeNOIRWY" order="8.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingExpenses" xlink:label="NonOperatingExpenses"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OrdinaryIncome" xlink:to="NonOperatingExpenses" order="3.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestAndDiscountsExpensesNOERWY" xlink:label="InterestAndDiscountsExpensesNOERWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingExpenses" xlink:to="InterestAndDiscountsExpensesNOERWY" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnBondsNOE" xlink:label="InterestOnBondsNOE"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingExpenses" xlink:to="InterestOnBondsNOE" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfSecuritiesNOE" xlink:label="LossOnSalesOfSecuritiesNOE"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingExpenses" xlink:to="LossOnSalesOfSecuritiesNOE" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnValuationOfSecuritiesNOE" xlink:label="LossOnValuationOfSecuritiesNOE"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingExpenses" xlink:to="LossOnValuationOfSecuritiesNOE" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfGoodsNOERWY" xlink:label="LossOnSalesOfGoodsNOERWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingExpenses" xlink:to="LossOnSalesOfGoodsNOERWY" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MiscellaneousExpensesNOERWY" xlink:label="MiscellaneousExpensesNOERWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NonOperatingExpenses" xlink:to="MiscellaneousExpensesNOERWY" order="6.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryIncome" xlink:label="ExtraordinaryIncome"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="IncomeBeforeIncomeTaxes" xlink:to="ExtraordinaryIncome" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfNoncurrentAssetsEI" xlink:label="GainOnSalesOfNoncurrentAssetsEI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryIncome" xlink:to="GainOnSalesOfNoncurrentAssetsEI" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnNegativeGoodwillEI" xlink:label="GainOnNegativeGoodwillEI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryIncome" xlink:to="GainOnNegativeGoodwillEI" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SubsidyEIRWY" xlink:label="SubsidyEIRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryIncome" xlink:to="SubsidyEIRWY" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EvaluationOnRailwayFacilitiesAsReceivedPropertyEIRWY" xlink:label="EvaluationOnRailwayFacilitiesAsReceivedPropertyEIRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryIncome" xlink:to="EvaluationOnRailwayFacilitiesAsReceivedPropertyEIRWY" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DonationForRailwayFacilitiesConstructionEIRWY" xlink:label="DonationForRailwayFacilitiesConstructionEIRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryIncome" xlink:to="DonationForRailwayFacilitiesConstructionEIRWY" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ReversalOfSpecialReserveForExpansionOfRailwayTransportCapacityEIRWY" xlink:label="ReversalOfSpecialReserveForExpansionOfRailwayTransportCapacityEIRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryIncome" xlink:to="ReversalOfSpecialReserveForExpansionOfRailwayTransportCapacityEIRWY" order="6.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryLoss" xlink:label="ExtraordinaryLoss"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="IncomeBeforeIncomeTaxes" xlink:to="ExtraordinaryLoss" order="3.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfNoncurrentAssetsEL" xlink:label="LossOnSalesOfNoncurrentAssetsEL"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="LossOnSalesOfNoncurrentAssetsEL" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ImpairmentLossEL" xlink:label="ImpairmentLossEL"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="ImpairmentLossEL" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonrecurringLossEL" xlink:label="NonrecurringLossEL"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="NonrecurringLossEL" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RetirementExpensesELRWY" xlink:label="RetirementExpensesELRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="RetirementExpensesELRWY" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfDeferredDisasterLossRWY" xlink:label="AmortizationOfDeferredDisasterLossRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="AmortizationOfDeferredDisasterLossRWY" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfSpecialReserveForExpansionOfRailwayTransportCapacityELRWY" xlink:label="ProvisionOfSpecialReserveForExpansionOfRailwayTransportCapacityELRWY"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="ProvisionOfSpecialReserveForExpansionOfRailwayTransportCapacityELRWY" order="6.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxes" xlink:label="IncomeTaxes"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLoss" xlink:to="IncomeTaxes" order="2.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesCurrent" xlink:label="IncomeTaxesCurrent"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="IncomeTaxes" xlink:to="IncomeTaxesCurrent" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesDeferred" xlink:label="IncomeTaxesDeferred"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="IncomeTaxes" xlink:to="IncomeTaxesDeferred" order="2.0" weight="1"/>
+  </link:calculationLink>
+</link:linkbase>

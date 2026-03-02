@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_SemiAnnualStatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualStatementOfIncome"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_SemiAnnualStatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonConsolidatedMember" xlink:label="NonConsolidatedMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="NonConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeTable" xlink:label="StatementOfIncomeTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="StatementOfIncomeTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeLineItems" xlink:label="StatementOfIncomeLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetSales" xlink:label="NetSales"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="NetSales" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSales" xlink:label="CostOfSales"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="CostOfSales" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesCurrent" xlink:label="IncomeTaxesCurrent"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesCurrent" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesForGlobalMinimumTax" xlink:label="IncomeTaxesForGlobalMinimumTax"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesForGlobalMinimumTax" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesDeferred" xlink:label="IncomeTaxesDeferred"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesDeferred" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GrossProfit" xlink:label="GrossProfit"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="GrossProfit" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncome" xlink:label="OperatingIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncome" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncome" xlink:label="OrdinaryIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="OrdinaryIncome" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeBeforeIncomeTaxes" xlink:label="IncomeBeforeIncomeTaxes"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeBeforeIncomeTaxes" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxes" xlink:label="IncomeTaxes"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxes" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="ProfitLoss" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SemiAnnualStatementOfIncomeHeading" xlink:label="SemiAnnualStatementOfIncomeHeading"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="SemiAnnualStatementOfIncomeHeading" xlink:to="StatementOfIncomeTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SemiAnnualStatementOfIncomeHeading" xlink:to="StatementOfIncomeLineItems" order="1.0"/>
+  </link:definitionLink>
+</link:linkbase>

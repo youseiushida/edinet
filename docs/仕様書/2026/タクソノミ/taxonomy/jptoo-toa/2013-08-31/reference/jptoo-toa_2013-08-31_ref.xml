@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CoverPageHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CoverPageHeading" xlink:to="reference_CoverPageHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_NameOfSubjectCompanyHeading" xlink:label="NameOfSubjectCompanyHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfSubjectCompanyHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfSubjectCompanyHeading" xlink:to="reference_NameOfSubjectCompanyHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_NameOfSubjectCompanyTextBlock" xlink:label="NameOfSubjectCompanyTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfSubjectCompanyTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfSubjectCompanyTextBlock" xlink:to="reference_NameOfSubjectCompanyTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_ResponsesToInquiriesHeading" xlink:label="ResponsesToInquiriesHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ResponsesToInquiriesHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ResponsesToInquiriesHeading" xlink:to="reference_ResponsesToInquiriesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_ResponsesToInquiriesTextBlock" xlink:label="ResponsesToInquiriesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ResponsesToInquiriesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ResponsesToInquiriesTextBlock" xlink:to="reference_ResponsesToInquiriesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DocumentTitleCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DocumentTitleCoverPage" xlink:to="reference_DocumentTitleCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceOfFilingCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceOfFilingCoverPage" xlink:to="reference_PlaceOfFilingCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_DateWhenPositionStatementWasReceivedCoverPage" xlink:label="DateWhenPositionStatementWasReceivedCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DateWhenPositionStatementWasReceivedCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DateWhenPositionStatementWasReceivedCoverPage" xlink:to="reference_DateWhenPositionStatementWasReceivedCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilingDateCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilingDateCoverPage" xlink:to="reference_FilingDateCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_FullNameOrNameOfFilerCoverPage" xlink:label="FullNameOrNameOfFilerCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FullNameOrNameOfFilerCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FullNameOrNameOfFilerCoverPage" xlink:to="reference_FullNameOrNameOfFilerCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_ResidentialAddressOrLocationOfFilerCoverPage" xlink:label="ResidentialAddressOrLocationOfFilerCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ResidentialAddressOrLocationOfFilerCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ResidentialAddressOrLocationOfFilerCoverPage" xlink:to="reference_ResidentialAddressOrLocationOfFilerCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_NearestPlaceOfContactCoverPage" xlink:label="NearestPlaceOfContactCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NearestPlaceOfContactCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NearestPlaceOfContactCoverPage" xlink:to="reference_NearestPlaceOfContactCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_TelephoneNumberCoverPage" xlink:label="TelephoneNumberCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TelephoneNumberCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TelephoneNumberCoverPage" xlink:to="reference_TelephoneNumberCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_NameOfContactPersonCoverPage" xlink:label="NameOfContactPersonCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfContactPersonCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfContactPersonCoverPage" xlink:to="reference_NameOfContactPersonCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_PlaceForPublicInspectionCoverPageTextBlock" xlink:label="PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceForPublicInspectionCoverPageTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2012-02-15</ref:IssueDate>
+      <ref:Article>第八号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceForPublicInspectionCoverPageTextBlock" xlink:to="reference_PlaceForPublicInspectionCoverPageTextBlock"/>
+  </link:referenceLink>
+</link:linkbase>

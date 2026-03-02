@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo112SemiannualSecuritiesReport" xlink:type="simple" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo112SemiannualSecuritiesReport"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo112SemiannualSecuritiesReport">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_SemiAnnualBalanceSheetHeading" xlink:label="SemiAnnualBalanceSheetHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_SemiAnnualBalanceSheetTextBlock" xlink:label="SemiAnnualBalanceSheetTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SemiAnnualBalanceSheetHeading" xlink:to="SemiAnnualBalanceSheetTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_SemiAnnualStatementOfCashFlowsHeading" xlink:label="SemiAnnualStatementOfCashFlowsHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_SemiAnnualStatementOfCashFlowsTextBlock" xlink:label="SemiAnnualStatementOfCashFlowsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SemiAnnualStatementOfCashFlowsHeading" xlink:to="SemiAnnualStatementOfCashFlowsTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_SemiAnnualStatementOfIncomeHeading" xlink:label="SemiAnnualStatementOfIncomeHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_SemiAnnualStatementOfIncomeTextBlock" xlink:label="SemiAnnualStatementOfIncomeTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SemiAnnualStatementOfIncomeHeading" xlink:to="SemiAnnualStatementOfIncomeTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_InformationAboutIssuerAndPartiesInvolvedHeading" xlink:label="InformationAboutIssuerAndPartiesInvolvedHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_InformationAboutIssuerHeading" xlink:label="InformationAboutIssuerHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutIssuerAndPartiesInvolvedHeading" xlink:to="InformationAboutIssuerHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_FinancialInformationHeading" xlink:label="FinancialInformationHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutIssuerHeading" xlink:to="FinancialInformationHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_SemiAnnualStatementOfMembersEquityHeading" xlink:label="SemiAnnualStatementOfMembersEquityHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_SemiAnnualStatementOfMembersEquityTextBlock" xlink:label="SemiAnnualStatementOfMembersEquityTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SemiAnnualStatementOfMembersEquityHeading" xlink:to="SemiAnnualStatementOfMembersEquityTextBlock" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FinancialInformationHeading" xlink:to="SemiAnnualBalanceSheetHeading" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FinancialInformationHeading" xlink:to="SemiAnnualStatementOfIncomeHeading" order="2.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FinancialInformationHeading" xlink:to="SemiAnnualStatementOfMembersEquityHeading" order="3.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FinancialInformationHeading" xlink:to="SemiAnnualStatementOfCashFlowsHeading" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo112SemiannualSecuritiesReportHeading" xlink:label="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo112SemiannualSecuritiesReportHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo112SemiannualSecuritiesReportHeading" xlink:to="InformationAboutIssuerAndPartiesInvolvedHeading" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

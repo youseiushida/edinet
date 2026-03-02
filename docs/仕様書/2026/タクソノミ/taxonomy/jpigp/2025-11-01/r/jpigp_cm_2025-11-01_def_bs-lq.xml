@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_StatementOfFinancialPositionIFRS-ListOfAccounts-02" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_StatementOfFinancialPositionIFRS-ListOfAccounts-02"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_StatementOfFinancialPositionIFRS-ListOfAccounts-02">
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_StatementOfFinancialPositionIFRSLineItems" xlink:label="StatementOfFinancialPositionIFRSLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AssetsIFRSAbstract" xlink:label="AssetsIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfFinancialPositionIFRSLineItems" xlink:to="AssetsIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CashAndCashEquivalentsIFRS" xlink:label="CashAndCashEquivalentsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="CashAndCashEquivalentsIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TradeAndOtherReceivablesAssetsIFRS" xlink:label="TradeAndOtherReceivablesAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="TradeAndOtherReceivablesAssetsIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TradeAndOtherReceivables2AssetsIFRS" xlink:label="TradeAndOtherReceivables2AssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="TradeAndOtherReceivables2AssetsIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TradeAndOtherReceivables3AssetsIFRS" xlink:label="TradeAndOtherReceivables3AssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="TradeAndOtherReceivables3AssetsIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TradeReceivablesAssetsIFRS" xlink:label="TradeReceivablesAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="TradeReceivablesAssetsIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TradeReceivables2AssetsIFRS" xlink:label="TradeReceivables2AssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="TradeReceivables2AssetsIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ContractAssetsAssetsIFRS" xlink:label="ContractAssetsAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="ContractAssetsAssetsIFRS" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceLeaseReceivablesAssetsIFRS" xlink:label="FinanceLeaseReceivablesAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="FinanceLeaseReceivablesAssetsIFRS" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IncomeTaxesReceivableAssetsIFRS" xlink:label="IncomeTaxesReceivableAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="IncomeTaxesReceivableAssetsIFRS" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AssetsHeldForSaleIFRS" xlink:label="AssetsHeldForSaleIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="AssetsHeldForSaleIFRS" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_MarketableSecuritiesAssetsIFRS" xlink:label="MarketableSecuritiesAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="MarketableSecuritiesAssetsIFRS" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_InvestmentsAccountedForUsingEquityMethodIFRS" xlink:label="InvestmentsAccountedForUsingEquityMethodIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="InvestmentsAccountedForUsingEquityMethodIFRS" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherInvestmentsIFRS" xlink:label="OtherInvestmentsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="OtherInvestmentsIFRS" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DerivativeAssetsAssetsIFRS" xlink:label="DerivativeAssetsAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="DerivativeAssetsAssetsIFRS" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RetirementBenefitAssetAssetsIFRS" xlink:label="RetirementBenefitAssetAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="RetirementBenefitAssetAssetsIFRS" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DefinedBenefitAssetAssetsIFRS" xlink:label="DefinedBenefitAssetAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="DefinedBenefitAssetAssetsIFRS" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PropertyPlantAndEquipmentIFRS" xlink:label="PropertyPlantAndEquipmentIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="PropertyPlantAndEquipmentIFRS" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RightOfUseAssetsIFRS" xlink:label="RightOfUseAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="RightOfUseAssetsIFRS" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GoodwillAndIntangibleAssetsIFRS" xlink:label="GoodwillAndIntangibleAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="GoodwillAndIntangibleAssetsIFRS" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GoodwillIFRS" xlink:label="GoodwillIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="GoodwillIFRS" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IntangibleAssetsIFRS" xlink:label="IntangibleAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="IntangibleAssetsIFRS" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherIntangibleAssetsIFRS" xlink:label="OtherIntangibleAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="OtherIntangibleAssetsIFRS" order="22.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_InvestmentPropertyIFRS" xlink:label="InvestmentPropertyIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="InvestmentPropertyIFRS" order="23.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DeferredTaxAssetsIFRS" xlink:label="DeferredTaxAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="DeferredTaxAssetsIFRS" order="24.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherFinancialAssetsAssetsIFRS" xlink:label="OtherFinancialAssetsAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="OtherFinancialAssetsAssetsIFRS" order="25.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherAssetsAssetsIFRS" xlink:label="OtherAssetsAssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="OtherAssetsAssetsIFRS" order="26.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AssetsIFRS" xlink:label="AssetsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AssetsIFRSAbstract" xlink:to="AssetsIFRS" order="27.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LiabilitiesAndEquityIFRSAbstract" xlink:label="LiabilitiesAndEquityIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfFinancialPositionIFRSLineItems" xlink:to="LiabilitiesAndEquityIFRSAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LiabilitiesIFRSAbstract" xlink:label="LiabilitiesIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesAndEquityIFRSAbstract" xlink:to="LiabilitiesIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TradeAndOtherPayablesLiabilitiesIFRS" xlink:label="TradeAndOtherPayablesLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="TradeAndOtherPayablesLiabilitiesIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TradePayablesLiabilitiesIFRS" xlink:label="TradePayablesLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="TradePayablesLiabilitiesIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ContractLiabilitiesLiabilitiesIFRS" xlink:label="ContractLiabilitiesLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="ContractLiabilitiesLiabilitiesIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LiabilitiesDirectlyAssociatedWithAssetsHeldForSaleIFRS" xlink:label="LiabilitiesDirectlyAssociatedWithAssetsHeldForSaleIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="LiabilitiesDirectlyAssociatedWithAssetsHeldForSaleIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IncomeTaxesPayableLiabilitiesIFRS" xlink:label="IncomeTaxesPayableLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="IncomeTaxesPayableLiabilitiesIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_InterestBearingLiabilitiesLiabilitiesIFRS" xlink:label="InterestBearingLiabilitiesLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="InterestBearingLiabilitiesLiabilitiesIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_BondsAndBorrowingsLiabilitiesIFRS" xlink:label="BondsAndBorrowingsLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="BondsAndBorrowingsLiabilitiesIFRS" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_BondsPayableLiabilitiesIFRS" xlink:label="BondsPayableLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="BondsPayableLiabilitiesIFRS" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_BorrowingsLiabilitiesIFRS" xlink:label="BorrowingsLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="BorrowingsLiabilitiesIFRS" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LeaseLiabilitiesLiabilitiesIFRS" xlink:label="LeaseLiabilitiesLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="LeaseLiabilitiesLiabilitiesIFRS" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DerivativeLiabilitiesLiabilitiesIFRS" xlink:label="DerivativeLiabilitiesLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="DerivativeLiabilitiesLiabilitiesIFRS" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RetirementBenefitLiabilityLiabilitiesIFRS" xlink:label="RetirementBenefitLiabilityLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="RetirementBenefitLiabilityLiabilitiesIFRS" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DefinedBenefitLiabilityLiabilitiesIFRS" xlink:label="DefinedBenefitLiabilityLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="DefinedBenefitLiabilityLiabilitiesIFRS" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProvisionsLiabilitiesIFRS" xlink:label="ProvisionsLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="ProvisionsLiabilitiesIFRS" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DeferredTaxLiabilitiesIFRS" xlink:label="DeferredTaxLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="DeferredTaxLiabilitiesIFRS" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherFinancialLiabilitiesLiabilitiesIFRS" xlink:label="OtherFinancialLiabilitiesLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="OtherFinancialLiabilitiesLiabilitiesIFRS" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherLiabilitiesLiabilitiesIFRS" xlink:label="OtherLiabilitiesLiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="OtherLiabilitiesLiabilitiesIFRS" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LiabilitiesIFRS" xlink:label="LiabilitiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesIFRSAbstract" xlink:to="LiabilitiesIFRS" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_EquityIFRSAbstract" xlink:label="EquityIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesAndEquityIFRSAbstract" xlink:to="EquityIFRSAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_EquityAttributableToOwnersOfParentIFRSAbstract" xlink:label="EquityAttributableToOwnersOfParentIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EquityIFRSAbstract" xlink:to="EquityAttributableToOwnersOfParentIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ShareCapitalIFRS" xlink:label="ShareCapitalIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EquityAttributableToOwnersOfParentIFRSAbstract" xlink:to="ShareCapitalIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CapitalSurplusIFRS" xlink:label="CapitalSurplusIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EquityAttributableToOwnersOfParentIFRSAbstract" xlink:to="CapitalSurplusIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RetainedEarningsIFRS" xlink:label="RetainedEarningsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EquityAttributableToOwnersOfParentIFRSAbstract" xlink:to="RetainedEarningsIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TreasurySharesIFRS" xlink:label="TreasurySharesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EquityAttributableToOwnersOfParentIFRSAbstract" xlink:to="TreasurySharesIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherComponentsOfEquityIFRS" xlink:label="OtherComponentsOfEquityIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EquityAttributableToOwnersOfParentIFRSAbstract" xlink:to="OtherComponentsOfEquityIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AccumulatedOtherComprehensiveIncomeIFRS" xlink:label="AccumulatedOtherComprehensiveIncomeIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherComponentsOfEquityIFRS" xlink:to="AccumulatedOtherComprehensiveIncomeIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RemeasurementsOfDefinedBenefitPlansEquityIFRS" xlink:label="RemeasurementsOfDefinedBenefitPlansEquityIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AccumulatedOtherComprehensiveIncomeIFRS" xlink:to="RemeasurementsOfDefinedBenefitPlansEquityIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncomeEquityIFRS" xlink:label="FinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncomeEquityIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AccumulatedOtherComprehensiveIncomeIFRS" xlink:to="FinancialAssetsMeasuredAtFairValueThroughOtherComprehensiveIncomeEquityIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ExchangeDifferencesOnTranslationOfForeignOperationsEquityIFRS" xlink:label="ExchangeDifferencesOnTranslationOfForeignOperationsEquityIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AccumulatedOtherComprehensiveIncomeIFRS" xlink:to="ExchangeDifferencesOnTranslationOfForeignOperationsEquityIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_EffectivePortionOfCashFlowHedgesEquityIFRS" xlink:label="EffectivePortionOfCashFlowHedgesEquityIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="AccumulatedOtherComprehensiveIncomeIFRS" xlink:to="EffectivePortionOfCashFlowHedgesEquityIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_EquityAttributableToOwnersOfParentIFRS" xlink:label="EquityAttributableToOwnersOfParentIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EquityAttributableToOwnersOfParentIFRSAbstract" xlink:to="EquityAttributableToOwnersOfParentIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_NonControllingInterestsIFRS" xlink:label="NonControllingInterestsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EquityIFRSAbstract" xlink:to="NonControllingInterestsIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_EquityIFRS" xlink:label="EquityIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EquityIFRSAbstract" xlink:to="EquityIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LiabilitiesAndEquityIFRS" xlink:label="LiabilitiesAndEquityIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="LiabilitiesAndEquityIFRSAbstract" xlink:to="LiabilitiesAndEquityIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_StatementOfFinancialPositionIFRSAbstract" xlink:label="StatementOfFinancialPositionIFRSAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_StatementOfFinancialPositionIFRSTable" xlink:label="StatementOfFinancialPositionIFRSTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfFinancialPositionIFRSAbstract" xlink:to="StatementOfFinancialPositionIFRSTable" order="1.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfFinancialPositionIFRSAbstract" xlink:to="StatementOfFinancialPositionIFRSLineItems" order="2.0"/>
+  </link:definitionLink>
+</link:linkbase>

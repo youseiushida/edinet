@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_inv_StatementOfCashFlows-ListOfAccounts" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_inv_StatementOfCashFlows-ListOfAccounts"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_inv_StatementOfCashFlows-ListOfAccounts">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfCashFlowsAbstract" xlink:label="StatementOfCashFlowsAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfCashFlowsTable" xlink:label="StatementOfCashFlowsTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsAbstract" xlink:to="StatementOfCashFlowsTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfCashFlowsLineItems" xlink:label="StatementOfCashFlowsLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsAbstract" xlink:to="StatementOfCashFlowsLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInOperatingActivitiesAbstract" xlink:label="NetCashProvidedByUsedInOperatingActivitiesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsLineItems" xlink:to="NetCashProvidedByUsedInOperatingActivitiesAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SubtotalOpeCF" xlink:label="SubtotalOpeCF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInOperatingActivitiesAbstract" xlink:to="SubtotalOpeCF" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InvestmentUnitIssuanceExpensesOpeCFINV" xlink:label="InvestmentUnitIssuanceExpensesOpeCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="InvestmentUnitIssuanceExpensesOpeCFINV" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfInvestmentUnitIssuanceExpensesOpeCFINV" xlink:label="AmortizationOfInvestmentUnitIssuanceExpensesOpeCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="AmortizationOfInvestmentUnitIssuanceExpensesOpeCFINV" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InvestmentCorporationBondIssuanceCostsOpeCFINV" xlink:label="InvestmentCorporationBondIssuanceCostsOpeCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="InvestmentCorporationBondIssuanceCostsOpeCFINV" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfInvestmentCorporationBondIssuanceCostsOpeCFINV" xlink:label="AmortizationOfInvestmentCorporationBondIssuanceCostsOpeCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="AmortizationOfInvestmentCorporationBondIssuanceCostsOpeCFINV" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_FinancingFeesOpeCFINV" xlink:label="FinancingFeesOpeCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="FinancingFeesOpeCFINV" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ReversalOfDistributionPayableOpeCFINV" xlink:label="ReversalOfDistributionPayableOpeCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="ReversalOfDistributionPayableOpeCFINV" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DecreaseIncreaseInOperatingAccountsReceivableOpeCFINV" xlink:label="DecreaseIncreaseInOperatingAccountsReceivableOpeCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="DecreaseIncreaseInOperatingAccountsReceivableOpeCFINV" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncreaseDecreaseInOperatingAccountsPayableOpeCFINV" xlink:label="IncreaseDecreaseInOperatingAccountsPayableOpeCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="IncreaseDecreaseInOperatingAccountsPayableOpeCFINV" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DecreaseInPropertyPlantAndEquipmentDueToSaleOpeCFINV" xlink:label="DecreaseInPropertyPlantAndEquipmentDueToSaleOpeCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="DecreaseInPropertyPlantAndEquipmentDueToSaleOpeCFINV" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DecreaseInPropertyPlantAndEquipmentInTrustDueToSaleOpeCFINV" xlink:label="DecreaseInPropertyPlantAndEquipmentInTrustDueToSaleOpeCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="DecreaseInPropertyPlantAndEquipmentInTrustDueToSaleOpeCFINV" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:label="NetCashProvidedByUsedInInvestmentActivitiesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsLineItems" xlink:to="NetCashProvidedByUsedInInvestmentActivitiesAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PurchaseOfPropertyPlantAndEquipmentInTrustInvCFINV" xlink:label="PurchaseOfPropertyPlantAndEquipmentInTrustInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="PurchaseOfPropertyPlantAndEquipmentInTrustInvCFINV" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PurchaseOfIntangibleAssetsInTrustInvCFINV" xlink:label="PurchaseOfIntangibleAssetsInTrustInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="PurchaseOfIntangibleAssetsInTrustInvCFINV" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProceedsFromRepaymentsOfInvestmentSecuritiesInvCFINV" xlink:label="ProceedsFromRepaymentsOfInvestmentSecuritiesInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="ProceedsFromRepaymentsOfInvestmentSecuritiesInvCFINV" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProceedsFromTenantLeaseholdAndSecurityDepositsInTrustInvCFINV" xlink:label="ProceedsFromTenantLeaseholdAndSecurityDepositsInTrustInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="ProceedsFromTenantLeaseholdAndSecurityDepositsInTrustInvCFINV" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RepaymentsOfTenantLeaseholdAndSecurityDepositsInTrustInvCFINV" xlink:label="RepaymentsOfTenantLeaseholdAndSecurityDepositsInTrustInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="RepaymentsOfTenantLeaseholdAndSecurityDepositsInTrustInvCFINV" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProceedsFromTenantLeaseholdAndSecurityDepositsInvCFINV" xlink:label="ProceedsFromTenantLeaseholdAndSecurityDepositsInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="ProceedsFromTenantLeaseholdAndSecurityDepositsInvCFINV" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RepaymentsOfTenantLeaseholdAndSecurityDepositsInvCFINV" xlink:label="RepaymentsOfTenantLeaseholdAndSecurityDepositsInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="RepaymentsOfTenantLeaseholdAndSecurityDepositsInvCFINV" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PaymentsOfLeaseholdAndGuaranteeDepositsInTrustInvCFINV" xlink:label="PaymentsOfLeaseholdAndGuaranteeDepositsInTrustInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="PaymentsOfLeaseholdAndGuaranteeDepositsInTrustInvCFINV" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProceedsFromRefundOfLeaseholdAndGuaranteeDepositsInTrustInvCFINV" xlink:label="ProceedsFromRefundOfLeaseholdAndGuaranteeDepositsInTrustInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="ProceedsFromRefundOfLeaseholdAndGuaranteeDepositsInTrustInvCFINV" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PaymentsOfLeaseholdAndGuaranteeDepositsInvCFINV" xlink:label="PaymentsOfLeaseholdAndGuaranteeDepositsInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="PaymentsOfLeaseholdAndGuaranteeDepositsInvCFINV" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProceedsFromRefundOfLeaseholdAndGuaranteeDepositsInvCFINV" xlink:label="ProceedsFromRefundOfLeaseholdAndGuaranteeDepositsInvCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="ProceedsFromRefundOfLeaseholdAndGuaranteeDepositsInvCFINV" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:label="NetCashProvidedByUsedInFinancingActivitiesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsLineItems" xlink:to="NetCashProvidedByUsedInFinancingActivitiesAbstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProceedsFromIssuanceOfInvestmentCorporationBondsFinCFINV" xlink:label="ProceedsFromIssuanceOfInvestmentCorporationBondsFinCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="ProceedsFromIssuanceOfInvestmentCorporationBondsFinCFINV" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PaymentsOfInvestmentCorporationBondIssuanceCostsFinCFINV" xlink:label="PaymentsOfInvestmentCorporationBondIssuanceCostsFinCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="PaymentsOfInvestmentCorporationBondIssuanceCostsFinCFINV" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RedemptionOfInvestmentCorporationBondsFinCFINV" xlink:label="RedemptionOfInvestmentCorporationBondsFinCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="RedemptionOfInvestmentCorporationBondsFinCFINV" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProceedsFromIssuanceOfInvestmentUnitsFinCFINV" xlink:label="ProceedsFromIssuanceOfInvestmentUnitsFinCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="ProceedsFromIssuanceOfInvestmentUnitsFinCFINV" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PurchaseOfTreasuryInvestmentUnitsFinCFINV" xlink:label="PurchaseOfTreasuryInvestmentUnitsFinCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="PurchaseOfTreasuryInvestmentUnitsFinCFINV" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsPaidFinCFINV" xlink:label="DividendsPaidFinCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="DividendsPaidFinCFINV" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EarningsDistributionsPaidFinCFINV" xlink:label="EarningsDistributionsPaidFinCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="EarningsDistributionsPaidFinCFINV" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DistributionsPaidInExcessOfEarningsFinCFINV" xlink:label="DistributionsPaidInExcessOfEarningsFinCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="DistributionsPaidInExcessOfEarningsFinCFINV" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DistributionsPaidInExcessOfEarningsFromAllowanceForTemporaryDifferenceAdjustmentsFinCFINV" xlink:label="DistributionsPaidInExcessOfEarningsFromAllowanceForTemporaryDifferenceAdjustmentsFinCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="DistributionsPaidInExcessOfEarningsFromAllowanceForTemporaryDifferenceAdjustmentsFinCFINV" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PaymentsForInvestmentUnitIssuanceExpensesFinCFINV" xlink:label="PaymentsForInvestmentUnitIssuanceExpensesFinCFINV"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:to="PaymentsForInvestmentUnitIssuanceExpensesFinCFINV" order="10.0"/>
+  </link:definitionLink>
+</link:linkbase>

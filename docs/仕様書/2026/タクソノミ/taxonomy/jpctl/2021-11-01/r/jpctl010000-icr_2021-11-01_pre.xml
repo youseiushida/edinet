@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpctl/rol_std_CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReport" xlink:type="simple" xlink:href="../jpctl_rt_2021-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReport"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpctl/rol_std_CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReport">
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading" xlink:label="CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading" xlink:to="CoverPageHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading" xlink:label="BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading" xlink:to="BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_BasicFrameworkOfInternalControlRelatedToFinancialReportingTextBlock" xlink:label="BasicFrameworkOfInternalControlRelatedToFinancialReportingTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading" xlink:to="BasicFrameworkOfInternalControlRelatedToFinancialReportingTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_ScopeDateAndProceduresForEvaluationHeading" xlink:label="ScopeDateAndProceduresForEvaluationHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading" xlink:to="ScopeDateAndProceduresForEvaluationHeading" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_ScopeDateAndProceduresForEvaluationTextBlock" xlink:label="ScopeDateAndProceduresForEvaluationTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ScopeDateAndProceduresForEvaluationHeading" xlink:to="ScopeDateAndProceduresForEvaluationTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_ResultOfEvaluationHeading" xlink:label="ResultOfEvaluationHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading" xlink:to="ResultOfEvaluationHeading" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_ResultOfEvaluationTextBlock" xlink:label="ResultOfEvaluationTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ResultOfEvaluationHeading" xlink:to="ResultOfEvaluationTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_SupplementaryInformationHeading" xlink:label="SupplementaryInformationHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading" xlink:to="SupplementaryInformationHeading" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_SupplementaryInformationTextBlock" xlink:label="SupplementaryInformationTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SupplementaryInformationHeading" xlink:to="SupplementaryInformationTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_OtherInformationForSpecialAttentionHeading" xlink:label="OtherInformationForSpecialAttentionHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading" xlink:to="OtherInformationForSpecialAttentionHeading" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_OtherInformationForSpecialAttentionTextBlock" xlink:label="OtherInformationForSpecialAttentionTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherInformationForSpecialAttentionHeading" xlink:to="OtherInformationForSpecialAttentionTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_IndependentAuditorsReportHeading" xlink:label="IndependentAuditorsReportHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading" xlink:to="IndependentAuditorsReportHeading" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_IndependentAuditorsReportTextBlock" xlink:label="IndependentAuditorsReportTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="IndependentAuditorsReportHeading" xlink:to="IndependentAuditorsReportTextBlock" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

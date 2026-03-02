@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="jpcrp050000-ssr-001_X99006-000_2026-09-30_01_2026-12-13.xsd#jpcrp050000-ssr_X99006-000_NotesRegardingHandlingOfConsumptionTaxesTextBlock" xlink:label="NotesRegardingHandlingOfConsumptionTaxesTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_NotesRegardingHandlingOfConsumptionTaxesTextBlock" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">消費税等の取扱いの注記</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="NotesRegardingHandlingOfConsumptionTaxesTextBlock" xlink:to="label_NotesRegardingHandlingOfConsumptionTaxesTextBlock" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_NotesRegardingHandlingOfConsumptionTaxesTextBlock_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">消費税等の取扱いの注記 [テキストブロック]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="NotesRegardingHandlingOfConsumptionTaxesTextBlock" xlink:to="label_NotesRegardingHandlingOfConsumptionTaxesTextBlock_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp050000-ssr-001_X99006-000_2026-09-30_01_2026-12-13.xsd#jpcrp050000-ssr_X99006-000_ReserveForA" xlink:label="ReserveForA"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForA" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">A引当金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForA" xlink:to="label_ReserveForA" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForA_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">A引当金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForA" xlink:to="label_ReserveForA_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp050000-ssr-001_X99006-000_2026-09-30_01_2026-12-13.xsd#jpcrp050000-ssr_X99006-000_TransportationReportableSegmentMember" xlink:label="TransportationReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_TransportationReportableSegmentMember" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">運輸、報告セグメント [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="TransportationReportableSegmentMember" xlink:to="label_TransportationReportableSegmentMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_TransportationReportableSegmentMember_2" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">運輸</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="TransportationReportableSegmentMember" xlink:to="label_TransportationReportableSegmentMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp050000-ssr-001_X99006-000_2026-09-30_01_2026-12-13.xsd#jpcrp050000-ssr_X99006-000_RealEstateReportableSegmentMember" xlink:label="RealEstateReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_RealEstateReportableSegmentMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">不動産</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="RealEstateReportableSegmentMember" xlink:to="label_RealEstateReportableSegmentMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_RealEstateReportableSegmentMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">不動産、報告セグメント [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="RealEstateReportableSegmentMember" xlink:to="label_RealEstateReportableSegmentMember_2" order="1.0"/>
+  </link:labelLink>
+</link:linkbase>

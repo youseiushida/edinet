@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/jppfs/med/role/label" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_MEDLabel"/>
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_BalanceSheet"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PropertyPlantAndEquipment" xlink:label="PropertyPlantAndEquipment"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_Buildings" xlink:label="Buildings"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipment" xlink:to="Buildings" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationBuildings" xlink:label="AccumulatedDepreciationBuildings"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Buildings" xlink:to="AccumulatedDepreciationBuildings" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsNet" xlink:label="BuildingsNet"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Buildings" xlink:to="BuildingsNet" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_Structures" xlink:label="Structures"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipment" xlink:to="Structures" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationStructures" xlink:label="AccumulatedDepreciationStructures"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Structures" xlink:to="AccumulatedDepreciationStructures" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresNet" xlink:label="StructuresNet"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Structures" xlink:to="StructuresNet" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MedicalInstrumentAndEquipmentMED" xlink:label="MedicalInstrumentAndEquipmentMED"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipment" xlink:to="MedicalInstrumentAndEquipmentMED" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationMedicalInstrumentAndEquipmentMED" xlink:label="AccumulatedDepreciationMedicalInstrumentAndEquipmentMED"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MedicalInstrumentAndEquipmentMED" xlink:to="AccumulatedDepreciationMedicalInstrumentAndEquipmentMED" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MedicalInstrumentAndEquipmentNetMED" xlink:label="MedicalInstrumentAndEquipmentNetMED"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MedicalInstrumentAndEquipmentMED" xlink:to="MedicalInstrumentAndEquipmentNetMED" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherInstrumentAndEquipmentMED" xlink:label="OtherInstrumentAndEquipmentMED"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipment" xlink:to="OtherInstrumentAndEquipmentMED" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationOtherInstrumentAndEquipmentMED" xlink:label="AccumulatedDepreciationOtherInstrumentAndEquipmentMED"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherInstrumentAndEquipmentMED" xlink:to="AccumulatedDepreciationOtherInstrumentAndEquipmentMED" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherInstrumentAndEquipmentNetMED" xlink:label="OtherInstrumentAndEquipmentNetMED"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherInstrumentAndEquipmentMED" xlink:to="OtherInstrumentAndEquipmentNetMED" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesAndVesselsMED" xlink:label="VehiclesAndVesselsMED"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipment" xlink:to="VehiclesAndVesselsMED" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationVehiclesAndVesselsMED" xlink:label="AccumulatedDepreciationVehiclesAndVesselsMED"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="VehiclesAndVesselsMED" xlink:to="AccumulatedDepreciationVehiclesAndVesselsMED" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesAndVesselsNetMED" xlink:label="VehiclesAndVesselsNetMED"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="VehiclesAndVesselsMED" xlink:to="VehiclesAndVesselsNetMED" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherPPE" xlink:label="OtherPPE"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipment" xlink:to="OtherPPE" order="28.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/med/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationOtherPPE" xlink:label="AccumulatedDepreciationOtherPPE"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherPPE" xlink:to="AccumulatedDepreciationOtherPPE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherNetPPE" xlink:label="OtherNetPPE"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherPPE" xlink:to="OtherNetPPE" order="3.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/med/role/label"/>
+  </link:presentationLink>
+</link:linkbase>

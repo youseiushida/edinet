@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRS" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRS"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRS">
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRSAbstract" xlink:label="OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRSAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfFinanceIncomeIFRSTable" xlink:label="ComponentsOfFinanceIncomeIFRSTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRSAbstract" xlink:to="ComponentsOfFinanceIncomeIFRSTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfFinanceIncomeIFRSLineItems" xlink:label="ComponentsOfFinanceIncomeIFRSLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRSAbstract" xlink:to="ComponentsOfFinanceIncomeIFRSLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfFinanceCostsIFRSTable" xlink:label="ComponentsOfFinanceCostsIFRSTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRSAbstract" xlink:to="ComponentsOfFinanceCostsIFRSTable" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfFinanceCostsIFRSLineItems" xlink:label="ComponentsOfFinanceCostsIFRSLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRSAbstract" xlink:to="ComponentsOfFinanceCostsIFRSLineItems" order="4.0"/>
+  </link:definitionLink>
+</link:linkbase>

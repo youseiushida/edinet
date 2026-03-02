@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHolding" xlink:type="simple" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHolding"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHolding">
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHoldingHeading" xlink:label="CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHoldingHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHoldingHeading" xlink:to="CoverPageHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutIssuerHeading" xlink:label="InformationAboutIssuerHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHoldingHeading" xlink:to="InformationAboutIssuerHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutFilersHeading" xlink:label="InformationAboutFilersHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHoldingHeading" xlink:to="InformationAboutFilersHeading" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutJointHoldersHeading" xlink:label="InformationAboutJointHoldersHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHoldingHeading" xlink:to="InformationAboutJointHoldersHeading" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutJointHoldersTextBlock" xlink:label="InformationAboutJointHoldersTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutJointHoldersHeading" xlink:to="InformationAboutJointHoldersTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SummaryOfFilerAndJointHoldersHeading" xlink:label="SummaryOfFilerAndJointHoldersHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHoldingHeading" xlink:to="SummaryOfFilerAndJointHoldersHeading" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersAndJointHoldersHeading" xlink:label="FilersAndJointHoldersHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SummaryOfFilerAndJointHoldersHeading" xlink:to="FilersAndJointHoldersHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading" xlink:label="BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SummaryOfFilerAndJointHoldersHeading" xlink:to="BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcHeldSummaryHeading" xlink:label="NumberOfStocksEtcHeldSummaryHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading" xlink:to="NumberOfStocksEtcHeldSummaryHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:label="HoldingRatioOfShareCertificatesEtcSummaryHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading" xlink:to="HoldingRatioOfShareCertificatesEtcSummaryHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading" xlink:label="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading" xlink:to="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading" order="3.0"/>
+  </link:presentationLink>
+</link:linkbase>

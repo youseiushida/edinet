@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpctl/2021-11-01/jpctl_cor" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jpctl_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpctl/2021-11-01/jpctl_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:iod="http://disclosure.edinet-fsa.go.jp/taxonomy/common/2013-08-31/iod" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric">
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/common/2013-08-31/iod" schemaLocation="../../common/2013-08-31/identificationAndOrdering_2013-08-31.xsd"/>
+  <xsd:element name="CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading" id="jpctl_cor_CabinetOfficeOrdinanceOnSystemForEnsuringAppropriatenessOfFinancialAndOtherDocumentsFormNo1InternalControlReportHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="CoverPageHeading" id="jpctl_cor_CoverPageHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading" id="jpctl_cor_BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="BasicFrameworkOfInternalControlRelatedToFinancialReportingTextBlock" id="jpctl_cor_BasicFrameworkOfInternalControlRelatedToFinancialReportingTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ScopeDateAndProceduresForEvaluationHeading" id="jpctl_cor_ScopeDateAndProceduresForEvaluationHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="ScopeDateAndProceduresForEvaluationTextBlock" id="jpctl_cor_ScopeDateAndProceduresForEvaluationTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ResultOfEvaluationHeading" id="jpctl_cor_ResultOfEvaluationHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="ResultOfEvaluationTextBlock" id="jpctl_cor_ResultOfEvaluationTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="SupplementaryInformationHeading" id="jpctl_cor_SupplementaryInformationHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="SupplementaryInformationTextBlock" id="jpctl_cor_SupplementaryInformationTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="OtherInformationForSpecialAttentionHeading" id="jpctl_cor_OtherInformationForSpecialAttentionHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="OtherInformationForSpecialAttentionTextBlock" id="jpctl_cor_OtherInformationForSpecialAttentionTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="IndependentAuditorsReportHeading" id="jpctl_cor_IndependentAuditorsReportHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="IndependentAuditorsReportTextBlock" id="jpctl_cor_IndependentAuditorsReportTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="DocumentTitleCoverPage" id="jpctl_cor_DocumentTitleCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ClauseOfStipulationCoverPage" id="jpctl_cor_ClauseOfStipulationCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="PlaceOfFilingCoverPage" id="jpctl_cor_PlaceOfFilingCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="FilingDateCoverPage" id="jpctl_cor_FilingDateCoverPage" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="CompanyNameCoverPage" id="jpctl_cor_CompanyNameCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="CompanyNameInEnglishCoverPage" id="jpctl_cor_CompanyNameInEnglishCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="TitleAndNameOfRepresentativeCoverPage" id="jpctl_cor_TitleAndNameOfRepresentativeCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="TitleAndNameOfChiefFinancialOfficerCoverPage" id="jpctl_cor_TitleAndNameOfChiefFinancialOfficerCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="AddressOfRegisteredHeadquarterCoverPage" id="jpctl_cor_AddressOfRegisteredHeadquarterCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="PlaceForPublicInspectionCoverPageTextBlock" id="jpctl_cor_PlaceForPublicInspectionCoverPageTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+</xsd:schema>

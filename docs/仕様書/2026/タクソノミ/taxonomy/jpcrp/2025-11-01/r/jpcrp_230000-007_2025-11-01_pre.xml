@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_InformationAboutOfficers-07" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_InformationAboutOfficers-07"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_InformationAboutOfficers-07">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DirectorsAndOtherOfficersAxis" xlink:label="DirectorsAndOtherOfficersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DirectorsAndOtherOfficersMember" xlink:label="DirectorsAndOtherOfficersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="DirectorsAndOtherOfficersAxis" xlink:to="DirectorsAndOtherOfficersMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InformationAboutOfficersHeading" xlink:label="InformationAboutOfficersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InformationAboutDirectorsAndCorporateAuditorsProposalTable" xlink:label="InformationAboutDirectorsAndCorporateAuditorsProposalTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutOfficersHeading" xlink:to="InformationAboutDirectorsAndCorporateAuditorsProposalTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutDirectorsAndCorporateAuditorsProposalTable" xlink:to="DirectorsAndOtherOfficersAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InformationAboutDirectorsAndCorporateAuditorsProposalLineItems" xlink:label="InformationAboutDirectorsAndCorporateAuditorsProposalLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutOfficersHeading" xlink:to="InformationAboutDirectorsAndCorporateAuditorsProposalLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OfficialTitleOrPositionInformationAboutDirectorsAndCorporateAuditorsProposal" xlink:label="OfficialTitleOrPositionInformationAboutDirectorsAndCorporateAuditorsProposal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutDirectorsAndCorporateAuditorsProposalLineItems" xlink:to="OfficialTitleOrPositionInformationAboutDirectorsAndCorporateAuditorsProposal" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NameInformationAboutDirectorsAndCorporateAuditorsProposal" xlink:label="NameInformationAboutDirectorsAndCorporateAuditorsProposal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutDirectorsAndCorporateAuditorsProposalLineItems" xlink:to="NameInformationAboutDirectorsAndCorporateAuditorsProposal" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DateOfBirthInformationAboutDirectorsAndCorporateAuditorsProposal" xlink:label="DateOfBirthInformationAboutDirectorsAndCorporateAuditorsProposal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutDirectorsAndCorporateAuditorsProposalLineItems" xlink:to="DateOfBirthInformationAboutDirectorsAndCorporateAuditorsProposal" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CareerSummaryInformationAboutDirectorsAndCorporateAuditorsProposalTextBlock" xlink:label="CareerSummaryInformationAboutDirectorsAndCorporateAuditorsProposalTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutDirectorsAndCorporateAuditorsProposalLineItems" xlink:to="CareerSummaryInformationAboutDirectorsAndCorporateAuditorsProposalTextBlock" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TermOfOfficeInformationAboutDirectorsAndCorporateAuditorsProposal" xlink:label="TermOfOfficeInformationAboutDirectorsAndCorporateAuditorsProposal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutDirectorsAndCorporateAuditorsProposalLineItems" xlink:to="TermOfOfficeInformationAboutDirectorsAndCorporateAuditorsProposal" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldOrdinarySharesInformationAboutDirectorsAndCorporateAuditorsProposal" xlink:label="NumberOfSharesHeldOrdinarySharesInformationAboutDirectorsAndCorporateAuditorsProposal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutDirectorsAndCorporateAuditorsProposalLineItems" xlink:to="NumberOfSharesHeldOrdinarySharesInformationAboutDirectorsAndCorporateAuditorsProposal" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldOtherThanOrdinarySharesInformationAboutDirectorsAndCorporateAuditorsProposal" xlink:label="NumberOfSharesHeldOtherThanOrdinarySharesInformationAboutDirectorsAndCorporateAuditorsProposal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutDirectorsAndCorporateAuditorsProposalLineItems" xlink:to="NumberOfSharesHeldOtherThanOrdinarySharesInformationAboutDirectorsAndCorporateAuditorsProposal" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesScheduledToBeHeldInformationAboutDirectorsAndCorporateAuditorsProposal" xlink:label="NumberOfSharesScheduledToBeHeldInformationAboutDirectorsAndCorporateAuditorsProposal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutDirectorsAndCorporateAuditorsProposalLineItems" xlink:to="NumberOfSharesScheduledToBeHeldInformationAboutDirectorsAndCorporateAuditorsProposal" order="8.0"/>
+  </link:presentationLink>
+</link:linkbase>

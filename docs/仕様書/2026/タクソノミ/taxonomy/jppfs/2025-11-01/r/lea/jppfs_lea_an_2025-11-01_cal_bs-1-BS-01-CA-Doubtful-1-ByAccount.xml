@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_BalanceSheet"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CurrentAssets" xlink:label="CurrentAssets"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NotesReceivableTradeNet" xlink:label="NotesReceivableTradeNet"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="NotesReceivableTradeNet" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NotesReceivableTrade" xlink:label="NotesReceivableTrade"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NotesReceivableTradeNet" xlink:to="NotesReceivableTrade" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AllowanceForDoubtfulAccountsNotesReceivableTrade" xlink:label="AllowanceForDoubtfulAccountsNotesReceivableTrade"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="NotesReceivableTradeNet" xlink:to="AllowanceForDoubtfulAccountsNotesReceivableTrade" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccountsReceivableTradeNet" xlink:label="AccountsReceivableTradeNet"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="AccountsReceivableTradeNet" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccountsReceivableTrade" xlink:label="AccountsReceivableTrade"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="AccountsReceivableTradeNet" xlink:to="AccountsReceivableTrade" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AllowanceForDoubtfulAccountsAccountsReceivableTrade" xlink:label="AllowanceForDoubtfulAccountsAccountsReceivableTrade"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="AccountsReceivableTradeNet" xlink:to="AllowanceForDoubtfulAccountsAccountsReceivableTrade" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LeaseReceivablesNetCA" xlink:label="LeaseReceivablesNetCA"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="LeaseReceivablesNetCA" order="9.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LeaseReceivablesCA" xlink:label="LeaseReceivablesCA"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LeaseReceivablesNetCA" xlink:to="LeaseReceivablesCA" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AllowanceForDoubtfulAccountsLeaseReceivablesCA" xlink:label="AllowanceForDoubtfulAccountsLeaseReceivablesCA"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LeaseReceivablesNetCA" xlink:to="AllowanceForDoubtfulAccountsLeaseReceivablesCA" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LeaseInvestmentAssetsNetCA" xlink:label="LeaseInvestmentAssetsNetCA"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="LeaseInvestmentAssetsNetCA" order="12.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LeaseInvestmentAssetsCA" xlink:label="LeaseInvestmentAssetsCA"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LeaseInvestmentAssetsNetCA" xlink:to="LeaseInvestmentAssetsCA" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AllowanceForDoubtfulAccountsLeaseInvestmentAssetsCA" xlink:label="AllowanceForDoubtfulAccountsLeaseInvestmentAssetsCA"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LeaseInvestmentAssetsNetCA" xlink:to="AllowanceForDoubtfulAccountsLeaseInvestmentAssetsCA" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ShortTermClaimsOnShareholdersDirectorsOrEmployeesNet" xlink:label="ShortTermClaimsOnShareholdersDirectorsOrEmployeesNet"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="ShortTermClaimsOnShareholdersDirectorsOrEmployeesNet" order="25.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ShortTermClaimsOnShareholdersDirectorsOrEmployees" xlink:label="ShortTermClaimsOnShareholdersDirectorsOrEmployees"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ShortTermClaimsOnShareholdersDirectorsOrEmployeesNet" xlink:to="ShortTermClaimsOnShareholdersDirectorsOrEmployees" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AllowanceForDoubtfulAccountsShortTermClaimsOnShareholdersDirectorsOrEmployees" xlink:label="AllowanceForDoubtfulAccountsShortTermClaimsOnShareholdersDirectorsOrEmployees"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ShortTermClaimsOnShareholdersDirectorsOrEmployeesNet" xlink:to="AllowanceForDoubtfulAccountsShortTermClaimsOnShareholdersDirectorsOrEmployees" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ShortTermLoansReceivableNet" xlink:label="ShortTermLoansReceivableNet"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CurrentAssets" xlink:to="ShortTermLoansReceivableNet" order="28.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ShortTermLoansReceivable" xlink:label="ShortTermLoansReceivable"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ShortTermLoansReceivableNet" xlink:to="ShortTermLoansReceivable" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AllowanceForDoubtfulAccountsShortTermLoans" xlink:label="AllowanceForDoubtfulAccountsShortTermLoans"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ShortTermLoansReceivableNet" xlink:to="AllowanceForDoubtfulAccountsShortTermLoans" order="2.0" weight="1"/>
+  </link:calculationLink>
+</link:linkbase>

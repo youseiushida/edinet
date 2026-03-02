@@ -1,0 +1,708 @@
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:124: EdinetWarning: income_statement: 連結データなし、個別にフォールバック
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:124: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:124: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:171: EdinetWarning: balance_sheet: 連結データなし、個別にフォールバック
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:171: EdinetWarning: NetAssets: 2候補中1件を採用（context_id='CurrentYearInstant_NonConsolidatedMember'）
+  bs = stmts.balance_sheet()
+======================================================================
+Week 2 E2E テスト: J-GAAP 一般事業会社特化
+日時: 2026-02-28
+======================================================================
+
+======================================================================
+TEST: J1: J-GAAP 企業の PL - 主要科目が存在する
+======================================================================
+  J-GAAP 候補: 5件
+  選択: 株式会社アメイズ (S100XMEJ)
+    ordinance: OrdinanceCode.DISCLOSURE
+    form: FormCodeEntry(010/030000 | 有価証券報告書)
+    period: 2024-12-01 ~ 2025-11-30
+  PL 科目数: 31
+  期間: DurationPeriod(start_date=datetime.date(2024, 12, 1), end_date=datetime.date(2025, 11, 30))
+  連結: False
+  entity_id: E27761-000
+
+  === PL 全科目 ===
+  [ 1] 売上高: 19,560,000,000 JPY (concept=NetSales, source=standard)
+  [ 2] 売上原価: 2,607,000,000 JPY (concept=CostOfSales, source=standard)
+  [ 3] 売上総利益又は売上総損失（△）: 16,953,000,000 JPY (concept=GrossProfit, source=standard)
+  [ 4] 販売費及び一般管理費: 13,754,000,000 JPY (concept=SellingGeneralAndAdministrativeExpenses, source=standard)
+  [ 5] 営業利益又は営業損失（△）: 3,199,000,000 JPY (concept=OperatingIncome, source=standard)
+  [ 6] 営業外収益: 133,000,000 JPY (concept=NonOperatingIncome, source=standard)
+  [ 7] 営業外費用: 491,000,000 JPY (concept=NonOperatingExpenses, source=standard)
+  [ 8] 経常利益又は経常損失（△）: 2,842,000,000 JPY (concept=OrdinaryIncome, source=standard)
+  [ 9] 税引前当期純利益又は税引前当期純損失（△）: 2,842,000,000 JPY (concept=IncomeBeforeIncomeTaxes, source=standard)
+  [10] 法人税等: 760,000,000 JPY (concept=IncomeTaxes, source=standard)
+  [11] 法人税等調整額: -159,000,000 JPY (concept=IncomeTaxesDeferred, source=standard)
+  [12] 当期純利益又は当期純損失（△）: 2,081,000,000 JPY (concept=ProfitLoss, source=standard)
+  [13] 受取賃貸料: 101,000,000 JPY (concept=RentIncomeNOI, source=standard)
+  [14] その他: 32,000,000 JPY (concept=OtherNOI, source=standard)
+  [15] 支払利息: 479,000,000 JPY (concept=InterestExpensesNOE, source=standard)
+  [16] その他: 11,000,000 JPY (concept=OtherNOE, source=standard)
+  [17] 法人税、住民税及び事業税: 920,000,000 JPY (concept=IncomeTaxesCurrent, source=standard)
+  [18] 剰余金の配当: -402,000,000 JPY (concept=DividendsFromSurplus, source=standard)
+  [19] 株主資本以外の項目の当期変動額（純額）: 4,000,000 JPY (concept=NetChangesOfItemsOtherThanShareholdersEquity, source=standard)
+  [20] 当期変動額合計: 1,683,000,000 JPY (concept=TotalChangesOfItemsDuringThePeriod, source=standard)
+  [21] 営業活動によるキャッシュ・フロー: 3,102,000,000 JPY (concept=NetCashProvidedByUsedInOperatingActivities, source=standard)
+  [22] 投資活動によるキャッシュ・フロー: -4,973,000,000 JPY (concept=NetCashProvidedByUsedInInvestmentActivities, source=standard)
+  [23] 財務活動によるキャッシュ・フロー: 665,000,000 JPY (concept=NetCashProvidedByUsedInFinancingActivities, source=standard)
+  [24] 現金及び現金同等物の増減額（△は減少）: -1,204,000,000 JPY (concept=NetIncreaseDecreaseInCashAndCashEquivalents, source=standard)
+  [25] 給料及び手当: 3,549,000,000 JPY (concept=SalariesAndAllowancesSGA, source=standard)
+  [26] 賞与引当金繰入額: 20,000,000 JPY (concept=ProvisionForBonusesGA, source=standard)
+  [27] 減価償却費: 1,317,000,000 JPY (concept=DepreciationSGA, source=standard)
+  [28] 水道光熱費: 1,427,000,000 JPY (concept=UtilitiesExpensesSGA, source=standard)
+  [29] 業務委託費: 2,041,000,000 JPY (concept=BusinessConsignmentExpensesSGA, source=standard)
+  [30] 退職給付費用: 51,000,000 JPY (concept=RetirementBenefitExpensesSGA, source=standard)
+  [31] 役員退職慰労引当金繰入額: 5,000,000 JPY (concept=ProvisionForDirectorsRetirementBenefitsSGA, source=standard)
+  ✓ 売上高: 19,560,000,000
+  ✓ 売上原価: 2,607,000,000
+  ✓ 売上総利益: 16,953,000,000
+  ✓ 販売費及び一般管理費: 13,754,000,000
+  ✓ 営業利益: 3,199,000,000
+  ✓ 経常利益: 2,842,000,000
+
+  主要科目ヒット率: 6/6
+  ✓ PASSED
+
+======================================================================
+TEST: J2: J-GAAP 企業の BS - 資産・負債・純資産が存在する
+======================================================================
+  J-GAAP 候補: 5件
+  選択: 株式会社アメイズ (S100XMEJ)
+    ordinance: OrdinanceCode.DISCLOSURE
+    form: FormCodeEntry(010/030000 | 有価証券報告書)
+    period: 2024-12-01 ~ 2025-11-30
+  BS 科目数: 73
+  期間: InstantPeriod(instant=datetime.date(2025, 11, 30))
+
+  === BS 全科目 ===
+  [ 1] 流動資産: 2,178,000,000 JPY (concept=CurrentAssets)
+  [ 2] 固定資産: 29,419,000,000 JPY (concept=NoncurrentAssets)
+  [ 3] 有形固定資産: 27,932,000,000 JPY (concept=PropertyPlantAndEquipment)
+  [ 4] 無形固定資産: 188,000,000 JPY (concept=IntangibleAssets)
+  [ 5] 投資その他の資産: 1,299,000,000 JPY (concept=InvestmentsAndOtherAssets)
+  [ 6] 資産: 31,598,000,000 JPY (concept=Assets)
+  [ 7] 流動負債: 6,141,000,000 JPY (concept=CurrentLiabilities)
+  [ 8] 固定負債: 8,995,000,000 JPY (concept=NoncurrentLiabilities)
+  [ 9] 負債: 15,136,000,000 JPY (concept=Liabilities)
+  [10] 資本金: 1,299,000,000 JPY (concept=CapitalStock)
+  [11] 資本剰余金: 500,000,000 JPY (concept=CapitalSurplus)
+  [12] 利益剰余金: 16,877,000,000 JPY (concept=RetainedEarnings)
+  [13] 自己株式: -2,223,000,000 JPY (concept=TreasuryStock)
+  [14] 株主資本: 16,454,000,000 JPY (concept=ShareholdersEquity)
+  [15] 評価・換算差額等: 7,000,000 JPY (concept=ValuationAndTranslationAdjustments)
+  [16] 純資産: 16,461,000,000 JPY (concept=NetAssets)
+  [17] 負債純資産: 31,598,000,000 JPY (concept=LiabilitiesAndNetAssets)
+  [18] 現金及び預金: 1,097,000,000 JPY (concept=CashAndDeposits)
+  [19] 売掛金: 656,000,000 JPY (concept=AccountsReceivableTrade)
+  [20] 商品: 5,000,000 JPY (concept=Merchandise)
+  [21] 原材料及び貯蔵品: 86,000,000 JPY (concept=RawMaterialsAndSupplies)
+  [22] 前払費用: 117,000,000 JPY (concept=PrepaidExpenses)
+  [23] 未収消費税等: 209,000,000 JPY (concept=ConsumptionTaxesReceivable)
+  [24] その他: 5,000,000 JPY (concept=OtherCA)
+  [25] 建物: 25,974,000,000 JPY (concept=Buildings)
+  [26] 減価償却累計額: -12,304,000,000 JPY (concept=AccumulatedDepreciationBuildings)
+  [27] 建物（純額）: 13,670,000,000 JPY (concept=BuildingsNet)
+  [28] 構築物: 1,539,000,000 JPY (concept=Structures)
+  [29] 減価償却累計額: -892,000,000 JPY (concept=AccumulatedDepreciationStructures)
+  [30] 構築物（純額）: 647,000,000 JPY (concept=StructuresNet)
+  [31] 車両運搬具: 41,000,000 JPY (concept=Vehicles)
+  [32] 減価償却累計額: -36,000,000 JPY (concept=AccumulatedDepreciationVehicles)
+  [33] 車両運搬具（純額）: 4,000,000 JPY (concept=VehiclesNet)
+  [34] 工具、器具及び備品: 3,156,000,000 JPY (concept=ToolsFurnitureAndFixtures)
+  [35] 減価償却累計額: -2,721,000,000 JPY (concept=AccumulatedDepreciationToolsFurnitureAndFixtures)
+  [36] 工具、器具及び備品（純額）: 435,000,000 JPY (concept=ToolsFurnitureAndFixturesNet)
+  [37] 土地: 6,459,000,000 JPY (concept=Land)
+  [38] リース資産: 9,787,000,000 JPY (concept=LeaseAssetsPPE)
+  [39] 減価償却累計額: -3,917,000,000 JPY (concept=AccumulatedDepreciationLeaseAssetsPPE)
+  [40] リース資産（純額）: 5,870,000,000 JPY (concept=LeaseAssetsNetPPE)
+  [41] 建設仮勘定: 845,000,000 JPY (concept=ConstructionInProgress)
+  [42] ソフトウエア: 172,000,000 JPY (concept=Software)
+  [43] その他: 15,000,000 JPY (concept=OtherIA)
+  [44] 投資有価証券: 13,000,000 JPY (concept=InvestmentSecurities)
+  [45] 出資金: 0 JPY (concept=InvestmentsInCapital)
+  [46] 長期貸付金: 101,000,000 JPY (concept=LongTermLoansReceivable)
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:217: EdinetWarning: cash_flow_statement: 連結データなし、個別にフォールバック
+  cf = stmts.cash_flow_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:251: EdinetWarning: income_statement: 連結データなし、個別にフォールバック
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:251: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:251: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:279: EdinetWarning: income_statement: 連結データなし、個別にフォールバック
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:279: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:279: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+  [47] 長期前払費用: 16,000,000 JPY (concept=LongTermPrepaidExpenses)
+  [48] 繰延税金資産: 534,000,000 JPY (concept=DeferredTaxAssets)
+  [49] 敷金及び保証金: 633,000,000 JPY (concept=LeaseAndGuaranteeDeposits)
+  [50] 買掛金: 264,000,000 JPY (concept=AccountsPayableTrade)
+  [51] 短期借入金: 2,450,000,000 JPY (concept=ShortTermLoansPayable)
+  [52] １年内返済予定の長期借入金: 796,000,000 JPY (concept=CurrentPortionOfLongTermLoansPayable)
+  [53] リース負債: 326,000,000 JPY (concept=LeaseObligationsCL)
+  [54] 未払金: 829,000,000 JPY (concept=AccountsPayableOther)
+  [55] 未払費用: 633,000,000 JPY (concept=AccruedExpenses)
+  [56] 未払法人税等: 423,000,000 JPY (concept=IncomeTaxesPayable)
+  [57] 契約負債: 329,000,000 JPY (concept=ContractLiabilities)
+  [58] 預り金: 28,000,000 JPY (concept=DepositsReceived)
+  [59] 前受収益: 11,000,000 JPY (concept=UnearnedRevenue)
+  [60] 賞与引当金: 20,000,000 JPY (concept=ProvisionForBonuses)
+  [61] 株主優待引当金: 27,000,000 JPY (concept=ProvisionForShareholderBenefitProgramCL)
+  [62] 長期借入金: 1,342,000,000 JPY (concept=LongTermLoansPayable)
+  [63] リース負債: 7,154,000,000 JPY (concept=LeaseObligationsNCL)
+  [64] 退職給付引当金: 124,000,000 JPY (concept=ProvisionForRetirementBenefits)
+  [65] 役員退職慰労引当金: 72,000,000 JPY (concept=ProvisionForDirectorsRetirementBenefits)
+  [66] 資産除去債務: 274,000,000 JPY (concept=AssetRetirementObligationsNCL)
+  [67] その他: 26,000,000 JPY (concept=OtherNCL)
+  [68] 資本準備金: 500,000,000 JPY (concept=LegalCapitalSurplus)
+  [69] 利益準備金: 93,000,000 JPY (concept=LegalRetainedEarnings)
+  [70] 別途積立金: 3,000,000 JPY (concept=GeneralReserve)
+  [71] 繰越利益剰余金: 16,780,000,000 JPY (concept=RetainedEarningsBroughtForward)
+  [72] その他有価証券評価差額金: 7,000,000 JPY (concept=ValuationDifferenceOnAvailableForSaleSecurities)
+  [73] 現金及び現金同等物の残高: 1,097,000,000 JPY (concept=CashAndCashEquivalents)
+  ✓ 流動資産: 2,178,000,000
+  ✓ 固定資産: 29,419,000,000
+  ✓ 資産合計: 31,598,000,000
+  ✓ 流動負債: 6,141,000,000
+  ✓ 固定負債: 8,995,000,000
+  ✓ 負債合計: 15,136,000,000
+  ✓ 純資産合計: 16,461,000,000
+  ✓ 負債純資産合計: 31,598,000,000
+
+  主要科目ヒット率: 8/8
+  ✓ PASSED
+
+======================================================================
+TEST: J3: J-GAAP 企業の CF
+======================================================================
+  J-GAAP 候補: 5件
+  選択: 株式会社アメイズ (S100XMEJ)
+    ordinance: OrdinanceCode.DISCLOSURE
+    form: FormCodeEntry(010/030000 | 有価証券報告書)
+    period: 2024-12-01 ~ 2025-11-30
+  CF 科目数: 27
+  期間: DurationPeriod(start_date=datetime.date(2024, 12, 1), end_date=datetime.date(2025, 11, 30))
+
+  === CF 全科目 ===
+  [ 1] 営業活動によるキャッシュ・フロー: 3,102,000,000 JPY (concept=NetCashProvidedByUsedInOperatingActivities)
+  [ 2] 投資活動によるキャッシュ・フロー: -4,973,000,000 JPY (concept=NetCashProvidedByUsedInInvestmentActivities)
+  [ 3] 財務活動によるキャッシュ・フロー: 665,000,000 JPY (concept=NetCashProvidedByUsedInFinancingActivities)
+  [ 4] 現金及び現金同等物の増減額（△は減少）: -1,204,000,000 JPY (concept=NetIncreaseDecreaseInCashAndCashEquivalents)
+  [ 5] 減価償却費: 1,329,000,000 JPY (concept=DepreciationAndAmortizationOpeCF)
+  [ 6] 賞与引当金の増減額（△は減少）: 3,000,000 JPY (concept=IncreaseDecreaseInProvisionForBonusesOpeCF)
+  [ 7] 退職給付引当金の増減額（△は減少）: 37,000,000 JPY (concept=IncreaseDecreaseInProvisionForRetirementBenefitsOpeCF)
+  [ 8] 役員退職慰労引当金の増減額（△は減少）: 5,000,000 JPY (concept=IncreaseDecreaseInProvisionForDirectorsRetirementBenefitsOpeCF)
+  [ 9] 受取利息及び受取配当金: -4,000,000 JPY (concept=InterestAndDividendsIncomeOpeCF)
+  [10] 支払利息: 479,000,000 JPY (concept=InterestExpensesOpeCF)
+  [11] 売上債権の増減額（△は増加）: -166,000,000 JPY (concept=DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF)
+  [12] 棚卸資産の増減額（△は増加）: -14,000,000 JPY (concept=DecreaseIncreaseInInventoriesOpeCF)
+  [13] 仕入債務の増減額（△は減少）: 37,000,000 JPY (concept=IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF)
+  [14] 未払金の増減額（△は減少）: 305,000,000 JPY (concept=IncreaseDecreaseInAccountsPayableOtherOpeCF)
+  [15] 未払又は未収消費税等の増減額: -414,000,000 JPY (concept=DecreaseIncreaseInConsumptionTaxesReceivablePayableOpeCF)
+  [16] その他: 105,000,000 JPY (concept=OtherNetOpeCF)
+  [17] 小計: 4,547,000,000 JPY (concept=SubtotalOpeCF)
+  [18] 利息及び配当金の受取額: 2,000,000 JPY (concept=InterestAndDividendsIncomeReceivedOpeCFInvCF)
+  [19] 利息の支払額: -484,000,000 JPY (concept=InterestExpensesPaidOpeCFFinCF)
+  [20] 法人税等の支払額: -962,000,000 JPY (concept=IncomeTaxesPaidOpeCF)
+  [21] 有形及び無形固定資産の取得による支出: -4,971,000,000 JPY (concept=PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF)
+  [22] 貸付金の回収による収入: 18,000,000 JPY (concept=CollectionOfLoansReceivableInvCF)
+  [23] その他: -19,000,000 JPY (concept=OtherNetInvCF)
+  [24] 短期借入金の純増減額（△は減少）: 2,450,000,000 JPY (concept=NetIncreaseDecreaseInShortTermLoansPayableFinCF)
+  [25] 長期借入金の返済による支出: -1,073,000,000 JPY (concept=RepaymentOfLongTermLoansPayableFinCF)
+  [26] リース負債の返済による支出: -308,000,000 JPY (concept=RepaymentsOfLeaseObligationsFinCF)
+  [27] 配当金の支払額: -402,000,000 JPY (concept=CashDividendsPaidFinCF)
+  ✓ 営業活動によるキャッシュ・フロー: 3,102,000,000
+  ✓ 投資活動によるキャッシュ・フロー: -4,973,000,000
+  ✓ 財務活動によるキャッシュ・フロー: 665,000,000
+
+  主要科目ヒット率: 3/3
+  ✓ PASSED
+
+======================================================================
+TEST: J4: __getitem__ で日本語ラベル・英語ラベル・local_name 検索
+======================================================================
+  J-GAAP 候補: 5件
+  選択: 株式会社アメイズ (S100XMEJ)
+    ordinance: OrdinanceCode.DISCLOSURE
+    form: FormCodeEntry(010/030000 | 有価証券報告書)
+    period: 2024-12-01 ~ 2025-11-30
+  日本語 '営業利益又は営業損失（△）': 3,199,000,000
+  英語 'Operating profit (loss)': 3,199,000,000
+  local_name 'OperatingIncome': 3,199,000,000
+  ✓ PASSED
+
+======================================================================
+TEST: J5: to_dataframe() のカラムと型
+======================================================================
+  J-GAAP 候補: 5件
+  選択: 株式会社アメイズ (S100XMEJ)
+    ordinance: OrdinanceCode.DISCLOSURE
+    form: FormCodeEntry(010/030000 | 有価証券報告書)
+    period: 2024-12-01 ~ 2025-11-30
+  shape: (31, 5)
+  columns: ['label_ja', 'label_en', 'value', 'unit', 'concept']
+  dtypes:
+label_ja       str
+label_en       str
+value       object
+unit           str
+concept        str
+dtype: object
+
+  attrs: {'statement_type': 'income_statement', 'consolidated': False, 'period': '2024-12-01〜2025-11-30', 'entity_id': 'E27761-000'}
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:314: EdinetWarning: income_statement: 連結データなし、個別にフォールバック
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:314: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:314: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:332: EdinetWarning: income_statement: 連結データなし、個別にフォールバック
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:332: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:332: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+
+                 label_ja                                           label_en        value unit  \
+0                     売上高                                          Net sales  19560000000  JPY   
+1                    売上原価                                      Cost of sales   2607000000  JPY   
+2         売上総利益又は売上総損失（△）                                Gross profit (loss)  16953000000  JPY   
+3              販売費及び一般管理費       Selling, general and administrative expenses  13754000000  JPY   
+4           営業利益又は営業損失（△）                            Operating profit (loss)   3199000000  JPY   
+5                   営業外収益                               Non-operating income    133000000  JPY   
+6                   営業外費用                             Non-operating expenses    491000000  JPY   
+7           経常利益又は経常損失（△）                             Ordinary profit (loss)   2842000000  JPY   
+8   税引前当期純利益又は税引前当期純損失（△）                  Profit (loss) before income taxes   2842000000  JPY   
+9                    法人税等                                       Income taxes    760000000  JPY   
+10                法人税等調整額                            Income taxes - deferred   -159000000  JPY   
+11        当期純利益又は当期純損失（△）                                      Profit (loss)   2081000000  JPY   
+12                  受取賃貸料                                      Rental income    101000000  JPY   
+13                    その他                                              Other     32000000  JPY   
+14                   支払利息                                  Interest expenses    479000000  JPY   
+15                    その他                                              Other     11000000  JPY   
+16           法人税、住民税及び事業税                             Income taxes - current    920000000  JPY   
+17                 剰余金の配当                               Dividends of surplus   -402000000  JPY   
+18    株主資本以外の項目の当期変動額（純額）  Net changes in items other than shareholders' ...      4000000  JPY   
+19                当期変動額合計                        Total changes during period   1683000000  JPY   
+20       営業活動によるキャッシュ・フロー  Net cash provided by (used in) operating activ...   3102000000  JPY   
+21       投資活動によるキャッシュ・フロー  Net cash provided by (used in) investing activ...  -4973000000  JPY   
+22       財務活動によるキャッシュ・フロー  Net cash provided by (used in) financing activ...    665000000  JPY   
+23    現金及び現金同等物の増減額（△は減少）  Net increase (decrease) in cash and cash equiv...  -1204000000  JPY   
+24                 給料及び手当                            Salaries and allowances   3549000000  JPY   
+25               賞与引当金繰入額                              Provision for bonuses     20000000  JPY   
+26                  減価償却費                                       Depreciation   1317000000  JPY   
+27                  水道光熱費                                 Utilities expenses   1427000000  JPY   
+28                  業務委託費                               Outsourcing expenses   2041000000  JPY   
+29                 退職給付費用                        Retirement benefit expenses     51000000  JPY   
+30           役員退職慰労引当金繰入額  Provision for retirement benefits for director...      5000000  JPY   
+
+                                         concept  
+0                                       NetSales  
+1                                    CostOfSales  
+2                                    GrossProfit  
+3        SellingGeneralAndAdministrativeExpenses  
+4                                OperatingIncome  
+5                             NonOperatingIncome  
+6                           NonOperatingExpenses  
+7                                 OrdinaryIncome  
+8                        IncomeBeforeIncomeTaxes  
+9                                    IncomeTaxes  
+10                           IncomeTaxesDeferred  
+11                                    ProfitLoss  
+12                                 RentIncomeNOI  
+13                                      OtherNOI  
+14                           InterestExpensesNOE  
+15                                      OtherNOE  
+16                            IncomeTaxesCurrent  
+17                          DividendsFromSurplus  
+18  NetChangesOfItemsOtherThanShareholdersEquity  
+19            TotalChangesOfItemsDuringThePeriod  
+20    NetCashProvidedByUsedInOperatingActivities  
+21   NetCashProvidedByUsedInInvestmentActivities  
+22    NetCashProvidedByUsedInFinancingActivities  
+23   NetIncreaseDecreaseInCashAndCashEquivalents  
+24                      SalariesAndAllowancesSGA  
+25                         ProvisionForBonusesGA  
+26                               DepreciationSGA  
+27                          UtilitiesExpensesSGA  
+28                BusinessConsignmentExpensesSGA  
+29                  RetirementBenefitExpensesSGA  
+30    ProvisionForDirectorsRetirementBenefitsSGA  
+  ✓ PASSED
+
+======================================================================
+TEST: J6: to_dict() の内容
+======================================================================
+  J-GAAP 候補: 5件
+  選択: 株式会社アメイズ (S100XMEJ)
+    ordinance: OrdinanceCode.DISCLOSURE
+    form: FormCodeEntry(010/030000 | 有価証券報告書)
+    period: 2024-12-01 ~ 2025-11-30
+  to_dict 件数: 31
+  {'label_ja': '売上高', 'label_en': 'Net sales', 'value': Decimal('19560000000'), 'unit': 'JPY', 'concept': 'NetSales'}
+  {'label_ja': '売上原価', 'label_en': 'Cost of sales', 'value': Decimal('2607000000'), 'unit': 'JPY', 'concept': 'CostOfSales'}
+  {'label_ja': '売上総利益又は売上総損失（△）', 'label_en': 'Gross profit (loss)', 'value': Decimal('16953000000'), 'unit': 'JPY', 'concept': 'GrossProfit'}
+  {'label_ja': '販売費及び一般管理費', 'label_en': 'Selling, general and administrative expenses', 'value': Decimal('13754000000'), 'unit': 'JPY', 'concept': 'SellingGeneralAndAdministrativeExpenses'}
+  {'label_ja': '営業利益又は営業損失（△）', 'label_en': 'Operating profit (loss)', 'value': Decimal('3199000000'), 'unit': 'JPY', 'concept': 'OperatingIncome'}
+  ✓ PASSED
+
+======================================================================
+TEST: J7: Rich 表示 - PL/BS/CF
+======================================================================
+  J-GAAP 候補: 5件
+  選択: 株式会社アメイズ (S100XMEJ)
+    ordinance: OrdinanceCode.DISCLOSURE
+    form: FormCodeEntry(010/030000 | 有価証券報告書)
+    period: 2024-12-01 ~ 2025-11-30
+
+  === PL ===
+                           損益計算書 (Income Statement)  [個別] 2024-12-01〜2025-11-30                            
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ 科目                                      ┃                 金額 ┃ concept                                      ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 売上高                                    │       19,560,000,000 │ NetSales                                     │
+│ 売上原価                                  │        2,607,000,000 │ CostOfSales                                  │
+│ 売上総利益又は売上総損失（△）             │       16,953,000,000 │ GrossProfit                                  │
+│ 販売費及び一般管理費                      │       13,754,000,000 │ SellingGeneralAndAdministrativeExpenses      │
+│ 営業利益又は営業損失（△）                 │        3,199,000,000 │ OperatingIncome                              │
+│ 営業外収益                                │          133,000,000 │ NonOperatingIncome                           │
+│ 営業外費用                                │          491,000,000 │ NonOperatingExpenses                         │
+│ 経常利益又は経常損失（△）                 │        2,842,000,000 │ OrdinaryIncome                               │
+│ 税引前当期純利益又は税引前当期純損失（△） │        2,842,000,000 │ IncomeBeforeIncomeTaxes                      │
+│ 法人税等                                  │          760,000,000 │ IncomeTaxes                                  │
+│ 法人税等調整額                            │         -159,000,000 │ IncomeTaxesDeferred                          │
+│ 当期純利益又は当期純損失（△）             │        2,081,000,000 │ ProfitLoss                                   │
+│ 受取賃貸料                                │          101,000,000 │ RentIncomeNOI                                │
+│ その他                                    │           32,000,000 │ OtherNOI                                     │
+│ 支払利息                                  │          479,000,000 │ InterestExpensesNOE                          │
+│ その他                                    │           11,000,000 │ OtherNOE                                     │
+│ 法人税、住民税及び事業税                  │          920,000,000 │ IncomeTaxesCurrent                           │
+│ 剰余金の配当                              │         -402,000,000 │ DividendsFromSurplus                         │
+│ 株主資本以外の項目の当期変動額（純額）    │            4,000,000 │ NetChangesOfItemsOtherThanShareholdersEquity │
+│ 当期変動額合計                            │        1,683,000,000 │ TotalChangesOfItemsDuringThePeriod           │
+│ 営業活動によるキャッシュ・フロー          │        3,102,000,000 │ NetCashProvidedByUsedInOperatingActivities   │
+│ 投資活動によるキャッシュ・フロー          │       -4,973,000,000 │ NetCashProvidedByUsedInInvestmentActivities  │
+│ 財務活動によるキャッシュ・フロー          │          665,000,000 │ NetCashProvidedByUsedInFinancingActivities   │
+│ 現金及び現金同等物の増減額（△は減少）     │       -1,204,000,000 │ NetIncreaseDecreaseInCashAndCashEquivalents  │
+│ 給料及び手当                              │        3,549,000,000 │ SalariesAndAllowancesSGA                     │
+│ 賞与引当金繰入額                          │           20,000,000 │ ProvisionForBonusesGA                        │
+│ 減価償却費                                │        1,317,000,000 │ DepreciationSGA                              │
+│ 水道光熱費                                │        1,427,000,000 │ UtilitiesExpensesSGA                         │
+│ 業務委託費                                │        2,041,000,000 │ BusinessConsignmentExpensesSGA               │
+│ 退職給付費用                              │           51,000,000 │ RetirementBenefitExpensesSGA                 │
+│ 役員退職慰労引当金繰入額                  │            5,000,000 │ ProvisionForDirectorsRetirementBenefitsSGA   │
+└───────────────────────────────────────────┴──────────────────────┴──────────────────────────────────────────────┘
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:336: EdinetWarning: balance_sheet: 連結データなし、個別にフォールバック
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:336: EdinetWarning: NetAssets: 2候補中1件を採用（context_id='CurrentYearInstant_NonConsolidatedMember'）
+  bs = stmts.balance_sheet()
+
+  === BS ===
+                             貸借対照表 (Balance Sheet)  [個別] 2025-11-30                              
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ 科目                       ┃                 金額 ┃ concept                                          ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 流動資産                   │        2,178,000,000 │ CurrentAssets                                    │
+│ 固定資産                   │       29,419,000,000 │ NoncurrentAssets                                 │
+│ 有形固定資産               │       27,932,000,000 │ PropertyPlantAndEquipment                        │
+│ 無形固定資産               │          188,000,000 │ IntangibleAssets                                 │
+│ 投資その他の資産           │        1,299,000,000 │ InvestmentsAndOtherAssets                        │
+│ 資産                       │       31,598,000,000 │ Assets                                           │
+│ 流動負債                   │        6,141,000,000 │ CurrentLiabilities                               │
+│ 固定負債                   │        8,995,000,000 │ NoncurrentLiabilities                            │
+│ 負債                       │       15,136,000,000 │ Liabilities                                      │
+│ 資本金                     │        1,299,000,000 │ CapitalStock                                     │
+│ 資本剰余金                 │          500,000,000 │ CapitalSurplus                                   │
+│ 利益剰余金                 │       16,877,000,000 │ RetainedEarnings                                 │
+│ 自己株式                   │       -2,223,000,000 │ TreasuryStock                                    │
+│ 株主資本                   │       16,454,000,000 │ ShareholdersEquity                               │
+│ 評価・換算差額等           │            7,000,000 │ ValuationAndTranslationAdjustments               │
+│ 純資産                     │       16,461,000,000 │ NetAssets                                        │
+│ 負債純資産                 │       31,598,000,000 │ LiabilitiesAndNetAssets                          │
+│ 現金及び預金               │        1,097,000,000 │ CashAndDeposits                                  │
+│ 売掛金                     │          656,000,000 │ AccountsReceivableTrade                          │
+│ 商品                       │            5,000,000 │ Merchandise                                      │
+│ 原材料及び貯蔵品           │           86,000,000 │ RawMaterialsAndSupplies                          │
+│ 前払費用                   │          117,000,000 │ PrepaidExpenses                                  │
+│ 未収消費税等               │          209,000,000 │ ConsumptionTaxesReceivable                       │
+│ その他                     │            5,000,000 │ OtherCA                                          │
+│ 建物                       │       25,974,000,000 │ Buildings                                        │
+│ 減価償却累計額             │      -12,304,000,000 │ AccumulatedDepreciationBuildings                 │
+│ 建物（純額）               │       13,670,000,000 │ BuildingsNet                                     │
+│ 構築物                     │        1,539,000,000 │ Structures                                       │
+│ 減価償却累計額             │         -892,000,000 │ AccumulatedDepreciationStructures                │
+│ 構築物（純額）             │          647,000,000 │ StructuresNet                                    │
+│ 車両運搬具                 │           41,000,000 │ Vehicles                                         │
+│ 減価償却累計額             │          -36,000,000 │ AccumulatedDepreciationVehicles                  │
+│ 車両運搬具（純額）         │            4,000,000 │ VehiclesNet                                      │
+│ 工具、器具及び備品         │        3,156,000,000 │ ToolsFurnitureAndFixtures                        │
+│ 減価償却累計額             │       -2,721,000,000 │ AccumulatedDepreciationToolsFurnitureAndFixtures │
+│ 工具、器具及び備品（純額） │          435,000,000 │ ToolsFurnitureAndFixturesNet                     │
+│ 土地                       │        6,459,000,000 │ Land                                             │
+│ リース資産                 │        9,787,000,000 │ LeaseAssetsPPE                                   │
+│ 減価償却累計額             │       -3,917,000,000 │ AccumulatedDepreciationLeaseAssetsPPE            │
+│ リース資産（純額）         │        5,870,000,000 │ LeaseAssetsNetPPE                                │
+│ 建設仮勘定                 │          845,000,000 │ ConstructionInProgress                           │
+│ ソフトウエア               │          172,000,000 │ Software                                         │
+│ その他                     │           15,000,000 │ OtherIA                                          │
+│ 投資有価証券               │           13,000,000 │ InvestmentSecurities                             │
+│ 出資金                     │                    0 │ InvestmentsInCapital                             │
+│ 長期貸付金                 │          101,000,000 │ LongTermLoansReceivable                          │
+│ 長期前払費用               │           16,000,000 │ LongTermPrepaidExpenses                          │
+│ 繰延税金資産               │          534,000,000 │ DeferredTaxAssets                                │
+│ 敷金及び保証金             │          633,000,000 │ LeaseAndGuaranteeDeposits                        │
+│ 買掛金                     │          264,000,000 │ AccountsPayableTrade                             │
+│ 短期借入金                 │        2,450,000,000 │ ShortTermLoansPayable                            │
+│ １年内返済予定の長期借入金 │          796,000,000 │ CurrentPortionOfLongTermLoansPayable             │
+│ リース負債                 │          326,000,000 │ LeaseObligationsCL                               │
+│ 未払金                     │          829,000,000 │ AccountsPayableOther                             │
+│ 未払費用                   │          633,000,000 │ AccruedExpenses                                  │
+│ 未払法人税等               │          423,000,000 │ IncomeTaxesPayable                               │
+│ 契約負債                   │          329,000,000 │ ContractLiabilities                              │
+│ 預り金                     │           28,000,000 │ DepositsReceived                                 │
+│ 前受収益                   │           11,000,000 │ UnearnedRevenue                                  │
+│ 賞与引当金                 │           20,000,000 │ ProvisionForBonuses                              │
+│ 株主優待引当金             │           27,000,000 │ ProvisionForShareholderBenefitProgramCL          │
+│ 長期借入金                 │        1,342,000,000 │ LongTermLoansPayable                             │
+│ リース負債                 │        7,154,000,000 │ LeaseObligationsNCL                              │
+│ 退職給付引当金             │          124,000,000 │ ProvisionForRetirementBenefits                   │
+│ 役員退職慰労引当金         │           72,000,000 │ ProvisionForDirectorsRetirementBenefits          │
+│ 資産除去債務               │          274,000,000 │ AssetRetirementObligationsNCL                    │
+│ その他                     │           26,000,000 │ OtherNCL                                         │
+│ 資本準備金                 │          500,000,000 │ LegalCapitalSurplus                              │
+│ 利益準備金                 │           93,000,000 │ LegalRetainedEarnings                            │
+│ 別途積立金                 │            3,000,000 │ GeneralReserve                                   │
+│ 繰越利益剰余金             │       16,780,000,000 │ RetainedEarningsBroughtForward                   │
+│ その他有価証券評価差額金   │            7,000,000 │ ValuationDifferenceOnAvailableForSaleSecurities  │
+│ 現金及び現金同等物の残高   │        1,097,000,000 │ CashAndCashEquivalents                           │
+└────────────────────────────┴──────────────────────┴──────────────────────────────────────────────────┘
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:340: EdinetWarning: cash_flow_statement: 連結データなし、個別にフォールバック
+  cf = stmts.cash_flow_statement()
+
+  === CF ===
+                     キャッシュ・フロー計算書 (Cash Flow Statement)  [個別] 2024-12-01〜2025-11-30                      
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ 科目                         ┃                 金額 ┃ concept                                                        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 営業活動によるキャッシュ・ … │        3,102,000,000 │ NetCashProvidedByUsedInOperatingActivities                     │
+│ 投資活動によるキャッシュ・ … │       -4,973,000,000 │ NetCashProvidedByUsedInInvestmentActivities                    │
+│ 財務活動によるキャッシュ・ … │          665,000,000 │ NetCashProvidedByUsedInFinancingActivities                     │
+│ 現金及び現金同等物の増減額 … │       -1,204,000,000 │ NetIncreaseDecreaseInCashAndCashEquivalents                    │
+│ 減価償却費                   │        1,329,000,000 │ DepreciationAndAmortizationOpeCF                               │
+│ 賞与引当金の増減額（△は減少… │            3,000,000 │ IncreaseDecreaseInProvisionForBonusesOpeCF                     │
+│ 退職給付引当金の増減額（△は… │           37,000,000 │ IncreaseDecreaseInProvisionForRetirementBenefitsOpeCF          │
+│ 役員退職慰労引当金の増減額 … │            5,000,000 │ IncreaseDecreaseInProvisionForDirectorsRetirementBenefitsOpeCF │
+│ 受取利息及び受取配当金       │           -4,000,000 │ InterestAndDividendsIncomeOpeCF                                │
+│ 支払利息                     │          479,000,000 │ InterestExpensesOpeCF                                          │
+│ 売上債権の増減額（△は増加）  │         -166,000,000 │ DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF         │
+│ 棚卸資産の増減額（△は増加）  │          -14,000,000 │ DecreaseIncreaseInInventoriesOpeCF                             │
+│ 仕入債務の増減額（△は減少）  │           37,000,000 │ IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF            │
+│ 未払金の増減額（△は減少）    │          305,000,000 │ IncreaseDecreaseInAccountsPayableOtherOpeCF                    │
+│ 未払又は未収消費税等の増減額 │         -414,000,000 │ DecreaseIncreaseInConsumptionTaxesReceivablePayableOpeCF       │
+│ その他                       │          105,000,000 │ OtherNetOpeCF                                                  │
+│ 小計                         │        4,547,000,000 │ SubtotalOpeCF                                                  │
+│ 利息及び配当金の受取額       │            2,000,000 │ InterestAndDividendsIncomeReceivedOpeCFInvCF                   │
+│ 利息の支払額                 │         -484,000,000 │ InterestExpensesPaidOpeCFFinCF                                 │
+│ 法人税等の支払額             │         -962,000,000 │ IncomeTaxesPaidOpeCF                                           │
+│ 有形及び無形固定資産の取得 … │       -4,971,000,000 │ PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF    │
+│ 貸付金の回収による収入       │           18,000,000 │ CollectionOfLoansReceivableInvCF                               │
+│ その他                       │          -19,000,000 │ OtherNetInvCF                                                  │
+│ 短期借入金の純増減額（△は減… │        2,450,000,000 │ NetIncreaseDecreaseInShortTermLoansPayableFinCF                │
+│ 長期借入金の返済による支出   │       -1,073,000,000 │ RepaymentOfLongTermLoansPayableFinCF                           │
+│ リース負債の返済による支出   │         -308,000,000 │ RepaymentsOfLeaseObligationsFinCF                              │
+│ 配当金の支払額               │         -402,000,000 │ CashDividendsPaidFinCF                                         │
+└──────────────────────────────┴──────────────────────┴────────────────────────────────────────────────────────────────┘
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:351: EdinetWarning: income_statement: 連結データなし、個別にフォールバック
+  pl_cons = stmts.income_statement(consolidated=True)
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:351: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl_cons = stmts.income_statement(consolidated=True)
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:351: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl_cons = stmts.income_statement(consolidated=True)
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:352: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl_solo = stmts.income_statement(consolidated=False)
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:352: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl_solo = stmts.income_statement(consolidated=False)
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:366: EdinetWarning: balance_sheet: 連結データなし、個別にフォールバック
+  bs_cons = stmts.balance_sheet(consolidated=True)
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:366: EdinetWarning: NetAssets: 2候補中1件を採用（context_id='CurrentYearInstant_NonConsolidatedMember'）
+  bs_cons = stmts.balance_sheet(consolidated=True)
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:367: EdinetWarning: NetAssets: 2候補中1件を採用（context_id='CurrentYearInstant_NonConsolidatedMember'）
+  bs_solo = stmts.balance_sheet(consolidated=False)
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:388: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='InterimDuration'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:388: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='InterimDuration'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: income_statement: 連結データなし、個別にフォールバック
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:416: EdinetWarning: balance_sheet: 連結データなし、個別にフォールバック
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:416: EdinetWarning: NetAssets: 2候補中1件を採用（context_id='CurrentYearInstant_NonConsolidatedMember'）
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:417: EdinetWarning: cash_flow_statement: 連結データなし、個別にフォールバック
+  cf = stmts.cash_flow_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: NetSales: 2候補中1件を採用（context_id='CurrentYearDuration'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: OperatingIncome: 2候補中1件を採用（context_id='CurrentYearDuration'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: ProfitLossAttributableToOwnersOfParent: 2候補中1件を採用（context_id='CurrentYearDuration'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: ResearchAndDevelopmentExpensesSGA: 2候補中1件を採用（context_id='CurrentYearDuration'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:416: EdinetWarning: Assets: 2候補中1件を採用（context_id='CurrentYearInstant'）
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:416: EdinetWarning: NetAssets: 2候補中1件を採用（context_id='CurrentYearInstant'）
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: ImpairmentLossEL: 2候補中1件を採用（context_id='CurrentYearDuration'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:415: EdinetWarning: AmortizationOfGoodwillSGA: 2候補中1件を採用（context_id='CurrentYearDuration'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:416: EdinetWarning: Goodwill: 2候補中1件を採用（context_id='CurrentYearInstant'）
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:446: EdinetWarning: income_statement: 連結データなし、個別にフォールバック
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:446: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:446: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:451: EdinetWarning: balance_sheet: 連結データなし、個別にフォールバック
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:451: EdinetWarning: NetAssets: 2候補中1件を採用（context_id='CurrentYearInstant_NonConsolidatedMember'）
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:456: EdinetWarning: cash_flow_statement: 連結データなし、個別にフォールバック
+  cf = stmts.cash_flow_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:466: EdinetWarning: income_statement: 連結データなし、個別にフォールバック
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:466: EdinetWarning: IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:466: EdinetWarning: ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）
+  pl = stmts.income_statement()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:488: EdinetWarning: balance_sheet: 連結データなし、個別にフォールバック
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:488: EdinetWarning: NetAssets: 2候補中1件を採用（context_id='CurrentYearInstant_NonConsolidatedMember'）
+  bs = stmts.balance_sheet()
+/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/week2_e2e_jgaap.py:489: EdinetWarning: cash_flow_statement: 連結データなし、個別にフォールバック
+  cf = stmts.cash_flow_statement()
+  ✓ PASSED
+
+======================================================================
+TEST: J8: 連結 vs 個別の比較
+======================================================================
+  J-GAAP 候補: 5件
+  選択: 株式会社アメイズ (S100XMEJ)
+    ordinance: OrdinanceCode.DISCLOSURE
+    form: FormCodeEntry(010/030000 | 有価証券報告書)
+    period: 2024-12-01 ~ 2025-11-30
+  連結 PL: 31科目, consolidated=False
+  個別 PL: 31科目, consolidated=False
+  OperatingIncome:
+    連結: 3,199,000,000
+    個別: 3,199,000,000
+  OrdinaryIncome:
+    連結: 2,842,000,000
+    個別: 2,842,000,000
+
+  連結 BS: 73科目
+  個別 BS: 73科目
+  ✓ PASSED
+
+======================================================================
+TEST: J9: 半期報告書の J-GAAP 企業
+======================================================================
+  半期報告書: 株式会社ジョイフル本田 (S100XIHZ)
+  period: 2025-06-21 ~ 2026-06-20
+  PL: 47科目
+  BS: 59科目
+  PL OperatingIncome: 5,266,000,000
+  PL OrdinaryIncome: 5,867,000,000
+  PL ProfitLoss: 5,959,000,000
+  ✓ PASSED
+
+======================================================================
+TEST: J10: 複数 J-GAAP 企業の PL 比較
+======================================================================
+  J-GAAP 有報(開示府令): 5件
+
+  --- 株式会社アメイズ (S100XMEJ) ---
+    PL: 31科目, BS: 73科目, CF: 27科目
+    連結: False, 期間: DurationPeriod(start_date=datetime.date(2024, 12, 1), end_date=datetime.date(2025, 11, 30))
+    売上高: 19,560,000,000
+    営業利益: 3,199,000,000
+    PL警告: ('income_statement: 連結データなし、個別にフォールバック', "IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）", "ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration_NonConsolidatedMember'）")
+
+  --- 北興化学工業株式会社 (S100XMF0) ---
+    PL: 50科目, BS: 55科目, CF: 35科目
+    連結: True, 期間: DurationPeriod(start_date=datetime.date(2024, 12, 1), end_date=datetime.date(2025, 11, 30))
+    売上高: 49,125,000,000
+    営業利益: 4,913,000,000
+    PL警告: ("NetSales: 2候補中1件を採用（context_id='CurrentYearDuration'）", "OperatingIncome: 2候補中1件を採用（context_id='CurrentYearDuration'）", "IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ProfitLossAttributableToOwnersOfParent: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ResearchAndDevelopmentExpensesSGA: 2候補中1件を採用（context_id='CurrentYearDuration'）")
+
+  --- 日本毛織株式会社 (S100XLV8) ---
+    PL: 65科目, BS: 67科目, CF: 50科目
+    連結: True, 期間: DurationPeriod(start_date=datetime.date(2024, 12, 1), end_date=datetime.date(2025, 11, 30))
+    売上高: 119,377,000,000
+    営業利益: 11,913,000,000
+    PL警告: ("NetSales: 2候補中1件を採用（context_id='CurrentYearDuration'）", "OperatingIncome: 2候補中1件を採用（context_id='CurrentYearDuration'）", "IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ProfitLossAttributableToOwnersOfParent: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ImpairmentLossEL: 2候補中1件を採用（context_id='CurrentYearDuration'）", "AmortizationOfGoodwillSGA: 2候補中1件を採用（context_id='CurrentYearDuration'）")
+
+  --- 川上塗料株式会社 (S100XMOI) ---
+    PL: 39科目, BS: 47科目, CF: 30科目
+    連結: True, 期間: DurationPeriod(start_date=datetime.date(2024, 12, 1), end_date=datetime.date(2025, 11, 30))
+    売上高: 5,932,496,000
+    営業利益: 54,330,000
+    PL警告: ("IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ProfitLossAttributableToOwnersOfParent: 2候補中1件を採用（context_id='CurrentYearDuration'）")
+
+  --- 川口化学工業株式会社 (S100XLSD) ---
+    PL: 48科目, BS: 73科目, CF: 32科目
+    連結: True, 期間: DurationPeriod(start_date=datetime.date(2024, 12, 1), end_date=datetime.date(2025, 11, 30))
+    売上高: 8,814,476,000
+    営業利益: 426,645,000
+    PL警告: ("NetSales: 2候補中1件を採用（context_id='CurrentYearDuration'）", "OperatingIncome: 2候補中1件を採用（context_id='CurrentYearDuration'）", "IncomeBeforeIncomeTaxes: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ProfitLoss: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ProfitLossAttributableToOwnersOfParent: 2候補中1件を採用（context_id='CurrentYearDuration'）", "ResearchAndDevelopmentExpensesSGA: 2候補中1件を採用（context_id='CurrentYearDuration'）")
+  ✓ PASSED
+
+======================================================================
+TEST: J11: パフォーマンス計測 - J-GAAP 企業
+======================================================================
+  J-GAAP 候補: 5件
+  選択: 株式会社アメイズ (S100XMEJ)
+    ordinance: OrdinanceCode.DISCLOSURE
+    form: FormCodeEntry(010/030000 | 有価証券報告書)
+    period: 2024-12-01 ~ 2025-11-30
+  xbrl() 合計: 3629ms
+  income_statement(): 0.8ms (31 items)
+  balance_sheet(): 0.8ms (73 items)
+  cash_flow_statement(): 0.6ms (27 items)
+  ✓ PASSED
+
+======================================================================
+TEST: J12: 提出者ラベルが正しく解決される
+======================================================================
+  J-GAAP 候補: 5件
+  選択: 株式会社アメイズ (S100XMEJ)
+    ordinance: OrdinanceCode.DISCLOSURE
+    form: FormCodeEntry(010/030000 | 有価証券報告書)
+    period: 2024-12-01 ~ 2025-11-30
+  ラベルソース分布:
+    STANDARD: 31
+    FILER: 0
+    FALLBACK: 0
+  BS: FILER=0, FALLBACK=0
+  CF: FILER=0, FALLBACK=0
+  ✓ PASSED
+
+======================================================================
+結果: 12 passed, 0 failed
+======================================================================

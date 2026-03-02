@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd http://xbrl.org/2008/label http://www.xbrl.org/2008/generic-label.xsd http://xbrl.org/2008/generic http://www.xbrl.org/2008/generic-link.xsd http://www.w3.org/1999/xlink http://www.xbrl.org/2003/xlink-2003-12-31.xsd" xmlns:gen="http://xbrl.org/2008/generic" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:label="http://xbrl.org/2008/label" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://www.xbrl.org/2008/role/label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#standard-label"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2008/role/link" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-link.xsd#standard-link-role"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2008/element-label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#element-label"/>
+  <gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2008/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo4SecuritiesRegistrationStatement" xlink:label="src"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 4 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src" xlink:to="roleLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo43SecuritiesRegistrationStatement" xlink:label="src_2"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_2" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 4-3 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_2" xlink:to="roleLabel_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo432SecuritiesRegistrationStatement" xlink:label="src_3"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_3" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 4-3-2 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_3" xlink:to="roleLabel_3"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo433SecuritiesRegistrationStatement" xlink:label="src_4"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_4" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 4-3-3 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_4" xlink:to="roleLabel_4"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo52SecuritiesRegistrationStatement" xlink:label="src_5"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_5" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 5-2 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_5" xlink:to="roleLabel_5"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo54SecuritiesRegistrationStatement" xlink:label="src_6"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_6" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 5-4 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_6" xlink:to="roleLabel_6"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo6SecuritiesRegistrationStatement" xlink:label="src_7"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_7" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 6 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_7" xlink:to="roleLabel_7"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo65SecuritiesRegistrationStatement" xlink:label="src_8"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_8" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 6-5 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_8" xlink:to="roleLabel_8"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo67AndNo7AnnualSecuritiesReportAlsoDeemedAsSecuritiesRegistrationStatement" xlink:label="src_9"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_9" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 6-7 and No. 7 Annual securities report (Also deemed as Securities registration statement)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_9" xlink:to="roleLabel_9"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo69AndNo9AnnualSecuritiesReportAlsoDeemedAsSecuritiesRegistrationStatement" xlink:label="src_10"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_10" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 6-9 and No. 9 Annual securities report (Also deemed as Securities registration statement)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_10" xlink:to="roleLabel_10"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo7AnnualSecuritiesReport" xlink:label="src_11"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_11" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 7 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_11" xlink:to="roleLabel_11"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo73AnnualSecuritiesReport" xlink:label="src_12"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_12" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 7-3 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_12" xlink:to="roleLabel_12"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo82AnnualSecuritiesReport" xlink:label="src_13"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_13" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 8-2 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_13" xlink:to="roleLabel_13"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo84AnnualSecuritiesReport" xlink:label="src_14"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_14" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 8-4 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_14" xlink:to="roleLabel_14"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo9AnnualSecuritiesReport" xlink:label="src_15"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_15" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 9 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_15" xlink:to="roleLabel_15"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo95AnnualSecuritiesReport" xlink:label="src_16"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_16" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 9-5 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_16" xlink:to="roleLabel_16"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo10SemiannualSecuritiesReport" xlink:label="src_17"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_17" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 10 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_17" xlink:to="roleLabel_17"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo103SemiannualSecuritiesReport" xlink:label="src_18"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_18" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 10-3 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_18" xlink:to="roleLabel_18"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo112SemiannualSecuritiesReport" xlink:label="src_19"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_19" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 11-2 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_19" xlink:to="roleLabel_19"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo114SemiannualSecuritiesReport" xlink:label="src_20"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_20" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 11-4 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_20" xlink:to="roleLabel_20"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo12SemiannualSecuritiesReport" xlink:label="src_21"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_21" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 12 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_21" xlink:to="roleLabel_21"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo125SemiannualSecuritiesReport" xlink:label="src_22"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_22" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 12-5 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_22" xlink:to="roleLabel_22"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo15ShelfRegistrationStatement" xlink:label="src_23"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_23" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 15 Shelf Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_23" xlink:to="roleLabel_23"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo153ShelfRegistrationStatement" xlink:label="src_24"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_24" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 15-3 Shelf Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_24" xlink:to="roleLabel_24"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo21ShelfRegistrationSupplements" xlink:label="src_25"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_25" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 21 Shelf Registration Supplements</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_25" xlink:to="roleLabel_25"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CoverPage" xlink:label="src_26"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_26" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cover page</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_26" xlink:to="roleLabel_26"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_AdditionalDEIForDeemedRegistrationStatement" xlink:label="src_27"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_27" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Additional DEI for deemed registration statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_27" xlink:to="roleLabel_27"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo4SecuritiesRegistrationStatement" xlink:label="src_28"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_28" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 4 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_28" xlink:to="roleLabel_28"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo43SecuritiesRegistrationStatement" xlink:label="src_29"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_29" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 4-3 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_29" xlink:to="roleLabel_29"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo432SecuritiesRegistrationStatement" xlink:label="src_30"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_30" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 4-3-2 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_30" xlink:to="roleLabel_30"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo433SecuritiesRegistrationStatement" xlink:label="src_31"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_31" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 4-3-3 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_31" xlink:to="roleLabel_31"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo52SecuritiesRegistrationStatement" xlink:label="src_32"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_32" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 5-2 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_32" xlink:to="roleLabel_32"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo54SecuritiesRegistrationStatement" xlink:label="src_33"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_33" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 5-4 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_33" xlink:to="roleLabel_33"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo6SecuritiesRegistrationStatement" xlink:label="src_34"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_34" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 6 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_34" xlink:to="roleLabel_34"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo65SecuritiesRegistrationStatement" xlink:label="src_35"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_35" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 6-5 Securities Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_35" xlink:to="roleLabel_35"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo67AndNo7AnnualSecuritiesReportAlsoDeemedAsSecuritiesRegistrationStatement" xlink:label="src_36"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_36" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 6-7 and No. 7 Annual securities report (Also deemed as Securities registration statement)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_36" xlink:to="roleLabel_36"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo69AndNo9AnnualSecuritiesReportAlsoDeemedAsSecuritiesRegistrationStatement" xlink:label="src_37"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_37" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 6-9 and No. 9 Annual securities report (Also deemed as Securities registration statement)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_37" xlink:to="roleLabel_37"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo7AnnualSecuritiesReport" xlink:label="src_38"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_38" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 7 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_38" xlink:to="roleLabel_38"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo73AnnualSecuritiesReport" xlink:label="src_39"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_39" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 7-3 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_39" xlink:to="roleLabel_39"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo82AnnualSecuritiesReport" xlink:label="src_40"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_40" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 8-2 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_40" xlink:to="roleLabel_40"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo84AnnualSecuritiesReport" xlink:label="src_41"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_41" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 8-4 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_41" xlink:to="roleLabel_41"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo9AnnualSecuritiesReport" xlink:label="src_42"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_42" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 9 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_42" xlink:to="roleLabel_42"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo95AnnualSecuritiesReport" xlink:label="src_43"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_43" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 9-5 Annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_43" xlink:to="roleLabel_43"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo10SemiannualSecuritiesReport" xlink:label="src_44"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_44" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 10 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_44" xlink:to="roleLabel_44"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo103SemiannualSecuritiesReport" xlink:label="src_45"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_45" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 10-3 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_45" xlink:to="roleLabel_45"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo112SemiannualSecuritiesReport" xlink:label="src_46"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_46" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 11-2 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_46" xlink:to="roleLabel_46"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo114SemiannualSecuritiesReport" xlink:label="src_47"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_47" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 11-4 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_47" xlink:to="roleLabel_47"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo12SemiannualSecuritiesReport" xlink:label="src_48"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_48" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 12 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_48" xlink:to="roleLabel_48"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo125SemiannualSecuritiesReport" xlink:label="src_49"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_49" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 12-5 Semi-annual Securities Report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_49" xlink:to="roleLabel_49"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo15ShelfRegistrationStatement" xlink:label="src_50"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_50" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 15 Shelf Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_50" xlink:to="roleLabel_50"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo153ShelfRegistrationStatement" xlink:label="src_51"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_51" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 15-3 Shelf Registration Statement</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_51" xlink:to="roleLabel_51"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo21ShelfRegistrationSupplements" xlink:label="src_52"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_52" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Information, etc. on Specified Securities Form No. 21 Shelf Registration Supplements</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_52" xlink:to="roleLabel_52"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_CoverPage" xlink:label="src_53"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_53" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cover page</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_53" xlink:to="roleLabel_53"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_IndependentAuditorsReport" xlink:label="src_54"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_54" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Independent auditor's report</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_54" xlink:to="roleLabel_54"/>
+  </gen:link>
+</link:linkbase>

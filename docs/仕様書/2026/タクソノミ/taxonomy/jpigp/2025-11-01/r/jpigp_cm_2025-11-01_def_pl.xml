@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_StatementOfProfitOrLossIFRS-ListOfAccounts" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_StatementOfProfitOrLossIFRS-ListOfAccounts"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_StatementOfProfitOrLossIFRS-ListOfAccounts">
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_StatementOfProfitOrLossIFRSAbstract" xlink:label="StatementOfProfitOrLossIFRSAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_StatementOfProfitOrLossIFRSTable" xlink:label="StatementOfProfitOrLossIFRSTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfProfitOrLossIFRSAbstract" xlink:to="StatementOfProfitOrLossIFRSTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_StatementOfProfitOrLossIFRSLineItems" xlink:label="StatementOfProfitOrLossIFRSLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfProfitOrLossIFRSAbstract" xlink:to="StatementOfProfitOrLossIFRSLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ContinuingOperationsIFRSAbstract" xlink:label="ContinuingOperationsIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfProfitOrLossIFRSLineItems" xlink:to="ContinuingOperationsIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RevenueIFRS" xlink:label="RevenueIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="RevenueIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_NetSalesIFRS" xlink:label="NetSalesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="NetSalesIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_Revenue2IFRS" xlink:label="Revenue2IFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="Revenue2IFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CostOfSalesIFRS" xlink:label="CostOfSalesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="CostOfSalesIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GrossProfitIFRS" xlink:label="GrossProfitIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="GrossProfitIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SellingGeneralAndAdministrativeExpensesIFRS" xlink:label="SellingGeneralAndAdministrativeExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="SellingGeneralAndAdministrativeExpensesIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SellingExpensesIFRS" xlink:label="SellingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="SellingExpensesIFRS" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GeneralAndAdministrativeExpensesIFRS" xlink:label="GeneralAndAdministrativeExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="GeneralAndAdministrativeExpensesIFRS" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ResearchAndDevelopmentExpenditureRecognizedAsExpenseDuringPeriodIFRS" xlink:label="ResearchAndDevelopmentExpenditureRecognizedAsExpenseDuringPeriodIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="ResearchAndDevelopmentExpenditureRecognizedAsExpenseDuringPeriodIFRS" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GainOnRemeasurementRelatingToBusinessCombinationsIFRS" xlink:label="GainOnRemeasurementRelatingToBusinessCombinationsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="GainOnRemeasurementRelatingToBusinessCombinationsIFRS" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherOperatingIncomeIFRS" xlink:label="OtherOperatingIncomeIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="OtherOperatingIncomeIFRS" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherOperatingExpensesIFRS" xlink:label="OtherOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="OtherOperatingExpensesIFRS" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherIncomeIFRS" xlink:label="OtherIncomeIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="OtherIncomeIFRS" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherExpensesIFRS" xlink:label="OtherExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="OtherExpensesIFRS" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OperatingProfitLossIFRS" xlink:label="OperatingProfitLossIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="OperatingProfitLossIFRS" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceIncomeIFRS" xlink:label="FinanceIncomeIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="FinanceIncomeIFRS" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceCostsIFRS" xlink:label="FinanceCostsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="FinanceCostsIFRS" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ShareOfProfitLossOfInvestmentsAccountedForUsingEquityMethodIFRS" xlink:label="ShareOfProfitLossOfInvestmentsAccountedForUsingEquityMethodIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="ShareOfProfitLossOfInvestmentsAccountedForUsingEquityMethodIFRS" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossBeforeTaxIFRS" xlink:label="ProfitLossBeforeTaxIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="ProfitLossBeforeTaxIFRS" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IncomeTaxExpenseIFRS" xlink:label="IncomeTaxExpenseIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="IncomeTaxExpenseIFRS" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossFromContinuingOperationsIFRS" xlink:label="ProfitLossFromContinuingOperationsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ContinuingOperationsIFRSAbstract" xlink:to="ProfitLossFromContinuingOperationsIFRS" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DiscontinuedOperationsIFRSAbstract" xlink:label="DiscontinuedOperationsIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfProfitOrLossIFRSLineItems" xlink:to="DiscontinuedOperationsIFRSAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossFromDiscontinuedOperationsIFRS" xlink:label="ProfitLossFromDiscontinuedOperationsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="DiscontinuedOperationsIFRSAbstract" xlink:to="ProfitLossFromDiscontinuedOperationsIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossIFRS" xlink:label="ProfitLossIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfProfitOrLossIFRSLineItems" xlink:to="ProfitLossIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossAttributableToIFRSAbstract" xlink:label="ProfitLossAttributableToIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfProfitOrLossIFRSLineItems" xlink:to="ProfitLossAttributableToIFRSAbstract" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossAttributableToOwnersOfParentIFRS" xlink:label="ProfitLossAttributableToOwnersOfParentIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ProfitLossAttributableToIFRSAbstract" xlink:to="ProfitLossAttributableToOwnersOfParentIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossAttributableToNonControllingInterestsIFRS" xlink:label="ProfitLossAttributableToNonControllingInterestsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ProfitLossAttributableToIFRSAbstract" xlink:to="ProfitLossAttributableToNonControllingInterestsIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossIFRS" xlink:label="ProfitLossIFRS_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ProfitLossAttributableToIFRSAbstract" xlink:to="ProfitLossIFRS_2" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_EarningsLossPerShareIFRSAbstract" xlink:label="EarningsLossPerShareIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfProfitOrLossIFRSLineItems" xlink:to="EarningsLossPerShareIFRSAbstract" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_BasicEarningsLossPerShareIFRSAbstract" xlink:label="BasicEarningsLossPerShareIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EarningsLossPerShareIFRSAbstract" xlink:to="BasicEarningsLossPerShareIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ContinuingOperationsBasicEarningsLossPerShareIFRS" xlink:label="ContinuingOperationsBasicEarningsLossPerShareIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="BasicEarningsLossPerShareIFRSAbstract" xlink:to="ContinuingOperationsBasicEarningsLossPerShareIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DiscontinuedOperationsBasicEarningsLossPerShareIFRS" xlink:label="DiscontinuedOperationsBasicEarningsLossPerShareIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="BasicEarningsLossPerShareIFRSAbstract" xlink:to="DiscontinuedOperationsBasicEarningsLossPerShareIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_BasicEarningsLossPerShareIFRS" xlink:label="BasicEarningsLossPerShareIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="BasicEarningsLossPerShareIFRSAbstract" xlink:to="BasicEarningsLossPerShareIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DilutedEarningsLossPerShareIFRSAbstract" xlink:label="DilutedEarningsLossPerShareIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EarningsLossPerShareIFRSAbstract" xlink:to="DilutedEarningsLossPerShareIFRSAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ContinuingOperationsDilutedEarningsLossPerShareIFRS" xlink:label="ContinuingOperationsDilutedEarningsLossPerShareIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="DilutedEarningsLossPerShareIFRSAbstract" xlink:to="ContinuingOperationsDilutedEarningsLossPerShareIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DiscontinuedOperationsDilutedEarningsLossPerShareIFRS" xlink:label="DiscontinuedOperationsDilutedEarningsLossPerShareIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="DilutedEarningsLossPerShareIFRSAbstract" xlink:to="DiscontinuedOperationsDilutedEarningsLossPerShareIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DilutedEarningsLossPerShareIFRS" xlink:label="DilutedEarningsLossPerShareIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="DilutedEarningsLossPerShareIFRSAbstract" xlink:to="DilutedEarningsLossPerShareIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_BasicAndDilutedEarningsLossPerShareIFRS" xlink:label="BasicAndDilutedEarningsLossPerShareIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="EarningsLossPerShareIFRSAbstract" xlink:to="BasicAndDilutedEarningsLossPerShareIFRS" order="3.0"/>
+  </link:definitionLink>
+</link:linkbase>

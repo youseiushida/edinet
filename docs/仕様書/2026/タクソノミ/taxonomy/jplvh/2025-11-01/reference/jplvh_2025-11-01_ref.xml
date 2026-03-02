@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CoverPageHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CoverPageHeading" xlink:to="reference_CoverPageHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutIssuerHeading" xlink:label="InformationAboutIssuerHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InformationAboutIssuerHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InformationAboutIssuerHeading" xlink:to="reference_InformationAboutIssuerHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutFilersHeading" xlink:label="InformationAboutFilersHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InformationAboutFilersHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InformationAboutFilersHeading" xlink:to="reference_InformationAboutFilersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutJointHoldersHeading" xlink:label="InformationAboutJointHoldersHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InformationAboutJointHoldersHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InformationAboutJointHoldersHeading" xlink:to="reference_InformationAboutJointHoldersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SummaryOfFilerAndJointHoldersHeading" xlink:label="SummaryOfFilerAndJointHoldersHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SummaryOfFilerAndJointHoldersHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SummaryOfFilerAndJointHoldersHeading" xlink:to="reference_SummaryOfFilerAndJointHoldersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersAndJointHoldersHeading" xlink:label="FilersAndJointHoldersHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilersAndJointHoldersHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilersAndJointHoldersHeading" xlink:to="reference_FilersAndJointHoldersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading" xlink:label="BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading" xlink:to="reference_BreakdownOfStocksEtcHeldBySaidFilerAndJointHoldersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcHeldSummaryHeading" xlink:label="NumberOfStocksEtcHeldSummaryHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NumberOfStocksEtcHeldSummaryHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="reference_NumberOfStocksEtcHeldSummaryHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:label="HoldingRatioOfShareCertificatesEtcSummaryHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:to="reference_HoldingRatioOfShareCertificatesEtcSummaryHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading" xlink:label="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading" xlink:to="reference_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:label="FilersLargeVolumeHoldersAndJointHoldersAxis"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:to="reference_FilersLargeVolumeHoldersAndJointHoldersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersOrJointHoldersMember" xlink:label="FilersLargeVolumeHoldersOrJointHoldersMember"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilersLargeVolumeHoldersOrJointHoldersMember" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilersLargeVolumeHoldersOrJointHoldersMember" xlink:to="reference_FilersLargeVolumeHoldersOrJointHoldersMember"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersMember" xlink:label="FilersLargeVolumeHoldersMember"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilersLargeVolumeHoldersMember" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilersLargeVolumeHoldersMember" xlink:to="reference_FilersLargeVolumeHoldersMember"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_JointHoldersMember" xlink:label="JointHoldersMember"/>
+    <link:reference xlink:type="resource" xlink:label="reference_JointHoldersMember" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="JointHoldersMember" xlink:to="reference_JointHoldersMember"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DocumentTitleCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DocumentTitleCoverPage" xlink:to="reference_DocumentTitleCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ClauseOfStipulationCoverPage" xlink:label="ClauseOfStipulationCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ClauseOfStipulationCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ClauseOfStipulationCoverPage" xlink:to="reference_ClauseOfStipulationCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceOfFilingCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceOfFilingCoverPage" xlink:to="reference_PlaceOfFilingCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NameCoverPage" xlink:label="NameCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameCoverPage" xlink:to="reference_NameCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ResidentialAddressOrAddressOfRegisteredHeadquarterCoverPage" xlink:label="ResidentialAddressOrAddressOfRegisteredHeadquarterCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ResidentialAddressOrAddressOfRegisteredHeadquarterCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ResidentialAddressOrAddressOfRegisteredHeadquarterCoverPage" xlink:to="reference_ResidentialAddressOrAddressOfRegisteredHeadquarterCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DateWhenFilingRequirementAroseCoverPage" xlink:label="DateWhenFilingRequirementAroseCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DateWhenFilingRequirementAroseCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DateWhenFilingRequirementAroseCoverPage" xlink:to="reference_DateWhenFilingRequirementAroseCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilingDateCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilingDateCoverPage" xlink:to="reference_FilingDateCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfFilersAndJointHoldersCoverPage" xlink:label="TotalNumberOfFilersAndJointHoldersCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalNumberOfFilersAndJointHoldersCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalNumberOfFilersAndJointHoldersCoverPage" xlink:to="reference_TotalNumberOfFilersAndJointHoldersCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ArrangementOfFilingCoverPage" xlink:label="ArrangementOfFilingCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ArrangementOfFilingCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ArrangementOfFilingCoverPage" xlink:to="reference_ArrangementOfFilingCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ReasonForFilingChangeReportCoverPage" xlink:label="ReasonForFilingChangeReportCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ReasonForFilingChangeReportCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ReasonForFilingChangeReportCoverPage" xlink:to="reference_ReasonForFilingChangeReportCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NameOfIssuer" xlink:label="NameOfIssuer"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfIssuer" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfIssuer" xlink:to="reference_NameOfIssuer"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SecurityCodeOfIssuer" xlink:label="SecurityCodeOfIssuer"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SecurityCodeOfIssuer" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SecurityCodeOfIssuer" xlink:to="reference_SecurityCodeOfIssuer"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ListedOrOTC" xlink:label="ListedOrOTC"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ListedOrOTC" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ListedOrOTC" xlink:to="reference_ListedOrOTC"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockListing" xlink:label="StockListing"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockListing" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockListing" xlink:to="reference_StockListing"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutFilersTable" xlink:label="InformationAboutFilersTable"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InformationAboutFilersTable" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InformationAboutFilersTable" xlink:to="reference_InformationAboutFilersTable"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutFilersLineItems" xlink:label="InformationAboutFilersLineItems"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InformationAboutFilersLineItems" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InformationAboutFilersLineItems" xlink:to="reference_InformationAboutFilersLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilerLargeVolumeHolderSerialNumberAbstract" xlink:label="FilerLargeVolumeHolderSerialNumberAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilerLargeVolumeHolderSerialNumberAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilerLargeVolumeHolderSerialNumberAbstract" xlink:to="reference_FilerLargeVolumeHolderSerialNumberAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_OverviewOfFilerAbstract" xlink:label="OverviewOfFilerAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_OverviewOfFilerAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="OverviewOfFilerAbstract" xlink:to="reference_OverviewOfFilerAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilerLargeVolumeHolderAbstract" xlink:label="FilerLargeVolumeHolderAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilerLargeVolumeHolderAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilerLargeVolumeHolderAbstract" xlink:to="reference_FilerLargeVolumeHolderAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_IndividualOrCorporation" xlink:label="IndividualOrCorporation"/>
+    <link:reference xlink:type="resource" xlink:label="reference_IndividualOrCorporation" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="IndividualOrCorporation" xlink:to="reference_IndividualOrCorporation"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Name" xlink:label="Name"/>
+    <link:reference xlink:type="resource" xlink:label="reference_Name" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="Name" xlink:to="reference_Name"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ResidentialAddressOrAddressOfRegisteredHeadquarter" xlink:label="ResidentialAddressOrAddressOfRegisteredHeadquarter"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ResidentialAddressOrAddressOfRegisteredHeadquarter" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ResidentialAddressOrAddressOfRegisteredHeadquarter" xlink:to="reference_ResidentialAddressOrAddressOfRegisteredHeadquarter"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FormerName" xlink:label="FormerName"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FormerName" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FormerName" xlink:to="reference_FormerName"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FormerResidentialAddressOrAddressOfRegisteredHeadquarter" xlink:label="FormerResidentialAddressOrAddressOfRegisteredHeadquarter"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FormerResidentialAddressOrAddressOfRegisteredHeadquarter" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FormerResidentialAddressOrAddressOfRegisteredHeadquarter" xlink:to="reference_FormerResidentialAddressOrAddressOfRegisteredHeadquarter"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutIndividualAbstract" xlink:label="InformationAboutIndividualAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InformationAboutIndividualAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InformationAboutIndividualAbstract" xlink:to="reference_InformationAboutIndividualAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DateOfBirth" xlink:label="DateOfBirth"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DateOfBirth" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DateOfBirth" xlink:to="reference_DateOfBirth"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Occupation" xlink:label="Occupation"/>
+    <link:reference xlink:type="resource" xlink:label="reference_Occupation" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="Occupation" xlink:to="reference_Occupation"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NameOfEmployer" xlink:label="NameOfEmployer"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfEmployer" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfEmployer" xlink:to="reference_NameOfEmployer"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_AddressOfEmployer" xlink:label="AddressOfEmployer"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AddressOfEmployer" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AddressOfEmployer" xlink:to="reference_AddressOfEmployer"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutCorporationAbstract" xlink:label="InformationAboutCorporationAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InformationAboutCorporationAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InformationAboutCorporationAbstract" xlink:to="reference_InformationAboutCorporationAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DateOfEstablishment" xlink:label="DateOfEstablishment"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DateOfEstablishment" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DateOfEstablishment" xlink:to="reference_DateOfEstablishment"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NameOfRepresentative" xlink:label="NameOfRepresentative"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfRepresentative" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfRepresentative" xlink:to="reference_NameOfRepresentative"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_JobTitleOfRepresentative" xlink:label="JobTitleOfRepresentative"/>
+    <link:reference xlink:type="resource" xlink:label="reference_JobTitleOfRepresentative" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="JobTitleOfRepresentative" xlink:to="reference_JobTitleOfRepresentative"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DescriptionOfBusiness" xlink:label="DescriptionOfBusiness"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DescriptionOfBusiness" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DescriptionOfBusiness" xlink:to="reference_DescriptionOfBusiness"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ContactInformationAbstract" xlink:label="ContactInformationAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ContactInformationAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ContactInformationAbstract" xlink:to="reference_ContactInformationAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ContactInformationAndPerson" xlink:label="ContactInformationAndPerson"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ContactInformationAndPerson" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ContactInformationAndPerson" xlink:to="reference_ContactInformationAndPerson"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TelephoneNumber" xlink:label="TelephoneNumber"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TelephoneNumber" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TelephoneNumber" xlink:to="reference_TelephoneNumber"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_PurposeOfHoldingAbstract" xlink:label="PurposeOfHoldingAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PurposeOfHoldingAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PurposeOfHoldingAbstract" xlink:to="reference_PurposeOfHoldingAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_PurposeOfHolding" xlink:label="PurposeOfHolding"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PurposeOfHolding" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PurposeOfHolding" xlink:to="reference_PurposeOfHolding"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ActOfMakingImportantProposalEtcAbstract" xlink:label="ActOfMakingImportantProposalEtcAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ActOfMakingImportantProposalEtcAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ActOfMakingImportantProposalEtcAbstract" xlink:to="reference_ActOfMakingImportantProposalEtcAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ActOfMakingImportantProposalEtc" xlink:label="ActOfMakingImportantProposalEtc"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ActOfMakingImportantProposalEtc" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ActOfMakingImportantProposalEtc" xlink:to="reference_ActOfMakingImportantProposalEtc"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfStocksEtcHeldBySaidFilerAbstract" xlink:label="BreakdownOfStocksEtcHeldBySaidFilerAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_BreakdownOfStocksEtcHeldBySaidFilerAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="BreakdownOfStocksEtcHeldBySaidFilerAbstract" xlink:to="reference_BreakdownOfStocksEtcHeldBySaidFilerAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcHeldAbstract" xlink:label="NumberOfStocksEtcHeldAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NumberOfStocksEtcHeldAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="reference_NumberOfStocksEtcHeldAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233MainClauseAbstract" xlink:label="Article27233MainClauseAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_Article27233MainClauseAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="Article27233MainClauseAbstract" xlink:to="reference_Article27233MainClauseAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233MainClause" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StocksOrInvestmentSecuritiesEtcArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StocksOrInvestmentSecuritiesEtcArticle27233MainClause" xlink:to="reference_StocksOrInvestmentSecuritiesEtcArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SubscriptionRightsToSharesArticle27233MainClause" xlink:label="SubscriptionRightsToSharesArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SubscriptionRightsToSharesArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SubscriptionRightsToSharesArticle27233MainClause" xlink:to="reference_SubscriptionRightsToSharesArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ConvertibleBondsArticle27233MainClause" xlink:label="ConvertibleBondsArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ConvertibleBondsArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ConvertibleBondsArticle27233MainClause" xlink:to="reference_ConvertibleBondsArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233MainClause" xlink:label="TargetSecurityCoveredWarrantsArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TargetSecurityCoveredWarrantsArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TargetSecurityCoveredWarrantsArticle27233MainClause" xlink:to="reference_TargetSecurityCoveredWarrantsArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233MainClause" xlink:label="StockDepositoryReceiptsArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockDepositoryReceiptsArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockDepositoryReceiptsArticle27233MainClause" xlink:to="reference_StockDepositoryReceiptsArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233MainClause" xlink:label="StockRelatedDepositoryReceiptsArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockRelatedDepositoryReceiptsArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockRelatedDepositoryReceiptsArticle27233MainClause" xlink:to="reference_StockRelatedDepositoryReceiptsArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233MainClause" xlink:label="StockTrustBeneficiaryRightsArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockTrustBeneficiaryRightsArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockTrustBeneficiaryRightsArticle27233MainClause" xlink:to="reference_StockTrustBeneficiaryRightsArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233MainClause" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockRelatedTrustBeneficiaryRightsArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockRelatedTrustBeneficiaryRightsArticle27233MainClause" xlink:to="reference_StockRelatedTrustBeneficiaryRightsArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233MainClause" xlink:label="TargetSecurityRedeemableBondsArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TargetSecurityRedeemableBondsArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TargetSecurityRedeemableBondsArticle27233MainClause" xlink:to="reference_TargetSecurityRedeemableBondsArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233MainClause" xlink:label="ExchangeableBondsArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ExchangeableBondsArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ExchangeableBondsArticle27233MainClause" xlink:to="reference_ExchangeableBondsArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233MainClause" xlink:label="TotalArticle27233MainClause"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalArticle27233MainClause" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalArticle27233MainClause" xlink:to="reference_TotalArticle27233MainClause"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233Item1Abstract" xlink:label="Article27233Item1Abstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_Article27233Item1Abstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="Article27233Item1Abstract" xlink:to="reference_Article27233Item1Abstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233Item1" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233Item1"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StocksOrInvestmentSecuritiesEtcArticle27233Item1" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StocksOrInvestmentSecuritiesEtcArticle27233Item1" xlink:to="reference_StocksOrInvestmentSecuritiesEtcArticle27233Item1"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233Item1" xlink:label="TargetSecurityCoveredWarrantsArticle27233Item1"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TargetSecurityCoveredWarrantsArticle27233Item1" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TargetSecurityCoveredWarrantsArticle27233Item1" xlink:to="reference_TargetSecurityCoveredWarrantsArticle27233Item1"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233Item1" xlink:label="StockDepositoryReceiptsArticle27233Item1"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockDepositoryReceiptsArticle27233Item1" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockDepositoryReceiptsArticle27233Item1" xlink:to="reference_StockDepositoryReceiptsArticle27233Item1"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233Item1" xlink:label="StockRelatedDepositoryReceiptsArticle27233Item1"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockRelatedDepositoryReceiptsArticle27233Item1" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockRelatedDepositoryReceiptsArticle27233Item1" xlink:to="reference_StockRelatedDepositoryReceiptsArticle27233Item1"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233Item1" xlink:label="StockTrustBeneficiaryRightsArticle27233Item1"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockTrustBeneficiaryRightsArticle27233Item1" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockTrustBeneficiaryRightsArticle27233Item1" xlink:to="reference_StockTrustBeneficiaryRightsArticle27233Item1"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233Item1" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233Item1"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockRelatedTrustBeneficiaryRightsArticle27233Item1" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockRelatedTrustBeneficiaryRightsArticle27233Item1" xlink:to="reference_StockRelatedTrustBeneficiaryRightsArticle27233Item1"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233Item1" xlink:label="TargetSecurityRedeemableBondsArticle27233Item1"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TargetSecurityRedeemableBondsArticle27233Item1" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TargetSecurityRedeemableBondsArticle27233Item1" xlink:to="reference_TargetSecurityRedeemableBondsArticle27233Item1"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233Item1" xlink:label="ExchangeableBondsArticle27233Item1"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ExchangeableBondsArticle27233Item1" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ExchangeableBondsArticle27233Item1" xlink:to="reference_ExchangeableBondsArticle27233Item1"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233Item1" xlink:label="TotalArticle27233Item1"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalArticle27233Item1" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalArticle27233Item1" xlink:to="reference_TotalArticle27233Item1"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233Item2Abstract" xlink:label="Article27233Item2Abstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_Article27233Item2Abstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="Article27233Item2Abstract" xlink:to="reference_Article27233Item2Abstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233Item2" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StocksOrInvestmentSecuritiesEtcArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StocksOrInvestmentSecuritiesEtcArticle27233Item2" xlink:to="reference_StocksOrInvestmentSecuritiesEtcArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SubscriptionRightsToSharesArticle27233Item2" xlink:label="SubscriptionRightsToSharesArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SubscriptionRightsToSharesArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SubscriptionRightsToSharesArticle27233Item2" xlink:to="reference_SubscriptionRightsToSharesArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ConvertibleBondsArticle27233Item2" xlink:label="ConvertibleBondsArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ConvertibleBondsArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ConvertibleBondsArticle27233Item2" xlink:to="reference_ConvertibleBondsArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233Item2" xlink:label="TargetSecurityCoveredWarrantsArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TargetSecurityCoveredWarrantsArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TargetSecurityCoveredWarrantsArticle27233Item2" xlink:to="reference_TargetSecurityCoveredWarrantsArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233Item2" xlink:label="StockDepositoryReceiptsArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockDepositoryReceiptsArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockDepositoryReceiptsArticle27233Item2" xlink:to="reference_StockDepositoryReceiptsArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233Item2" xlink:label="StockRelatedDepositoryReceiptsArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockRelatedDepositoryReceiptsArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockRelatedDepositoryReceiptsArticle27233Item2" xlink:to="reference_StockRelatedDepositoryReceiptsArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233Item2" xlink:label="StockTrustBeneficiaryRightsArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockTrustBeneficiaryRightsArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockTrustBeneficiaryRightsArticle27233Item2" xlink:to="reference_StockTrustBeneficiaryRightsArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233Item2" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockRelatedTrustBeneficiaryRightsArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockRelatedTrustBeneficiaryRightsArticle27233Item2" xlink:to="reference_StockRelatedTrustBeneficiaryRightsArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233Item2" xlink:label="TargetSecurityRedeemableBondsArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TargetSecurityRedeemableBondsArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TargetSecurityRedeemableBondsArticle27233Item2" xlink:to="reference_TargetSecurityRedeemableBondsArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233Item2" xlink:label="ExchangeableBondsArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ExchangeableBondsArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ExchangeableBondsArticle27233Item2" xlink:to="reference_ExchangeableBondsArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233Item2" xlink:label="TotalArticle27233Item2"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalArticle27233Item2" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalArticle27233Item2" xlink:to="reference_TotalArticle27233Item2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcToDeductAsSoldOnMarginTrading" xlink:label="NumberOfStocksEtcToDeductAsSoldOnMarginTrading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NumberOfStocksEtcToDeductAsSoldOnMarginTrading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NumberOfStocksEtcToDeductAsSoldOnMarginTrading" xlink:to="reference_NumberOfStocksEtcToDeductAsSoldOnMarginTrading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders" xlink:label="NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders" xlink:to="reference_NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfStocksEtcHeld" xlink:label="TotalNumberOfStocksEtcHeld"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalNumberOfStocksEtcHeld" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalNumberOfStocksEtcHeld" xlink:to="reference_TotalNumberOfStocksEtcHeld"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfResidualStocksHeld" xlink:label="NumberOfResidualStocksHeld"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NumberOfResidualStocksHeld" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NumberOfResidualStocksHeld" xlink:to="reference_NumberOfResidualStocksHeld"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NotesNumberOfStocksEtcHeldTextBlock" xlink:label="NotesNumberOfStocksEtcHeldTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NotesNumberOfStocksEtcHeldTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>金融庁</ref:Publisher>
+      <ref:Name>株券等の大量保有報告に関するQ&amp;A</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>問7</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NotesNumberOfStocksEtcHeldTextBlock" xlink:to="reference_NotesNumberOfStocksEtcHeldTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcAbstract" xlink:label="HoldingRatioOfShareCertificatesEtcAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingRatioOfShareCertificatesEtcAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingRatioOfShareCertificatesEtcAbstract" xlink:to="reference_HoldingRatioOfShareCertificatesEtcAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfOutstandingStocksEtcAbstract" xlink:label="TotalNumberOfOutstandingStocksEtcAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalNumberOfOutstandingStocksEtcAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalNumberOfOutstandingStocksEtcAbstract" xlink:to="reference_TotalNumberOfOutstandingStocksEtcAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BaseDate" xlink:label="BaseDate"/>
+    <link:reference xlink:type="resource" xlink:label="reference_BaseDate" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="BaseDate" xlink:to="reference_BaseDate"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfOutstandingStocksEtc" xlink:label="TotalNumberOfOutstandingStocksEtc"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalNumberOfOutstandingStocksEtc" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalNumberOfOutstandingStocksEtc" xlink:to="reference_TotalNumberOfOutstandingStocksEtc"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtc" xlink:label="HoldingRatioOfShareCertificatesEtc"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingRatioOfShareCertificatesEtc" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingRatioOfShareCertificatesEtc" xlink:to="reference_HoldingRatioOfShareCertificatesEtc"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcPerLastReport" xlink:label="HoldingRatioOfShareCertificatesEtcPerLastReport"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingRatioOfShareCertificatesEtcPerLastReport" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingRatioOfShareCertificatesEtcPerLastReport" xlink:to="reference_HoldingRatioOfShareCertificatesEtcPerLastReport"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NotesHoldingRatioOfShareCertificatesEtcTextBlock" xlink:label="NotesHoldingRatioOfShareCertificatesEtcTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NotesHoldingRatioOfShareCertificatesEtcTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>金融庁</ref:Publisher>
+      <ref:Name>株券等の大量保有報告に関するQ&amp;A</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>問7</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NotesHoldingRatioOfShareCertificatesEtcTextBlock" xlink:to="reference_NotesHoldingRatioOfShareCertificatesEtcTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysAbstract" xlink:label="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysAbstract" xlink:to="reference_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock" xlink:label="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock" xlink:to="reference_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysIfCategorizedAsShortTermLargeVolumeTransferAbstract" xlink:label="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysIfCategorizedAsShortTermLargeVolumeTransferAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysIfCategorizedAsShortTermLargeVolumeTransferAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysIfCategorizedAsShortTermLargeVolumeTransferAbstract" xlink:to="reference_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysIfCategorizedAsShortTermLargeVolumeTransferAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysIfCategorizedAsShortTermLargeVolumeTransferTextBlock" xlink:label="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysIfCategorizedAsShortTermLargeVolumeTransferTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysIfCategorizedAsShortTermLargeVolumeTransferTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysIfCategorizedAsShortTermLargeVolumeTransferTextBlock" xlink:to="reference_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysIfCategorizedAsShortTermLargeVolumeTransferTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsAbstract" xlink:label="SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsAbstract" xlink:to="reference_SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock" xlink:label="SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock" xlink:to="reference_SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FundingForAcquisitionOfStocksEtcHeldAbstract" xlink:label="FundingForAcquisitionOfStocksEtcHeldAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FundingForAcquisitionOfStocksEtcHeldAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FundingForAcquisitionOfStocksEtcHeldAbstract" xlink:to="reference_FundingForAcquisitionOfStocksEtcHeldAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfFundingAbstract" xlink:label="BreakdownOfFundingAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_BreakdownOfFundingAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="BreakdownOfFundingAbstract" xlink:to="reference_BreakdownOfFundingAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_AmountOfOwnFund" xlink:label="AmountOfOwnFund"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AmountOfOwnFund" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AmountOfOwnFund" xlink:to="reference_AmountOfOwnFund"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalAmountOfBorrowings" xlink:label="TotalAmountOfBorrowings"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalAmountOfBorrowings" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalAmountOfBorrowings" xlink:to="reference_TotalAmountOfBorrowings"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalAmountFromOtherSources" xlink:label="TotalAmountFromOtherSources"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalAmountFromOtherSources" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalAmountFromOtherSources" xlink:to="reference_TotalAmountFromOtherSources"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfTotalAmountFromOtherSources" xlink:label="BreakdownOfTotalAmountFromOtherSources"/>
+    <link:reference xlink:type="resource" xlink:label="reference_BreakdownOfTotalAmountFromOtherSources" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="BreakdownOfTotalAmountFromOtherSources" xlink:to="reference_BreakdownOfTotalAmountFromOtherSources"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalAmountOfFundingForAcquisition" xlink:label="TotalAmountOfFundingForAcquisition"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalAmountOfFundingForAcquisition" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalAmountOfFundingForAcquisition" xlink:to="reference_TotalAmountOfFundingForAcquisition"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NotesFundingForAcquisitionOfStocksEtcHeldTextBlock" xlink:label="NotesFundingForAcquisitionOfStocksEtcHeldTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NotesFundingForAcquisitionOfStocksEtcHeldTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>金融庁</ref:Publisher>
+      <ref:Name>株券等の大量保有報告に関するQ&amp;A</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>問4、問5</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NotesFundingForAcquisitionOfStocksEtcHeldTextBlock" xlink:to="reference_NotesFundingForAcquisitionOfStocksEtcHeldTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfBorrowingsAbstract" xlink:label="BreakdownOfBorrowingsAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_BreakdownOfBorrowingsAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="BreakdownOfBorrowingsAbstract" xlink:to="reference_BreakdownOfBorrowingsAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfBorrowingsTextBlock" xlink:label="BreakdownOfBorrowingsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_BreakdownOfBorrowingsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="BreakdownOfBorrowingsTextBlock" xlink:to="reference_BreakdownOfBorrowingsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NamesEtcOfCreditorsAbstract" xlink:label="NamesEtcOfCreditorsAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NamesEtcOfCreditorsAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NamesEtcOfCreditorsAbstract" xlink:to="reference_NamesEtcOfCreditorsAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NamesEtcOfCreditorsTextBlock" xlink:label="NamesEtcOfCreditorsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NamesEtcOfCreditorsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NamesEtcOfCreditorsTextBlock" xlink:to="reference_NamesEtcOfCreditorsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutJointHoldersTable" xlink:label="InformationAboutJointHoldersTable"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InformationAboutJointHoldersTable" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InformationAboutJointHoldersTable" xlink:to="reference_InformationAboutJointHoldersTable"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutJointHoldersLineItems" xlink:label="InformationAboutJointHoldersLineItems"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InformationAboutJointHoldersLineItems" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InformationAboutJointHoldersLineItems" xlink:to="reference_InformationAboutJointHoldersLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_JointHolderSerialNumberAbstract" xlink:label="JointHolderSerialNumberAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_JointHolderSerialNumberAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="JointHolderSerialNumberAbstract" xlink:to="reference_JointHolderSerialNumberAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_OverviewOfJointHolderAbstract" xlink:label="OverviewOfJointHolderAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_OverviewOfJointHolderAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="OverviewOfJointHolderAbstract" xlink:to="reference_OverviewOfJointHolderAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_JointHolderAbstract" xlink:label="JointHolderAbstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_JointHolderAbstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="JointHolderAbstract" xlink:to="reference_JointHolderAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingTable" xlink:label="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingTable"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingTable" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingTable" xlink:to="reference_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingTable"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems" xlink:label="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems" xlink:to="reference_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233Item3Abstract" xlink:label="Article27233Item3Abstract"/>
+    <link:reference xlink:type="resource" xlink:label="reference_Article27233Item3Abstract" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="Article27233Item3Abstract" xlink:to="reference_Article27233Item3Abstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233Item3" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StocksOrInvestmentSecuritiesEtcArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StocksOrInvestmentSecuritiesEtcArticle27233Item3" xlink:to="reference_StocksOrInvestmentSecuritiesEtcArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3" xlink:label="ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3" xlink:to="reference_ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ConvertibleBondsArticle27233Item3" xlink:label="ConvertibleBondsArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ConvertibleBondsArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ConvertibleBondsArticle27233Item3" xlink:to="reference_ConvertibleBondsArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233Item3" xlink:label="TargetSecurityCoveredWarrantsArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TargetSecurityCoveredWarrantsArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TargetSecurityCoveredWarrantsArticle27233Item3" xlink:to="reference_TargetSecurityCoveredWarrantsArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233Item3" xlink:label="StockDepositoryReceiptsArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockDepositoryReceiptsArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockDepositoryReceiptsArticle27233Item3" xlink:to="reference_StockDepositoryReceiptsArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233Item3" xlink:label="StockRelatedDepositoryReceiptsArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockRelatedDepositoryReceiptsArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockRelatedDepositoryReceiptsArticle27233Item3" xlink:to="reference_StockRelatedDepositoryReceiptsArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233Item3" xlink:label="StockTrustBeneficiaryRightsArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockTrustBeneficiaryRightsArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockTrustBeneficiaryRightsArticle27233Item3" xlink:to="reference_StockTrustBeneficiaryRightsArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233Item3" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_StockRelatedTrustBeneficiaryRightsArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="StockRelatedTrustBeneficiaryRightsArticle27233Item3" xlink:to="reference_StockRelatedTrustBeneficiaryRightsArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233Item3" xlink:label="TargetSecurityRedeemableBondsArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TargetSecurityRedeemableBondsArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TargetSecurityRedeemableBondsArticle27233Item3" xlink:to="reference_TargetSecurityRedeemableBondsArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233Item3" xlink:label="ExchangeableBondsArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ExchangeableBondsArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ExchangeableBondsArticle27233Item3" xlink:to="reference_ExchangeableBondsArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233Item3" xlink:label="TotalArticle27233Item3"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TotalArticle27233Item3" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TotalArticle27233Item3" xlink:to="reference_TotalArticle27233Item3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld" xlink:label="NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld" xlink:to="reference_NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfResidualStocksEtcHeldByFilersAndJointHolders" xlink:label="NumberOfResidualStocksEtcHeldByFilersAndJointHolders"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NumberOfResidualStocksEtcHeldByFilersAndJointHolders" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NumberOfResidualStocksEtcHeldByFilersAndJointHolders" xlink:to="reference_NumberOfResidualStocksEtcHeldByFilersAndJointHolders"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders" xlink:label="NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>株券等の大量保有の状況の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders" xlink:to="reference_NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders"/>
+  </link:referenceLink>
+</link:linkbase>

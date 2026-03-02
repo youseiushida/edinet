@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xbrldt="http://xbrl.org/2005/xbrldt">
+
+  <!-- Role 1: BS hypercube (standard taxonomy href) -->
+  <link:definitionLink xlink:type="extended"
+    xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedBalanceSheet">
+
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BSHeading"
+      xlink:label="BSHeading"/>
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BSTable"
+      xlink:label="BSTable"/>
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TestAxis"
+      xlink:label="TestAxis"/>
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TestDomain"
+      xlink:label="TestDomain"/>
+
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/all"
+      xlink:from="BSHeading" xlink:to="BSTable"
+      order="1.0"
+      xbrldt:closed="true"
+      xbrldt:contextElement="scenario"/>
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension"
+      xlink:from="BSTable" xlink:to="TestAxis"
+      order="1.0"/>
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain"
+      xlink:from="TestAxis" xlink:to="TestDomain"
+      order="1.0"/>
+  </link:definitionLink>
+
+  <!-- Role 2: PL hypercube (filer taxonomy href + standard href mixed) -->
+  <link:definitionLink xlink:type="extended"
+    xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfIncome">
+
+    <!-- Filer taxonomy href pattern -->
+    <link:loc xlink:type="locator"
+      xlink:href="jpcrp030000-asr-001_X99001-000.xsd#X99001-000_CustomPLHeading"
+      xlink:label="CustomPLHeading"/>
+    <link:loc xlink:type="locator"
+      xlink:href="jpcrp030000-asr-001_X99001-000.xsd#X99001-000_CustomPLTable"
+      xlink:label="CustomPLTable"/>
+    <!-- Standard taxonomy href mixed in -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis"
+      xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedDomain"
+      xlink:label="ConsolidatedOrNonConsolidatedDomain"/>
+
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/all"
+      xlink:from="CustomPLHeading" xlink:to="CustomPLTable"
+      order="1.0"
+      xbrldt:closed="true"
+      xbrldt:contextElement="segment"/>
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension"
+      xlink:from="CustomPLTable" xlink:to="ConsolidatedOrNonConsolidatedAxis"
+      order="1.0"/>
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain"
+      xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedOrNonConsolidatedDomain"
+      order="1.0"/>
+  </link:definitionLink>
+
+  <!-- Role 3: general-special only (coexistence test) -->
+  <link:definitionLink xlink:type="extended"
+    xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ClassificationOfItems">
+
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_Revenue"
+      xlink:label="Revenue"/>
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetSales"
+      xlink:label="NetSales"/>
+
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special"
+      xlink:from="Revenue" xlink:to="NetSales"
+      order="1.0"/>
+  </link:definitionLink>
+
+</link:linkbase>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/jpsps100000/ssr/001/Y99010-000/2027-07-31/01/2027-10-23" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jpsps100000-ssr_Y99010-000="http://disclosure.edinet-fsa.go.jp/jpsps100000/ssr/001/Y99010-000/2027-07-31/01/2027-10-23" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/label/jpsps_2025-11-01_gla.xml" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2025-11-01/label/jppfs_2025-11-01_gla.xml" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/label/jpdei_2013-08-31_gla.xml" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/r/jpsps-dei_000200-000_2025-11-01_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jpsps100000-ssr-001_Y99010-000_2027-07-31_01_2027-10-23_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jpsps100000-ssr-001_Y99010-000_2027-07-31_01_2027-10-23_cal.xml" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jpsps100000-ssr-001_Y99010-000_2027-07-31_01_2027-10-23_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/r/jpdei_000100-000_2013-08-31_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jpsps100000-ssr-001_Y99010-000_2027-07-31_01_2027-10-23_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/label/jpsps_2025-11-01_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/label/jpsps_2025-11-01_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2025-11-01/label/jppfs_2025-11-01_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2025-11-01/label/jppfs_2025-11-01_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/label/jpdei_2024-11-01_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/label/jpdei_2024-11-01_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jpsps100000-ssr-001_Y99010-000_2027-07-31_01_2027-10-23_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor_2013-08-31.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_rt" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_rt_2013-08-31.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_cor" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_cor_2025-11-01.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_rt" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_rt_2025-11-01.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2025-11-01/jppfs_cor" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2025-11-01/jppfs_rt" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2025-11-01/jppfs_rt_2025-11-01.xsd"/>
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <xsd:element name="ReserveForA" id="jpsps100000-ssr_Y99010-000_ReserveForA" type="xbrli:monetaryItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:balance="credit" xbrli:periodType="instant"/>
+</xsd:schema>

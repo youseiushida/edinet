@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <link:definitionLink xlink:type="extended"
+    xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ClassificationOfItems">
+
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_Assets"
+      xlink:label="Assets"/>
+
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CurrentAssets"
+      xlink:label="CurrentAssets"/>
+
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NoncurrentAssets"
+      xlink:label="NoncurrentAssets"/>
+
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CashAndDeposits"
+      xlink:label="CashAndDeposits"/>
+
+    <!-- general-special: Assets -> CurrentAssets -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special"
+      xlink:from="Assets" xlink:to="CurrentAssets"
+      order="1.0"/>
+
+    <!-- general-special: Assets -> NoncurrentAssets -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special"
+      xlink:from="Assets" xlink:to="NoncurrentAssets"
+      order="2.0"/>
+
+    <!-- general-special: CurrentAssets -> CashAndDeposits -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special"
+      xlink:from="CurrentAssets" xlink:to="CashAndDeposits"
+      order="1.0"/>
+
+  </link:definitionLink>
+</link:linkbase>

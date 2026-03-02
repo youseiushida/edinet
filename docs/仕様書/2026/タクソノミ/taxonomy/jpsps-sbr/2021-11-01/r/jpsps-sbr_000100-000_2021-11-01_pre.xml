@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps-sbr/rol_std_CoverPage" xlink:type="simple" xlink:href="../jpsps-sbr_rt_2021-11-01.xsd#rol_std_CoverPage"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpsps-sbr/rol_std_CoverPage">
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="DocumentTitleCoverPage" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_ClauseOfStipulationCoverPage" xlink:label="ClauseOfStipulationCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="ClauseOfStipulationCoverPage" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="PlaceOfFilingCoverPage" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="FilingDateCoverPage" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_ReportingPeriodCoverPage" xlink:label="ReportingPeriodCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="ReportingPeriodCoverPage" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_IssuerNameCoverPage" xlink:label="IssuerNameCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="IssuerNameCoverPage" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_TitleAndNameOfRepresentativeCoverPage" xlink:label="TitleAndNameOfRepresentativeCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="TitleAndNameOfRepresentativeCoverPage" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_AddressOfRegisteredHeadquarterCoverPage" xlink:label="AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="AddressOfRegisteredHeadquarterCoverPage" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_NameOfContactPersonCoverPage" xlink:label="NameOfContactPersonCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NameOfContactPersonCoverPage" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_TelephoneNumberCoverPage" xlink:label="TelephoneNumberCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="TelephoneNumberCoverPage" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_PlaceForPublicInspectionCoverPageTextBlock" xlink:label="PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="PlaceForPublicInspectionCoverPageTextBlock" order="11.0"/>
+  </link:presentationLink>
+</link:linkbase>

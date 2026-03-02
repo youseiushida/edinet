@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_std_AdditionalDEIForDeemedRegistrationStatement" xlink:type="simple" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_AdditionalDEIForDeemedRegistrationStatement"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_std_AdditionalDEIForDeemedRegistrationStatement">
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_AdditionalDEIForDeemedRegistrationStatementAbstract" xlink:label="AdditionalDEIForDeemedRegistrationStatementAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_ScopeOfAmendmentDeemedRegistrationStatementDEIAbstract" xlink:label="ScopeOfAmendmentDeemedRegistrationStatementDEIAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AdditionalDEIForDeemedRegistrationStatementAbstract" xlink:to="ScopeOfAmendmentDeemedRegistrationStatementDEIAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_SecuritiesRegistrationStatementAmendmentFlagDeemedRegistrationStatementDEI" xlink:label="SecuritiesRegistrationStatementAmendmentFlagDeemedRegistrationStatementDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ScopeOfAmendmentDeemedRegistrationStatementDEIAbstract" xlink:to="SecuritiesRegistrationStatementAmendmentFlagDeemedRegistrationStatementDEI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_IdentificationOfRegistrationStatementSubjectToAmendmentDeemedRegistrationStatementDEI" xlink:label="IdentificationOfRegistrationStatementSubjectToAmendmentDeemedRegistrationStatementDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ScopeOfAmendmentDeemedRegistrationStatementDEIAbstract" xlink:to="IdentificationOfRegistrationStatementSubjectToAmendmentDeemedRegistrationStatementDEI" order="2.0"/>
+  </link:definitionLink>
+</link:linkbase>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_CommunicationsEquipmentReportableSegmentMember" xlink:label="CommunicationsEquipmentReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_CommunicationsEquipmentReportableSegmentMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">通信機器</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="CommunicationsEquipmentReportableSegmentMember" xlink:to="label_CommunicationsEquipmentReportableSegmentMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_CommunicationsEquipmentReportableSegmentMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">通信機器、報告セグメント [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="CommunicationsEquipmentReportableSegmentMember" xlink:to="label_CommunicationsEquipmentReportableSegmentMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_ReserveForBMember" xlink:label="ReserveForBMember"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForBMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">B積立金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForBMember" xlink:to="label_ReserveForBMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForBMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">B積立金 [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForBMember" xlink:to="label_ReserveForBMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_ProvisionOfReserveForB" xlink:label="ProvisionOfReserveForB"/>
+    <link:label xlink:type="resource" xlink:label="label_ProvisionOfReserveForB" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">B積立金の積立</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ProvisionOfReserveForB" xlink:to="label_ProvisionOfReserveForB" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_ProvisionOfReserveForB_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">B積立金の積立</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ProvisionOfReserveForB" xlink:to="label_ProvisionOfReserveForB_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_ReversalOfReserveForB" xlink:label="ReversalOfReserveForB"/>
+    <link:label xlink:type="resource" xlink:label="label_ReversalOfReserveForB" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">B積立金の取崩</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReversalOfReserveForB" xlink:to="label_ReversalOfReserveForB" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_ReversalOfReserveForB_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">B積立金の取崩</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReversalOfReserveForB" xlink:to="label_ReversalOfReserveForB_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_LossOnCOpeCF" xlink:label="LossOnCOpeCF"/>
+    <link:label xlink:type="resource" xlink:label="label_LossOnCOpeCF" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">C損失</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="LossOnCOpeCF" xlink:to="label_LossOnCOpeCF" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_LossOnCOpeCF_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">C損失、営業活動によるキャッシュ・フロー</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="LossOnCOpeCF" xlink:to="label_LossOnCOpeCF_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_PaymentForLossOnCOpeCF" xlink:label="PaymentForLossOnCOpeCF"/>
+    <link:label xlink:type="resource" xlink:label="label_PaymentForLossOnCOpeCF" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">C損失の支払額</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="PaymentForLossOnCOpeCF" xlink:to="label_PaymentForLossOnCOpeCF" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_PaymentForLossOnCOpeCF_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">C損失の支払額、営業活動によるキャッシュ・フロー</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="PaymentForLossOnCOpeCF" xlink:to="label_PaymentForLossOnCOpeCF_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_ReserveForA" xlink:label="ReserveForA"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForA" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">A引当金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForA" xlink:to="label_ReserveForA" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForA_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">A引当金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForA" xlink:to="label_ReserveForA_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_ReserveForB" xlink:label="ReserveForB"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForB" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">B積立金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForB" xlink:to="label_ReserveForB" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForB_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">B積立金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForB" xlink:to="label_ReserveForB_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_LossOnCEL" xlink:label="LossOnCEL"/>
+    <link:label xlink:type="resource" xlink:label="label_LossOnCEL" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">C損失</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="LossOnCEL" xlink:to="label_LossOnCEL" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_LossOnCEL_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">C損失、特別損失</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="LossOnCEL" xlink:to="label_LossOnCEL_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_MeasurementInstrumentsReportableSegmentMember" xlink:label="MeasurementInstrumentsReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_MeasurementInstrumentsReportableSegmentMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">計測機器</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="MeasurementInstrumentsReportableSegmentMember" xlink:to="label_MeasurementInstrumentsReportableSegmentMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_MeasurementInstrumentsReportableSegmentMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">計測機器、報告セグメント [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="MeasurementInstrumentsReportableSegmentMember" xlink:to="label_MeasurementInstrumentsReportableSegmentMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_IndustrialMachineryReportableSegmentMember" xlink:label="IndustrialMachineryReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_IndustrialMachineryReportableSegmentMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">産業機械</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="IndustrialMachineryReportableSegmentMember" xlink:to="label_IndustrialMachineryReportableSegmentMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_IndustrialMachineryReportableSegmentMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">産業機械、報告セグメント [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="IndustrialMachineryReportableSegmentMember" xlink:to="label_IndustrialMachineryReportableSegmentMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_YakuinTaroMember" xlink:label="YakuinTaroMember"/>
+    <link:label xlink:type="resource" xlink:label="label_YakuinTaroMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">役員　太郎</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="YakuinTaroMember" xlink:to="label_YakuinTaroMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_YakuinTaroMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">役員　太郎 [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="YakuinTaroMember" xlink:to="label_YakuinTaroMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_YakuinKazuoMember" xlink:label="YakuinKazuoMember"/>
+    <link:label xlink:type="resource" xlink:label="label_YakuinKazuoMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">役員　一男</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="YakuinKazuoMember" xlink:to="label_YakuinKazuoMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_YakuinKazuoMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">役員　一男 [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="YakuinKazuoMember" xlink:to="label_YakuinKazuoMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_YakuHanakoMember" xlink:label="YakuHanakoMember"/>
+    <link:label xlink:type="resource" xlink:label="label_YakuHanakoMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">役　花子</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="YakuHanakoMember" xlink:to="label_YakuHanakoMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_YakuHanakoMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">役　花子 [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="YakuHanakoMember" xlink:to="label_YakuHanakoMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_YakuinMakotoMember" xlink:label="YakuinMakotoMember"/>
+    <link:label xlink:type="resource" xlink:label="label_YakuinMakotoMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">役員　誠</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="YakuinMakotoMember" xlink:to="label_YakuinMakotoMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_YakuinMakotoMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">役員　誠 [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="YakuinMakotoMember" xlink:to="label_YakuinMakotoMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02.xsd#jpcrp030000-asr_X99001-000_KansaIchiroMember" xlink:label="KansaIchiroMember"/>
+    <link:label xlink:type="resource" xlink:label="label_KansaIchiroMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">監査　一郎</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="KansaIchiroMember" xlink:to="label_KansaIchiroMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_KansaIchiroMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">監査　一郎 [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="KansaIchiroMember" xlink:to="label_KansaIchiroMember_2" order="1.0"/>
+  </link:labelLink>
+</link:linkbase>

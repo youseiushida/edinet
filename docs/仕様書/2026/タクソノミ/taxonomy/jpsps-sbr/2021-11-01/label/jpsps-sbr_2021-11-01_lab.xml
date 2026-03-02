@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReportHeading" xlink:label="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReportHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReportHeading" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReportHeading">特定有価証券開示府令 第二十五号の三様式 自己株券買付状況報告書</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReportHeading" xlink:to="label_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReportHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReportHeading_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReportHeading_2">特定有価証券の内容等の開示に関する内閣府令 第二十五号の三様式 自己株券買付状況報告書 [目次項目]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReportHeading" xlink:to="label_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReportHeading_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_CoverPageHeading" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_CoverPageHeading">表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="CoverPageHeading" xlink:to="label_CoverPageHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_CoverPageHeading_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_CoverPageHeading_2">表紙 [目次項目]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="CoverPageHeading" xlink:to="label_CoverPageHeading_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_AcquisitionsOfTreasurySharesHeading" xlink:label="AcquisitionsOfTreasurySharesHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_AcquisitionsOfTreasurySharesHeading" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_AcquisitionsOfTreasurySharesHeading">取得状況</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="AcquisitionsOfTreasurySharesHeading" xlink:to="label_AcquisitionsOfTreasurySharesHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_AcquisitionsOfTreasurySharesHeading_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_AcquisitionsOfTreasurySharesHeading_2">取得状況 [目次項目]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="AcquisitionsOfTreasurySharesHeading" xlink:to="label_AcquisitionsOfTreasurySharesHeading_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_AcquisitionsOfTreasurySharesTextBlock" xlink:label="AcquisitionsOfTreasurySharesTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_AcquisitionsOfTreasurySharesTextBlock" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_AcquisitionsOfTreasurySharesTextBlock">取得状況</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="AcquisitionsOfTreasurySharesTextBlock" xlink:to="label_AcquisitionsOfTreasurySharesTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_AcquisitionsOfTreasurySharesTextBlock_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_AcquisitionsOfTreasurySharesTextBlock_2">取得状況 [テキストブロック]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="AcquisitionsOfTreasurySharesTextBlock" xlink:to="label_AcquisitionsOfTreasurySharesTextBlock_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_DisposalsOfTreasurySharesHeading" xlink:label="DisposalsOfTreasurySharesHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_DisposalsOfTreasurySharesHeading" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_DisposalsOfTreasurySharesHeading">処理状況</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="DisposalsOfTreasurySharesHeading" xlink:to="label_DisposalsOfTreasurySharesHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_DisposalsOfTreasurySharesHeading_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_DisposalsOfTreasurySharesHeading_2">処理状況 [目次項目]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="DisposalsOfTreasurySharesHeading" xlink:to="label_DisposalsOfTreasurySharesHeading_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_DisposalsOfTreasurySharesTextBlock" xlink:label="DisposalsOfTreasurySharesTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_DisposalsOfTreasurySharesTextBlock" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_DisposalsOfTreasurySharesTextBlock">処理状況</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="DisposalsOfTreasurySharesTextBlock" xlink:to="label_DisposalsOfTreasurySharesTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_DisposalsOfTreasurySharesTextBlock_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_DisposalsOfTreasurySharesTextBlock_2">処理状況 [テキストブロック]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="DisposalsOfTreasurySharesTextBlock" xlink:to="label_DisposalsOfTreasurySharesTextBlock_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_HoldingOfTreasurySharesHeading" xlink:label="HoldingOfTreasurySharesHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_HoldingOfTreasurySharesHeading" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_HoldingOfTreasurySharesHeading">保有状況</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="HoldingOfTreasurySharesHeading" xlink:to="label_HoldingOfTreasurySharesHeading"/>
+    <link:label xlink:type="resource" xlink:label="label_HoldingOfTreasurySharesHeading_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_HoldingOfTreasurySharesHeading_2">保有状況 [目次項目]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="HoldingOfTreasurySharesHeading" xlink:to="label_HoldingOfTreasurySharesHeading_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_HoldingOfTreasurySharesTextBlock" xlink:label="HoldingOfTreasurySharesTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_HoldingOfTreasurySharesTextBlock" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_HoldingOfTreasurySharesTextBlock">保有状況</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="HoldingOfTreasurySharesTextBlock" xlink:to="label_HoldingOfTreasurySharesTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_HoldingOfTreasurySharesTextBlock_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_HoldingOfTreasurySharesTextBlock_2">保有状況 [テキストブロック]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="HoldingOfTreasurySharesTextBlock" xlink:to="label_HoldingOfTreasurySharesTextBlock_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_DocumentTitleCoverPage" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_DocumentTitleCoverPage">提出書類</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="DocumentTitleCoverPage" xlink:to="label_DocumentTitleCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_DocumentTitleCoverPage_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_DocumentTitleCoverPage_2">提出書類、表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="DocumentTitleCoverPage" xlink:to="label_DocumentTitleCoverPage_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_ClauseOfStipulationCoverPage" xlink:label="ClauseOfStipulationCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_ClauseOfStipulationCoverPage" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_ClauseOfStipulationCoverPage">根拠条文</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ClauseOfStipulationCoverPage" xlink:to="label_ClauseOfStipulationCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_ClauseOfStipulationCoverPage_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_ClauseOfStipulationCoverPage_2">根拠条文、表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ClauseOfStipulationCoverPage" xlink:to="label_ClauseOfStipulationCoverPage_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_PlaceOfFilingCoverPage" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_PlaceOfFilingCoverPage">提出先</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="PlaceOfFilingCoverPage" xlink:to="label_PlaceOfFilingCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_PlaceOfFilingCoverPage_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_PlaceOfFilingCoverPage_2">提出先、表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="PlaceOfFilingCoverPage" xlink:to="label_PlaceOfFilingCoverPage_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_FilingDateCoverPage" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_FilingDateCoverPage">提出日</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="FilingDateCoverPage" xlink:to="label_FilingDateCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_FilingDateCoverPage_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_FilingDateCoverPage_2">提出日、表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="FilingDateCoverPage" xlink:to="label_FilingDateCoverPage_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_ReportingPeriodCoverPage" xlink:label="ReportingPeriodCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_ReportingPeriodCoverPage" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_ReportingPeriodCoverPage">報告期間</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReportingPeriodCoverPage" xlink:to="label_ReportingPeriodCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_ReportingPeriodCoverPage_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_ReportingPeriodCoverPage_2">報告期間、表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReportingPeriodCoverPage" xlink:to="label_ReportingPeriodCoverPage_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_IssuerNameCoverPage" xlink:label="IssuerNameCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_IssuerNameCoverPage" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_IssuerNameCoverPage">発行者名</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="IssuerNameCoverPage" xlink:to="label_IssuerNameCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_IssuerNameCoverPage_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_IssuerNameCoverPage_2">発行者名、表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="IssuerNameCoverPage" xlink:to="label_IssuerNameCoverPage_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_TitleAndNameOfRepresentativeCoverPage" xlink:label="TitleAndNameOfRepresentativeCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_TitleAndNameOfRepresentativeCoverPage" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_TitleAndNameOfRepresentativeCoverPage">代表者の役職氏名</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="TitleAndNameOfRepresentativeCoverPage" xlink:to="label_TitleAndNameOfRepresentativeCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_TitleAndNameOfRepresentativeCoverPage_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_TitleAndNameOfRepresentativeCoverPage_2">代表者の役職氏名、表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="TitleAndNameOfRepresentativeCoverPage" xlink:to="label_TitleAndNameOfRepresentativeCoverPage_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_AddressOfRegisteredHeadquarterCoverPage" xlink:label="AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_AddressOfRegisteredHeadquarterCoverPage" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_AddressOfRegisteredHeadquarterCoverPage">本店の所在の場所</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="AddressOfRegisteredHeadquarterCoverPage" xlink:to="label_AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_AddressOfRegisteredHeadquarterCoverPage_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_AddressOfRegisteredHeadquarterCoverPage_2">本店の所在の場所、表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="AddressOfRegisteredHeadquarterCoverPage" xlink:to="label_AddressOfRegisteredHeadquarterCoverPage_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_NameOfContactPersonCoverPage" xlink:label="NameOfContactPersonCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_NameOfContactPersonCoverPage" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_NameOfContactPersonCoverPage">事務連絡者氏名</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="NameOfContactPersonCoverPage" xlink:to="label_NameOfContactPersonCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_NameOfContactPersonCoverPage_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_NameOfContactPersonCoverPage_2">事務連絡者氏名、表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="NameOfContactPersonCoverPage" xlink:to="label_NameOfContactPersonCoverPage_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_TelephoneNumberCoverPage" xlink:label="TelephoneNumberCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_TelephoneNumberCoverPage" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_TelephoneNumberCoverPage">電話番号</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="TelephoneNumberCoverPage" xlink:to="label_TelephoneNumberCoverPage"/>
+    <link:label xlink:type="resource" xlink:label="label_TelephoneNumberCoverPage_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_TelephoneNumberCoverPage_2">電話番号、表紙</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="TelephoneNumberCoverPage" xlink:to="label_TelephoneNumberCoverPage_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_PlaceForPublicInspectionCoverPageTextBlock" xlink:label="PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_PlaceForPublicInspectionCoverPageTextBlock" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_PlaceForPublicInspectionCoverPageTextBlock">縦覧に供する場所</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="PlaceForPublicInspectionCoverPageTextBlock" xlink:to="label_PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:label xlink:type="resource" xlink:label="label_PlaceForPublicInspectionCoverPageTextBlock_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_PlaceForPublicInspectionCoverPageTextBlock_2">縦覧に供する場所、表紙 [テキストブロック]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="PlaceForPublicInspectionCoverPageTextBlock" xlink:to="label_PlaceForPublicInspectionCoverPageTextBlock_2"/>
+  </link:labelLink>
+</link:linkbase>

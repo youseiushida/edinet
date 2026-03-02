@@ -1,0 +1,2425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:jpdei_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" xmlns:jppfs_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2025-11-01/jppfs_cor" xmlns:jpsps100000-ssr_Y99010-000="http://disclosure.edinet-fsa.go.jp/jpsps100000/ssr/001/Y99010-000/2027-07-31/01/2027-10-23" xmlns:jpsps_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <link:schemaRef xlink:href="jpsps100000-ssr-001_Y99010-000_2027-07-31_01_2027-10-23.xsd" xlink:type="simple"/>
+  <xbrli:context id="FilingDateInstant">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99010-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2027-10-23</xbrli:instant>
+</xbrli:period>
+</xbrli:context>
+  <xbrli:context id="InterimDuration">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99010-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:startDate>2027-02-01</xbrli:startDate>
+<xbrli:endDate>2027-07-31</xbrli:endDate>
+</xbrli:period>
+</xbrli:context>
+  <xbrli:context id="Prior2YearInstant_NonConsolidatedMember">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99010-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2026-01-31</xbrli:instant>
+</xbrli:period>
+<xbrli:scenario>
+<xbrldi:explicitMember dimension="jppfs_cor:ConsolidatedOrNonConsolidatedAxis">jppfs_cor:NonConsolidatedMember</xbrldi:explicitMember>
+</xbrli:scenario>
+</xbrli:context>
+  <xbrli:context id="Prior1InterimDuration_NonConsolidatedMember">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99010-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:startDate>2026-02-01</xbrli:startDate>
+<xbrli:endDate>2026-07-31</xbrli:endDate>
+</xbrli:period>
+<xbrli:scenario>
+<xbrldi:explicitMember dimension="jppfs_cor:ConsolidatedOrNonConsolidatedAxis">jppfs_cor:NonConsolidatedMember</xbrldi:explicitMember>
+</xbrli:scenario>
+</xbrli:context>
+  <xbrli:context id="Prior1InterimInstant_NonConsolidatedMember">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99010-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2026-07-31</xbrli:instant>
+</xbrli:period>
+<xbrli:scenario>
+<xbrldi:explicitMember dimension="jppfs_cor:ConsolidatedOrNonConsolidatedAxis">jppfs_cor:NonConsolidatedMember</xbrldi:explicitMember>
+</xbrli:scenario>
+</xbrli:context>
+  <xbrli:context id="Prior1YearInstant_NonConsolidatedMember">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99010-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2027-01-31</xbrli:instant>
+</xbrli:period>
+<xbrli:scenario>
+<xbrldi:explicitMember dimension="jppfs_cor:ConsolidatedOrNonConsolidatedAxis">jppfs_cor:NonConsolidatedMember</xbrldi:explicitMember>
+</xbrli:scenario>
+</xbrli:context>
+  <xbrli:context id="InterimDuration_NonConsolidatedMember">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99010-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:startDate>2027-02-01</xbrli:startDate>
+<xbrli:endDate>2027-07-31</xbrli:endDate>
+</xbrli:period>
+<xbrli:scenario>
+<xbrldi:explicitMember dimension="jppfs_cor:ConsolidatedOrNonConsolidatedAxis">jppfs_cor:NonConsolidatedMember</xbrldi:explicitMember>
+</xbrli:scenario>
+</xbrli:context>
+  <xbrli:context id="InterimInstant_NonConsolidatedMember">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99010-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2027-07-31</xbrli:instant>
+</xbrli:period>
+<xbrli:scenario>
+<xbrldi:explicitMember dimension="jppfs_cor:ConsolidatedOrNonConsolidatedAxis">jppfs_cor:NonConsolidatedMember</xbrldi:explicitMember>
+</xbrli:scenario>
+</xbrli:context>
+  <xbrli:unit id="JPY">
+<xbrli:measure>iso4217:JPY</xbrli:measure>
+</xbrli:unit>
+  <xbrli:unit id="pure">
+<xbrli:measure>xbrli:pure</xbrli:measure>
+</xbrli:unit>
+  <jpdei_cor:NumberOfSubmissionDEI contextRef="FilingDateInstant" decimals="0" unitRef="pure">1</jpdei_cor:NumberOfSubmissionDEI>
+  <jppfs_cor:DepositsCAFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">906256</jppfs_cor:DepositsCAFND>
+  <jppfs_cor:DepositsCAFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">825505</jppfs_cor:DepositsCAFND>
+  <jppfs_cor:MoneyHeldInTrustCAFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">355597336</jppfs_cor:MoneyHeldInTrustCAFND>
+  <jppfs_cor:MoneyHeldInTrustCAFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">353621928</jppfs_cor:MoneyHeldInTrustCAFND>
+  <jppfs_cor:CallLoansCAFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">6137306</jppfs_cor:CallLoansCAFND>
+  <jppfs_cor:CallLoansCAFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">9267833</jppfs_cor:CallLoansCAFND>
+  <jppfs_cor:MortgageSecuritiesCAFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">96618694</jppfs_cor:MortgageSecuritiesCAFND>
+  <jppfs_cor:MortgageSecuritiesCAFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">83956816</jppfs_cor:MortgageSecuritiesCAFND>
+  <jppfs_cor:CurrentAssets contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">459259592</jppfs_cor:CurrentAssets>
+  <jppfs_cor:CurrentAssets contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">447672082</jppfs_cor:CurrentAssets>
+  <jppfs_cor:Assets contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">459259592</jppfs_cor:Assets>
+  <jppfs_cor:Assets contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">447672082</jppfs_cor:Assets>
+  <jppfs_cor:SalesSecuritiesForMarginTradingCLFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">8632983</jppfs_cor:SalesSecuritiesForMarginTradingCLFND>
+  <jppfs_cor:SalesSecuritiesForMarginTradingCLFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">9694012</jppfs_cor:SalesSecuritiesForMarginTradingCLFND>
+  <jppfs_cor:SalesOfSecuritiesBorrowedCLFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">5930581</jppfs_cor:SalesOfSecuritiesBorrowedCLFND>
+  <jppfs_cor:SalesOfSecuritiesBorrowedCLFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">5712530</jppfs_cor:SalesOfSecuritiesBorrowedCLFND>
+  <jppfs_cor:BondsSoldCLFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">71676419</jppfs_cor:BondsSoldCLFND>
+  <jppfs_cor:BondsSoldCLFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">64261753</jppfs_cor:BondsSoldCLFND>
+  <jpsps100000-ssr_Y99010-000:ReserveForA contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">1177458</jpsps100000-ssr_Y99010-000:ReserveForA>
+  <jpsps100000-ssr_Y99010-000:ReserveForA contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">1240309</jpsps100000-ssr_Y99010-000:ReserveForA>
+  <jppfs_cor:ProvisionForPointCardCertificatesCL contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">912949</jppfs_cor:ProvisionForPointCardCertificatesCL>
+  <jppfs_cor:ProvisionForPointCardCertificatesCL contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">1068530</jppfs_cor:ProvisionForPointCardCertificatesCL>
+  <jppfs_cor:CurrentLiabilities contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">88330390</jppfs_cor:CurrentLiabilities>
+  <jppfs_cor:CurrentLiabilities contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">81977134</jppfs_cor:CurrentLiabilities>
+  <jppfs_cor:Liabilities contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">88330390</jppfs_cor:Liabilities>
+  <jppfs_cor:Liabilities contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">81977134</jppfs_cor:Liabilities>
+  <jppfs_cor:PrincipalFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">262195265</jppfs_cor:PrincipalFND>
+  <jppfs_cor:PrincipalFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">237010476</jppfs_cor:PrincipalFND>
+  <jppfs_cor:SurplusDeficitFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">108733937</jppfs_cor:SurplusDeficitFND>
+  <jppfs_cor:SurplusDeficitFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">128684472</jppfs_cor:SurplusDeficitFND>
+  <jppfs_cor:ReserveForDistributionFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">894928</jppfs_cor:ReserveForDistributionFND>
+  <jppfs_cor:ReserveForDistributionFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">841753</jppfs_cor:ReserveForDistributionFND>
+  <jppfs_cor:PrincipalAndOtherFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">370929202</jppfs_cor:PrincipalAndOtherFND>
+  <jppfs_cor:PrincipalAndOtherFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">365694948</jppfs_cor:PrincipalAndOtherFND>
+  <jppfs_cor:NetAssets contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">370929202</jppfs_cor:NetAssets>
+  <jppfs_cor:NetAssets contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">365694948</jppfs_cor:NetAssets>
+  <jppfs_cor:LiabilitiesAndNetAssets contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">459259592</jppfs_cor:LiabilitiesAndNetAssets>
+  <jppfs_cor:LiabilitiesAndNetAssets contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">447672082</jppfs_cor:LiabilitiesAndNetAssets>
+  <jppfs_cor:DividendsIncomeOIFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">24818849</jppfs_cor:DividendsIncomeOIFND>
+  <jppfs_cor:DividendsIncomeOIFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">22288465</jppfs_cor:DividendsIncomeOIFND>
+  <jppfs_cor:DividendsStockOIFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1110880</jppfs_cor:DividendsStockOIFND>
+  <jppfs_cor:DividendsStockOIFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1386996</jppfs_cor:DividendsStockOIFND>
+  <jppfs_cor:OperatingRevenueFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">25929729</jppfs_cor:OperatingRevenueFND>
+  <jppfs_cor:OperatingRevenueFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">23675461</jppfs_cor:OperatingRevenueFND>
+  <jppfs_cor:TrusteeFeeOEFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">103371</jppfs_cor:TrusteeFeeOEFND>
+  <jppfs_cor:TrusteeFeeOEFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">105489</jppfs_cor:TrusteeFeeOEFND>
+  <jppfs_cor:InvestmentTrustManagementFeeOEFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1782681</jppfs_cor:InvestmentTrustManagementFeeOEFND>
+  <jppfs_cor:InvestmentTrustManagementFeeOEFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1847787</jppfs_cor:InvestmentTrustManagementFeeOEFND>
+  <jppfs_cor:OtherExpensesOEFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">16424</jppfs_cor:OtherExpensesOEFND>
+  <jppfs_cor:OtherExpensesOEFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">17069</jppfs_cor:OtherExpensesOEFND>
+  <jppfs_cor:OperatingExpensesFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1902476</jppfs_cor:OperatingExpensesFND>
+  <jppfs_cor:OperatingExpensesFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1970345</jppfs_cor:OperatingExpensesFND>
+  <jppfs_cor:OperatingIncome contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">24027253</jppfs_cor:OperatingIncome>
+  <jppfs_cor:OperatingIncome contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">21705116</jppfs_cor:OperatingIncome>
+  <jppfs_cor:OrdinaryIncome contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">24027253</jppfs_cor:OrdinaryIncome>
+  <jppfs_cor:OrdinaryIncome contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">21705116</jppfs_cor:OrdinaryIncome>
+  <jppfs_cor:ProfitLoss contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">24027253</jppfs_cor:ProfitLoss>
+  <jppfs_cor:ProfitLoss contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">21705116</jppfs_cor:ProfitLoss>
+  <jppfs_cor:SurplusDeficitFND contextRef="Prior2YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">84779580</jppfs_cor:SurplusDeficitFND>
+  <jppfs_cor:SurplusDeficitFND contextRef="Prior1YearInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">108733937</jppfs_cor:SurplusDeficitFND>
+  <jppfs_cor:IncreaseInSurplusOrDecreaseInDeficitFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">985464</jppfs_cor:IncreaseInSurplusOrDecreaseInDeficitFND>
+  <jppfs_cor:IncreaseInSurplusOrDecreaseInDeficitFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">977218</jppfs_cor:IncreaseInSurplusOrDecreaseInDeficitFND>
+  <jppfs_cor:IncreaseInSurplusOrDecreaseInDeficitFromPartialRedemptionsFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">985464</jppfs_cor:IncreaseInSurplusOrDecreaseInDeficitFromPartialRedemptionsFND>
+  <jppfs_cor:IncreaseInSurplusOrDecreaseInDeficitFromPartialRedemptionsFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">977218</jppfs_cor:IncreaseInSurplusOrDecreaseInDeficitFromPartialRedemptionsFND>
+  <jppfs_cor:DecreaseInSurplusOrIncreaseInDeficitFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1058360</jppfs_cor:DecreaseInSurplusOrIncreaseInDeficitFND>
+  <jppfs_cor:DecreaseInSurplusOrIncreaseInDeficitFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1113923</jppfs_cor:DecreaseInSurplusOrIncreaseInDeficitFND>
+  <jppfs_cor:DecreaseInSurplusOrIncreaseInDeficitFromPartialRedemptionsFND contextRef="Prior1InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1058360</jppfs_cor:DecreaseInSurplusOrIncreaseInDeficitFromPartialRedemptionsFND>
+  <jppfs_cor:DecreaseInSurplusOrIncreaseInDeficitFromPartialRedemptionsFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1113923</jppfs_cor:DecreaseInSurplusOrIncreaseInDeficitFromPartialRedemptionsFND>
+  <jppfs_cor:DividendsFND contextRef="Prior1InterimDuration_NonConsolidatedMember" unitRef="JPY" xsi:nil="true"/>
+  <jppfs_cor:DividendsFND contextRef="InterimDuration_NonConsolidatedMember" decimals="0" unitRef="JPY">1617876</jppfs_cor:DividendsFND>
+  <jppfs_cor:SurplusDeficitFND contextRef="Prior1InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">108733937</jppfs_cor:SurplusDeficitFND>
+  <jppfs_cor:SurplusDeficitFND contextRef="InterimInstant_NonConsolidatedMember" decimals="0" unitRef="JPY">128684472</jppfs_cor:SurplusDeficitFND>
+  <jpsps_cor:DocumentTitleCoverPage contextRef="FilingDateInstant">半期報告書</jpsps_cor:DocumentTitleCoverPage>
+  <jpsps_cor:PlaceOfFilingCoverPage contextRef="FilingDateInstant">関東財務局長殿</jpsps_cor:PlaceOfFilingCoverPage>
+  <jpsps_cor:FilingDateCoverPage contextRef="FilingDateInstant">2027-10-23</jpsps_cor:FilingDateCoverPage>
+  <jpsps_cor:AccountingPeriodCoverPage contextRef="FilingDateInstant">第11計算期間中（自  令和９年２月１日  至  令和９年７月31日）</jpsps_cor:AccountingPeriodCoverPage>
+  <jpsps_cor:FundNameCoverPage contextRef="FilingDateInstant">Ｆファンド</jpsps_cor:FundNameCoverPage>
+  <jpsps_cor:IssuerNameCoverPage contextRef="FilingDateInstant">ＣＤ投信株式会社</jpsps_cor:IssuerNameCoverPage>
+  <jpsps_cor:TitleAndNameOfRepresentativeCoverPage contextRef="FilingDateInstant">代表取締役社長    ○○  ○○</jpsps_cor:TitleAndNameOfRepresentativeCoverPage>
+  <jpsps_cor:AddressOfRegisteredHeadquarterCoverPage contextRef="FilingDateInstant">東京都千代田区霞が関三丁目２番１号</jpsps_cor:AddressOfRegisteredHeadquarterCoverPage>
+  <jpsps_cor:NameOfContactPersonCoverPage contextRef="FilingDateInstant">○○  ○○</jpsps_cor:NameOfContactPersonCoverPage>
+  <jpsps_cor:PlaceOfContactCoverPage contextRef="FilingDateInstant">東京都千代田区霞が関三丁目２番１号</jpsps_cor:PlaceOfContactCoverPage>
+  <jpsps_cor:TelephoneNumberCoverPage contextRef="FilingDateInstant">０３（３５０６）６０００</jpsps_cor:TelephoneNumberCoverPage>
+  <jpsps_cor:PlaceForPublicInspectionCoverPageTextBlock contextRef="FilingDateInstant">該当事項はありません。</jpsps_cor:PlaceForPublicInspectionCoverPageTextBlock>
+  <jpsps_cor:NotesCoverPageTextBlock contextRef="FilingDateInstant">
+&lt;p style="margin-left: 27.0pt; text-indent: -27.0pt; line-height: 13.5pt"&gt;（注）この半期報告書は、金融商品取引法（○年法律第25号）第7条第4項の規定により、令和９年４月24日付をもって提&lt;br/&gt;出した有価証券届出書の訂正届出書とみなされます。&lt;/p&gt;
+</jpsps_cor:NotesCoverPageTextBlock>
+  <jpdei_cor:EDINETCodeDEI contextRef="FilingDateInstant">X99010</jpdei_cor:EDINETCodeDEI>
+  <jpdei_cor:FundCodeDEI contextRef="FilingDateInstant">Y99010</jpdei_cor:FundCodeDEI>
+  <jpdei_cor:SecurityCodeDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:FilerNameInJapaneseDEI contextRef="FilingDateInstant">ＣＤ投信株式会社</jpdei_cor:FilerNameInJapaneseDEI>
+  <jpdei_cor:FilerNameInEnglishDEI contextRef="FilingDateInstant">CD Asset Management Co.,Ltd.</jpdei_cor:FilerNameInEnglishDEI>
+  <jpdei_cor:FundNameInJapaneseDEI contextRef="FilingDateInstant">Ｆファンド</jpdei_cor:FundNameInJapaneseDEI>
+  <jpdei_cor:FundNameInEnglishDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CabinetOfficeOrdinanceDEI contextRef="FilingDateInstant">特定有価証券の内容等の開示に関する内閣府令</jpdei_cor:CabinetOfficeOrdinanceDEI>
+  <jpdei_cor:DocumentTypeDEI contextRef="FilingDateInstant">第十号様式</jpdei_cor:DocumentTypeDEI>
+  <jpdei_cor:AccountingStandardsDEI contextRef="FilingDateInstant">Japan GAAP</jpdei_cor:AccountingStandardsDEI>
+  <jpdei_cor:WhetherConsolidatedFinancialStatementsArePreparedDEI contextRef="FilingDateInstant">false</jpdei_cor:WhetherConsolidatedFinancialStatementsArePreparedDEI>
+  <jpdei_cor:IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant">FND</jpdei_cor:IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI>
+  <jpdei_cor:CurrentFiscalYearStartDateDEI contextRef="FilingDateInstant">2027-02-01</jpdei_cor:CurrentFiscalYearStartDateDEI>
+  <jpdei_cor:CurrentPeriodEndDateDEI contextRef="FilingDateInstant">2027-07-31</jpdei_cor:CurrentPeriodEndDateDEI>
+  <jpdei_cor:TypeOfCurrentPeriodDEI contextRef="FilingDateInstant">HY</jpdei_cor:TypeOfCurrentPeriodDEI>
+  <jpdei_cor:CurrentFiscalYearEndDateDEI contextRef="FilingDateInstant">2028-01-31</jpdei_cor:CurrentFiscalYearEndDateDEI>
+  <jpdei_cor:PreviousFiscalYearStartDateDEI contextRef="FilingDateInstant">2026-02-01</jpdei_cor:PreviousFiscalYearStartDateDEI>
+  <jpdei_cor:ComparativePeriodEndDateDEI contextRef="FilingDateInstant">2026-07-31</jpdei_cor:ComparativePeriodEndDateDEI>
+  <jpdei_cor:PreviousFiscalYearEndDateDEI contextRef="FilingDateInstant">2027-01-31</jpdei_cor:PreviousFiscalYearEndDateDEI>
+  <jpdei_cor:NextFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:AmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:AmendmentFlagDEI>
+  <jpdei_cor:IdentificationOfDocumentSubjectToAmendmentDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ReportAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:ReportAmendmentFlagDEI>
+  <jpdei_cor:XBRLAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:XBRLAmendmentFlagDEI>
+  <jpsps_cor:SecuritiesRegistrationStatementAmendmentFlagDeemedRegistrationStatementDEI contextRef="FilingDateInstant">true</jpsps_cor:SecuritiesRegistrationStatementAmendmentFlagDeemedRegistrationStatementDEI>
+  <jpsps_cor:IdentificationOfRegistrationStatementSubjectToAmendmentDeemedRegistrationStatementDEI contextRef="FilingDateInstant">S026XXXX</jpsps_cor:IdentificationOfRegistrationStatementSubjectToAmendmentDeemedRegistrationStatementDEI>
+  <jpsps_cor:StatusOfInvestmentTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3 "&gt;（１）【投資状況】&lt;/div&gt;
+&lt;table style="width: 489.0pt; border: none"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 189.0pt; min-width: 189.0pt"/&gt;
+&lt;col style="width: 109.0pt; min-width: 109.0pt"/&gt;
+&lt;col style="width: 100.0pt; min-width: 100.0pt"/&gt;
+&lt;col style="width: 91.0pt; min-width: 91.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td colspan="4" style="border: none; border-bottom: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right;  line-height: 13.5pt"&gt;
+（令和９年７月31日現在）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top:  none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: center;  line-height: 10.0pt"&gt;
+資産の種類&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: center;  line-height: 10.0pt"&gt;
+国／地域&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: center;  line-height: 10.0pt"&gt;
+時価合計(円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: center;  line-height: 10.0pt"&gt;
+投資比率(％)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top:  none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+株式&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: center;  line-height: 10.0pt"&gt;
+日本&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right;  line-height: 10.0pt"&gt;
+8,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right;  line-height: 10.0pt"&gt;
+88.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top:  none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+現金・預金・その他の資産(負債控除後)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: center;  line-height: 10.0pt"&gt;
+―&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right;  line-height: 10.0pt"&gt;
+888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right;  line-height: 10.0pt"&gt;
+8.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border-top: none; border-left: solid 0.75pt black;  border-bottom: solid 0.75pt black; border-right: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: center;  line-height: 10.0pt"&gt;
+合計(純資産総額)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: center;  line-height: 10.0pt"&gt;
+ &lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right;  line-height: 10.0pt"&gt;
+8,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none;  border-bottom: solid 0.75pt black; border-right: solid 0.75pt black;  padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right;  line-height: 10.0pt"&gt;
+100.00&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+</jpsps_cor:StatusOfInvestmentTextBlock>
+  <jpsps_cor:ChangesInNetAssetsTextBlock contextRef="FilingDateInstant">
+&lt;div class="content"&gt;①【純資産の推移】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left:15pt"&gt;  令和９年７月31日（直近日）現在、同日前１年以内における各月末ならびに各計算期末におけるファンドの純資産総額及び１口当たりの純資産額の推移は次のとおりです。&lt;/p&gt;
+&lt;/div&gt;
+&lt;table style="border-collapse: collapse"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 172pt; min-width: 172.0pt"/&gt;
+&lt;col style="width: 78.5pt; min-width: 78.5pt"/&gt;
+&lt;col style="width: 78.5pt; min-width: 78.5pt"/&gt;
+&lt;col style="width: 78.5pt; min-width: 78.5pt"/&gt;
+&lt;col style="width: 78.5pt; min-width: 78.5pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td rowspan="2" style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+計算期間&lt;/p&gt;
+&lt;/td&gt;
+&lt;td colspan="2" style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+純資産総額(百万円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td colspan="2" style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+1口当たり純資産額(円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（分配落）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（分配付）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（分配落）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（分配付）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第１期（○年○月○日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第２期（○年○月○日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+……&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第10期（○年○月○日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 40.5pt;line-height: 10.0pt"&gt;
+○年○月末日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+―&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+―&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 40.5pt;line-height: 10.0pt"&gt;
+………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+…&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+…&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 40.5pt;line-height: 10.0pt"&gt;
+○年○月末日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+―&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+―&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+</jpsps_cor:ChangesInNetAssetsTextBlock>
+  <jpsps_cor:HistoricalRecordsOfProfitDistributionTextBlock contextRef="FilingDateInstant">
+&lt;div class="content"&gt;②【分配の推移】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;/div&gt;
+&lt;table style="border-collapse: collapse; width: 234.5pt; min-width: 234.5pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 109.0pt; min-width: 109.0pt"/&gt;
+&lt;col style="width: 125.5pt; min-width: 125.5pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+1口当たりの分配金&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第１期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+0.0088円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第２期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+0.0088円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+………&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第10期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+0.0088円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第11期（中間期）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 13.5pt; margin-bottom: 0pt; margin-left: 4.5pt;text-align: right; line-height: 10.0pt"&gt;
+－&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+</jpsps_cor:HistoricalRecordsOfProfitDistributionTextBlock>
+  <jpsps_cor:HistoricalRecordsOfReturnRatioTextBlock contextRef="FilingDateInstant">
+&lt;div class="content"&gt;③【収益率の推移】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;/div&gt;
+&lt;table style="border-collapse: collapse; width: 234.5pt; min-width: 234.5pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 109.0pt; min-width: 109.0pt"/&gt;
+&lt;col style="width: 125.5pt; min-width: 125.5pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+1口当たりの分配金&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第１期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第２期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+……&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第10期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第11期（中間期）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8.8％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+</jpsps_cor:HistoricalRecordsOfReturnRatioTextBlock>
+  <jpsps_cor:HistoricalRecordsOfInceptionsAndCancellationsTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;２【設定及び解約の実績】&lt;/h3&gt;
+&lt;div class="h3"&gt;
+&lt;/div&gt;
+&lt;table style="border-collapse: collapse"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 109.0pt; min-width: 109.0pt"/&gt;
+&lt;col style="width: 125.5pt; min-width: 125.5pt"/&gt;
+&lt;col style="width: 125.5pt; min-width: 125.5pt"/&gt;
+&lt;col style="width: 125.5pt; min-width: 125.5pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+設定口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+解約口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+発行済み口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第１期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第２期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+8,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第10期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="page-break-inside: avoid; height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; line-height: 10.0pt"&gt;
+第11期（中間期）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; margin-bottom: 0pt; text-align: right; line-height: 10.0pt"&gt;
+88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+</jpsps_cor:HistoricalRecordsOfInceptionsAndCancellationsTextBlock>
+  <jpsps_cor:FinancialInformationOfFundTextBlock contextRef="InterimDuration">
+&lt;h3&gt;３【ファンドの経理状況】&lt;/h3&gt;
+&lt;p style="line-height:13.5pt"&gt; &lt;/p&gt;
+&lt;div class="h3"&gt;
+&lt;p style="margin-left:45.0pt;text-indent:-27.0pt;line-height:13.5pt"&gt;（１）当ファンドの中間財務諸表は、「財務諸表等の用語、様式及び作成方法に関する規則」（○年大蔵省令第59号)(以下「財務諸表等規則」という）、ならびに同規則第284条及び第307条の規定により、「投資信託財産の計算に関する規則」（○年総理府令第133号）（以下「投資信託財産計算規則」という。）に基づいて作成しております。&lt;/p&gt;
+
+&lt;p style="margin-left:45.0pt;line-height:13.5pt"&gt;なお、財務諸表に記載している金額は、円単位で表示しております。&lt;/p&gt;
+
+&lt;p style="line-height:13.5pt"&gt; &lt;/p&gt;
+&lt;p style="margin-left:45.0pt;text-indent:-27.0pt;line-height:13.5pt"&gt;（２）当ファンドは、金融商品取引法第193条の２第１項の規定に基づき、当中間計算期間（令和９年２月１日から令和９年７月31日まで）の中間財務諸表について、○○○○監査法人による中間監査を受けております。&lt;/p&gt;
+
+&lt;/div&gt;
+</jpsps_cor:FinancialInformationOfFundTextBlock>
+  <jpsps_cor:SemiAnnualBalanceSheetTextBlock contextRef="InterimDuration">
+&lt;div class="h4"&gt;
+&lt;span&gt;（１）【中間貸借対照表】&lt;/span&gt;
+&lt;/div&gt;
+&lt;table class="normaltable" style="width : 470.0pt;"&gt;
+&lt;caption&gt;
+&lt;span&gt;（単位：円）&lt;/span&gt;
+&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col style="width : 13.0pt;"/&gt;
+&lt;col style="width : 13.0pt;"/&gt;
+&lt;col style="width : 13.0pt;"/&gt;
+&lt;col style="width : 181.0pt;"/&gt;
+&lt;col style="width : 125.0pt;"/&gt;
+&lt;col style="width : 125.0pt;"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;td class="indent2" style="width : 13.0pt;"/&gt;
+&lt;td class="indent2" style="width : 13.0pt;"/&gt;
+&lt;td class="indent2" style="width : 13.0pt;"/&gt;
+&lt;td class="label2" style="width : 181.0pt;"/&gt;
+&lt;td class="value2" style="width : 125.0pt;"&gt;
+&lt;span&gt;第10期計算期間末&lt;br/&gt;(令和９年１月31日)&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value2" style="width : 125.0pt;"&gt;
+&lt;span&gt;第11期中間計算期間末&lt;br/&gt;(令和９年７月31日)&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="label" colspan="4"&gt;
+&lt;span&gt;資産の部&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="3"&gt;
+&lt;span&gt;流動資産&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;預金&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+906,256
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+825,505
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;金銭信託&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+355,597,336
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+353,621,928
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;コール・ローン&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+6,137,306
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+9,267,833
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;抵当証券&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+96,618,694
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+83,956,816
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;流動資産合計&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+459,259,592
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+447,672,082
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="3"&gt;
+&lt;span&gt;資産合計&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder bottomborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+459,259,592
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder bottomborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+447,672,082
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="label" colspan="4"&gt;
+&lt;span&gt;負債の部&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="3"&gt;
+&lt;span&gt;流動負債&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;信用売証券&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+8,632,983
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+9,694,012
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;売却借入有価証券&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+5,930,581
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+5,712,530
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;売付債券&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+71,676,419
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+64,261,753
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;A引当金&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,177,458
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,240,309
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;ポイント引当金&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+912,949
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,068,530
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;流動負債合計&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+88,330,390
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+81,977,134
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="3"&gt;
+&lt;span&gt;負債合計&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+88,330,390
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+81,977,134
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="label" colspan="4"&gt;
+&lt;span&gt;純資産の部&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="3"&gt;
+&lt;span&gt;元本等&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;元本&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+262,195,265
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+237,010,476
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;剰余金&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"&gt;
+&lt;span&gt;中間剰余金又は中間欠損金（△）&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+108,733,937
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+128,684,472
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"&gt;
+&lt;span&gt;（分配準備積立金）&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+894,928
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+841,753
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;元本等合計&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+370,929,202
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+365,694,948
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" colspan="3"&gt;
+&lt;span&gt;純資産合計&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+370,929,202
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+365,694,948
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="label" colspan="4"&gt;
+&lt;span&gt;負債純資産合計&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder bottomborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+459,259,592
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder bottomborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+447,672,082
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="lastrow"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"/&gt;
+&lt;td class="value"/&gt;
+&lt;td class="value"/&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</jpsps_cor:SemiAnnualBalanceSheetTextBlock>
+  <jpsps_cor:SemiAnnualStatementOfIncomeAndRetainedEarningsTextBlock contextRef="InterimDuration">
+&lt;div class="h4"&gt;
+&lt;span&gt;（２）【中間損益及び剰余金計算書】&lt;/span&gt;
+&lt;/div&gt;
+&lt;table class="normaltable"&gt;
+&lt;caption&gt;
+&lt;span&gt;（単位：円）&lt;/span&gt;
+&lt;/caption&gt;
+&lt;colgroup&gt;
+&lt;col style="width : 13.0pt;"/&gt;
+&lt;col style="width : 219.0pt;"/&gt;
+&lt;col style="width : 125.0pt;"/&gt;
+&lt;col style="width : 125.0pt;"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;td class="indent2" style="width : 13.0pt;"/&gt;
+&lt;td class="label2" style="width : 216.0pt;"/&gt;
+&lt;td class="value2" style="width : 125.0pt;"&gt;
+&lt;span&gt;第10期中間計算期間&lt;br/&gt;(自  令和８年２月１日&lt;br/&gt;  至  令和８年７月31日)&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value2" style="width : 125.0pt;"&gt;
+&lt;span&gt;第11期中間計算期間&lt;br/&gt;(自  令和９年２月１日&lt;br/&gt;  至  令和９年７月31日)&lt;/span&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;営業収益&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"&gt;
+&lt;span&gt;受取配当金&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+24,818,849
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+22,288,465
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"&gt;
+&lt;span&gt;配当株式&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,110,880
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,386,996
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"&gt;
+&lt;span&gt;営業収益合計&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+25,929,729
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+23,675,461
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;営業費用&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"&gt;
+&lt;span&gt;受託者報酬&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+103,371
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+105,489
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"&gt;
+&lt;span&gt;委託者報酬&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,782,681
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,847,787
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"&gt;
+&lt;span&gt;その他費用&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+16,424
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+17,069
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"&gt;
+&lt;span&gt;営業費用合計&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,902,476
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,970,345
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;営業利益&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+24,027,253
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+21,705,116
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;経常利益&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+24,027,253
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+21,705,116
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;中間純利益&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder bottomborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+24,027,253
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder bottomborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+21,705,116
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;期首剰余金又は期首欠損金（△）&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+84,779,580
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+108,733,937
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;剰余金増加額又は欠損金減少額&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+985,464
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+977,218
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" style="white-space: nowrap"&gt;
+&lt;span&gt;中間一部解約に伴う剰余金増加額又は欠損金減少額&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+985,464
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+977,218
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;剰余金減少額又は欠損金増加額&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,058,360
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,113,923
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label" style="white-space: nowrap"&gt;
+&lt;span&gt;中間一部解約に伴う剰余金減少額又は欠損金増加額&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,058,360
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,113,923
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row2"&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;分配金&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="nil"&gt;
+&lt;span&gt;
+
+&lt;/span&gt;
+&lt;span&gt;-&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+1,617,876
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row1"&gt;
+&lt;td class="label" colspan="2"&gt;
+&lt;span&gt;中間剰余金又は中間欠損金（△）&lt;/span&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+108,733,937
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;td class="value topborder"&gt;
+&lt;div class="numeric"&gt;
+&lt;span&gt;
+128,684,472
+&lt;/span&gt;
+&lt;/div&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="lastrow"&gt;
+&lt;td class="indent"/&gt;
+&lt;td class="label"/&gt;
+&lt;td class="value"/&gt;
+&lt;td class="value"/&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</jpsps_cor:SemiAnnualStatementOfIncomeAndRetainedEarningsTextBlock>
+  <jpsps_cor:NotesToSemiAnnualFinancialStatementsTextBlock contextRef="InterimDuration">
+&lt;div class="content3 "&gt;（３）【中間注記表】&lt;/div&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left:9.0pt; line-height:13.5pt"&gt;（重要な会計方針に係る事項に関する注記）&lt;/p&gt;
+&lt;/div&gt;
+&lt;table style="border-collapse: collapse"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 125.0pt; min-width: 125.0pt"/&gt;
+&lt;col style="width: 361.0pt; min-width: 361.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 40.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="line-height: 10.0pt"&gt;
+ &lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+第11期中間計算期間&lt;/p&gt;
+&lt;p style="margin-right: 13.5pt; margin-bottom: 0pt; margin-left: 4.5pt;text-align: center; line-height: 10.0pt"&gt;
+（自  令和９年２月１日&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt; text-align: center; line-height: 10.0pt"&gt;
+至  令和９年７月31日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="border-top: none; border-left: solid 0.75pt black; border-bottom: none; border-right: solid 0.75pt black; vertical-align:top"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+１  運用資産の評価基準及び評価方法&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: none; border-right: solid 0.75pt black"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+（１）株式&lt;/p&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 13.5pt;line-height: 13.5pt"&gt;
+原則として時価で評価しております。………………………………………………………&lt;br/&gt;………………………………………………………………。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td rowspan="2" style="border-top: none; border-left: solid 0.75pt black; border-bottom: none; border-right: solid 0.75pt black; vertical-align: top"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+２  費用・収益の計上基準&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: none; border-right: solid 0.75pt black"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+（１）受取配当金の計上基準&lt;/p&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 13.5pt;line-height: 13.5pt"&gt;
+受取配当金は、…………………………………………………………………………………&lt;br/&gt;………………………………………………………………。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="border: none; border-right: solid 0.75pt black"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+（２）有価証券売買等損益の計上基準&lt;/p&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 13.5pt;line-height: 13.5pt"&gt;
+約定日基準で計上しております。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; vertical-align: top"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+３  その他&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; line-height: 13.5pt"&gt;
+当ファンドの計算期間は令和８年２月１日から令和９年１月31日までとなっております。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+
+&lt;p style="line-height:13.5pt"&gt; &lt;/p&gt;
+&lt;p style="margin-left:27.0pt;line-height:13.5pt"&gt;（追加情報）&lt;/p&gt;
+&lt;table style="border-collapse: collapse; border: none"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 486.0pt; min-width: 486.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 40.0pt; min-height: 40.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+第11期中間計算期間&lt;/p&gt;
+&lt;p style="margin-right: 13.5pt; margin-bottom: 0pt; margin-left: 4.5pt;text-align: center; line-height: 10.0pt"&gt;
+（自  令和９年２月１日&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt; text-align: center; line-height: 10.0pt"&gt;
+至  令和９年７月31日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 40.0pt; min-height: 40.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; line-height: 13.5pt"&gt;
+当計算期間の期首以後に行われる会計上の誤謬の訂正より、「会計上の変更及び誤謬の訂正に関する会計基準」（企&lt;br/&gt;業会計基準第24号 ○年○月○日）及び「会計上の変更及び誤謬の訂正に関する会計基準の適用指針」（企業会計基準&lt;br/&gt;適用指針第24号 ○年○月○日）を適用しております。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p style="line-height:13.5pt"&gt; &lt;/p&gt;
+
+&lt;p style="margin-left:27.0pt;line-height:13.5pt"&gt;（中間貸借対照表に関する注記）&lt;/p&gt;
+&lt;table style="border-collapse: collapse"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 243.0pt; min-width: 243.0pt"/&gt;
+&lt;col style="width: 243.0pt; min-width: 243.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 30.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+第10期計算期間末&lt;/p&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（令和９年１月31日現在）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+第11期中間計算期間末&lt;/p&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（令和９年７月31日現在）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border-top: none; border-left: solid 0.75pt black; border-bottom: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; line-height: 13.5pt"&gt;
+１  計算期間の末日における受益権の総数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+１  計算期間の末日における受益権の総数&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border-top: none; border-left: solid 0.75pt black; border-bottom: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; text-align: right; line-height: 13.5pt"&gt;
+888,888,888口&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; text-align: right; line-height: 13.5pt"&gt;
+888,888,888口&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border-top: none; border-left: solid 0.75pt black; border-bottom: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+２  計算期間の末日における１単位当たりの純資産の額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+２  計算期間の末日における１単位当たりの純資産の額&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 30.0pt; min-height: 30.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;table style="margin-left: 22.5pt; width: 217.0pt; max-width: 217.0pt"&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="line-height: 13.5pt"&gt;
+１口当たり純資産額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="padding: 0pt;  height: 0.75pt"&gt;
+&lt;p style="margin-right: 4.5pt; text-align: right;  line-height: 13.5pt"&gt;
+0.88円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="margin-right: 2.85pt; line-height: 13.5pt"&gt;
+(10,000口当たり純資産額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="padding: 0pt;  height: 0.75pt"&gt;
+&lt;p style="text-align: right; line-height: 13.5pt"&gt;
+8,888円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; line-height: 1.0pt"&gt;
+  &lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;table style="margin-left: 22.5pt; width: 217.0pt; max-width: 217.0pt"&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="line-height: 13.5pt"&gt;
+１口当たり純資産額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="padding: 0pt;  height: 0.75pt"&gt;
+&lt;p style="margin-right: 4.5pt; text-align: right;  line-height: 13.5pt"&gt;
+0.88円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="margin-right: 2.85pt; line-height: 13.5pt"&gt;
+(10,000口当たり純資産額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="padding: 0pt;  height: 0.75pt"&gt;
+&lt;p style="text-align: right; line-height: 13.5pt"&gt;
+8,888
+円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; line-height: 1.0pt"&gt;
+  &lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;p style="line-height:13.5pt"&gt; &lt;/p&gt;
+&lt;p style="margin-left:27.0pt;line-height:13.5pt"&gt;（中間損益及び剰余金計算書に関する注記）&lt;/p&gt;
+&lt;table style="border-collapse: collapse"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 243.0pt; min-width: 243.0pt"/&gt;
+&lt;col style="width: 243.0pt; min-width: 243.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 40.0pt; min-height: 40.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; text-align: center; line-height: 10.0pt"&gt;
+第10期中間計算期間&lt;/p&gt;
+&lt;p style="margin-right: 13.5pt; margin-bottom: 0pt; margin-left: 4.5pt;text-align: center; line-height: 10.0pt"&gt;
+（自  令和８年２月１日&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt; text-align: center; line-height: 10.0pt"&gt;
+至  令和８年７月31日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; text-align: center; line-height: 10.0pt"&gt;
+第11期中間計算期間&lt;/p&gt;
+&lt;p style="margin-right: 13.5pt; margin-bottom: 0pt; margin-left: 4.5pt;text-align: center; line-height: 10.0pt"&gt;
+（自  令和９年２月１日&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt; text-align: center; line-height: 10.0pt"&gt;
+至  令和９年７月31日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 40.0pt; min-height: 40.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; line-height: 13.5pt"&gt;
+信託財産の運用の指図に係る権限の全部又は一部を委託するために要する費用。&lt;/p&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; text-align: right; line-height: 13.5pt"&gt;
+8,888,888円&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt; line-height: 13.5pt"&gt;
+信託財産の運用の指図に係る権限の全部又は一部を委託するために要する費用。&lt;/p&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 13.5pt;text-align: right; text-indent: 9.0pt; line-height: 13.5pt"&gt;
+8,888,888円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;p class="pageBreakAfter" style="line-height:13.5pt"&gt; &lt;/p&gt;
+&lt;p style="margin-left:27.0pt;line-height:13.5pt"&gt;（金融商品に関する注記）&lt;/p&gt;
+&lt;table style="border-collapse: collapse"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 243.0pt; min-width: 243.0pt"/&gt;
+&lt;col style="width: 243.0pt; min-width: 243.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 30.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+第10期計算期間末&lt;/p&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（令和９年１月31日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+第11期中間計算期間&lt;/p&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（令和９年７月31日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border-top: none; border-left: solid 0.75pt black; border-bottom: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+１  貸借対照表計上額、時価及び差額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+１  中間貸借対照表計上額、時価及び差額&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 30.0pt; min-height: 30.0pt"&gt;
+&lt;td style="border-top: none; border-left: solid 0.75pt black; border-bottom: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 13.5pt;text-indent: 9.0pt; line-height: 13.5pt"&gt;
+………………………………………………………………&lt;br/&gt;………………………………………………。&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 13.5pt;text-indent: 9.0pt; line-height: 13.5pt"&gt;
+………………………………………………………………&lt;br/&gt;………………………………………………。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border-top: none; border-left: solid 0.75pt black; border-bottom: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+２  時価の算定方法&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: none; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 13.5pt"&gt;
+２  時価の算定方法&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 30.0pt; min-height: 30.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 13.5pt;text-indent: 9.0pt; line-height: 13.5pt"&gt;
+………………………………………………………………&lt;br/&gt;………………………………………………。&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 13.5pt;text-indent: 9.0pt; line-height: 13.5pt"&gt;
+………………………………………………………………&lt;br/&gt;………………………………………………。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p style="line-height:13.5pt"&gt; &lt;/p&gt;
+
+&lt;p style="margin-left:27.0pt;line-height:13.5pt"&gt;（その他の注記）&lt;/p&gt;
+&lt;p style="margin-left:27.0pt;text-indent:9.0pt;line-height:13.5pt"&gt;１  元本の移動&lt;/p&gt;
+&lt;table style="border-collapse: collapse; border: none"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 243.0pt; min-width: 243.0pt"/&gt;
+&lt;col style="width: 243.0pt; min-width: 243.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 30.0pt; min-height: 30.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+第10期計算期間末&lt;/p&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（令和９年１月31日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+第11期中間計算期間&lt;/p&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（令和９年７月31日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 45.0pt; min-height: 45.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;table style="margin-left: 4.5pt; width: 235.0pt; max-width: 235.0pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 145.0pt; min-width: 145.0pt"/&gt;
+&lt;col style="width: 90.0pt; min-width: 90.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="line-height: 13.5pt"&gt;
+
+期首元本額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="text-align: right; line-height: 13.5pt"&gt;
+
+888,888,888
+円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="line-height: 13.5pt"&gt;
+
+期中追加設定元本額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="text-align: right; line-height: 13.5pt"&gt;
+
+888,888,888
+円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="line-height: 13.5pt"&gt;
+
+期中一部解約元本額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="text-align: right; line-height: 13.5pt"&gt;
+
+888,888,888
+円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 1.0pt"&gt;
+  &lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;table style="margin-left: 4.5pt; width: 235.0pt; max-width: 235.0pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 145.0pt; min-width: 145.0pt"/&gt;
+&lt;col style="width: 90.0pt; min-width: 90.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="line-height: 13.5pt"&gt;
+
+期首元本額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="text-align: right; line-height: 13.5pt"&gt;
+
+888,888,888
+円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="line-height: 13.5pt"&gt;
+
+期中追加設定元本額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="text-align: right; line-height: 13.5pt"&gt;
+
+88,888,888
+円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="line-height: 13.5pt"&gt;
+
+期中一部解約元本額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="padding: 0pt"&gt;
+&lt;p style="text-align: right; line-height: 13.5pt"&gt;
+
+888,888,888
+円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 22.5pt; text-indent: -18.0pt; line-height: 1.0pt"&gt;
+  &lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;p style="line-height:13.5pt"&gt; &lt;/p&gt;
+
+&lt;p style="margin-left:27.0pt;text-indent:9.0pt;line-height:13.5pt"&gt;２  デリバティブ取引に関する注記&lt;/p&gt;
+&lt;table style="border-collapse: collapse"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 243.0pt; min-width: 243.0pt"/&gt;
+&lt;col style="width: 243.0pt; min-width: 243.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 30.0pt; min-height: 30.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+第10期計算期間末&lt;/p&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（令和９年１月31日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+第11期中間計算期間&lt;/p&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+（令和９年７月31日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 13.5pt;text-indent: 9.0pt; line-height: 13.5pt"&gt;
+該当事項はありません。&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 13.5pt;text-indent: 9.0pt; line-height: 13.5pt"&gt;
+該当事項はありません。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+&lt;p class="pageBreakAfter" style="line-height:13.5pt"&gt; &lt;/p&gt;
+</jpsps_cor:NotesToSemiAnnualFinancialStatementsTextBlock>
+  <jpsps_cor:AmountOfStatedCapitalOverviewOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;p style="margin-left:18.0pt"&gt;（１）【資本金の額】&lt;/p&gt;
+&lt;table style="margin-left:36.0pt; width: 250.0pt; min-width: 250.0pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 208.0pt; min-width: 208.0pt"/&gt;
+&lt;col style="width: 242.0pt; min-width: 242.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;○年○月末現在&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;88,888百万円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;会社が発行する株式総数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;8,888,888株&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;発行済株式総数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;8,888株&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;過去５年間における主な資本金の額の増減&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;該当事項はありません。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+</jpsps_cor:AmountOfStatedCapitalOverviewOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:DescriptionOfBusinessAndSummaryOfOperationOverviewOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;p style="margin-left:18.0pt"&gt;（２）【事業の内容及び営業の状況】&lt;/p&gt;
+&lt;p style="margin-left:18.0pt"&gt;　「投資信託及び投資法人に関する法律」に定める投資信託委託会社である委託者は、………………………………&lt;br/&gt;……………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………。&lt;/p&gt;
+
+&lt;p style="margin-left:18.0pt; text-indent:9.0pt"&gt;委託者の運用する証券投資信託（○年○月末現在）&lt;/p&gt;
+&lt;table style="margin-left: 27.0pt; width: 457.0pt; max-width: 457.0pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 171.0pt; min-width: 171.0pt"/&gt;
+&lt;col style="width: 99.0pt; min-width: 99.0pt"/&gt;
+&lt;col style="width: 162.0pt; min-width: 162.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 20.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+種類&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+本数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid 0.75pt black; border-left: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+純資産総額（百万円）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+追加型株式投資信託&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 9.0pt; text-align: right; line-height: 10.0pt"&gt;
+88&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 9.0pt; text-align: right; line-height: 10.0pt"&gt;
+888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+単位型株式投資信託&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 9.0pt; text-align: right; line-height: 10.0pt"&gt;
+8&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 9.0pt; text-align: right; line-height: 10.0pt"&gt;
+88,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+追加型公社債投資信託&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 9.0pt; text-align: right; line-height: 10.0pt"&gt;
+8&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 9.0pt; text-align: right; line-height: 10.0pt"&gt;
+88,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+単位型公社債投資信託&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 9.0pt; text-align: right; line-height: 10.0pt"&gt;
+8&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 9.0pt; text-align: right; line-height: 10.0pt"&gt;
+88,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.0pt"&gt;
+&lt;td style="border: solid 0.75pt black; border-top: none; padding: 0pt"&gt;
+&lt;p style="text-align: center; line-height: 10.0pt"&gt;
+合計&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 9.0pt; text-align: right; line-height: 10.0pt"&gt;
+88&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border-top: none; border-left: none; border-bottom: solid 0.75pt black; border-right: solid 0.75pt black; padding: 0pt"&gt;
+&lt;p style="margin-right: 9.0pt; text-align: right; line-height: 10.0pt"&gt;
+888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+</jpsps_cor:DescriptionOfBusinessAndSummaryOfOperationOverviewOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:OtherInformationOverviewOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;p style="margin-left:18.0pt"&gt;（３）【その他】&lt;/p&gt;
+&lt;p style="margin-left:18.0pt"&gt;  ………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………………………。&lt;/p&gt;
+
+</jpsps_cor:OtherInformationOverviewOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:FinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;５【委託会社等の経理状況】&lt;/h3&gt;
+&lt;p style="line-height:13.5pt"&gt; &lt;/p&gt;
+&lt;div class="pageBreakAfter"&gt;
+&lt;p style="margin-left:27.0pt;text-indent:-9.0pt;line-height:13.5pt"&gt;１  委託会社であるＣＤ投信株式会社（以下「委託会社」という）の財務諸表は、「財務諸表等の用語、様式及び作&lt;br/&gt;成方法に関する規則」（○年大蔵省令第59号、以下「財務諸表等規則」という）、ならびに同規則第２条の規定に&lt;br/&gt;基づき、「金融商品取引業等に関する内閣府令」（○年○月○日内閣府令第52号）により作成しております。&lt;/p&gt;
+
+&lt;p style="margin-left:27.0pt;line-height:13.5pt"&gt;  委託会社の中間財務諸表は、「財務諸表等の用語、様式及び作成方法に関する規則」（○年大蔵省令第59号、&lt;br/&gt;以下「財務諸表等規則」という）、ならびに同規則第284条及び第307条の規定に基づき、「金融商品取引業等に&lt;br/&gt;関する内閣府令」（○年○月○日内閣府令第52号）により作成しております。&lt;/p&gt;
+
+&lt;p style="margin-left:19.85pt;text-indent:9.95pt;line-height:13.5pt"&gt; &lt;/p&gt;
+
+&lt;p style="margin-left:27.0pt;text-indent:-9.0pt;line-height:13.5pt"&gt;２  財務諸表及び中間財務諸表の記載金額は、百万円未満の端数を切り捨てて表示しております。&lt;/p&gt;
+
+&lt;p style="line-height:13.5pt"&gt; &lt;/p&gt;
+
+&lt;p style="margin-left:27.0pt;text-indent:-9.0pt;line-height:13.5pt"&gt;３  委託会社の財務諸表については、金融商品取引法第193条の２第１項の規定に基づき、当事業年度の財務諸表ならびに当中間会計期間の中間財務諸表について、○○○○監査法人の監査及び中間監査を受けております。&lt;/p&gt;
+
+&lt;/div&gt;
+</jpsps_cor:FinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:BalanceSheetFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3 "&gt;（１）【貸借対照表】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;img alt="（略）" height="70" src="images/001.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;div class="pageBreakAfter"/&gt;
+</jpsps_cor:BalanceSheetFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:StatementOfIncomeFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3 "&gt;（２）【損益計算書】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;img alt="（略）" height="70" src="images/001.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;div class="pageBreakAfter"/&gt;
+</jpsps_cor:StatementOfIncomeFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:StatementOfChangesInEquityFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3 "&gt;（３）【株主資本等変動計算書】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;img alt="（略）" height="70" src="images/001.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;div class="pageBreakAfter"/&gt;
+</jpsps_cor:StatementOfChangesInEquityFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:NotesFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;p style="margin-left: 18.0pt"&gt;
+注記事項&lt;/p&gt;
+&lt;div class="divContent"&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;img alt="（略）" height="70" src="images/001.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;/div&gt;
+</jpsps_cor:NotesFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock>
+</xbrli:xbrl>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps-sbr/2021-11-01/jpsps-sbr_rt" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jpsps-sbr_rt="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps-sbr/2021-11-01/jpsps-sbr_rt" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps-sbr/rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReport" id="rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReport">
+        <link:definition>特定有価証券の内容等の開示に関する内閣府令 第二十五号の三様式 自己株券買付状況報告書</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps-sbr/rol_std_CoverPage" id="rol_std_CoverPage">
+        <link:definition>表紙</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps-sbr/rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReport" id="rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo253ShareBuybackReport">
+        <link:definition>特定有価証券の内容等の開示に関する内閣府令 第二十五号の三様式 自己株券買付状況報告書</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps-sbr/rol_CoverPage" id="rol_CoverPage">
+        <link:definition>表紙</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+    </xsd:appinfo>
+  </xsd:annotation>
+</xsd:schema>

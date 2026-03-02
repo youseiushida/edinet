@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CoverPageHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CoverPageHeading" xlink:to="reference_CoverPageHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_NameAndResidentialAddressOrLocationOfTenderOfferorHeading" xlink:label="NameAndResidentialAddressOrLocationOfTenderOfferorHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameAndResidentialAddressOrLocationOfTenderOfferorHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameAndResidentialAddressOrLocationOfTenderOfferorHeading" xlink:to="reference_NameAndResidentialAddressOrLocationOfTenderOfferorHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_NameAndResidentialAddressOrLocationOfTenderOfferorTextBlock" xlink:label="NameAndResidentialAddressOrLocationOfTenderOfferorTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameAndResidentialAddressOrLocationOfTenderOfferorTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameAndResidentialAddressOrLocationOfTenderOfferorTextBlock" xlink:to="reference_NameAndResidentialAddressOrLocationOfTenderOfferorTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_ClassesOfShareCertificatesEtcForTenderOfferorToAcquireByPurchaseEtcHeading" xlink:label="ClassesOfShareCertificatesEtcForTenderOfferorToAcquireByPurchaseEtcHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ClassesOfShareCertificatesEtcForTenderOfferorToAcquireByPurchaseEtcHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ClassesOfShareCertificatesEtcForTenderOfferorToAcquireByPurchaseEtcHeading" xlink:to="reference_ClassesOfShareCertificatesEtcForTenderOfferorToAcquireByPurchaseEtcHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_ClassesOfShareCertificatesEtcForTenderOfferorToAcquireByPurchaseEtcTextBlock" xlink:label="ClassesOfShareCertificatesEtcForTenderOfferorToAcquireByPurchaseEtcTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ClassesOfShareCertificatesEtcForTenderOfferorToAcquireByPurchaseEtcTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ClassesOfShareCertificatesEtcForTenderOfferorToAcquireByPurchaseEtcTextBlock" xlink:to="reference_ClassesOfShareCertificatesEtcForTenderOfferorToAcquireByPurchaseEtcTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_NumberOfShareCertificatesEtcAndNumberOfVotingRightsOwnedByOfficersHeading" xlink:label="NumberOfShareCertificatesEtcAndNumberOfVotingRightsOwnedByOfficersHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NumberOfShareCertificatesEtcAndNumberOfVotingRightsOwnedByOfficersHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NumberOfShareCertificatesEtcAndNumberOfVotingRightsOwnedByOfficersHeading" xlink:to="reference_NumberOfShareCertificatesEtcAndNumberOfVotingRightsOwnedByOfficersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_NumberOfShareCertificatesEtcAndNumberOfVotingRightsOwnedByOfficersTextBlock" xlink:label="NumberOfShareCertificatesEtcAndNumberOfVotingRightsOwnedByOfficersTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NumberOfShareCertificatesEtcAndNumberOfVotingRightsOwnedByOfficersTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NumberOfShareCertificatesEtcAndNumberOfVotingRightsOwnedByOfficersTextBlock" xlink:to="reference_NumberOfShareCertificatesEtcAndNumberOfVotingRightsOwnedByOfficersTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_DescriptionOfProvisionOfProfitByTenderOfferorOrItsSpecialInterestPartiesHeading" xlink:label="DescriptionOfProvisionOfProfitByTenderOfferorOrItsSpecialInterestPartiesHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DescriptionOfProvisionOfProfitByTenderOfferorOrItsSpecialInterestPartiesHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DescriptionOfProvisionOfProfitByTenderOfferorOrItsSpecialInterestPartiesHeading" xlink:to="reference_DescriptionOfProvisionOfProfitByTenderOfferorOrItsSpecialInterestPartiesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_DescriptionOfProvisionOfProfitByTenderOfferorOrItsSpecialInterestPartiesTextBlock" xlink:label="DescriptionOfProvisionOfProfitByTenderOfferorOrItsSpecialInterestPartiesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DescriptionOfProvisionOfProfitByTenderOfferorOrItsSpecialInterestPartiesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DescriptionOfProvisionOfProfitByTenderOfferorOrItsSpecialInterestPartiesTextBlock" xlink:to="reference_DescriptionOfProvisionOfProfitByTenderOfferorOrItsSpecialInterestPartiesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_PolicyToAddressBasicPolicyAboutHowToControlCompanyHeading" xlink:label="PolicyToAddressBasicPolicyAboutHowToControlCompanyHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PolicyToAddressBasicPolicyAboutHowToControlCompanyHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PolicyToAddressBasicPolicyAboutHowToControlCompanyHeading" xlink:to="reference_PolicyToAddressBasicPolicyAboutHowToControlCompanyHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_PolicyToAddressBasicPolicyAboutHowToControlCompanyTextBlock" xlink:label="PolicyToAddressBasicPolicyAboutHowToControlCompanyTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PolicyToAddressBasicPolicyAboutHowToControlCompanyTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PolicyToAddressBasicPolicyAboutHowToControlCompanyTextBlock" xlink:to="reference_PolicyToAddressBasicPolicyAboutHowToControlCompanyTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_InquiriesToTenderOfferorHeading" xlink:label="InquiriesToTenderOfferorHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InquiriesToTenderOfferorHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InquiriesToTenderOfferorHeading" xlink:to="reference_InquiriesToTenderOfferorHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_InquiriesToTenderOfferorTextBlock" xlink:label="InquiriesToTenderOfferorTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_InquiriesToTenderOfferorTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="InquiriesToTenderOfferorTextBlock" xlink:to="reference_InquiriesToTenderOfferorTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_RequestForExtendingTenderOfferPeriodHeading" xlink:label="RequestForExtendingTenderOfferPeriodHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_RequestForExtendingTenderOfferPeriodHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="RequestForExtendingTenderOfferPeriodHeading" xlink:to="reference_RequestForExtendingTenderOfferPeriodHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_RequestForExtendingTenderOfferPeriodTextBlock" xlink:label="RequestForExtendingTenderOfferPeriodTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_RequestForExtendingTenderOfferPeriodTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="RequestForExtendingTenderOfferPeriodTextBlock" xlink:to="reference_RequestForExtendingTenderOfferPeriodTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DocumentTitleCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DocumentTitleCoverPage" xlink:to="reference_DocumentTitleCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceOfFilingCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceOfFilingCoverPage" xlink:to="reference_PlaceOfFilingCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilingDateCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilingDateCoverPage" xlink:to="reference_FilingDateCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_NameOfFilerCoverPage" xlink:label="NameOfFilerCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfFilerCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfFilerCoverPage" xlink:to="reference_NameOfFilerCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_LocationOfFilerCoverPage" xlink:label="LocationOfFilerCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_LocationOfFilerCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="LocationOfFilerCoverPage" xlink:to="reference_LocationOfFilerCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_NearestPlaceOfContactCoverPage" xlink:label="NearestPlaceOfContactCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NearestPlaceOfContactCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NearestPlaceOfContactCoverPage" xlink:to="reference_NearestPlaceOfContactCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_TelephoneNumberCoverPage" xlink:label="TelephoneNumberCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TelephoneNumberCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TelephoneNumberCoverPage" xlink:to="reference_TelephoneNumberCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_NameOfContactPersonCoverPage" xlink:label="NameOfContactPersonCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfContactPersonCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfContactPersonCoverPage" xlink:to="reference_NameOfContactPersonCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_PlaceForPublicInspectionCoverPageTextBlock" xlink:label="PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceForPublicInspectionCoverPageTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceForPublicInspectionCoverPageTextBlock" xlink:to="reference_PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_OverviewOfPurchaseEtcHeading" xlink:label="OverviewOfPurchaseEtcHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_OverviewOfPurchaseEtcHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="OverviewOfPurchaseEtcHeading" xlink:to="reference_OverviewOfPurchaseEtcHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_OverviewOfPurchaseEtcTextBlock" xlink:label="OverviewOfPurchaseEtcTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_OverviewOfPurchaseEtcTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="OverviewOfPurchaseEtcTextBlock" xlink:to="reference_OverviewOfPurchaseEtcTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_OpinionRegardingSaidTenderOfferAndBasisAndReasonsEtcHeading" xlink:label="OpinionRegardingSaidTenderOfferAndBasisAndReasonsEtcHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_OpinionRegardingSaidTenderOfferAndBasisAndReasonsEtcHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="OpinionRegardingSaidTenderOfferAndBasisAndReasonsEtcHeading" xlink:to="reference_OpinionRegardingSaidTenderOfferAndBasisAndReasonsEtcHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-pst_cor_2025-11-01.xsd#jptoo-pst_cor_OpinionRegardingSaidTenderOfferAndBasisAndReasonsEtcTextBlock" xlink:label="OpinionRegardingSaidTenderOfferAndBasisAndReasonsEtcTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_OpinionRegardingSaidTenderOfferAndBasisAndReasonsEtcTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>発行者以外の者による株券等の公開買付けの開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2025-07-04</ref:IssueDate>
+      <ref:Article>第四号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="OpinionRegardingSaidTenderOfferAndBasisAndReasonsEtcTextBlock" xlink:to="reference_OpinionRegardingSaidTenderOfferAndBasisAndReasonsEtcTextBlock"/>
+  </link:referenceLink>
+</link:linkbase>

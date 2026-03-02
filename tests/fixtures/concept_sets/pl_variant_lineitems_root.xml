@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  PL variant file のマージ後に StatementOfIncomeLineItems が
+  独立ルートとして出現するケースを再現するフィクスチャ。
+  実タクソノミでは _pre_pl-2-PL-01-Sales-1-Net.xml 等が
+  LineItems をルートとして定義しており、main file とマージすると
+  LineItems が 2 箇所に存在する構造になる。
+-->
+<link:linkbase
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+
+  <link:presentationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedStatementOfIncome">
+
+    <!-- variant: LineItems をルートとし、売上高区分を定義 -->
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_StatementOfIncomeLineItems"
+        xlink:label="loc_PLLineItems"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_SalesAbstract"
+        xlink:label="loc_SalesAbstract"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_NetSales"
+        xlink:label="loc_NetSales"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_CostOfSales"
+        xlink:label="loc_CostOfSales"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_GrossProfit"
+        xlink:label="loc_GrossProfit"/>
+
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_PLLineItems" xlink:to="loc_SalesAbstract"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_SalesAbstract" xlink:to="loc_NetSales"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_SalesAbstract" xlink:to="loc_CostOfSales"
+        order="2"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_SalesAbstract" xlink:to="loc_GrossProfit"
+        order="3"
+        preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+
+  </link:presentationLink>
+</link:linkbase>

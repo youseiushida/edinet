@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CoverPageHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CoverPageHeading" xlink:to="reference_CoverPageHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_ClassesOfSharesHeading" xlink:label="ClassesOfSharesHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ClassesOfSharesHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ClassesOfSharesHeading" xlink:to="reference_ClassesOfSharesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_ClassesOfSharesTextBlock" xlink:label="ClassesOfSharesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ClassesOfSharesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ClassesOfSharesTextBlock" xlink:to="reference_ClassesOfSharesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AcquisitionsOfTreasurySharesHeading" xlink:label="AcquisitionsOfTreasurySharesHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AcquisitionsOfTreasurySharesHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AcquisitionsOfTreasurySharesHeading" xlink:to="reference_AcquisitionsOfTreasurySharesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AcquisitionsByResolutionOfShareholdersMeetingHeading" xlink:label="AcquisitionsByResolutionOfShareholdersMeetingHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AcquisitionsByResolutionOfShareholdersMeetingHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AcquisitionsByResolutionOfShareholdersMeetingHeading" xlink:to="reference_AcquisitionsByResolutionOfShareholdersMeetingHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AcquisitionsByResolutionOfShareholdersMeetingTextBlock" xlink:label="AcquisitionsByResolutionOfShareholdersMeetingTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AcquisitionsByResolutionOfShareholdersMeetingTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AcquisitionsByResolutionOfShareholdersMeetingTextBlock" xlink:to="reference_AcquisitionsByResolutionOfShareholdersMeetingTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AcquisitionsByResolutionOfBoardOfDirectorsMeetingHeading" xlink:label="AcquisitionsByResolutionOfBoardOfDirectorsMeetingHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AcquisitionsByResolutionOfBoardOfDirectorsMeetingHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AcquisitionsByResolutionOfBoardOfDirectorsMeetingHeading" xlink:to="reference_AcquisitionsByResolutionOfBoardOfDirectorsMeetingHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AcquisitionsByResolutionOfBoardOfDirectorsMeetingTextBlock" xlink:label="AcquisitionsByResolutionOfBoardOfDirectorsMeetingTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AcquisitionsByResolutionOfBoardOfDirectorsMeetingTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AcquisitionsByResolutionOfBoardOfDirectorsMeetingTextBlock" xlink:to="reference_AcquisitionsByResolutionOfBoardOfDirectorsMeetingTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_DisposalsOfTreasurySharesHeading" xlink:label="DisposalsOfTreasurySharesHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DisposalsOfTreasurySharesHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DisposalsOfTreasurySharesHeading" xlink:to="reference_DisposalsOfTreasurySharesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_DisposalsOfTreasurySharesTextBlock" xlink:label="DisposalsOfTreasurySharesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DisposalsOfTreasurySharesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DisposalsOfTreasurySharesTextBlock" xlink:to="reference_DisposalsOfTreasurySharesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_HoldingOfTreasurySharesHeading" xlink:label="HoldingOfTreasurySharesHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingOfTreasurySharesHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingOfTreasurySharesHeading" xlink:to="reference_HoldingOfTreasurySharesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_HoldingOfTreasurySharesTextBlock" xlink:label="HoldingOfTreasurySharesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingOfTreasurySharesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingOfTreasurySharesTextBlock" xlink:to="reference_HoldingOfTreasurySharesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DocumentTitleCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DocumentTitleCoverPage" xlink:to="reference_DocumentTitleCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_ClauseOfStipulationCoverPage" xlink:label="ClauseOfStipulationCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ClauseOfStipulationCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ClauseOfStipulationCoverPage" xlink:to="reference_ClauseOfStipulationCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceOfFilingCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceOfFilingCoverPage" xlink:to="reference_PlaceOfFilingCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilingDateCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilingDateCoverPage" xlink:to="reference_FilingDateCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_ReportingPeriodCoverPage" xlink:label="ReportingPeriodCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ReportingPeriodCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ReportingPeriodCoverPage" xlink:to="reference_ReportingPeriodCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_CompanyNameCoverPage" xlink:label="CompanyNameCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CompanyNameCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CompanyNameCoverPage" xlink:to="reference_CompanyNameCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_CompanyNameInEnglishCoverPage" xlink:label="CompanyNameInEnglishCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CompanyNameInEnglishCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CompanyNameInEnglishCoverPage" xlink:to="reference_CompanyNameInEnglishCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_TitleAndNameOfRepresentativeCoverPage" xlink:label="TitleAndNameOfRepresentativeCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TitleAndNameOfRepresentativeCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TitleAndNameOfRepresentativeCoverPage" xlink:to="reference_TitleAndNameOfRepresentativeCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AddressOfRegisteredHeadquarterCoverPage" xlink:label="AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AddressOfRegisteredHeadquarterCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AddressOfRegisteredHeadquarterCoverPage" xlink:to="reference_AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_TelephoneNumberAddressOfRegisteredHeadquarterCoverPage" xlink:label="TelephoneNumberAddressOfRegisteredHeadquarterCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TelephoneNumberAddressOfRegisteredHeadquarterCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TelephoneNumberAddressOfRegisteredHeadquarterCoverPage" xlink:to="reference_TelephoneNumberAddressOfRegisteredHeadquarterCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_NameOfContactPersonCoverPage" xlink:label="NameOfContactPersonCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfContactPersonCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfContactPersonCoverPage" xlink:to="reference_NameOfContactPersonCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_NearestPlaceOfContactCoverPage" xlink:label="NearestPlaceOfContactCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NearestPlaceOfContactCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NearestPlaceOfContactCoverPage" xlink:to="reference_NearestPlaceOfContactCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_TelephoneNumberNearestPlaceOfContactCoverPage" xlink:label="TelephoneNumberNearestPlaceOfContactCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TelephoneNumberNearestPlaceOfContactCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TelephoneNumberNearestPlaceOfContactCoverPage" xlink:to="reference_TelephoneNumberNearestPlaceOfContactCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_NameOfContactPersonNearestPlaceOfContactCoverPage" xlink:label="NameOfContactPersonNearestPlaceOfContactCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfContactPersonNearestPlaceOfContactCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfContactPersonNearestPlaceOfContactCoverPage" xlink:to="reference_NameOfContactPersonNearestPlaceOfContactCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_PlaceForPublicInspectionCoverPageTextBlock" xlink:label="PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceForPublicInspectionCoverPageTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第十七号様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceForPublicInspectionCoverPageTextBlock" xlink:to="reference_PlaceForPublicInspectionCoverPageTextBlock"/>
+  </link:referenceLink>
+</link:linkbase>

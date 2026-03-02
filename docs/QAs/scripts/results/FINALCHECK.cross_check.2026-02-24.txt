@@ -1,0 +1,77 @@
+FINALCHECK クロスチェック検証
+======================================================================
+
+[OK] 1) P-2 名前空間 ↔ A-1 名前空間
+  P-2 と A-1 の名前空間は一致。
+  - P-2 missing: none
+  - A-1 has targets: True
+  - sample03 header has targets: True
+  - docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/03_開示府令-IFRS有価証券報告書/S003XXXX/XBRL/PublicDoc/0000000_header_jpcrp030000-asr-001_X99002-000_2026-03-31_01_2026-06-12_ixbrl.htm
+
+[OK] 2) P-2 Context ↔ A-2 Context
+  Context 構造は一致（scenario 使用、segment 不使用、explicitMember 使用）。
+  - scenario_count=222
+  - segment_count=0
+  - explicitMember_count=586
+  - doc_claims_ok=True
+  - docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/03_開示府令-IFRS有価証券報告書/S003XXXX/XBRL/PublicDoc/jpcrp030000-asr-001_X99002-000_2026-03-31_01_2026-06-12.xbrl
+
+[OK] 3) P-2 schemaRef ↔ H-1 schemaRef
+  schemaRef は P-2/H-1/実ファイルで相対パス一致。
+  - schemaRef href=jpcrp030000-asr-001_X99002-000_2026-03-31_01_2026-06-12.xsd
+  - is_relative=True
+  - docs_ok=True
+  - docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/03_開示府令-IFRS有価証券報告書/S003XXXX/XBRL/PublicDoc/jpcrp030000-asr-001_X99002-000_2026-03-31_01_2026-06-12.xbrl
+
+[OK] 4) P-3 import URL ↔ H-1b 変換ルール
+  import URL と URL→ローカル変換ルールは整合。
+  - edinet_urls=8
+  - missing_local=0
+  - docs_ok=True
+  - docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/03_開示府令-IFRS有価証券報告書/S003XXXX/XBRL/PublicDoc/jpcrp030000-asr-001_X99002-000_2026-03-31_01_2026-06-12.xsd
+
+[OK] 5) P-1 拡張子 ↔ K-2 iXBRL 採用
+  P-1 と K-2 は iXBRL + 自動生成 .xbrl の同梱で一致。
+  - xbrl_count=3
+  - htm_count=17
+  - docs_ok=True
+  - docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/02_開示府令-有価証券報告書
+
+[OK] 6) P-6 concept 定義 ↔ C-9 属性
+  P-6 と C-9 の concept 属性記述は整合。
+  - substitution_groups=['iod:identifierItem', 'xbrldt:dimensionItem', 'xbrldt:hypercubeItem', 'xbrli:item']
+  - has_data_multi=True
+  - p6_claims_single=False
+  - c9_claims_multi=True
+  - docs/仕様書/2026/タクソノミ/taxonomy/jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd
+
+[OK] 7) P-6 ラベル構造 ↔ C-5/C-10
+  P-6 と C-5/C-10 のラベルリンクベース構造は一致。
+  - data_ok=True
+  - docs_ok=True
+  - docs/仕様書/2026/タクソノミ/taxonomy/jppfs/2025-11-01/label/jppfs_2025-11-01_lab.xml
+
+[OK] 8) P-1d 銀行 ZIP ↔ E-5 業種差異
+  銀行業 ZIP 構造共通（P-1d）と業種 concept 差異（E-5）は整合。
+  - has_public=True
+  - has_audit=True
+  - docs_ok=True
+  - docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/04_開示府令-半期報告書（第四号の三様式、銀行業）
+
+[OK] 9) P-1e 訂正 ZIP ↔ G-7 訂正構造
+  訂正報告書は全体再提出で P-1e と G-7 が一致。
+  - counts20: xbrl=3, xsd=3
+  - counts02: xbrl=3, xsd=3
+  - amendment_ok=True
+  - target_ok=True
+  - docs_ok=True
+  - docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/20_開示府令-訂正有価証券報告書/S021XXXX/XBRL/PublicDoc/0000000_header_jpcrp030000-asr-001_X99001-000_2026-03-31_02_2026-07-02_ixbrl.htm
+
+======================================================================
+サマリー
+======================================================================
+OK       : 9
+NEEDS_FIX: 0
+WARN     : 0
+
+→ 全 9 項目で整合。

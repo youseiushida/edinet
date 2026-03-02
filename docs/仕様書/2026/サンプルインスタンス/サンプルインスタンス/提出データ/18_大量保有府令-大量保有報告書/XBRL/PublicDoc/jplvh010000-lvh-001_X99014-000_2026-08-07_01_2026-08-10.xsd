@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/jplvh010000/lvh/001/X99014-000/2026-08-07/01/2026-08-10" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jplvh010000-lvh_X99014-000="http://disclosure.edinet-fsa.go.jp/jplvh010000/lvh/001/X99014-000/2026-08-07/01/2026-08-10" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/label/jplvh_2025-11-01_gla.xml" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/label/jpdei_2013-08-31_gla.xml" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jplvh010000-lvh-001_X99014-000_2026-08-07_01_2026-08-10_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jplvh010000-lvh-001_X99014-000_2026-08-07_01_2026-08-10_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/r/jpdei_000100-000_2013-08-31_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/r/jplvh-dei_000100-000_2025-11-01_def.xml" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jplvh010000-lvh-001_X99014-000_2026-08-07_01_2026-08-10_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/label/jplvh_2025-11-01_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/label/jplvh_2025-11-01_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/label/jpdei_2024-11-01_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/label/jpdei_2024-11-01_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jplvh010000-lvh-001_X99014-000_2026-08-07_01_2026-08-10_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor_2013-08-31.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_rt" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_rt_2013-08-31.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/jplvh_cor" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/jplvh_cor_2025-11-01.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/jplvh_rt" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/jplvh_rt_2025-11-01.xsd"/>
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd"/>
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <xsd:import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd"/>
+  <xsd:element name="FilerLargeVolumeHolder1Member" id="jplvh010000-lvh_X99014-000_FilerLargeVolumeHolder1Member" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="FilerLargeVolumeHolder2Member" id="jplvh010000-lvh_X99014-000_FilerLargeVolumeHolder2Member" type="nonnum:domainItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration"/>
+</xsd:schema>

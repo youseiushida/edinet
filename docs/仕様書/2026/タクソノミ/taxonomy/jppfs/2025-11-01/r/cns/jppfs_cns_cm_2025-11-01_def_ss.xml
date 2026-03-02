@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_cns_StatementOfChangesInEquity-ListOfAccounts" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_cns_StatementOfChangesInEquity-ListOfAccounts"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_cns_StatementOfChangesInEquity-ListOfAccounts">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfChangesInEquityAbstract" xlink:label="StatementOfChangesInEquityAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfChangesInEquityTable" xlink:label="StatementOfChangesInEquityTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfChangesInEquityAbstract" xlink:to="StatementOfChangesInEquityTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ComponentsOfEquityAxis" xlink:label="ComponentsOfEquityAxis"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfChangesInEquityTable" xlink:to="ComponentsOfEquityAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetAssetsMember" xlink:label="NetAssetsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfEquityAxis" xlink:to="NetAssetsMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ShareholdersEquityMember" xlink:label="ShareholdersEquityMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetAssetsMember" xlink:to="ShareholdersEquityMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CapitalStockMember" xlink:label="CapitalStockMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityMember" xlink:to="CapitalStockMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CapitalSurplusMember" xlink:label="CapitalSurplusMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityMember" xlink:to="CapitalSurplusMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LegalCapitalSurplusMember" xlink:label="LegalCapitalSurplusMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CapitalSurplusMember" xlink:to="LegalCapitalSurplusMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherCapitalSurplusMember" xlink:label="OtherCapitalSurplusMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="CapitalSurplusMember" xlink:to="OtherCapitalSurplusMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RetainedEarningsMember" xlink:label="RetainedEarningsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityMember" xlink:to="RetainedEarningsMember" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LegalRetainedEarningsMember" xlink:label="LegalRetainedEarningsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="RetainedEarningsMember" xlink:to="LegalRetainedEarningsMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherRetainedEarningsMember" xlink:label="OtherRetainedEarningsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="RetainedEarningsMember" xlink:to="OtherRetainedEarningsMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RetainedEarningsBroughtForwardMember" xlink:label="RetainedEarningsBroughtForwardMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherRetainedEarningsMember" xlink:to="RetainedEarningsBroughtForwardMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TreasuryStockMember" xlink:label="TreasuryStockMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ShareholdersEquityMember" xlink:to="TreasuryStockMember" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ValuationAndTranslationAdjustmentsMember" xlink:label="ValuationAndTranslationAdjustmentsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetAssetsMember" xlink:to="ValuationAndTranslationAdjustmentsMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ValuationDifferenceOnAvailableForSaleSecuritiesMember" xlink:label="ValuationDifferenceOnAvailableForSaleSecuritiesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ValuationAndTranslationAdjustmentsMember" xlink:to="ValuationDifferenceOnAvailableForSaleSecuritiesMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DeferredGainsOrLossesOnHedgesMember" xlink:label="DeferredGainsOrLossesOnHedgesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ValuationAndTranslationAdjustmentsMember" xlink:to="DeferredGainsOrLossesOnHedgesMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevaluationReserveForLandMember" xlink:label="RevaluationReserveForLandMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ValuationAndTranslationAdjustmentsMember" xlink:to="RevaluationReserveForLandMember" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ForeignCurrencyTranslationAdjustmentMember" xlink:label="ForeignCurrencyTranslationAdjustmentMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ValuationAndTranslationAdjustmentsMember" xlink:to="ForeignCurrencyTranslationAdjustmentMember" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ShareAwardRightsMember" xlink:label="ShareAwardRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetAssetsMember" xlink:to="ShareAwardRightsMember" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SubscriptionRightsToSharesMember" xlink:label="SubscriptionRightsToSharesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetAssetsMember" xlink:to="SubscriptionRightsToSharesMember" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonControllingInterestsMember" xlink:label="NonControllingInterestsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetAssetsMember" xlink:to="NonControllingInterestsMember" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfChangesInEquityLineItems" xlink:label="StatementOfChangesInEquityLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfChangesInEquityAbstract" xlink:to="StatementOfChangesInEquityLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetAssets" xlink:label="NetAssets"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfChangesInEquityLineItems" xlink:to="NetAssets" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ChangesOfItemsDuringThePeriodAbstract" xlink:label="ChangesOfItemsDuringThePeriodAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfChangesInEquityLineItems" xlink:to="ChangesOfItemsDuringThePeriodAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IssuanceOfNewShares" xlink:label="IssuanceOfNewShares"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ChangesOfItemsDuringThePeriodAbstract" xlink:to="IssuanceOfNewShares" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsFromSurplus" xlink:label="DividendsFromSurplus"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ChangesOfItemsDuringThePeriodAbstract" xlink:to="DividendsFromSurplus" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLossAttributableToOwnersOfParent" xlink:label="ProfitLossAttributableToOwnersOfParent"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ChangesOfItemsDuringThePeriodAbstract" xlink:to="ProfitLossAttributableToOwnersOfParent" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ChangesOfItemsDuringThePeriodAbstract" xlink:to="ProfitLoss" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DisposalOfTreasuryStock" xlink:label="DisposalOfTreasuryStock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ChangesOfItemsDuringThePeriodAbstract" xlink:to="DisposalOfTreasuryStock" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetChangesOfItemsOtherThanShareholdersEquity" xlink:label="NetChangesOfItemsOtherThanShareholdersEquity"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ChangesOfItemsDuringThePeriodAbstract" xlink:to="NetChangesOfItemsOtherThanShareholdersEquity" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TotalChangesOfItemsDuringThePeriod" xlink:label="TotalChangesOfItemsDuringThePeriod"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ChangesOfItemsDuringThePeriodAbstract" xlink:to="TotalChangesOfItemsDuringThePeriod" order="7.0"/>
+  </link:definitionLink>
+</link:linkbase>

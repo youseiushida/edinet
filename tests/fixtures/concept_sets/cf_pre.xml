@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+
+  <link:presentationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedStatementOfCashFlows-indirect">
+
+    <!-- Locators -->
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_StatementOfCashFlowsHeading"
+        xlink:label="loc_CFHeading"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_StatementOfCashFlowsTable"
+        xlink:label="loc_CFTable"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_StatementOfCashFlowsLineItems"
+        xlink:label="loc_CFLineItems"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_CashFlowsFromOperatingActivitiesAbstract"
+        xlink:label="loc_CFOperatingAbstract"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_IncomeBeforeIncomeTaxes"
+        xlink:label="loc_IncomeBeforeIncomeTaxes"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_DepreciationAndAmortization"
+        xlink:label="loc_DepreciationAndAmortization"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_NetCashProvidedByOperatingActivities"
+        xlink:label="loc_NetCashOperating"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_CashFlowsFromInvestingActivitiesAbstract"
+        xlink:label="loc_CFInvestingAbstract"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_PurchaseOfPropertyPlantAndEquipment"
+        xlink:label="loc_PurchaseOfPPE"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_NetCashUsedInInvestingActivities"
+        xlink:label="loc_NetCashInvesting"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_CashFlowsFromFinancingActivitiesAbstract"
+        xlink:label="loc_CFFinancingAbstract"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_NetCashUsedInFinancingActivities"
+        xlink:label="loc_NetCashFinancing"/>
+
+    <!-- Arcs -->
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFHeading" xlink:to="loc_CFTable"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFTable" xlink:to="loc_CFLineItems"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFLineItems" xlink:to="loc_CFOperatingAbstract"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFOperatingAbstract" xlink:to="loc_IncomeBeforeIncomeTaxes"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFOperatingAbstract" xlink:to="loc_DepreciationAndAmortization"
+        order="2"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFOperatingAbstract" xlink:to="loc_NetCashOperating"
+        order="10"
+        preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFLineItems" xlink:to="loc_CFInvestingAbstract"
+        order="2"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFInvestingAbstract" xlink:to="loc_PurchaseOfPPE"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFInvestingAbstract" xlink:to="loc_NetCashInvesting"
+        order="10"
+        preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFLineItems" xlink:to="loc_CFFinancingAbstract"
+        order="3"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CFFinancingAbstract" xlink:to="loc_NetCashFinancing"
+        order="10"
+        preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+
+  </link:presentationLink>
+</link:linkbase>

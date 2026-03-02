@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedStatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfIncome"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedStatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpensesAbstract" xlink:label="SellingGeneralAndAdministrativeExpensesAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EmployeesSalariesAndAllowancesSGACNS" xlink:label="EmployeesSalariesAndAllowancesSGACNS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="EmployeesSalariesAndAllowancesSGACNS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RetirementPaymentsSGA" xlink:label="RetirementPaymentsSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="RetirementPaymentsSGA" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LegalWelfareExpensesSGA" xlink:label="LegalWelfareExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="LegalWelfareExpensesSGA" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RepairAndMaintenanceSGA" xlink:label="RepairAndMaintenanceSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="RepairAndMaintenanceSGA" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StationeryExpensesSGA" xlink:label="StationeryExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="StationeryExpensesSGA" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CorrespondenceAndTransportationExpensesSGA" xlink:label="CorrespondenceAndTransportationExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="CorrespondenceAndTransportationExpensesSGA" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PowerUtilitiesExpensesSGA" xlink:label="PowerUtilitiesExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="PowerUtilitiesExpensesSGA" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ResearchStudyExpensesSGA" xlink:label="ResearchStudyExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="ResearchStudyExpensesSGA" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BadDebtsExpensesSGA" xlink:label="BadDebtsExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="BadDebtsExpensesSGA" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ContributionSGA" xlink:label="ContributionSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="ContributionSGA" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RentsSGA" xlink:label="RentsSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="RentsSGA" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfDevelopmentExpensesSGA" xlink:label="AmortizationOfDevelopmentExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="AmortizationOfDevelopmentExpensesSGA" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MiscellaneousExpensesSGA" xlink:label="MiscellaneousExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="MiscellaneousExpensesSGA" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfAllowanceForDoubtfulAccountsSGA" xlink:label="ProvisionOfAllowanceForDoubtfulAccountsSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="ProvisionOfAllowanceForDoubtfulAccountsSGA" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AdvertisingExpensesSGA" xlink:label="AdvertisingExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="AdvertisingExpensesSGA" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DirectorsCompensationsSGA" xlink:label="DirectorsCompensationsSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="DirectorsCompensationsSGA" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_WelfareExpensesSGA" xlink:label="WelfareExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="WelfareExpensesSGA" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EntertainmentExpensesSGA" xlink:label="EntertainmentExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="EntertainmentExpensesSGA" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesAndDuesSGA" xlink:label="TaxesAndDuesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="TaxesAndDuesSGA" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationSGA" xlink:label="DepreciationSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="DepreciationSGA" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InsuranceExpensesSGA" xlink:label="InsuranceExpensesSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="InsuranceExpensesSGA" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpenses" xlink:label="SellingGeneralAndAdministrativeExpenses"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SellingGeneralAndAdministrativeExpensesAbstract" xlink:to="SellingGeneralAndAdministrativeExpenses" order="22.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeLineItems" xlink:label="StatementOfIncomeLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="SellingGeneralAndAdministrativeExpensesAbstract" order="7.0"/>
+  </link:definitionLink>
+</link:linkbase>

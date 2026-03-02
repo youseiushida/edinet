@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+
+  <link:presentationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedBalanceSheet">
+
+    <!-- Locators -->
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_BalanceSheetHeading"
+        xlink:label="loc_BSHeading"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_BalanceSheetTable"
+        xlink:label="loc_BSTable"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_BalanceSheetLineItems"
+        xlink:label="loc_BSLineItems"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_CurrentAssetsAbstract"
+        xlink:label="loc_CurrentAssetsAbstract"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_CashAndDeposits"
+        xlink:label="loc_CashAndDeposits"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_NotesAndAccountsReceivableTrade"
+        xlink:label="loc_NotesAndAccountsReceivableTrade"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_TotalCurrentAssets"
+        xlink:label="loc_TotalCurrentAssets"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_TotalAssets"
+        xlink:label="loc_TotalAssets"/>
+
+    <!-- Arcs -->
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_BSHeading" xlink:to="loc_BSTable"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_BSTable" xlink:to="loc_BSLineItems"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_BSLineItems" xlink:to="loc_CurrentAssetsAbstract"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CurrentAssetsAbstract" xlink:to="loc_CashAndDeposits"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CurrentAssetsAbstract" xlink:to="loc_NotesAndAccountsReceivableTrade"
+        order="2"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CurrentAssetsAbstract" xlink:to="loc_TotalCurrentAssets"
+        order="3"
+        preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_BSLineItems" xlink:to="loc_TotalAssets"
+        order="10"
+        preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+
+  </link:presentationLink>
+</link:linkbase>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_InformationAboutOfficers-05" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_InformationAboutOfficers-05"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_InformationAboutOfficers-05">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SequentialNumbersAxis" xlink:label="SequentialNumbersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row4Member" xlink:label="Row4Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SequentialNumbersAxis" xlink:to="Row4Member" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row5Member" xlink:label="Row5Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SequentialNumbersAxis" xlink:to="Row5Member" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row1Member" xlink:label="Row1Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SequentialNumbersAxis" xlink:to="Row1Member" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row2Member" xlink:label="Row2Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SequentialNumbersAxis" xlink:to="Row2Member" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row3Member" xlink:label="Row3Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SequentialNumbersAxis" xlink:to="Row3Member" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InformationAboutOfficersHeading" xlink:label="InformationAboutOfficersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_FootnotesExecutiveOfficersTable" xlink:label="FootnotesExecutiveOfficersTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutOfficersHeading" xlink:to="FootnotesExecutiveOfficersTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FootnotesExecutiveOfficersTable" xlink:to="SequentialNumbersAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_FootnotesExecutiveOfficersLineItems" xlink:label="FootnotesExecutiveOfficersLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutOfficersHeading" xlink:to="FootnotesExecutiveOfficersLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_FootnotesExecutiveOfficersTextBlock" xlink:label="FootnotesExecutiveOfficersTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FootnotesExecutiveOfficersLineItems" xlink:to="FootnotesExecutiveOfficersTextBlock" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

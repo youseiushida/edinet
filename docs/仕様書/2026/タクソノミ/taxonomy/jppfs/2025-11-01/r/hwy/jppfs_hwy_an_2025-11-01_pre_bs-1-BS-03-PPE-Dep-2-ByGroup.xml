@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_BalanceSheet"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:label="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsHighwayBusinessNCAHWY" xlink:label="BuildingsHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="BuildingsHighwayBusinessNCAHWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresHighwayBusinessNCAHWY" xlink:label="StructuresHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="StructuresHighwayBusinessNCAHWY" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentHighwayBusinessNCAHWY" xlink:label="MachineryAndEquipmentHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="MachineryAndEquipmentHighwayBusinessNCAHWY" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesHighwayBusinessNCAHWY" xlink:label="VehiclesHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="VehiclesHighwayBusinessNCAHWY" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesHighwayBusinessNCAHWY" xlink:label="ToolsFurnitureAndFixturesHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="ToolsFurnitureAndFixturesHighwayBusinessNCAHWY" order="24.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationPPEByGroupHighwayBusinessNCAHWY" xlink:label="AccumulatedDepreciationPPEByGroupHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="AccumulatedDepreciationPPEByGroupHighwayBusinessNCAHWY" order="28.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:label="PropertyPlantAndEquipmentNCARelatedAbstractHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsNCARelatedHWY" xlink:label="BuildingsNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="BuildingsNCARelatedHWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresNCARelatedHWY" xlink:label="StructuresNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="StructuresNCARelatedHWY" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentNCARelatedHWY" xlink:label="MachineryAndEquipmentNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="MachineryAndEquipmentNCARelatedHWY" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesNCARelatedHWY" xlink:label="VehiclesNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="VehiclesNCARelatedHWY" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesNCARelatedHWY" xlink:label="ToolsFurnitureAndFixturesNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="ToolsFurnitureAndFixturesNCARelatedHWY" order="24.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationPPEByGroupNCARelatedHWY" xlink:label="AccumulatedDepreciationPPEByGroupNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="AccumulatedDepreciationPPEByGroupNCARelatedHWY" order="28.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:label="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsNCAAffiliatedHWY" xlink:label="BuildingsNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="BuildingsNCAAffiliatedHWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresNCAAffiliatedHWY" xlink:label="StructuresNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="StructuresNCAAffiliatedHWY" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentNCAAffiliatedHWY" xlink:label="MachineryAndEquipmentNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="MachineryAndEquipmentNCAAffiliatedHWY" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesNCAAffiliatedHWY" xlink:label="VehiclesNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="VehiclesNCAAffiliatedHWY" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesNCAAffiliatedHWY" xlink:label="ToolsFurnitureAndFixturesNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="ToolsFurnitureAndFixturesNCAAffiliatedHWY" order="24.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationPPEByGroupNCAAffiliatedHWY" xlink:label="AccumulatedDepreciationPPEByGroupNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="AccumulatedDepreciationPPEByGroupNCAAffiliatedHWY" order="28.0"/>
+  </link:presentationLink>
+</link:linkbase>

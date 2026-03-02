@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ele_StatementOfCashFlows-ListOfAccounts" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_ele_StatementOfCashFlows-ListOfAccounts"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ele_StatementOfCashFlows-ListOfAccounts">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfCashFlowsAbstract" xlink:label="StatementOfCashFlowsAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfCashFlowsTable" xlink:label="StatementOfCashFlowsTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsAbstract" xlink:to="StatementOfCashFlowsTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfCashFlowsLineItems" xlink:label="StatementOfCashFlowsLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsAbstract" xlink:to="StatementOfCashFlowsLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInOperatingActivitiesAbstract" xlink:label="NetCashProvidedByUsedInOperatingActivitiesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsLineItems" xlink:to="NetCashProvidedByUsedInOperatingActivitiesAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SubtotalOpeCF" xlink:label="SubtotalOpeCF"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInOperatingActivitiesAbstract" xlink:to="SubtotalOpeCF" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfNuclearFuelOpeCFELE" xlink:label="AmortizationOfNuclearFuelOpeCFELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="AmortizationOfNuclearFuelOpeCFELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DecommissioningCostsOfNuclearPowerUnitsOpeCFELE" xlink:label="DecommissioningCostsOfNuclearPowerUnitsOpeCFELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="DecommissioningCostsOfNuclearPowerUnitsOpeCFELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncreaseDecreaseInReserveForFluctuationInWaterLevelsOpeCFELE" xlink:label="IncreaseDecreaseInReserveForFluctuationInWaterLevelsOpeCFELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="IncreaseDecreaseInReserveForFluctuationInWaterLevelsOpeCFELE" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncreaseDecreaseInProvisionForDecommissioningOfNuclearPowerUnitsOpeCFELE" xlink:label="IncreaseDecreaseInProvisionForDecommissioningOfNuclearPowerUnitsOpeCFELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="IncreaseDecreaseInProvisionForDecommissioningOfNuclearPowerUnitsOpeCFELE" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncreaseDecreaseInProvisionForReprocessingOfIrradiatedNuclearFuelOpeCFELE" xlink:label="IncreaseDecreaseInProvisionForReprocessingOfIrradiatedNuclearFuelOpeCFELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="IncreaseDecreaseInProvisionForReprocessingOfIrradiatedNuclearFuelOpeCFELE" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DecreaseIncreaseInReserveFundForReprocessingOfIrradiatedNuclearFuelOpeCFELE" xlink:label="DecreaseIncreaseInReserveFundForReprocessingOfIrradiatedNuclearFuelOpeCFELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="DecreaseIncreaseInReserveFundForReprocessingOfIrradiatedNuclearFuelOpeCFELE" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncreaseDecreaseInProvisionForOtherReprocessingOfIrradiatedNuclearFuelOpeCFELE" xlink:label="IncreaseDecreaseInProvisionForOtherReprocessingOfIrradiatedNuclearFuelOpeCFELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="IncreaseDecreaseInProvisionForOtherReprocessingOfIrradiatedNuclearFuelOpeCFELE" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncreaseDecreaseInReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionOpeCFELE" xlink:label="IncreaseDecreaseInReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionOpeCFELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="IncreaseDecreaseInReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionOpeCFELE" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:label="NetCashProvidedByUsedInInvestmentActivitiesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsLineItems" xlink:to="NetCashProvidedByUsedInInvestmentActivitiesAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:label="NetCashProvidedByUsedInFinancingActivitiesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsLineItems" xlink:to="NetCashProvidedByUsedInFinancingActivitiesAbstract" order="3.0"/>
+  </link:definitionLink>
+</link:linkbase>

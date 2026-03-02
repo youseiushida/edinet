@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_TreasurySharesEtc" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_TreasurySharesEtc"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_TreasurySharesEtc">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SequentialNumbersAxis" xlink:label="SequentialNumbersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalSequentialNumbersMember" xlink:label="TotalSequentialNumbersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SequentialNumbersAxis" xlink:to="TotalSequentialNumbersMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row1Member" xlink:label="Row1Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalSequentialNumbersMember" xlink:to="Row1Member" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row2Member" xlink:label="Row2Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalSequentialNumbersMember" xlink:to="Row2Member" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row3Member" xlink:label="Row3Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalSequentialNumbersMember" xlink:to="Row3Member" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row4Member" xlink:label="Row4Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalSequentialNumbersMember" xlink:to="Row4Member" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TreasurySharesEtcHeading" xlink:label="TreasurySharesEtcHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TreasurySharesEtcTable" xlink:label="TreasurySharesEtcTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TreasurySharesEtcHeading" xlink:to="TreasurySharesEtcTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TreasurySharesEtcTable" xlink:to="SequentialNumbersAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TreasurySharesEtcLineItems" xlink:label="TreasurySharesEtcLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TreasurySharesEtcHeading" xlink:to="TreasurySharesEtcLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NameOfShareholderTreasurySharesEtc" xlink:label="NameOfShareholderTreasurySharesEtc"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TreasurySharesEtcLineItems" xlink:to="NameOfShareholderTreasurySharesEtc" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AddressOfShareholderTreasurySharesEtc" xlink:label="AddressOfShareholderTreasurySharesEtc"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TreasurySharesEtcLineItems" xlink:to="AddressOfShareholderTreasurySharesEtc" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldInOwnNameTreasurySharesEtc" xlink:label="NumberOfSharesHeldInOwnNameTreasurySharesEtc"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TreasurySharesEtcLineItems" xlink:to="NumberOfSharesHeldInOwnNameTreasurySharesEtc" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldInOthersNamesTreasurySharesEtc" xlink:label="NumberOfSharesHeldInOthersNamesTreasurySharesEtc"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TreasurySharesEtcLineItems" xlink:to="NumberOfSharesHeldInOthersNamesTreasurySharesEtc" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalNumberOfSharesHeldTreasurySharesEtc" xlink:label="TotalNumberOfSharesHeldTreasurySharesEtc"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TreasurySharesEtcLineItems" xlink:to="TotalNumberOfSharesHeldTreasurySharesEtc" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShareholdingRatioTreasurySharesEtc" xlink:label="ShareholdingRatioTreasurySharesEtc"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TreasurySharesEtcLineItems" xlink:to="ShareholdingRatioTreasurySharesEtc" order="6.0"/>
+  </link:presentationLink>
+</link:linkbase>

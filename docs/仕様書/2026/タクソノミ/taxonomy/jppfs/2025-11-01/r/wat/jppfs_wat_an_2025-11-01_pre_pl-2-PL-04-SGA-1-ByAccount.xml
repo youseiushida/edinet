@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_StatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfIncome"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_StatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeLineItems" xlink:label="StatementOfIncomeLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GeneralAndAdministrativeExpensesAbstractWAT" xlink:label="GeneralAndAdministrativeExpensesAbstractWAT"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="GeneralAndAdministrativeExpensesAbstractWAT" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DirectorsCompensationsSGA" xlink:label="DirectorsCompensationsSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="DirectorsCompensationsSGA" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EmployeeSalariesSGAWAT" xlink:label="EmployeeSalariesSGAWAT"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="EmployeeSalariesSGAWAT" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionForRetirementBenefitsSGAWAT" xlink:label="ProvisionForRetirementBenefitsSGAWAT"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="ProvisionForRetirementBenefitsSGAWAT" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_WelfareExpensesSGA" xlink:label="WelfareExpensesSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="WelfareExpensesSGA" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TravelingAndTransportationExpensesWAT" xlink:label="TravelingAndTransportationExpensesWAT"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="TravelingAndTransportationExpensesWAT" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CommunicationExpensesSGA" xlink:label="CommunicationExpensesSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="CommunicationExpensesSGA" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_HeatingLightingAndSuppliesExpensesSGAWAT" xlink:label="HeatingLightingAndSuppliesExpensesSGAWAT"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="HeatingLightingAndSuppliesExpensesSGAWAT" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesAndDuesSGA" xlink:label="TaxesAndDuesSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="TaxesAndDuesSGA" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PropertyMaintenanceExpensesSGAWAT" xlink:label="PropertyMaintenanceExpensesSGAWAT"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="PropertyMaintenanceExpensesSGAWAT" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationSGA" xlink:label="DepreciationSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="DepreciationSGA" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EntertainmentExpensesSGA" xlink:label="EntertainmentExpensesSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="EntertainmentExpensesSGA" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MembershipExpensesAndDonationSGAWAT" xlink:label="MembershipExpensesAndDonationSGAWAT"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="MembershipExpensesAndDonationSGAWAT" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfAllowanceForDoubtfulAccountsSGA" xlink:label="ProvisionOfAllowanceForDoubtfulAccountsSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="ProvisionOfAllowanceForDoubtfulAccountsSGA" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BadDebtsExpensesSGA" xlink:label="BadDebtsExpensesSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="BadDebtsExpensesSGA" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherGeneralAndAdministrativeExpensesWAT" xlink:label="OtherGeneralAndAdministrativeExpensesWAT"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="OtherGeneralAndAdministrativeExpensesWAT" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GeneralAndAdministrativeExpensesWAT" xlink:label="GeneralAndAdministrativeExpensesWAT"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GeneralAndAdministrativeExpensesAbstractWAT" xlink:to="GeneralAndAdministrativeExpensesWAT" order="16.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+  </link:presentationLink>
+</link:linkbase>

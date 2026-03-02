@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_FilersAndJointHolders" xlink:type="simple" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_FilersAndJointHolders"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_FilersAndJointHolders">
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:label="FilersLargeVolumeHoldersAndJointHoldersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersOrJointHoldersMember" xlink:label="FilersLargeVolumeHoldersOrJointHoldersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:to="FilersLargeVolumeHoldersOrJointHoldersMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersAndJointHoldersHeading" xlink:label="FilersAndJointHoldersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersAndJointHoldersTable" xlink:label="FilersAndJointHoldersTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FilersAndJointHoldersHeading" xlink:to="FilersAndJointHoldersTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FilersAndJointHoldersTable" xlink:to="FilersLargeVolumeHoldersAndJointHoldersAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersAndJointHoldersLineItems" xlink:label="FilersAndJointHoldersLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FilersAndJointHoldersHeading" xlink:to="FilersAndJointHoldersLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Name" xlink:label="Name"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FilersAndJointHoldersLineItems" xlink:to="Name" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

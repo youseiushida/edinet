@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps-esr/rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesExtraordinarySecuritiesReport" xlink:type="simple" xlink:href="../jpsps-esr_rt_2021-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesExtraordinarySecuritiesReport"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpsps-esr/rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesExtraordinarySecuritiesReport">
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesExtraordinarySecuritiesReportHeading" xlink:label="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesExtraordinarySecuritiesReportHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesExtraordinarySecuritiesReportHeading" xlink:to="CoverPageHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_ReasonForFilingHeading" xlink:label="ReasonForFilingHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesExtraordinarySecuritiesReportHeading" xlink:to="ReasonForFilingHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_ReasonForFilingTextBlock" xlink:label="ReasonForFilingTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ReasonForFilingHeading" xlink:to="ReasonForFilingTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_BodyOfReportHeading" xlink:label="BodyOfReportHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesExtraordinarySecuritiesReportHeading" xlink:to="BodyOfReportHeading" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock" xlink:label="PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_ChangesInMajorPartiesInvolvedTextBlock" xlink:label="ChangesInMajorPartiesInvolvedTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="ChangesInMajorPartiesInvolvedTextBlock" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_MajorChangesInInvestmentManagementPolicyEtcTextBlock" xlink:label="MajorChangesInInvestmentManagementPolicyEtcTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="MajorChangesInInvestmentManagementPolicyEtcTextBlock" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock" xlink:label="EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_SignificantDisasterTextBlock" xlink:label="SignificantDisasterTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="SignificantDisasterTextBlock" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_CommencementOrResolutionOfLitigationTextBlock" xlink:label="CommencementOrResolutionOfLitigationTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="CommencementOrResolutionOfLitigationTextBlock" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_DecisionOnAbsorptionTypeMergerOfInvestmentCorporationTextBlock" xlink:label="DecisionOnAbsorptionTypeMergerOfInvestmentCorporationTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="DecisionOnAbsorptionTypeMergerOfInvestmentCorporationTextBlock" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_DecisionOnConsolidationTypeMergerOfInvestmentCorporationTextBlock" xlink:label="DecisionOnConsolidationTypeMergerOfInvestmentCorporationTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="DecisionOnConsolidationTypeMergerOfInvestmentCorporationTextBlock" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_MergerOfInvestmentTrustTextBlock" xlink:label="MergerOfInvestmentTrustTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="MergerOfInvestmentTrustTextBlock" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock" xlink:label="PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock" xlink:label="LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock" xlink:label="EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_CancelationOfRegistrationOrOrderForSuspensionOfBusinessEtcTextBlock" xlink:label="CancelationOfRegistrationOrOrderForSuspensionOfBusinessEtcTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="CancelationOfRegistrationOrOrderForSuspensionOfBusinessEtcTextBlock" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_DecisionOnDissolutionEtcTextBlock" xlink:label="DecisionOnDissolutionEtcTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BodyOfReportHeading" xlink:to="DecisionOnDissolutionEtcTextBlock" order="14.0"/>
+  </link:presentationLink>
+</link:linkbase>

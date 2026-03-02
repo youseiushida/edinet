@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedStatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfIncome"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedStatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeBeforeIncomeTaxes" xlink:label="IncomeBeforeIncomeTaxes"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncome" xlink:label="OrdinaryIncome"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="IncomeBeforeIncomeTaxes" xlink:to="OrdinaryIncome" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeINS" xlink:label="OperatingIncomeINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OrdinaryIncome" xlink:to="OperatingIncomeINS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_UnderwritingIncomeOIINS" xlink:label="UnderwritingIncomeOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncomeINS" xlink:to="UnderwritingIncomeOIINS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LifeInsurancePremiumsOIINS" xlink:label="LifeInsurancePremiumsOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingIncomeOIINS" xlink:to="LifeInsurancePremiumsOIINS" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetPremiumsWrittenOIINS" xlink:label="NetPremiumsWrittenOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingIncomeOIINS" xlink:to="NetPremiumsWrittenOIINS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PremiumsOfSavingTypeInsuranceOIINS" xlink:label="PremiumsOfSavingTypeInsuranceOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingIncomeOIINS" xlink:to="PremiumsOfSavingTypeInsuranceOIINS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InvestmentIncomeFromSavingTypeInsuranceOIINS" xlink:label="InvestmentIncomeFromSavingTypeInsuranceOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingIncomeOIINS" xlink:to="InvestmentIncomeFromSavingTypeInsuranceOIINS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherUnderwritingIncomeOIINS" xlink:label="OtherUnderwritingIncomeOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingIncomeOIINS" xlink:to="OtherUnderwritingIncomeOIINS" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InvestmentIncomeOIINS" xlink:label="InvestmentIncomeOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncomeINS" xlink:to="InvestmentIncomeOIINS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestAndDividendsIncomeOIINS" xlink:label="InterestAndDividendsIncomeOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentIncomeOIINS" xlink:to="InterestAndDividendsIncomeOIINS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainFromMoneyHeldInTrustOIINS" xlink:label="GainFromMoneyHeldInTrustOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentIncomeOIINS" xlink:to="GainFromMoneyHeldInTrustOIINS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnTradingSecuritiesOIINS" xlink:label="GainOnTradingSecuritiesOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentIncomeOIINS" xlink:to="GainOnTradingSecuritiesOIINS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfSecuritiesOIINS" xlink:label="GainOnSalesOfSecuritiesOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentIncomeOIINS" xlink:to="GainOnSalesOfSecuritiesOIINS" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnRedemptionOfSecuritiesOIINS" xlink:label="GainOnRedemptionOfSecuritiesOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentIncomeOIINS" xlink:to="GainOnRedemptionOfSecuritiesOIINS" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetDerivativeFinancialInstrumentsGainOIINS" xlink:label="NetDerivativeFinancialInstrumentsGainOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentIncomeOIINS" xlink:to="NetDerivativeFinancialInstrumentsGainOIINS" order="6.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherInvestmentIncomeOIINS" xlink:label="OtherInvestmentIncomeOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentIncomeOIINS" xlink:to="OtherInvestmentIncomeOIINS" order="7.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeCreditedToSavingTypeInsuranceOIINS" xlink:label="IncomeCreditedToSavingTypeInsuranceOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentIncomeOIINS" xlink:to="IncomeCreditedToSavingTypeInsuranceOIINS" order="8.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOperatingIncomeOIINS" xlink:label="OtherOperatingIncomeOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingIncomeINS" xlink:to="OtherOperatingIncomeOIINS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfNegativeGoodwillNOI" xlink:label="AmortizationOfNegativeGoodwillNOI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherOperatingIncomeOIINS" xlink:to="AmortizationOfNegativeGoodwillNOI" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EquityInEarningsOfAffiliatesNOI" xlink:label="EquityInEarningsOfAffiliatesNOI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherOperatingIncomeOIINS" xlink:to="EquityInEarningsOfAffiliatesNOI" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOtherOperatingIncomeOIINS" xlink:label="OtherOtherOperatingIncomeOIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherOperatingIncomeOIINS" xlink:to="OtherOtherOperatingIncomeOIINS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesINS" xlink:label="OperatingExpensesINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OrdinaryIncome" xlink:to="OperatingExpensesINS" order="2.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_UnderwritingExpensesOEINS" xlink:label="UnderwritingExpensesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesINS" xlink:to="UnderwritingExpensesOEINS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LifeInsuranceClaimsPaidOEINS" xlink:label="LifeInsuranceClaimsPaidOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingExpensesOEINS" xlink:to="LifeInsuranceClaimsPaidOEINS" order="6.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfPolicyReserveAndOtherOEINS" xlink:label="ProvisionOfPolicyReserveAndOtherOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingExpensesOEINS" xlink:to="ProvisionOfPolicyReserveAndOtherOEINS" order="8.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetLossPaidOEINS" xlink:label="NetLossPaidOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingExpensesOEINS" xlink:to="NetLossPaidOEINS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossAdjustmentExpensesOEINS" xlink:label="LossAdjustmentExpensesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingExpensesOEINS" xlink:to="LossAdjustmentExpensesOEINS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CommissionsAndCollectionFeesOEINS" xlink:label="CommissionsAndCollectionFeesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingExpensesOEINS" xlink:to="CommissionsAndCollectionFeesOEINS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MaturityRefundsToPolicyholdersOEINS" xlink:label="MaturityRefundsToPolicyholdersOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingExpensesOEINS" xlink:to="MaturityRefundsToPolicyholdersOEINS" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsToPolicyholdersOEINS" xlink:label="DividendsToPolicyholdersOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingExpensesOEINS" xlink:to="DividendsToPolicyholdersOEINS" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfOutstandingClaimsOEINS" xlink:label="ProvisionOfOutstandingClaimsOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingExpensesOEINS" xlink:to="ProvisionOfOutstandingClaimsOEINS" order="7.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherUnderwritingExpensesOEINS" xlink:label="OtherUnderwritingExpensesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="UnderwritingExpensesOEINS" xlink:to="OtherUnderwritingExpensesOEINS" order="9.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InvestmentExpensesOEINS" xlink:label="InvestmentExpensesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesINS" xlink:to="InvestmentExpensesOEINS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnInvestmentsInMoneyHeldInTrustOEINS" xlink:label="LossOnInvestmentsInMoneyHeldInTrustOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentExpensesOEINS" xlink:to="LossOnInvestmentsInMoneyHeldInTrustOEINS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnTradingSecuritiesOEINS" xlink:label="LossOnTradingSecuritiesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentExpensesOEINS" xlink:to="LossOnTradingSecuritiesOEINS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfSecuritiesOEINS" xlink:label="LossOnSalesOfSecuritiesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentExpensesOEINS" xlink:to="LossOnSalesOfSecuritiesOEINS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnValuationOfSecuritiesOEINS" xlink:label="LossOnValuationOfSecuritiesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentExpensesOEINS" xlink:to="LossOnValuationOfSecuritiesOEINS" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnRedemptionOfSecuritiesOEINS" xlink:label="LossOnRedemptionOfSecuritiesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentExpensesOEINS" xlink:to="LossOnRedemptionOfSecuritiesOEINS" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetDerivativeFinancialInstrumentsLossOEINS" xlink:label="NetDerivativeFinancialInstrumentsLossOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentExpensesOEINS" xlink:to="NetDerivativeFinancialInstrumentsLossOEINS" order="6.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherInvestmentExpensesOEINS" xlink:label="OtherInvestmentExpensesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentExpensesOEINS" xlink:to="OtherInvestmentExpensesOEINS" order="7.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SalesAndAdministrativeExpensesOEINS" xlink:label="SalesAndAdministrativeExpensesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesINS" xlink:to="SalesAndAdministrativeExpensesOEINS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOperatingExpensesOEINS" xlink:label="OtherOperatingExpensesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingExpensesINS" xlink:to="OtherOperatingExpensesOEINS" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EquityInLossesOfAffiliatesNOE" xlink:label="EquityInLossesOfAffiliatesNOE"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherOperatingExpensesOEINS" xlink:to="EquityInLossesOfAffiliatesNOE" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestExpensesOEINS" xlink:label="InterestExpensesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherOperatingExpensesOEINS" xlink:to="InterestExpensesOEINS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfAllowanceForDoubtfulAccountsOEINS" xlink:label="ProvisionOfAllowanceForDoubtfulAccountsOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherOperatingExpensesOEINS" xlink:to="ProvisionOfAllowanceForDoubtfulAccountsOEINS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossFromBadDebtsOEINS" xlink:label="LossFromBadDebtsOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherOperatingExpensesOEINS" xlink:to="LossFromBadDebtsOEINS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOtherOperatingExpensesOEINS" xlink:label="OtherOtherOperatingExpensesOEINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherOperatingExpensesOEINS" xlink:to="OtherOtherOperatingExpensesOEINS" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryIncome" xlink:label="ExtraordinaryIncome"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="IncomeBeforeIncomeTaxes" xlink:to="ExtraordinaryIncome" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnDisposalOfNoncurrentAssetsEIINSNonlife" xlink:label="GainOnDisposalOfNoncurrentAssetsEIINSNonlife"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryIncome" xlink:to="GainOnDisposalOfNoncurrentAssetsEIINSNonlife" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnNegativeGoodwillEI" xlink:label="GainOnNegativeGoodwillEI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryIncome" xlink:to="GainOnNegativeGoodwillEI" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AppraisalGainUnderArticle112OfTheInsuranceBusinessLawEIINS" xlink:label="AppraisalGainUnderArticle112OfTheInsuranceBusinessLawEIINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryIncome" xlink:to="AppraisalGainUnderArticle112OfTheInsuranceBusinessLawEIINS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherEI" xlink:label="OtherEI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryIncome" xlink:to="OtherEI" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryLoss" xlink:label="ExtraordinaryLoss"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="IncomeBeforeIncomeTaxes" xlink:to="ExtraordinaryLoss" order="3.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnDisposalOfNoncurrentAssetsELINSNonlife" xlink:label="LossOnDisposalOfNoncurrentAssetsELINSNonlife"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="LossOnDisposalOfNoncurrentAssetsELINSNonlife" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ImpairmentLossEL" xlink:label="ImpairmentLossEL"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="ImpairmentLossEL" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfReservesUnderTheSpecialLawsEL" xlink:label="ProvisionOfReservesUnderTheSpecialLawsEL"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="ProvisionOfReservesUnderTheSpecialLawsEL" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfReserveForPriceFluctuationELINS" xlink:label="ProvisionOfReserveForPriceFluctuationELINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProvisionOfReservesUnderTheSpecialLawsEL" xlink:to="ProvisionOfReserveForPriceFluctuationELINS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransferToReserveForFinancialProductsTransactionLiabilitiesELINS" xlink:label="TransferToReserveForFinancialProductsTransactionLiabilitiesELINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProvisionOfReservesUnderTheSpecialLawsEL" xlink:to="TransferToReserveForFinancialProductsTransactionLiabilitiesELINS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnReductionOfRealEstateELINS" xlink:label="LossOnReductionOfRealEstateELINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="LossOnReductionOfRealEstateELINS" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherEL" xlink:label="OtherEL"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ExtraordinaryLoss" xlink:to="OtherEL" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLoss" xlink:to="IncomeBeforeIncomeTaxes" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxes" xlink:label="IncomeTaxes"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLoss" xlink:to="IncomeTaxes" order="2.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesCurrentConsolidatedINS" xlink:label="IncomeTaxesCurrentConsolidatedINS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="IncomeTaxes" xlink:to="IncomeTaxesCurrentConsolidatedINS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesDeferred" xlink:label="IncomeTaxesDeferred"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="IncomeTaxes" xlink:to="IncomeTaxesDeferred" order="2.0" weight="1"/>
+  </link:calculationLink>
+</link:linkbase>

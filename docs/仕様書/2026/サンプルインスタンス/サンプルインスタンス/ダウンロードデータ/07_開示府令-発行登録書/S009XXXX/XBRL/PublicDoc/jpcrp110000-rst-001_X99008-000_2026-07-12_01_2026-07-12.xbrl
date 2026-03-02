@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:jpcrp_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor" xmlns:jpdei_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <link:schemaRef xlink:href="jpcrp110000-rst-001_X99008-000_2026-07-12_01_2026-07-12.xsd" xlink:type="simple"/>
+  <xbrli:context id="FilingDateInstant">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">X99008-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2026-07-12</xbrli:instant>
+</xbrli:period>
+</xbrli:context>
+  <xbrli:unit id="pure">
+<xbrli:measure>xbrli:pure</xbrli:measure>
+</xbrli:unit>
+  <jpdei_cor:NumberOfSubmissionDEI contextRef="FilingDateInstant" decimals="0" unitRef="pure">1</jpdei_cor:NumberOfSubmissionDEI>
+  <jpcrp_cor:ShelfRegistrationNumberCoverPage contextRef="FilingDateInstant">88―関東999</jpcrp_cor:ShelfRegistrationNumberCoverPage>
+  <jpcrp_cor:DocumentTitleCoverPage contextRef="FilingDateInstant">発行登録書</jpcrp_cor:DocumentTitleCoverPage>
+  <jpcrp_cor:PlaceOfFilingCoverPage contextRef="FilingDateInstant">関東財務局長</jpcrp_cor:PlaceOfFilingCoverPage>
+  <jpcrp_cor:FilingDateCoverPage contextRef="FilingDateInstant">2026-07-12</jpcrp_cor:FilingDateCoverPage>
+  <jpcrp_cor:CompanyNameCoverPage contextRef="FilingDateInstant">Ｈ株式会社</jpcrp_cor:CompanyNameCoverPage>
+  <jpcrp_cor:CompanyNameInEnglishCoverPage contextRef="FilingDateInstant">H Corporation</jpcrp_cor:CompanyNameInEnglishCoverPage>
+  <jpcrp_cor:TitleAndNameOfRepresentativeCoverPage contextRef="FilingDateInstant">代表取締役社長    ○○  ○○</jpcrp_cor:TitleAndNameOfRepresentativeCoverPage>
+  <jpcrp_cor:AddressOfRegisteredHeadquarterCoverPage contextRef="FilingDateInstant">東京都千代田区霞が関三丁目２番１号</jpcrp_cor:AddressOfRegisteredHeadquarterCoverPage>
+  <jpcrp_cor:TelephoneNumberAddressOfRegisteredHeadquarterCoverPage contextRef="FilingDateInstant">０３（３５０６）６０００（代表）</jpcrp_cor:TelephoneNumberAddressOfRegisteredHeadquarterCoverPage>
+  <jpcrp_cor:NameOfContactPersonAddressOfRegisteredHeadquarterCoverPage contextRef="FilingDateInstant">経理部長  ○○  ○○</jpcrp_cor:NameOfContactPersonAddressOfRegisteredHeadquarterCoverPage>
+  <jpcrp_cor:NearestPlaceOfContactCoverPage contextRef="FilingDateInstant">東京都千代田区霞が関三丁目２番１号</jpcrp_cor:NearestPlaceOfContactCoverPage>
+  <jpcrp_cor:TelephoneNumberNearestPlaceOfContactCoverPage contextRef="FilingDateInstant">０３（３５０６）６０００（代表）</jpcrp_cor:TelephoneNumberNearestPlaceOfContactCoverPage>
+  <jpcrp_cor:NameOfContactPersonNearestPlaceOfContactCoverPage contextRef="FilingDateInstant">経理部長  ○○  ○○</jpcrp_cor:NameOfContactPersonNearestPlaceOfContactCoverPage>
+  <jpcrp_cor:TypesOfSecuritiesToShelfRegisterForOfferingOrDistributionCoverPage contextRef="FilingDateInstant">社債</jpcrp_cor:TypesOfSecuritiesToShelfRegisterForOfferingOrDistributionCoverPage>
+  <jpcrp_cor:PlannedPeriodOfIssueCoverPage contextRef="FilingDateInstant">この発行登録書による発行登録の効力発生予定日（令和８年７月20日）から２年を経過する日（令和10年７月19日）まで</jpcrp_cor:PlannedPeriodOfIssueCoverPage>
+  <jpcrp_cor:PlannedAmountOfIssueOrLimitOnOutstandingBalanceCoverPageTextBlock contextRef="FilingDateInstant">発行予定額  80,000百万円</jpcrp_cor:PlannedAmountOfIssueOrLimitOnOutstandingBalanceCoverPageTextBlock>
+  <jpcrp_cor:MattersSpecificToStabilizingOperationCoverPageTextBlock contextRef="FilingDateInstant">該当事項はありません。</jpcrp_cor:MattersSpecificToStabilizingOperationCoverPageTextBlock>
+  <jpcrp_cor:PlaceForPublicInspectionCoverPageTextBlock contextRef="FilingDateInstant">Ｈ株式会社大阪支店&lt;br/&gt;（大阪市中央区○○一丁目１番１号）&lt;br/&gt;株式会社東京証券取引所&lt;br/&gt;（東京都中央区日本橋兜町２番１号）&lt;br/&gt;</jpcrp_cor:PlaceForPublicInspectionCoverPageTextBlock>
+  <jpdei_cor:EDINETCodeDEI contextRef="FilingDateInstant">X99008</jpdei_cor:EDINETCodeDEI>
+  <jpdei_cor:FundCodeDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:SecurityCodeDEI contextRef="FilingDateInstant">11180</jpdei_cor:SecurityCodeDEI>
+  <jpdei_cor:FilerNameInJapaneseDEI contextRef="FilingDateInstant">Ｈ株式会社</jpdei_cor:FilerNameInJapaneseDEI>
+  <jpdei_cor:FilerNameInEnglishDEI contextRef="FilingDateInstant">H Corporation</jpdei_cor:FilerNameInEnglishDEI>
+  <jpdei_cor:FundNameInJapaneseDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:FundNameInEnglishDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CabinetOfficeOrdinanceDEI contextRef="FilingDateInstant">企業内容等の開示に関する内閣府令</jpdei_cor:CabinetOfficeOrdinanceDEI>
+  <jpdei_cor:DocumentTypeDEI contextRef="FilingDateInstant">第十一号様式</jpdei_cor:DocumentTypeDEI>
+  <jpdei_cor:AccountingStandardsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:WhetherConsolidatedFinancialStatementsArePreparedDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentPeriodEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:TypeOfCurrentPeriodDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentFiscalYearEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:PreviousFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ComparativePeriodEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:PreviousFiscalYearEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:NextFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:AmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:AmendmentFlagDEI>
+  <jpdei_cor:IdentificationOfDocumentSubjectToAmendmentDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ReportAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:ReportAmendmentFlagDEI>
+  <jpdei_cor:XBRLAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:XBRLAmendmentFlagDEI>
+  <jpcrp_cor:NewIssuanceOfCorporateBondsTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;１【新規発行社債】&lt;/h3&gt;
+&lt;div class="h3"&gt;
+&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  未定&lt;/p&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpcrp_cor:NewIssuanceOfCorporateBondsTextBlock>
+  <jpcrp_cor:UnderwritingOfBondsAndAppointmentOfBondAdministratorTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;２【社債の引受け及び社債管理の委託】&lt;/h3&gt;
+&lt;div class="h3"&gt;
+&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  未定&lt;/p&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpcrp_cor:UnderwritingOfBondsAndAppointmentOfBondAdministratorTextBlock>
+  <jpcrp_cor:AmountOfNetProceedsFromNewIssuanceTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（１）【新規発行による手取金の額】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 36.0pt; line-height: 13.5pt"&gt;  未定&lt;/p&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpcrp_cor:AmountOfNetProceedsFromNewIssuanceTextBlock>
+  <jpcrp_cor:UseOfNetProceedsTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（２）【手取金の使途】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 36.0pt; line-height: 13.5pt"&gt;  設備資金、○○○○○○、………………………………………………………に充当する予定であります。&lt;/p&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpcrp_cor:UseOfNetProceedsTextBlock>
+  <jpcrp_cor:ParticularsOfSecondaryDistributionTextBlock contextRef="FilingDateInstant">
+&lt;h2&gt;第２【売出要項】&lt;/h2&gt;
+&lt;div&gt;
+&lt;br/&gt;&lt;p style="margin-left: 9.0pt; line-height: 13.5pt"&gt;  該当事項はありません。&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpcrp_cor:ParticularsOfSecondaryDistributionTextBlock>
+  <jpcrp_cor:OtherInformationSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;h2&gt;第３【その他の記載事項】&lt;/h2&gt;
+&lt;div&gt;
+&lt;br/&gt;&lt;p style="margin-left: 9.0pt; line-height: 13.5pt"&gt;  該当事項はありません。&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpcrp_cor:OtherInformationSecurityInformationTextBlock>
+  <jpcrp_cor:AnnualSecuritiesReportAndAttachedDocumentsReferenceDocumentsTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;１【有価証券報告書及びその添付書類】&lt;/h3&gt;
+&lt;div class="h3"&gt;
+&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  事業年度  第100期（自  令和７年４月１日  至  令和８年３月31日）  令和８年６月28日関東財務局長に提出&lt;/p&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpcrp_cor:AnnualSecuritiesReportAndAttachedDocumentsReferenceDocumentsTextBlock>
+  <jpcrp_cor:ExtraordinarySecuritiesReportReferenceDocumentsTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;２【臨時報告書】&lt;/h3&gt;
+&lt;div class="h3"&gt;
+&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  １の有価証券報告書提出後、本発行登録書提出日（令和８年７月12日）までに、金融商品取引法第24条の５第４項及び企業内容等の開示に関する内閣府令第19条第２項第９号の２の規定に基づく臨時報告書を令和８年６月28日に関東財務局長に提出&lt;/p&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpcrp_cor:ExtraordinarySecuritiesReportReferenceDocumentsTextBlock>
+  <jpcrp_cor:SupplementaryInformationAboutReferenceDocumentsTextBlock contextRef="FilingDateInstant">
+&lt;h2&gt;第２【参照書類の補完情報】&lt;/h2&gt;
+&lt;div&gt;
+&lt;br/&gt;&lt;p style="margin-left: 9.0pt; line-height: 13.5pt"&gt;  上記に掲げた参照書類としての有価証券報告書に記載された「事業等のリスク」について、当該有価証券報告書の提出日以後本発行登録書提出日（令和８年７月12日）までの間において生じた変更その他の事由はありません。&lt;/p&gt;&lt;p style="margin-left: 9.0pt; line-height: 13.5pt"&gt;  また、当該有価証券報告書には将来に関する事項が記載されておりますが、当該事項は本発行登録書提出日現在においてもその判断に変更はなく、新たに記載する将来に関する事項もありません。&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpcrp_cor:SupplementaryInformationAboutReferenceDocumentsTextBlock>
+  <jpcrp_cor:PlaceForPublicInspectionOfReferenceDocumentsTextBlock contextRef="FilingDateInstant">
+&lt;h2&gt;第３【参照書類を縦覧に供している場所】&lt;/h2&gt;
+&lt;div&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  Ｈ株式会社  本店
+&lt;/p&gt;&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  （東京都千代田区霞が関三丁目２番１号）
+&lt;/p&gt;&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  Ｈ株式会社大阪支店
+&lt;/p&gt;&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  （大阪市中央区○○一丁目１番１号）
+&lt;/p&gt;&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  株式会社東京証券取引所
+&lt;/p&gt;&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  （東京都中央区日本橋兜町２番１号）
+&lt;/p&gt;
+&lt;/div&gt;
+</jpcrp_cor:PlaceForPublicInspectionOfReferenceDocumentsTextBlock>
+  <jpcrp_cor:InformationAboutGuaranteeCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;h1&gt;第三部【保証会社等の情報】&lt;/h1&gt;
+&lt;div&gt;
+&lt;br/&gt;&lt;p style="margin-left: 9.0pt"&gt;  該当事項はありません。&lt;/p&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpcrp_cor:InformationAboutGuaranteeCompanyEtcTextBlock>
+</xbrli:xbrl>

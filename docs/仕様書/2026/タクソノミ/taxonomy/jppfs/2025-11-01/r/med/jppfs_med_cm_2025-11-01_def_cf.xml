@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_med_StatementOfCashFlows-ListOfAccounts" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_med_StatementOfCashFlows-ListOfAccounts"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_med_StatementOfCashFlows-ListOfAccounts">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SubtotalOpeCF" xlink:label="SubtotalOpeCF"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PrimaryOperatingIncomeOpeCFMED" xlink:label="PrimaryOperatingIncomeOpeCFMED"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="PrimaryOperatingIncomeOpeCFMED" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PrimaryOperatingExpenditureOpeCFMED" xlink:label="PrimaryOperatingExpenditureOpeCFMED"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="PrimaryOperatingExpenditureOpeCFMED" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncidentalOperatingIncomeOpeCFMED" xlink:label="IncidentalOperatingIncomeOpeCFMED"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="IncidentalOperatingIncomeOpeCFMED" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncidentalOperatingExpenditureOpeCFMED" xlink:label="IncidentalOperatingExpenditureOpeCFMED"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="IncidentalOperatingExpenditureOpeCFMED" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitMakingOperatingIncomeOpeCFMED" xlink:label="ProfitMakingOperatingIncomeOpeCFMED"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="ProfitMakingOperatingIncomeOpeCFMED" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitMakingOperatingExpenditureOpeCFMED" xlink:label="ProfitMakingOperatingExpenditureOpeCFMED"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="ProfitMakingOperatingExpenditureOpeCFMED" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DecreaseIncreaseInOperatingReceivablesOpeCFMED" xlink:label="DecreaseIncreaseInOperatingReceivablesOpeCFMED"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="SubtotalOpeCF" xlink:to="DecreaseIncreaseInOperatingReceivablesOpeCFMED" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfCashFlowsLineItems" xlink:label="StatementOfCashFlowsLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInOperatingActivitiesAbstractMED" xlink:label="NetCashProvidedByUsedInOperatingActivitiesAbstractMED"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsLineItems" xlink:to="NetCashProvidedByUsedInOperatingActivitiesAbstractMED" order="1.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInOperatingActivitiesAbstractMED" xlink:to="SubtotalOpeCF" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInOperatingActivitiesMED" xlink:label="NetCashProvidedByUsedInOperatingActivitiesMED"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInOperatingActivitiesAbstractMED" xlink:to="NetCashProvidedByUsedInOperatingActivitiesMED" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:label="NetCashProvidedByUsedInInvestmentActivitiesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsLineItems" xlink:to="NetCashProvidedByUsedInInvestmentActivitiesAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProceedsFromFacilitiesSubsidiesInvCFMED" xlink:label="ProceedsFromFacilitiesSubsidiesInvCFMED"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NetCashProvidedByUsedInInvestmentActivitiesAbstract" xlink:to="ProceedsFromFacilitiesSubsidiesInvCFMED" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInFinancingActivitiesAbstract" xlink:label="NetCashProvidedByUsedInFinancingActivitiesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsLineItems" xlink:to="NetCashProvidedByUsedInFinancingActivitiesAbstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfCashFlowsAbstract" xlink:label="StatementOfCashFlowsAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfCashFlowsTable" xlink:label="StatementOfCashFlowsTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsAbstract" xlink:to="StatementOfCashFlowsTable" order="1.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfCashFlowsAbstract" xlink:to="StatementOfCashFlowsLineItems" order="2.0"/>
+  </link:definitionLink>
+</link:linkbase>

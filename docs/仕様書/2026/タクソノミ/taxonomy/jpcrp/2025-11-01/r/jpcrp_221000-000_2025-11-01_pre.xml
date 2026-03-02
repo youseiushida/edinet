@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_ShareholdingByShareholderCategory" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_ShareholdingByShareholderCategory"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_ShareholdingByShareholderCategory">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShareholdingByShareholderCategoryHeading" xlink:label="ShareholdingByShareholderCategoryHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShareholdingByShareholderCategoryTable" xlink:label="ShareholdingByShareholderCategoryTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryHeading" xlink:to="ShareholdingByShareholderCategoryTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassesOfSharesAxis" xlink:label="ClassesOfSharesAxis"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryTable" xlink:to="ClassesOfSharesAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalClassesOfSharesMember" xlink:label="TotalClassesOfSharesMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ClassesOfSharesAxis" xlink:to="TotalClassesOfSharesMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OrdinaryShareMember" xlink:label="OrdinaryShareMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalClassesOfSharesMember" xlink:to="OrdinaryShareMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassAPreferredSharesMember" xlink:label="ClassAPreferredSharesMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalClassesOfSharesMember" xlink:to="ClassAPreferredSharesMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassBPreferredSharesMember" xlink:label="ClassBPreferredSharesMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalClassesOfSharesMember" xlink:to="ClassBPreferredSharesMember" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassOnePreferredSharesMember" xlink:label="ClassOnePreferredSharesMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalClassesOfSharesMember" xlink:to="ClassOnePreferredSharesMember" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassTwoPreferredSharesMember" xlink:label="ClassTwoPreferredSharesMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalClassesOfSharesMember" xlink:to="ClassTwoPreferredSharesMember" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassASharesMember" xlink:label="ClassASharesMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalClassesOfSharesMember" xlink:to="ClassASharesMember" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShareholdingByShareholderCategoryLineItems" xlink:label="ShareholdingByShareholderCategoryLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryHeading" xlink:to="ShareholdingByShareholderCategoryLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesConstitutingOneUnit" xlink:label="NumberOfSharesConstitutingOneUnit"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfSharesConstitutingOneUnit" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfShareholdersNationalAndLocalGovernments" xlink:label="NumberOfShareholdersNationalAndLocalGovernments"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfShareholdersNationalAndLocalGovernments" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfShareholdersFinancialInstitutions" xlink:label="NumberOfShareholdersFinancialInstitutions"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfShareholdersFinancialInstitutions" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfShareholdersFinancialServiceProviders" xlink:label="NumberOfShareholdersFinancialServiceProviders"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfShareholdersFinancialServiceProviders" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfShareholdersOtherCorporations" xlink:label="NumberOfShareholdersOtherCorporations"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfShareholdersOtherCorporations" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfShareholdersForeignInvestorsOtherThanIndividuals" xlink:label="NumberOfShareholdersForeignInvestorsOtherThanIndividuals"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfShareholdersForeignInvestorsOtherThanIndividuals" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfShareholdersForeignIndividualInvestors" xlink:label="NumberOfShareholdersForeignIndividualInvestors"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfShareholdersForeignIndividualInvestors" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfShareholdersIndividualsAndOthers" xlink:label="NumberOfShareholdersIndividualsAndOthers"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfShareholdersIndividualsAndOthers" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfShareholdersTotal" xlink:label="NumberOfShareholdersTotal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfShareholdersTotal" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldNumberOfUnitsNationalAndLocalGovernments" xlink:label="NumberOfSharesHeldNumberOfUnitsNationalAndLocalGovernments"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfSharesHeldNumberOfUnitsNationalAndLocalGovernments" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldNumberOfUnitsFinancialInstitutions" xlink:label="NumberOfSharesHeldNumberOfUnitsFinancialInstitutions"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfSharesHeldNumberOfUnitsFinancialInstitutions" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldNumberOfUnitsFinancialServiceProviders" xlink:label="NumberOfSharesHeldNumberOfUnitsFinancialServiceProviders"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfSharesHeldNumberOfUnitsFinancialServiceProviders" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldNumberOfUnitsOtherCorporations" xlink:label="NumberOfSharesHeldNumberOfUnitsOtherCorporations"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfSharesHeldNumberOfUnitsOtherCorporations" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldNumberOfUnitsForeignInvestorsOtherThanIndividuals" xlink:label="NumberOfSharesHeldNumberOfUnitsForeignInvestorsOtherThanIndividuals"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfSharesHeldNumberOfUnitsForeignInvestorsOtherThanIndividuals" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldNumberOfUnitsForeignIndividualInvestors" xlink:label="NumberOfSharesHeldNumberOfUnitsForeignIndividualInvestors"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfSharesHeldNumberOfUnitsForeignIndividualInvestors" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldNumberOfUnitsIndividualsAndOthers" xlink:label="NumberOfSharesHeldNumberOfUnitsIndividualsAndOthers"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfSharesHeldNumberOfUnitsIndividualsAndOthers" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldNumberOfUnitsTotal" xlink:label="NumberOfSharesHeldNumberOfUnitsTotal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfSharesHeldNumberOfUnitsTotal" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldSharesLessThanOneUnit" xlink:label="NumberOfSharesHeldSharesLessThanOneUnit"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="NumberOfSharesHeldSharesLessThanOneUnit" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PercentageOfShareholdingsNationalAndLocalGovernments" xlink:label="PercentageOfShareholdingsNationalAndLocalGovernments"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="PercentageOfShareholdingsNationalAndLocalGovernments" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PercentageOfShareholdingsFinancialInstitutions" xlink:label="PercentageOfShareholdingsFinancialInstitutions"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="PercentageOfShareholdingsFinancialInstitutions" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PercentageOfShareholdingsFinancialServiceProviders" xlink:label="PercentageOfShareholdingsFinancialServiceProviders"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="PercentageOfShareholdingsFinancialServiceProviders" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PercentageOfShareholdingsOtherCorporations" xlink:label="PercentageOfShareholdingsOtherCorporations"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="PercentageOfShareholdingsOtherCorporations" order="22.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PercentageOfShareholdingsForeignersOtherThanIndividuals" xlink:label="PercentageOfShareholdingsForeignersOtherThanIndividuals"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="PercentageOfShareholdingsForeignersOtherThanIndividuals" order="23.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PercentageOfShareholdingsForeignIndividuals" xlink:label="PercentageOfShareholdingsForeignIndividuals"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="PercentageOfShareholdingsForeignIndividuals" order="24.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PercentageOfShareholdingsIndividualsAndOthers" xlink:label="PercentageOfShareholdingsIndividualsAndOthers"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShareholdingByShareholderCategoryLineItems" xlink:to="PercentageOfShareholdingsIndividualsAndOthers" order="25.0"/>
+  </link:presentationLink>
+</link:linkbase>

@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd http://xbrl.org/2008/label http://www.xbrl.org/2008/generic-label.xsd http://xbrl.org/2008/generic http://www.xbrl.org/2008/generic-link.xsd http://www.w3.org/1999/xlink http://www.xbrl.org/2003/xlink-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:gen="http://xbrl.org/2008/generic" xmlns:label="http://xbrl.org/2008/label">
+  <link:roleRef roleURI="http://www.xbrl.org/2008/role/label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#standard-label"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2008/role/link" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-link.xsd#standard-link-role"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2008/element-label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#element-label"/>
+  <gen:link xmlns:gen="http://xbrl.org/2008/generic" xlink:type="extended" xlink:role="http://www.xbrl.org/2008/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_HeadingsAndBlockTagsIFRS" xlink:label="src"/>
+    <label:label xmlns:label="http://xbrl.org/2008/label" xlink:type="resource" xlink:label="roleLabel" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">500000 Headings and block tags (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src" xlink:to="roleLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_StatementOfFinancialPositionIFRS-ListOfAccounts-01" xlink:label="src_2"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_2" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">511000 Statement of financial position (IFRS) (Current/Non-current)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_2" xlink:to="roleLabel_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_StatementOfFinancialPositionIFRS-ListOfAccounts-02" xlink:label="src_3"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_3" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">512000 Statement of financial position (IFRS) (Order of liquidity)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_3" xlink:to="roleLabel_3"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfFinancialPositionIFRS" xlink:label="src_4"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_4" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">513010 Consolidated statement of financial position (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_4" xlink:to="roleLabel_4"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfFinancialPositionIFRS" xlink:label="src_5"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_5" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">513010 Consolidated statement of financial position (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_5" xlink:to="roleLabel_5"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualConsolidatedStatementOfFinancialPositionIFRS" xlink:label="src_6"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_6" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">513020 Condensed semi-annual consolidated statement of financial position (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_6" xlink:to="roleLabel_6"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterlyConsolidatedStatementOfFinancialPositionIFRS" xlink:label="src_7"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_7" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">513030 Condensed quarterly consolidated statement of financial position (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_7" xlink:to="roleLabel_7"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_StatementOfFinancialPositionIFRS" xlink:label="src_8"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_8" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">513040 Statement of financial position (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_8" xlink:to="roleLabel_8"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualStatementOfFinancialPositionIFRS" xlink:label="src_9"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_9" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">513050 Condensed semi-annual statement of financial position (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_9" xlink:to="roleLabel_9"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterlyStatementOfFinancialPositionIFRS" xlink:label="src_10"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_10" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">513060 Condensed quarterly statement of financial position (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_10" xlink:to="roleLabel_10"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS" xlink:label="src_11"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_11" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">520010 Consolidated statement of comprehensive income (single statement) (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_11" xlink:to="roleLabel_11"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS" xlink:label="src_12"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_12" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">520020 Condensed semi-annual consolidated statement of comprehensive income (single statement) (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_12" xlink:to="roleLabel_12"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedYearToQuarterEndConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS" xlink:label="src_13"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_13" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">520031 Condensed year to quarter end consolidated statement of comprehensive income (single statement) (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_13" xlink:to="roleLabel_13"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterPeriodConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS" xlink:label="src_14"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_14" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">520032 Condensed quarter period consolidated statement of comprehensive income (single statement) (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_14" xlink:to="roleLabel_14"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_StatementOfComprehensiveIncomeSingleStatementIFRS" xlink:label="src_15"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_15" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">520040 Statement of comprehensive income (single statement) (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_15" xlink:to="roleLabel_15"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualStatementOfComprehensiveIncomeSingleStatementIFRS" xlink:label="src_16"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_16" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">520050 Condensed semi-annual statement of comprehensive income (single statement) (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_16" xlink:to="roleLabel_16"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedYearToQuarterEndStatementOfComprehensiveIncomeSingleStatementIFRS" xlink:label="src_17"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_17" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">520061 Condensed year to quarter end statement of comprehensive income (single statement) (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_17" xlink:to="roleLabel_17"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterPeriodStatementOfComprehensiveIncomeSingleStatementIFRS" xlink:label="src_18"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_18" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">520062 Condensed quarter period statement of comprehensive income (single statement) (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_18" xlink:to="roleLabel_18"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_StatementOfProfitOrLossIFRS-ListOfAccounts" xlink:label="src_19"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_19" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">521000 Statement of profit or loss (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_19" xlink:to="roleLabel_19"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfProfitOrLossIFRS" xlink:label="src_20"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_20" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">521010 Consolidated statement of profit or loss (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_20" xlink:to="roleLabel_20"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfProfitOrLossIFRS" xlink:label="src_21"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_21" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">521010 Consolidated statement of profit or loss (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_21" xlink:to="roleLabel_21"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualConsolidatedStatementOfProfitOrLossIFRS" xlink:label="src_22"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_22" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">521020 Condensed semi-annual consolidated statement of profit or loss (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_22" xlink:to="roleLabel_22"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedYearToQuarterEndConsolidatedStatementOfProfitOrLossIFRS" xlink:label="src_23"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_23" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">521031 Condensed year to quarter end consolidated statement of profit or loss (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_23" xlink:to="roleLabel_23"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterPeriodConsolidatedStatementOfProfitOrLossIFRS" xlink:label="src_24"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_24" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">521032 Condensed quarter period consolidated statement of profit or loss (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_24" xlink:to="roleLabel_24"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_StatementOfProfitOrLossIFRS" xlink:label="src_25"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_25" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">521040 Statement of profit or loss (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_25" xlink:to="roleLabel_25"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualStatementOfProfitOrLossIFRS" xlink:label="src_26"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_26" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">521050 Condensed semi-annual statement of profit or loss (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_26" xlink:to="roleLabel_26"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedYearToQuarterEndStatementOfProfitOrLossIFRS" xlink:label="src_27"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_27" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">521061 Condensed year to quarter end statement of profit or loss (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_27" xlink:to="roleLabel_27"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterPeriodStatementOfProfitOrLossIFRS" xlink:label="src_28"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_28" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">521062 Condensed quarter period statement of profit or loss (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_28" xlink:to="roleLabel_28"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_StatementOfComprehensiveIncomeIFRS-ListOfAccounts" xlink:label="src_29"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_29" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">522000 Statement of comprehensive income (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_29" xlink:to="roleLabel_29"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfComprehensiveIncomeIFRS" xlink:label="src_30"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_30" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">522010 Consolidated statement of comprehensive income (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_30" xlink:to="roleLabel_30"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfComprehensiveIncomeIFRS" xlink:label="src_31"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_31" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">522010 Consolidated statement of comprehensive income (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_31" xlink:to="roleLabel_31"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualConsolidatedStatementOfComprehensiveIncomeIFRS" xlink:label="src_32"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_32" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">522020 Condensed semi-annual consolidated statement of comprehensive income (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_32" xlink:to="roleLabel_32"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedYearToQuarterEndConsolidatedStatementOfComprehensiveIncomeIFRS" xlink:label="src_33"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_33" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">522031 Condensed year to quarter end consolidated statement of comprehensive income (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_33" xlink:to="roleLabel_33"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterPeriodConsolidatedStatementOfComprehensiveIncomeIFRS" xlink:label="src_34"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_34" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">522032 Condensed quarter period consolidated statement of comprehensive income (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_34" xlink:to="roleLabel_34"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_StatementOfComprehensiveIncomeIFRS" xlink:label="src_35"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_35" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">522040 Statement of comprehensive income (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_35" xlink:to="roleLabel_35"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualStatementOfComprehensiveIncomeIFRS" xlink:label="src_36"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_36" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">522050 Condensed semi-annual statement of comprehensive income (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_36" xlink:to="roleLabel_36"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedYearToQuarterEndStatementOfComprehensiveIncomeIFRS" xlink:label="src_37"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_37" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">522061 Condensed year to quarter end statement of comprehensive income (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_37" xlink:to="roleLabel_37"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterPeriodStatementOfComprehensiveIncomeIFRS" xlink:label="src_38"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_38" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">522062 Condensed quarter period statement of comprehensive income (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_38" xlink:to="roleLabel_38"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_StatementOfChangesInEquityIFRS-ListOfAccounts" xlink:label="src_39"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_39" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">530000 Statement of changes in equity (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_39" xlink:to="roleLabel_39"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfChangesInEquityIFRS" xlink:label="src_40"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_40" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">530010 Consolidated statement of changes in equity (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_40" xlink:to="roleLabel_40"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfChangesInEquityIFRS" xlink:label="src_41"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_41" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">530010 Consolidated statement of changes in equity (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_41" xlink:to="roleLabel_41"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualConsolidatedStatementOfChangesInEquityIFRS" xlink:label="src_42"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_42" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">530020 Condensed semi-annual consolidated statement of changes in equity (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_42" xlink:to="roleLabel_42"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterlyConsolidatedStatementOfChangesInEquityIFRS" xlink:label="src_43"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_43" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">530030 Condensed quarterly consolidated statement of changes in equity (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_43" xlink:to="roleLabel_43"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_StatementOfChangesInEquityIFRS" xlink:label="src_44"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_44" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">530040 Statement of changes in equity (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_44" xlink:to="roleLabel_44"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualStatementOfChangesInEquityIFRS" xlink:label="src_45"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_45" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">530050 Condensed semi-annual statement of changes in equity (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_45" xlink:to="roleLabel_45"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterlyStatementOfChangesInEquityIFRS" xlink:label="src_46"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_46" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">530060 Condensed quarterly statement of changes in equity (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_46" xlink:to="roleLabel_46"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_StatementOfCashFlowsIFRS-ListOfAccounts" xlink:label="src_47"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_47" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">540000 Statement of cash flows (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_47" xlink:to="roleLabel_47"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfCashFlowsIFRS" xlink:label="src_48"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_48" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">540010 Consolidated statement of cash flows (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_48" xlink:to="roleLabel_48"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfCashFlowsIFRS" xlink:label="src_49"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_49" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">540010 Consolidated statement of cash flows (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_49" xlink:to="roleLabel_49"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualConsolidatedStatementOfCashFlowsIFRS" xlink:label="src_50"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_50" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">540020 Condensed semi-annual consolidated statement of cash flows (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_50" xlink:to="roleLabel_50"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterlyConsolidatedStatementOfCashFlowsIFRS" xlink:label="src_51"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_51" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">540030 Condensed quarterly consolidated statement of cash flows (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_51" xlink:to="roleLabel_51"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_StatementOfCashFlowsIFRS" xlink:label="src_52"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_52" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">540040 Statement of cash flows (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_52" xlink:to="roleLabel_52"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedSemiAnnualStatementOfCashFlowsIFRS" xlink:label="src_53"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_53" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">540050 Condensed semi-annual statement of cash flows (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_53" xlink:to="roleLabel_53"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_CondensedQuarterlyStatementOfCashFlowsIFRS" xlink:label="src_54"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_54" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">540060 Condensed quarterly statement of cash flows (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_54" xlink:to="roleLabel_54"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_SegmentInformationIFRS-ListOfAccounts-01" xlink:label="src_55"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_55" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610000a Segment information (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_55" xlink:to="roleLabel_55"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_SegmentInformationIFRS-ListOfAccounts-02" xlink:label="src_56"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_56" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610000b Segment information (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_56" xlink:to="roleLabel_56"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_SegmentInformationIFRS-ListOfAccounts-03" xlink:label="src_57"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_57" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610000c Segment information (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_57" xlink:to="roleLabel_57"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-01" xlink:label="src_58"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_58" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610010a Notes - Segment information, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_58" xlink:to="roleLabel_58"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-01" xlink:label="src_59"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_59" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610010a Notes - Segment information, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_59" xlink:to="roleLabel_59"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-02" xlink:label="src_60"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_60" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610010b Notes - Segment information, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_60" xlink:to="roleLabel_60"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-02" xlink:label="src_61"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_61" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610010b Notes - Segment information, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_61" xlink:to="roleLabel_61"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-03" xlink:label="src_62"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_62" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610010c Notes - Segment information, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_62" xlink:to="roleLabel_62"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-03" xlink:label="src_63"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_63" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610010c Notes - Segment information, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_63" xlink:to="roleLabel_63"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedSemiAnnualConsolidatedFinancialStatementsIFRS-01" xlink:label="src_64"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_64" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610020a Notes - Segment information, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_64" xlink:to="roleLabel_64"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedSemiAnnualConsolidatedFinancialStatementsIFRS-02" xlink:label="src_65"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_65" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610020b Notes - Segment information, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_65" xlink:to="roleLabel_65"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedSemiAnnualConsolidatedFinancialStatementsIFRS-03" xlink:label="src_66"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_66" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610020c Notes - Segment information, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_66" xlink:to="roleLabel_66"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedQuarterlyConsolidatedFinancialStatementsIFRS-01" xlink:label="src_67"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_67" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610030a Notes - Segment information, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_67" xlink:to="roleLabel_67"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedQuarterlyConsolidatedFinancialStatementsIFRS-02" xlink:label="src_68"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_68" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610030b Notes - Segment information, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_68" xlink:to="roleLabel_68"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedQuarterlyConsolidatedFinancialStatementsIFRS-03" xlink:label="src_69"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_69" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610030c Notes - Segment information, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_69" xlink:to="roleLabel_69"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationFinancialStatementsIFRS-01" xlink:label="src_70"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_70" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610040a Notes - Segment information, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_70" xlink:to="roleLabel_70"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationFinancialStatementsIFRS-02" xlink:label="src_71"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_71" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610040b Notes - Segment information, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_71" xlink:to="roleLabel_71"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationFinancialStatementsIFRS-03" xlink:label="src_72"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_72" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610040c Notes - Segment information, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_72" xlink:to="roleLabel_72"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedSemiAnnualFinancialStatementsIFRS-01" xlink:label="src_73"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_73" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610050a Notes - Segment information, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_73" xlink:to="roleLabel_73"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedSemiAnnualFinancialStatementsIFRS-02" xlink:label="src_74"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_74" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610050b Notes - Segment information, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_74" xlink:to="roleLabel_74"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedSemiAnnualFinancialStatementsIFRS-03" xlink:label="src_75"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_75" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610050c Notes - Segment information, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_75" xlink:to="roleLabel_75"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedQuarterlyFinancialStatementsIFRS-01" xlink:label="src_76"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_76" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610060a Notes - Segment information, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_76" xlink:to="roleLabel_76"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedQuarterlyFinancialStatementsIFRS-02" xlink:label="src_77"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_77" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610060b Notes - Segment information, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_77" xlink:to="roleLabel_77"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSegmentInformationCondensedQuarterlyFinancialStatementsIFRS-03" xlink:label="src_78"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_78" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">610060c Notes - Segment information, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_78" xlink:to="roleLabel_78"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ComponentsOfInventoriesIFRS-ListOfAccounts" xlink:label="src_79"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_79" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">621000 Components of inventories (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_79" xlink:to="roleLabel_79"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesInventoriesConsolidatedFinancialStatementsIFRS" xlink:label="src_80"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_80" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">621010 Notes - Inventories, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_80" xlink:to="roleLabel_80"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesInventoriesConsolidatedFinancialStatementsIFRS" xlink:label="src_81"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_81" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">621010 Notes - Inventories, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_81" xlink:to="roleLabel_81"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesInventoriesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_82"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_82" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">621020 Notes - Inventories, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_82" xlink:to="roleLabel_82"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesInventoriesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_83"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_83" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">621030 Notes - Inventories, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_83" xlink:to="roleLabel_83"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesInventoriesFinancialStatementsIFRS" xlink:label="src_84"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_84" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">621040 Notes - Inventories, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_84" xlink:to="roleLabel_84"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesInventoriesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_85"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_85" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">621050 Notes - Inventories, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_85" xlink:to="roleLabel_85"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesInventoriesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_86"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_86" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">621060 Notes - Inventories, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_86" xlink:to="roleLabel_86"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ComponentsOfPropertyPlantAndEquipmentIFRS-ListOfAccounts" xlink:label="src_87"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_87" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">625000 Components of property, plant and equipment (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_87" xlink:to="roleLabel_87"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRS" xlink:label="src_88"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_88" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">625010 Notes - Property, plant and equipment, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_88" xlink:to="roleLabel_88"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRS" xlink:label="src_89"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_89" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">625010 Notes - Property, plant and equipment, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_89" xlink:to="roleLabel_89"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesPropertyPlantAndEquipmentCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_90"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_90" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">625020 Notes - Property, plant and equipment, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_90" xlink:to="roleLabel_90"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesPropertyPlantAndEquipmentCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_91"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_91" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">625030 Notes - Property, plant and equipment, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_91" xlink:to="roleLabel_91"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesPropertyPlantAndEquipmentFinancialStatementsIFRS" xlink:label="src_92"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_92" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">625040 Notes - Property, plant and equipment, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_92" xlink:to="roleLabel_92"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesPropertyPlantAndEquipmentCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_93"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_93" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">625050 Notes - Property, plant and equipment, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_93" xlink:to="roleLabel_93"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesPropertyPlantAndEquipmentCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_94"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_94" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">625060 Notes - Property, plant and equipment, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_94" xlink:to="roleLabel_94"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ComponentsOfGoodwillAndIntangibleAssetsIFRS-ListOfAccounts" xlink:label="src_95"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_95" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626000 Components of goodwill and intangible assets (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_95" xlink:to="roleLabel_95"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_OtherElementsForComponentsOfGoodwillAndIntangibleAssetsIFRS" xlink:label="src_96"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_96" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626001 Other elements for components of goodwill and intangible assets (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_96" xlink:to="roleLabel_96"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillAndIntangibleAssetsConsolidatedFinancialStatementsIFRS" xlink:label="src_97"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_97" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626010 Notes - Goodwill and intangible assets, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_97" xlink:to="roleLabel_97"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesGoodwillAndIntangibleAssetsConsolidatedFinancialStatementsIFRS" xlink:label="src_98"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_98" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626010 Notes - Goodwill and intangible assets, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_98" xlink:to="roleLabel_98"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillAndIntangibleAssetsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_99"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_99" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626020 Notes - Goodwill and intangible assets, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_99" xlink:to="roleLabel_99"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillAndIntangibleAssetsCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_100"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_100" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626030 Notes - Goodwill and intangible assets, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_100" xlink:to="roleLabel_100"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillAndIntangibleAssetsFinancialStatementsIFRS" xlink:label="src_101"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_101" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626040 Notes - Goodwill and intangible assets, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_101" xlink:to="roleLabel_101"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillAndIntangibleAssetsCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_102"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_102" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626050 Notes - Goodwill and intangible assets, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_102" xlink:to="roleLabel_102"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillAndIntangibleAssetsCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_103"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_103" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626060 Notes - Goodwill and intangible assets, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_103" xlink:to="roleLabel_103"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillConsolidatedFinancialStatementsIFRS" xlink:label="src_104"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_104" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626110 Notes - Goodwill, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_104" xlink:to="roleLabel_104"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_105"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_105" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626120 Notes - Goodwill, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_105" xlink:to="roleLabel_105"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_106"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_106" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626130 Notes - Goodwill, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_106" xlink:to="roleLabel_106"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillFinancialStatementsIFRS" xlink:label="src_107"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_107" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626140 Notes - Goodwill, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_107" xlink:to="roleLabel_107"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_108"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_108" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626150 Notes - Goodwill, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_108" xlink:to="roleLabel_108"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGoodwillCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_109"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_109" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626160 Notes - Goodwill, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_109" xlink:to="roleLabel_109"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesIntangibleAssetsConsolidatedFinancialStatementsIFRS" xlink:label="src_110"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_110" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626210 Notes - Intangible assets, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_110" xlink:to="roleLabel_110"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesIntangibleAssetsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_111"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_111" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626220 Notes - Intangible assets, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_111" xlink:to="roleLabel_111"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesIntangibleAssetsCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_112"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_112" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626230 Notes - Intangible assets, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_112" xlink:to="roleLabel_112"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesIntangibleAssetsFinancialStatementsIFRS" xlink:label="src_113"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_113" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626240 Notes - Intangible assets, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_113" xlink:to="roleLabel_113"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesIntangibleAssetsCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_114"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_114" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626250 Notes - Intangible assets, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_114" xlink:to="roleLabel_114"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesIntangibleAssetsCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_115"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_115" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">626260 Notes - Intangible assets, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_115" xlink:to="roleLabel_115"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ComponentsOfOperatingExpensesIFRS-ListOfAccounts" xlink:label="src_116"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_116" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650000 Components of operating expenses (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_116" xlink:to="roleLabel_116"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_OtherElementsForComponentsOfOperatingExpensesIFRS" xlink:label="src_117"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_117" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650001 Other elements for components of operating expenses (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_117" xlink:to="roleLabel_117"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOperatingExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_118"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_118" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650010 Notes - Operating expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_118" xlink:to="roleLabel_118"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOperatingExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_119"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_119" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650020 Notes - Operating expenses, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_119" xlink:to="roleLabel_119"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOperatingExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_120"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_120" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650030 Notes - Operating expenses, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_120" xlink:to="roleLabel_120"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOperatingExpensesFinancialStatementsIFRS" xlink:label="src_121"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_121" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650040 Notes - Operating expenses, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_121" xlink:to="roleLabel_121"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOperatingExpensesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_122"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_122" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650050 Notes - Operating expenses, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_122" xlink:to="roleLabel_122"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOperatingExpensesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_123"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_123" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650060 Notes - Operating expenses, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_123" xlink:to="roleLabel_123"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_124"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_124" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650110 Notes - Cost of sales and selling, general and administrative expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_124" xlink:to="roleLabel_124"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_125"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_125" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650120 Notes - Cost of sales and selling, general and administrative expenses, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_125" xlink:to="roleLabel_125"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_126"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_126" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650130 Notes - Cost of sales and selling, general and administrative expenses, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_126" xlink:to="roleLabel_126"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesFinancialStatementsIFRS" xlink:label="src_127"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_127" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650140 Notes - Cost of sales and selling, general and administrative expenses, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_127" xlink:to="roleLabel_127"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_128"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_128" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650150 Notes - Cost of sales and selling, general and administrative expenses, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_128" xlink:to="roleLabel_128"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_129"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_129" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650160 Notes - Cost of sales and selling, general and administrative expenses, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_129" xlink:to="roleLabel_129"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExpensesByNatureConsolidatedFinancialStatementsIFRS" xlink:label="src_130"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_130" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650210 Notes - Expenses by nature, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_130" xlink:to="roleLabel_130"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExpensesByNatureCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_131"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_131" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650220 Notes - Expenses by nature, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_131" xlink:to="roleLabel_131"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExpensesByNatureCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_132"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_132" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650230 Notes - Expenses by nature, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_132" xlink:to="roleLabel_132"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExpensesByNatureFinancialStatementsIFRS" xlink:label="src_133"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_133" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650240 Notes - Expenses by nature, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_133" xlink:to="roleLabel_133"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExpensesByNatureCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_134"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_134" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650250 Notes - Expenses by nature, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_134" xlink:to="roleLabel_134"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExpensesByNatureCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_135"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_135" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">650260 Notes - Expenses by nature, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_135" xlink:to="roleLabel_135"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ComponentsOfCostOfSalesIFRS-ListOfAccounts" xlink:label="src_136"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_136" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">651000 Components of cost of sales (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_136" xlink:to="roleLabel_136"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesConsolidatedFinancialStatementsIFRS" xlink:label="src_137"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_137" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">651010 Notes - Cost of sales, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_137" xlink:to="roleLabel_137"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_138"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_138" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">651020 Notes - Cost of sales, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_138" xlink:to="roleLabel_138"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_139"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_139" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">651030 Notes - Cost of sales, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_139" xlink:to="roleLabel_139"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesFinancialStatementsIFRS" xlink:label="src_140"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_140" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">651040 Notes - Cost of sales, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_140" xlink:to="roleLabel_140"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_141"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_141" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">651050 Notes - Cost of sales, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_141" xlink:to="roleLabel_141"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesCostOfSalesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_142"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_142" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">651060 Notes - Cost of sales, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_142" xlink:to="roleLabel_142"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ComponentsOfSellingGeneralAndAdministrativeExpensesIFRS-ListOfAccounts" xlink:label="src_143"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_143" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652000 Components of selling, general and administrative expenses (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_143" xlink:to="roleLabel_143"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesSellingGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_144"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_144" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652010 Notes - Selling, general and administrative expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_144" xlink:to="roleLabel_144"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_145"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_145" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652010 Notes - Selling, general and administrative expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_145" xlink:to="roleLabel_145"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_146"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_146" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652020 Notes - Selling, general and administrative expenses, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_146" xlink:to="roleLabel_146"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingGeneralAndAdministrativeExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_147"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_147" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652030 Notes - Selling, general and administrative expenses, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_147" xlink:to="roleLabel_147"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingGeneralAndAdministrativeExpensesFinancialStatementsIFRS" xlink:label="src_148"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_148" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652040 Notes - Selling, general and administrative expenses, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_148" xlink:to="roleLabel_148"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_149"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_149" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652050 Notes - Selling, general and administrative expenses, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_149" xlink:to="roleLabel_149"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingGeneralAndAdministrativeExpensesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_150"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_150" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652060 Notes - Selling, general and administrative expenses, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_150" xlink:to="roleLabel_150"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_151"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_151" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652110 Notes - Selling expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_151" xlink:to="roleLabel_151"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_152"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_152" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652120 Notes - Selling expenses, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_152" xlink:to="roleLabel_152"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_153"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_153" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652130 Notes - Selling expenses, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_153" xlink:to="roleLabel_153"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingExpensesFinancialStatementsIFRS" xlink:label="src_154"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_154" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652140 Notes - Selling expenses, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_154" xlink:to="roleLabel_154"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingExpensesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_155"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_155" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652150 Notes - Selling expenses, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_155" xlink:to="roleLabel_155"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesSellingExpensesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_156"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_156" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652160 Notes - Selling expenses, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_156" xlink:to="roleLabel_156"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_157"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_157" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652210 Notes - General and administrative expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_157" xlink:to="roleLabel_157"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGeneralAndAdministrativeExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_158"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_158" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652220 Notes - General and administrative expenses, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_158" xlink:to="roleLabel_158"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGeneralAndAdministrativeExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_159"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_159" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652230 Notes - General and administrative expenses, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_159" xlink:to="roleLabel_159"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGeneralAndAdministrativeExpensesFinancialStatementsIFRS" xlink:label="src_160"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_160" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652240 Notes - General and administrative expenses, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_160" xlink:to="roleLabel_160"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGeneralAndAdministrativeExpensesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_161"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_161" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652250 Notes - General and administrative expenses, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_161" xlink:to="roleLabel_161"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesGeneralAndAdministrativeExpensesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_162"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_162" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652260 Notes - General and administrative expenses, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_162" xlink:to="roleLabel_162"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ComponentsOfOtherIncomeAndOtherExpensesIFRS-ListOfAccounts" xlink:label="src_163"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_163" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655000 Components of other income and other expenses (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_163" xlink:to="roleLabel_163"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_OtherElementsForComponentsOfOtherIncomeAndOtherExpensesIFRS" xlink:label="src_164"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_164" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655001 Other elements for components of other income and other expenses (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_164" xlink:to="roleLabel_164"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeAndOtherExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_165"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_165" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655010 Notes - Other income and other expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_165" xlink:to="roleLabel_165"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesOtherIncomeAndOtherExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_166"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_166" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655010 Notes - Other income and other expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_166" xlink:to="roleLabel_166"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeAndOtherExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_167"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_167" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655020 Notes - Other income and other expenses, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_167" xlink:to="roleLabel_167"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeAndOtherExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_168"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_168" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655030 Notes - Other income and other expenses, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_168" xlink:to="roleLabel_168"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeAndOtherExpensesFinancialStatementsIFRS" xlink:label="src_169"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_169" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655040 Notes - Other income and other expenses, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_169" xlink:to="roleLabel_169"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeAndOtherExpensesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_170"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_170" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655050 Notes - Other income and other expenses, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_170" xlink:to="roleLabel_170"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeAndOtherExpensesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_171"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_171" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655060 Notes - Other income and other expenses, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_171" xlink:to="roleLabel_171"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeConsolidatedFinancialStatementsIFRS" xlink:label="src_172"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_172" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655110 Notes - Other income, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_172" xlink:to="roleLabel_172"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_173"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_173" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655120 Notes - Other income, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_173" xlink:to="roleLabel_173"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_174"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_174" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655130 Notes - Other income, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_174" xlink:to="roleLabel_174"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeFinancialStatementsIFRS" xlink:label="src_175"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_175" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655140 Notes - Other income, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_175" xlink:to="roleLabel_175"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_176"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_176" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655150 Notes - Other income, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_176" xlink:to="roleLabel_176"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherIncomeCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_177"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_177" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655160 Notes - Other income, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_177" xlink:to="roleLabel_177"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_178"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_178" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655210 Notes - Other expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_178" xlink:to="roleLabel_178"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_179"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_179" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655220 Notes - Other expenses, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_179" xlink:to="roleLabel_179"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_180"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_180" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655230 Notes - Other expenses, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_180" xlink:to="roleLabel_180"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherExpensesFinancialStatementsIFRS" xlink:label="src_181"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_181" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655240 Notes - Other expenses, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_181" xlink:to="roleLabel_181"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherExpensesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_182"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_182" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655250 Notes - Other expenses, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_182" xlink:to="roleLabel_182"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherExpensesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_183"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_183" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655260 Notes - Other expenses, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_183" xlink:to="roleLabel_183"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ComponentsOfFinanceIncomeAndFinanceCostsIFRS-ListOfAccounts" xlink:label="src_184"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_184" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657000 Components of finance income and finance costs (IFRS)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_184" xlink:to="roleLabel_184"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRS" xlink:label="src_185"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_185" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657001 Other elements for components of finance income and finance costs (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_185" xlink:to="roleLabel_185"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRS" xlink:label="src_186"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_186" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657010 Notes - Finance income and finance costs, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_186" xlink:to="roleLabel_186"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRS" xlink:label="src_187"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_187" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657010 Notes - Finance income and finance costs, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_187" xlink:to="roleLabel_187"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeAndFinanceCostsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_188"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_188" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657020 Notes - Finance income and finance costs, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_188" xlink:to="roleLabel_188"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeAndFinanceCostsCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_189"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_189" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657030 Notes - Finance income and finance costs, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_189" xlink:to="roleLabel_189"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeAndFinanceCostsFinancialStatementsIFRS" xlink:label="src_190"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_190" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657040 Notes - Finance income and finance costs, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_190" xlink:to="roleLabel_190"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeAndFinanceCostsCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_191"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_191" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657050 Notes - Finance income and finance costs, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_191" xlink:to="roleLabel_191"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeAndFinanceCostsCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_192"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_192" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657060 Notes - Finance income and finance costs, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_192" xlink:to="roleLabel_192"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeConsolidatedFinancialStatementsIFRS" xlink:label="src_193"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_193" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657110 Notes - Finance income, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_193" xlink:to="roleLabel_193"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_194"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_194" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657120 Notes - Finance income, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_194" xlink:to="roleLabel_194"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_195"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_195" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657130 Notes - Finance income, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_195" xlink:to="roleLabel_195"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeFinancialStatementsIFRS" xlink:label="src_196"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_196" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657140 Notes - Finance income, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_196" xlink:to="roleLabel_196"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_197"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_197" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657150 Notes - Finance income, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_197" xlink:to="roleLabel_197"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceIncomeCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_198"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_198" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657160 Notes - Finance income, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_198" xlink:to="roleLabel_198"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceCostsConsolidatedFinancialStatementsIFRS" xlink:label="src_199"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_199" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657210 Notes - Finance costs, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_199" xlink:to="roleLabel_199"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceCostsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_200"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_200" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657220 Notes - Finance costs, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_200" xlink:to="roleLabel_200"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceCostsCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_201"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_201" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657230 Notes - Finance costs, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_201" xlink:to="roleLabel_201"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceCostsFinancialStatementsIFRS" xlink:label="src_202"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_202" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657240 Notes - Finance costs, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_202" xlink:to="roleLabel_202"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceCostsCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_203"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_203" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657250 Notes - Finance costs, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_203" xlink:to="roleLabel_203"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesFinanceCostsCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_204"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_204" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">657260 Notes - Finance costs, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_204" xlink:to="roleLabel_204"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_OtherElementsForComponentsOfSellingGeneralAndAdministrativeExpensesIFRS" xlink:label="src_205"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_205" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">652001 Other elements for components of selling, general and administrative expenses (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_205" xlink:to="roleLabel_205"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeAndExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_206"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_206" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656010 Notes - Other operating income and expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_206" xlink:to="roleLabel_206"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeAndExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_207"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_207" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656020 Notes - Other operating income and expenses, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_207" xlink:to="roleLabel_207"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeAndExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_208"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_208" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656030 Notes - Other operating income and expenses, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_208" xlink:to="roleLabel_208"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeAndExpensesFinancialStatementsIFRS" xlink:label="src_209"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_209" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656040 Notes - Other operating income and expenses, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_209" xlink:to="roleLabel_209"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeAndExpensesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_210"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_210" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656050 Notes - Other operating income and expenses, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_210" xlink:to="roleLabel_210"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeAndExpensesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_211"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_211" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656060 Notes - Other operating income and expenses, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_211" xlink:to="roleLabel_211"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeConsolidatedFinancialStatementsIFRS" xlink:label="src_212"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_212" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656110 Notes - Other operating income, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_212" xlink:to="roleLabel_212"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_213"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_213" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656120 Notes - Other operating income, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_213" xlink:to="roleLabel_213"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_214"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_214" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656130 Notes - Other operating income, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_214" xlink:to="roleLabel_214"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeFinancialStatementsIFRS" xlink:label="src_215"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_215" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656140 Notes - Other operating income, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_215" xlink:to="roleLabel_215"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_216"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_216" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656150 Notes - Other operating income, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_216" xlink:to="roleLabel_216"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingIncomeCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_217"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_217" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656160 Notes - Other operating income, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_217" xlink:to="roleLabel_217"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_218"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_218" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656210 Notes - Other operating expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_218" xlink:to="roleLabel_218"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_219"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_219" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656220 Notes - Other operating expenses, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_219" xlink:to="roleLabel_219"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_220"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_220" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656230 Notes - Other operating expenses, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_220" xlink:to="roleLabel_220"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingExpensesFinancialStatementsIFRS" xlink:label="src_221"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_221" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656240 Notes - Other operating expenses, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_221" xlink:to="roleLabel_221"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingExpensesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_222"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_222" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656250 Notes - Other operating expenses, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_222" xlink:to="roleLabel_222"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherOperatingExpensesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_223"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_223" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">656260 Notes - Other operating expenses, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_223" xlink:to="roleLabel_223"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExceptionalItemsConsolidatedFinancialStatementsIFRS" xlink:label="src_224"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_224" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655910 Notes - Exceptional items, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_224" xlink:to="roleLabel_224"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExceptionalItemsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_225"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_225" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655920 Notes - Exceptional items, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_225" xlink:to="roleLabel_225"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExceptionalItemsCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_226"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_226" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655930 Notes - Exceptional items, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_226" xlink:to="roleLabel_226"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExceptionalItemsFinancialStatementsIFRS" xlink:label="src_227"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_227" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655940 Notes - Exceptional items, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_227" xlink:to="roleLabel_227"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExceptionalItemsCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_228"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_228" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655950 Notes - Exceptional items, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_228" xlink:to="roleLabel_228"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesExceptionalItemsCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_229"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_229" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">655960 Notes - Exceptional items, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_229" xlink:to="roleLabel_229"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherNonOperatingIncomeAndExpensesConsolidatedFinancialStatementsIFRS" xlink:label="src_230"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_230" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">658010 Notes - Other non-operating income and expenses, Consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_230" xlink:to="roleLabel_230"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherNonOperatingIncomeAndExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" xlink:label="src_231"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_231" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">658020 Notes - Other non-operating income and expenses, Condensed semi-annual consolidated financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_231" xlink:to="roleLabel_231"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherNonOperatingIncomeAndExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" xlink:label="src_232"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_232" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">658030 Notes - Other non-operating income and expenses, Condensed quarterly consolidated financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_232" xlink:to="roleLabel_232"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherNonOperatingIncomeAndExpensesFinancialStatementsIFRS" xlink:label="src_233"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_233" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">658040 Notes - Other non-operating income and expenses, Financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_233" xlink:to="roleLabel_233"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherNonOperatingIncomeAndExpensesCondensedSemiAnnualFinancialStatementsIFRS" xlink:label="src_234"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_234" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">658050 Notes - Other non-operating income and expenses, Condensed semi-annual financial statements (IFRS)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_234" xlink:to="roleLabel_234"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_NotesOtherNonOperatingIncomeAndExpensesCondensedQuarterlyFinancialStatementsIFRS" xlink:label="src_235"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_235" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">658060 Notes - Other non-operating income and expenses, Condensed quarterly financial statements (IFRS) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_235" xlink:to="roleLabel_235"/>
+  </gen:link>
+</link:linkbase>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfChangesInEquityIFRS" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfChangesInEquityIFRS"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfChangesInEquityIFRS">
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComprehensiveIncomeIFRS" xlink:label="ComprehensiveIncomeIFRS"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossIFRS" xlink:label="ProfitLossIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ComprehensiveIncomeIFRS" xlink:to="ProfitLossIFRS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherComprehensiveIncomeIFRS" xlink:label="OtherComprehensiveIncomeIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ComprehensiveIncomeIFRS" xlink:to="OtherComprehensiveIncomeIFRS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TotalChangesInEquityIFRS" xlink:label="TotalChangesInEquityIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalChangesInEquityIFRS" xlink:to="ComprehensiveIncomeIFRS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TotalTransactionsWithOwnersIFRS" xlink:label="TotalTransactionsWithOwnersIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalChangesInEquityIFRS" xlink:to="TotalTransactionsWithOwnersIFRS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IssuanceOfNewSharesSSIFRS" xlink:label="IssuanceOfNewSharesSSIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalTransactionsWithOwnersIFRS" xlink:to="IssuanceOfNewSharesSSIFRS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PurchaseOfTreasurySharesSSIFRS" xlink:label="PurchaseOfTreasurySharesSSIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalTransactionsWithOwnersIFRS" xlink:to="PurchaseOfTreasurySharesSSIFRS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DividendsSSIFRS" xlink:label="DividendsSSIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalTransactionsWithOwnersIFRS" xlink:to="DividendsSSIFRS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ShareBasedPaymentTransactionsSSIFRS" xlink:label="ShareBasedPaymentTransactionsSSIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalTransactionsWithOwnersIFRS" xlink:to="ShareBasedPaymentTransactionsSSIFRS" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherSSIFRS" xlink:label="OtherSSIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalTransactionsWithOwnersIFRS" xlink:to="OtherSSIFRS" order="5.0" weight="1"/>
+  </link:calculationLink>
+</link:linkbase>

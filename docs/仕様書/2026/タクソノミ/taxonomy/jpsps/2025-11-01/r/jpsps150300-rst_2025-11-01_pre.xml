@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo153ShelfRegistrationStatement" xlink:type="simple" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo153ShelfRegistrationStatement"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo153ShelfRegistrationStatement">
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo153ShelfRegistrationStatementHeading" xlink:label="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo153ShelfRegistrationStatementHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo153ShelfRegistrationStatementHeading" xlink:to="CoverPageHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_SecurityInformationHeading" xlink:label="SecurityInformationHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo153ShelfRegistrationStatementHeading" xlink:to="SecurityInformationHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_ParticularsOfPublicOfferingShelfRegistrationStatementHeading" xlink:label="ParticularsOfPublicOfferingShelfRegistrationStatementHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SecurityInformationHeading" xlink:to="ParticularsOfPublicOfferingShelfRegistrationStatementHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_ShortTermInvestmentCorporationBondsShelfRegistrationStatementHeading" xlink:label="ShortTermInvestmentCorporationBondsShelfRegistrationStatementHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ParticularsOfPublicOfferingShelfRegistrationStatementHeading" xlink:to="ShortTermInvestmentCorporationBondsShelfRegistrationStatementHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_ShortTermInvestmentCorporationBondsShelfRegistrationStatementTextBlock" xlink:label="ShortTermInvestmentCorporationBondsShelfRegistrationStatementTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ShortTermInvestmentCorporationBondsShelfRegistrationStatementHeading" xlink:to="ShortTermInvestmentCorporationBondsShelfRegistrationStatementTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_OtherInformationShelfRegistrationStatementHeading" xlink:label="OtherInformationShelfRegistrationStatementHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SecurityInformationHeading" xlink:to="OtherInformationShelfRegistrationStatementHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_OtherInformationShelfRegistrationStatementTextBlock" xlink:label="OtherInformationShelfRegistrationStatementTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherInformationShelfRegistrationStatementHeading" xlink:to="OtherInformationShelfRegistrationStatementTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_ReferenceInformationHeading" xlink:label="ReferenceInformationHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo153ShelfRegistrationStatementHeading" xlink:to="ReferenceInformationHeading" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_ReferenceDocumentsHeading" xlink:label="ReferenceDocumentsHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ReferenceInformationHeading" xlink:to="ReferenceDocumentsHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_AnnualSecuritiesReportAndAttachedDocumentsHeading" xlink:label="AnnualSecuritiesReportAndAttachedDocumentsHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ReferenceDocumentsHeading" xlink:to="AnnualSecuritiesReportAndAttachedDocumentsHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_AnnualSecuritiesReportAndAttachedDocumentsTextBlock" xlink:label="AnnualSecuritiesReportAndAttachedDocumentsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="AnnualSecuritiesReportAndAttachedDocumentsHeading" xlink:to="AnnualSecuritiesReportAndAttachedDocumentsTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_SemiAnnualSecuritiesReportHeading" xlink:label="SemiAnnualSecuritiesReportHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ReferenceDocumentsHeading" xlink:to="SemiAnnualSecuritiesReportHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_SemiAnnualSecuritiesReportTextBlock" xlink:label="SemiAnnualSecuritiesReportTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SemiAnnualSecuritiesReportHeading" xlink:to="SemiAnnualSecuritiesReportTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_ExtraordinarySecuritiesReportHeading" xlink:label="ExtraordinarySecuritiesReportHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ReferenceDocumentsHeading" xlink:to="ExtraordinarySecuritiesReportHeading" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_ExtraordinarySecuritiesReportTextBlock" xlink:label="ExtraordinarySecuritiesReportTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExtraordinarySecuritiesReportHeading" xlink:to="ExtraordinarySecuritiesReportTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_AmendmentReportHeading" xlink:label="AmendmentReportHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ReferenceDocumentsHeading" xlink:to="AmendmentReportHeading" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_AmendmentReportTextBlock" xlink:label="AmendmentReportTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="AmendmentReportHeading" xlink:to="AmendmentReportTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_SupplementaryInformationAboutReferenceDocumentsHeading" xlink:label="SupplementaryInformationAboutReferenceDocumentsHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ReferenceInformationHeading" xlink:to="SupplementaryInformationAboutReferenceDocumentsHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_SupplementaryInformationAboutReferenceDocumentsTextBlock" xlink:label="SupplementaryInformationAboutReferenceDocumentsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SupplementaryInformationAboutReferenceDocumentsHeading" xlink:to="SupplementaryInformationAboutReferenceDocumentsTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_PlaceForPublicInspectionOfReferenceDocumentsHeading" xlink:label="PlaceForPublicInspectionOfReferenceDocumentsHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ReferenceInformationHeading" xlink:to="PlaceForPublicInspectionOfReferenceDocumentsHeading" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_PlaceForPublicInspectionOfReferenceDocumentsTextBlock" xlink:label="PlaceForPublicInspectionOfReferenceDocumentsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="PlaceForPublicInspectionOfReferenceDocumentsHeading" xlink:to="PlaceForPublicInspectionOfReferenceDocumentsTextBlock" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

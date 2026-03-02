@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpdei/rol_std_DocumentAndEntityInformationDEI" xlink:type="simple" xlink:href="../jpdei_rt_2013-08-31.xsd#rol_std_DocumentAndEntityInformationDEI"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpdei/rol_std_DocumentAndEntityInformationDEI">
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_DocumentAndEntityInformationDEIAbstract" xlink:label="DocumentAndEntityInformationDEIAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_EntityInformationDEIAbstract" xlink:label="EntityInformationDEIAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentAndEntityInformationDEIAbstract" xlink:to="EntityInformationDEIAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_EDINETCodeDEI" xlink:label="EDINETCodeDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EntityInformationDEIAbstract" xlink:to="EDINETCodeDEI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_FundCodeDEI" xlink:label="FundCodeDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EntityInformationDEIAbstract" xlink:to="FundCodeDEI" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_SecurityCodeDEI" xlink:label="SecurityCodeDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EntityInformationDEIAbstract" xlink:to="SecurityCodeDEI" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_FilerNameInJapaneseDEI" xlink:label="FilerNameInJapaneseDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EntityInformationDEIAbstract" xlink:to="FilerNameInJapaneseDEI" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_FilerNameInEnglishDEI" xlink:label="FilerNameInEnglishDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EntityInformationDEIAbstract" xlink:to="FilerNameInEnglishDEI" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_FundNameInJapaneseDEI" xlink:label="FundNameInJapaneseDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EntityInformationDEIAbstract" xlink:to="FundNameInJapaneseDEI" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_FundNameInEnglishDEI" xlink:label="FundNameInEnglishDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EntityInformationDEIAbstract" xlink:to="FundNameInEnglishDEI" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_DocumentInformationDEIAbstract" xlink:label="DocumentInformationDEIAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentAndEntityInformationDEIAbstract" xlink:to="DocumentInformationDEIAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_CabinetOfficeOrdinanceDEI" xlink:label="CabinetOfficeOrdinanceDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="CabinetOfficeOrdinanceDEI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_DocumentTypeDEI" xlink:label="DocumentTypeDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="DocumentTypeDEI" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_AccountingStandardsDEI" xlink:label="AccountingStandardsDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="AccountingStandardsDEI" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_WhetherConsolidatedFinancialStatementsArePreparedDEI" xlink:label="WhetherConsolidatedFinancialStatementsArePreparedDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="WhetherConsolidatedFinancialStatementsArePreparedDEI" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI" xlink:label="IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI" xlink:label="IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_CurrentPeriodDEIAbstract" xlink:label="CurrentPeriodDEIAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="CurrentPeriodDEIAbstract" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_CurrentFiscalYearStartDateDEI" xlink:label="CurrentFiscalYearStartDateDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CurrentPeriodDEIAbstract" xlink:to="CurrentFiscalYearStartDateDEI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_CurrentPeriodEndDateDEI" xlink:label="CurrentPeriodEndDateDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CurrentPeriodDEIAbstract" xlink:to="CurrentPeriodEndDateDEI" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_TypeOfCurrentPeriodDEI" xlink:label="TypeOfCurrentPeriodDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CurrentPeriodDEIAbstract" xlink:to="TypeOfCurrentPeriodDEI" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_CurrentFiscalYearEndDateDEI" xlink:label="CurrentFiscalYearEndDateDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CurrentPeriodDEIAbstract" xlink:to="CurrentFiscalYearEndDateDEI" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_ComparativePeriodDEIAbstract" xlink:label="ComparativePeriodDEIAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="ComparativePeriodDEIAbstract" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_PreviousFiscalYearStartDateDEI" xlink:label="PreviousFiscalYearStartDateDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ComparativePeriodDEIAbstract" xlink:to="PreviousFiscalYearStartDateDEI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_ComparativePeriodEndDateDEI" xlink:label="ComparativePeriodEndDateDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ComparativePeriodDEIAbstract" xlink:to="ComparativePeriodEndDateDEI" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_PreviousFiscalYearEndDateDEI" xlink:label="PreviousFiscalYearEndDateDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ComparativePeriodDEIAbstract" xlink:to="PreviousFiscalYearEndDateDEI" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_QuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEIAbstract" xlink:label="QuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEIAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="QuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEIAbstract" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_NextFiscalYearStartDateDEI" xlink:label="NextFiscalYearStartDateDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="QuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEIAbstract" xlink:to="NextFiscalYearStartDateDEI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI" xlink:label="EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="QuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEIAbstract" xlink:to="EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_NumberOfSubmissionDEI" xlink:label="NumberOfSubmissionDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="NumberOfSubmissionDEI" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_AmendmentFlagDEI" xlink:label="AmendmentFlagDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="AmendmentFlagDEI" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_IdentificationOfDocumentSubjectToAmendmentDEI" xlink:label="IdentificationOfDocumentSubjectToAmendmentDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="IdentificationOfDocumentSubjectToAmendmentDEI" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_TypeOfAmendmentDEIAbstract" xlink:label="TypeOfAmendmentDEIAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DocumentInformationDEIAbstract" xlink:to="TypeOfAmendmentDEIAbstract" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_ReportAmendmentFlagDEI" xlink:label="ReportAmendmentFlagDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="TypeOfAmendmentDEIAbstract" xlink:to="ReportAmendmentFlagDEI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpdei_cor_2013-08-31.xsd#jpdei_cor_XBRLAmendmentFlagDEI" xlink:label="XBRLAmendmentFlagDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="TypeOfAmendmentDEIAbstract" xlink:to="XBRLAmendmentFlagDEI" order="2.0"/>
+  </link:definitionLink>
+</link:linkbase>

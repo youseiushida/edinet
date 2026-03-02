@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+
+  <!-- Role 1: BS -->
+  <link:presentationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_BalanceSheet">
+
+    <link:loc xlink:type="locator"
+        xlink:href="../taxonomy/jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_BalanceSheetHeading"
+        xlink:label="loc_BSHeading"/>
+    <link:loc xlink:type="locator"
+        xlink:href="../taxonomy/jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_TotalAssets"
+        xlink:label="loc_TotalAssets"/>
+
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_BSHeading" xlink:to="loc_TotalAssets"
+        order="1"
+        preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+
+  </link:presentationLink>
+
+  <!-- Role 2: PL -->
+  <link:presentationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_StatementOfIncome">
+
+    <link:loc xlink:type="locator"
+        xlink:href="../taxonomy/jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeHeading"
+        xlink:label="loc_PLHeading"/>
+    <link:loc xlink:type="locator"
+        xlink:href="../taxonomy/jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_NetSales"
+        xlink:label="loc_NetSales"/>
+    <link:loc xlink:type="locator"
+        xlink:href="../taxonomy/jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_NetIncome"
+        xlink:label="loc_NetIncome"/>
+
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_PLHeading" xlink:to="loc_NetSales"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_PLHeading" xlink:to="loc_NetIncome"
+        order="2"
+        preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+
+  </link:presentationLink>
+</link:linkbase>

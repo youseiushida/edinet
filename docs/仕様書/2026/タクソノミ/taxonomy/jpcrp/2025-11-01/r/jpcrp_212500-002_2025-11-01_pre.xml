@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_DisclosureOfSustainabilityRelatedFinancialInformation-02" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_DisclosureOfSustainabilityRelatedFinancialInformation-02"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_DisclosureOfSustainabilityRelatedFinancialInformation-02">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DisclosureOfSustainabilityRelatedFinancialInformationHeading" xlink:label="DisclosureOfSustainabilityRelatedFinancialInformationHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Scope1And2GreenhouseGasEmissionsTable" xlink:label="Scope1And2GreenhouseGasEmissionsTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="DisclosureOfSustainabilityRelatedFinancialInformationHeading" xlink:to="Scope1And2GreenhouseGasEmissionsTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_GreenhouseGasEmissionsDisclosureBasisAxis" xlink:label="GreenhouseGasEmissionsDisclosureBasisAxis"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Scope1And2GreenhouseGasEmissionsTable" xlink:to="GreenhouseGasEmissionsDisclosureBasisAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_GreenhouseGasEmissionsDisclosureBasisMember" xlink:label="GreenhouseGasEmissionsDisclosureBasisMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GreenhouseGasEmissionsDisclosureBasisAxis" xlink:to="GreenhouseGasEmissionsDisclosureBasisMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ConsolidatedAccountingGroupMember" xlink:label="ConsolidatedAccountingGroupMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GreenhouseGasEmissionsDisclosureBasisMember" xlink:to="ConsolidatedAccountingGroupMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OtherInvesteesExcludedFromConsolidatedAccountingGroupMember" xlink:label="OtherInvesteesExcludedFromConsolidatedAccountingGroupMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="GreenhouseGasEmissionsDisclosureBasisMember" xlink:to="OtherInvesteesExcludedFromConsolidatedAccountingGroupMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Scope1And2GreenhouseGasEmissionsLineItems" xlink:label="Scope1And2GreenhouseGasEmissionsLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="DisclosureOfSustainabilityRelatedFinancialInformationHeading" xlink:to="Scope1And2GreenhouseGasEmissionsLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_GrossScope1GreenhouseGasEmissionsScope1And2GreenhouseGasEmissions" xlink:label="GrossScope1GreenhouseGasEmissionsScope1And2GreenhouseGasEmissions"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Scope1And2GreenhouseGasEmissionsLineItems" xlink:to="GrossScope1GreenhouseGasEmissionsScope1And2GreenhouseGasEmissions" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_GrossScope2GreenhouseGasEmissionsScope1And2GreenhouseGasEmissions" xlink:label="GrossScope2GreenhouseGasEmissionsScope1And2GreenhouseGasEmissions"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Scope1And2GreenhouseGasEmissionsLineItems" xlink:to="GrossScope2GreenhouseGasEmissionsScope1And2GreenhouseGasEmissions" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_GrossScope1And2GreenhouseGasEmissionsScope1And2GreenhouseGasEmissions" xlink:label="GrossScope1And2GreenhouseGasEmissionsScope1And2GreenhouseGasEmissions"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Scope1And2GreenhouseGasEmissionsLineItems" xlink:to="GrossScope1And2GreenhouseGasEmissionsScope1And2GreenhouseGasEmissions" order="3.0"/>
+  </link:presentationLink>
+</link:linkbase>

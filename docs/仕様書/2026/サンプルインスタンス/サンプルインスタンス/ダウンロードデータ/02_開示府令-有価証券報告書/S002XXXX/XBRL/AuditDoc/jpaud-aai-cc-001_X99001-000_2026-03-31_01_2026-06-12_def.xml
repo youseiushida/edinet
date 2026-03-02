@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_IndependentAuditorsReportKAM" xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_rt_2025-11-01.xsd#rol_IndependentAuditorsReportKAM"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_IndependentAuditorsReportKAM">
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_IndependentAuditorsReportHeading" xlink:label="IndependentAuditorsReportHeading"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_KeyAuditMattersDetailAbstract" xlink:label="KeyAuditMattersDetailAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="IndependentAuditorsReportHeading" xlink:to="KeyAuditMattersDetailAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_KeyAuditMattersTable" xlink:label="KeyAuditMattersTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="KeyAuditMattersDetailAbstract" xlink:to="KeyAuditMattersTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SequentialNumbersAxis" xlink:label="SequentialNumbersAxis"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="KeyAuditMattersTable" xlink:to="SequentialNumbersAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row1Member" xlink:label="Row1Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row1Member" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row2Member" xlink:label="Row2Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row2Member" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row3Member" xlink:label="Row3Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row3Member" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_KeyAuditMattersConsolidatedLineItems" xlink:label="KeyAuditMattersConsolidatedLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="KeyAuditMattersDetailAbstract" xlink:to="KeyAuditMattersConsolidatedLineItems" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShortDescriptionKAMConsolidated" xlink:label="ShortDescriptionKAMConsolidated"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="ShortDescriptionKAMConsolidated" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ReferenceKAMConsolidated" xlink:label="ReferenceKAMConsolidated"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="ReferenceKAMConsolidated" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DescriptionIncludingReasonKAMConsolidatedTextBlock" xlink:label="DescriptionIncludingReasonKAMConsolidatedTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="DescriptionIncludingReasonKAMConsolidatedTextBlock" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditorsResponseKAMConsolidatedTextBlock" xlink:label="AuditorsResponseKAMConsolidatedTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="AuditorsResponseKAMConsolidatedTextBlock" order="4.0"/>
+  </link:definitionLink>
+</link:linkbase>

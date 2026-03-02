@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jptoo-tor/2013-08-31/jptoo-tor_rt" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jptoo-tor_rt="http://disclosure.edinet-fsa.go.jp/taxonomy/jptoo-tor/2013-08-31/jptoo-tor_rt" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jptoo-tor/rol_std_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo6TenderOfferReport" id="rol_std_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo6TenderOfferReport">
+        <link:definition>発行者以外の者による株券等の公開買付けの開示に関する内閣府令 第六号様式 公開買付報告書</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jptoo-tor/rol_std_CoverPage" id="rol_std_CoverPage">
+        <link:definition>表紙</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jptoo-tor/rol_std_HoldingRatioOfShareCertificatesEtcAfterPurchaseEtc" id="rol_std_HoldingRatioOfShareCertificatesEtcAfterPurchaseEtc">
+        <link:definition>買付け等を行った後における株券等所有割合</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jptoo-tor/rol_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo6TenderOfferReport" id="rol_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo6TenderOfferReport">
+        <link:definition>発行者以外の者による株券等の公開買付けの開示に関する内閣府令 第六号様式 公開買付報告書</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jptoo-tor/rol_CoverPage" id="rol_CoverPage">
+        <link:definition>表紙</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jptoo-tor/rol_HoldingRatioOfShareCertificatesEtcAfterPurchaseEtc" id="rol_HoldingRatioOfShareCertificatesEtcAfterPurchaseEtc">
+        <link:definition>買付け等を行った後における株券等所有割合</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+    </xsd:appinfo>
+  </xsd:annotation>
+</xsd:schema>

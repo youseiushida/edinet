@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_ResearchAndDevelopmentActivities" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_ResearchAndDevelopmentActivities"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_ResearchAndDevelopmentActivities">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OperatingSegmentsAxis" xlink:label="OperatingSegmentsAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_EntityTotalMember" xlink:label="EntityTotalMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingSegmentsAxis" xlink:to="EntityTotalMember" order="1.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ReportableSegmentsMember" xlink:label="ReportableSegmentsMember"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OtherReportableSegmentsMember" xlink:label="OtherReportableSegmentsMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ReportableSegmentsMember" xlink:to="OtherReportableSegmentsMember" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="EntityTotalMember" xlink:to="ReportableSegmentsMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ResearchAndDevelopmentActivitiesHeading" xlink:label="ResearchAndDevelopmentActivitiesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ResearchAndDevelopmentExpensesResearchAndDevelopmentActivitiesTable" xlink:label="ResearchAndDevelopmentExpensesResearchAndDevelopmentActivitiesTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ResearchAndDevelopmentActivitiesHeading" xlink:to="ResearchAndDevelopmentExpensesResearchAndDevelopmentActivitiesTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ResearchAndDevelopmentExpensesResearchAndDevelopmentActivitiesTable" xlink:to="OperatingSegmentsAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ResearchAndDevelopmentExpensesResearchAndDevelopmentActivitiesLineItems" xlink:label="ResearchAndDevelopmentExpensesResearchAndDevelopmentActivitiesLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ResearchAndDevelopmentActivitiesHeading" xlink:to="ResearchAndDevelopmentExpensesResearchAndDevelopmentActivitiesLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities" xlink:label="ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ResearchAndDevelopmentExpensesResearchAndDevelopmentActivitiesLineItems" xlink:to="ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

@@ -1,0 +1,42 @@
+=== P-7 sample data survey ===
+TAXONOMY_ROOT: /mnt/c/Users/nezow/Downloads/ALL_20251101
+SAMPLES_DIR: /mnt/c/Users/nezow/Downloads/ALL_20251101/samples
+SAMPLE_INSTANCE_ROOT: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ
+
+[1] ALL_20251101/samples の実体
+- files: 91
+- ext_counts: {'.xsd': 91}
+- .xbrl files: 0
+- entryPoint_* files: 91
+- first 10 files:
+  - samples/2025-11-01/entryPoint_all_2025-11-01.xsd
+  - samples/2025-11-01/entryPoint_jpcrp020000-srs_2025-11-01.xsd
+  - samples/2025-11-01/entryPoint_jpcrp020200-srs_2025-11-01.xsd
+  - samples/2025-11-01/entryPoint_jpcrp020300-srs_2025-11-01.xsd
+  - samples/2025-11-01/entryPoint_jpcrp020400-srs_2025-11-01.xsd
+  - samples/2025-11-01/entryPoint_jpcrp020500-srs_2025-11-01.xsd
+  - samples/2025-11-01/entryPoint_jpcrp020600-srs_2025-11-01.xsd
+  - samples/2025-11-01/entryPoint_jpcrp020700-srs_2025-11-01.xsd
+  - samples/2025-11-01/entryPoint_jpcrp030000-asr_2025-11-01.xsd
+  - samples/2025-11-01/entryPoint_jpcrp030200-asr_2025-11-01.xsd
+
+[2] 2026 サンプルインスタンス PublicDoc .xbrl の概要
+- files: 27
+- smallest 10:
+  - facts=  47, numeric=   1, non_numeric=  46, nil=  17, dim_facts=   0, units=['pure'], lexical={'boolean': 3, 'date': 1, 'integer': 2, 'text': 24} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/17_自社株買付府令-公開買付報告書/S018XXXX/XBRL/PublicDoc/jptoi040000-tor-001_X99013-000_2026-10-26_01_2026-10-26.xbrl
+  - facts=  54, numeric=   1, non_numeric=  53, nil=  14, dim_facts=   0, units=['pure'], lexical={'boolean': 3, 'date': 1, 'integer': 2, 'text': 34} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/13_特定有価証券府令-発行登録書/S014XXXX/XBRL/PublicDoc/jpsps150000-rst-001_Y99011-000_2026-07-12_01_2026-07-12.xbrl
+  - facts=  56, numeric=   1, non_numeric=  55, nil=  17, dim_facts=   0, units=['pure'], lexical={'boolean': 3, 'date': 1, 'integer': 2, 'text': 33} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/07_開示府令-発行登録書/S009XXXX/XBRL/PublicDoc/jpcrp110000-rst-001_X99008-000_2026-07-12_01_2026-07-12.xbrl
+  - facts=  68, numeric=   1, non_numeric=  67, nil=  17, dim_facts=   0, units=['pure'], lexical={'boolean': 3, 'date': 4, 'integer': 2, 'text': 42} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/08_開示府令-発行登録追補書類/S010XXXX/XBRL/PublicDoc/jpcrp120000-rep-001_X99008-000_2026-08-08_01_2026-08-08.xbrl
+  - facts=  73, numeric=   1, non_numeric=  72, nil=  17, dim_facts=   0, units=['pure'], lexical={'boolean': 3, 'date': 1, 'integer': 2, 'text': 50} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/16_自社株買付府令-公開買付届出書/S017XXXX/XBRL/PublicDoc/jptoi020000-ton-001_X99013-000_2026-09-28_01_2026-09-28.xbrl
+  - facts=  76, numeric=   1, non_numeric=  75, nil=  14, dim_facts=   0, units=['pure'], lexical={'boolean': 3, 'date': 4, 'integer': 2, 'text': 53} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/14_特定有価証券府令-発行登録追補書類/S015XXXX/XBRL/PublicDoc/jpsps210000-rep-001_Y99011-000_2026-08-08_01_2026-08-08.xbrl
+  - facts=  77, numeric=  72, non_numeric=   5, nil=   1, dim_facts=  72, units=['JPY'], lexical={'integer': 71, 'text': 5} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/10_特定有価証券府令-有価証券届出書/S011XXXX/XBRL/PublicDoc/jpsps040000-srs-001_Y99009-001_2026-03-31_01_2026-06-29.xbrl
+  - facts=  77, numeric=  72, non_numeric=   5, nil=   1, dim_facts=  72, units=['JPY'], lexical={'integer': 71, 'text': 5} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/11_特定有価証券府令-有価証券報告書【みなし有価証券届出書】/S022XXXX/XBRL/PublicDoc/jpsps060700-drs-001_Y99009-001_2027-01-31_01_2027-04-24.xbrl
+  - facts=  77, numeric=  72, non_numeric=   5, nil=   1, dim_facts=  72, units=['JPY'], lexical={'integer': 71, 'text': 5} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/21_特定有価証券府令-訂正有価証券届出書/S023XXXX/XBRL/PublicDoc/jpsps060700-drs-001_Y99009-001_2027-01-31_02_2027-05-22.xbrl
+  - facts=  77, numeric=  72, non_numeric=   5, nil=   1, dim_facts=  72, units=['JPY'], lexical={'integer': 71, 'text': 5} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/22_特定有価証券府令-訂正有価証券報告書【みなし訂正有価証券届出書】/S024XXXX/XBRL/PublicDoc/jpsps060700-drs-001_Y99009-001_2027-01-31_03_2027-06-26.xbrl
+
+[3] 多様性スコア上位 5（score 高 + facts 少 を優先）
+  - score=7, facts=115, units=['JPY', 'pure', 'shares'], dim_facts=64, lexical={'boolean': 3, 'date': 7, 'decimal': 6, 'integer': 22, 'text': 52} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/18_大量保有府令-大量保有報告書/S019XXXX/XBRL/PublicDoc/jplvh010000-lvh-001_X99014-000_2026-08-07_01_2026-08-10.xbrl
+  - score=7, facts=131, units=['JPY', 'pure'], dim_facts=72, lexical={'boolean': 5, 'date': 7, 'integer': 72, 'text': 40} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/12_特定有価証券府令-半期報告書【みなし訂正有価証券届出書】/S025XXXX/XBRL/PublicDoc/jpsps100000-ssr-001_Y99010-000_2027-07-31_01_2027-10-23.xbrl
+  - score=7, facts=442, units=['JPY', 'JPYPerShares', 'pure', 'shares'], dim_facts=353, lexical={'boolean': 4, 'date': 7, 'decimal': 26, 'integer': 285, 'text': 95} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/05_開示府令-半期報告書（第四号の三様式、建設業）/S006XXXX/XBRL/PublicDoc/jpcrp040300-ssr-001_X99005-000_2026-09-30_01_2026-11-14.xbrl
+  - score=7, facts=844, units=['JPY', 'JPYPerShares', 'pure', 'shares'], dim_facts=473, lexical={'boolean': 4, 'date': 7, 'decimal': 67, 'integer': 584, 'text': 141} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/04_開示府令-半期報告書（第四号の三様式、銀行業）/S005XXXX/XBRL/PublicDoc/jpcrp040300-ssr-001_X99004-000_2026-09-30_01_2026-11-19.xbrl
+  - score=7, facts=964, units=['JPY', 'JPYPerShares', 'pure', 'shares'], dim_facts=494, lexical={'boolean': 4, 'date': 7, 'decimal': 46, 'integer': 717, 'text': 141} :: docs/仕様書/2026/サンプルインスタンス/サンプルインスタンス/ダウンロードデータ/06_開示府令-半期報告書（第五号様式、鉄道業）/S007XXXX/XBRL/PublicDoc/jpcrp050000-ssr-001_X99006-000_2026-09-30_01_2026-12-13.xbrl

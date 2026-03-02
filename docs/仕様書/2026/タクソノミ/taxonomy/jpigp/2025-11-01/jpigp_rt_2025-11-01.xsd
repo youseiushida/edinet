@@ -1,0 +1,1657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpigp/2025-11-01/jpigp_rt" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jpigp_rt="http://disclosure.edinet-fsa.go.jp/taxonomy/jpigp/2025-11-01/jpigp_rt" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_HeadingsAndBlockTagsIFRS" id="rol_std_HeadingsAndBlockTagsIFRS">
+        <link:definition>500000 目次項目及び包括タグ（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_StatementOfFinancialPositionIFRS-ListOfAccounts-01" id="rol_std_StatementOfFinancialPositionIFRS-ListOfAccounts-01">
+        <link:definition>511000 財政状態計算書（IFRS）科目一覧（流動／非流動）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_StatementOfFinancialPositionIFRS-ListOfAccounts-02" id="rol_std_StatementOfFinancialPositionIFRS-ListOfAccounts-02">
+        <link:definition>512000 財政状態計算書（IFRS）科目一覧（流動性配列）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_ConsolidatedStatementOfFinancialPositionIFRS" id="rol_ConsolidatedStatementOfFinancialPositionIFRS">
+        <link:definition>513010 連結財政状態計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfFinancialPositionIFRS" id="rol_std_ConsolidatedStatementOfFinancialPositionIFRS">
+        <link:definition>513010 連結財政状態計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualConsolidatedStatementOfFinancialPositionIFRS" id="rol_CondensedSemiAnnualConsolidatedStatementOfFinancialPositionIFRS">
+        <link:definition>513020 要約中間連結財政状態計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterlyConsolidatedStatementOfFinancialPositionIFRS" id="rol_CondensedQuarterlyConsolidatedStatementOfFinancialPositionIFRS">
+        <link:definition>513030 要約四半期連結財政状態計算書（IFRS）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_StatementOfFinancialPositionIFRS" id="rol_StatementOfFinancialPositionIFRS">
+        <link:definition>513040 財政状態計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualStatementOfFinancialPositionIFRS" id="rol_CondensedSemiAnnualStatementOfFinancialPositionIFRS">
+        <link:definition>513050 要約中間財政状態計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterlyStatementOfFinancialPositionIFRS" id="rol_CondensedQuarterlyStatementOfFinancialPositionIFRS">
+        <link:definition>513060 要約四半期財政状態計算書（IFRS）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_ConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS" id="rol_ConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS">
+        <link:definition>520010 連結損益及び包括利益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS" id="rol_CondensedSemiAnnualConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS">
+        <link:definition>520020 要約中間連結損益及び包括利益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedYearToQuarterEndConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS" id="rol_CondensedYearToQuarterEndConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS">
+        <link:definition>520031 要約四半期連結損益及び包括利益計算書（IFRS）四半期累計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterPeriodConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS" id="rol_CondensedQuarterPeriodConsolidatedStatementOfComprehensiveIncomeSingleStatementIFRS">
+        <link:definition>520032 要約四半期連結損益及び包括利益計算書（IFRS）四半期会計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_StatementOfComprehensiveIncomeSingleStatementIFRS" id="rol_StatementOfComprehensiveIncomeSingleStatementIFRS">
+        <link:definition>520040 損益及び包括利益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualStatementOfComprehensiveIncomeSingleStatementIFRS" id="rol_CondensedSemiAnnualStatementOfComprehensiveIncomeSingleStatementIFRS">
+        <link:definition>520050 要約中間損益及び包括利益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedYearToQuarterEndStatementOfComprehensiveIncomeSingleStatementIFRS" id="rol_CondensedYearToQuarterEndStatementOfComprehensiveIncomeSingleStatementIFRS">
+        <link:definition>520061 要約四半期損益及び包括利益計算書（IFRS）四半期累計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterPeriodStatementOfComprehensiveIncomeSingleStatementIFRS" id="rol_CondensedQuarterPeriodStatementOfComprehensiveIncomeSingleStatementIFRS">
+        <link:definition>520062 要約四半期損益及び包括利益計算書（IFRS）四半期会計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_StatementOfProfitOrLossIFRS-ListOfAccounts" id="rol_std_StatementOfProfitOrLossIFRS-ListOfAccounts">
+        <link:definition>521000 損益計算書（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_ConsolidatedStatementOfProfitOrLossIFRS" id="rol_ConsolidatedStatementOfProfitOrLossIFRS">
+        <link:definition>521010 連結損益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfProfitOrLossIFRS" id="rol_std_ConsolidatedStatementOfProfitOrLossIFRS">
+        <link:definition>521010 連結損益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualConsolidatedStatementOfProfitOrLossIFRS" id="rol_CondensedSemiAnnualConsolidatedStatementOfProfitOrLossIFRS">
+        <link:definition>521020 要約中間連結損益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedYearToQuarterEndConsolidatedStatementOfProfitOrLossIFRS" id="rol_CondensedYearToQuarterEndConsolidatedStatementOfProfitOrLossIFRS">
+        <link:definition>521031 要約四半期連結損益計算書（IFRS）四半期累計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterPeriodConsolidatedStatementOfProfitOrLossIFRS" id="rol_CondensedQuarterPeriodConsolidatedStatementOfProfitOrLossIFRS">
+        <link:definition>521032 要約四半期連結損益計算書（IFRS）四半期会計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_StatementOfProfitOrLossIFRS" id="rol_StatementOfProfitOrLossIFRS">
+        <link:definition>521040 損益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualStatementOfProfitOrLossIFRS" id="rol_CondensedSemiAnnualStatementOfProfitOrLossIFRS">
+        <link:definition>521050 要約中間損益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedYearToQuarterEndStatementOfProfitOrLossIFRS" id="rol_CondensedYearToQuarterEndStatementOfProfitOrLossIFRS">
+        <link:definition>521061 要約四半期損益計算書（IFRS）四半期累計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterPeriodStatementOfProfitOrLossIFRS" id="rol_CondensedQuarterPeriodStatementOfProfitOrLossIFRS">
+        <link:definition>521062 要約四半期損益計算書（IFRS）四半期会計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_StatementOfComprehensiveIncomeIFRS-ListOfAccounts" id="rol_std_StatementOfComprehensiveIncomeIFRS-ListOfAccounts">
+        <link:definition>522000 包括利益計算書（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_ConsolidatedStatementOfComprehensiveIncomeIFRS" id="rol_ConsolidatedStatementOfComprehensiveIncomeIFRS">
+        <link:definition>522010 連結包括利益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfComprehensiveIncomeIFRS" id="rol_std_ConsolidatedStatementOfComprehensiveIncomeIFRS">
+        <link:definition>522010 連結包括利益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualConsolidatedStatementOfComprehensiveIncomeIFRS" id="rol_CondensedSemiAnnualConsolidatedStatementOfComprehensiveIncomeIFRS">
+        <link:definition>522020 要約中間連結包括利益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedYearToQuarterEndConsolidatedStatementOfComprehensiveIncomeIFRS" id="rol_CondensedYearToQuarterEndConsolidatedStatementOfComprehensiveIncomeIFRS">
+        <link:definition>522031 要約四半期連結包括利益計算書（IFRS）四半期累計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterPeriodConsolidatedStatementOfComprehensiveIncomeIFRS" id="rol_CondensedQuarterPeriodConsolidatedStatementOfComprehensiveIncomeIFRS">
+        <link:definition>522032 要約四半期連結包括利益計算書（IFRS）四半期会計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_StatementOfComprehensiveIncomeIFRS" id="rol_StatementOfComprehensiveIncomeIFRS">
+        <link:definition>522040 包括利益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualStatementOfComprehensiveIncomeIFRS" id="rol_CondensedSemiAnnualStatementOfComprehensiveIncomeIFRS">
+        <link:definition>522050 要約中間包括利益計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedYearToQuarterEndStatementOfComprehensiveIncomeIFRS" id="rol_CondensedYearToQuarterEndStatementOfComprehensiveIncomeIFRS">
+        <link:definition>522061 要約四半期包括利益計算書（IFRS）四半期累計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterPeriodStatementOfComprehensiveIncomeIFRS" id="rol_CondensedQuarterPeriodStatementOfComprehensiveIncomeIFRS">
+        <link:definition>522062 要約四半期包括利益計算書（IFRS）四半期会計期間（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_StatementOfChangesInEquityIFRS-ListOfAccounts" id="rol_std_StatementOfChangesInEquityIFRS-ListOfAccounts">
+        <link:definition>530000 持分変動計算書（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_ConsolidatedStatementOfChangesInEquityIFRS" id="rol_ConsolidatedStatementOfChangesInEquityIFRS">
+        <link:definition>530010 連結持分変動計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfChangesInEquityIFRS" id="rol_std_ConsolidatedStatementOfChangesInEquityIFRS">
+        <link:definition>530010 連結持分変動計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualConsolidatedStatementOfChangesInEquityIFRS" id="rol_CondensedSemiAnnualConsolidatedStatementOfChangesInEquityIFRS">
+        <link:definition>530020 要約中間連結持分変動計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterlyConsolidatedStatementOfChangesInEquityIFRS" id="rol_CondensedQuarterlyConsolidatedStatementOfChangesInEquityIFRS">
+        <link:definition>530030 要約四半期連結持分変動計算書（IFRS）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_StatementOfChangesInEquityIFRS" id="rol_StatementOfChangesInEquityIFRS">
+        <link:definition>530040 持分変動計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualStatementOfChangesInEquityIFRS" id="rol_CondensedSemiAnnualStatementOfChangesInEquityIFRS">
+        <link:definition>530050 要約中間持分変動計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterlyStatementOfChangesInEquityIFRS" id="rol_CondensedQuarterlyStatementOfChangesInEquityIFRS">
+        <link:definition>530060 要約四半期持分変動計算書（IFRS）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_StatementOfCashFlowsIFRS-ListOfAccounts" id="rol_std_StatementOfCashFlowsIFRS-ListOfAccounts">
+        <link:definition>540000 キャッシュ・フロー計算書（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_ConsolidatedStatementOfCashFlowsIFRS" id="rol_ConsolidatedStatementOfCashFlowsIFRS">
+        <link:definition>540010 連結キャッシュ・フロー計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfCashFlowsIFRS" id="rol_std_ConsolidatedStatementOfCashFlowsIFRS">
+        <link:definition>540010 連結キャッシュ・フロー計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualConsolidatedStatementOfCashFlowsIFRS" id="rol_CondensedSemiAnnualConsolidatedStatementOfCashFlowsIFRS">
+        <link:definition>540020 要約中間連結キャッシュ・フロー計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterlyConsolidatedStatementOfCashFlowsIFRS" id="rol_CondensedQuarterlyConsolidatedStatementOfCashFlowsIFRS">
+        <link:definition>540030 要約四半期連結キャッシュ・フロー計算書（IFRS）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_StatementOfCashFlowsIFRS" id="rol_StatementOfCashFlowsIFRS">
+        <link:definition>540040 キャッシュ・フロー計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedSemiAnnualStatementOfCashFlowsIFRS" id="rol_CondensedSemiAnnualStatementOfCashFlowsIFRS">
+        <link:definition>540050 要約中間キャッシュ・フロー計算書（IFRS）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_CondensedQuarterlyStatementOfCashFlowsIFRS" id="rol_CondensedQuarterlyStatementOfCashFlowsIFRS">
+        <link:definition>540060 要約四半期キャッシュ・フロー計算書（IFRS）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_SegmentInformationIFRS-ListOfAccounts-01" id="rol_std_SegmentInformationIFRS-ListOfAccounts-01">
+        <link:definition>610000a セグメント情報（IFRS）科目一覧（報告セグメントに係る事項）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_SegmentInformationIFRS-ListOfAccounts-02" id="rol_std_SegmentInformationIFRS-ListOfAccounts-02">
+        <link:definition>610000b セグメント情報（IFRS）科目一覧（セグメント情報）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_SegmentInformationIFRS-ListOfAccounts-03" id="rol_std_SegmentInformationIFRS-ListOfAccounts-03">
+        <link:definition>610000c セグメント情報（IFRS）科目一覧（企業全体の開示）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-01" id="rol_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-01">
+        <link:definition>610010a セグメント情報（IFRS）連結財務諸表（報告セグメントに係る事項）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-01" id="rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-01">
+        <link:definition>610010a セグメント情報（IFRS）連結財務諸表（報告セグメントに係る事項）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-02" id="rol_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-02">
+        <link:definition>610010b セグメント情報（IFRS）連結財務諸表（セグメント情報）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-02" id="rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-02">
+        <link:definition>610010b セグメント情報（IFRS）連結財務諸表（セグメント情報）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-03" id="rol_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-03">
+        <link:definition>610010c セグメント情報（IFRS）連結財務諸表（企業全体の開示）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-03" id="rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-03">
+        <link:definition>610010c セグメント情報（IFRS）連結財務諸表（企業全体の開示）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedSemiAnnualConsolidatedFinancialStatementsIFRS-01" id="rol_NotesSegmentInformationCondensedSemiAnnualConsolidatedFinancialStatementsIFRS-01">
+        <link:definition>610020a セグメント情報（IFRS）中間連結財務諸表（報告セグメントに係る事項）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedSemiAnnualConsolidatedFinancialStatementsIFRS-02" id="rol_NotesSegmentInformationCondensedSemiAnnualConsolidatedFinancialStatementsIFRS-02">
+        <link:definition>610020b セグメント情報（IFRS）中間連結財務諸表（セグメント情報）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedSemiAnnualConsolidatedFinancialStatementsIFRS-03" id="rol_NotesSegmentInformationCondensedSemiAnnualConsolidatedFinancialStatementsIFRS-03">
+        <link:definition>610020c セグメント情報（IFRS）中間連結財務諸表（企業全体の開示）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedQuarterlyConsolidatedFinancialStatementsIFRS-01" id="rol_NotesSegmentInformationCondensedQuarterlyConsolidatedFinancialStatementsIFRS-01">
+        <link:definition>610030a セグメント情報（IFRS）四半期連結財務諸表（報告セグメントに係る事項）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedQuarterlyConsolidatedFinancialStatementsIFRS-02" id="rol_NotesSegmentInformationCondensedQuarterlyConsolidatedFinancialStatementsIFRS-02">
+        <link:definition>610030b セグメント情報（IFRS）四半期連結財務諸表（セグメント情報）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedQuarterlyConsolidatedFinancialStatementsIFRS-03" id="rol_NotesSegmentInformationCondensedQuarterlyConsolidatedFinancialStatementsIFRS-03">
+        <link:definition>610030c セグメント情報（IFRS）四半期連結財務諸表（企業全体の開示）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationFinancialStatementsIFRS-01" id="rol_NotesSegmentInformationFinancialStatementsIFRS-01">
+        <link:definition>610040a セグメント情報（IFRS）財務諸表（報告セグメントに係る事項）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationFinancialStatementsIFRS-02" id="rol_NotesSegmentInformationFinancialStatementsIFRS-02">
+        <link:definition>610040b セグメント情報（IFRS）財務諸表（セグメント情報）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationFinancialStatementsIFRS-03" id="rol_NotesSegmentInformationFinancialStatementsIFRS-03">
+        <link:definition>610040c セグメント情報（IFRS）財務諸表（企業全体の開示）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedSemiAnnualFinancialStatementsIFRS-01" id="rol_NotesSegmentInformationCondensedSemiAnnualFinancialStatementsIFRS-01">
+        <link:definition>610050a セグメント情報（IFRS）中間財務諸表（報告セグメントに係る事項）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedSemiAnnualFinancialStatementsIFRS-02" id="rol_NotesSegmentInformationCondensedSemiAnnualFinancialStatementsIFRS-02">
+        <link:definition>610050b セグメント情報（IFRS）中間財務諸表（セグメント情報）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedSemiAnnualFinancialStatementsIFRS-03" id="rol_NotesSegmentInformationCondensedSemiAnnualFinancialStatementsIFRS-03">
+        <link:definition>610050c セグメント情報（IFRS）中間財務諸表（企業全体の開示）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedQuarterlyFinancialStatementsIFRS-01" id="rol_NotesSegmentInformationCondensedQuarterlyFinancialStatementsIFRS-01">
+        <link:definition>610060a セグメント情報（IFRS）四半期財務諸表（報告セグメントに係る事項）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedQuarterlyFinancialStatementsIFRS-02" id="rol_NotesSegmentInformationCondensedQuarterlyFinancialStatementsIFRS-02">
+        <link:definition>610060b セグメント情報（IFRS）四半期財務諸表（セグメント情報）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSegmentInformationCondensedQuarterlyFinancialStatementsIFRS-03" id="rol_NotesSegmentInformationCondensedQuarterlyFinancialStatementsIFRS-03">
+        <link:definition>610060c セグメント情報（IFRS）四半期財務諸表（企業全体の開示）（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfInventoriesIFRS-ListOfAccounts" id="rol_std_ComponentsOfInventoriesIFRS-ListOfAccounts">
+        <link:definition>621000 棚卸資産の内訳（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesInventoriesConsolidatedFinancialStatementsIFRS" id="rol_NotesInventoriesConsolidatedFinancialStatementsIFRS">
+        <link:definition>621010 棚卸資産の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesInventoriesConsolidatedFinancialStatementsIFRS" id="rol_std_NotesInventoriesConsolidatedFinancialStatementsIFRS">
+        <link:definition>621010 棚卸資産の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesInventoriesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesInventoriesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>621020 棚卸資産の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesInventoriesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesInventoriesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>621030 棚卸資産の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesInventoriesFinancialStatementsIFRS" id="rol_NotesInventoriesFinancialStatementsIFRS">
+        <link:definition>621040 棚卸資産の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesInventoriesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesInventoriesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>621050 棚卸資産の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesInventoriesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesInventoriesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>621060 棚卸資産の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfPropertyPlantAndEquipmentIFRS-ListOfAccounts" id="rol_std_ComponentsOfPropertyPlantAndEquipmentIFRS-ListOfAccounts">
+        <link:definition>625000 有形固定資産の内訳（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRS" id="rol_NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRS">
+        <link:definition>625010 有形固定資産の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRS" id="rol_std_NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRS">
+        <link:definition>625010 有形固定資産の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesPropertyPlantAndEquipmentCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesPropertyPlantAndEquipmentCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>625020 有形固定資産の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesPropertyPlantAndEquipmentCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesPropertyPlantAndEquipmentCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>625030 有形固定資産の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesPropertyPlantAndEquipmentFinancialStatementsIFRS" id="rol_NotesPropertyPlantAndEquipmentFinancialStatementsIFRS">
+        <link:definition>625040 有形固定資産の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesPropertyPlantAndEquipmentCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesPropertyPlantAndEquipmentCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>625050 有形固定資産の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesPropertyPlantAndEquipmentCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesPropertyPlantAndEquipmentCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>625060 有形固定資産の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfGoodwillAndIntangibleAssetsIFRS-ListOfAccounts" id="rol_std_ComponentsOfGoodwillAndIntangibleAssetsIFRS-ListOfAccounts">
+        <link:definition>626000 のれん及び無形資産の内訳（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_OtherElementsForComponentsOfGoodwillAndIntangibleAssetsIFRS" id="rol_std_OtherElementsForComponentsOfGoodwillAndIntangibleAssetsIFRS">
+        <link:definition>626001 のれん及び無形資産の内訳（IFRS）その他の要素</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillAndIntangibleAssetsConsolidatedFinancialStatementsIFRS" id="rol_NotesGoodwillAndIntangibleAssetsConsolidatedFinancialStatementsIFRS">
+        <link:definition>626010 のれん及び無形資産の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesGoodwillAndIntangibleAssetsConsolidatedFinancialStatementsIFRS" id="rol_std_NotesGoodwillAndIntangibleAssetsConsolidatedFinancialStatementsIFRS">
+        <link:definition>626010 のれん及び無形資産の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillAndIntangibleAssetsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesGoodwillAndIntangibleAssetsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>626020 のれん及び無形資産の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillAndIntangibleAssetsCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesGoodwillAndIntangibleAssetsCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>626030 のれん及び無形資産の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillAndIntangibleAssetsFinancialStatementsIFRS" id="rol_NotesGoodwillAndIntangibleAssetsFinancialStatementsIFRS">
+        <link:definition>626040 のれん及び無形資産の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillAndIntangibleAssetsCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesGoodwillAndIntangibleAssetsCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>626050 のれん及び無形資産の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillAndIntangibleAssetsCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesGoodwillAndIntangibleAssetsCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>626060 のれん及び無形資産の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillConsolidatedFinancialStatementsIFRS" id="rol_NotesGoodwillConsolidatedFinancialStatementsIFRS">
+        <link:definition>626110 のれんの内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesGoodwillCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>626120 のれんの内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesGoodwillCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>626130 のれんの内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillFinancialStatementsIFRS" id="rol_NotesGoodwillFinancialStatementsIFRS">
+        <link:definition>626140 のれんの内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesGoodwillCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>626150 のれんの内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGoodwillCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesGoodwillCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>626160 のれんの内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesIntangibleAssetsConsolidatedFinancialStatementsIFRS" id="rol_NotesIntangibleAssetsConsolidatedFinancialStatementsIFRS">
+        <link:definition>626210 無形資産の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesIntangibleAssetsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesIntangibleAssetsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>626220 無形資産の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesIntangibleAssetsCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesIntangibleAssetsCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>626230 無形資産の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesIntangibleAssetsFinancialStatementsIFRS" id="rol_NotesIntangibleAssetsFinancialStatementsIFRS">
+        <link:definition>626240 無形資産の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesIntangibleAssetsCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesIntangibleAssetsCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>626250 無形資産の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesIntangibleAssetsCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesIntangibleAssetsCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>626260 無形資産の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfOperatingExpensesIFRS-ListOfAccounts" id="rol_std_ComponentsOfOperatingExpensesIFRS-ListOfAccounts">
+        <link:definition>650000 営業費用の内訳（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_OtherElementsForComponentsOfOperatingExpensesIFRS" id="rol_std_OtherElementsForComponentsOfOperatingExpensesIFRS">
+        <link:definition>650001 営業費用の内訳（IFRS）その他の要素</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOperatingExpensesConsolidatedFinancialStatementsIFRS" id="rol_NotesOperatingExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>650010 営業費用の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOperatingExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesOperatingExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>650020 営業費用の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOperatingExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesOperatingExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>650030 営業費用の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOperatingExpensesFinancialStatementsIFRS" id="rol_NotesOperatingExpensesFinancialStatementsIFRS">
+        <link:definition>650040 営業費用の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOperatingExpensesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesOperatingExpensesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>650050 営業費用の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOperatingExpensesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesOperatingExpensesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>650060 営業費用の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS" id="rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>650110 売上原価、販売費及び一般管理費の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>650120 売上原価、販売費及び一般管理費の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>650130 売上原価、販売費及び一般管理費の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesFinancialStatementsIFRS" id="rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesFinancialStatementsIFRS">
+        <link:definition>650140 売上原価、販売費及び一般管理費の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>650150 売上原価、販売費及び一般管理費の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesCostOfSalesAndSellingGeneralAndAdministrativeExpensesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>650160 売上原価、販売費及び一般管理費の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExpensesByNatureConsolidatedFinancialStatementsIFRS" id="rol_NotesExpensesByNatureConsolidatedFinancialStatementsIFRS">
+        <link:definition>650210 費用の性質別内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExpensesByNatureCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesExpensesByNatureCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>650220 費用の性質別内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExpensesByNatureCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesExpensesByNatureCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>650230 費用の性質別内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExpensesByNatureFinancialStatementsIFRS" id="rol_NotesExpensesByNatureFinancialStatementsIFRS">
+        <link:definition>650240 費用の性質別内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExpensesByNatureCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesExpensesByNatureCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>650250 費用の性質別内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExpensesByNatureCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesExpensesByNatureCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>650260 費用の性質別内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfCostOfSalesIFRS-ListOfAccounts" id="rol_std_ComponentsOfCostOfSalesIFRS-ListOfAccounts">
+        <link:definition>651000 売上原価の内訳（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesConsolidatedFinancialStatementsIFRS" id="rol_NotesCostOfSalesConsolidatedFinancialStatementsIFRS">
+        <link:definition>651010 売上原価の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesCostOfSalesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>651020 売上原価の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesCostOfSalesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>651030 売上原価の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesFinancialStatementsIFRS" id="rol_NotesCostOfSalesFinancialStatementsIFRS">
+        <link:definition>651040 売上原価の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesCostOfSalesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>651050 売上原価の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesCostOfSalesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesCostOfSalesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>651060 売上原価の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfSellingGeneralAndAdministrativeExpensesIFRS-ListOfAccounts" id="rol_std_ComponentsOfSellingGeneralAndAdministrativeExpensesIFRS-ListOfAccounts">
+        <link:definition>652000 販売費及び一般管理費の内訳（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesSellingGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS" id="rol_std_NotesSellingGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>652010 販売費及び一般管理費の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS" id="rol_NotesSellingGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>652010 販売費及び一般管理費の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>652020 販売費及び一般管理費の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingGeneralAndAdministrativeExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesSellingGeneralAndAdministrativeExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>652030 販売費及び一般管理費の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingGeneralAndAdministrativeExpensesFinancialStatementsIFRS" id="rol_NotesSellingGeneralAndAdministrativeExpensesFinancialStatementsIFRS">
+        <link:definition>652040 販売費及び一般管理費の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesSellingGeneralAndAdministrativeExpensesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>652050 販売費及び一般管理費の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingGeneralAndAdministrativeExpensesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesSellingGeneralAndAdministrativeExpensesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>652060 販売費及び一般管理費の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingExpensesConsolidatedFinancialStatementsIFRS" id="rol_NotesSellingExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>652110 販売費の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesSellingExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>652120 販売費の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesSellingExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>652130 販売費の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingExpensesFinancialStatementsIFRS" id="rol_NotesSellingExpensesFinancialStatementsIFRS">
+        <link:definition>652140 販売費の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingExpensesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesSellingExpensesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>652150 販売費の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesSellingExpensesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesSellingExpensesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>652160 販売費の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS" id="rol_NotesGeneralAndAdministrativeExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>652210 一般管理費の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGeneralAndAdministrativeExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesGeneralAndAdministrativeExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>652220 一般管理費の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGeneralAndAdministrativeExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesGeneralAndAdministrativeExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>652230 一般管理費の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGeneralAndAdministrativeExpensesFinancialStatementsIFRS" id="rol_NotesGeneralAndAdministrativeExpensesFinancialStatementsIFRS">
+        <link:definition>652240 一般管理費の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGeneralAndAdministrativeExpensesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesGeneralAndAdministrativeExpensesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>652250 一般管理費の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesGeneralAndAdministrativeExpensesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesGeneralAndAdministrativeExpensesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>652260 一般管理費の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfOtherIncomeAndOtherExpensesIFRS-ListOfAccounts" id="rol_std_ComponentsOfOtherIncomeAndOtherExpensesIFRS-ListOfAccounts">
+        <link:definition>655000 その他の収益及びその他の費用の内訳（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_OtherElementsForComponentsOfOtherIncomeAndOtherExpensesIFRS" id="rol_std_OtherElementsForComponentsOfOtherIncomeAndOtherExpensesIFRS">
+        <link:definition>655001 その他の収益及びその他の費用の内訳（IFRS）その他の要素</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeAndOtherExpensesConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherIncomeAndOtherExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>655010 その他の収益及びその他の費用の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesOtherIncomeAndOtherExpensesConsolidatedFinancialStatementsIFRS" id="rol_std_NotesOtherIncomeAndOtherExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>655010 その他の収益及びその他の費用の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeAndOtherExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherIncomeAndOtherExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>655020 その他の収益及びその他の費用の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeAndOtherExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherIncomeAndOtherExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>655030 その他の収益及びその他の費用の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeAndOtherExpensesFinancialStatementsIFRS" id="rol_NotesOtherIncomeAndOtherExpensesFinancialStatementsIFRS">
+        <link:definition>655040 その他の収益及びその他の費用の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeAndOtherExpensesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesOtherIncomeAndOtherExpensesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>655050 その他の収益及びその他の費用の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeAndOtherExpensesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesOtherIncomeAndOtherExpensesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>655060 その他の収益及びその他の費用の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherIncomeConsolidatedFinancialStatementsIFRS">
+        <link:definition>655110 その他の収益の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherIncomeCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>655120 その他の収益の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherIncomeCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>655130 その他の収益の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeFinancialStatementsIFRS" id="rol_NotesOtherIncomeFinancialStatementsIFRS">
+        <link:definition>655140 その他の収益の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesOtherIncomeCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>655150 その他の収益の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherIncomeCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesOtherIncomeCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>655160 その他の収益の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherExpensesConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>655210 その他の費用の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>655220 その他の費用の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>655230 その他の費用の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherExpensesFinancialStatementsIFRS" id="rol_NotesOtherExpensesFinancialStatementsIFRS">
+        <link:definition>655240 その他の費用の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherExpensesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesOtherExpensesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>655250 その他の費用の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherExpensesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesOtherExpensesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>655260 その他の費用の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfFinanceIncomeAndFinanceCostsIFRS-ListOfAccounts" id="rol_std_ComponentsOfFinanceIncomeAndFinanceCostsIFRS-ListOfAccounts">
+        <link:definition>657000 金融収益及び金融費用の内訳（IFRS）科目一覧</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRS" id="rol_std_OtherElementsForComponentsOfFinanceIncomeAndFinanceCostsIFRS">
+        <link:definition>657001 金融収益及び金融費用の内訳（IFRS）その他の要素</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRS" id="rol_NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRS">
+        <link:definition>657010 金融収益及び金融費用の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRS" id="rol_std_NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRS">
+        <link:definition>657010 金融収益及び金融費用の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeAndFinanceCostsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesFinanceIncomeAndFinanceCostsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>657020 金融収益及び金融費用の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeAndFinanceCostsCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesFinanceIncomeAndFinanceCostsCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>657030 金融収益及び金融費用の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeAndFinanceCostsFinancialStatementsIFRS" id="rol_NotesFinanceIncomeAndFinanceCostsFinancialStatementsIFRS">
+        <link:definition>657040 金融収益及び金融費用の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeAndFinanceCostsCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesFinanceIncomeAndFinanceCostsCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>657050 金融収益及び金融費用の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeAndFinanceCostsCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesFinanceIncomeAndFinanceCostsCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>657060 金融収益及び金融費用の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeConsolidatedFinancialStatementsIFRS" id="rol_NotesFinanceIncomeConsolidatedFinancialStatementsIFRS">
+        <link:definition>657110 金融収益の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesFinanceIncomeCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>657120 金融収益の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesFinanceIncomeCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>657130 金融収益の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeFinancialStatementsIFRS" id="rol_NotesFinanceIncomeFinancialStatementsIFRS">
+        <link:definition>657140 金融収益の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesFinanceIncomeCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>657150 金融収益の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceIncomeCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesFinanceIncomeCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>657160 金融収益の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceCostsConsolidatedFinancialStatementsIFRS" id="rol_NotesFinanceCostsConsolidatedFinancialStatementsIFRS">
+        <link:definition>657210 金融費用の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceCostsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesFinanceCostsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>657220 金融費用の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceCostsCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesFinanceCostsCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>657230 金融費用の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceCostsFinancialStatementsIFRS" id="rol_NotesFinanceCostsFinancialStatementsIFRS">
+        <link:definition>657240 金融費用の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceCostsCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesFinanceCostsCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>657250 金融費用の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesFinanceCostsCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesFinanceCostsCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>657260 金融費用の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_OtherElementsForComponentsOfSellingGeneralAndAdministrativeExpensesIFRS" id="rol_std_OtherElementsForComponentsOfSellingGeneralAndAdministrativeExpensesIFRS">
+        <link:definition>652001 販売費及び一般管理費の内訳（IFRS）その他の要素</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeAndExpensesConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeAndExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>656010 その他の営業収益及びその他の営業費用の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeAndExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeAndExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>656020 その他の営業収益及びその他の営業費用の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeAndExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeAndExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>656030 その他の営業収益及びその他の営業費用の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeAndExpensesFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeAndExpensesFinancialStatementsIFRS">
+        <link:definition>656040 その他の営業収益及びその他の営業費用の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeAndExpensesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeAndExpensesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>656050 その他の営業収益及びその他の営業費用の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeAndExpensesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeAndExpensesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>656060 その他の営業収益及びその他の営業費用の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeConsolidatedFinancialStatementsIFRS">
+        <link:definition>656110 その他の営業収益の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>656120 その他の営業収益の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>656130 その他の営業収益の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeFinancialStatementsIFRS">
+        <link:definition>656140 その他の営業収益の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>656150 その他の営業収益の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingIncomeCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesOtherOperatingIncomeCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>656160 その他の営業収益の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingExpensesConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherOperatingExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>656210 その他の営業費用の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherOperatingExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>656220 その他の営業費用の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherOperatingExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>656230 その他の営業費用の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingExpensesFinancialStatementsIFRS" id="rol_NotesOtherOperatingExpensesFinancialStatementsIFRS">
+        <link:definition>656240 その他の営業費用の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingExpensesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesOtherOperatingExpensesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>656250 その他の営業費用の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherOperatingExpensesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesOtherOperatingExpensesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>656260 その他の営業費用の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExceptionalItemsConsolidatedFinancialStatementsIFRS" id="rol_NotesExceptionalItemsConsolidatedFinancialStatementsIFRS">
+        <link:definition>655910 個別開示項目の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExceptionalItemsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesExceptionalItemsCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>655920 個別開示項目の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExceptionalItemsCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesExceptionalItemsCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>655930 個別開示項目の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExceptionalItemsFinancialStatementsIFRS" id="rol_NotesExceptionalItemsFinancialStatementsIFRS">
+        <link:definition>655940 個別開示項目の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExceptionalItemsCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesExceptionalItemsCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>655950 個別開示項目の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesExceptionalItemsCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesExceptionalItemsCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>655960 個別開示項目の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherNonOperatingIncomeAndExpensesConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherNonOperatingIncomeAndExpensesConsolidatedFinancialStatementsIFRS">
+        <link:definition>658010 その他の営業外損益の内訳（IFRS）連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherNonOperatingIncomeAndExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherNonOperatingIncomeAndExpensesCondensedSemiAnnualConsolidatedFinancialStatementsIFRS">
+        <link:definition>658020 その他の営業外損益の内訳（IFRS）中間連結財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherNonOperatingIncomeAndExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS" id="rol_NotesOtherNonOperatingIncomeAndExpensesCondensedQuarterlyConsolidatedFinancialStatementsIFRS">
+        <link:definition>658030 その他の営業外損益の内訳（IFRS）四半期連結財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherNonOperatingIncomeAndExpensesFinancialStatementsIFRS" id="rol_NotesOtherNonOperatingIncomeAndExpensesFinancialStatementsIFRS">
+        <link:definition>658040 その他の営業外損益の内訳（IFRS）財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherNonOperatingIncomeAndExpensesCondensedSemiAnnualFinancialStatementsIFRS" id="rol_NotesOtherNonOperatingIncomeAndExpensesCondensedSemiAnnualFinancialStatementsIFRS">
+        <link:definition>658050 その他の営業外損益の内訳（IFRS）中間財務諸表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_NotesOtherNonOperatingIncomeAndExpensesCondensedQuarterlyFinancialStatementsIFRS" id="rol_NotesOtherNonOperatingIncomeAndExpensesCondensedQuarterlyFinancialStatementsIFRS">
+        <link:definition>658060 その他の営業外損益の内訳（IFRS）四半期財務諸表（2025年版で廃止済）</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+    </xsd:appinfo>
+  </xsd:annotation>
+</xsd:schema>

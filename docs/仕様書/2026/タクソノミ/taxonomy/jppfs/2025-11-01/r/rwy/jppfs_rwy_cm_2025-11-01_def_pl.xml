@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_rwy_StatementOfIncome-ListOfAccounts" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_rwy_StatementOfIncome-ListOfAccounts"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_rwy_StatementOfIncome-ListOfAccounts">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesAbstractRWY" xlink:label="OperatingExpensesAbstractRWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesAndCostOfSalesOfTransportationRWY" xlink:label="OperatingExpensesAndCostOfSalesOfTransportationRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractRWY" xlink:to="OperatingExpensesAndCostOfSalesOfTransportationRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpenses" xlink:label="SellingGeneralAndAdministrativeExpenses"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractRWY" xlink:to="SellingGeneralAndAdministrativeExpenses" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRWY" xlink:label="OperatingExpensesRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractRWY" xlink:to="OperatingExpensesRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitAttributableToAbstract" xlink:label="ProfitAttributableToAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLossAttributableToNonControllingInterests" xlink:label="ProfitLossAttributableToNonControllingInterests"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ProfitAttributableToAbstract" xlink:to="ProfitLossAttributableToNonControllingInterests" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLossAttributableToOwnersOfParent" xlink:label="ProfitLossAttributableToOwnersOfParent"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ProfitAttributableToAbstract" xlink:to="ProfitLossAttributableToOwnersOfParent" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeLineItems" xlink:label="StatementOfIncomeLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeRailwayAbstractRWY" xlink:label="OperatingIncomeRailwayAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncomeRailwayAbstractRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRailwayAbstractRWY" xlink:label="OperatingRevenueRailwayAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRailwayAbstractRWY" xlink:to="OperatingRevenueRailwayAbstractRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PassengerTransportationORRWY" xlink:label="PassengerTransportationORRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="PassengerTransportationORRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_FreightTransportationORRWY" xlink:label="FreightTransportationORRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="FreightTransportationORRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TrackageRevenueORRWY" xlink:label="TrackageRevenueORRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="TrackageRevenueORRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransferOfRailroadLineORRWY" xlink:label="TransferOfRailroadLineORRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="TransferOfRailroadLineORRWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MiscellaneousIncomeOfTransportationORRWY" xlink:label="MiscellaneousIncomeOfTransportationORRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="MiscellaneousIncomeOfTransportationORRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRailwayRWY" xlink:label="OperatingRevenueRailwayRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRailwayAbstractRWY" xlink:to="OperatingRevenueRailwayRWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRailwayAbstractRWY" xlink:label="OperatingExpensesRailwayAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRailwayAbstractRWY" xlink:to="OperatingExpensesRailwayAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransportationExpensesOERWY" xlink:label="TransportationExpensesOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="TransportationExpensesOERWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AdvertisingExpensesOERWY" xlink:label="AdvertisingExpensesOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="AdvertisingExpensesOERWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_WelfareFacilitiesExpensesOERWY" xlink:label="WelfareFacilitiesExpensesOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="WelfareFacilitiesExpensesOERWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GeneralAndAdministrativeExpensesOERWY" xlink:label="GeneralAndAdministrativeExpensesOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="GeneralAndAdministrativeExpensesOERWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesOERWY" xlink:label="TaxesOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="TaxesOERWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationOERWY" xlink:label="DepreciationOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="DepreciationOERWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransportationOperatingExpensesOERWY" xlink:label="TransportationOperatingExpensesOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="TransportationOperatingExpensesOERWY" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesTransportationOERWY" xlink:label="OperatingExpensesTransportationOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="OperatingExpensesTransportationOERWY" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRailwayRWY" xlink:label="OperatingExpensesRailwayRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRailwayAbstractRWY" xlink:to="OperatingExpensesRailwayRWY" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeRailwayRWY" xlink:label="OperatingIncomeRailwayRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRailwayAbstractRWY" xlink:to="OperatingIncomeRailwayRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeCableRailwayRWY" xlink:label="OperatingIncomeCableRailwayRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRailwayAbstractRWY" xlink:to="OperatingIncomeCableRailwayRWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeCablewayRWY" xlink:label="OperatingIncomeCablewayRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRailwayAbstractRWY" xlink:to="OperatingIncomeCablewayRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeRelatedAbstractRWY" xlink:label="OperatingIncomeRelatedAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncomeRelatedAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRelatedAbstractRWY" xlink:label="OperatingRevenueRelatedAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRelatedAbstractRWY" xlink:to="OperatingRevenueRelatedAbstractRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueRealEstateLeaseORRelated" xlink:label="RevenueRealEstateLeaseORRelated"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRelatedAbstractRWY" xlink:to="RevenueRealEstateLeaseORRelated" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MiscellaneousRevenueORRelated" xlink:label="MiscellaneousRevenueORRelated"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRelatedAbstractRWY" xlink:to="MiscellaneousRevenueORRelated" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRelatedRWY" xlink:label="OperatingRevenueRelatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRelatedAbstractRWY" xlink:to="OperatingRevenueRelatedRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRelatedAbstractRWY" xlink:label="OperatingExpensesRelatedAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRelatedAbstractRWY" xlink:to="OperatingExpensesRelatedAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSalesOERelated" xlink:label="CostOfSalesOERelated"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRelatedAbstractRWY" xlink:to="CostOfSalesOERelated" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpensesOERelated" xlink:label="SellingGeneralAndAdministrativeExpensesOERelated"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRelatedAbstractRWY" xlink:to="SellingGeneralAndAdministrativeExpensesOERelated" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesOERelated" xlink:label="TaxesOERelated"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRelatedAbstractRWY" xlink:to="TaxesOERelated" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationOERelated" xlink:label="DepreciationOERelated"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRelatedAbstractRWY" xlink:to="DepreciationOERelated" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRelatedRWY" xlink:label="OperatingExpensesRelatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRelatedAbstractRWY" xlink:to="OperatingExpensesRelatedRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeRelatedRWY" xlink:label="OperatingIncomeRelatedRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRelatedAbstractRWY" xlink:to="OperatingIncomeRelatedRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeAutomobileAbstractRWY" xlink:label="OperatingIncomeAutomobileAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncomeAutomobileAbstractRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueAutomobileAbstractRWY" xlink:label="OperatingRevenueAutomobileAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeAutomobileAbstractRWY" xlink:to="OperatingRevenueAutomobileAbstractRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PassengerTransportationORAutomobile" xlink:label="PassengerTransportationORAutomobile"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAutomobileAbstractRWY" xlink:to="PassengerTransportationORAutomobile" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PassengerTransportationRevenueORAutomobile" xlink:label="PassengerTransportationRevenueORAutomobile"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAutomobileAbstractRWY" xlink:to="PassengerTransportationRevenueORAutomobile" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueTransportationMiscellaneousORAutomobile" xlink:label="RevenueTransportationMiscellaneousORAutomobile"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAutomobileAbstractRWY" xlink:to="RevenueTransportationMiscellaneousORAutomobile" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueAutomobileMiscellaneousOEAutomobile" xlink:label="RevenueAutomobileMiscellaneousOEAutomobile"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAutomobileAbstractRWY" xlink:to="RevenueAutomobileMiscellaneousOEAutomobile" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueAutomobileRWY" xlink:label="OperatingRevenueAutomobileRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAutomobileAbstractRWY" xlink:to="OperatingRevenueAutomobileRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesAutomobileAbstractRWY" xlink:label="OperatingExpensesAutomobileAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeAutomobileAbstractRWY" xlink:to="OperatingExpensesAutomobileAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GeneralAndAdministrativeExpensesOEAutomobile" xlink:label="GeneralAndAdministrativeExpensesOEAutomobile"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAutomobileAbstractRWY" xlink:to="GeneralAndAdministrativeExpensesOEAutomobile" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransportationOperatingExpensesOEAutomobile" xlink:label="TransportationOperatingExpensesOEAutomobile"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAutomobileAbstractRWY" xlink:to="TransportationOperatingExpensesOEAutomobile" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationOEAutomobile" xlink:label="DepreciationOEAutomobile"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAutomobileAbstractRWY" xlink:to="DepreciationOEAutomobile" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesOEAutomobile" xlink:label="TaxesOEAutomobile"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAutomobileAbstractRWY" xlink:to="TaxesOEAutomobile" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesAutomobileRWY" xlink:label="OperatingExpensesAutomobileRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAutomobileAbstractRWY" xlink:to="OperatingExpensesAutomobileRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeAutomobileRWY" xlink:label="OperatingIncomeAutomobileRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeAutomobileAbstractRWY" xlink:to="OperatingIncomeAutomobileRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeRealEstateAbstractRWY" xlink:label="OperatingIncomeRealEstateAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncomeRealEstateAbstractRWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRealEstateAbstractRWY" xlink:label="OperatingRevenueRealEstateAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRealEstateAbstractRWY" xlink:to="OperatingRevenueRealEstateAbstractRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueRealEstateSalesORRealEstate" xlink:label="RevenueRealEstateSalesORRealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRealEstateAbstractRWY" xlink:to="RevenueRealEstateSalesORRealEstate" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueRealEstateORRealEstate" xlink:label="RevenueRealEstateORRealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRealEstateAbstractRWY" xlink:to="RevenueRealEstateORRealEstate" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetSalesORRealEstate" xlink:label="NetSalesORRealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRealEstateAbstractRWY" xlink:to="NetSalesORRealEstate" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueOtherORRealEstate" xlink:label="RevenueOtherORRealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRealEstateAbstractRWY" xlink:to="RevenueOtherORRealEstate" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLeaseORRealEstate" xlink:label="RevenueLeaseORRealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRealEstateAbstractRWY" xlink:to="RevenueLeaseORRealEstate" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRealEstateRWY" xlink:label="OperatingRevenueRealEstateRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRealEstateAbstractRWY" xlink:to="OperatingRevenueRealEstateRWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRealEstateAbstractRWY" xlink:label="OperatingExpensesRealEstateAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRealEstateAbstractRWY" xlink:to="OperatingExpensesRealEstateAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSalesOERealEstate" xlink:label="CostOfSalesOERealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRealEstateAbstractRWY" xlink:to="CostOfSalesOERealEstate" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSalesRealEstateOERealEstate" xlink:label="CostOfSalesRealEstateOERealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRealEstateAbstractRWY" xlink:to="CostOfSalesRealEstateOERealEstate" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpensesOERealEstate" xlink:label="SellingGeneralAndAdministrativeExpensesOERealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRealEstateAbstractRWY" xlink:to="SellingGeneralAndAdministrativeExpensesOERealEstate" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GeneralAndAdministrativeExpensesOERealEstate" xlink:label="GeneralAndAdministrativeExpensesOERealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRealEstateAbstractRWY" xlink:to="GeneralAndAdministrativeExpensesOERealEstate" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesOERealEstate" xlink:label="TaxesOERealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRealEstateAbstractRWY" xlink:to="TaxesOERealEstate" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationOERealEstate" xlink:label="DepreciationOERealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRealEstateAbstractRWY" xlink:to="DepreciationOERealEstate" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeLeaseOERealEstate" xlink:label="OperatingIncomeLeaseOERealEstate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRealEstateAbstractRWY" xlink:to="OperatingIncomeLeaseOERealEstate" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRealEstateRWY" xlink:label="OperatingExpensesRealEstateRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRealEstateAbstractRWY" xlink:to="OperatingExpensesRealEstateRWY" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeRealEstateRWY" xlink:label="OperatingIncomeRealEstateRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRealEstateAbstractRWY" xlink:to="OperatingIncomeRealEstateRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeDevelopmentAbstractRWY" xlink:label="OperatingIncomeDevelopmentAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncomeDevelopmentAbstractRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueDevelopmentAbstractRWY" xlink:label="OperatingRevenueDevelopmentAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeDevelopmentAbstractRWY" xlink:to="OperatingRevenueDevelopmentAbstractRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLandAndBuildingSaleInLotsORDevelopment" xlink:label="RevenueLandAndBuildingSaleInLotsORDevelopment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueDevelopmentAbstractRWY" xlink:to="RevenueLandAndBuildingSaleInLotsORDevelopment" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLandAndBuildingLeaseORDevelopment" xlink:label="RevenueLandAndBuildingLeaseORDevelopment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueDevelopmentAbstractRWY" xlink:to="RevenueLandAndBuildingLeaseORDevelopment" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLeaseORDevelopment" xlink:label="RevenueLeaseORDevelopment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueDevelopmentAbstractRWY" xlink:to="RevenueLeaseORDevelopment" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueSportsFacilitiesORDevelopment" xlink:label="RevenueSportsFacilitiesORDevelopment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueDevelopmentAbstractRWY" xlink:to="RevenueSportsFacilitiesORDevelopment" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueHotelORDevelopment" xlink:label="RevenueHotelORDevelopment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueDevelopmentAbstractRWY" xlink:to="RevenueHotelORDevelopment" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueOtherLeisureORIncidental" xlink:label="RevenueOtherLeisureORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueDevelopmentAbstractRWY" xlink:to="RevenueOtherLeisureORIncidental" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueOtherORDevelopment" xlink:label="RevenueOtherORDevelopment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueDevelopmentAbstractRWY" xlink:to="RevenueOtherORDevelopment" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueDevelopmentRWY" xlink:label="OperatingRevenueDevelopmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueDevelopmentAbstractRWY" xlink:to="OperatingRevenueDevelopmentRWY" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesDevelopmentAbstractRWY" xlink:label="OperatingExpensesDevelopmentAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeDevelopmentAbstractRWY" xlink:to="OperatingExpensesDevelopmentAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSalesOEDevelopment" xlink:label="CostOfSalesOEDevelopment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesDevelopmentAbstractRWY" xlink:to="CostOfSalesOEDevelopment" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpensesOEDevelopment" xlink:label="SellingGeneralAndAdministrativeExpensesOEDevelopment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesDevelopmentAbstractRWY" xlink:to="SellingGeneralAndAdministrativeExpensesOEDevelopment" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationOEDevelopment" xlink:label="DepreciationOEDevelopment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesDevelopmentAbstractRWY" xlink:to="DepreciationOEDevelopment" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesOEDevelopment" xlink:label="TaxesOEDevelopment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesDevelopmentAbstractRWY" xlink:to="TaxesOEDevelopment" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesDevelopmentRWY" xlink:label="OperatingExpensesDevelopmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesDevelopmentAbstractRWY" xlink:to="OperatingExpensesDevelopmentRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeDevelopmentRWY" xlink:label="OperatingIncomeDevelopmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeDevelopmentAbstractRWY" xlink:to="OperatingIncomeDevelopmentRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeIncidentalAbstractRWY" xlink:label="OperatingIncomeIncidentalAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncomeIncidentalAbstractRWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueIncidentalAbstractRWY" xlink:label="OperatingRevenueIncidentalAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeIncidentalAbstractRWY" xlink:to="OperatingRevenueIncidentalAbstractRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueRealEstateLeaseORIncidental" xlink:label="RevenueRealEstateLeaseORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueRealEstateLeaseORIncidental" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueRealEstateSalesORIncidental" xlink:label="RevenueRealEstateSalesORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueRealEstateSalesORIncidental" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLandAndBuildingLeaseORIncidental" xlink:label="RevenueLandAndBuildingLeaseORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueLandAndBuildingLeaseORIncidental" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueAdvertisingORIncidental" xlink:label="RevenueAdvertisingORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueAdvertisingORIncidental" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueRealEstateORIncidental" xlink:label="RevenueRealEstateORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueRealEstateORIncidental" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueInsuranceAgencyORIncidental" xlink:label="RevenueInsuranceAgencyORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueInsuranceAgencyORIncidental" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueMerchandiseORIncidental" xlink:label="RevenueMerchandiseORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueMerchandiseORIncidental" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLandAndBuildingORIncidental" xlink:label="RevenueLandAndBuildingORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueLandAndBuildingORIncidental" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueTourismORIncidental" xlink:label="RevenueTourismORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueTourismORIncidental" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueParkingAreaORIncidental" xlink:label="RevenueParkingAreaORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueParkingAreaORIncidental" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLandAndBuildingSaleInLotsORIncidental" xlink:label="RevenueLandAndBuildingSaleInLotsORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueLandAndBuildingSaleInLotsORIncidental" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueOtherBusinessORIncidental" xlink:label="RevenueOtherBusinessORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueOtherBusinessORIncidental" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueOtherORIncidental" xlink:label="RevenueOtherORIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="RevenueOtherORIncidental" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueIncidentalRWY" xlink:label="OperatingRevenueIncidentalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueIncidentalAbstractRWY" xlink:to="OperatingRevenueIncidentalRWY" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesIncidentalAbstractRWY" xlink:label="OperatingExpensesIncidentalAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeIncidentalAbstractRWY" xlink:to="OperatingExpensesIncidentalAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSalesOEIncidental" xlink:label="CostOfSalesOEIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIncidentalAbstractRWY" xlink:to="CostOfSalesOEIncidental" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationOEIncidental" xlink:label="DepreciationOEIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIncidentalAbstractRWY" xlink:to="DepreciationOEIncidental" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpensesOEIncidental" xlink:label="SellingGeneralAndAdministrativeExpensesOEIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIncidentalAbstractRWY" xlink:to="SellingGeneralAndAdministrativeExpensesOEIncidental" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesOEIncidental" xlink:label="TaxesOEIncidental"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIncidentalAbstractRWY" xlink:to="TaxesOEIncidental" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesIncidentalRWY" xlink:label="OperatingExpensesIncidentalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIncidentalAbstractRWY" xlink:to="OperatingExpensesIncidentalRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeIncidentalRWY" xlink:label="OperatingIncomeIncidentalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeIncidentalAbstractRWY" xlink:to="OperatingIncomeIncidentalRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeOtherAbstractRWY" xlink:label="OperatingIncomeOtherAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncomeOtherAbstractRWY" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueOtherAbstractRWY" xlink:label="OperatingRevenueOtherAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeOtherAbstractRWY" xlink:to="OperatingRevenueOtherAbstractRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueOtherOROther" xlink:label="RevenueOtherOROther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueOtherAbstractRWY" xlink:to="RevenueOtherOROther" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueRealEstateOROther" xlink:label="RevenueRealEstateOROther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueOtherAbstractRWY" xlink:to="RevenueRealEstateOROther" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueOtherBusinessOROther" xlink:label="RevenueOtherBusinessOROther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueOtherAbstractRWY" xlink:to="RevenueOtherBusinessOROther" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueGoodsSalesOROther" xlink:label="RevenueGoodsSalesOROther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueOtherAbstractRWY" xlink:to="RevenueGoodsSalesOROther" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GoodsSalesOROther" xlink:label="GoodsSalesOROther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueOtherAbstractRWY" xlink:to="GoodsSalesOROther" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueRestaurantOROther" xlink:label="RevenueRestaurantOROther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueOtherAbstractRWY" xlink:to="RevenueRestaurantOROther" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueTravelOROther" xlink:label="RevenueTravelOROther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueOtherAbstractRWY" xlink:to="RevenueTravelOROther" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueOtherRWY" xlink:label="OperatingRevenueOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueOtherAbstractRWY" xlink:to="OperatingRevenueOtherRWY" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesOtherAbstractRWY" xlink:label="OperatingExpensesOtherAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeOtherAbstractRWY" xlink:to="OperatingExpensesOtherAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSalesOEOtherRWY" xlink:label="CostOfSalesOEOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesOtherAbstractRWY" xlink:to="CostOfSalesOEOtherRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfGoodsSalesOEOther" xlink:label="CostOfGoodsSalesOEOther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesOtherAbstractRWY" xlink:to="CostOfGoodsSalesOEOther" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpensesOEOther" xlink:label="SellingGeneralAndAdministrativeExpensesOEOther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesOtherAbstractRWY" xlink:to="SellingGeneralAndAdministrativeExpensesOEOther" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesOEOther" xlink:label="TaxesOEOther"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesOtherAbstractRWY" xlink:to="TaxesOEOther" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationOEOtherRWY" xlink:label="DepreciationOEOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesOtherAbstractRWY" xlink:to="DepreciationOEOtherRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesOtherRWY" xlink:label="OperatingExpensesOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesOtherAbstractRWY" xlink:to="OperatingExpensesOtherRWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeOtherRWY" xlink:label="OperatingIncomeOtherRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeOtherAbstractRWY" xlink:to="OperatingIncomeOtherRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeSideLineAbstractRWY" xlink:label="OperatingIncomeSideLineAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncomeSideLineAbstractRWY" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueSideLineAbstractRWY" xlink:label="OperatingRevenueSideLineAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeSideLineAbstractRWY" xlink:to="OperatingRevenueSideLineAbstractRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLeaseORSideLine" xlink:label="RevenueLeaseORSideLine"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueSideLineAbstractRWY" xlink:to="RevenueLeaseORSideLine" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueOtherORSideLine" xlink:label="RevenueOtherORSideLine"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueSideLineAbstractRWY" xlink:to="RevenueOtherORSideLine" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLandAndBuildingSaleInLotsORSideLine" xlink:label="RevenueLandAndBuildingSaleInLotsORSideLine"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueSideLineAbstractRWY" xlink:to="RevenueLandAndBuildingSaleInLotsORSideLine" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherRevenueORSideLine" xlink:label="OtherRevenueORSideLine"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueSideLineAbstractRWY" xlink:to="OtherRevenueORSideLine" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueSideLineRWY" xlink:label="OperatingRevenueSideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueSideLineAbstractRWY" xlink:to="OperatingRevenueSideLineRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesSideLineAbstractRWY" xlink:label="OperatingExpensesSideLineAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeSideLineAbstractRWY" xlink:to="OperatingExpensesSideLineAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSalesOESideLineRWY" xlink:label="CostOfSalesOESideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesSideLineAbstractRWY" xlink:to="CostOfSalesOESideLineRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpensesOESideLine" xlink:label="SellingGeneralAndAdministrativeExpensesOESideLine"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesSideLineAbstractRWY" xlink:to="SellingGeneralAndAdministrativeExpensesOESideLine" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TaxesOESideLine" xlink:label="TaxesOESideLine"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesSideLineAbstractRWY" xlink:to="TaxesOESideLine" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationOESideLineRWY" xlink:label="DepreciationOESideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesSideLineAbstractRWY" xlink:to="DepreciationOESideLineRWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesSideLineRWY" xlink:label="OperatingExpensesSideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesSideLineAbstractRWY" xlink:to="OperatingExpensesSideLineRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeSideLineRWY" xlink:label="OperatingIncomeSideLineRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeSideLineAbstractRWY" xlink:to="OperatingIncomeSideLineRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeRailroadAbstractRWY" xlink:label="OperatingIncomeRailroadAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncomeRailroadAbstractRWY" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRailroadAbstractRWY" xlink:label="OperatingRevenueRailroadAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRailroadAbstractRWY" xlink:to="OperatingRevenueRailroadAbstractRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRailroadRWY" xlink:label="OperatingRevenueRailroadRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueRailroadAbstractRWY" xlink:to="OperatingRevenueRailroadRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRailroadAbstractRWY" xlink:label="OperatingExpensesRailroadAbstractRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRailroadAbstractRWY" xlink:to="OperatingExpensesRailroadAbstractRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesRailroadRWY" xlink:label="OperatingExpensesRailroadRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesRailroadAbstractRWY" xlink:to="OperatingExpensesRailroadRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeRailroadOERWY" xlink:label="OperatingIncomeRailroadOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncomeRailroadAbstractRWY" xlink:to="OperatingIncomeRailroadOERWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncome" xlink:label="OperatingIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncome" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueTotalRWY" xlink:label="OperatingRevenueTotalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncome" xlink:to="OperatingRevenueTotalRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesTotalRWY" xlink:label="OperatingExpensesTotalRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncome" xlink:to="OperatingExpensesTotalRWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueRWY" xlink:label="OperatingRevenueRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncome" xlink:to="OperatingRevenueRWY" order="3.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingIncome" xlink:to="OperatingExpensesAbstractRWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingIncomeAbstract" xlink:label="NonOperatingIncomeAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="NonOperatingIncomeAbstract" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestAndDiscountsEarnedNOIRWY" xlink:label="InterestAndDiscountsEarnedNOIRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="InterestAndDiscountsEarnedNOIRWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnSecuritiesNOI" xlink:label="InterestOnSecuritiesNOI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="InterestOnSecuritiesNOI" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsIncomeNOI" xlink:label="DividendsIncomeNOI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="DividendsIncomeNOI" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfSecuritiesNOI" xlink:label="GainOnSalesOfSecuritiesNOI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="GainOnSalesOfSecuritiesNOI" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnValuationOfSecuritiesNOI" xlink:label="GainOnValuationOfSecuritiesNOI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="GainOnValuationOfSecuritiesNOI" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfGoodsNOIRWY" xlink:label="GainOnSalesOfGoodsNOIRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="GainOnSalesOfGoodsNOIRWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueLandRentNOIRWY" xlink:label="RevenueLandRentNOIRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="RevenueLandRentNOIRWY" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ReversalOfClericalCostsOnWorkPerformedOnContractNOIRWY" xlink:label="ReversalOfClericalCostsOnWorkPerformedOnContractNOIRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="ReversalOfClericalCostsOnWorkPerformedOnContractNOIRWY" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MiscellaneousIncomeNOIRWY" xlink:label="MiscellaneousIncomeNOIRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="MiscellaneousIncomeNOIRWY" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingIncome" xlink:label="NonOperatingIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="NonOperatingIncome" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingExpensesAbstract" xlink:label="NonOperatingExpensesAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="NonOperatingExpensesAbstract" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestAndDiscountsExpensesNOERWY" xlink:label="InterestAndDiscountsExpensesNOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingExpensesAbstract" xlink:to="InterestAndDiscountsExpensesNOERWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnBondsNOE" xlink:label="InterestOnBondsNOE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingExpensesAbstract" xlink:to="InterestOnBondsNOE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfSecuritiesNOE" xlink:label="LossOnSalesOfSecuritiesNOE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingExpensesAbstract" xlink:to="LossOnSalesOfSecuritiesNOE" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnValuationOfSecuritiesNOE" xlink:label="LossOnValuationOfSecuritiesNOE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingExpensesAbstract" xlink:to="LossOnValuationOfSecuritiesNOE" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfGoodsNOERWY" xlink:label="LossOnSalesOfGoodsNOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingExpensesAbstract" xlink:to="LossOnSalesOfGoodsNOERWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnLongTermAccountsPayableRailwayEquipmentRWY" xlink:label="InterestOnLongTermAccountsPayableRailwayEquipmentRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingExpensesAbstract" xlink:to="InterestOnLongTermAccountsPayableRailwayEquipmentRWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MiscellaneousExpensesNOERWY" xlink:label="MiscellaneousExpensesNOERWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingExpensesAbstract" xlink:to="MiscellaneousExpensesNOERWY" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingExpenses" xlink:label="NonOperatingExpenses"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingExpensesAbstract" xlink:to="NonOperatingExpenses" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncome" xlink:label="OrdinaryIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="OrdinaryIncome" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryIncomeAbstract" xlink:label="ExtraordinaryIncomeAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="ExtraordinaryIncomeAbstract" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfNoncurrentAssetsEI" xlink:label="GainOnSalesOfNoncurrentAssetsEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryIncomeAbstract" xlink:to="GainOnSalesOfNoncurrentAssetsEI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnNegativeGoodwillEI" xlink:label="GainOnNegativeGoodwillEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryIncomeAbstract" xlink:to="GainOnNegativeGoodwillEI" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SubsidyEIRWY" xlink:label="SubsidyEIRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryIncomeAbstract" xlink:to="SubsidyEIRWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EvaluationOnRailwayFacilitiesAsReceivedPropertyEIRWY" xlink:label="EvaluationOnRailwayFacilitiesAsReceivedPropertyEIRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryIncomeAbstract" xlink:to="EvaluationOnRailwayFacilitiesAsReceivedPropertyEIRWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DonationForRailwayFacilitiesConstructionEIRWY" xlink:label="DonationForRailwayFacilitiesConstructionEIRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryIncomeAbstract" xlink:to="DonationForRailwayFacilitiesConstructionEIRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ReversalOfSpecialReserveForExpansionOfRailwayTransportCapacityEIRWY" xlink:label="ReversalOfSpecialReserveForExpansionOfRailwayTransportCapacityEIRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryIncomeAbstract" xlink:to="ReversalOfSpecialReserveForExpansionOfRailwayTransportCapacityEIRWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryIncome" xlink:label="ExtraordinaryIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryIncomeAbstract" xlink:to="ExtraordinaryIncome" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryLossAbstract" xlink:label="ExtraordinaryLossAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="ExtraordinaryLossAbstract" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfNoncurrentAssetsEL" xlink:label="LossOnSalesOfNoncurrentAssetsEL"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryLossAbstract" xlink:to="LossOnSalesOfNoncurrentAssetsEL" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ImpairmentLossEL" xlink:label="ImpairmentLossEL"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryLossAbstract" xlink:to="ImpairmentLossEL" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonrecurringLossEL" xlink:label="NonrecurringLossEL"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryLossAbstract" xlink:to="NonrecurringLossEL" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RetirementExpensesELRWY" xlink:label="RetirementExpensesELRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryLossAbstract" xlink:to="RetirementExpensesELRWY" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfDeferredDisasterLossRWY" xlink:label="AmortizationOfDeferredDisasterLossRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryLossAbstract" xlink:to="AmortizationOfDeferredDisasterLossRWY" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfSpecialReserveForExpansionOfRailwayTransportCapacityELRWY" xlink:label="ProvisionOfSpecialReserveForExpansionOfRailwayTransportCapacityELRWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryLossAbstract" xlink:to="ProvisionOfSpecialReserveForExpansionOfRailwayTransportCapacityELRWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryLoss" xlink:label="ExtraordinaryLoss"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryLossAbstract" xlink:to="ExtraordinaryLoss" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeBeforeIncomeTaxes" xlink:label="IncomeBeforeIncomeTaxes"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeBeforeIncomeTaxes" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxes" xlink:label="IncomeTaxes"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxes" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesCurrent" xlink:label="IncomeTaxesCurrent"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IncomeTaxes" xlink:to="IncomeTaxesCurrent" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesDeferred" xlink:label="IncomeTaxesDeferred"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IncomeTaxes" xlink:to="IncomeTaxesDeferred" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeLineItems" xlink:to="ProfitLoss" order="18.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ProfitLoss" xlink:to="ProfitAttributableToAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeAbstract" xlink:label="StatementOfIncomeAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeTable" xlink:label="StatementOfIncomeTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAbstract" xlink:to="StatementOfIncomeTable" order="1.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAbstract" xlink:to="StatementOfIncomeLineItems" order="2.0"/>
+  </link:definitionLink>
+</link:linkbase>

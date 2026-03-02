@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesSegmentInformationEtcConsolidatedFinancialStatements-06" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_NotesSegmentInformationEtcConsolidatedFinancialStatements-06"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesSegmentInformationEtcConsolidatedFinancialStatements-06">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OperatingSegmentsAxis" xlink:label="OperatingSegmentsAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_EntityTotalMember" xlink:label="EntityTotalMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="OperatingSegmentsAxis" xlink:to="EntityTotalMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_EntityTotalMember" xlink:label="EntityTotalMember_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="OperatingSegmentsAxis" xlink:to="EntityTotalMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_UnallocatedAmountsAndEliminationMember" xlink:label="UnallocatedAmountsAndEliminationMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EntityTotalMember" xlink:to="UnallocatedAmountsAndEliminationMember" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ReportableSegmentsMember" xlink:label="ReportableSegmentsMember"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OtherReportableSegmentsMember" xlink:label="OtherReportableSegmentsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ReportableSegmentsMember" xlink:to="OtherReportableSegmentsMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember" xlink:label="OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EntityTotalMember" xlink:to="OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember" order="2.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="EntityTotalMember" xlink:to="ReportableSegmentsMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesSegmentInformationEtcConsolidatedFinancialStatementsHeading" xlink:label="NotesSegmentInformationEtcConsolidatedFinancialStatementsHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentAbstract" xlink:label="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NotesSegmentInformationEtcConsolidatedFinancialStatementsHeading" xlink:to="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentTable" xlink:label="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentAbstract" xlink:to="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentTable" xlink:to="OperatingSegmentsAxis" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentLineItems" xlink:label="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentAbstract" xlink:to="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentLineItems" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfGoodwillSGA" xlink:label="AmortizationOfGoodwillSGA"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentLineItems" xlink:to="AmortizationOfGoodwillSGA" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_Goodwill" xlink:label="Goodwill"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentLineItems" xlink:to="Goodwill" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_GoodwillBeforeOffsetting" xlink:label="GoodwillBeforeOffsetting"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AmortizationAndUnamortizedBalanceOfGoodwillForEachReportableSegmentLineItems" xlink:to="GoodwillBeforeOffsetting" order="3.0"/>
+  </link:definitionLink>
+</link:linkbase>

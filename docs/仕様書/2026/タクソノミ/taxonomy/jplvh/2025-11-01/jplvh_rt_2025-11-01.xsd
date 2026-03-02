@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/jplvh_rt" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jplvh_rt="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/jplvh_rt" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1ReportOfLargeVolumeHolding" id="rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1ReportOfLargeVolumeHolding">
+        <link:definition>株券等の大量保有の状況の開示に関する内閣府令 第一号様式 大量保有報告書</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHolding" id="rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHolding">
+        <link:definition>株券等の大量保有の状況の開示に関する内閣府令 第一号及び第二号様式 大量保有報告書</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo3ReportOfLargeVolumeHolding" id="rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo3ReportOfLargeVolumeHolding">
+        <link:definition>株券等の大量保有の状況の開示に関する内閣府令 第三号様式 大量保有報告書</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_CoverPage" id="rol_std_CoverPage">
+        <link:definition>表紙</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_InformationAboutIssuer" id="rol_std_InformationAboutIssuer">
+        <link:definition>発行者に関する事項</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_InformationAboutFilers" id="rol_std_InformationAboutFilers">
+        <link:definition>提出者に関する事項</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_InformationAboutJointHolders" id="rol_std_InformationAboutJointHolders">
+        <link:definition>共同保有者に関する事項</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_FilersAndJointHolders" id="rol_std_FilersAndJointHolders">
+        <link:definition>提出者及び共同保有者</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_NumberOfStocksEtcHeldSummary" id="rol_std_NumberOfStocksEtcHeldSummary">
+        <link:definition>保有株券等の数、総括表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_HoldingRatioOfShareCertificatesEtcSummary" id="rol_std_HoldingRatioOfShareCertificatesEtcSummary">
+        <link:definition>株券等保有割合、総括表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_HoldingRatioOfShareCertificatesEtcHeldByJointHolding" id="rol_std_HoldingRatioOfShareCertificatesEtcHeldByJointHolding">
+        <link:definition>共同保有における株券等保有割合の内訳</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_AdditionalDEIForReportOfLargeVolumeHolding" id="rol_std_AdditionalDEIForReportOfLargeVolumeHolding">
+        <link:definition>大量保有報告書の追加DEI</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1ReportOfLargeVolumeHolding" id="rol_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1ReportOfLargeVolumeHolding">
+        <link:definition>株券等の大量保有の状況の開示に関する内閣府令 第一号様式 大量保有報告書</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHolding" id="rol_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHolding">
+        <link:definition>株券等の大量保有の状況の開示に関する内閣府令 第一号及び第二号様式 大量保有報告書</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo3ReportOfLargeVolumeHolding" id="rol_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo3ReportOfLargeVolumeHolding">
+        <link:definition>株券等の大量保有の状況の開示に関する内閣府令 第三号様式 大量保有報告書</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_CoverPage" id="rol_CoverPage">
+        <link:definition>表紙</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_InformationAboutIssuer" id="rol_InformationAboutIssuer">
+        <link:definition>発行者に関する事項</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_InformationAboutFilers" id="rol_InformationAboutFilers">
+        <link:definition>提出者に関する事項</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_InformationAboutJointHolders" id="rol_InformationAboutJointHolders">
+        <link:definition>共同保有者に関する事項</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_FilersAndJointHolders" id="rol_FilersAndJointHolders">
+        <link:definition>提出者及び共同保有者</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_NumberOfStocksEtcHeldSummary" id="rol_NumberOfStocksEtcHeldSummary">
+        <link:definition>保有株券等の数、総括表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_HoldingRatioOfShareCertificatesEtcSummary" id="rol_HoldingRatioOfShareCertificatesEtcSummary">
+        <link:definition>株券等保有割合、総括表</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_HoldingRatioOfShareCertificatesEtcHeldByJointHolding" id="rol_HoldingRatioOfShareCertificatesEtcHeldByJointHolding">
+        <link:definition>共同保有における株券等保有割合の内訳</link:definition>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+        <link:usedOn>link:footnoteLink</link:usedOn>
+      </link:roleType>
+    </xsd:appinfo>
+  </xsd:annotation>
+</xsd:schema>

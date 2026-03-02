@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_BalanceSheet"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:label="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsHighwayBusinessNCAHWY" xlink:label="BuildingsHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="BuildingsHighwayBusinessNCAHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationBuildingHighwayBusinessNCAHWY" xlink:label="AccumulatedDepreciationBuildingHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BuildingsHighwayBusinessNCAHWY" xlink:to="AccumulatedDepreciationBuildingHighwayBusinessNCAHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsNetHighwayBusinessNCAHWY" xlink:label="BuildingsNetHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BuildingsHighwayBusinessNCAHWY" xlink:to="BuildingsNetHighwayBusinessNCAHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresHighwayBusinessNCAHWY" xlink:label="StructuresHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="StructuresHighwayBusinessNCAHWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationStructuresHighwayBusinessNCAHWY" xlink:label="AccumulatedDepreciationStructuresHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StructuresHighwayBusinessNCAHWY" xlink:to="AccumulatedDepreciationStructuresHighwayBusinessNCAHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresNetHighwayBusinessNCAHWY" xlink:label="StructuresNetHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StructuresHighwayBusinessNCAHWY" xlink:to="StructuresNetHighwayBusinessNCAHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentHighwayBusinessNCAHWY" xlink:label="MachineryAndEquipmentHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="MachineryAndEquipmentHighwayBusinessNCAHWY" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationMachineryAndEquipmentHighwayBusinessNCAHWY" xlink:label="AccumulatedDepreciationMachineryAndEquipmentHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MachineryAndEquipmentHighwayBusinessNCAHWY" xlink:to="AccumulatedDepreciationMachineryAndEquipmentHighwayBusinessNCAHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentNetHighwayBusinessNCAHWY" xlink:label="MachineryAndEquipmentNetHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MachineryAndEquipmentHighwayBusinessNCAHWY" xlink:to="MachineryAndEquipmentNetHighwayBusinessNCAHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesHighwayBusinessNCAHWY" xlink:label="VehiclesHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="VehiclesHighwayBusinessNCAHWY" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationVehiclesHighwayBusinessNCAHWY" xlink:label="AccumulatedDepreciationVehiclesHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="VehiclesHighwayBusinessNCAHWY" xlink:to="AccumulatedDepreciationVehiclesHighwayBusinessNCAHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesNetHighwayBusinessNCAHWY" xlink:label="VehiclesNetHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="VehiclesHighwayBusinessNCAHWY" xlink:to="VehiclesNetHighwayBusinessNCAHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesHighwayBusinessNCAHWY" xlink:label="ToolsFurnitureAndFixturesHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentHighwayBusinessNCAAbstractHWY" xlink:to="ToolsFurnitureAndFixturesHighwayBusinessNCAHWY" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationToolsFurnitureAndFixturesHighwayBusinessNCAHWY" xlink:label="AccumulatedDepreciationToolsFurnitureAndFixturesHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ToolsFurnitureAndFixturesHighwayBusinessNCAHWY" xlink:to="AccumulatedDepreciationToolsFurnitureAndFixturesHighwayBusinessNCAHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesNetHighwayBusinessNCAHWY" xlink:label="ToolsFurnitureAndFixturesNetHighwayBusinessNCAHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ToolsFurnitureAndFixturesHighwayBusinessNCAHWY" xlink:to="ToolsFurnitureAndFixturesNetHighwayBusinessNCAHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:label="PropertyPlantAndEquipmentNCARelatedAbstractHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsNCARelatedHWY" xlink:label="BuildingsNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="BuildingsNCARelatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationBuildingNCARelatedHWY" xlink:label="AccumulatedDepreciationBuildingNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BuildingsNCARelatedHWY" xlink:to="AccumulatedDepreciationBuildingNCARelatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsNetNCARelatedHWY" xlink:label="BuildingsNetNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BuildingsNCARelatedHWY" xlink:to="BuildingsNetNCARelatedHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresNCARelatedHWY" xlink:label="StructuresNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="StructuresNCARelatedHWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationStructuresNCARelatedHWY" xlink:label="AccumulatedDepreciationStructuresNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StructuresNCARelatedHWY" xlink:to="AccumulatedDepreciationStructuresNCARelatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresNetNCARelatedHWY" xlink:label="StructuresNetNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StructuresNCARelatedHWY" xlink:to="StructuresNetNCARelatedHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentNCARelatedHWY" xlink:label="MachineryAndEquipmentNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="MachineryAndEquipmentNCARelatedHWY" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationMachineryAndEquipmentNCARelatedHWY" xlink:label="AccumulatedDepreciationMachineryAndEquipmentNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MachineryAndEquipmentNCARelatedHWY" xlink:to="AccumulatedDepreciationMachineryAndEquipmentNCARelatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentNetNCARelatedHWY" xlink:label="MachineryAndEquipmentNetNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MachineryAndEquipmentNCARelatedHWY" xlink:to="MachineryAndEquipmentNetNCARelatedHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesNCARelatedHWY" xlink:label="VehiclesNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="VehiclesNCARelatedHWY" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationVehiclesNCARelatedHWY" xlink:label="AccumulatedDepreciationVehiclesNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="VehiclesNCARelatedHWY" xlink:to="AccumulatedDepreciationVehiclesNCARelatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesNetNCARelatedHWY" xlink:label="VehiclesNetNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="VehiclesNCARelatedHWY" xlink:to="VehiclesNetNCARelatedHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesNCARelatedHWY" xlink:label="ToolsFurnitureAndFixturesNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentNCARelatedAbstractHWY" xlink:to="ToolsFurnitureAndFixturesNCARelatedHWY" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationToolsFurnitureAndFixturesNCARelatedHWY" xlink:label="AccumulatedDepreciationToolsFurnitureAndFixturesNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ToolsFurnitureAndFixturesNCARelatedHWY" xlink:to="AccumulatedDepreciationToolsFurnitureAndFixturesNCARelatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesNetNCARelatedHWY" xlink:label="ToolsFurnitureAndFixturesNetNCARelatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ToolsFurnitureAndFixturesNCARelatedHWY" xlink:to="ToolsFurnitureAndFixturesNetNCARelatedHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:label="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsNCAAffiliatedHWY" xlink:label="BuildingsNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="BuildingsNCAAffiliatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationBuildingNCAAffiliatedHWY" xlink:label="AccumulatedDepreciationBuildingNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BuildingsNCAAffiliatedHWY" xlink:to="AccumulatedDepreciationBuildingNCAAffiliatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsNetNCAAffiliatedHWY" xlink:label="BuildingsNetNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BuildingsNCAAffiliatedHWY" xlink:to="BuildingsNetNCAAffiliatedHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresNCAAffiliatedHWY" xlink:label="StructuresNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="StructuresNCAAffiliatedHWY" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationStructuresNCAAffiliatedHWY" xlink:label="AccumulatedDepreciationStructuresNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StructuresNCAAffiliatedHWY" xlink:to="AccumulatedDepreciationStructuresNCAAffiliatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresNetNCAAffiliatedHWY" xlink:label="StructuresNetNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StructuresNCAAffiliatedHWY" xlink:to="StructuresNetNCAAffiliatedHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentNCAAffiliatedHWY" xlink:label="MachineryAndEquipmentNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="MachineryAndEquipmentNCAAffiliatedHWY" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationMachineryAndEquipmentNCAAffiliatedHWY" xlink:label="AccumulatedDepreciationMachineryAndEquipmentNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MachineryAndEquipmentNCAAffiliatedHWY" xlink:to="AccumulatedDepreciationMachineryAndEquipmentNCAAffiliatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentNetNCAAffiliatedHWY" xlink:label="MachineryAndEquipmentNetNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MachineryAndEquipmentNCAAffiliatedHWY" xlink:to="MachineryAndEquipmentNetNCAAffiliatedHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesNCAAffiliatedHWY" xlink:label="VehiclesNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="VehiclesNCAAffiliatedHWY" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationVehiclesNCAAffiliatedHWY" xlink:label="AccumulatedDepreciationVehiclesNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="VehiclesNCAAffiliatedHWY" xlink:to="AccumulatedDepreciationVehiclesNCAAffiliatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesNetNCAAffiliatedHWY" xlink:label="VehiclesNetNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="VehiclesNCAAffiliatedHWY" xlink:to="VehiclesNetNCAAffiliatedHWY" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesNCAAffiliatedHWY" xlink:label="ToolsFurnitureAndFixturesNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PropertyPlantAndEquipmentNCAAffiliatedAbstractHWY" xlink:to="ToolsFurnitureAndFixturesNCAAffiliatedHWY" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedDepreciationToolsFurnitureAndFixturesNCAAffiliatedHWY" xlink:label="AccumulatedDepreciationToolsFurnitureAndFixturesNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ToolsFurnitureAndFixturesNCAAffiliatedHWY" xlink:to="AccumulatedDepreciationToolsFurnitureAndFixturesNCAAffiliatedHWY" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesNetNCAAffiliatedHWY" xlink:label="ToolsFurnitureAndFixturesNetNCAAffiliatedHWY"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ToolsFurnitureAndFixturesNCAAffiliatedHWY" xlink:to="ToolsFurnitureAndFixturesNetNCAAffiliatedHWY" order="3.0"/>
+  </link:definitionLink>
+</link:linkbase>

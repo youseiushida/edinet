@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jpdei_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd"/>
+  <xsd:element name="DocumentAndEntityInformationDEIAbstract" id="jpdei_cor_DocumentAndEntityInformationDEIAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="EntityInformationDEIAbstract" id="jpdei_cor_EntityInformationDEIAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="EDINETCodeDEI" id="jpdei_cor_EDINETCodeDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="FundCodeDEI" id="jpdei_cor_FundCodeDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="SecurityCodeDEI" id="jpdei_cor_SecurityCodeDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="FilerNameInJapaneseDEI" id="jpdei_cor_FilerNameInJapaneseDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="FilerNameInEnglishDEI" id="jpdei_cor_FilerNameInEnglishDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="FundNameInJapaneseDEI" id="jpdei_cor_FundNameInJapaneseDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="FundNameInEnglishDEI" id="jpdei_cor_FundNameInEnglishDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="DocumentInformationDEIAbstract" id="jpdei_cor_DocumentInformationDEIAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="CabinetOfficeOrdinanceDEI" id="jpdei_cor_CabinetOfficeOrdinanceDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="DocumentTypeDEI" id="jpdei_cor_DocumentTypeDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="AccountingStandardsDEI" id="jpdei_cor_AccountingStandardsDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="WhetherConsolidatedFinancialStatementsArePreparedDEI" id="jpdei_cor_WhetherConsolidatedFinancialStatementsArePreparedDEI" type="xbrli:booleanItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI" id="jpdei_cor_IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI" id="jpdei_cor_IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="CurrentPeriodDEIAbstract" id="jpdei_cor_CurrentPeriodDEIAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="CurrentFiscalYearStartDateDEI" id="jpdei_cor_CurrentFiscalYearStartDateDEI" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="CurrentPeriodEndDateDEI" id="jpdei_cor_CurrentPeriodEndDateDEI" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="TypeOfCurrentPeriodDEI" id="jpdei_cor_TypeOfCurrentPeriodDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="CurrentFiscalYearEndDateDEI" id="jpdei_cor_CurrentFiscalYearEndDateDEI" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ComparativePeriodDEIAbstract" id="jpdei_cor_ComparativePeriodDEIAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="PreviousFiscalYearStartDateDEI" id="jpdei_cor_PreviousFiscalYearStartDateDEI" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ComparativePeriodEndDateDEI" id="jpdei_cor_ComparativePeriodEndDateDEI" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="PreviousFiscalYearEndDateDEI" id="jpdei_cor_PreviousFiscalYearEndDateDEI" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="QuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEIAbstract" id="jpdei_cor_QuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEIAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="NextFiscalYearStartDateDEI" id="jpdei_cor_NextFiscalYearStartDateDEI" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI" id="jpdei_cor_EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="NumberOfSubmissionDEI" id="jpdei_cor_NumberOfSubmissionDEI" type="xbrli:nonNegativeIntegerItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="AmendmentFlagDEI" id="jpdei_cor_AmendmentFlagDEI" type="xbrli:booleanItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="IdentificationOfDocumentSubjectToAmendmentDEI" id="jpdei_cor_IdentificationOfDocumentSubjectToAmendmentDEI" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="TypeOfAmendmentDEIAbstract" id="jpdei_cor_TypeOfAmendmentDEIAbstract" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="ReportAmendmentFlagDEI" id="jpdei_cor_ReportAmendmentFlagDEI" type="xbrli:booleanItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="XBRLAmendmentFlagDEI" id="jpdei_cor_XBRLAmendmentFlagDEI" type="xbrli:booleanItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+</xsd:schema>

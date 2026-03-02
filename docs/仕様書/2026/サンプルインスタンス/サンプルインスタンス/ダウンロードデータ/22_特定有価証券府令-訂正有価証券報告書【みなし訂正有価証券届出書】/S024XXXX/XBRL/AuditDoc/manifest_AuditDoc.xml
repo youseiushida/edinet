@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://disclosure.edinet-fsa.go.jp/2013/manifest" xmlns:jpsps_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_cor">
+	<tocComposition>
+		<title xml:lang="ja">独立監査人の報告書</title>
+		<title xml:lang="en">Independent Auditor's Report</title>
+		<item ref="jpaud" extrole="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_IndependentAuditorsReport" in="presentation">
+			<insert parent="jpsps_cor:IndependentAuditorsReportHeading">
+				<item ref="jpaud_1" extrole="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_IndependentAuditorsReport" start="jpsps_cor:IndependentAuditorsReportHeading" in="presentation"/>
+			</insert>
+			<insert parent="jpsps_cor:IndependentAuditorsReportHeading">
+				<item ref="jpaud_2" extrole="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_IndependentAuditorsReport" start="jpsps_cor:IndependentAuditorsReportHeading" in="presentation"/>
+			</insert>
+		</item>
+	</tocComposition>
+	<list>
+		<instance id="jpaud" type="AuditDoc" preferredFilename="jpaud-aar-cn-001_Y99009-001_2027-01-31_03_2027-06-26.xbrl">
+			<ixbrl>jpaud-aar-cn-001_Y99009-001_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+		</instance>
+		<instance id="jpaud_1" type="AuditDoc" preferredFilename="jpaud-aar-cn-001_Y99009-002_2027-01-31_03_2027-06-26.xbrl">
+			<ixbrl>jpaud-aar-cn-001_Y99009-002_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+		</instance>
+		<instance id="jpaud_2" type="AuditDoc" preferredFilename="jpaud-aar-cn-001_X99009-000_2027-01-31_03_2027-06-26.xbrl">
+			<ixbrl>jpaud-aar-cn-001_X99009-000_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+		</instance>
+	</list>
+</manifest>

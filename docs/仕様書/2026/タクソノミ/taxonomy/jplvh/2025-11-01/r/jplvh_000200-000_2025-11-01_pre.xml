@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_InformationAboutIssuer" xlink:type="simple" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_InformationAboutIssuer"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_InformationAboutIssuer">
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutIssuerHeading" xlink:label="InformationAboutIssuerHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NameOfIssuer" xlink:label="NameOfIssuer"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutIssuerHeading" xlink:to="NameOfIssuer" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SecurityCodeOfIssuer" xlink:label="SecurityCodeOfIssuer"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutIssuerHeading" xlink:to="SecurityCodeOfIssuer" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ListedOrOTC" xlink:label="ListedOrOTC"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutIssuerHeading" xlink:to="ListedOrOTC" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockListing" xlink:label="StockListing"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutIssuerHeading" xlink:to="StockListing" order="4.0"/>
+  </link:presentationLink>
+</link:linkbase>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo9AnnualSecuritiesReport" xlink:type="simple" xlink:href="../jpsps_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo9AnnualSecuritiesReport"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_std_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo9AnnualSecuritiesReport">
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo9AnnualSecuritiesReportHeading" xlink:label="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo9AnnualSecuritiesReportHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_InformationAboutTrustPropertyHeading" xlink:label="InformationAboutTrustPropertyHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo9AnnualSecuritiesReportHeading" xlink:to="InformationAboutTrustPropertyHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_FinancialInformationAboutTrustPropertyHeading" xlink:label="FinancialInformationAboutTrustPropertyHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutTrustPropertyHeading" xlink:to="FinancialInformationAboutTrustPropertyHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_BalanceSheetHeading" xlink:label="BalanceSheetHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FinancialInformationAboutTrustPropertyHeading" xlink:to="BalanceSheetHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_BalanceSheetTextBlock" xlink:label="BalanceSheetTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BalanceSheetHeading" xlink:to="BalanceSheetTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeHeading" xlink:label="StatementOfIncomeHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FinancialInformationAboutTrustPropertyHeading" xlink:to="StatementOfIncomeHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps_cor_2025-11-01.xsd#jpsps_cor_StatementOfIncomeTextBlock" xlink:label="StatementOfIncomeTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeHeading" xlink:to="StatementOfIncomeTextBlock" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

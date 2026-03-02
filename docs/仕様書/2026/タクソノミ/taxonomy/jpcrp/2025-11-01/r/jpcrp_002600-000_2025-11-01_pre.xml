@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesSemiAnnualStatementOfChangesInEquity" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_NotesSemiAnnualStatementOfChangesInEquity"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesSemiAnnualStatementOfChangesInEquity">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_NonConsolidatedMember" xlink:label="NonConsolidatedMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="NonConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesSemiAnnualStatementOfChangesInEquityHeading" xlink:label="NotesSemiAnnualStatementOfChangesInEquityHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesSemiAnnualStatementOfChangesInEquityTable" xlink:label="NotesSemiAnnualStatementOfChangesInEquityTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualStatementOfChangesInEquityHeading" xlink:to="NotesSemiAnnualStatementOfChangesInEquityTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualStatementOfChangesInEquityTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesSemiAnnualStatementOfChangesInEquityLineItems" xlink:label="NotesSemiAnnualStatementOfChangesInEquityLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualStatementOfChangesInEquityHeading" xlink:to="NotesSemiAnnualStatementOfChangesInEquityLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingIssuedSharesAndTreasurySharesTextBlock" xlink:label="NotesRegardingIssuedSharesAndTreasurySharesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualStatementOfChangesInEquityLineItems" xlink:to="NotesRegardingIssuedSharesAndTreasurySharesTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingTreasurySharesTextBlock" xlink:label="NotesRegardingTreasurySharesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualStatementOfChangesInEquityLineItems" xlink:to="NotesRegardingTreasurySharesTextBlock" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingNewShareSubscriptionRightsEtcTextBlock" xlink:label="NotesRegardingNewShareSubscriptionRightsEtcTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualStatementOfChangesInEquityLineItems" xlink:to="NotesRegardingNewShareSubscriptionRightsEtcTextBlock" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingDividendTextBlock" xlink:label="NotesRegardingDividendTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualStatementOfChangesInEquityLineItems" xlink:to="NotesRegardingDividendTextBlock" order="4.0"/>
+  </link:presentationLink>
+</link:linkbase>

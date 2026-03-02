@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_StatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfIncome"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_StatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSales" xlink:label="CostOfSales"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfGoodsSold" xlink:label="CostOfGoodsSold_2"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CostOfSales" xlink:to="CostOfGoodsSold_2" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfGoodsSold" xlink:label="CostOfGoodsSold"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TotalBeginningAndPurchaseOfGoods" xlink:label="TotalBeginningAndPurchaseOfGoods_2"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CostOfGoodsSold" xlink:to="TotalBeginningAndPurchaseOfGoods_2" order="5.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TotalBeginningAndPurchaseOfGoods" xlink:label="TotalBeginningAndPurchaseOfGoods"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BeginningGoodsCOS" xlink:label="BeginningGoodsCOS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalBeginningAndPurchaseOfGoods" xlink:to="BeginningGoodsCOS" order="7.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfPurchasedGoods" xlink:label="CostOfPurchasedGoods"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalBeginningAndPurchaseOfGoods" xlink:to="CostOfPurchasedGoods" order="8.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EndingGoodsCOS" xlink:label="EndingGoodsCOS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CostOfGoodsSold" xlink:to="EndingGoodsCOS" order="6.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfFinishedGoodsSold" xlink:label="CostOfFinishedGoodsSold_2"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CostOfSales" xlink:to="CostOfFinishedGoodsSold_2" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfFinishedGoodsSold" xlink:label="CostOfFinishedGoodsSold"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TotalBeginningFinishedGoodsAndCostOfProductsManufacturedForThePeriod" xlink:label="TotalBeginningFinishedGoodsAndCostOfProductsManufacturedForThePeriod_2"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CostOfFinishedGoodsSold" xlink:to="TotalBeginningFinishedGoodsAndCostOfProductsManufacturedForThePeriod_2" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TotalBeginningFinishedGoodsAndCostOfProductsManufacturedForThePeriod" xlink:label="TotalBeginningFinishedGoodsAndCostOfProductsManufacturedForThePeriod"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BeginningFinishedGoodsCOS" xlink:label="BeginningFinishedGoodsCOS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalBeginningFinishedGoodsAndCostOfProductsManufacturedForThePeriod" xlink:to="BeginningFinishedGoodsCOS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfProductsManufactured" xlink:label="CostOfProductsManufactured"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="TotalBeginningFinishedGoodsAndCostOfProductsManufacturedForThePeriod" xlink:to="CostOfProductsManufactured" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EndingFinishedGoodsCOS" xlink:label="EndingFinishedGoodsCOS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="CostOfFinishedGoodsSold" xlink:to="EndingFinishedGoodsCOS" order="4.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GrossProfit" xlink:label="GrossProfit"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="GrossProfit" xlink:to="CostOfSales" order="7.0" weight="-1"/>
+  </link:calculationLink>
+</link:linkbase>

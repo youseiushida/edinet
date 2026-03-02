@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/jpaud/sar/cc/001/X99006-000/2026-09-30/01/2026-12-13" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jpaud-sar-cc_X99006-000="http://disclosure.edinet-fsa.go.jp/jpaud/sar/cc/001/X99006-000/2026-09-30/01/2026-12-13" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jpaud-sar-cc-001_X99006-000_2026-09-30_01_2026-12-13_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/label/jpcrp_2025-11-01_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/label/jpcrp_2025-11-01_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/label/jpcrp_2025-11-01_gla.xml" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_rt" schemaLocation="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2025-11-01/jpcrp_rt_2025-11-01.xsd"/>
+</xsd:schema>

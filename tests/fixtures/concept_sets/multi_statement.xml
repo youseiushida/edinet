@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+
+  <!-- BS role -->
+  <link:presentationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedBalanceSheet">
+
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_BalanceSheetHeading"
+        xlink:label="loc_BSHeading"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_BalanceSheetTable"
+        xlink:label="loc_BSTable"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_BalanceSheetLineItems"
+        xlink:label="loc_BSLineItems"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_TotalAssets"
+        xlink:label="loc_TotalAssets"/>
+
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_BSHeading" xlink:to="loc_BSTable" order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_BSTable" xlink:to="loc_BSLineItems" order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_BSLineItems" xlink:to="loc_TotalAssets" order="1"
+        preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+  </link:presentationLink>
+
+  <!-- PL role -->
+  <link:presentationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedStatementOfIncome">
+
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_StatementOfIncomeHeading"
+        xlink:label="loc_PLHeading"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_StatementOfIncomeTable"
+        xlink:label="loc_PLTable"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_StatementOfIncomeLineItems"
+        xlink:label="loc_PLLineItems"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_NetSales"
+        xlink:label="loc_NetSales"/>
+
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_PLHeading" xlink:to="loc_PLTable" order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_PLTable" xlink:to="loc_PLLineItems" order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_PLLineItems" xlink:to="loc_NetSales" order="1"/>
+  </link:presentationLink>
+</link:linkbase>

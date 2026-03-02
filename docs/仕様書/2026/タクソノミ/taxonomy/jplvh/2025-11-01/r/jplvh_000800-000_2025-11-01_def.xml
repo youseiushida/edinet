@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_HoldingRatioOfShareCertificatesEtcHeldByJointHolding" xlink:type="simple" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_HoldingRatioOfShareCertificatesEtcHeldByJointHolding"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_HoldingRatioOfShareCertificatesEtcHeldByJointHolding">
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:label="FilersLargeVolumeHoldersAndJointHoldersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersOrJointHoldersMember" xlink:label="FilersLargeVolumeHoldersOrJointHoldersMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:to="FilersLargeVolumeHoldersOrJointHoldersMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersOrJointHoldersMember" xlink:label="FilersLargeVolumeHoldersOrJointHoldersMember_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:to="FilersLargeVolumeHoldersOrJointHoldersMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading" xlink:label="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingTable" xlink:label="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading" xlink:to="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingTable" xlink:to="FilersLargeVolumeHoldersAndJointHoldersAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems" xlink:label="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingHeading" xlink:to="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Name" xlink:label="Name"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems" xlink:to="Name" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfStocksEtcHeld" xlink:label="TotalNumberOfStocksEtcHeld"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems" xlink:to="TotalNumberOfStocksEtcHeld" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtc" xlink:label="HoldingRatioOfShareCertificatesEtc"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="HoldingRatioOfShareCertificatesEtcHeldByJointHoldingLineItems" xlink:to="HoldingRatioOfShareCertificatesEtc" order="3.0"/>
+  </link:definitionLink>
+</link:linkbase>

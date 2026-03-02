@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_OtherElementsForComponentsOfGoodwillAndIntangibleAssetsIFRS" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_OtherElementsForComponentsOfGoodwillAndIntangibleAssetsIFRS"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_OtherElementsForComponentsOfGoodwillAndIntangibleAssetsIFRS">
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherElementsForComponentsOfGoodwillAndIntangibleAssetsIFRSAbstract" xlink:label="OtherElementsForComponentsOfGoodwillAndIntangibleAssetsIFRSAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfGoodwillIFRSAbstract" xlink:label="ComponentsOfGoodwillIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherElementsForComponentsOfGoodwillAndIntangibleAssetsIFRSAbstract" xlink:to="ComponentsOfGoodwillIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfGoodwillIFRSTable" xlink:label="ComponentsOfGoodwillIFRSTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfGoodwillIFRSAbstract" xlink:to="ComponentsOfGoodwillIFRSTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfGoodwillIFRSLineItems" xlink:label="ComponentsOfGoodwillIFRSLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfGoodwillIFRSAbstract" xlink:to="ComponentsOfGoodwillIFRSLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GoodwillAcquisitionCostIFRS" xlink:label="GoodwillAcquisitionCostIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfGoodwillIFRSLineItems" xlink:to="GoodwillAcquisitionCostIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GoodwillAccumulatedImpairmentLossesIFRS" xlink:label="GoodwillAccumulatedImpairmentLossesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfGoodwillIFRSLineItems" xlink:to="GoodwillAccumulatedImpairmentLossesIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GoodwillIFRS" xlink:label="GoodwillIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfGoodwillIFRSLineItems" xlink:to="GoodwillIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfIntangibleAssetsIFRSAbstract" xlink:label="ComponentsOfIntangibleAssetsIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OtherElementsForComponentsOfGoodwillAndIntangibleAssetsIFRSAbstract" xlink:to="ComponentsOfIntangibleAssetsIFRSAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfIntangibleAssetsIFRSTable" xlink:label="ComponentsOfIntangibleAssetsIFRSTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfIntangibleAssetsIFRSAbstract" xlink:to="ComponentsOfIntangibleAssetsIFRSTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfIntangibleAssetsIFRSLineItems" xlink:label="ComponentsOfIntangibleAssetsIFRSLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfIntangibleAssetsIFRSAbstract" xlink:to="ComponentsOfIntangibleAssetsIFRSLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CarryingAmountComponentsOfIntangibleAssetsIFRSAbstract" xlink:label="CarryingAmountComponentsOfIntangibleAssetsIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfIntangibleAssetsIFRSLineItems" xlink:to="CarryingAmountComponentsOfIntangibleAssetsIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AcquisitionCostComponentsOfIntangibleAssetsIFRSAbstract" xlink:label="AcquisitionCostComponentsOfIntangibleAssetsIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfIntangibleAssetsIFRSLineItems" xlink:to="AcquisitionCostComponentsOfIntangibleAssetsIFRSAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AccumulatedAmortizationAndImpairmentLossesComponentsOfIntangibleAssetsIFRSAbstract" xlink:label="AccumulatedAmortizationAndImpairmentLossesComponentsOfIntangibleAssetsIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfIntangibleAssetsIFRSLineItems" xlink:to="AccumulatedAmortizationAndImpairmentLossesComponentsOfIntangibleAssetsIFRSAbstract" order="3.0"/>
+  </link:definitionLink>
+</link:linkbase>

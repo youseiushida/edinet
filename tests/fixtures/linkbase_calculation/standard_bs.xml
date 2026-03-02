@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:calculationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedBalanceSheet">
+
+    <!-- ===== loc 要素 ===== -->
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_Assets"
+        xlink:label="Assets"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_CurrentAssets"
+        xlink:label="CurrentAssets"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_NoncurrentAssets"
+        xlink:label="NoncurrentAssets"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_DeferredAssets"
+        xlink:label="DeferredAssets"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_LiabilitiesAndNetAssets"
+        xlink:label="LiabilitiesAndNetAssets"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_Liabilities"
+        xlink:label="Liabilities"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_CurrentLiabilities"
+        xlink:label="CurrentLiabilities"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_NoncurrentLiabilities"
+        xlink:label="NoncurrentLiabilities"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_NetAssets"
+        xlink:label="NetAssets"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_ShareholdersEquity"
+        xlink:label="ShareholdersEquity"/>
+
+    <!-- ===== calculationArc 要素 (8 arcs, all weight=+1) ===== -->
+    <!-- Assets = CurrentAssets + NoncurrentAssets + DeferredAssets -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="Assets" xlink:to="CurrentAssets"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="Assets" xlink:to="NoncurrentAssets"
+        weight="1" order="2"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="Assets" xlink:to="DeferredAssets"
+        weight="1" order="3"/>
+
+    <!-- LiabilitiesAndNetAssets = Liabilities + NetAssets -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="LiabilitiesAndNetAssets" xlink:to="Liabilities"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="LiabilitiesAndNetAssets" xlink:to="NetAssets"
+        weight="1" order="2"/>
+
+    <!-- Liabilities = CurrentLiabilities + NoncurrentLiabilities -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="Liabilities" xlink:to="CurrentLiabilities"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="Liabilities" xlink:to="NoncurrentLiabilities"
+        weight="1" order="2"/>
+
+    <!-- NetAssets = ShareholdersEquity (simplified) -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="NetAssets" xlink:to="ShareholdersEquity"
+        weight="1" order="1"/>
+  </link:calculationLink>
+</link:linkbase>

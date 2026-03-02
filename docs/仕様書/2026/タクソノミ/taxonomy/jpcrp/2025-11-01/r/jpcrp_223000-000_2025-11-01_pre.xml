@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_IssuedSharesVotingRights" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_IssuedSharesVotingRights"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_IssuedSharesVotingRights">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_IssuedSharesVotingRightsHeading" xlink:label="IssuedSharesVotingRightsHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_IssuedSharesVotingRightsTable" xlink:label="IssuedSharesVotingRightsTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="IssuedSharesVotingRightsHeading" xlink:to="IssuedSharesVotingRightsTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CategoriesIssuedSharesAxis" xlink:label="CategoriesIssuedSharesAxis"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="IssuedSharesVotingRightsTable" xlink:to="CategoriesIssuedSharesAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalNumberOfIssuedSharesNumberOfVotingRightsHeldByAllShareholdersMember" xlink:label="TotalNumberOfIssuedSharesNumberOfVotingRightsHeldByAllShareholdersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CategoriesIssuedSharesAxis" xlink:to="TotalNumberOfIssuedSharesNumberOfVotingRightsHeldByAllShareholdersMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SharesWithNoVotingRightsMember" xlink:label="SharesWithNoVotingRightsMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalNumberOfIssuedSharesNumberOfVotingRightsHeldByAllShareholdersMember" xlink:to="SharesWithNoVotingRightsMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SharesWithRestrictedVotingRightsTreasurySharesEtcMember" xlink:label="SharesWithRestrictedVotingRightsTreasurySharesEtcMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalNumberOfIssuedSharesNumberOfVotingRightsHeldByAllShareholdersMember" xlink:to="SharesWithRestrictedVotingRightsTreasurySharesEtcMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SharesWithRestrictedVotingRightsOtherMember" xlink:label="SharesWithRestrictedVotingRightsOtherMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalNumberOfIssuedSharesNumberOfVotingRightsHeldByAllShareholdersMember" xlink:to="SharesWithRestrictedVotingRightsOtherMember" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SharesWithFullVotingRightsTreasurySharesEtcMember" xlink:label="SharesWithFullVotingRightsTreasurySharesEtcMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalNumberOfIssuedSharesNumberOfVotingRightsHeldByAllShareholdersMember" xlink:to="SharesWithFullVotingRightsTreasurySharesEtcMember" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OrdinarySharesSharesWithFullVotingRightsTreasurySharesEtcMember" xlink:label="OrdinarySharesSharesWithFullVotingRightsTreasurySharesEtcMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SharesWithFullVotingRightsTreasurySharesEtcMember" xlink:to="OrdinarySharesSharesWithFullVotingRightsTreasurySharesEtcMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OrdinarySharesTreasurySharesSharesWithFullVotingRightsTreasurySharesEtcMember" xlink:label="OrdinarySharesTreasurySharesSharesWithFullVotingRightsTreasurySharesEtcMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinarySharesSharesWithFullVotingRightsTreasurySharesEtcMember" xlink:to="OrdinarySharesTreasurySharesSharesWithFullVotingRightsTreasurySharesEtcMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OrdinarySharesReciprocalHoldingSharesWithFullVotingRightsTreasurySharesEtcMember" xlink:label="OrdinarySharesReciprocalHoldingSharesWithFullVotingRightsTreasurySharesEtcMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinarySharesSharesWithFullVotingRightsTreasurySharesEtcMember" xlink:to="OrdinarySharesReciprocalHoldingSharesWithFullVotingRightsTreasurySharesEtcMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SharesWithFullVotingRightsOtherMember" xlink:label="SharesWithFullVotingRightsOtherMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalNumberOfIssuedSharesNumberOfVotingRightsHeldByAllShareholdersMember" xlink:to="SharesWithFullVotingRightsOtherMember" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OrdinarySharesSharesWithFullVotingRightsOtherMember" xlink:label="OrdinarySharesSharesWithFullVotingRightsOtherMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SharesWithFullVotingRightsOtherMember" xlink:to="OrdinarySharesSharesWithFullVotingRightsOtherMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SharesLessThanOneUnitMember" xlink:label="SharesLessThanOneUnitMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalNumberOfIssuedSharesNumberOfVotingRightsHeldByAllShareholdersMember" xlink:to="SharesLessThanOneUnitMember" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OrdinarySharesSharesLessThanOneUnitMember" xlink:label="OrdinarySharesSharesLessThanOneUnitMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SharesLessThanOneUnitMember" xlink:to="OrdinarySharesSharesLessThanOneUnitMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_IssuedSharesVotingRightsLineItems" xlink:label="IssuedSharesVotingRightsLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="IssuedSharesVotingRightsHeading" xlink:to="IssuedSharesVotingRightsLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesIssuedSharesVotingRights" xlink:label="NumberOfSharesIssuedSharesVotingRights"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="IssuedSharesVotingRightsLineItems" xlink:to="NumberOfSharesIssuedSharesVotingRights" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfVotingRightsIssuedSharesVotingRights" xlink:label="NumberOfVotingRightsIssuedSharesVotingRights"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="IssuedSharesVotingRightsLineItems" xlink:to="NumberOfVotingRightsIssuedSharesVotingRights" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DescriptionIssuedSharesVotingRights" xlink:label="DescriptionIssuedSharesVotingRights"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="IssuedSharesVotingRightsLineItems" xlink:to="DescriptionIssuedSharesVotingRights" order="3.0"/>
+  </link:presentationLink>
+</link:linkbase>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:calculationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfIncome">
+
+    <!-- Standard concepts -->
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpenses"
+        xlink:label="SGA"/>
+
+    <!-- Filer custom concept (X99001-000 pattern) -->
+    <link:loc xlink:type="locator"
+        xlink:href="jpcrp030000-asr_X99001-000_2025-11-01.xsd#jpcrp030000-asr_X99001-000_ProvisionForBonuses"
+        xlink:label="ProvisionForBonuses"/>
+
+    <!-- SGA -> ProvisionForBonuses -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="SGA" xlink:to="ProvisionForBonuses"
+        weight="1" order="1"/>
+  </link:calculationLink>
+</link:linkbase>

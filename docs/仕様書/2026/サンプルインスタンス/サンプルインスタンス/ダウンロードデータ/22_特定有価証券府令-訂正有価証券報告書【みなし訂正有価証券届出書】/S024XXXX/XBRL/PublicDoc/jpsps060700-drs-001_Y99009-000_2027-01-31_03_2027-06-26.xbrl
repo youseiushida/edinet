@@ -1,0 +1,2393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:jpdei_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" xmlns:jpsps_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <link:schemaRef xlink:href="jpsps060700-drs-001_Y99009-000_2027-01-31_03_2027-06-26.xsd" xlink:type="simple"/>
+  <xbrli:context id="FilingDateInstant">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99009-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2027-04-24</xbrli:instant>
+</xbrli:period>
+</xbrli:context>
+  <xbrli:context id="CurrentYearDuration">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99009-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:startDate>2026-02-01</xbrli:startDate>
+<xbrli:endDate>2027-01-31</xbrli:endDate>
+</xbrli:period>
+</xbrli:context>
+  <xbrli:unit id="pure">
+<xbrli:measure>xbrli:pure</xbrli:measure>
+</xbrli:unit>
+  <jpdei_cor:NumberOfSubmissionDEI contextRef="FilingDateInstant" decimals="0" unitRef="pure">3</jpdei_cor:NumberOfSubmissionDEI>
+  <jpsps_cor:DocumentTitleAnnualSecuritiesReportCoverPage contextRef="FilingDateInstant">有価証券報告書（令和９年６月26日付け訂正報告書の添付インラインXBRL）</jpsps_cor:DocumentTitleAnnualSecuritiesReportCoverPage>
+  <jpsps_cor:PlaceOfFilingCoverPage contextRef="FilingDateInstant">関東財務局長殿</jpsps_cor:PlaceOfFilingCoverPage>
+  <jpsps_cor:FilingDateCoverPage contextRef="FilingDateInstant">2027-04-24</jpsps_cor:FilingDateCoverPage>
+  <jpsps_cor:AccountingPeriodCoverPage contextRef="FilingDateInstant">Ｅシリーズファンド（E-001ファンド）第10期Ｅシリーズファンド（E-002ファンド）第10期（自  令和８年２月１日  至  令和９年１月31日）</jpsps_cor:AccountingPeriodCoverPage>
+  <jpsps_cor:FundNameCoverPage contextRef="FilingDateInstant">Ｅシリーズファンド（E-001ファンド）Ｅシリーズファンド（E-002ファンド）（以上を総称して「Ｅシリーズファンド」または「各ファンド」という場合、あるいは個別に「ファンド」という場合があります。また、各々「Ｅシリーズファンド（E-001ファンド）」を「E-001ファンド」、「Ｅシリーズファンド（E-002ファンド）」を「E-002ファンド」という場合があります。）</jpsps_cor:FundNameCoverPage>
+  <jpsps_cor:IssuerNameCoverPage contextRef="FilingDateInstant">ＡＢ投信株式会社</jpsps_cor:IssuerNameCoverPage>
+  <jpsps_cor:TitleAndNameOfRepresentativeCoverPage contextRef="FilingDateInstant">代表取締役社長    ○○  ○○</jpsps_cor:TitleAndNameOfRepresentativeCoverPage>
+  <jpsps_cor:AddressOfRegisteredHeadquarterCoverPage contextRef="FilingDateInstant">東京都千代田区霞が関三丁目２番１号</jpsps_cor:AddressOfRegisteredHeadquarterCoverPage>
+  <jpsps_cor:NameOfContactPersonCoverPage contextRef="FilingDateInstant">○○  ○○</jpsps_cor:NameOfContactPersonCoverPage>
+  <jpsps_cor:PlaceOfContactCoverPage contextRef="FilingDateInstant">東京都千代田区霞が関三丁目２番１号</jpsps_cor:PlaceOfContactCoverPage>
+  <jpsps_cor:TelephoneNumberCoverPage contextRef="FilingDateInstant">０３（３５０６）６０００</jpsps_cor:TelephoneNumberCoverPage>
+  <jpsps_cor:PlaceForPublicInspectionCoverPageTextBlock contextRef="FilingDateInstant">該当事項はありません。</jpsps_cor:PlaceForPublicInspectionCoverPageTextBlock>
+  <jpsps_cor:DocumentTitleParticularsOfPublicOfferingEtcCoverPage contextRef="FilingDateInstant">募集事項等記載書面（令和９年６月26日付け訂正報告書の添付インラインXBRL）</jpsps_cor:DocumentTitleParticularsOfPublicOfferingEtcCoverPage>
+  <jpsps_cor:PlaceOfFilingCoverPage contextRef="FilingDateInstant">関東財務局長殿</jpsps_cor:PlaceOfFilingCoverPage>
+  <jpsps_cor:FilingDateCoverPage contextRef="FilingDateInstant">2027-04-24</jpsps_cor:FilingDateCoverPage>
+  <jpsps_cor:IssuerNameCoverPage contextRef="FilingDateInstant">ＡＢ投信株式会社</jpsps_cor:IssuerNameCoverPage>
+  <jpsps_cor:TitleAndNameOfRepresentativeCoverPage contextRef="FilingDateInstant">代表取締役社長    ○○  ○○</jpsps_cor:TitleAndNameOfRepresentativeCoverPage>
+  <jpsps_cor:NameOfFundRelatedToDomesticInvestmentTrustBeneficiaryCertificateToRegisterForOfferingOrDistributionCoverPageTextBlock contextRef="FilingDateInstant"> Ｅシリーズファンド（E-001ファンド）&lt;br/&gt;Ｅシリーズファンド（E-002ファンド）&lt;br/&gt;</jpsps_cor:NameOfFundRelatedToDomesticInvestmentTrustBeneficiaryCertificateToRegisterForOfferingOrDistributionCoverPageTextBlock>
+  <jpsps_cor:AmountOfDomesticInvestmentTrustBeneficiaryCertificateToRegisterForOfferingOrDistributionCoverPageTextBlock contextRef="FilingDateInstant">継続募集額(令和９年４月25日から令和10年４月22日まで) &lt;br/&gt;Ｅシリーズファンド（E-001ファンド）            １兆円を上限とする。&lt;br/&gt;Ｅシリーズファンド（E-002ファンド）            １兆円を上限とする。&lt;br/&gt;※  なお、継続申込期間（以下「申込期間」といいます。）は、上記期間満&lt;br/&gt;    了前に有価証券届出書を提出することによって更新されます。</jpsps_cor:AmountOfDomesticInvestmentTrustBeneficiaryCertificateToRegisterForOfferingOrDistributionCoverPageTextBlock>
+  <jpsps_cor:PlaceForPublicInspectionCoverPageTextBlock contextRef="FilingDateInstant">該当事項はありません。</jpsps_cor:PlaceForPublicInspectionCoverPageTextBlock>
+  <jpsps_cor:NotesCoverPageTextBlock contextRef="FilingDateInstant">
+&lt;p style="margin-left: 27.0pt; text-indent: -27.0pt; line-height: 13.5pt"&gt;（注）金融商品取引法（○年法律第25号）第5条第12項の規定により、この募集事項等記載書面及び併せて提出している&lt;br/&gt;有価証券報告書は、有価証券届出書とみなされます。&lt;/p&gt;
+</jpsps_cor:NotesCoverPageTextBlock>
+  <jpdei_cor:EDINETCodeDEI contextRef="FilingDateInstant">X99009</jpdei_cor:EDINETCodeDEI>
+  <jpdei_cor:FundCodeDEI contextRef="FilingDateInstant">Y99009</jpdei_cor:FundCodeDEI>
+  <jpdei_cor:SecurityCodeDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:FilerNameInJapaneseDEI contextRef="FilingDateInstant">ＡＢ投信株式会社</jpdei_cor:FilerNameInJapaneseDEI>
+  <jpdei_cor:FilerNameInEnglishDEI contextRef="FilingDateInstant">AB Asset Management Co.,Ltd.</jpdei_cor:FilerNameInEnglishDEI>
+  <jpdei_cor:FundNameInJapaneseDEI contextRef="FilingDateInstant">Ｅシリーズファンド</jpdei_cor:FundNameInJapaneseDEI>
+  <jpdei_cor:FundNameInEnglishDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CabinetOfficeOrdinanceDEI contextRef="FilingDateInstant">特定有価証券の内容等の開示に関する内閣府令</jpdei_cor:CabinetOfficeOrdinanceDEI>
+  <jpdei_cor:DocumentTypeDEI contextRef="FilingDateInstant">第六号の七及び第七号様式</jpdei_cor:DocumentTypeDEI>
+  <jpdei_cor:AccountingStandardsDEI contextRef="FilingDateInstant">Japan GAAP</jpdei_cor:AccountingStandardsDEI>
+  <jpdei_cor:WhetherConsolidatedFinancialStatementsArePreparedDEI contextRef="FilingDateInstant">false</jpdei_cor:WhetherConsolidatedFinancialStatementsArePreparedDEI>
+  <jpdei_cor:IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant">FND</jpdei_cor:IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI>
+  <jpdei_cor:CurrentFiscalYearStartDateDEI contextRef="FilingDateInstant">2026-02-01</jpdei_cor:CurrentFiscalYearStartDateDEI>
+  <jpdei_cor:CurrentPeriodEndDateDEI contextRef="FilingDateInstant">2027-01-31</jpdei_cor:CurrentPeriodEndDateDEI>
+  <jpdei_cor:TypeOfCurrentPeriodDEI contextRef="FilingDateInstant">FY</jpdei_cor:TypeOfCurrentPeriodDEI>
+  <jpdei_cor:CurrentFiscalYearEndDateDEI contextRef="FilingDateInstant">2027-01-31</jpdei_cor:CurrentFiscalYearEndDateDEI>
+  <jpdei_cor:PreviousFiscalYearStartDateDEI contextRef="FilingDateInstant">2025-02-01</jpdei_cor:PreviousFiscalYearStartDateDEI>
+  <jpdei_cor:ComparativePeriodEndDateDEI contextRef="FilingDateInstant">2026-01-31</jpdei_cor:ComparativePeriodEndDateDEI>
+  <jpdei_cor:PreviousFiscalYearEndDateDEI contextRef="FilingDateInstant">2026-01-31</jpdei_cor:PreviousFiscalYearEndDateDEI>
+  <jpdei_cor:NextFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:AmendmentFlagDEI contextRef="FilingDateInstant">true</jpdei_cor:AmendmentFlagDEI>
+  <jpdei_cor:IdentificationOfDocumentSubjectToAmendmentDEI contextRef="FilingDateInstant">S022XXXX</jpdei_cor:IdentificationOfDocumentSubjectToAmendmentDEI>
+  <jpdei_cor:ReportAmendmentFlagDEI contextRef="FilingDateInstant">true</jpdei_cor:ReportAmendmentFlagDEI>
+  <jpdei_cor:XBRLAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:XBRLAmendmentFlagDEI>
+  <jpsps_cor:SecuritiesRegistrationStatementAmendmentFlagDeemedRegistrationStatementDEI contextRef="FilingDateInstant">true</jpsps_cor:SecuritiesRegistrationStatementAmendmentFlagDeemedRegistrationStatementDEI>
+  <jpsps_cor:AnnualSecuritiesReportAmendmentFlagDeemedRegistrationStatementDEI contextRef="FilingDateInstant">true</jpsps_cor:AnnualSecuritiesReportAmendmentFlagDeemedRegistrationStatementDEI>
+  <jpsps_cor:FundNameTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（１）【ファンドの名称】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;Ｅシリーズファンド（E-001ファンド）&lt;/p&gt;
+&lt;p&gt;Ｅシリーズファンド（E-002ファンド）&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:FundNameTextBlock>
+  <jpsps_cor:LegalFormEtcOfDomesticTrustBeneficiaryCertificatesTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（２）【内国投資信託受益証券の形態等】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;追加型証券投資信託・受益権（以下「受益権」といいます。）&lt;/p&gt;
+&lt;p&gt;当初元本は1口当り1円です。&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:LegalFormEtcOfDomesticTrustBeneficiaryCertificatesTextBlock>
+  <jpsps_cor:TotalAmountOfIssueOrSecondaryDistributionSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（３）【発行(売出)価額の総額】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;各ファンドにつき、1兆円を上限とします。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:TotalAmountOfIssueOrSecondaryDistributionSecurityInformationTextBlock>
+  <jpsps_cor:PriceOfIssueOrSecondaryDistributionSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（４）【発行(売出)価格】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;各ファンドにつき、取得申込日の基準価額とします。&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:PriceOfIssueOrSecondaryDistributionSecurityInformationTextBlock>
+  <jpsps_cor:ApplicationFeeSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（５）【申込手数料】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:ApplicationFeeSecurityInformationTextBlock>
+  <jpsps_cor:ApplicationUnitSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（６）【申込単位】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:ApplicationUnitSecurityInformationTextBlock>
+  <jpsps_cor:ApplicationPeriodSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（７）【申込期間】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;令和９年４月25日から令和10年４月22日まで&lt;/p&gt;
+&lt;p&gt;※　…………………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:ApplicationPeriodSecurityInformationTextBlock>
+  <jpsps_cor:PlaceForApplicationSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（８）【申込取扱場所】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;ファンドの申込取扱場所（以下「販売会社」といいます。）については、………………………………………………&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:PlaceForApplicationSecurityInformationTextBlock>
+  <jpsps_cor:DueDateOfPaymentSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（９）【払込期日】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;投資者は、…………………………………………………………………………………………………………………………&lt;/p&gt;
+&lt;p&gt;…………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:DueDateOfPaymentSecurityInformationTextBlock>
+  <jpsps_cor:PlaceForPaymentSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（10）【払込取扱場所】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;申込代金は申込みの販売会社にお支払いください。…………………………………………………………………………&lt;/p&gt;
+&lt;p&gt;…………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:PlaceForPaymentSecurityInformationTextBlock>
+  <jpsps_cor:BookEntryTransferInstitutionSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（11）【振替機関に関する事項】&lt;/div&gt;
+&lt;div class="divContent pageBreakAfter"&gt;
+&lt;p&gt;ファンドの受益権に係る振替機関は下記の通りです。&lt;/p&gt;
+&lt;p&gt;  株式会社証券保管振替機構&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:BookEntryTransferInstitutionSecurityInformationTextBlock>
+  <jpsps_cor:OtherInformationSecurityInformationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;（12）【その他】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="text-indent: -9.0pt"&gt;①  申込みの方法&lt;br/&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="text-indent: -9.0pt"&gt;②  取得申込みの受付けの中止、既に受付けた取得申込みの受付けの取り消し&lt;br/&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="text-indent: -9.0pt"&gt;③  スイッチング&lt;br/&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="text-indent: -9.0pt"&gt;④  振替受益権について&lt;br/&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:OtherInformationSecurityInformationTextBlock>
+  <jpsps_cor:PurposesAndBasicFeaturesOfFundTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（１）【ファンドの目的及び基本的性格】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;p style="text-align: center"&gt; Ｅシリーズファンド（E-001ファンド）&lt;/p&gt;
+&lt;div class="h3"&gt;商品分類表&lt;/div&gt;
+&lt;br/&gt;
+&lt;div class="h4"&gt;
+&lt;p style="text-indent: -1pt"&gt;ファンドに該当する商品分類は下記の表中に網掛け表示しております。&lt;/p&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;table style="width:494.25pt;min-width:494.25pt;border-collapse:collapse;border-top:solid 0.75pt black;border-left:solid 0.75pt black;border-right:solid 0.75pt black;border-bottom:solid 0.75pt black"&gt;
+ &lt;tr style="height:30pt;min-height:30pt"&gt;
+  &lt;td style="width:164.75pt;min-width:164.75pt;border-top:solid 1.5pt black;border-left:solid 1.5pt black;border-bottom:double 1.5pt black;border-right:solid 0.75pt black"&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;&lt;b&gt;単位型・追加型&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td style="width:164.75pt;min-width:164.75pt;border-top:solid 1.5pt black;border-left:none;border-bottom:double 1.5pt black;border-right:solid 0.75pt black"&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;&lt;b&gt;投資対象地域&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td style="width:164.75pt;min-width:164.75pt;border-top:solid 1.5pt black;border-left:none;border-bottom:double 1.5pt black;border-right:solid 1.5pt black"&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;&lt;b&gt;投資対象資産&lt;/b&gt;&lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;&lt;b&gt;（収益の源泉）&lt;/b&gt;&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr style="height:160pt;min-height:160pt"&gt;
+  &lt;td style="vertical-align:top;width:164.75pt;min-width:164.75pt;border-top:none;border-left:solid 1.5pt black;border-bottom:solid 1.5pt black;border-right:solid 0.75pt black"&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;単位型&lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;&lt;span style="color:white;background:black"&gt;追加型&lt;/span&gt;&lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td style="vertical-align:top;width:164.75pt;min-width:164.75pt;border-top:none;border-left:none;border-bottom:solid 1.5pt black;border-right:solid 0.75pt black"&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;国　　内&lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;&lt;span style="color:white;background:black"&gt;海　　外&lt;/span&gt;&lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;内　　外&lt;/p&gt;
+  &lt;/td&gt;
+  &lt;td style="vertical-align:top;width:164.75pt;min-width:164.75pt;border-top:none;border-left:none;border-bottom:solid 1.5pt black;border-right:solid 1.5pt black"&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;株　　式&lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;&lt;span style="color:white;background:black"&gt;債　　券&lt;/span&gt;&lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;不動産投信&lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;その他資産&lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;（　　）&lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt; &lt;/p&gt;
+  &lt;p style="text-align:center;line-height:1.5em"&gt;資産複合&lt;/p&gt;
+  &lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;div class="h3"&gt;属性区分表&lt;/div&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;img alt="属性区分表" height="95" src="images/002.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;p style="text-align: center"&gt; Ｅシリーズファンド（E-002ファンド）&lt;/p&gt;
+&lt;div class="h3"&gt;商品分類表&lt;/div&gt;
+&lt;br/&gt;
+&lt;div class="pageBreakAfter"&gt;&lt;img alt="商品分類表" height="118" src="images/003.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;div class="h3 "&gt;属性区分表&lt;/div&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;img alt="属性区分表" height="95" src="images/004.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div class="h4 "&gt;
+&lt;p&gt;…………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+
+&lt;div class="h4"&gt;
+&lt;p&gt;社団法人投資信託協会が定める「商品分類に関する指針」に基づくファンドの商品分類及び属性区分は以下の通りで&lt;br/&gt;す。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+&lt;div class="h4"&gt;
+&lt;p style="text-indent: -9.0pt"&gt;商品分類表定義&lt;br/&gt;…………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;p style="text-indent: -9.0pt"&gt;属性区分表定義&lt;br/&gt;…………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+&lt;br/&gt;
+</jpsps_cor:PurposesAndBasicFeaturesOfFundTextBlock>
+  <jpsps_cor:FundHistoryTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（２）【ファンドの沿革】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;div style="margin-left: 9.0pt"&gt;
+&lt;table style="width: 458.25pt; min-width: 458.25pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 82.0pt; min-width: 82.0pt"/&gt;
+&lt;col style="width: 370.0pt; min-width: 370.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p style="margin-right: 4.5pt"&gt;令和88年88月88日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;「E-001ファンド」、および「E-002ファンド」の各ファンドについて、信託契約締結、各&lt;br/&gt;ファンドの設定日、運用開始&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p style="margin-right: 4.5pt"&gt;令和88年88月88日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;……………………………………………………………………………………………………………&lt;br/&gt;……………………………………………&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+</jpsps_cor:FundHistoryTextBlock>
+  <jpsps_cor:FundSchemeTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（３）【ファンドの仕組み】&lt;/div&gt;
+&lt;div class="divContent pageBreakAfter"&gt;
+&lt;img alt="ファンドの仕組みの図" height="288" src="images/005.jpg" width="600"/&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;div class="h4"&gt;
+&lt;p&gt;委託会社の概況（○年○月末現在）&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;div style="margin-left: 18.0pt"&gt;
+&lt;p style="text-indent: -18.0pt"&gt;・名称&lt;br/&gt;ＡＢ投信株式会社&lt;/p&gt;
+&lt;p style="text-indent: -18.0pt"&gt;・本店の所在の場所&lt;br/&gt;東京都千代田区霞が関三丁目２番１号&lt;/p&gt;
+&lt;p style="text-indent: -18.0pt"&gt;・資本金の額&lt;br/&gt;8,888百万円&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;・会社の沿革&lt;/p&gt;
+
+&lt;div style="margin-left: 18.0pt"&gt;
+&lt;table style="width: 449.25pt; min-width: 449.25pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 82.0pt; min-width: 82.0pt"/&gt;
+&lt;col style="width: 361.0pt; min-width: 361.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p style="margin-right: 4.5pt"&gt;○年○月○日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;ＡＢ投信株式会社として設立&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p style="margin-right: 4.5pt"&gt;○年○月○日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;……………………………………………………&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="divContent pageBreakAfter"&gt;
+&lt;p&gt;・大株主の状況&lt;/p&gt;
+
+&lt;div style="margin-left: 9.0pt"&gt;
+&lt;table style="width: 458.25pt; min-width: 458.25pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 117.75pt; min-width: 117.75pt"/&gt;
+&lt;col style="width: 189.0pt; min-width: 189.0pt"/&gt;
+&lt;col style="width: 73.0pt; min-width: 73.0pt"/&gt;
+&lt;col style="width: 73.0pt; min-width: 73.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;名称&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;住所&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;所有株式数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;比率&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt"&gt;
+ＡＢグループ株式会社&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt"&gt;
+東京都千代田区霞が関三丁目２番１号&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-right: 4.5pt"&gt;
+888,888株&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-right: 4.5pt"&gt;
+100％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:FundSchemeTextBlock>
+  <jpsps_cor:InvestmentPolicyTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（１）【投資方針】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;E-001ファンド&lt;/p&gt;
+&lt;div class="h4"&gt;
+&lt;p style="text-indent: -9pt"&gt;・わが国の金融商品取引所上場株式（これに準ずるものを含みます。）のうち、……………………………………&lt;br/&gt;………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="text-indent: -9pt"&gt;・…………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;p&gt;E-002ファンド&lt;/p&gt;
+&lt;div class="h4"&gt;
+&lt;p style="text-indent: -9pt"&gt;・円建ての公社債を主要投資対象とします。&lt;/p&gt;
+&lt;p style="text-indent: -9pt"&gt;・…………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+
+&lt;div style="margin-left: 9.0pt"&gt;
+&lt;p&gt;銘柄選択プロセスのイメージ図&lt;/p&gt;
+&lt;p&gt;&lt;img alt="銘柄選択プロセスのイメージ図" height="284" src="images/006.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+</jpsps_cor:InvestmentPolicyTextBlock>
+  <jpsps_cor:ThingsToInvestInTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（２）【投資対象】&lt;/div&gt;
+&lt;div class="divContent pageBreakAfter"&gt;
+&lt;div style="margin-left: 9.0pt"&gt;
+&lt;p style="text-indent: -9pt"&gt;E-001ファンド&lt;/p&gt;
+&lt;p&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;……………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;div style="margin-left: 9.0pt"&gt;
+&lt;p style="text-indent: -9pt"&gt;E-002ファンド&lt;/p&gt;
+&lt;p&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;……………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;div style="margin-left: 9.0pt"&gt;
+&lt;p style="text-indent: -9pt"&gt;E-001ファンドおよびE-002ファンド共通&lt;/p&gt;
+&lt;p&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;……………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+</jpsps_cor:ThingsToInvestInTextBlock>
+  <jpsps_cor:OrganizationAndFrameworkOfInvestmentManagementTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（３）【運用体制】&lt;/div&gt;
+&lt;div class="divContent pageBreakAfter"&gt;
+&lt;p&gt;ファンドの運用体制は以下の通りです。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ファンドの運用体制は以下の通りです。" height="370" src="images/007.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;ファンドを含む委託会社における投資信託の内部管理及び意思決定を監督する組織等は以下の通りです。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ファンドを含む委託会社における投資信託の内部管理及び意思決定を監督する組織等は以下の通りです。" height="446" src="images/008.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:OrganizationAndFrameworkOfInvestmentManagementTextBlock>
+  <jpsps_cor:ProfitDistributionPolicyTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（４）【分配方針】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;年１回の毎決算時に、原則として以下の方針に基づき分配を行ないます。&lt;/p&gt;
+&lt;p&gt;①  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;②  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;③  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;※  …………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+&lt;div class="h4"&gt;
+&lt;p&gt;・ファンドの決算日&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt"&gt;原則として毎年１月31日（休業日の場合は翌営業日）を決算日とします。&lt;/p&gt;
+&lt;p&gt;・分配金のお支払い&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt"&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;……………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:ProfitDistributionPolicyTextBlock>
+  <jpsps_cor:RestrictionsOnInvestmentTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（５）【投資制限】&lt;/div&gt;
+&lt;div class="divContent pageBreakAfter"&gt;
+&lt;p&gt;E-001ファンド&lt;/p&gt;
+&lt;p/&gt;
+&lt;p&gt;①  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;②  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;③  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;④  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑤  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑥  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑦  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑧  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑨  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑩  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;E-002ファンド&lt;/p&gt;
+&lt;p&gt;①  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;②  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;③  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;④  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑤  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑥  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑦  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑧  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑨  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;⑩  ………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:RestrictionsOnInvestmentTextBlock>
+  <jpsps_cor:InvestmentRisksTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;３【投資リスク】&lt;/h3&gt;
+&lt;div class="h4"&gt;
+&lt;p&gt;…………………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="text-indent: -9.0pt"&gt;E-001ファンド&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="text-indent: -9.0pt"&gt;E-002ファンド&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="text-indent: -9.0pt"&gt;その他&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;&lt;br/&gt;
+
+&lt;/div&gt;
+&lt;div class="h4"&gt;
+&lt;p style="text-indent: -9.0pt"&gt;委託会社におけるリスクマネジメント体制&lt;/p&gt;
+&lt;p&gt;…………………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div class="h3 pageBreakAfter"&gt;
+&lt;p&gt;リスク管理体制図&lt;/p&gt;
+&lt;p&gt;&lt;img alt="リスク管理体制図" height="277" src="images/009.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:InvestmentRisksTextBlock>
+  <jpsps_cor:ApplicationFeeOverviewOfFundTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（１）【申込手数料】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;①  …………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;②  …………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:ApplicationFeeOverviewOfFundTextBlock>
+  <jpsps_cor:RedemptionFeeTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（２）【換金(解約)手数料】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;……………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:RedemptionFeeTextBlock>
+  <jpsps_cor:ManagementFeesAndChargesTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（３）【信託報酬等】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p&gt;E-001ファンド&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt"&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p&gt;E-002ファンド&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt"&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:ManagementFeesAndChargesTextBlock>
+  <jpsps_cor:OtherFeesAndChargesTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（４）【その他の手数料等】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;①  …………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;②  …………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:OtherFeesAndChargesTextBlock>
+  <jpsps_cor:TaxationTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（５）【課税上の取扱い】&lt;/div&gt;
+&lt;div class="divContent pageBreakAfter"&gt;
+&lt;p&gt;課税上は、株式投資信託として取扱われます。&lt;/p&gt;
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="分配金のイメージ図" height="194" src="images/010.jpg" width="600"/&gt;&lt;/p&gt;
+
+&lt;p&gt;………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:TaxationTextBlock>
+  <jpsps_cor:StatusOfInvestmentManagementTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;５【運用状況】&lt;/h3&gt;
+&lt;div class="h4"&gt;
+&lt;p&gt;以下は○年○月○日現在の運用状況であります。&lt;/p&gt;
+&lt;p&gt;また、投資比率とはファンドの純資産総額に対する当該資産の時価比率をいいます。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:StatusOfInvestmentManagementTextBlock>
+  <jpsps_cor:StatusOfInvestmentTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（１）【投資状況】&lt;/div&gt;
+&lt;div&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-001ファンド&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 189.0pt; min-width: 189.0pt"/&gt;
+&lt;col style="width: 109.0pt; min-width: 109.0pt"/&gt;
+&lt;col style="width: 100.0pt; min-width: 100.0pt"/&gt;
+&lt;col style="width: 91.0pt; min-width: 91.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;資産の種類&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;国／地域&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;時価合計(円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;投資比率(％)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;株式&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;日本&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;現金・預金・その他の資産(負債控除後)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;―&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt; border-right: none"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;合計(純資産総額)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt ; border-left: none"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"/&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;888.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-002ファンド&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 189.0pt; min-width: 189.0pt"/&gt;
+&lt;col style="width: 109.0pt; min-width: 109.0pt"/&gt;
+&lt;col style="width: 100.0pt; min-width: 100.0pt"/&gt;
+&lt;col style="width: 91.0pt; min-width: 91.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;資産の種類&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;国／地域&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;時価合計(円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;投資比率(％)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;現金・預金・その他の資産(負債控除後)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;―&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;888.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt; border-right: none"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;合計(純資産総額)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt ; border-left: none"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"/&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;888.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:StatusOfInvestmentTextBlock>
+  <jpsps_cor:MajorComponentsOfInvestmentSecuritiesTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;①【投資有価証券の主要銘柄】&lt;/div&gt;
+&lt;div&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-001ファンド&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 24.0pt; min-width: 24.0pt"/&gt;
+&lt;col style="width: 45.0pt; min-width: 45.0pt"/&gt;
+&lt;col style="width: 39.0pt; min-width: 39.0pt"/&gt;
+&lt;col style="width: 61.5pt; min-width: 61.5pt"/&gt;
+&lt;col style="width: 43.5pt; min-width: 43.5pt"/&gt;
+&lt;col style="width: 46.5pt; min-width: 46.5pt"/&gt;
+&lt;col style="width: 46.5pt; min-width: 46.5pt"/&gt;
+&lt;col style="width: 47.25pt; min-width: 47.25pt"/&gt;
+&lt;col style="width: 47.25pt; min-width: 47.25pt"/&gt;
+&lt;col style="width: 47.25pt; min-width: 47.25pt"/&gt;
+&lt;col style="width: 43.5pt; min-width: 43.5pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 25.5pt; min-height: 25.5pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;順位&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;国／地域&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;種類&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;銘柄名&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;業種&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;数量&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;簿価単価&lt;br/&gt;(円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;簿価金額&lt;br/&gt;(円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;評価単価&lt;br/&gt;(円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;評価金額&lt;br/&gt;(円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; font-size: 7.5pt"&gt;投資比率&lt;br/&gt;(％)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 17.25pt; min-height: 17.25pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;1&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;日本&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;株式&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○○○○&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○○○○&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;8,888.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;8,888.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;8.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 17.25pt; min-height: 17.25pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;2&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;日本&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;株式&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○○○○○○&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○○○○&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;8,888.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;8,888.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;8.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 17.25pt; min-height: 17.25pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 17.25pt; min-height: 17.25pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;10&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;日本&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;株式&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○○○○○&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○○○○&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;8,888.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;8,888.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="font-size: 7.5pt; text-align: right; margin-right: 4.5pt"&gt;8.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 9.0pt; text-indent: -9.0pt"&gt;E-002ファンド&lt;br/&gt;該当事項はありません。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&lt;p style="margin-left: 27.0pt"&gt;種類別及び業種別投資比率&lt;/p&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-001ファンド&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 97.0pt; min-width: 97.0pt"/&gt;
+&lt;col style="width: 247.0pt; min-width: 247.0pt"/&gt;
+&lt;col style="width: 145.0pt; min-width: 145.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;種類&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;業種&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;投資比率(％)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt; border-top: none; border-bottom: none"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;株式&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○○○○&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt; border-top: none; border-bottom: none"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"/&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○○○○&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt; border-top: none; border-bottom: none"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"/&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt; border-top: none; border-bottom: none"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"/&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;その他製品&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt; border-top: none; border-bottom: none"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"/&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;小計&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt; border-right: none"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"&gt;合計&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt; border-left: none"&gt;
+&lt;p style="text-align: center; margin-left: 4.5pt; margin-right: 4.5pt"/&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88.88&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 9.0pt; text-indent: -9.0pt"&gt;E-002ファンド&lt;br/&gt;該当事項はありません。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:MajorComponentsOfInvestmentSecuritiesTextBlock>
+  <jpsps_cor:ComponentsOfRealEstateInvestmentsTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;②【投資不動産物件】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 9.0pt"&gt;該当事項はありません。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:ComponentsOfRealEstateInvestmentsTextBlock>
+  <jpsps_cor:MajorComponentsOfOtherInvestmentsTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;③【その他投資資産の主要なもの】&lt;/div&gt;
+&lt;div class="divContent pageBreakAfter"&gt;
+&lt;p style="margin-left: 9.0pt"&gt;該当事項はありません。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:MajorComponentsOfOtherInvestmentsTextBlock>
+  <jpsps_cor:ChangesInNetAssetsTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;①【純資産の推移】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 9.0pt"&gt;○年○月末日及び同日前１年以内における各月末並びに下記決算期末の純資産の推移は次の通りです。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-001ファンド&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 171.0pt; min-width: 171.0pt"/&gt;
+&lt;col style="width: 79.5pt; min-width: 79.5pt"/&gt;
+&lt;col style="width: 79.5pt; min-width: 79.5pt"/&gt;
+&lt;col style="width: 79.5pt; min-width: 79.5pt"/&gt;
+&lt;col style="width: 79.5pt; min-width: 79.5pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td rowspan="2" style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;計算期間&lt;/p&gt;
+&lt;/td&gt;
+&lt;td colspan="2" style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;純資産総額(百万円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td colspan="2" style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;1口当たり純資産額(円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;（分配落）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;（分配付）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;（分配落）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;（分配付）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第１期（○年○月○日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第２期（○年○月○日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第10期（○年○月○日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○年○月末日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;―&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;―&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○年○月末日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;―&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;―&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-002ファンド&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 171.0pt; min-width: 171.0pt"/&gt;
+&lt;col style="width: 79.5pt; min-width: 79.5pt"/&gt;
+&lt;col style="width: 79.5pt; min-width: 79.5pt"/&gt;
+&lt;col style="width: 79.5pt; min-width: 79.5pt"/&gt;
+&lt;col style="width: 79.5pt; min-width: 79.5pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td rowspan="2" style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;計算期間&lt;/p&gt;
+&lt;/td&gt;
+&lt;td colspan="2" style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;純資産総額(百万円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;td colspan="2" style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;1口当たり純資産額(円)&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;（分配落）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;（分配付）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;（分配落）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;（分配付）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第１期（○年○月○日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第２期（○年○月○日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第10期（○年○月○日）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○年○月末日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;―&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;―&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;○年○月末日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;―&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;―&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:ChangesInNetAssetsTextBlock>
+  <jpsps_cor:HistoricalRecordsOfProfitDistributionTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;②【分配の推移】&lt;/div&gt;
+&lt;div class="pageBreakAfter"&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-001ファンド&lt;/p&gt;
+&lt;table style="width: 237.0pt; min-width: 237.0pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 111.0pt; min-width: 111.0pt"/&gt;
+&lt;col style="width: 126.0pt; min-width: 126.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;1口当たりの分配金&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第１期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;0.0088円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第２期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;0.0088円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第10期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;0.0088円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-002ファンド&lt;/p&gt;
+&lt;table style="width: 237.0pt; min-width: 237.0pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 111.0pt; min-width: 111.0pt"/&gt;
+&lt;col style="width: 126.0pt; min-width: 126.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;1口当たりの分配金&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第１期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;0.0088円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第２期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;0.0088円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第10期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;0.0088円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:HistoricalRecordsOfProfitDistributionTextBlock>
+  <jpsps_cor:HistoricalRecordsOfReturnRatioTextBlock contextRef="FilingDateInstant">
+&lt;div class="content2"&gt;③【収益率の推移】&lt;/div&gt;
+&lt;div&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-001ファンド&lt;/p&gt;
+&lt;table style="width: 237.0pt; min-width: 237.0pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 111.0pt; min-width: 111.0pt"/&gt;
+&lt;col style="width: 126.0pt; min-width: 126.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;収益率&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第１期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第２期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第10期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-002ファンド&lt;/p&gt;
+&lt;table style="width: 237.0pt; min-width: 237.0pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 111.0pt; min-width: 111.0pt"/&gt;
+&lt;col style="width: 126.0pt; min-width: 126.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;収益率&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第１期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第２期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;……&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第10期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8.8％&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;/div&gt;
+&lt;div class="h4"&gt;
+&lt;p style="text-indent: -18.0pt"&gt;※  …………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:HistoricalRecordsOfReturnRatioTextBlock>
+  <jpsps_cor:HistoricalRecordsOfInceptionsAndCancellationsTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（４）【設定及び解約の実績】&lt;/div&gt;
+&lt;div class="pageBreakAfter"&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-001ファンド&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 111.0pt; min-width: 111.0pt"/&gt;
+&lt;col style="width: 126.0pt; min-width: 126.0pt"/&gt;
+&lt;col style="width: 126.0pt; min-width: 126.0pt"/&gt;
+&lt;col style="width: 126.0pt; min-width: 126.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;設定口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;解約口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;発行済み口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第１期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第２期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第10期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-002ファンド&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 111.0pt; min-width: 111.0pt"/&gt;
+&lt;col style="width: 126.0pt; min-width: 126.0pt"/&gt;
+&lt;col style="width: 126.0pt; min-width: 126.0pt"/&gt;
+&lt;col style="width: 126.0pt; min-width: 126.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;設定口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;解約口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: center"&gt;発行済み口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第１期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第２期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;…………&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 15.0pt; min-height: 15.0pt"&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: left; margin-left: 4.5pt; margin-right: 4.5pt"&gt;第10期&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;8,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt"&gt;
+&lt;p style="text-align: right; margin-left: 4.5pt; margin-right: 4.5pt"&gt;88,888,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:HistoricalRecordsOfInceptionsAndCancellationsTextBlock>
+  <jpsps_cor:SupplementaryReferenceInformationAboutActualPerformanceTextBlock contextRef="FilingDateInstant">
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 9.0pt"&gt;（参考情報）  運用実績（○年○月○日現在）&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;div class="h3 pageBreakAfter"&gt;
+&lt;p style="margin-left: 18.0pt"&gt;基準価額・純資産の推移（日次）&lt;/p&gt;
+&lt;p&gt;&lt;img alt="基準価額・純資産の推移（日次）" height="162" src="images/011.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;p style="margin-left: 18.0pt"&gt;分配の推移（1万口あたり、課税前）&lt;/p&gt;
+&lt;p&gt;&lt;img alt="分配の推移（1万口あたり、課税前）" height="166" src="images/012.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;p style="margin-left: 18.0pt"&gt;主要な資産の状況&lt;/p&gt;
+&lt;p&gt;&lt;img alt="主要な資産の状況" height="162" src="images/013.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;p style="margin-left: 18.0pt"&gt;年間収益率の推移&lt;/p&gt;
+&lt;p&gt;&lt;img alt="年間収益率の推移" height="163" src="images/014.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;br/&gt;&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:SupplementaryReferenceInformationAboutActualPerformanceTextBlock>
+  <jpsps_cor:ProceduresEtcForApplicationAndDistributionTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;１【申込(販売)手続等】&lt;/h3&gt;
+&lt;div class="h4"&gt;
+&lt;p&gt;販売会社において申込期間中の各営業日に、申込の受付をいたします。&lt;/p&gt;
+&lt;p&gt;…………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:ProceduresEtcForApplicationAndDistributionTextBlock>
+  <jpsps_cor:RedemptionProceduresEtcTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;２【換金(解約)手続等】&lt;/h3&gt;
+&lt;div class="h4"&gt;
+&lt;p&gt;…………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:RedemptionProceduresEtcTextBlock>
+  <jpsps_cor:ValuationOfAssetsTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（１）【資産の評価】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:ValuationOfAssetsTextBlock>
+  <jpsps_cor:CustodyTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（２）【保管】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:CustodyTextBlock>
+  <jpsps_cor:TrustPeriodTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（３）【信託期間】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:TrustPeriodTextBlock>
+  <jpsps_cor:AccountingPeriodTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（４）【計算期間】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 9.0pt"&gt;    原則として毎年２月１日から翌年１月31日までとします。&lt;br/&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:AccountingPeriodTextBlock>
+  <jpsps_cor:OtherInformationOverviewOfAssetManagementEtcTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（５）【その他】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;p style="margin-left: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:OtherInformationOverviewOfAssetManagementEtcTextBlock>
+  <jpsps_cor:RightsEtcOfBeneficiariesTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;４【受益者の権利等】&lt;/h3&gt;
+&lt;div class="h4"&gt;
+&lt;p&gt;…………………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:RightsEtcOfBeneficiariesTextBlock>
+  <jpsps_cor:CalculationOfNetAssetsTextBlock contextRef="CurrentYearDuration">
+&lt;div class="h4"&gt;【純資産額計算書】（令和９年３月31日現在）&lt;/div&gt;
+&lt;div class="pageBreakAfter"&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-001ファンド&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 244.5pt; min-width: 244.5pt"/&gt;
+&lt;col style="width: 244.5pt; min-width: 244.5pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt"&gt;Ⅰ  資産総額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt; text-align: right"&gt;8,888,888,888円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt"&gt;Ⅱ  負債総額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt; text-align: right"&gt;88,888,888円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt"&gt;Ⅲ  純資産総額（Ⅰ－Ⅱ）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt; text-align: right"&gt;8,888,888,888円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt"&gt;Ⅳ  発行済口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt; text-align: right"&gt;88,888,888,888口&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt"&gt;Ⅴ  １口当たり純資産額（Ⅲ／Ⅳ）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt; text-align: right"&gt;8.8888円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 27.0pt"&gt;E-002ファンド&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 244.5pt; min-width: 244.5pt"/&gt;
+&lt;col style="width: 244.5pt; min-width: 244.5pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt"&gt;Ⅰ  資産総額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt; text-align: right"&gt;888,888,888円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt"&gt;Ⅱ  負債総額&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt; text-align: right"&gt;8,888円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt"&gt;Ⅲ  純資産総額（Ⅰ－Ⅱ）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt; text-align: right"&gt;888,888,888円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt"&gt;Ⅳ  発行済口数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt; text-align: right"&gt;888,888,888口&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt"&gt;Ⅴ  １口当たり純資産額（Ⅲ／Ⅳ）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-left: 4.5pt; margin-right: 4.5pt; text-align: right"&gt;8.8888円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:CalculationOfNetAssetsTextBlock>
+  <jpsps_cor:OverviewOfOperationalProceduresRelatedToDomesticTrustBeneficiaryCertificatesTextBlock contextRef="FilingDateInstant">
+&lt;h2&gt;第４【内国投資信託受益証券事務の概要】&lt;/h2&gt;
+&lt;div class="h3"&gt;
+&lt;p&gt;（１）受益証券の名義書換えの事務等&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;（２）受益者に対する特典&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: 9.0pt"&gt;………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;（３）受益権の譲渡&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;（４）受益権の譲渡の対抗要件&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;（５）受益権の再分割&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;（６）質権口記載又は記録の受益権の取り扱いについて&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:OverviewOfOperationalProceduresRelatedToDomesticTrustBeneficiaryCertificatesTextBlock>
+  <jpsps_cor:OverviewOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;１【委託会社等の概況】&lt;/h3&gt;
+&lt;div class="h4"&gt;
+&lt;p&gt;(1）資本金の額&lt;/p&gt;
+&lt;table style="width: 453.0pt; min-width: 453.0pt; margin-left: 18.0pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 210.0pt ; min-width: 210.0pt"/&gt;
+&lt;col style="width: 243.0pt ; min-width: 243.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;p&gt;○年○月末現在&lt;/p&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;8,888百万円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;p&gt;会社が発行する株式総数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;8,888,888株&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;p&gt;発行済株式総数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;8,888株&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+&lt;p&gt;過去５年間における主な資本金の額の増減&lt;/p&gt;
+&lt;/td&gt;
+&lt;td&gt;
+&lt;p&gt;該当事項はありません。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+
+&lt;p&gt;(2）会社の機構&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt"&gt;(a）会社の意思決定機構&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: 9.0pt"&gt;…………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: 9.0pt"&gt;…………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;p style="margin-left: 9.0pt"&gt;(b）投資信託の運用体制&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt"&gt;&lt;img alt="(b）投資信託の運用体制" height="351" src="images/015.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:OverviewOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:DescriptionOfBusinessAndOverviewOfOperationOverviewOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;２【事業の内容及び営業の概況】&lt;/h3&gt;
+&lt;div class="h4 pageBreakAfter"&gt;
+&lt;p style="text-indent: 9.0pt"&gt;「投資信託及び投資法人に関する法律」に定める投資信託委託会社である委託者は、…………………………………&lt;br/&gt;…………………………………………………………………………………………………………………………………………&lt;br/&gt;……………………………………………………………………………。&lt;/p&gt;
+
+&lt;p style="margin-left: 9.0pt"&gt;委託者の運用する証券投資信託（○年○月○日現在）&lt;/p&gt;
+&lt;table style="margin-left: 9.0pt; width: 461.25pt; min-width: 461.25pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 181.0pt ; min-width: 181.0pt"/&gt;
+&lt;col style="width: 109.0pt ; min-width: 109.0pt"/&gt;
+&lt;col style="width: 172.0pt ; min-width: 172.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="text-align: center"&gt;種類&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="text-align: center"&gt;本数&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="text-align: center"&gt;純資産総額（百万円）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: center;"&gt;追加型株式投資信託&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: right;"&gt;88&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: right;"&gt;888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: center;"&gt;単位型株式投資信託&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: right;"&gt;8&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: right;"&gt;88,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: center;"&gt;追加型公社債投資信託&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: right;"&gt;8&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: right;"&gt;88,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: center;"&gt;単位型公社債投資信託&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: right;"&gt;8&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: right;"&gt;88,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: center;"&gt;合計&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: right;"&gt;88&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin: 0pt 4.5pt 0pt 4.5pt; text-align: right;"&gt;888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:DescriptionOfBusinessAndOverviewOfOperationOverviewOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:FinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;３【委託会社等の経理状況】&lt;/h3&gt;
+&lt;div class="divContent pageBreakAfter"&gt;
+&lt;p style="margin-right: 9.0pt; text-indent: -9.0pt"&gt;１  委託会社であるＡＢ投信株式会社（以下「委託会社」という）の財務諸表は、「財務諸表等の用語、様式及び作成方法に関する規則」（○年大蔵省令第59号、以下「財務諸表等規則」という）、ならびに同規則第２条の規定に基づき、「金融商品取引業等に関する内閣府令」（○年○月○日内閣府令第52号）により作成しております。&lt;/p&gt;
+&lt;br/&gt;
+&lt;p style="margin-right: 9.0pt; text-indent: -9.0pt"&gt;２  財務諸表の記載金額は、百万円未満の端数を切り捨てて表示しております。&lt;/p&gt;
+&lt;br/&gt;
+&lt;p style="margin-right: 9.0pt; text-indent: -9.0pt"&gt;３  委託会社の財務諸表については、金融商品取引法第193条の２第１項の規定に基づき、当事業年度の財務諸表について○○○○監査法人の監査を受けております。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:FinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:BalanceSheetFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（１）【貸借対照表】&lt;/div&gt;
+&lt;div class="pageBreakAfter"&gt;
+&lt;div class="divContent"&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;img alt="（略）" height="70" src="images/016.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</jpsps_cor:BalanceSheetFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:StatementOfIncomeFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（２）【損益計算書】&lt;/div&gt;
+&lt;div class="pageBreakAfter"&gt;
+&lt;div class="divContent"&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;img alt="（略）" height="70" src="images/016.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</jpsps_cor:StatementOfIncomeFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:StatementOfChangesInEquityFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;div class="content3"&gt;（３）【株主資本等変動計算書】&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;img alt="（略）" height="70" src="images/016.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:StatementOfChangesInEquityFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:NotesFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;div class="pageBreakAfter"&gt;
+&lt;p style="margin-left: 18.0pt"&gt;注記事項&lt;/p&gt;
+&lt;div class="divContent"&gt;
+&lt;br/&gt;
+&lt;div&gt;&lt;img alt="（略）" height="70" src="images/016.jpg" width="600"/&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</jpsps_cor:NotesFinancialInformationOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:RestrictionsOnTradesWithInterestedPartiesTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;４【利害関係人との取引制限】&lt;/h3&gt;
+&lt;div class="h4"&gt;
+&lt;p style="text-indent: 9.0pt"&gt;委託者は、「金融商品取引法」の定めるところにより、利害関係人との取引について、次に掲げる行為が禁止されています。&lt;/p&gt;
+
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;①  ……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;②  ……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;③  ……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;④  ……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;⑤  ……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:RestrictionsOnTradesWithInterestedPartiesTextBlock>
+  <jpsps_cor:OtherInformationOverviewOfInvestmentTrustManagementCompanyEtcTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;５【その他】&lt;/h3&gt;
+&lt;div class="h4 pageBreakAfter"&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;(1）……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="margin-left: 18.0pt; text-indent: -18.0pt"&gt;(2）……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:OtherInformationOverviewOfInvestmentTrustManagementCompanyEtcTextBlock>
+  <jpsps_cor:OverviewOfOtherPartiesInvolvedTextBlock contextRef="FilingDateInstant">
+&lt;h2&gt;第２【その他の関係法人の概況】&lt;/h2&gt;
+&lt;h3&gt;１【名称、資本金の額及び事業の内容】&lt;/h3&gt;
+&lt;div&gt;
+&lt;p style="margin-left: 18.0pt"&gt;(1）受託者&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 200.25pt ; min-width: 200.25pt"/&gt;
+&lt;col style="width: 88.5pt ; min-width: 88.5pt"/&gt;
+&lt;col style="width: 200.25pt ; min-width: 200.25pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="text-align: center; line-height:10.5pt"&gt;名称&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="text-align: center; line-height:10.5pt"&gt;資本金の額&lt;sup&gt;＊&lt;/sup&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="text-align: center; line-height:10.5pt"&gt;事業の内容&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 40.5pt; min-height: 40.5pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height:10.5pt; text-align: left"&gt;○○○○信託銀行株式会社&lt;br/&gt;（再信託受託者：○○○○信託銀行株式会社）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height:10.5pt; text-align: right"&gt;888,888百万円&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height:10.5pt; text-align: left"&gt;銀行法に基づき銀行業を営むとともに、金融機関の信託業務の兼営等に関する法律（兼営法）に基づき信託業務を営んでいます。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+
+&lt;p style="margin-left: 18.0pt"&gt;(2）販売会社&lt;/p&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 200.25pt ; min-width: 200.25pt"/&gt;
+&lt;col style="width: 88.5pt ; min-width: 88.5pt"/&gt;
+&lt;col style="width: 200.25pt ; min-width: 200.25pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="text-align: center"&gt;名称&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="text-align: center"&gt;資本金の額&lt;sup&gt;＊&lt;/sup&gt;&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="text-align: center"&gt;事業の内容&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 30.0pt; min-height: 30.0pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height:10.5pt; text-align: left"&gt;○○○○証券株式会社&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height:10.5pt; text-align: right"&gt;88,888百万円&lt;/p&gt;
+&lt;/td&gt;
+&lt;td rowspan="2" style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height:10.5pt; text-align: left"&gt;「金融商品取引法」に定める第一種金融商品取引業を営んでいます。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 30.0pt; min-height: 30.0pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height:10.5pt; text-align: left"&gt;△△△△証券株式会社&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height:10.5pt; text-align: right"&gt;88,888百万円&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+&lt;h3&gt;２【関係業務の概要】&lt;/h3&gt;
+&lt;div class="h4"&gt;
+&lt;p&gt;(1）受託者&lt;/p&gt;
+&lt;p style="text-indent: 9.0pt; margin-left: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;p style="margin-left: 18.0pt"&gt;再信託受託者の概要&lt;/p&gt;
+&lt;table style="margin-left: 27.0pt; width: 445.5pt; min-width: 445.5pt"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 118.5pt ; min-width: 118.5pt"/&gt;
+&lt;col style="width: 327.0pt ; min-width: 327.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;名称：&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;○○○○信託銀行株式会社&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;設立年月日：&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;令和88年88月88日&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;業務の概要：&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;銀行法に基づき銀行業を営むとともに、金融機関の信託業務の兼営等に関する法律に基づき信託業務を営んでいます。&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;銀行免許取得日および：&lt;br/&gt;信託業務の認可取得日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="vertical-align: top"&gt;
+&lt;p&gt;令和88年88月88日&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+
+&lt;p&gt;(2）販売会社&lt;/p&gt;
+&lt;p style="text-indent: 9.0pt; margin-left: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;p&gt;(3）投資顧問会社&lt;/p&gt;
+&lt;p style="text-indent: 9.0pt; margin-left: 9.0pt"&gt;……………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………………………………。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+&lt;div class="divContent"&gt;
+&lt;/div&gt;
+&lt;h3&gt;３【資本関係】&lt;/h3&gt;
+&lt;div class="h4"&gt;
+&lt;p&gt;(1）受託者&lt;/p&gt;
+&lt;p style="text-indent: 9.0pt; margin-left: 9.0pt"&gt;該当事項はありません。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;p&gt;(2）販売会社&lt;/p&gt;
+&lt;p style="text-indent: 9.0pt; margin-left: 9.0pt"&gt;該当事項はありません。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;p&gt;(3）投資顧問会社&lt;/p&gt;
+&lt;p style="text-indent: 9.0pt; margin-left: 9.0pt"&gt;該当事項はありません。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:OverviewOfOtherPartiesInvolvedTextBlock>
+  <jpsps_cor:SupplementaryReferenceInformationTextBlock contextRef="FilingDateInstant">
+&lt;h2&gt;第３【参考情報】&lt;/h2&gt;
+&lt;div class="h3"&gt;
+&lt;br/&gt;
+&lt;p&gt;当計算期間において提出された、ファンドに係る金融商品取引法第25条第１項に揚げる書類は以下のとおりです。&lt;/p&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 9.0pt"&gt;○年○月○日    有価証券届出書、有価証券報告書&lt;/p&gt;
+&lt;p style="margin-left: 9.0pt"&gt;○年○月○日    半期報告書、有価証券届出書の訂正届出書&lt;/p&gt;
+
+&lt;/div&gt;
+</jpsps_cor:SupplementaryReferenceInformationTextBlock>
+</xbrli:xbrl>

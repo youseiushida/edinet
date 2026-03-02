@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xbrldt="http://xbrl.org/2005/xbrldt">
+
+  <link:definitionLink xlink:type="extended"
+    xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_DuplicateTest">
+
+    <!-- Heading -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TestHeading"
+      xlink:label="TestHeading"/>
+
+    <!-- Table -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TestTable"
+      xlink:label="TestTable"/>
+
+    <!-- Axis -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TestAxis"
+      xlink:label="TestAxis"/>
+
+    <!-- Domain - first reference (for dimension-domain) -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TestDomain"
+      xlink:label="TestDomain"/>
+
+    <!-- Domain - second reference with _2 suffix (for dimension-default) -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TestDomain"
+      xlink:label="TestDomain_2"/>
+
+    <!-- all: Heading -> Table -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/all"
+      xlink:from="TestHeading" xlink:to="TestTable"
+      order="1.0"
+      xbrldt:closed="true"
+      xbrldt:contextElement="scenario"/>
+
+    <!-- hypercube-dimension: Table -> Axis -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension"
+      xlink:from="TestTable" xlink:to="TestAxis"
+      order="1.0"/>
+
+    <!-- dimension-domain: Axis -> Domain (via label "TestDomain") -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain"
+      xlink:from="TestAxis" xlink:to="TestDomain"
+      order="1.0"/>
+
+    <!-- dimension-default: Axis -> Domain (via label "TestDomain_2", same concept) -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default"
+      xlink:from="TestAxis" xlink:to="TestDomain_2"
+      order="1.0"/>
+
+  </link:definitionLink>
+</link:linkbase>

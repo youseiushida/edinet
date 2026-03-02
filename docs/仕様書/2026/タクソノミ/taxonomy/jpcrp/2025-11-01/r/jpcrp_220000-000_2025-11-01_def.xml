@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_IssuedSharesTotalNumberOfSharesEtc" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_IssuedSharesTotalNumberOfSharesEtc"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_IssuedSharesTotalNumberOfSharesEtc">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_IssuedSharesTotalNumberOfSharesEtcHeading" xlink:label="IssuedSharesTotalNumberOfSharesEtcHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_IssuedSharesTotalNumberOfSharesEtcTable" xlink:label="IssuedSharesTotalNumberOfSharesEtcTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="IssuedSharesTotalNumberOfSharesEtcHeading" xlink:to="IssuedSharesTotalNumberOfSharesEtcTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassesOfSharesAxis" xlink:label="ClassesOfSharesAxis"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="IssuedSharesTotalNumberOfSharesEtcTable" xlink:to="ClassesOfSharesAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalClassesOfSharesMember" xlink:label="TotalClassesOfSharesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="ClassesOfSharesAxis" xlink:to="TotalClassesOfSharesMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalClassesOfSharesMember" xlink:label="TotalClassesOfSharesMember_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="ClassesOfSharesAxis" xlink:to="TotalClassesOfSharesMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OrdinaryShareMember" xlink:label="OrdinaryShareMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="TotalClassesOfSharesMember" xlink:to="OrdinaryShareMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassAPreferredSharesMember" xlink:label="ClassAPreferredSharesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="TotalClassesOfSharesMember" xlink:to="ClassAPreferredSharesMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassBPreferredSharesMember" xlink:label="ClassBPreferredSharesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="TotalClassesOfSharesMember" xlink:to="ClassBPreferredSharesMember" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassOnePreferredSharesMember" xlink:label="ClassOnePreferredSharesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="TotalClassesOfSharesMember" xlink:to="ClassOnePreferredSharesMember" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassTwoPreferredSharesMember" xlink:label="ClassTwoPreferredSharesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="TotalClassesOfSharesMember" xlink:to="ClassTwoPreferredSharesMember" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassASharesMember" xlink:label="ClassASharesMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="TotalClassesOfSharesMember" xlink:to="ClassASharesMember" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_IssuedSharesTotalNumberOfSharesEtcLineItems" xlink:label="IssuedSharesTotalNumberOfSharesEtcLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="IssuedSharesTotalNumberOfSharesEtcHeading" xlink:to="IssuedSharesTotalNumberOfSharesEtcLineItems" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ClassIssuedSharesTotalNumberOfSharesEtc" xlink:label="ClassIssuedSharesTotalNumberOfSharesEtc"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="IssuedSharesTotalNumberOfSharesEtcLineItems" xlink:to="ClassIssuedSharesTotalNumberOfSharesEtc" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfIssuedSharesIssuedSharesTotalNumberOfSharesEtc" xlink:label="NumberOfIssuedSharesIssuedSharesTotalNumberOfSharesEtc"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="IssuedSharesTotalNumberOfSharesEtcLineItems" xlink:to="NumberOfIssuedSharesIssuedSharesTotalNumberOfSharesEtc" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfIssuedSharesAsOfFiscalYearEndIssuedSharesTotalNumberOfSharesEtc" xlink:label="NumberOfIssuedSharesAsOfFiscalYearEndIssuedSharesTotalNumberOfSharesEtc"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="IssuedSharesTotalNumberOfSharesEtcLineItems" xlink:to="NumberOfIssuedSharesAsOfFiscalYearEndIssuedSharesTotalNumberOfSharesEtc" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfIssuedSharesAsOfFilingDateIssuedSharesTotalNumberOfSharesEtc" xlink:label="NumberOfIssuedSharesAsOfFilingDateIssuedSharesTotalNumberOfSharesEtc"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="IssuedSharesTotalNumberOfSharesEtcLineItems" xlink:to="NumberOfIssuedSharesAsOfFilingDateIssuedSharesTotalNumberOfSharesEtc" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NameOfFinancialInstrumentsExchangeOnWhichSecuritiesAreListedOrAuthorizedFinancialInstrumentsBusinessAssociationToWhichSecuritiesAreRegistered" xlink:label="NameOfFinancialInstrumentsExchangeOnWhichSecuritiesAreListedOrAuthorizedFinancialInstrumentsBusinessAssociationToWhichSecuritiesAreRegistered"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="IssuedSharesTotalNumberOfSharesEtcLineItems" xlink:to="NameOfFinancialInstrumentsExchangeOnWhichSecuritiesAreListedOrAuthorizedFinancialInstrumentsBusinessAssociationToWhichSecuritiesAreRegistered" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DescriptionIssuedSharesTotalNumberOfSharesEtc" xlink:label="DescriptionIssuedSharesTotalNumberOfSharesEtc"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="IssuedSharesTotalNumberOfSharesEtcLineItems" xlink:to="DescriptionIssuedSharesTotalNumberOfSharesEtc" order="6.0"/>
+  </link:definitionLink>
+</link:linkbase>

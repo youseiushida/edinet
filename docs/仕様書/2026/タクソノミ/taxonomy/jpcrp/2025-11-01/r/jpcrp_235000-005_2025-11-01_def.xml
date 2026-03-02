@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_Shareholdings-05" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_Shareholdings-05"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_Shareholdings-05">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SequentialNumbersAxis" xlink:label="SequentialNumbersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row1Member" xlink:label="Row1Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row1Member" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row2Member" xlink:label="Row2Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row2Member" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row3Member" xlink:label="Row3Member"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="SequentialNumbersAxis" xlink:to="Row3Member" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShareholdingsHeading" xlink:label="ShareholdingsHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ReportingCompanyEquitySecuritiesHeldAbstract" xlink:label="ReportingCompanyEquitySecuritiesHeldAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ShareholdingsHeading" xlink:to="ReportingCompanyEquitySecuritiesHeldAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompanyTable" xlink:label="InvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompanyTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="ReportingCompanyEquitySecuritiesHeldAbstract" xlink:to="InvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompanyTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="InvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompanyTable" xlink:to="SequentialNumbersAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompanyLineItems" xlink:label="InvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompanyLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ReportingCompanyEquitySecuritiesHeldAbstract" xlink:to="InvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompanyLineItems" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SecurityNameInvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompany" xlink:label="SecurityNameInvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompanyLineItems" xlink:to="SecurityNameInvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompany" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfSharesHeldInvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompany" xlink:label="NumberOfSharesHeldInvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompanyLineItems" xlink:to="NumberOfSharesHeldInvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompany" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_BookValueInvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompany" xlink:label="BookValueInvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompany"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompanyLineItems" xlink:to="BookValueInvestmentEquitySecuritiesReclassifiedFromHeldForPureInvestmentToHeldForPurposesOtherThanPureInvestmentReportingCompany" order="3.0"/>
+  </link:definitionLink>
+</link:linkbase>

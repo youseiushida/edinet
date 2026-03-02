@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfInventoriesIFRS-ListOfAccounts" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ComponentsOfInventoriesIFRS-ListOfAccounts"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfInventoriesIFRS-ListOfAccounts">
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfInventoriesIFRSAbstract" xlink:label="ComponentsOfInventoriesIFRSAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfInventoriesIFRSTable" xlink:label="ComponentsOfInventoriesIFRSTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfInventoriesIFRSAbstract" xlink:to="ComponentsOfInventoriesIFRSTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfInventoriesIFRSLineItems" xlink:label="ComponentsOfInventoriesIFRSLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfInventoriesIFRSAbstract" xlink:to="ComponentsOfInventoriesIFRSLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_InventoriesCAIFRSAbstract" xlink:label="InventoriesCAIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfInventoriesIFRSLineItems" xlink:to="InventoriesCAIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_MerchandiseAndFinishedGoodsCAIFRS" xlink:label="MerchandiseAndFinishedGoodsCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="MerchandiseAndFinishedGoodsCAIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_MerchandiseCAIFRS" xlink:label="MerchandiseCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="MerchandiseCAIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinishedGoodsCAIFRS" xlink:label="FinishedGoodsCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="FinishedGoodsCAIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SemiFinishedGoodsCAIFRS" xlink:label="SemiFinishedGoodsCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="SemiFinishedGoodsCAIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_WorkInProcessAndRawMaterialsCAIFRS" xlink:label="WorkInProcessAndRawMaterialsCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="WorkInProcessAndRawMaterialsCAIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RawMaterialsAndSuppliesCAIFRS" xlink:label="RawMaterialsAndSuppliesCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="RawMaterialsAndSuppliesCAIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_WorkInProcessCAIFRS" xlink:label="WorkInProcessCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="WorkInProcessCAIFRS" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RawMaterialsCAIFRS" xlink:label="RawMaterialsCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="RawMaterialsCAIFRS" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProductionSuppliesCAIFRS" xlink:label="ProductionSuppliesCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="ProductionSuppliesCAIFRS" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RealEstateForSaleCAIFRS" xlink:label="RealEstateForSaleCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="RealEstateForSaleCAIFRS" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RealEstateForSaleInProcessCAIFRS" xlink:label="RealEstateForSaleInProcessCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="RealEstateForSaleInProcessCAIFRS" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherInventoriesCAIFRS" xlink:label="OtherInventoriesCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="OtherInventoriesCAIFRS" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_InventoriesCAIFRS" xlink:label="InventoriesCAIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="InventoriesCAIFRSAbstract" xlink:to="InventoriesCAIFRS" order="13.0"/>
+  </link:definitionLink>
+</link:linkbase>

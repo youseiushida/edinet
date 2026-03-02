@@ -1,0 +1,66 @@
+[project]
+name = "edinet"
+dynamic = ["version"]
+description = "EDINET API client & XBRL parser for Japanese financial disclosures"
+readme = "README.md"
+license = {text = "MIT"}
+keywords = ["edinet", "xbrl", "japan", "financial", "disclosure", "sec"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial",
+]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.27",
+    "lxml>=5.0",
+    "platformdirs>=4.0",
+    "pydantic>=2.0",
+]
+
+[project.optional-dependencies]
+analysis = [
+    "pandas>=2.0",
+    "pyarrow>=14.0",
+]
+display = [
+    "rich>=13.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.1",
+    "openpyxl>=3",
+    "pytest>=9.0.2",
+    "pytest-asyncio>=0.25",
+    "ruff>=0.15.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/edinet/_version.py"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not large and not slow'"
+asyncio_mode = "auto"
+markers = [
+    "slow: performance-sensitive tests (e.g., import-time checks)",
+    "data_audit: data-quality audit tests that depend on source dataset characteristics",
+    "large: requires network access to EDINET API (skipped by default)",
+    "small: fast in-memory tests with no I/O",
+    "medium: tests that read local fixture files",
+    "unit: unit tests",
+    "integration: integration tests spanning multiple components",
+    "e2e: end-to-end tests",
+]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+check_untyped_defs = true

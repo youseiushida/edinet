@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/jppfs/Consolidated/role/label" xlink:type="simple" xlink:href="../../../jppfs/2025-11-01/jppfs_rt_2025-11-01.xsd#rol_ConsolidatedLabel"/>
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfCashFlowsIFRS" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfCashFlowsIFRS"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfCashFlowsIFRS">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ConsolidatedStatementOfCashFlowsIFRSHeading" xlink:label="ConsolidatedStatementOfCashFlowsIFRSHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_StatementOfCashFlowsIFRSTable" xlink:label="StatementOfCashFlowsIFRSTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedStatementOfCashFlowsIFRSHeading" xlink:to="StatementOfCashFlowsIFRSTable" order="1.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/Consolidated/role/label"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfCashFlowsIFRSTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_StatementOfCashFlowsIFRSLineItems" xlink:label="StatementOfCashFlowsIFRSLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedStatementOfCashFlowsIFRSHeading" xlink:to="StatementOfCashFlowsIFRSLineItems" order="2.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/Consolidated/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:label="CashFlowsFromOperatingActivitiesIFRSAbstract"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfCashFlowsIFRSLineItems" xlink:to="CashFlowsFromOperatingActivitiesIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossIFRS" xlink:label="ProfitLossIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="ProfitLossIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DepreciationAndAmortizationOpeCFIFRS" xlink:label="DepreciationAndAmortizationOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="DepreciationAndAmortizationOpeCFIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ImpairmentLossesReversalOfImpairmentLossesOpeCFIFRS" xlink:label="ImpairmentLossesReversalOfImpairmentLossesOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="ImpairmentLossesReversalOfImpairmentLossesOpeCFIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceIncomeOpeCFIFRS" xlink:label="FinanceIncomeOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="FinanceIncomeOpeCFIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceCostsOpeCFIFRS" xlink:label="FinanceCostsOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="FinanceCostsOpeCFIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ShareOfLossProfitOfInvestmentsAccountedForUsingEquityMethodOpeCFIFRS" xlink:label="ShareOfLossProfitOfInvestmentsAccountedForUsingEquityMethodOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="ShareOfLossProfitOfInvestmentsAccountedForUsingEquityMethodOpeCFIFRS" order="6.0" preferredLabel="http://www.xbrl.org/2003/role/negativeLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LossGainOnSaleOfPropertyPlantAndEquipmentOpeCFIFRS" xlink:label="LossGainOnSaleOfPropertyPlantAndEquipmentOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="LossGainOnSaleOfPropertyPlantAndEquipmentOpeCFIFRS" order="7.0" preferredLabel="http://www.xbrl.org/2003/role/negativeLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IncomeTaxExpenseOpeCFIFRS" xlink:label="IncomeTaxExpenseOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="IncomeTaxExpenseOpeCFIFRS" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DecreaseIncreaseInTradeReceivablesOpeCFIFRS" xlink:label="DecreaseIncreaseInTradeReceivablesOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="DecreaseIncreaseInTradeReceivablesOpeCFIFRS" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DecreaseIncreaseInInventoriesOpeCFIFRS" xlink:label="DecreaseIncreaseInInventoriesOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="DecreaseIncreaseInInventoriesOpeCFIFRS" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IncreaseDecreaseInTradePayablesOpeCFIFRS" xlink:label="IncreaseDecreaseInTradePayablesOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="IncreaseDecreaseInTradePayablesOpeCFIFRS" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IncreaseDecreaseInProvisionsOpeCFIFRS" xlink:label="IncreaseDecreaseInProvisionsOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="IncreaseDecreaseInProvisionsOpeCFIFRS" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IncreaseDecreaseInRetirementBenefitLiabilityOpeCFIFRS" xlink:label="IncreaseDecreaseInRetirementBenefitLiabilityOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="IncreaseDecreaseInRetirementBenefitLiabilityOpeCFIFRS" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherChangesInWorkingCapitalOpeCFIFRS" xlink:label="OtherChangesInWorkingCapitalOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="OtherChangesInWorkingCapitalOpeCFIFRS" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SubtotalOpeCFIFRS" xlink:label="SubtotalOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="SubtotalOpeCFIFRS" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_InterestReceivedOpeCFIFRS" xlink:label="InterestReceivedOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="InterestReceivedOpeCFIFRS" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DividendsReceivedOpeCFIFRS" xlink:label="DividendsReceivedOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="DividendsReceivedOpeCFIFRS" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_InterestPaidOpeCFIFRS" xlink:label="InterestPaidOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="InterestPaidOpeCFIFRS" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IncomeTaxesPaidOpeCFIFRS" xlink:label="IncomeTaxesPaidOpeCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="IncomeTaxesPaidOpeCFIFRS" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_NetCashProvidedByUsedInOperatingActivitiesIFRS" xlink:label="NetCashProvidedByUsedInOperatingActivitiesIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromOperatingActivitiesIFRSAbstract" xlink:to="NetCashProvidedByUsedInOperatingActivitiesIFRS" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:label="CashFlowsFromInvestingActivitiesIFRSAbstract"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfCashFlowsIFRSLineItems" xlink:to="CashFlowsFromInvestingActivitiesIFRSAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PurchaseOfPropertyPlantAndEquipmentInvCFIFRS" xlink:label="PurchaseOfPropertyPlantAndEquipmentInvCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="PurchaseOfPropertyPlantAndEquipmentInvCFIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProceedsFromSaleOfPropertyPlantAndEquipmentInvCFIFRS" xlink:label="ProceedsFromSaleOfPropertyPlantAndEquipmentInvCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="ProceedsFromSaleOfPropertyPlantAndEquipmentInvCFIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PurchaseOfIntangibleAssetsInvCFIFRS" xlink:label="PurchaseOfIntangibleAssetsInvCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="PurchaseOfIntangibleAssetsInvCFIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PaymentsForLoansReceivableInvCFIFRS" xlink:label="PaymentsForLoansReceivableInvCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="PaymentsForLoansReceivableInvCFIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CollectionOfLoansReceivableInvCFIFRS" xlink:label="CollectionOfLoansReceivableInvCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="CollectionOfLoansReceivableInvCFIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PurchaseOfInvestmentSecuritiesInvCFIFRS" xlink:label="PurchaseOfInvestmentSecuritiesInvCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="PurchaseOfInvestmentSecuritiesInvCFIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProceedsFromSaleOfInvestmentSecuritiesInvCFIFRS" xlink:label="ProceedsFromSaleOfInvestmentSecuritiesInvCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="ProceedsFromSaleOfInvestmentSecuritiesInvCFIFRS" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PaymentsForAcquisitionOfSubsidiariesInvCFIFRS" xlink:label="PaymentsForAcquisitionOfSubsidiariesInvCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="PaymentsForAcquisitionOfSubsidiariesInvCFIFRS" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProceedsFromSaleOfSubsidiariesInvCFIFRS" xlink:label="ProceedsFromSaleOfSubsidiariesInvCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="ProceedsFromSaleOfSubsidiariesInvCFIFRS" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherInvCFIFRS" xlink:label="OtherInvCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="OtherInvCFIFRS" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_NetCashProvidedByUsedInInvestingActivitiesIFRS" xlink:label="NetCashProvidedByUsedInInvestingActivitiesIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromInvestingActivitiesIFRSAbstract" xlink:to="NetCashProvidedByUsedInInvestingActivitiesIFRS" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:label="CashFlowsFromFinancingActivitiesIFRSAbstract"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfCashFlowsIFRSLineItems" xlink:to="CashFlowsFromFinancingActivitiesIFRSAbstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_NetIncreaseDecreaseInShortTermBorrowingsFinCFIFRS" xlink:label="NetIncreaseDecreaseInShortTermBorrowingsFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="NetIncreaseDecreaseInShortTermBorrowingsFinCFIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProceedsFromLongTermBorrowingsFinCFIFRS" xlink:label="ProceedsFromLongTermBorrowingsFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="ProceedsFromLongTermBorrowingsFinCFIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RepaymentsOfLongTermBorrowingsFinCFIFRS" xlink:label="RepaymentsOfLongTermBorrowingsFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="RepaymentsOfLongTermBorrowingsFinCFIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProceedsFromIssuanceOfBondsFinCFIFRS" xlink:label="ProceedsFromIssuanceOfBondsFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="ProceedsFromIssuanceOfBondsFinCFIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RedemptionOfBondsFinCFIFRS" xlink:label="RedemptionOfBondsFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="RedemptionOfBondsFinCFIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProceedsFromIssuanceOfSharesFinCFIFRS" xlink:label="ProceedsFromIssuanceOfSharesFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="ProceedsFromIssuanceOfSharesFinCFIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProceedsFromExerciseOfEmployeeShareOptionsFinCFIFRS" xlink:label="ProceedsFromExerciseOfEmployeeShareOptionsFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="ProceedsFromExerciseOfEmployeeShareOptionsFinCFIFRS" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CapitalContributionFromNonControllingInterestsFinCFIFRS" xlink:label="CapitalContributionFromNonControllingInterestsFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="CapitalContributionFromNonControllingInterestsFinCFIFRS" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PaymentsForAcquisitionOfInterestsInSubsidiariesFromNonControllingInterestsFinCFIFRS" xlink:label="PaymentsForAcquisitionOfInterestsInSubsidiariesFromNonControllingInterestsFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="PaymentsForAcquisitionOfInterestsInSubsidiariesFromNonControllingInterestsFinCFIFRS" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PaymentsForPurchaseOfTreasurySharesFinCFIFRS" xlink:label="PaymentsForPurchaseOfTreasurySharesFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="PaymentsForPurchaseOfTreasurySharesFinCFIFRS" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DividendsPaidFinCFIFRS" xlink:label="DividendsPaidFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="DividendsPaidFinCFIFRS" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DividendsPaidToNonControllingInterestsFinCFIFRS" xlink:label="DividendsPaidToNonControllingInterestsFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="DividendsPaidToNonControllingInterestsFinCFIFRS" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherFinCFIFRS" xlink:label="OtherFinCFIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="OtherFinCFIFRS" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_NetCashProvidedByUsedInFinancingActivitiesIFRS" xlink:label="NetCashProvidedByUsedInFinancingActivitiesIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CashFlowsFromFinancingActivitiesIFRSAbstract" xlink:to="NetCashProvidedByUsedInFinancingActivitiesIFRS" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_NetIncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChangesIFRS" xlink:label="NetIncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChangesIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfCashFlowsIFRSLineItems" xlink:to="NetIncreaseDecreaseInCashAndCashEquivalentsBeforeEffectOfExchangeRateChangesIFRS" order="4.0" preferredLabel="http://www.xbrl.org/2003/role/positiveLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_EffectOfExchangeRateChangesOnCashAndCashEquivalentsIFRS" xlink:label="EffectOfExchangeRateChangesOnCashAndCashEquivalentsIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfCashFlowsIFRSLineItems" xlink:to="EffectOfExchangeRateChangesOnCashAndCashEquivalentsIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CashAndCashEquivalentsIFRS" xlink:label="CashAndCashEquivalentsIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfCashFlowsIFRSLineItems" xlink:to="CashAndCashEquivalentsIFRS" order="5.0" preferredLabel="http://www.xbrl.org/2003/role/periodStartLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CashAndCashEquivalentsIFRS" xlink:label="CashAndCashEquivalentsIFRS_2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfCashFlowsIFRSLineItems" xlink:to="CashAndCashEquivalentsIFRS_2" order="7.0" preferredLabel="http://www.xbrl.org/2003/role/periodEndLabel"/>
+  </link:presentationLink>
+</link:linkbase>

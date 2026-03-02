@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_IndependentAuditorsReportKAM" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_IndependentAuditorsReportKAM"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_IndependentAuditorsReportKAM">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SequentialNumbersAxis" xlink:label="SequentialNumbersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row1Member" xlink:label="Row1Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SequentialNumbersAxis" xlink:to="Row1Member" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row2Member" xlink:label="Row2Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SequentialNumbersAxis" xlink:to="Row2Member" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Row3Member" xlink:label="Row3Member"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SequentialNumbersAxis" xlink:to="Row3Member" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_IndependentAuditorsReportHeading" xlink:label="IndependentAuditorsReportHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_KeyAuditMattersDetailAbstract" xlink:label="KeyAuditMattersDetailAbstract"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="IndependentAuditorsReportHeading" xlink:to="KeyAuditMattersDetailAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_KeyAuditMattersTable" xlink:label="KeyAuditMattersTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersDetailAbstract" xlink:to="KeyAuditMattersTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersTable" xlink:to="SequentialNumbersAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_KeyAuditMattersConsolidatedLineItems" xlink:label="KeyAuditMattersConsolidatedLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersDetailAbstract" xlink:to="KeyAuditMattersConsolidatedLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShortDescriptionKAMConsolidated" xlink:label="ShortDescriptionKAMConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="ShortDescriptionKAMConsolidated" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ReferenceKAMConsolidated" xlink:label="ReferenceKAMConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="ReferenceKAMConsolidated" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference2KAMConsolidated" xlink:label="Reference2KAMConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="Reference2KAMConsolidated" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference3KAMConsolidated" xlink:label="Reference3KAMConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="Reference3KAMConsolidated" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference4KAMConsolidated" xlink:label="Reference4KAMConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="Reference4KAMConsolidated" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference5KAMConsolidated" xlink:label="Reference5KAMConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="Reference5KAMConsolidated" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DescriptionIncludingReasonKAMConsolidatedTextBlock" xlink:label="DescriptionIncludingReasonKAMConsolidatedTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="DescriptionIncludingReasonKAMConsolidatedTextBlock" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditorsResponseKAMConsolidatedTextBlock" xlink:label="AuditorsResponseKAMConsolidatedTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedLineItems" xlink:to="AuditorsResponseKAMConsolidatedTextBlock" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_KeyAuditMattersNonConsolidatedLineItems" xlink:label="KeyAuditMattersNonConsolidatedLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersDetailAbstract" xlink:to="KeyAuditMattersNonConsolidatedLineItems" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShortDescriptionKAMNonConsolidated" xlink:label="ShortDescriptionKAMNonConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedLineItems" xlink:to="ShortDescriptionKAMNonConsolidated" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ReferenceKAMNonConsolidated" xlink:label="ReferenceKAMNonConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedLineItems" xlink:to="ReferenceKAMNonConsolidated" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference2KAMNonConsolidated" xlink:label="Reference2KAMNonConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedLineItems" xlink:to="Reference2KAMNonConsolidated" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference3KAMNonConsolidated" xlink:label="Reference3KAMNonConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedLineItems" xlink:to="Reference3KAMNonConsolidated" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference4KAMNonConsolidated" xlink:label="Reference4KAMNonConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedLineItems" xlink:to="Reference4KAMNonConsolidated" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference5KAMNonConsolidated" xlink:label="Reference5KAMNonConsolidated"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedLineItems" xlink:to="Reference5KAMNonConsolidated" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DescriptionIncludingReasonKAMNonConsolidatedTextBlock" xlink:label="DescriptionIncludingReasonKAMNonConsolidatedTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedLineItems" xlink:to="DescriptionIncludingReasonKAMNonConsolidatedTextBlock" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditorsResponseKAMNonConsolidatedTextBlock" xlink:label="AuditorsResponseKAMNonConsolidatedTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedLineItems" xlink:to="AuditorsResponseKAMNonConsolidatedTextBlock" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SameAsKAMForConsolidatedFSKAMNonConsolidatedTextBlock" xlink:label="SameAsKAMForConsolidatedFSKAMNonConsolidatedTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedLineItems" xlink:to="SameAsKAMForConsolidatedFSKAMNonConsolidatedTextBlock" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_KeyAuditMattersConsolidatedPriorYearLineItems" xlink:label="KeyAuditMattersConsolidatedPriorYearLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersDetailAbstract" xlink:to="KeyAuditMattersConsolidatedPriorYearLineItems" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShortDescriptionKAMConsolidatedPriorYear" xlink:label="ShortDescriptionKAMConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedPriorYearLineItems" xlink:to="ShortDescriptionKAMConsolidatedPriorYear" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ReferenceKAMConsolidatedPriorYear" xlink:label="ReferenceKAMConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedPriorYearLineItems" xlink:to="ReferenceKAMConsolidatedPriorYear" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference2KAMConsolidatedPriorYear" xlink:label="Reference2KAMConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedPriorYearLineItems" xlink:to="Reference2KAMConsolidatedPriorYear" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference3KAMConsolidatedPriorYear" xlink:label="Reference3KAMConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedPriorYearLineItems" xlink:to="Reference3KAMConsolidatedPriorYear" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference4KAMConsolidatedPriorYear" xlink:label="Reference4KAMConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedPriorYearLineItems" xlink:to="Reference4KAMConsolidatedPriorYear" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference5KAMConsolidatedPriorYear" xlink:label="Reference5KAMConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedPriorYearLineItems" xlink:to="Reference5KAMConsolidatedPriorYear" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DescriptionIncludingReasonKAMConsolidatedPriorYearTextBlock" xlink:label="DescriptionIncludingReasonKAMConsolidatedPriorYearTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedPriorYearLineItems" xlink:to="DescriptionIncludingReasonKAMConsolidatedPriorYearTextBlock" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditorsResponseKAMConsolidatedPriorYearTextBlock" xlink:label="AuditorsResponseKAMConsolidatedPriorYearTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersConsolidatedPriorYearLineItems" xlink:to="AuditorsResponseKAMConsolidatedPriorYearTextBlock" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_KeyAuditMattersNonConsolidatedPriorYearLineItems" xlink:label="KeyAuditMattersNonConsolidatedPriorYearLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersDetailAbstract" xlink:to="KeyAuditMattersNonConsolidatedPriorYearLineItems" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShortDescriptionKAMNonConsolidatedPriorYear" xlink:label="ShortDescriptionKAMNonConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedPriorYearLineItems" xlink:to="ShortDescriptionKAMNonConsolidatedPriorYear" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ReferenceKAMNonConsolidatedPriorYear" xlink:label="ReferenceKAMNonConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedPriorYearLineItems" xlink:to="ReferenceKAMNonConsolidatedPriorYear" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference2KAMNonConsolidatedPriorYear" xlink:label="Reference2KAMNonConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedPriorYearLineItems" xlink:to="Reference2KAMNonConsolidatedPriorYear" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference3KAMNonConsolidatedPriorYear" xlink:label="Reference3KAMNonConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedPriorYearLineItems" xlink:to="Reference3KAMNonConsolidatedPriorYear" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference4KAMNonConsolidatedPriorYear" xlink:label="Reference4KAMNonConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedPriorYearLineItems" xlink:to="Reference4KAMNonConsolidatedPriorYear" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_Reference5KAMNonConsolidatedPriorYear" xlink:label="Reference5KAMNonConsolidatedPriorYear"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedPriorYearLineItems" xlink:to="Reference5KAMNonConsolidatedPriorYear" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DescriptionIncludingReasonKAMNonConsolidatedPriorYearTextBlock" xlink:label="DescriptionIncludingReasonKAMNonConsolidatedPriorYearTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedPriorYearLineItems" xlink:to="DescriptionIncludingReasonKAMNonConsolidatedPriorYearTextBlock" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditorsResponseKAMNonConsolidatedPriorYearTextBlock" xlink:label="AuditorsResponseKAMNonConsolidatedPriorYearTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedPriorYearLineItems" xlink:to="AuditorsResponseKAMNonConsolidatedPriorYearTextBlock" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SameAsKAMForConsolidatedFSKAMNonConsolidatedPriorYearTextBlock" xlink:label="SameAsKAMForConsolidatedFSKAMNonConsolidatedPriorYearTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="KeyAuditMattersNonConsolidatedPriorYearLineItems" xlink:to="SameAsKAMForConsolidatedFSKAMNonConsolidatedPriorYearTextBlock" order="9.0"/>
+  </link:presentationLink>
+</link:linkbase>

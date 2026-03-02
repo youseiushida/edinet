@@ -1,0 +1,257 @@
+Wave 4 E2E 検証スクリプト (11 テスト)
+TAXONOMY_PATH: /mnt/c/Users/nezow/Downloads/ALL_20251101
+実行日時: 2026-03-02 16:48:38
+
+======================================================================
+TEST: CK-1: CK StrEnum は文字列として比較可能
+======================================================================
+  CK.REVENUE = <CK.REVENUE: 'revenue'>
+  CK.TOTAL_ASSETS = <CK.TOTAL_ASSETS: 'total_assets'>
+  CK.OPERATING_CF = <CK.OPERATING_CF: 'operating_cf'>
+  CK メンバー数: 93
+  -> PASSED
+
+======================================================================
+TEST: CK-2: jgaap.lookup() の canonical_key が CK 値を使用
+======================================================================
+  NetSales -> <CK.REVENUE: 'revenue'> (OK)
+  CostOfSales -> <CK.COST_OF_SALES: 'cost_of_sales'> (OK)
+  GrossProfit -> <CK.GROSS_PROFIT: 'gross_profit'> (OK)
+  OperatingIncome -> <CK.OPERATING_INCOME: 'operating_income'> (OK)
+  OrdinaryIncome -> <CK.ORDINARY_INCOME: 'ordinary_income'> (OK)
+  NetIncome -> None (NOT FOUND)
+  TotalAssets -> None (NOT FOUND)
+  TotalLiabilities -> None (NOT FOUND)
+  jgaap 全マッピング数: 83
+  jgaap 全正規化キー数: 83
+  -> PASSED
+
+======================================================================
+TEST: CK-3: ifrs.lookup() の canonical_key が CK 値を使用
+======================================================================
+  RevenueIFRS -> <CK.REVENUE: 'revenue'> (OK)
+  CostOfSalesIFRS -> <CK.COST_OF_SALES: 'cost_of_sales'> (OK)
+  OperatingIncomeIFRS -> None (NOT FOUND)
+  NetIncomeIFRS -> None (NOT FOUND)
+  TotalAssetsIFRS -> None (NOT FOUND)
+  ifrs 全マッピング数: 55
+  ifrs 全正規化キー数: 55
+  -> PASSED
+
+======================================================================
+TEST: NRM-1: normalize.get_canonical_key() が動作
+======================================================================
+  J-GAAP: NetSales -> revenue
+  IFRS: RevenueIFRS -> revenue
+  auto: NetSales -> revenue
+  cross: NetSales (J-GAAP -> IFRS) = RevenueIFRS
+  -> PASSED
+
+======================================================================
+TEST: FIELD-1: ConceptMapping の新旧フィールド確認
+======================================================================
+  concept: NetSales
+  canonical_key: <CK.REVENUE: 'revenue'>
+  statement_type: StatementType.INCOME_STATEMENT
+  is_jgaap_specific: False
+  (削除済み) label_ja: OK
+  (削除済み) label_en: OK
+  (削除済み) display_order: OK
+  (削除済み) period_type: OK
+  (削除済み) is_total: OK
+
+  IFRS ConceptMapping fields:
+    concept: RevenueIFRS
+    canonical_key: <CK.REVENUE: 'revenue'>
+    (削除済み) label_ja: OK
+    (削除済み) label_en: OK
+    (削除済み) display_order: OK
+    (削除済み) period_type: OK
+    (削除済み) is_total: OK
+  -> PASSED
+
+======================================================================
+TEST: SECTOR-1: sector/_base.py の sector_key リネーム確認
+======================================================================
+  SectorConceptMapping fields: ['concept', 'sector_key', 'industry_codes', 'general_equivalent', 'mapping_note']
+  (削除済み/リネーム済み) label_ja: OK
+  (削除済み/リネーム済み) label_en: OK
+  (削除済み/リネーム済み) display_order: OK
+  (削除済み/リネーム済み) period_type: OK
+  (削除済み/リネーム済み) is_total: OK
+  (削除済み/リネーム済み) statement_type: OK
+  (削除済み/リネーム済み) canonical_key: OK
+  SectorRegistry.sector_key: OK
+  SectorRegistry.all_sector_keys: OK
+  (削除済み) SectorRegistry.canonical_key: OK
+  (削除済み) SectorRegistry.all_canonical_keys: OK
+  (削除済み) SectorRegistry.mappings_for_statement: OK
+  (削除済み) SectorRegistry.known_concepts: OK
+  (削除済み) SectorRegistry.canonical_key_count: OK
+  -> PASSED
+
+======================================================================
+TEST: SECTOR-2: banking.py の SectorRegistry 動作確認
+======================================================================
+  banking module インポート失敗: cannot import name 'get_registry' from 'edinet.xbrl.sector.banking' (/mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/src/edinet/xbrl/sector/banking.py)
+  -> PASSED
+
+======================================================================
+TEST: E2E-JGAAP: ナカバヤシ (S100W4JX) のフルパイプライン
+======================================================================
+  doc_id: S100W4JX
+  Filing: ナカバヤシ株式会社 (ticker=7987)
+  xbrl() 完了: 3.49s
+  detected_standard: DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())
+
+  [PL] 科目数: 34
+  [PL] period: DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31))
+  [PL] consolidated: True
+    売上高:  62,767,000,000 (NetSales)
+    売上原価:  47,130,000,000 (CostOfSales)
+    売上総利益:  15,637,000,000 (via canonical_key=gross_profit, local=GrossProfit)
+    営業利益:   1,787,000,000 (via canonical_key=operating_income, local=OperatingIncome)
+    経常利益:   2,214,000,000 (via canonical_key=ordinary_income, local=OrdinaryIncome)
+    当期純利益:   1,978,000,000 (via canonical_key=net_income, local=ProfitLoss)
+
+  [BS] 科目数: 40
+  [BS] period: InstantPeriod(instant=datetime.date(2025, 3, 31))
+    総資産:  56,584,000,000 (via ck=total_assets, local=Assets)
+    負債合計:  27,206,000,000 (via ck=total_liabilities, local=Liabilities)
+    純資産合計:  29,377,000,000 (via ck=net_assets, local=NetAssets)
+
+  [CF] 科目数: 27
+  [CF] period: DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31))
+    営業活動によるキャッシュ・フロー:   2,791,000,000 (NetCashProvidedByUsedInOperatingActivities)
+    投資活動によるキャッシュ・フロー:    -396,000,000 (NetCashProvidedByUsedInInvestmentActivities)
+    財務活動によるキャッシュ・フロー:  -1,971,000,000 (NetCashProvidedByUsedInFinancingActivities)
+
+  [PL] to_dict() 件数: 34
+  [PL] to_dataframe() shape: (34, 5)
+  [PL] columns: ['label_ja', 'label_en', 'value', 'unit', 'concept']
+  -> PASSED
+
+======================================================================
+TEST: E2E-IFRS: 日立 (S100W56G) のフルパイプライン
+======================================================================
+  doc_id: S100W56G
+  Filing: 株式会社日立製作所 (ticker=6501)
+  xbrl() 完了: 9.40s
+  発行された警告: 2
+    - EdinetWarning: labelArc に use='prohibited' または priority 属性が検出されました。v0.1.0 では arc override の完全処理は行いません
+    - EdinetWarning: labelArc に use='prohibited' または priority 属性が検出されました。v0.1.0 では arc override の完全処理は行いません
+  detected_standard: DetectedStandard(standard=<AccountingStandard.IFRS: 'IFRS'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())
+
+  [PL] 科目数: 16
+  [PL] period: DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31))
+  [PL] consolidated: True
+  [PL] 全科目:
+    売上収益: 9,783,370,000,000 (RevenueIFRS) [ck=revenue]
+    親会社の所有者: 615,724,000,000 (ProfitLossAttributableToOwnersOfParentIFRS) [ck=net_income_parent]
+    基本的１株当たり当期利益（△損失）:          133.85 (BasicEarningsLossPerShareIFRS) [ck=eps]
+    売上原価: 6,962,527,000,000 (CostOfSalesIFRS) [ck=cost_of_sales]
+    非支配持分:  41,141,000,000 (ProfitLossAttributableToNonControllingInterestsIFRS) [ck=net_income_minority]
+    希薄化後１株当たり当期利益（△損失）:          133.72 (DilutedEarningsLossPerShareIFRS) [ck=eps_diluted]
+    売上総利益: 2,820,843,000,000 (GrossProfitIFRS) [ck=gross_profit]
+    販売費及び一般管理費: 1,849,237,000,000 (SellingGeneralAndAdministrativeExpensesIFRS) [ck=sga_expenses]
+    その他の収益:  49,665,000,000 (OtherIncomeIFRS) [ck=other_income_ifrs]
+    その他の費用: 143,023,000,000 (OtherExpensesIFRS) [ck=other_expenses_ifrs]
+    金融収益:  53,944,000,000 (FinanceIncomeIFRS) [ck=finance_income]
+    金融費用:  12,905,000,000 (FinanceCostsIFRS) [ck=finance_costs]
+    持分法による投資損益（△は損失）:  58,320,000,000 (ShareOfProfitLossOfInvestmentsAccountedForUsingEquityMethodIFRS) [ck=equity_method_income_ifrs]
+    税引前利益（△損失）: 962,733,000,000 (ProfitLossBeforeTaxIFRS) [ck=income_before_tax]
+    法人所得税費用: 305,868,000,000 (IncomeTaxExpenseIFRS) [ck=income_taxes]
+    当期利益（△損失）: 656,865,000,000 (ProfitLossIFRS) [ck=net_income]
+
+  [BS] 科目数: 24
+  [BS] 全科目:
+    現金及び現金同等物: 866,242,000,000 (CashAndCashEquivalentsIFRS) [ck=cash_and_equivalents]
+    有形固定資産: 1,341,537,000,000 (PropertyPlantAndEquipmentIFRS) [ck=ppe]
+    資本金: 464,384,000,000 (ShareCapitalIFRS) [ck=capital_stock]
+    のれん: 2,486,823,000,000 (GoodwillIFRS)
+    非支配持分: 184,326,000,000 (NonControllingInterestsIFRS) [ck=minority_interests]
+    棚卸資産: 1,566,282,000,000 (InventoriesCAIFRS) [ck=inventories]
+    資産: 13,284,813,000,000 (AssetsIFRS) [ck=total_assets]
+    その他の金融負債: 280,227,000,000 (OtherFinancialLiabilitiesCLIFRS)
+    退職給付に係る負債: 247,497,000,000 (RetirementBenefitLiabilityNCLIFRS)
+    負債: 7,253,396,000,000 (LiabilitiesIFRS) [ck=total_liabilities]
+    利益剰余金: 4,350,503,000,000 (RetainedEarningsIFRS) [ck=retained_earnings]
+    資本: 6,031,417,000,000 (EquityIFRS) [ck=net_assets]
+    負債及び資本: 13,284,813,000,000 (LiabilitiesAndEquityIFRS)
+    自己株式:  -8,587,000,000 (TreasurySharesIFRS) [ck=treasury_stock]
+    その他の流動資産: 350,558,000,000 (OtherCurrentAssetsCAIFRS)
+    持分法で会計処理されている投資: 836,231,000,000 (InvestmentsAccountedForUsingEquityMethodIFRS)
+    その他の流動負債: 680,411,000,000 (OtherCurrentLiabilitiesCLIFRS)
+    その他の非流動負債: 333,902,000,000 (OtherNonCurrentLiabilitiesNCLIFRS)
+    親会社の所有者に帰属する持分: 5,847,091,000,000 (EquityAttributableToOwnersOfParentIFRS) [ck=equity_parent]
+    非流動負債: 1,345,551,000,000 (NonCurrentLabilitiesIFRS) [ck=noncurrent_liabilities]
+    流動資産: 6,597,843,000,000 (CurrentAssetsIFRS) [ck=current_assets]
+    その他の非流動資産: 472,816,000,000 (OtherNonCurrentAssetsNCAIFRS)
+    非流動資産: 6,686,970,000,000 (NonCurrentAssetsIFRS) [ck=noncurrent_assets]
+    流動負債: 5,907,845,000,000 (TotalCurrentLiabilitiesIFRS) [ck=current_liabilities]
+
+  [CF] 科目数: 24
+  [CF] 主要科目:
+    投資活動によるキャッシュ・フロー: -573,650,000,000 (NetCashProvidedByUsedInInvestingActivitiesIFRS) [ck=investing_cf]
+    財務活動によるキャッシュ・フロー: -424,122,000,000 (NetCashProvidedByUsedInFinancingActivitiesIFRS) [ck=financing_cf]
+    営業活動によるキャッシュ・フロー: 1,172,240,000,000 (NetCashProvidedByUsedInOperatingActivitiesIFRS) [ck=operating_cf]
+  -> PASSED
+
+======================================================================
+TEST: E2E-BANK: 銀行業 (三菱UFJ等) の検索
+======================================================================
+  Filing: 株式会社三菱ＵＦＪフィナンシャル・グループ (doc_id=S100W4FB, ticker=8306)
+  xbrl() 完了: 7.11s
+  detected_standard: DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())
+  発行された警告: 1
+    - EdinetWarning: labelArc に use='prohibited' または priority 属性が検出されました。v0.1.0 では arc override の完全処理は行いません
+
+  [PL] 科目数: 20
+  [PL] 先頭15科目:
+    非支配株主に帰属する当期純利益又は非支配株主に帰属する当期純損失（△）:  78,530,000,000 (ProfitLossAttributableToNonControllingInterests)
+    その他有価証券評価差額金: -233,452,000,000 (ValuationDifferenceOnAvailableForSaleSecuritiesNetOfTaxOCI)
+    親会社株主に係る包括利益: 1,948,808,000,000 (ComprehensiveIncomeAttributableToOwnersOfTheParent)
+    減損損失: 141,542,000,000 (ImpairmentLossEL)
+    親会社株主に帰属する当期純利益又は親会社株主に帰属する当期純損失（△）: 1,862,946,000,000 (ProfitLossAttributableToOwnersOfParent)
+    繰延ヘッジ損益: -201,599,000,000 (DeferredGainsOrLossesOnHedgesNetOfTaxOCI)
+    非支配株主に係る包括利益: 120,851,000,000 (ComprehensiveIncomeAttributableToNonControllingInterests)
+    特別利益:  67,824,000,000 (ExtraordinaryIncome)
+    為替換算調整勘定: 464,906,000,000 (ForeignCurrencyTranslationAdjustmentNetOfTaxOCI)
+    特別損失: 186,673,000,000 (ExtraordinaryLoss)
+    退職給付に係る調整額:  45,916,000,000 (RemeasurementsOfDefinedBenefitPlansNetOfTaxOCI)
+    持分法適用会社に対する持分相当額:  50,556,000,000 (ShareOfOtherComprehensiveIncomeOfAssociatesAccountedForUsingEquityMethodOCI)
+    その他の包括利益: 128,182,000,000 (OtherComprehensiveIncome)
+    経常利益又は経常損失（△）: 2,669,483,000,000 (OrdinaryIncome)
+    税引前当期純利益又は税引前当期純損失（△）: 2,550,634,000,000 (IncomeBeforeIncomeTaxes)
+
+  [BS] 科目数: 29
+  [BS] 先頭15科目:
+    のれん: 530,386,000,000 (Goodwill)
+    社債: 14,018,955,000,000 (BondsPayable)
+    特別法上の引当金:   5,295,000,000 (ReservesUnderTheSpecialLaws2)
+    資本金: 2,141,513,000,000 (CapitalStock)
+    その他有価証券評価差額金: 1,327,127,000,000 (ValuationDifferenceOnAvailableForSaleSecurities)
+    繰延ヘッジ損益: -894,227,000,000 (DeferredGainsOrLossesOnHedges)
+    リース資産:      12,000,000 (LeaseAssetsIA)
+    土地再評価差額金: 122,400,000,000 (RevaluationReserveForLand)
+    資産: 413,113,501,000,000 (Assets)
+    利益剰余金: 14,845,617,000,000 (RetainedEarnings)
+    為替換算調整勘定: 3,198,279,000,000 (ForeignCurrencyTranslationAdjustment)
+    新株予約権:      11,000,000 (SubscriptionRightsToShares)
+    負債純資産: 413,113,501,000,000 (LiabilitiesAndNetAssets)
+    その他: 675,903,000,000 (OtherIA)
+    退職給付に係る資産: 2,217,529,000,000 (NetDefinedBenefitAsset)
+  -> PASSED
+
+======================================================================
+TEST: COV-JGAAP: J-GAAP PL/BS/CF の canonical_key カバレッジ
+======================================================================
+  [PL] 全34科目中 16科目が canonical_key あり (47.1%)
+  [PL] unmapped (18): ['InterestExpensesNOE', 'GainOnSalesOfNoncurrentAssetsEI', 'ValuationDifferenceOnAvailableForSaleSecuritiesNetOfTaxOCI', 'ComprehensiveIncomeAttributableToOwnersOfTheParent', 'DividendsIncomeNOI', 'ImpairmentLossEL', 'DeferredGainsOrLossesOnHedgesNetOfTaxOCI', 'ComprehensiveIncomeAttributableToNonControllingInterests', 'ForeignCurrencyTranslationAdjustmentNetOfTaxOCI', 'RemeasurementsOfDefinedBenefitPlansNetOfTaxOCI']
+  [BS] 全40科目中 20科目が canonical_key あり (50.0%)
+  [BS] unmapped (20): ['InvestmentSecurities', 'ValuationDifferenceOnAvailableForSaleSecurities', 'ShortTermLoansPayable', 'LongTermLoansPayable', 'DeferredGainsOrLossesOnHedges', 'IncomeTaxesPayable', 'ForeignCurrencyTranslationAdjustment', 'OtherIA', 'NetDefinedBenefitAsset', 'DeferredTaxLiabilities']
+  [CF] 全27科目中 27科目が canonical_key あり (100.0%)
+  -> PASSED
+
+======================================================================
+SUMMARY: 11 passed, 0 failed (total 11)

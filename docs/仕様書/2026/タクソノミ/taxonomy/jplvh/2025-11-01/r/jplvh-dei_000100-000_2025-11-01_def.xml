@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_AdditionalDEIForReportOfLargeVolumeHolding" xlink:type="simple" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_AdditionalDEIForReportOfLargeVolumeHolding"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_AdditionalDEIForReportOfLargeVolumeHolding">
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_AdditionalDEIForReportOfLargeVolumeHoldingAbstract" xlink:label="AdditionalDEIForReportOfLargeVolumeHoldingAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutFilersLargeVolumeHoldersAndJointHoldersDEITable" xlink:label="InformationAboutFilersLargeVolumeHoldersAndJointHoldersDEITable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="AdditionalDEIForReportOfLargeVolumeHoldingAbstract" xlink:to="InformationAboutFilersLargeVolumeHoldersAndJointHoldersDEITable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:label="FilersLargeVolumeHoldersAndJointHoldersAxis"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="InformationAboutFilersLargeVolumeHoldersAndJointHoldersDEITable" xlink:to="FilersLargeVolumeHoldersAndJointHoldersAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersOrJointHoldersMember" xlink:label="FilersLargeVolumeHoldersOrJointHoldersMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:to="FilersLargeVolumeHoldersOrJointHoldersMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersOrJointHoldersMember" xlink:label="FilersLargeVolumeHoldersOrJointHoldersMember_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:to="FilersLargeVolumeHoldersOrJointHoldersMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_JointHoldersMember" xlink:label="JointHoldersMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilersLargeVolumeHoldersOrJointHoldersMember" xlink:to="JointHoldersMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersMember" xlink:label="FilersLargeVolumeHoldersMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilersLargeVolumeHoldersOrJointHoldersMember" xlink:to="FilersLargeVolumeHoldersMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutFilersAndJointHoldersDEILineItems" xlink:label="InformationAboutFilersAndJointHoldersDEILineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AdditionalDEIForReportOfLargeVolumeHoldingAbstract" xlink:to="InformationAboutFilersAndJointHoldersDEILineItems" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_EDINETCodeDEI" xlink:label="EDINETCodeDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutFilersAndJointHoldersDEILineItems" xlink:to="EDINETCodeDEI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SecurityCodeDEI" xlink:label="SecurityCodeDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutFilersAndJointHoldersDEILineItems" xlink:to="SecurityCodeDEI" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilerNameInJapaneseDEI" xlink:label="FilerNameInJapaneseDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutFilersAndJointHoldersDEILineItems" xlink:to="FilerNameInJapaneseDEI" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilerNameInEnglishDEI" xlink:label="FilerNameInEnglishDEI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutFilersAndJointHoldersDEILineItems" xlink:to="FilerNameInEnglishDEI" order="4.0"/>
+  </link:definitionLink>
+</link:linkbase>

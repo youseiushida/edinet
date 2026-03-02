@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfOperatingExpensesIFRS-ListOfAccounts" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ComponentsOfOperatingExpensesIFRS-ListOfAccounts"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ComponentsOfOperatingExpensesIFRS-ListOfAccounts">
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfOperatingExpensesIFRSAbstract" xlink:label="ComponentsOfOperatingExpensesIFRSAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfOperatingExpensesIFRSTable" xlink:label="ComponentsOfOperatingExpensesIFRSTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfOperatingExpensesIFRSAbstract" xlink:to="ComponentsOfOperatingExpensesIFRSTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfOperatingExpensesIFRSLineItems" xlink:label="ComponentsOfOperatingExpensesIFRSLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfOperatingExpensesIFRSAbstract" xlink:to="ComponentsOfOperatingExpensesIFRSLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OperatingExpensesIFRSAbstract" xlink:label="OperatingExpensesIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ComponentsOfOperatingExpensesIFRSLineItems" xlink:to="OperatingExpensesIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CostOfGoodsSoldIFRS" xlink:label="CostOfGoodsSoldIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="CostOfGoodsSoldIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DecreaseIncreaseInFinishedGoodsAndWorkInProcessIFRS" xlink:label="DecreaseIncreaseInFinishedGoodsAndWorkInProcessIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="DecreaseIncreaseInFinishedGoodsAndWorkInProcessIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RawMaterialsAndConsumablesUsedIFRS" xlink:label="RawMaterialsAndConsumablesUsedIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="RawMaterialsAndConsumablesUsedIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AdvertisingAndSalesPromotionExpensesIFRS" xlink:label="AdvertisingAndSalesPromotionExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="AdvertisingAndSalesPromotionExpensesIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AdvertisingExpensesIFRS" xlink:label="AdvertisingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="AdvertisingExpensesIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SalesPromotionExpensesIFRS" xlink:label="SalesPromotionExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="SalesPromotionExpensesIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SalesCommissionsIFRS" xlink:label="SalesCommissionsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="SalesCommissionsIFRS" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PackingAndTransportationExpensesIFRS" xlink:label="PackingAndTransportationExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="PackingAndTransportationExpensesIFRS" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PersonnelExpensesOperatingExpensesIFRS" xlink:label="PersonnelExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="PersonnelExpensesOperatingExpensesIFRS" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_EmployeeBenefitExpensesOperatingExpensesIFRS" xlink:label="EmployeeBenefitExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="EmployeeBenefitExpensesOperatingExpensesIFRS" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SalariesAndBonusesOperatingExpensesIFRS" xlink:label="SalariesAndBonusesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="SalariesAndBonusesOperatingExpensesIFRS" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SalariesOperatingExpensesIFRS" xlink:label="SalariesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="SalariesOperatingExpensesIFRS" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_BonusesOperatingExpensesIFRS" xlink:label="BonusesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="BonusesOperatingExpensesIFRS" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_WelfareExpensesOperatingExpensesIFRS" xlink:label="WelfareExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="WelfareExpensesOperatingExpensesIFRS" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LegalWelfareExpensesOperatingExpensesIFRS" xlink:label="LegalWelfareExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="LegalWelfareExpensesOperatingExpensesIFRS" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RemunerationForDirectorsAndOtherOfficersOperatingExpensesIFRS" xlink:label="RemunerationForDirectorsAndOtherOfficersOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="RemunerationForDirectorsAndOtherOfficersOperatingExpensesIFRS" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RetirementBenefitExpensesOperatingExpensesIFRS" xlink:label="RetirementBenefitExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="RetirementBenefitExpensesOperatingExpensesIFRS" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DepreciationAndAmortizationOperatingExpensesIFRS" xlink:label="DepreciationAndAmortizationOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="DepreciationAndAmortizationOperatingExpensesIFRS" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DepreciationOperatingExpensesIFRS" xlink:label="DepreciationOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="DepreciationOperatingExpensesIFRS" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OutsourcingExpensesOperatingExpensesIFRS" xlink:label="OutsourcingExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="OutsourcingExpensesOperatingExpensesIFRS" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CommissionExpensesOperatingExpensesIFRS" xlink:label="CommissionExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="CommissionExpensesOperatingExpensesIFRS" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SubcontractExpensesOperatingExpensesIFRS" xlink:label="SubcontractExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="SubcontractExpensesOperatingExpensesIFRS" order="22.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RentExpensesOperatingExpensesIFRS" xlink:label="RentExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="RentExpensesOperatingExpensesIFRS" order="23.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RentExpensesOnLandAndBuildingsOperatingExpensesIFRS" xlink:label="RentExpensesOnLandAndBuildingsOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="RentExpensesOnLandAndBuildingsOperatingExpensesIFRS" order="24.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CommunicationExpensesOperatingExpensesIFRS" xlink:label="CommunicationExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="CommunicationExpensesOperatingExpensesIFRS" order="25.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TravelingAndTransportationExpensesOperatingExpensesIFRS" xlink:label="TravelingAndTransportationExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="TravelingAndTransportationExpensesOperatingExpensesIFRS" order="26.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_UtilitiesExpensesOperatingExpensesIFRS" xlink:label="UtilitiesExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="UtilitiesExpensesOperatingExpensesIFRS" order="27.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_TaxesAndDuesOperatingExpensesIFRS" xlink:label="TaxesAndDuesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="TaxesAndDuesOperatingExpensesIFRS" order="28.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SuppliesExpensesOperatingExpensesIFRS" xlink:label="SuppliesExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="SuppliesExpensesOperatingExpensesIFRS" order="29.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RepairExpensesOperatingExpensesIFRS" xlink:label="RepairExpensesOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="RepairExpensesOperatingExpensesIFRS" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ResearchAndDevelopmentExpenditureRecognizedAsExpenseDuringPeriodIFRS" xlink:label="ResearchAndDevelopmentExpenditureRecognizedAsExpenseDuringPeriodIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="ResearchAndDevelopmentExpenditureRecognizedAsExpenseDuringPeriodIFRS" order="31.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProvisionForProductWarrantyPLIFRS" xlink:label="ProvisionForProductWarrantyPLIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="ProvisionForProductWarrantyPLIFRS" order="32.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProvisionForDoubtfulAccountsIFRS" xlink:label="ProvisionForDoubtfulAccountsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="ProvisionForDoubtfulAccountsIFRS" order="33.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherComponentsOfOperatingExpensesIFRS" xlink:label="OtherComponentsOfOperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="OtherComponentsOfOperatingExpensesIFRS" order="34.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OperatingExpensesIFRS" xlink:label="OperatingExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesIFRSAbstract" xlink:to="OperatingExpensesIFRS" order="35.0"/>
+  </link:definitionLink>
+</link:linkbase>

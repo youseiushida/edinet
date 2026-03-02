@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_InformationAboutOfficers-01" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_InformationAboutOfficers-01"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_InformationAboutOfficers-01">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InformationAboutOfficersHeading" xlink:label="InformationAboutOfficersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfMaleDirectorsAndOtherOfficers" xlink:label="NumberOfMaleDirectorsAndOtherOfficers"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutOfficersHeading" xlink:to="NumberOfMaleDirectorsAndOtherOfficers" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfFemaleDirectorsAndOtherOfficers" xlink:label="NumberOfFemaleDirectorsAndOtherOfficers"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutOfficersHeading" xlink:to="NumberOfFemaleDirectorsAndOtherOfficers" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_RatioOfFemaleDirectorsAndOtherOfficers" xlink:label="RatioOfFemaleDirectorsAndOtherOfficers"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationAboutOfficersHeading" xlink:to="RatioOfFemaleDirectorsAndOtherOfficers" order="3.0"/>
+  </link:presentationLink>
+</link:linkbase>

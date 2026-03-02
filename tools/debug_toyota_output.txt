@@ -1,0 +1,367 @@
+======================================================================
+トヨタ 連結フォールバック問題 診断
+doc_id: S100VWVY
+======================================================================
+
+--- ZIPダウンロード ---
+  ZIPサイズ: 2,854,378 bytes
+
+--- ZIP構造 ---
+  .xbrl ファイル数: 3
+    XBRL/AuditDoc/jpaud-aai-cc-001_E02144-000_2025-03-31_01_2025-06-18.xbrl
+    XBRL/AuditDoc/jpaud-aar-cn-001_E02144-000_2025-03-31_01_2025-06-18.xbrl
+    XBRL/PublicDoc/jpcrp030000-asr-001_E02144-000_2025-03-31_01_2025-06-18.xbrl
+
+  iXBRL (.htm) ファイル数: 26
+    XBRL/AuditDoc/jpaud-aai-cc-001_E02144-000_2025-03-31_01_2025-06-18_ixbrl.htm
+    XBRL/AuditDoc/jpaud-aar-cn-001_E02144-000_2025-03-31_01_2025-06-18_ixbrl.htm
+    XBRL/PublicDoc/0000000_header_jpcrp030000-asr-001_E02144-000_2025-03-31_01_2025-06-18_ixbrl.htm
+    XBRL/PublicDoc/0101010_honbun_jpcrp030000-asr-001_E02144-000_2025-03-31_01_2025-06-18_ixbrl.htm
+    XBRL/PublicDoc/0102010_honbun_jpcrp030000-asr-001_E02144-000_2025-03-31_01_2025-06-18_ixbrl.htm
+    XBRL/PublicDoc/0102011_honbun_jpcrp030000-asr-001_E02144-000_2025-03-31_01_2025-06-18_ixbrl.htm
+    XBRL/PublicDoc/0102012_honbun_jpcrp030000-asr-001_E02144-000_2025-03-31_01_2025-06-18_ixbrl.htm
+    XBRL/PublicDoc/0103010_honbun_jpcrp030000-asr-001_E02144-000_2025-03-31_01_2025-06-18_ixbrl.htm
+    XBRL/PublicDoc/0104010_honbun_jpcrp030000-asr-001_E02144-000_2025-03-31_01_2025-06-18_ixbrl.htm
+    XBRL/PublicDoc/0105000_honbun_jpcrp030000-asr-001_E02144-000_2025-03-31_01_2025-06-18_ixbrl.htm
+    ... 他 16 件
+
+  代表XBRL: XBRL/PublicDoc/jpcrp030000-asr-001_E02144-000_2025-03-31_01_2025-06-18.xbrl
+
+--- 代表XBRL パース ---
+  XBRLサイズ: 9,045,006 bytes
+  Fact数: 2173
+  Context数: 278
+
+--- コンテキスト分析 ---
+  Dimension なし: 11件
+    FilingDateInstant: period=InstantPeriod(instant=datetime.date(2025, 6, 18))
+    CurrentYearDuration: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31))
+    CurrentYearInstant: period=InstantPeriod(instant=datetime.date(2025, 3, 31))
+    Prior1YearDuration: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31))
+    Prior1YearInstant: period=InstantPeriod(instant=datetime.date(2024, 3, 31))
+    Prior2YearDuration: period=DurationPeriod(start_date=datetime.date(2022, 4, 1), end_date=datetime.date(2023, 3, 31))
+    Prior2YearInstant: period=InstantPeriod(instant=datetime.date(2023, 3, 31))
+    Prior3YearDuration: period=DurationPeriod(start_date=datetime.date(2021, 4, 1), end_date=datetime.date(2022, 3, 31))
+    Prior3YearInstant: period=InstantPeriod(instant=datetime.date(2022, 3, 31))
+    Prior4YearDuration: period=DurationPeriod(start_date=datetime.date(2020, 4, 1), end_date=datetime.date(2021, 3, 31))
+    Prior4YearInstant: period=InstantPeriod(instant=datetime.date(2021, 3, 31))
+
+  明示的ConsolidatedMember: 0件
+
+  NonConsolidatedMember: 83件
+    CurrentYearDuration_NonConsolidatedMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_CapitalStockMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=CapitalStockMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_CapitalSurplusMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=CapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_GeneralReserveMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=GeneralReserveMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_LegalCapitalSurplusMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=LegalCapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_LegalRetainedEarningsMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=LegalRetainedEarningsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_OtherCapitalSurplusMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=OtherCapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_ReserveForAdvancedDepreciationOfNoncurrentAssetsMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=ReserveForAdvancedDepreciationOfNoncurrentAssetsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_ReserveForSpecialDepreciationMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=ReserveForSpecialDepreciationMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_RetainedEarningsBroughtForwardMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=RetainedEarningsBroughtForwardMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_RetainedEarningsMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=RetainedEarningsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_ShareholdersEquityMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=ShareholdersEquityMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_TreasuryStockMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=TreasuryStockMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_ValuationAndTranslationAdjustmentsMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=ValuationAndTranslationAdjustmentsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearDuration_NonConsolidatedMember_ValuationDifferenceOnAvailableForSaleSecuritiesMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=ValuationDifferenceOnAvailableForSaleSecuritiesMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_CapitalStockMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=CapitalStockMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_CapitalSurplusMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=CapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_CorporateSharedMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember, OperatingSegmentsAxis=CorporateSharedMember]
+    CurrentYearInstant_NonConsolidatedMember_GeneralReserveMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=GeneralReserveMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_jpcrp030000-asr_E02144-000AllOtherReportableSegmentMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember, OperatingSegmentsAxis=AllOtherReportableSegmentMember]
+    CurrentYearInstant_NonConsolidatedMember_jpcrp030000-asr_E02144-000AutomotiveReportableSegmentMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember, OperatingSegmentsAxis=AutomotiveReportableSegmentMember]
+    CurrentYearInstant_NonConsolidatedMember_LegalCapitalSurplusMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=LegalCapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_LegalRetainedEarningsMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=LegalRetainedEarningsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_OtherCapitalSurplusMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=OtherCapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_ReserveForAdvancedDepreciationOfNoncurrentAssetsMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=ReserveForAdvancedDepreciationOfNoncurrentAssetsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_ReserveForSpecialDepreciationMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=ReserveForSpecialDepreciationMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_RetainedEarningsBroughtForwardMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=RetainedEarningsBroughtForwardMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_RetainedEarningsMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=RetainedEarningsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_ShareholdersEquityMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=ShareholdersEquityMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_TreasuryStockMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=TreasuryStockMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_ValuationAndTranslationAdjustmentsMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=ValuationAndTranslationAdjustmentsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    CurrentYearInstant_NonConsolidatedMember_ValuationDifferenceOnAvailableForSaleSecuritiesMember: period=InstantPeriod(instant=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityAxis=ValuationDifferenceOnAvailableForSaleSecuritiesMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_CapitalStockMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=CapitalStockMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_CapitalSurplusMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=CapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_GeneralReserveMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=GeneralReserveMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_LegalCapitalSurplusMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=LegalCapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_LegalRetainedEarningsMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=LegalRetainedEarningsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_OtherCapitalSurplusMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=OtherCapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_ReserveForAdvancedDepreciationOfNoncurrentAssetsMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=ReserveForAdvancedDepreciationOfNoncurrentAssetsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_ReserveForSpecialDepreciationMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=ReserveForSpecialDepreciationMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_RetainedEarningsBroughtForwardMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=RetainedEarningsBroughtForwardMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_RetainedEarningsMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=RetainedEarningsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_ShareholdersEquityMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=ShareholdersEquityMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_TreasuryStockMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=TreasuryStockMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_ValuationAndTranslationAdjustmentsMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=ValuationAndTranslationAdjustmentsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearDuration_NonConsolidatedMember_ValuationDifferenceOnAvailableForSaleSecuritiesMember: period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=ValuationDifferenceOnAvailableForSaleSecuritiesMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_CapitalStockMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=CapitalStockMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_CapitalSurplusMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=CapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_GeneralReserveMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=GeneralReserveMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_LegalCapitalSurplusMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=LegalCapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_LegalRetainedEarningsMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=LegalRetainedEarningsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_OtherCapitalSurplusMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=OtherCapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_ReserveForAdvancedDepreciationOfNoncurrentAssetsMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=ReserveForAdvancedDepreciationOfNoncurrentAssetsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_ReserveForSpecialDepreciationMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=ReserveForSpecialDepreciationMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_RetainedEarningsBroughtForwardMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=RetainedEarningsBroughtForwardMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_RetainedEarningsMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=RetainedEarningsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_ShareholdersEquityMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=ShareholdersEquityMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_TreasuryStockMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=TreasuryStockMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_ValuationAndTranslationAdjustmentsMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=ValuationAndTranslationAdjustmentsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior1YearInstant_NonConsolidatedMember_ValuationDifferenceOnAvailableForSaleSecuritiesMember: period=InstantPeriod(instant=datetime.date(2024, 3, 31)), dims=[ComponentsOfEquityAxis=ValuationDifferenceOnAvailableForSaleSecuritiesMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearDuration_NonConsolidatedMember: period=DurationPeriod(start_date=datetime.date(2022, 4, 1), end_date=datetime.date(2023, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_CapitalStockMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=CapitalStockMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_CapitalSurplusMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=CapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_GeneralReserveMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=GeneralReserveMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_LegalCapitalSurplusMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=LegalCapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_LegalRetainedEarningsMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=LegalRetainedEarningsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_OtherCapitalSurplusMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=OtherCapitalSurplusMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_ReserveForAdvancedDepreciationOfNoncurrentAssetsMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=ReserveForAdvancedDepreciationOfNoncurrentAssetsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_ReserveForSpecialDepreciationMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=ReserveForSpecialDepreciationMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_RetainedEarningsBroughtForwardMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=RetainedEarningsBroughtForwardMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_RetainedEarningsMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=RetainedEarningsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_ShareholdersEquityMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=ShareholdersEquityMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_TreasuryStockMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=TreasuryStockMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_ValuationAndTranslationAdjustmentsMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=ValuationAndTranslationAdjustmentsMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior2YearInstant_NonConsolidatedMember_ValuationDifferenceOnAvailableForSaleSecuritiesMember: period=InstantPeriod(instant=datetime.date(2023, 3, 31)), dims=[ComponentsOfEquityAxis=ValuationDifferenceOnAvailableForSaleSecuritiesMember, ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior3YearDuration_NonConsolidatedMember: period=DurationPeriod(start_date=datetime.date(2021, 4, 1), end_date=datetime.date(2022, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior3YearInstant_NonConsolidatedMember: period=InstantPeriod(instant=datetime.date(2022, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior4YearDuration_NonConsolidatedMember: period=DurationPeriod(start_date=datetime.date(2020, 4, 1), end_date=datetime.date(2021, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+    Prior4YearInstant_NonConsolidatedMember: period=InstantPeriod(instant=datetime.date(2021, 3, 31)), dims=[ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember]
+
+  その他 Dimension: 184件
+    FilingDateInstant_jpcrp030000-asr_E02144-000ChristopherPReynoldsMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[DirectorsAndOtherOfficersAxis=ChristopherPReynoldsMember]
+    FilingDateInstant_jpcrp030000-asr_E02144-000FujisawaKumiMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[DirectorsAndOtherOfficersAxis=FujisawaKumiMember]
+    FilingDateInstant_jpcrp030000-asr_E02144-000GeorgeOlcottMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[DirectorsAndOtherOfficersAxis=GeorgeOlcottMember]
+    FilingDateInstant_jpcrp030000-asr_E02144-000MiyazakiYoichiMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[DirectorsAndOtherOfficersAxis=MiyazakiYoichiMember]
+    FilingDateInstant_jpcrp030000-asr_E02144-000NakajimaHirokiMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[DirectorsAndOtherOfficersAxis=NakajimaHirokiMember]
+    FilingDateInstant_jpcrp030000-asr_E02144-000OkamotoShigeakiMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[DirectorsAndOtherOfficersAxis=OkamotoShigeakiMember]
+    FilingDateInstant_jpcrp030000-asr_E02144-000OsadaHiromiMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[DirectorsAndOtherOfficersAxis=OsadaHiromiMember]
+    FilingDateInstant_jpcrp030000-asr_E02144-000OshimaMasahikoMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[DirectorsAndOtherOfficersAxis=OshimaMasahikoMember]
+    FilingDateInstant_jpcrp030000-asr_E02144-000SatoKojiMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[DirectorsAndOtherOfficersAxis=SatoKojiMember]
+    FilingDateInstant_jpcrp030000-asr_E02144-000ToyodaAkioMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[DirectorsAndOtherOfficersAxis=ToyodaAkioMember]
+    FilingDateInstant_OrdinaryShareMember: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[ClassesOfSharesAxis=OrdinaryShareMember]
+    FilingDateInstant_Row1Member: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[SequentialNumbersAxis=Row1Member]
+    FilingDateInstant_Row2Member: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[SequentialNumbersAxis=Row2Member]
+    FilingDateInstant_Row3Member: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[SequentialNumbersAxis=Row3Member]
+    FilingDateInstant_Row4Member: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[SequentialNumbersAxis=Row4Member]
+    FilingDateInstant_Row5Member: period=InstantPeriod(instant=datetime.date(2025, 6, 18)), dims=[SequentialNumbersAxis=Row5Member]
+    CurrentYearDuration_CapitalSurplusIFRSMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityIFRSAxis=CapitalSurplusIFRSMember]
+    CurrentYearDuration_EquityAttributableToOwnersOfParentIFRSMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[ComponentsOfEquityIFRSAxis=EquityAttributableToOwnersOfParentIFRSMember]
+    CurrentYearDuration_jpcrp030000-asr_E02144-000AllOtherReportableSegmentMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[OperatingSegmentsAxis=AllOtherReportableSegmentMember]
+    CurrentYearDuration_jpcrp030000-asr_E02144-000AutomotiveReportableSegmentMember: period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=[OperatingSegmentsAxis=AutomotiveReportableSegmentMember]
+    ... 他 164件
+
+--- PL概念セット マッチング ---
+  PL概念数: 16
+  PL該当Fact数: 32
+
+  コンテキスト別 PL Fact分布:
+    CurrentYearDuration_NonConsolidatedMember: 13件, period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=NonConsolidatedMember
+      NetSales = 18277671000000
+      CostOfSales = 13490075000000
+      GrossProfit = 4787596000000
+      ... 他 10件
+    CurrentYearDuration_NonConsolidatedMember_RetainedEarningsBroughtForwardMember: 1件, period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=RetainedEarningsBroughtForwardMember, NonConsolidatedMember
+      ProfitLoss = 3845213000000
+    CurrentYearDuration_NonConsolidatedMember_RetainedEarningsMember: 1件, period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=RetainedEarningsMember, NonConsolidatedMember
+      ProfitLoss = 3845213000000
+    CurrentYearDuration_NonConsolidatedMember_ShareholdersEquityMember: 1件, period=DurationPeriod(start_date=datetime.date(2024, 4, 1), end_date=datetime.date(2025, 3, 31)), dims=ShareholdersEquityMember, NonConsolidatedMember
+      ProfitLoss = 3845213000000
+    Prior1YearDuration_NonConsolidatedMember: 13件, period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=NonConsolidatedMember
+      NetSales = 17575593000000
+      CostOfSales = 12919592000000
+      GrossProfit = 4656000000000
+      ... 他 10件
+    Prior1YearDuration_NonConsolidatedMember_RetainedEarningsBroughtForwardMember: 1件, period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=RetainedEarningsBroughtForwardMember, NonConsolidatedMember
+      ProfitLoss = 4399855000000
+    Prior1YearDuration_NonConsolidatedMember_RetainedEarningsMember: 1件, period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=RetainedEarningsMember, NonConsolidatedMember
+      ProfitLoss = 4399855000000
+    Prior1YearDuration_NonConsolidatedMember_ShareholdersEquityMember: 1件, period=DurationPeriod(start_date=datetime.date(2023, 4, 1), end_date=datetime.date(2024, 3, 31)), dims=ShareholdersEquityMember, NonConsolidatedMember
+      ProfitLoss = 4399855000000
+
+--- 名前空間分布 ---
+  jpcrp_cor: 1316件
+  jpigp_cor: 481件
+  jppfs_cor: 349件
+  jpdei_cor: 27件
+
+--- DurationPeriod + PL概念 の詳細 ---
+
+  CurrentYearDuration_NonConsolidatedMember: [個別]
+    期間: 2024-04-01 ~ 2025-03-31
+    Dimensions: ['ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember']
+    PL Fact数: 13
+      NetSales = 18277671000000
+      CostOfSales = 13490075000000
+      GrossProfit = 4787596000000
+      SellingGeneralAndAdministrativeExpenses = 1820739000000
+      OperatingIncome = 2966857000000
+      NonOperatingIncome = 2818513000000
+      NonOperatingExpenses = 1247333000000
+      OrdinaryIncome = 4538037000000
+      IncomeBeforeIncomeTaxes = 4538037000000
+      IncomeTaxesDeferred = -97016000000
+      IncomeTaxes = 692824000000
+      ProfitLoss = 3845213000000
+      ProfitLoss = 3845213000000
+
+  CurrentYearDuration_NonConsolidatedMember_RetainedEarningsBroughtForwardMember: [個別]
+    期間: 2024-04-01 ~ 2025-03-31
+    Dimensions: ['ComponentsOfEquityAxis=RetainedEarningsBroughtForwardMember', 'ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember']
+    PL Fact数: 1
+      ProfitLoss = 3845213000000
+
+  CurrentYearDuration_NonConsolidatedMember_RetainedEarningsMember: [個別]
+    期間: 2024-04-01 ~ 2025-03-31
+    Dimensions: ['ComponentsOfEquityAxis=RetainedEarningsMember', 'ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember']
+    PL Fact数: 1
+      ProfitLoss = 3845213000000
+
+  CurrentYearDuration_NonConsolidatedMember_ShareholdersEquityMember: [個別]
+    期間: 2024-04-01 ~ 2025-03-31
+    Dimensions: ['ComponentsOfEquityAxis=ShareholdersEquityMember', 'ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember']
+    PL Fact数: 1
+      ProfitLoss = 3845213000000
+
+  Prior1YearDuration_NonConsolidatedMember: [個別]
+    期間: 2023-04-01 ~ 2024-03-31
+    Dimensions: ['ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember']
+    PL Fact数: 13
+      NetSales = 17575593000000
+      CostOfSales = 12919592000000
+      GrossProfit = 4656000000000
+      SellingGeneralAndAdministrativeExpenses = 1561506000000
+      OperatingIncome = 3094495000000
+      NonOperatingIncome = 2632647000000
+      NonOperatingExpenses = 148447000000
+      OrdinaryIncome = 5578695000000
+      IncomeBeforeIncomeTaxes = 5578695000000
+      IncomeTaxesDeferred = -74888000000
+      IncomeTaxes = 1178840000000
+      ProfitLoss = 4399855000000
+      ProfitLoss = 4399855000000
+
+  Prior1YearDuration_NonConsolidatedMember_RetainedEarningsBroughtForwardMember: [個別]
+    期間: 2023-04-01 ~ 2024-03-31
+    Dimensions: ['ComponentsOfEquityAxis=RetainedEarningsBroughtForwardMember', 'ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember']
+    PL Fact数: 1
+      ProfitLoss = 4399855000000
+
+  Prior1YearDuration_NonConsolidatedMember_RetainedEarningsMember: [個別]
+    期間: 2023-04-01 ~ 2024-03-31
+    Dimensions: ['ComponentsOfEquityAxis=RetainedEarningsMember', 'ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember']
+    PL Fact数: 1
+      ProfitLoss = 4399855000000
+
+  Prior1YearDuration_NonConsolidatedMember_ShareholdersEquityMember: [個別]
+    期間: 2023-04-01 ~ 2024-03-31
+    Dimensions: ['ComponentsOfEquityAxis=ShareholdersEquityMember', 'ConsolidatedOrNonConsolidatedAxis=NonConsolidatedMember']
+    PL Fact数: 1
+      ProfitLoss = 4399855000000
+
+--- Dimension なし + DurationPeriod の全Fact ---
+
+  CurrentYearDuration: 184件
+    期間: 2024-04-01 ~ 2025-03-31
+      [2025-06-18] OperatingRevenuesIFRSKeyFinancialData = 48036704000000
+      [jpcrp_cor] ProfitLossBeforeTaxIFRSSummaryOfBusinessResults = 6414590000000
+      [jpcrp_cor] ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults = 4765086000000
+      [jpcrp_cor] ComprehensiveIncomeAttributableToOwnersOfParentIFRSSummaryOfBusinessResults = 4011822000000
+      [jpcrp_cor] BasicEarningsLossPerShareIFRSSummaryOfBusinessResults = 359.56
+      [jpcrp_cor] DilutedEarningsLossPerShareIFRSSummaryOfBusinessResults = 359.56
+      [jpcrp_cor] RateOfReturnOnEquityIFRSSummaryOfBusinessResults = 0.136
+      [jpcrp_cor] PriceEarningsRatioIFRSSummaryOfBusinessResults = 7.3
+      [jpcrp_cor] CashFlowsFromUsedInOperatingActivitiesIFRSSummaryOfBusinessResults = 3696934000000
+      [jpcrp_cor] CashFlowsFromUsedInInvestingActivitiesIFRSSummaryOfBusinessResults = -4189736000000
+      [jpcrp_cor] CashFlowsFromUsedInFinancingActivitiesIFRSSummaryOfBusinessResults = 197236000000
+      [2025-06-18] NumberOfEmployeesIFRSSummaryOfBusinessResults = 383853
+      [2025-06-18] AverageNumberOfTemporaryWorkersIFRSSummaryOfBusinessResults = 95530
+      [jpcrp_cor] ResearchAndDevelopmentExpensesResearchAndDevelopmentActivities = 1326496000000
+      [jpcrp_cor] CapitalExpendituresOverviewOfCapitalExpendituresEtc = 2134890000000
+      [jpcrp_cor] AuditFeesReportingCompany = 1153000000
+      [jpcrp_cor] NonAuditFeesReportingCompany = 3000000
+      [jpcrp_cor] AuditFeesConsolidatedSubsidiaries = 1285000000
+      [jpcrp_cor] NonAuditFeesConsolidatedSubsidiaries = 16000000
+      [jpcrp_cor] AuditFeesTotal = 2438000000
+      ... 他 164件
+
+  Prior1YearDuration: 114件
+    期間: 2023-04-01 ~ 2024-03-31
+      [2025-06-18] OperatingRevenuesIFRSKeyFinancialData = 45095325000000
+      [jpcrp_cor] ProfitLossBeforeTaxIFRSSummaryOfBusinessResults = 6965085000000
+      [jpcrp_cor] ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults = 4944933000000
+      [jpcrp_cor] ComprehensiveIncomeAttributableToOwnersOfParentIFRSSummaryOfBusinessResults = 6999828000000
+      [jpcrp_cor] BasicEarningsLossPerShareIFRSSummaryOfBusinessResults = 365.94
+      [jpcrp_cor] DilutedEarningsLossPerShareIFRSSummaryOfBusinessResults = 365.94
+      [jpcrp_cor] RateOfReturnOnEquityIFRSSummaryOfBusinessResults = 0.158
+      [jpcrp_cor] PriceEarningsRatioIFRSSummaryOfBusinessResults = 10.4
+      [jpcrp_cor] CashFlowsFromUsedInOperatingActivitiesIFRSSummaryOfBusinessResults = 4206373000000
+      [jpcrp_cor] CashFlowsFromUsedInInvestingActivitiesIFRSSummaryOfBusinessResults = -4998751000000
+      [jpcrp_cor] CashFlowsFromUsedInFinancingActivitiesIFRSSummaryOfBusinessResults = 2497558000000
+      [2025-06-18] NumberOfEmployeesIFRSSummaryOfBusinessResults = 380793
+      [2025-06-18] AverageNumberOfTemporaryWorkersIFRSSummaryOfBusinessResults = 96482
+      [jpcrp_cor] AuditFeesReportingCompany = 868000000
+      [jpcrp_cor] NonAuditFeesReportingCompany = 3000000
+      [jpcrp_cor] AuditFeesConsolidatedSubsidiaries = 1193000000
+      [jpcrp_cor] NonAuditFeesConsolidatedSubsidiaries = 12000000
+      [jpcrp_cor] AuditFeesTotal = 2062000000
+      [jpcrp_cor] NonAuditFeesTotal = 15000000
+      [jpcrp_cor] AuditFeesReportingCompanyNetworkFirms = None
+      ... 他 94件
+
+  Prior2YearDuration: 13件
+    期間: 2022-04-01 ~ 2023-03-31
+      [2025-06-18] OperatingRevenuesIFRSKeyFinancialData = 37154298000000
+      [jpcrp_cor] ProfitLossBeforeTaxIFRSSummaryOfBusinessResults = 3668733000000
+      [jpcrp_cor] ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults = 2451318000000
+      [jpcrp_cor] ComprehensiveIncomeAttributableToOwnersOfParentIFRSSummaryOfBusinessResults = 3251090000000
+      [jpcrp_cor] BasicEarningsLossPerShareIFRSSummaryOfBusinessResults = 179.47
+      [jpcrp_cor] DilutedEarningsLossPerShareIFRSSummaryOfBusinessResults = 179.47
+      [jpcrp_cor] RateOfReturnOnEquityIFRSSummaryOfBusinessResults = 0.090
+      [jpcrp_cor] PriceEarningsRatioIFRSSummaryOfBusinessResults = 10.5
+      [jpcrp_cor] CashFlowsFromUsedInOperatingActivitiesIFRSSummaryOfBusinessResults = 2955076000000
+      [jpcrp_cor] CashFlowsFromUsedInInvestingActivitiesIFRSSummaryOfBusinessResults = -1598890000000
+      [jpcrp_cor] CashFlowsFromUsedInFinancingActivitiesIFRSSummaryOfBusinessResults = -56180000000
+      [2025-06-18] NumberOfEmployeesIFRSSummaryOfBusinessResults = 375235
+      [2025-06-18] AverageNumberOfTemporaryWorkersIFRSSummaryOfBusinessResults = 94974
+
+  Prior3YearDuration: 13件
+    期間: 2021-04-01 ~ 2022-03-31
+      [2025-06-18] OperatingRevenuesIFRSKeyFinancialData = 31379507000000
+      [jpcrp_cor] ProfitLossBeforeTaxIFRSSummaryOfBusinessResults = 3990532000000
+      [jpcrp_cor] ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults = 2850110000000
+      [jpcrp_cor] ComprehensiveIncomeAttributableToOwnersOfParentIFRSSummaryOfBusinessResults = 3954350000000
+      [jpcrp_cor] BasicEarningsLossPerShareIFRSSummaryOfBusinessResults = 205.23
+      [jpcrp_cor] DilutedEarningsLossPerShareIFRSSummaryOfBusinessResults = 205.23
+      [jpcrp_cor] RateOfReturnOnEquityIFRSSummaryOfBusinessResults = 0.115
+      [jpcrp_cor] PriceEarningsRatioIFRSSummaryOfBusinessResults = 10.8
+      [jpcrp_cor] CashFlowsFromUsedInOperatingActivitiesIFRSSummaryOfBusinessResults = 3722615000000
+      [jpcrp_cor] CashFlowsFromUsedInInvestingActivitiesIFRSSummaryOfBusinessResults = -577496000000
+      [jpcrp_cor] CashFlowsFromUsedInFinancingActivitiesIFRSSummaryOfBusinessResults = -2466516000000
+      [2025-06-18] NumberOfEmployeesIFRSSummaryOfBusinessResults = 372817
+      [2025-06-18] AverageNumberOfTemporaryWorkersIFRSSummaryOfBusinessResults = 87120
+
+  Prior4YearDuration: 13件
+    期間: 2020-04-01 ~ 2021-03-31
+      [2025-06-18] OperatingRevenuesIFRSKeyFinancialData = 27214594000000
+      [jpcrp_cor] ProfitLossBeforeTaxIFRSSummaryOfBusinessResults = 2932354000000
+      [jpcrp_cor] ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults = 2245261000000
+      [jpcrp_cor] ComprehensiveIncomeAttributableToOwnersOfParentIFRSSummaryOfBusinessResults = 3217806000000
+      [jpcrp_cor] BasicEarningsLossPerShareIFRSSummaryOfBusinessResults = 160.65
+      [jpcrp_cor] DilutedEarningsLossPerShareIFRSSummaryOfBusinessResults = 158.93
+      [jpcrp_cor] RateOfReturnOnEquityIFRSSummaryOfBusinessResults = 0.102
+      [jpcrp_cor] PriceEarningsRatioIFRSSummaryOfBusinessResults = 10.7
+      [jpcrp_cor] CashFlowsFromUsedInOperatingActivitiesIFRSSummaryOfBusinessResults = 2727162000000
+      [jpcrp_cor] CashFlowsFromUsedInInvestingActivitiesIFRSSummaryOfBusinessResults = -4684175000000
+      [jpcrp_cor] CashFlowsFromUsedInFinancingActivitiesIFRSSummaryOfBusinessResults = 2739174000000
+      [2025-06-18] NumberOfEmployeesIFRSSummaryOfBusinessResults = 366283
+      [2025-06-18] AverageNumberOfTemporaryWorkersIFRSSummaryOfBusinessResults = 80009
+
+======================================================================
+診断完了
+結果は /mnt/c/Users/nezow/OneDrive - Kyoto University/ドキュメント/edinet/tools/debug_toyota_output.txt に保存

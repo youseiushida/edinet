@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedStatementOfComprehensiveIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfComprehensiveIncome"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_ConsolidatedStatementOfComprehensiveIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ComprehensiveIncome" xlink:label="ComprehensiveIncome"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ComprehensiveIncome" xlink:to="ProfitLoss" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherComprehensiveIncome" xlink:label="OtherComprehensiveIncome"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ComprehensiveIncome" xlink:to="OtherComprehensiveIncome" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RemeasurementsOfDefinedBenefitPlansNetOfTaxOCI" xlink:label="RemeasurementsOfDefinedBenefitPlansNetOfTaxOCI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherComprehensiveIncome" xlink:to="RemeasurementsOfDefinedBenefitPlansNetOfTaxOCI" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ValuationDifferenceOnAvailableForSaleSecuritiesNetOfTaxOCI" xlink:label="ValuationDifferenceOnAvailableForSaleSecuritiesNetOfTaxOCI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherComprehensiveIncome" xlink:to="ValuationDifferenceOnAvailableForSaleSecuritiesNetOfTaxOCI" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DeferredGainsOrLossesOnHedgesNetOfTaxOCI" xlink:label="DeferredGainsOrLossesOnHedgesNetOfTaxOCI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherComprehensiveIncome" xlink:to="DeferredGainsOrLossesOnHedgesNetOfTaxOCI" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ForeignCurrencyTranslationAdjustmentNetOfTaxOCI" xlink:label="ForeignCurrencyTranslationAdjustmentNetOfTaxOCI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherComprehensiveIncome" xlink:to="ForeignCurrencyTranslationAdjustmentNetOfTaxOCI" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ShareOfOtherComprehensiveIncomeOfAssociatesAccountedForUsingEquityMethodOCI" xlink:label="ShareOfOtherComprehensiveIncomeOfAssociatesAccountedForUsingEquityMethodOCI"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OtherComprehensiveIncome" xlink:to="ShareOfOtherComprehensiveIncomeOfAssociatesAccountedForUsingEquityMethodOCI" order="5.0" weight="1"/>
+  </link:calculationLink>
+</link:linkbase>

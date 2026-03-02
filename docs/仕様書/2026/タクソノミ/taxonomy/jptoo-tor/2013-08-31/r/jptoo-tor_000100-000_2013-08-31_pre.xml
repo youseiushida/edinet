@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jptoo-tor/rol_std_CoverPage" xlink:type="simple" xlink:href="../jptoo-tor_rt_2013-08-31.xsd#rol_std_CoverPage"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jptoo-tor/rol_std_CoverPage">
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="DocumentTitleCoverPage" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="PlaceOfFilingCoverPage" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="FilingDateCoverPage" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_FullNameOrNameOfFilerCoverPage" xlink:label="FullNameOrNameOfFilerCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="FullNameOrNameOfFilerCoverPage" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_ResidentialAddressOrLocationOfFilerCoverPage" xlink:label="ResidentialAddressOrLocationOfFilerCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="ResidentialAddressOrLocationOfFilerCoverPage" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_NearestPlaceOfContactCoverPage" xlink:label="NearestPlaceOfContactCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NearestPlaceOfContactCoverPage" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_TelephoneNumberCoverPage" xlink:label="TelephoneNumberCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="TelephoneNumberCoverPage" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_NameOfContactPersonCoverPage" xlink:label="NameOfContactPersonCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NameOfContactPersonCoverPage" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_NameOfLegalRepresentativeCoverPage" xlink:label="NameOfLegalRepresentativeCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NameOfLegalRepresentativeCoverPage" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_NameOfLegalRepresentativeCoverPageNA" xlink:label="NameOfLegalRepresentativeCoverPageNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NameOfLegalRepresentativeCoverPageNA" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_ResidentialAddressOrLocationOfLegalRepresentativeCoverPage" xlink:label="ResidentialAddressOrLocationOfLegalRepresentativeCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="ResidentialAddressOrLocationOfLegalRepresentativeCoverPage" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_ResidentialAddressOrLocationOfLegalRepresentativeCoverPageNA" xlink:label="ResidentialAddressOrLocationOfLegalRepresentativeCoverPageNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="ResidentialAddressOrLocationOfLegalRepresentativeCoverPageNA" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_NearestPlaceOfContactLegalRepresentativeCoverPage" xlink:label="NearestPlaceOfContactLegalRepresentativeCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NearestPlaceOfContactLegalRepresentativeCoverPage" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_NearestPlaceOfContactLegalRepresentativeCoverPageNA" xlink:label="NearestPlaceOfContactLegalRepresentativeCoverPageNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NearestPlaceOfContactLegalRepresentativeCoverPageNA" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_TelephoneNumberLegalRepresentativeCoverPage" xlink:label="TelephoneNumberLegalRepresentativeCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="TelephoneNumberLegalRepresentativeCoverPage" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_TelephoneNumberLegalRepresentativeCoverPageNA" xlink:label="TelephoneNumberLegalRepresentativeCoverPageNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="TelephoneNumberLegalRepresentativeCoverPageNA" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_NameOfContactPersonLegalRepresentativeCoverPage" xlink:label="NameOfContactPersonLegalRepresentativeCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NameOfContactPersonLegalRepresentativeCoverPage" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_NameOfContactPersonLegalRepresentativeCoverPageNA" xlink:label="NameOfContactPersonLegalRepresentativeCoverPageNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NameOfContactPersonLegalRepresentativeCoverPageNA" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_PlaceForPublicInspectionCoverPageTextBlock" xlink:label="PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="PlaceForPublicInspectionCoverPageTextBlock" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_PlaceForPublicInspectionCoverPageNA" xlink:label="PlaceForPublicInspectionCoverPageNA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="PlaceForPublicInspectionCoverPageNA" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-tor_cor_2013-08-31.xsd#jptoo-tor_cor_NotesCoverPageTextBlock" xlink:label="NotesCoverPageTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NotesCoverPageTextBlock" order="21.0"/>
+  </link:presentationLink>
+</link:linkbase>

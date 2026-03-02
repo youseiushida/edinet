@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_BusinessResultsOfReportingCompany" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_BusinessResultsOfReportingCompany"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_BusinessResultsOfReportingCompany">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_BusinessResultsOfReportingCompanyHeading" xlink:label="BusinessResultsOfReportingCompanyHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_BusinessResultsOfReportingCompanyTable" xlink:label="BusinessResultsOfReportingCompanyTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyHeading" xlink:to="BusinessResultsOfReportingCompanyTable" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_NonConsolidatedMember" xlink:label="NonConsolidatedMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="NonConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_BusinessResultsOfReportingCompanyLineItems" xlink:label="BusinessResultsOfReportingCompanyLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyHeading" xlink:to="BusinessResultsOfReportingCompanyLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetSalesSummaryOfBusinessResults" xlink:label="NetSalesSummaryOfBusinessResults"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetSalesSummaryOfBusinessResults" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_RevenueKeyFinancialData" xlink:label="RevenueKeyFinancialData"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="RevenueKeyFinancialData" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OperatingRevenue1SummaryOfBusinessResults" xlink:label="OperatingRevenue1SummaryOfBusinessResults"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="OperatingRevenue1SummaryOfBusinessResults" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OperatingRevenue2SummaryOfBusinessResults" xlink:label="OperatingRevenue2SummaryOfBusinessResults"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="OperatingRevenue2SummaryOfBusinessResults" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_GrossOperatingRevenueSummaryOfBusinessResults" xlink:label="GrossOperatingRevenueSummaryOfBusinessResults"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="GrossOperatingRevenueSummaryOfBusinessResults" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OrdinaryIncomeSummaryOfBusinessResults" xlink:label="OrdinaryIncomeSummaryOfBusinessResults"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="OrdinaryIncomeSummaryOfBusinessResults" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetPremiumsWrittenSummaryOfBusinessResultsINS" xlink:label="NetPremiumsWrittenSummaryOfBusinessResultsINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetPremiumsWrittenSummaryOfBusinessResultsINS" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetIncomeLossSummaryOfBusinessResults" xlink:label="NetIncomeLossSummaryOfBusinessResults"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetIncomeLossSummaryOfBusinessResults" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetAssetsSummaryOfBusinessResults" xlink:label="NetAssetsSummaryOfBusinessResults"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetAssetsSummaryOfBusinessResults" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalAssetsSummaryOfBusinessResults" xlink:label="TotalAssetsSummaryOfBusinessResults"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="TotalAssetsSummaryOfBusinessResults" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_BasicEarningsLossPerShareSummaryOfBusinessResults" xlink:label="BasicEarningsLossPerShareSummaryOfBusinessResults"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="BasicEarningsLossPerShareSummaryOfBusinessResults" order="11.0"/>
+  </link:presentationLink>
+</link:linkbase>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_InformationAboutFilers" xlink:type="simple" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_InformationAboutFilers"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_InformationAboutFilers">
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:label="FilersLargeVolumeHoldersAndJointHoldersAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersOrJointHoldersMember" xlink:label="FilersLargeVolumeHoldersOrJointHoldersMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="FilersLargeVolumeHoldersAndJointHoldersAxis" xlink:to="FilersLargeVolumeHoldersOrJointHoldersMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilersLargeVolumeHoldersMember" xlink:label="FilersLargeVolumeHoldersMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilersLargeVolumeHoldersOrJointHoldersMember" xlink:to="FilersLargeVolumeHoldersMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutFilersHeading" xlink:label="InformationAboutFilersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutFilersTable" xlink:label="InformationAboutFilersTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="InformationAboutFilersHeading" xlink:to="InformationAboutFilersTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="InformationAboutFilersTable" xlink:to="FilersLargeVolumeHoldersAndJointHoldersAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutFilersLineItems" xlink:label="InformationAboutFilersLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutFilersHeading" xlink:to="InformationAboutFilersLineItems" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilerLargeVolumeHolderSerialNumberAbstract" xlink:label="FilerLargeVolumeHolderSerialNumberAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutFilersLineItems" xlink:to="FilerLargeVolumeHolderSerialNumberAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_OverviewOfFilerAbstract" xlink:label="OverviewOfFilerAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderSerialNumberAbstract" xlink:to="OverviewOfFilerAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FilerLargeVolumeHolderAbstract" xlink:label="FilerLargeVolumeHolderAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OverviewOfFilerAbstract" xlink:to="FilerLargeVolumeHolderAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_IndividualOrCorporation" xlink:label="IndividualOrCorporation"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderAbstract" xlink:to="IndividualOrCorporation" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Name" xlink:label="Name"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderAbstract" xlink:to="Name" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ResidentialAddressOrAddressOfRegisteredHeadquarter" xlink:label="ResidentialAddressOrAddressOfRegisteredHeadquarter"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderAbstract" xlink:to="ResidentialAddressOrAddressOfRegisteredHeadquarter" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FormerName" xlink:label="FormerName"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderAbstract" xlink:to="FormerName" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FormerResidentialAddressOrAddressOfRegisteredHeadquarter" xlink:label="FormerResidentialAddressOrAddressOfRegisteredHeadquarter"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderAbstract" xlink:to="FormerResidentialAddressOrAddressOfRegisteredHeadquarter" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutIndividualAbstract" xlink:label="InformationAboutIndividualAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OverviewOfFilerAbstract" xlink:to="InformationAboutIndividualAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DateOfBirth" xlink:label="DateOfBirth"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutIndividualAbstract" xlink:to="DateOfBirth" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Occupation" xlink:label="Occupation"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutIndividualAbstract" xlink:to="Occupation" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NameOfEmployer" xlink:label="NameOfEmployer"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutIndividualAbstract" xlink:to="NameOfEmployer" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_AddressOfEmployer" xlink:label="AddressOfEmployer"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutIndividualAbstract" xlink:to="AddressOfEmployer" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_InformationAboutCorporationAbstract" xlink:label="InformationAboutCorporationAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OverviewOfFilerAbstract" xlink:to="InformationAboutCorporationAbstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DateOfEstablishment" xlink:label="DateOfEstablishment"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutCorporationAbstract" xlink:to="DateOfEstablishment" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NameOfRepresentative" xlink:label="NameOfRepresentative"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutCorporationAbstract" xlink:to="NameOfRepresentative" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_JobTitleOfRepresentative" xlink:label="JobTitleOfRepresentative"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutCorporationAbstract" xlink:to="JobTitleOfRepresentative" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DescriptionOfBusiness" xlink:label="DescriptionOfBusiness"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InformationAboutCorporationAbstract" xlink:to="DescriptionOfBusiness" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ContactInformationAbstract" xlink:label="ContactInformationAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OverviewOfFilerAbstract" xlink:to="ContactInformationAbstract" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ContactInformationAndPerson" xlink:label="ContactInformationAndPerson"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ContactInformationAbstract" xlink:to="ContactInformationAndPerson" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TelephoneNumber" xlink:label="TelephoneNumber"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ContactInformationAbstract" xlink:to="TelephoneNumber" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_PurposeOfHoldingAbstract" xlink:label="PurposeOfHoldingAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderSerialNumberAbstract" xlink:to="PurposeOfHoldingAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_PurposeOfHolding" xlink:label="PurposeOfHolding"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="PurposeOfHoldingAbstract" xlink:to="PurposeOfHolding" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ActOfMakingImportantProposalEtcAbstract" xlink:label="ActOfMakingImportantProposalEtcAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderSerialNumberAbstract" xlink:to="ActOfMakingImportantProposalEtcAbstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ActOfMakingImportantProposalEtc" xlink:label="ActOfMakingImportantProposalEtc"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ActOfMakingImportantProposalEtcAbstract" xlink:to="ActOfMakingImportantProposalEtc" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfStocksEtcHeldBySaidFilerAbstract" xlink:label="BreakdownOfStocksEtcHeldBySaidFilerAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderSerialNumberAbstract" xlink:to="BreakdownOfStocksEtcHeldBySaidFilerAbstract" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcHeldAbstract" xlink:label="NumberOfStocksEtcHeldAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BreakdownOfStocksEtcHeldBySaidFilerAbstract" xlink:to="NumberOfStocksEtcHeldAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233MainClauseAbstract" xlink:label="Article27233MainClauseAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="Article27233MainClauseAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233MainClause" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="StocksOrInvestmentSecuritiesEtcArticle27233MainClause" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SubscriptionRightsToSharesArticle27233MainClause" xlink:label="SubscriptionRightsToSharesArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="SubscriptionRightsToSharesArticle27233MainClause" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ConvertibleBondsArticle27233MainClause" xlink:label="ConvertibleBondsArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="ConvertibleBondsArticle27233MainClause" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233MainClause" xlink:label="TargetSecurityCoveredWarrantsArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="TargetSecurityCoveredWarrantsArticle27233MainClause" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233MainClause" xlink:label="StockDepositoryReceiptsArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="StockDepositoryReceiptsArticle27233MainClause" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233MainClause" xlink:label="StockRelatedDepositoryReceiptsArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="StockRelatedDepositoryReceiptsArticle27233MainClause" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233MainClause" xlink:label="StockTrustBeneficiaryRightsArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="StockTrustBeneficiaryRightsArticle27233MainClause" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233MainClause" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="StockRelatedTrustBeneficiaryRightsArticle27233MainClause" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233MainClause" xlink:label="TargetSecurityRedeemableBondsArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="TargetSecurityRedeemableBondsArticle27233MainClause" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233MainClause" xlink:label="ExchangeableBondsArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="ExchangeableBondsArticle27233MainClause" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233MainClause" xlink:label="TotalArticle27233MainClause"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233MainClauseAbstract" xlink:to="TotalArticle27233MainClause" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233Item1Abstract" xlink:label="Article27233Item1Abstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="Article27233Item1Abstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233Item1" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233Item1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item1Abstract" xlink:to="StocksOrInvestmentSecuritiesEtcArticle27233Item1" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233Item1" xlink:label="TargetSecurityCoveredWarrantsArticle27233Item1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item1Abstract" xlink:to="TargetSecurityCoveredWarrantsArticle27233Item1" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233Item1" xlink:label="StockDepositoryReceiptsArticle27233Item1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item1Abstract" xlink:to="StockDepositoryReceiptsArticle27233Item1" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233Item1" xlink:label="StockRelatedDepositoryReceiptsArticle27233Item1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item1Abstract" xlink:to="StockRelatedDepositoryReceiptsArticle27233Item1" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233Item1" xlink:label="StockTrustBeneficiaryRightsArticle27233Item1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item1Abstract" xlink:to="StockTrustBeneficiaryRightsArticle27233Item1" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233Item1" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233Item1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item1Abstract" xlink:to="StockRelatedTrustBeneficiaryRightsArticle27233Item1" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233Item1" xlink:label="TargetSecurityRedeemableBondsArticle27233Item1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item1Abstract" xlink:to="TargetSecurityRedeemableBondsArticle27233Item1" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233Item1" xlink:label="ExchangeableBondsArticle27233Item1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item1Abstract" xlink:to="ExchangeableBondsArticle27233Item1" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233Item1" xlink:label="TotalArticle27233Item1"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item1Abstract" xlink:to="TotalArticle27233Item1" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233Item2Abstract" xlink:label="Article27233Item2Abstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="Article27233Item2Abstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233Item2" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="StocksOrInvestmentSecuritiesEtcArticle27233Item2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SubscriptionRightsToSharesArticle27233Item2" xlink:label="SubscriptionRightsToSharesArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="SubscriptionRightsToSharesArticle27233Item2" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ConvertibleBondsArticle27233Item2" xlink:label="ConvertibleBondsArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="ConvertibleBondsArticle27233Item2" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233Item2" xlink:label="TargetSecurityCoveredWarrantsArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="TargetSecurityCoveredWarrantsArticle27233Item2" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233Item2" xlink:label="StockDepositoryReceiptsArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="StockDepositoryReceiptsArticle27233Item2" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233Item2" xlink:label="StockRelatedDepositoryReceiptsArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="StockRelatedDepositoryReceiptsArticle27233Item2" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233Item2" xlink:label="StockTrustBeneficiaryRightsArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="StockTrustBeneficiaryRightsArticle27233Item2" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233Item2" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="StockRelatedTrustBeneficiaryRightsArticle27233Item2" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233Item2" xlink:label="TargetSecurityRedeemableBondsArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="TargetSecurityRedeemableBondsArticle27233Item2" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233Item2" xlink:label="ExchangeableBondsArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="ExchangeableBondsArticle27233Item2" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233Item2" xlink:label="TotalArticle27233Item2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item2Abstract" xlink:to="TotalArticle27233Item2" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233Item3Abstract" xlink:label="Article27233Item3Abstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="Article27233Item3Abstract" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233Item3" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="StocksOrInvestmentSecuritiesEtcArticle27233Item3" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3" xlink:label="ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ConvertibleBondsArticle27233Item3" xlink:label="ConvertibleBondsArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="ConvertibleBondsArticle27233Item3" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233Item3" xlink:label="TargetSecurityCoveredWarrantsArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="TargetSecurityCoveredWarrantsArticle27233Item3" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233Item3" xlink:label="StockDepositoryReceiptsArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="StockDepositoryReceiptsArticle27233Item3" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233Item3" xlink:label="StockRelatedDepositoryReceiptsArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="StockRelatedDepositoryReceiptsArticle27233Item3" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233Item3" xlink:label="StockTrustBeneficiaryRightsArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="StockTrustBeneficiaryRightsArticle27233Item3" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233Item3" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="StockRelatedTrustBeneficiaryRightsArticle27233Item3" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233Item3" xlink:label="TargetSecurityRedeemableBondsArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="TargetSecurityRedeemableBondsArticle27233Item3" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233Item3" xlink:label="ExchangeableBondsArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="ExchangeableBondsArticle27233Item3" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233Item3" xlink:label="TotalArticle27233Item3"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="Article27233Item3Abstract" xlink:to="TotalArticle27233Item3" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcToDeductAsSoldOnMarginTrading" xlink:label="NumberOfStocksEtcToDeductAsSoldOnMarginTrading"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="NumberOfStocksEtcToDeductAsSoldOnMarginTrading" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders" xlink:label="NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfStocksEtcHeld" xlink:label="TotalNumberOfStocksEtcHeld"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="TotalNumberOfStocksEtcHeld" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld" xlink:label="NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfResidualStocksHeld" xlink:label="NumberOfResidualStocksHeld"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="NumberOfResidualStocksHeld" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NotesNumberOfStocksEtcHeldTextBlock" xlink:label="NotesNumberOfStocksEtcHeldTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NumberOfStocksEtcHeldAbstract" xlink:to="NotesNumberOfStocksEtcHeldTextBlock" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcAbstract" xlink:label="HoldingRatioOfShareCertificatesEtcAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BreakdownOfStocksEtcHeldBySaidFilerAbstract" xlink:to="HoldingRatioOfShareCertificatesEtcAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfOutstandingStocksEtcAbstract" xlink:label="TotalNumberOfOutstandingStocksEtcAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="HoldingRatioOfShareCertificatesEtcAbstract" xlink:to="TotalNumberOfOutstandingStocksEtcAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BaseDate" xlink:label="BaseDate"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="TotalNumberOfOutstandingStocksEtcAbstract" xlink:to="BaseDate" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfOutstandingStocksEtc" xlink:label="TotalNumberOfOutstandingStocksEtc"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="TotalNumberOfOutstandingStocksEtcAbstract" xlink:to="TotalNumberOfOutstandingStocksEtc" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfResidualStocksEtcHeldByFilersAndJointHolders" xlink:label="NumberOfResidualStocksEtcHeldByFilersAndJointHolders"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="HoldingRatioOfShareCertificatesEtcAbstract" xlink:to="NumberOfResidualStocksEtcHeldByFilersAndJointHolders" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders" xlink:label="NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="HoldingRatioOfShareCertificatesEtcAbstract" xlink:to="NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtc" xlink:label="HoldingRatioOfShareCertificatesEtc"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="HoldingRatioOfShareCertificatesEtcAbstract" xlink:to="HoldingRatioOfShareCertificatesEtc" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcPerLastReport" xlink:label="HoldingRatioOfShareCertificatesEtcPerLastReport"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="HoldingRatioOfShareCertificatesEtcAbstract" xlink:to="HoldingRatioOfShareCertificatesEtcPerLastReport" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NotesHoldingRatioOfShareCertificatesEtcTextBlock" xlink:label="NotesHoldingRatioOfShareCertificatesEtcTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="HoldingRatioOfShareCertificatesEtcAbstract" xlink:to="NotesHoldingRatioOfShareCertificatesEtcTextBlock" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysAbstract" xlink:label="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderSerialNumberAbstract" xlink:to="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysAbstract" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock" xlink:label="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysAbstract" xlink:to="DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsAbstract" xlink:label="SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderSerialNumberAbstract" xlink:to="SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsAbstract" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock" xlink:label="SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsAbstract" xlink:to="SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_FundingForAcquisitionOfStocksEtcHeldAbstract" xlink:label="FundingForAcquisitionOfStocksEtcHeldAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FilerLargeVolumeHolderSerialNumberAbstract" xlink:to="FundingForAcquisitionOfStocksEtcHeldAbstract" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfFundingAbstract" xlink:label="BreakdownOfFundingAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FundingForAcquisitionOfStocksEtcHeldAbstract" xlink:to="BreakdownOfFundingAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_AmountOfOwnFund" xlink:label="AmountOfOwnFund"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BreakdownOfFundingAbstract" xlink:to="AmountOfOwnFund" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalAmountOfBorrowings" xlink:label="TotalAmountOfBorrowings"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BreakdownOfFundingAbstract" xlink:to="TotalAmountOfBorrowings" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalAmountFromOtherSources" xlink:label="TotalAmountFromOtherSources"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BreakdownOfFundingAbstract" xlink:to="TotalAmountFromOtherSources" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfTotalAmountFromOtherSources" xlink:label="BreakdownOfTotalAmountFromOtherSources"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BreakdownOfFundingAbstract" xlink:to="BreakdownOfTotalAmountFromOtherSources" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalAmountOfFundingForAcquisition" xlink:label="TotalAmountOfFundingForAcquisition"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BreakdownOfFundingAbstract" xlink:to="TotalAmountOfFundingForAcquisition" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NotesFundingForAcquisitionOfStocksEtcHeldTextBlock" xlink:label="NotesFundingForAcquisitionOfStocksEtcHeldTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BreakdownOfFundingAbstract" xlink:to="NotesFundingForAcquisitionOfStocksEtcHeldTextBlock" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfBorrowingsAbstract" xlink:label="BreakdownOfBorrowingsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FundingForAcquisitionOfStocksEtcHeldAbstract" xlink:to="BreakdownOfBorrowingsAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BreakdownOfBorrowingsTextBlock" xlink:label="BreakdownOfBorrowingsTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BreakdownOfBorrowingsAbstract" xlink:to="BreakdownOfBorrowingsTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NamesEtcOfCreditorsAbstract" xlink:label="NamesEtcOfCreditorsAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FundingForAcquisitionOfStocksEtcHeldAbstract" xlink:to="NamesEtcOfCreditorsAbstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NamesEtcOfCreditorsTextBlock" xlink:label="NamesEtcOfCreditorsTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NamesEtcOfCreditorsAbstract" xlink:to="NamesEtcOfCreditorsTextBlock" order="1.0"/>
+  </link:definitionLink>
+</link:linkbase>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CoverPageHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CoverPageHeading" xlink:to="reference_CoverPageHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading" xlink:label="BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading" xlink:to="reference_BasicFrameworkOfInternalControlRelatedToFinancialReportingHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_BasicFrameworkOfInternalControlRelatedToFinancialReportingTextBlock" xlink:label="BasicFrameworkOfInternalControlRelatedToFinancialReportingTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_BasicFrameworkOfInternalControlRelatedToFinancialReportingTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="BasicFrameworkOfInternalControlRelatedToFinancialReportingTextBlock" xlink:to="reference_BasicFrameworkOfInternalControlRelatedToFinancialReportingTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_ScopeDateAndProceduresForEvaluationHeading" xlink:label="ScopeDateAndProceduresForEvaluationHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ScopeDateAndProceduresForEvaluationHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ScopeDateAndProceduresForEvaluationHeading" xlink:to="reference_ScopeDateAndProceduresForEvaluationHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_ScopeDateAndProceduresForEvaluationTextBlock" xlink:label="ScopeDateAndProceduresForEvaluationTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ScopeDateAndProceduresForEvaluationTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ScopeDateAndProceduresForEvaluationTextBlock" xlink:to="reference_ScopeDateAndProceduresForEvaluationTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_ResultOfEvaluationHeading" xlink:label="ResultOfEvaluationHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ResultOfEvaluationHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ResultOfEvaluationHeading" xlink:to="reference_ResultOfEvaluationHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_ResultOfEvaluationTextBlock" xlink:label="ResultOfEvaluationTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ResultOfEvaluationTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ResultOfEvaluationTextBlock" xlink:to="reference_ResultOfEvaluationTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_SupplementaryInformationHeading" xlink:label="SupplementaryInformationHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SupplementaryInformationHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SupplementaryInformationHeading" xlink:to="reference_SupplementaryInformationHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_SupplementaryInformationTextBlock" xlink:label="SupplementaryInformationTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SupplementaryInformationTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SupplementaryInformationTextBlock" xlink:to="reference_SupplementaryInformationTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_OtherInformationForSpecialAttentionHeading" xlink:label="OtherInformationForSpecialAttentionHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_OtherInformationForSpecialAttentionHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="OtherInformationForSpecialAttentionHeading" xlink:to="reference_OtherInformationForSpecialAttentionHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_OtherInformationForSpecialAttentionTextBlock" xlink:label="OtherInformationForSpecialAttentionTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_OtherInformationForSpecialAttentionTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="OtherInformationForSpecialAttentionTextBlock" xlink:to="reference_OtherInformationForSpecialAttentionTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_IndependentAuditorsReportHeading" xlink:label="IndependentAuditorsReportHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_IndependentAuditorsReportHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Name>金融商品取引法</ref:Name>
+      <ref:IssueDate>2012-09-12</ref:IssueDate>
+      <ref:Article>第193条の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="IndependentAuditorsReportHeading" xlink:to="reference_IndependentAuditorsReportHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_IndependentAuditorsReportTextBlock" xlink:label="IndependentAuditorsReportTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_IndependentAuditorsReportTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Name>金融商品取引法</ref:Name>
+      <ref:IssueDate>2012-09-12</ref:IssueDate>
+      <ref:Article>第193条の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="IndependentAuditorsReportTextBlock" xlink:to="reference_IndependentAuditorsReportTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DocumentTitleCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DocumentTitleCoverPage" xlink:to="reference_DocumentTitleCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_ClauseOfStipulationCoverPage" xlink:label="ClauseOfStipulationCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ClauseOfStipulationCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ClauseOfStipulationCoverPage" xlink:to="reference_ClauseOfStipulationCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceOfFilingCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceOfFilingCoverPage" xlink:to="reference_PlaceOfFilingCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilingDateCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilingDateCoverPage" xlink:to="reference_FilingDateCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_CompanyNameCoverPage" xlink:label="CompanyNameCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CompanyNameCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CompanyNameCoverPage" xlink:to="reference_CompanyNameCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_CompanyNameInEnglishCoverPage" xlink:label="CompanyNameInEnglishCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CompanyNameInEnglishCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CompanyNameInEnglishCoverPage" xlink:to="reference_CompanyNameInEnglishCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_TitleAndNameOfRepresentativeCoverPage" xlink:label="TitleAndNameOfRepresentativeCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TitleAndNameOfRepresentativeCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TitleAndNameOfRepresentativeCoverPage" xlink:to="reference_TitleAndNameOfRepresentativeCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_TitleAndNameOfChiefFinancialOfficerCoverPage" xlink:label="TitleAndNameOfChiefFinancialOfficerCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TitleAndNameOfChiefFinancialOfficerCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TitleAndNameOfChiefFinancialOfficerCoverPage" xlink:to="reference_TitleAndNameOfChiefFinancialOfficerCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_AddressOfRegisteredHeadquarterCoverPage" xlink:label="AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AddressOfRegisteredHeadquarterCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AddressOfRegisteredHeadquarterCoverPage" xlink:to="reference_AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpctl_cor_2021-11-01.xsd#jpctl_cor_PlaceForPublicInspectionCoverPageTextBlock" xlink:label="PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceForPublicInspectionCoverPageTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>財務計算に関する書類その他の情報の適正性を確保するための体制に関する内閣府令</ref:Name>
+      <ref:IssueDate>2020-12-23</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceForPublicInspectionCoverPageTextBlock" xlink:to="reference_PlaceForPublicInspectionCoverPageTextBlock"/>
+  </link:referenceLink>
+</link:linkbase>

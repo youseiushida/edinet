@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://disclosure.edinet-fsa.go.jp/2013/manifest" xmlns:jpsps_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_cor">
+	<tocComposition>
+		<title xml:lang="ja">提出本文書</title>
+		<title xml:lang="en">Main Document</title>
+		<item ref="jpsps060700" extrole="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo67AndNo7AnnualSecuritiesReportAlsoDeemedAsSecuritiesRegistrationStatement" in="presentation">
+			<insert parent="jpsps_cor:FinancialInformationOfFundHeading">
+				<item ref="jpsps060700_1" extrole="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo67AndNo7AnnualSecuritiesReportAlsoDeemedAsSecuritiesRegistrationStatement" start="jpsps_cor:FinancialInformationOfFundHeading" in="presentation"/>
+			</insert>
+			<insert parent="jpsps_cor:FinancialInformationOfFundHeading">
+				<item ref="jpsps060700_2" extrole="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_CabinetOfficeOrdinanceOnDisclosureOfInformationEtcOnSpecifiedSecuritiesFormNo67AndNo7AnnualSecuritiesReportAlsoDeemedAsSecuritiesRegistrationStatement" start="jpsps_cor:FinancialInformationOfFundHeading" in="presentation"/>
+			</insert>
+		</item>
+	</tocComposition>
+	<list>
+		<instance id="jpsps060700" type="PublicDoc" preferredFilename="jpsps060700-drs-001_Y99009-000_2027-01-31_03_2027-06-26.xbrl">
+			<ixbrl>0000000_header_jpsps060700-drs-001_Y99009-000_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+			<ixbrl>0000010_honbun_jpsps060700-drs-001_Y99009-000_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+			<ixbrl>0101010_honbun_jpsps060700-drs-001_Y99009-000_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+			<ixbrl>0103070_honbun_jpsps060700-drs-001_Y99009-000_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+			<ixbrl>0201010_honbun_jpsps060700-drs-001_Y99009-000_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+		</instance>
+		<instance id="jpsps060700_1" type="PublicDoc" preferredFilename="jpsps060700-drs-001_Y99009-001_2027-01-31_03_2027-06-26.xbrl">
+			<ixbrl>0103010_honbun_jpsps060700-drs-001_Y99009-001_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+			<ixbrl>0103020_honbun_jpsps060700-drs-001_Y99009-001_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+			<ixbrl>0103030_honbun_jpsps060700-drs-001_Y99009-001_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+		</instance>
+		<instance id="jpsps060700_2" type="PublicDoc" preferredFilename="jpsps060700-drs-001_Y99009-002_2027-01-31_03_2027-06-26.xbrl">
+			<ixbrl>0103040_honbun_jpsps060700-drs-001_Y99009-002_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+			<ixbrl>0103050_honbun_jpsps060700-drs-001_Y99009-002_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+			<ixbrl>0103060_honbun_jpsps060700-drs-001_Y99009-002_2027-01-31_03_2027-06-26_ixbrl.htm</ixbrl>
+		</instance>
+	</list>
+</manifest>

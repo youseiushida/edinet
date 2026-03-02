@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpctl/2021-11-01/jpctl_cor" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jpctl_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpctl/2021-11-01/jpctl_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jpctl_dep_2021-11-01_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jpctl_dep_2021-11-01_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <xsd:import namespace="http://www.xbrl.org/2009/role/deprecated" schemaLocation="http://www.xbrl.org/lrr/role/deprecated-2009-12-16.xsd"/>
+  <xsd:element name="TitleAndNameOfChiefFinancialOfficerCoverPageNA" id="jpctl_cor_TitleAndNameOfChiefFinancialOfficerCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="PlaceForPublicInspectionCoverPageNA" id="jpctl_cor_PlaceForPublicInspectionCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="SupplementaryInformationNA" id="jpctl_cor_SupplementaryInformationNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="OtherInformationForSpecialAttentionNA" id="jpctl_cor_OtherInformationForSpecialAttentionNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+</xsd:schema>

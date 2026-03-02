@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:jpdei_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" xmlns:jptoi_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jptoi/2025-11-01/jptoi_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <link:schemaRef xlink:href="jptoi040000-tor-001_X99013-000_2026-10-26_01_2026-10-26.xsd" xlink:type="simple"/>
+  <xbrli:context id="FilingDateInstant">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">X99013-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2026-10-26</xbrli:instant>
+</xbrli:period>
+</xbrli:context>
+  <xbrli:unit id="pure">
+<xbrli:measure>
+xbrli:pure
+</xbrli:measure>
+</xbrli:unit>
+  <jpdei_cor:NumberOfSubmissionDEI contextRef="FilingDateInstant" decimals="0" unitRef="pure">1</jpdei_cor:NumberOfSubmissionDEI>
+  <jptoi_cor:DocumentTitleCoverPage contextRef="FilingDateInstant">公開買付報告書</jptoi_cor:DocumentTitleCoverPage>
+  <jptoi_cor:PlaceOfFilingCoverPage contextRef="FilingDateInstant">関東財務局長</jptoi_cor:PlaceOfFilingCoverPage>
+  <jptoi_cor:FilingDateCoverPage contextRef="FilingDateInstant">2026-10-26</jptoi_cor:FilingDateCoverPage>
+  <jptoi_cor:NameOfFilerCoverPage contextRef="FilingDateInstant">Ｙ株式会社</jptoi_cor:NameOfFilerCoverPage>
+  <jptoi_cor:LocationOfFilerCoverPage contextRef="FilingDateInstant">東京都千代田区霞が関三丁目２番１号</jptoi_cor:LocationOfFilerCoverPage>
+  <jptoi_cor:NearestPlaceOfContactCoverPage contextRef="FilingDateInstant">東京都千代田区霞が関三丁目２番１号</jptoi_cor:NearestPlaceOfContactCoverPage>
+  <jptoi_cor:TelephoneNumberCoverPage contextRef="FilingDateInstant">０３（３５０６）６０００（代表）</jptoi_cor:TelephoneNumberCoverPage>
+  <jptoi_cor:NameOfContactPersonCoverPage contextRef="FilingDateInstant">取締役  社長室長    ○○  ○○</jptoi_cor:NameOfContactPersonCoverPage>
+  <jptoi_cor:NameOfLegalRepresentativeCoverPage contextRef="FilingDateInstant">該当事項はありません。</jptoi_cor:NameOfLegalRepresentativeCoverPage>
+  <jptoi_cor:ResidentialAddressOrLocationOfLegalRepresentativeCoverPage contextRef="FilingDateInstant">該当事項はありません。</jptoi_cor:ResidentialAddressOrLocationOfLegalRepresentativeCoverPage>
+  <jptoi_cor:NearestPlaceOfContactLegalRepresentativeCoverPage contextRef="FilingDateInstant">該当事項はありません。</jptoi_cor:NearestPlaceOfContactLegalRepresentativeCoverPage>
+  <jptoi_cor:TelephoneNumberLegalRepresentativeCoverPage contextRef="FilingDateInstant">該当事項はありません。</jptoi_cor:TelephoneNumberLegalRepresentativeCoverPage>
+  <jptoi_cor:NameOfContactPersonLegalRepresentativeCoverPage contextRef="FilingDateInstant">該当事項はありません。</jptoi_cor:NameOfContactPersonLegalRepresentativeCoverPage>
+  <jptoi_cor:PlaceForPublicInspectionCoverPageTextBlock contextRef="FilingDateInstant">
+&lt;p style="line-height: 14.5pt"&gt;
+Ｙ株式会社大阪支店&lt;br/&gt;（大阪市中央区○○一丁目１番１号）&lt;br/&gt;株式会社東京証券取引所&lt;br/&gt;（東京都中央区日本橋兜町２番１号）&lt;br/&gt;株式会社大阪証券取引所&lt;br/&gt;（大阪市中央区北浜一丁目８番16号）
+&lt;/p&gt;
+</jptoi_cor:PlaceForPublicInspectionCoverPageTextBlock>
+  <jptoi_cor:NotesCoverPageTextBlock contextRef="FilingDateInstant">
+&lt;p style="margin-left: 53.0pt; text-indent: -54.0pt"&gt;  （注１）  本書中の「法」とは、金融商品取引法（○年法律第25号。その後の改正を含む。）をいいます。&lt;/p&gt;
+&lt;p style="margin-left: 53.0pt; text-indent: -54.0pt"&gt;  （注２）  本書中の「令」とは、金融商品取引法施行令（○年政令第321号。その後の改正を含む。）をいいます。&lt;/p&gt;
+&lt;p style="margin-left: 53.0pt; text-indent: -54.0pt"&gt;  （注３）  …………………………………………………………………………………………………………………………&lt;/p&gt;
+&lt;p style="margin-left: 107.0pt; text-indent: -54.0pt"&gt;……………………………………………………………………………………。&lt;/p&gt;
+</jptoi_cor:NotesCoverPageTextBlock>
+  <jpdei_cor:EDINETCodeDEI contextRef="FilingDateInstant">X99013</jpdei_cor:EDINETCodeDEI>
+  <jpdei_cor:FundCodeDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:SecurityCodeDEI contextRef="FilingDateInstant">11310</jpdei_cor:SecurityCodeDEI>
+  <jpdei_cor:FilerNameInJapaneseDEI contextRef="FilingDateInstant">Ｙ株式会社</jpdei_cor:FilerNameInJapaneseDEI>
+  <jpdei_cor:FilerNameInEnglishDEI contextRef="FilingDateInstant">Y Corporation</jpdei_cor:FilerNameInEnglishDEI>
+  <jpdei_cor:FundNameInJapaneseDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:FundNameInEnglishDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CabinetOfficeOrdinanceDEI contextRef="FilingDateInstant">発行者による上場株券等の公開買付けの開示に関する内閣府令</jpdei_cor:CabinetOfficeOrdinanceDEI>
+  <jpdei_cor:DocumentTypeDEI contextRef="FilingDateInstant">第四号様式</jpdei_cor:DocumentTypeDEI>
+  <jpdei_cor:AccountingStandardsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:WhetherConsolidatedFinancialStatementsArePreparedDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentPeriodEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:TypeOfCurrentPeriodDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentFiscalYearEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:PreviousFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ComparativePeriodEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:PreviousFiscalYearEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:NextFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:AmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:AmendmentFlagDEI>
+  <jpdei_cor:IdentificationOfDocumentSubjectToAmendmentDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ReportAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:ReportAmendmentFlagDEI>
+  <jpdei_cor:XBRLAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:XBRLAmendmentFlagDEI>
+  <jptoi_cor:ClassesOfShareCertificatesRelatedToListedShareCertificatesEtcRelatedToPurchaseEtcTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（１）【買付け等に係る上場株券等の種類】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 40.0pt"&gt;普通株式&lt;/p&gt;
+&lt;p style="margin-left: 40.0pt"&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</jptoi_cor:ClassesOfShareCertificatesRelatedToListedShareCertificatesEtcRelatedToPurchaseEtcTextBlock>
+  <jptoi_cor:TenderOfferPeriodTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（２）【公開買付期間】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 40.0pt"&gt;令和８年88月88日（○曜日）から令和８年88月88日（○曜日）まで（88営業日）&lt;/p&gt;
+&lt;p style="margin-left: 40.0pt"&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</jptoi_cor:TenderOfferPeriodTextBlock>
+  <jptoi_cor:DateOfOfficialAnnouncementOfTenderOfferAndNameOfNewspaperContainingItTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（１）【公開買付けの結果の公告日及び公告掲載新聞名】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 31.0pt"&gt;  令第14条の３の４第６項、同第９条の４及び府令第19条の２に規定する方法により、令和８年88月88日&lt;br/&gt;に報道機関に公表いたしました。&lt;/p&gt;
+&lt;p style="margin-left: 31.0pt"&gt;&lt;br/&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+</jptoi_cor:DateOfOfficialAnnouncementOfTenderOfferAndNameOfNewspaperContainingItTextBlock>
+  <jptoi_cor:NumberOfListedShareCertificatesEtcAcquiredByPurchaseEtcTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（２）【買付け等を行った上場株券等の数】&lt;/h4&gt;
+&lt;table style="border-collapse: collapse"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 235.0pt; min-width: 235.0pt"/&gt;
+&lt;col style="width: 235.0pt; min-width: 235.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr style="height: 20.0pt; min-height: 18.0pt;"&gt;
+&lt;td style="border: solid black 0.75pt; padding: 0pt"&gt;
+&lt;p style="text-align: center"&gt;上場株券等の種類&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt; padding: 0pt"&gt;
+&lt;p style="text-align: center"&gt;普通株式&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.0pt; min-height: 20.0pt"&gt;
+&lt;td style="border: solid black 0.75pt; padding: 0pt"&gt;
+&lt;p style="margin-top: 0pt; margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt"&gt;応募数（株）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt; padding: 0pt"&gt;
+&lt;p style="text-align: center"&gt;8,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.0pt; min-height: 20.0pt"&gt;
+&lt;td style="border: solid black 0.75pt; padding: 0pt"&gt;
+&lt;p style="margin-top: 0pt; margin-right: 4.5pt; margin-bottom: 0pt; margin-left: 4.5pt"&gt;買付数（株）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: solid black 0.75pt; padding: 0pt"&gt;
+&lt;p style="text-align: center"&gt;8,888,888&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class="h4"&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jptoi_cor:NumberOfListedShareCertificatesEtcAcquiredByPurchaseEtcTextBlock>
+  <jptoi_cor:CalculationForPurchaseEtcByMethodOfProportionalDistributionTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（３）【あん分比例方式により買付け等を行う場合の計算】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 15.0pt"&gt;  ① 計算方法&lt;/p&gt;
+&lt;p style="margin-left: 28.0pt"&gt;  応募上場株券等の総数が買付予定数（8,888,888株）を超えたため、………………………………………&lt;br/&gt;………………………………………………………………………………………。&lt;/p&gt;
+&lt;p style="margin-left: 15.0pt"&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;p style="margin-left: 15.0pt"&gt;  ② 計算経過及び計算の結果&lt;/p&gt;
+&lt;p style="margin-left: 28.0pt"&gt;  あん分比例の方式により計算した各応募株主等からの買付株数の合計は8,888,888株となり、…………&lt;br/&gt;………………………………………………………………………………………。&lt;/p&gt;
+
+&lt;/div&gt;
+</jptoi_cor:CalculationForPurchaseEtcByMethodOfProportionalDistributionTextBlock>
+</xbrli:xbrl>

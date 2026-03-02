@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_MajorShareholders-02" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_MajorShareholders-02"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_MajorShareholders-02">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_MajorShareholdersHeading" xlink:label="MajorShareholdersHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_MajorShareholdersVotingRightsTable" xlink:label="MajorShareholdersVotingRightsTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="MajorShareholdersHeading" xlink:to="MajorShareholdersVotingRightsTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_MajorShareholdersVotingRightsAxis" xlink:label="MajorShareholdersVotingRightsAxis"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="MajorShareholdersVotingRightsTable" xlink:to="MajorShareholdersVotingRightsAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_MajorShareholdersVotingRightsMember" xlink:label="MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="MajorShareholdersVotingRightsAxis" xlink:to="MajorShareholdersVotingRightsMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_MajorShareholdersVotingRightsMember" xlink:label="MajorShareholdersVotingRightsMember_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="MajorShareholdersVotingRightsAxis" xlink:to="MajorShareholdersVotingRightsMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No1MajorShareholdersVotingRightsMember" xlink:label="No1MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No1MajorShareholdersVotingRightsMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No2MajorShareholdersVotingRightsMember" xlink:label="No2MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No2MajorShareholdersVotingRightsMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No3MajorShareholdersVotingRightsMember" xlink:label="No3MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No3MajorShareholdersVotingRightsMember" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No4MajorShareholdersVotingRightsMember" xlink:label="No4MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No4MajorShareholdersVotingRightsMember" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No5MajorShareholdersVotingRightsMember" xlink:label="No5MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No5MajorShareholdersVotingRightsMember" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No6MajorShareholdersVotingRightsMember" xlink:label="No6MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No6MajorShareholdersVotingRightsMember" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No7MajorShareholdersVotingRightsMember" xlink:label="No7MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No7MajorShareholdersVotingRightsMember" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No8MajorShareholdersVotingRightsMember" xlink:label="No8MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No8MajorShareholdersVotingRightsMember" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No9MajorShareholdersVotingRightsMember" xlink:label="No9MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No9MajorShareholdersVotingRightsMember" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No10MajorShareholdersVotingRightsMember" xlink:label="No10MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No10MajorShareholdersVotingRightsMember" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No11MajorShareholdersVotingRightsMember" xlink:label="No11MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No11MajorShareholdersVotingRightsMember" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No12MajorShareholdersVotingRightsMember" xlink:label="No12MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No12MajorShareholdersVotingRightsMember" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No13MajorShareholdersVotingRightsMember" xlink:label="No13MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No13MajorShareholdersVotingRightsMember" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No14MajorShareholdersVotingRightsMember" xlink:label="No14MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No14MajorShareholdersVotingRightsMember" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_No15MajorShareholdersVotingRightsMember" xlink:label="No15MajorShareholdersVotingRightsMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsMember" xlink:to="No15MajorShareholdersVotingRightsMember" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_MajorShareholdersVotingRightsLineItems" xlink:label="MajorShareholdersVotingRightsLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersHeading" xlink:to="MajorShareholdersVotingRightsLineItems" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NameMajorShareholdersVotingRights" xlink:label="NameMajorShareholdersVotingRights"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsLineItems" xlink:to="NameMajorShareholdersVotingRights" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AddressMajorShareholdersVotingRights" xlink:label="AddressMajorShareholdersVotingRights"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsLineItems" xlink:to="AddressMajorShareholdersVotingRights" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfVotingRightsHeld" xlink:label="NumberOfVotingRightsHeld"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsLineItems" xlink:to="NumberOfVotingRightsHeld" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_RatioOfVotingRightsHeld" xlink:label="RatioOfVotingRightsHeld"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="MajorShareholdersVotingRightsLineItems" xlink:to="RatioOfVotingRightsHeld" order="4.0"/>
+  </link:definitionLink>
+</link:linkbase>

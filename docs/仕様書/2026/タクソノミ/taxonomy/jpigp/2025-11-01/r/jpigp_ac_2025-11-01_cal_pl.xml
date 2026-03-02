@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfProfitOrLossIFRS" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfProfitOrLossIFRS"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_ConsolidatedStatementOfProfitOrLossIFRS">
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossIFRS" xlink:label="ProfitLossIFRS"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossBeforeTaxIFRS" xlink:label="ProfitLossBeforeTaxIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLossIFRS" xlink:to="ProfitLossBeforeTaxIFRS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OperatingProfitLossIFRS" xlink:label="OperatingProfitLossIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLossBeforeTaxIFRS" xlink:to="OperatingProfitLossIFRS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GrossProfitIFRS" xlink:label="GrossProfitIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingProfitLossIFRS" xlink:to="GrossProfitIFRS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RevenueIFRS" xlink:label="RevenueIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="GrossProfitIFRS" xlink:to="RevenueIFRS" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CostOfSalesIFRS" xlink:label="CostOfSalesIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="GrossProfitIFRS" xlink:to="CostOfSalesIFRS" order="2.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SellingGeneralAndAdministrativeExpensesIFRS" xlink:label="SellingGeneralAndAdministrativeExpensesIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingProfitLossIFRS" xlink:to="SellingGeneralAndAdministrativeExpensesIFRS" order="2.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherIncomeIFRS" xlink:label="OtherIncomeIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingProfitLossIFRS" xlink:to="OtherIncomeIFRS" order="3.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherExpensesIFRS" xlink:label="OtherExpensesIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="OperatingProfitLossIFRS" xlink:to="OtherExpensesIFRS" order="4.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceIncomeIFRS" xlink:label="FinanceIncomeIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLossBeforeTaxIFRS" xlink:to="FinanceIncomeIFRS" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceCostsIFRS" xlink:label="FinanceCostsIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLossBeforeTaxIFRS" xlink:to="FinanceCostsIFRS" order="3.0" weight="-1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ShareOfProfitLossOfInvestmentsAccountedForUsingEquityMethodIFRS" xlink:label="ShareOfProfitLossOfInvestmentsAccountedForUsingEquityMethodIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLossBeforeTaxIFRS" xlink:to="ShareOfProfitLossOfInvestmentsAccountedForUsingEquityMethodIFRS" order="4.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IncomeTaxExpenseIFRS" xlink:label="IncomeTaxExpenseIFRS"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ProfitLossIFRS" xlink:to="IncomeTaxExpenseIFRS" order="2.0" weight="-1"/>
+  </link:calculationLink>
+</link:linkbase>

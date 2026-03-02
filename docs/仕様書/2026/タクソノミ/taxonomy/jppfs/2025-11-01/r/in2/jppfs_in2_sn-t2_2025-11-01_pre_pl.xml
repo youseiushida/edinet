@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/jppfs/NonConsolidatedInterim/role/label" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_NonConsolidatedInterimLabel"/>
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_INSLabel"/>
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_SemiAnnualStatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualStatementOfIncome"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_SemiAnnualStatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonConsolidatedMember" xlink:label="NonConsolidatedMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="NonConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeTable" xlink:label="StatementOfIncomeTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeLineItems" xlink:label="StatementOfIncomeLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncomeINS" xlink:label="OperatingIncomeINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncomeINS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_UnderwritingIncomeOIINS" xlink:label="UnderwritingIncomeOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingIncomeINS" xlink:to="UnderwritingIncomeOIINS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetPremiumsWrittenOIINS" xlink:label="NetPremiumsWrittenOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="UnderwritingIncomeOIINS" xlink:to="NetPremiumsWrittenOIINS" order="1.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PremiumsOfSavingTypeInsuranceOIINS" xlink:label="PremiumsOfSavingTypeInsuranceOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="UnderwritingIncomeOIINS" xlink:to="PremiumsOfSavingTypeInsuranceOIINS" order="2.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InvestmentIncomeFromSavingTypeInsuranceOIINS" xlink:label="InvestmentIncomeFromSavingTypeInsuranceOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="UnderwritingIncomeOIINS" xlink:to="InvestmentIncomeFromSavingTypeInsuranceOIINS" order="3.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InvestmentIncomeOIINS" xlink:label="InvestmentIncomeOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingIncomeINS" xlink:to="InvestmentIncomeOIINS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestAndDividendsIncomeOIINS" xlink:label="InterestAndDividendsIncomeOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InvestmentIncomeOIINS" xlink:to="InterestAndDividendsIncomeOIINS" order="1.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainFromMoneyHeldInTrustOIINS" xlink:label="GainFromMoneyHeldInTrustOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InvestmentIncomeOIINS" xlink:to="GainFromMoneyHeldInTrustOIINS" order="2.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnTradingSecuritiesOIINS" xlink:label="GainOnTradingSecuritiesOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InvestmentIncomeOIINS" xlink:to="GainOnTradingSecuritiesOIINS" order="3.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfSecuritiesOIINS" xlink:label="GainOnSalesOfSecuritiesOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InvestmentIncomeOIINS" xlink:to="GainOnSalesOfSecuritiesOIINS" order="4.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeCreditedToSavingTypeInsuranceOIINS" xlink:label="IncomeCreditedToSavingTypeInsuranceOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InvestmentIncomeOIINS" xlink:to="IncomeCreditedToSavingTypeInsuranceOIINS" order="5.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOperatingIncomeOIINS" xlink:label="OtherOperatingIncomeOIINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingIncomeINS" xlink:to="OtherOperatingIncomeOIINS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesINS" xlink:label="OperatingExpensesINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingExpensesINS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_UnderwritingExpensesOEINS" xlink:label="UnderwritingExpensesOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesINS" xlink:to="UnderwritingExpensesOEINS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetLossPaidOEINS" xlink:label="NetLossPaidOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="UnderwritingExpensesOEINS" xlink:to="NetLossPaidOEINS" order="1.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossAdjustmentExpensesOEINS" xlink:label="LossAdjustmentExpensesOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="UnderwritingExpensesOEINS" xlink:to="LossAdjustmentExpensesOEINS" order="2.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CommissionsAndCollectionFeesOEINS" xlink:label="CommissionsAndCollectionFeesOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="UnderwritingExpensesOEINS" xlink:to="CommissionsAndCollectionFeesOEINS" order="3.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MaturityRefundsToPolicyholdersOEINS" xlink:label="MaturityRefundsToPolicyholdersOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="UnderwritingExpensesOEINS" xlink:to="MaturityRefundsToPolicyholdersOEINS" order="4.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfOutstandingClaimsOEINS" xlink:label="ProvisionOfOutstandingClaimsOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="UnderwritingExpensesOEINS" xlink:to="ProvisionOfOutstandingClaimsOEINS" order="5.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfPolicyReserveOEINS" xlink:label="ProvisionOfPolicyReserveOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="UnderwritingExpensesOEINS" xlink:to="ProvisionOfPolicyReserveOEINS" order="6.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InvestmentExpensesOEINS" xlink:label="InvestmentExpensesOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesINS" xlink:to="InvestmentExpensesOEINS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnInvestmentsInMoneyHeldInTrustOEINS" xlink:label="LossOnInvestmentsInMoneyHeldInTrustOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InvestmentExpensesOEINS" xlink:to="LossOnInvestmentsInMoneyHeldInTrustOEINS" order="1.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnTradingSecuritiesOEINS" xlink:label="LossOnTradingSecuritiesOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InvestmentExpensesOEINS" xlink:to="LossOnTradingSecuritiesOEINS" order="2.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfSecuritiesOEINS" xlink:label="LossOnSalesOfSecuritiesOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InvestmentExpensesOEINS" xlink:to="LossOnSalesOfSecuritiesOEINS" order="3.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnValuationOfSecuritiesOEINS" xlink:label="LossOnValuationOfSecuritiesOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InvestmentExpensesOEINS" xlink:to="LossOnValuationOfSecuritiesOEINS" order="4.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SalesAndAdministrativeExpensesOEINS" xlink:label="SalesAndAdministrativeExpensesOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesINS" xlink:to="SalesAndAdministrativeExpensesOEINS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOperatingExpensesOEINS" xlink:label="OtherOperatingExpensesOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingExpensesINS" xlink:to="OtherOperatingExpensesOEINS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestExpensesOEINS" xlink:label="InterestExpensesOEINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOperatingExpensesOEINS" xlink:to="InterestExpensesOEINS" order="1.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/ins/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncome" xlink:label="OrdinaryIncome"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="OrdinaryIncome" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryIncome" xlink:label="ExtraordinaryIncome"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="ExtraordinaryIncome" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryLoss" xlink:label="ExtraordinaryLoss"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="ExtraordinaryLoss" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeBeforeIncomeTaxes" xlink:label="IncomeBeforeIncomeTaxes"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeBeforeIncomeTaxes" order="6.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/NonConsolidatedInterim/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesCurrentNonconsolidatedINS" xlink:label="IncomeTaxesCurrentNonconsolidatedINS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesCurrentNonconsolidatedINS" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesForGlobalMinimumTax" xlink:label="IncomeTaxesForGlobalMinimumTax"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesForGlobalMinimumTax" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesDeferred" xlink:label="IncomeTaxesDeferred"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesDeferred" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxes" xlink:label="IncomeTaxes"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxes" order="10.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="ProfitLoss" order="11.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/NonConsolidatedInterim/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SemiAnnualStatementOfIncomeHeading" xlink:label="SemiAnnualStatementOfIncomeHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SemiAnnualStatementOfIncomeHeading" xlink:to="StatementOfIncomeTable" order="1.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/NonConsolidatedInterim/role/label"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SemiAnnualStatementOfIncomeHeading" xlink:to="StatementOfIncomeLineItems" order="2.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/NonConsolidatedInterim/role/label"/>
+  </link:presentationLink>
+</link:linkbase>

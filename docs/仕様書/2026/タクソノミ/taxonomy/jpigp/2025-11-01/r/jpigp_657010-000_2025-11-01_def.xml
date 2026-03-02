@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRS" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRS"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRS">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfFinanceIncomeAndFinanceCostsIFRSTable" xlink:label="ComponentsOfFinanceIncomeAndFinanceCostsIFRSTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="ComponentsOfFinanceIncomeAndFinanceCostsIFRSTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfFinanceIncomeAndFinanceCostsIFRSLineItems" xlink:label="ComponentsOfFinanceIncomeAndFinanceCostsIFRSLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceIncomeIFRSAbstract" xlink:label="FinanceIncomeIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ComponentsOfFinanceIncomeAndFinanceCostsIFRSLineItems" xlink:to="FinanceIncomeIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_InterestIncomeIFRSAbstract" xlink:label="InterestIncomeIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinanceIncomeIFRSAbstract" xlink:to="InterestIncomeIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinancialAssetsMeasuredAtAmortizedCostInterestIncomeIFRS" xlink:label="FinancialAssetsMeasuredAtAmortizedCostInterestIncomeIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InterestIncomeIFRSAbstract" xlink:to="FinancialAssetsMeasuredAtAmortizedCostInterestIncomeIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DividendIncomeIFRSAbstract" xlink:label="DividendIncomeIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinanceIncomeIFRSAbstract" xlink:to="DividendIncomeIFRSAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_EquityInstrumentsDesignatedAsMeasuredAtFairValueThroughOtherComprehensiveIncomeDividendIncomeIFRS" xlink:label="EquityInstrumentsDesignatedAsMeasuredAtFairValueThroughOtherComprehensiveIncomeDividendIncomeIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="DividendIncomeIFRSAbstract" xlink:to="EquityInstrumentsDesignatedAsMeasuredAtFairValueThroughOtherComprehensiveIncomeDividendIncomeIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GainOnInvestmentsInSecuritiesIFRSAbstract" xlink:label="GainOnInvestmentsInSecuritiesIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinanceIncomeIFRSAbstract" xlink:to="GainOnInvestmentsInSecuritiesIFRSAbstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinancialAssetsMeasuredAtFairValueThroughProfitOrLossGainOnInvestmentsInSecuritiesIFRS" xlink:label="FinancialAssetsMeasuredAtFairValueThroughProfitOrLossGainOnInvestmentsInSecuritiesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="GainOnInvestmentsInSecuritiesIFRSAbstract" xlink:to="FinancialAssetsMeasuredAtFairValueThroughProfitOrLossGainOnInvestmentsInSecuritiesIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_GainOnValuationOfDerivativesIFRS" xlink:label="GainOnValuationOfDerivativesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinanceIncomeIFRSAbstract" xlink:to="GainOnValuationOfDerivativesIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherFinanceIncomeIFRS" xlink:label="OtherFinanceIncomeIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinanceIncomeIFRSAbstract" xlink:to="OtherFinanceIncomeIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceIncomeIFRS" xlink:label="FinanceIncomeIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinanceIncomeIFRSAbstract" xlink:to="FinanceIncomeIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceCostsIFRSAbstract" xlink:label="FinanceCostsIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ComponentsOfFinanceIncomeAndFinanceCostsIFRSLineItems" xlink:to="FinanceCostsIFRSAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_InterestExpensesIFRSAbstract" xlink:label="InterestExpensesIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinanceCostsIFRSAbstract" xlink:to="InterestExpensesIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinancialLiabilitiesMeasuredAtAmortizedCostInterestExpensesIFRS" xlink:label="FinancialLiabilitiesMeasuredAtAmortizedCostInterestExpensesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="InterestExpensesIFRSAbstract" xlink:to="FinancialLiabilitiesMeasuredAtAmortizedCostInterestExpensesIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherFinanceCostsIFRS" xlink:label="OtherFinanceCostsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinanceCostsIFRSAbstract" xlink:to="OtherFinanceCostsIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceCostsIFRS" xlink:label="FinanceCostsIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinanceCostsIFRSAbstract" xlink:to="FinanceCostsIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRSHeading" xlink:label="NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRSHeading"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRSHeading" xlink:to="ComponentsOfFinanceIncomeAndFinanceCostsIFRSTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NotesFinanceIncomeAndFinanceCostsConsolidatedFinancialStatementsIFRSHeading" xlink:to="ComponentsOfFinanceIncomeAndFinanceCostsIFRSLineItems" order="1.0"/>
+  </link:definitionLink>
+</link:linkbase>

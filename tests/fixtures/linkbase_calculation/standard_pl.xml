@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:calculationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfIncome">
+
+    <!-- ===== loc 要素 ===== -->
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss"
+        xlink:label="ProfitLoss"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeBeforeIncomeTaxes"
+        xlink:label="IncomeBeforeIncomeTaxes"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxes"
+        xlink:label="IncomeTaxes"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncome"
+        xlink:label="OrdinaryIncome"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryIncome"
+        xlink:label="ExtraordinaryIncome"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryLoss"
+        xlink:label="ExtraordinaryLoss"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncome"
+        xlink:label="OperatingIncome"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingIncome"
+        xlink:label="NonOperatingIncome"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingExpenses"
+        xlink:label="NonOperatingExpenses"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_GrossProfit"
+        xlink:label="GrossProfit"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_NetSales"
+        xlink:label="NetSales"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSales"
+        xlink:label="CostOfSales"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingGeneralAndAdministrativeExpenses"
+        xlink:label="SGA"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestIncomeNOI"
+        xlink:label="InterestIncomeNOI"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestExpensesNOE"
+        xlink:label="InterestExpensesNOE"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfInvestmentSecuritiesEI"
+        xlink:label="GainOnSalesOfInvestmentSecuritiesEI"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfNoncurrentAssetsEL"
+        xlink:label="LossOnSalesOfNoncurrentAssetsEL"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_ImpairmentLossEL"
+        xlink:label="ImpairmentLossEL"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesCurrent"
+        xlink:label="IncomeTaxesCurrent"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesDeferred"
+        xlink:label="IncomeTaxesDeferred"/>
+
+    <!-- ===== calculationArc 要素 (19 arcs) ===== -->
+    <!-- ProfitLoss children -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="ProfitLoss" xlink:to="IncomeBeforeIncomeTaxes"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="ProfitLoss" xlink:to="IncomeTaxes"
+        weight="-1" order="2"/>
+
+    <!-- IncomeBeforeIncomeTaxes children -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="IncomeBeforeIncomeTaxes" xlink:to="OrdinaryIncome"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="IncomeBeforeIncomeTaxes" xlink:to="ExtraordinaryIncome"
+        weight="1" order="2"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="IncomeBeforeIncomeTaxes" xlink:to="ExtraordinaryLoss"
+        weight="-1" order="3"/>
+
+    <!-- OrdinaryIncome children -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="OrdinaryIncome" xlink:to="OperatingIncome"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="OrdinaryIncome" xlink:to="NonOperatingIncome"
+        weight="1" order="2"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="OrdinaryIncome" xlink:to="NonOperatingExpenses"
+        weight="-1" order="3"/>
+
+    <!-- OperatingIncome children -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="OperatingIncome" xlink:to="GrossProfit"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="OperatingIncome" xlink:to="SGA"
+        weight="-1" order="2"/>
+
+    <!-- GrossProfit children -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="GrossProfit" xlink:to="NetSales"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="GrossProfit" xlink:to="CostOfSales"
+        weight="-1" order="2"/>
+
+    <!-- NonOperatingIncome children -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="NonOperatingIncome" xlink:to="InterestIncomeNOI"
+        weight="1" order="1"/>
+
+    <!-- NonOperatingExpenses children -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="NonOperatingExpenses" xlink:to="InterestExpensesNOE"
+        weight="1" order="1"/>
+
+    <!-- ExtraordinaryIncome children -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="ExtraordinaryIncome" xlink:to="GainOnSalesOfInvestmentSecuritiesEI"
+        weight="1" order="1"/>
+
+    <!-- ExtraordinaryLoss children -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="ExtraordinaryLoss" xlink:to="LossOnSalesOfNoncurrentAssetsEL"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="ExtraordinaryLoss" xlink:to="ImpairmentLossEL"
+        weight="1" order="2"/>
+
+    <!-- IncomeTaxes children -->
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="IncomeTaxes" xlink:to="IncomeTaxesCurrent"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="IncomeTaxes" xlink:to="IncomeTaxesDeferred"
+        weight="1" order="2"/>
+  </link:calculationLink>
+</link:linkbase>

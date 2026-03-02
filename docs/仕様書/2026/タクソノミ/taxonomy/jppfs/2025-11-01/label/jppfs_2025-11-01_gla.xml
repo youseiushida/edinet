@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd http://xbrl.org/2008/label http://www.xbrl.org/2008/generic-label.xsd http://xbrl.org/2008/generic http://www.xbrl.org/2008/generic-link.xsd http://www.w3.org/1999/xlink http://www.xbrl.org/2003/xlink-2003-12-31.xsd" xmlns:gen="http://xbrl.org/2008/generic" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:label="http://xbrl.org/2008/label" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://www.xbrl.org/2008/role/label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#standard-label"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2008/role/link" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-link.xsd#standard-link-role"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2008/element-label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#element-label"/>
+  <gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2008/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_bk1_BalanceSheet-ListOfAccounts" xlink:label="src"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 bk1 Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src" xlink:to="roleLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_bk1_StatementOfCashFlows-ListOfAccounts" xlink:label="src_2"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_2" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 bk1 Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_2" xlink:to="roleLabel_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_bk1_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_3"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_3" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 bk1 Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_3" xlink:to="roleLabel_3"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_bk1_StatementOfIncome-ListOfAccounts" xlink:label="src_4"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_4" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 bk1 Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_4" xlink:to="roleLabel_4"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_bk2_BalanceSheet-ListOfAccounts" xlink:label="src_5"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_5" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 bk2 Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_5" xlink:to="roleLabel_5"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_bk2_StatementOfCashFlows-ListOfAccounts" xlink:label="src_6"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_6" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 bk2 Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_6" xlink:to="roleLabel_6"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_bk2_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_7"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_7" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 bk2 Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_7" xlink:to="roleLabel_7"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_bk2_StatementOfIncome-ListOfAccounts" xlink:label="src_8"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_8" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 bk2 Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_8" xlink:to="roleLabel_8"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cai_BalanceSheet-ListOfAccounts" xlink:label="src_9"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_9" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 cai Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_9" xlink:to="roleLabel_9"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cai_StatementOfCashFlows-ListOfAccounts" xlink:label="src_10"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_10" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 cai Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_10" xlink:to="roleLabel_10"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cai_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_11"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_11" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 cai Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_11" xlink:to="roleLabel_11"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cai_StatementOfIncome-ListOfAccounts" xlink:label="src_12"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_12" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 cai Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_12" xlink:to="roleLabel_12"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cmd_BalanceSheet-ListOfAccounts" xlink:label="src_13"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_13" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 cmd Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_13" xlink:to="roleLabel_13"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cmd_StatementOfCashFlows-ListOfAccounts" xlink:label="src_14"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_14" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 cmd Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_14" xlink:to="roleLabel_14"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cmd_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_15"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_15" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 cmd Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_15" xlink:to="roleLabel_15"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cmd_StatementOfIncome-ListOfAccounts" xlink:label="src_16"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_16" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 cmd Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_16" xlink:to="roleLabel_16"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cna_BalanceSheet-ListOfAccounts" xlink:label="src_17"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_17" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 cna Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_17" xlink:to="roleLabel_17"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cna_StatementOfCashFlows-ListOfAccounts" xlink:label="src_18"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_18" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 cna Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_18" xlink:to="roleLabel_18"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cna_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_19"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_19" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 cna Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_19" xlink:to="roleLabel_19"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cna_StatementOfIncome-ListOfAccounts" xlink:label="src_20"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_20" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 cna Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_20" xlink:to="roleLabel_20"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cns_BalanceSheet-ListOfAccounts" xlink:label="src_21"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_21" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 cns Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_21" xlink:to="roleLabel_21"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cns_StatementOfCashFlows-ListOfAccounts" xlink:label="src_22"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_22" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 cns Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_22" xlink:to="roleLabel_22"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cns_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_23"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_23" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 cns Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_23" xlink:to="roleLabel_23"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_cns_StatementOfIncome-ListOfAccounts" xlink:label="src_24"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_24" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 cns Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_24" xlink:to="roleLabel_24"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_edu_BalanceSheet-ListOfAccounts" xlink:label="src_25"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_25" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 edu Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_25" xlink:to="roleLabel_25"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_edu_StatementOfCashFlows-ListOfAccounts" xlink:label="src_26"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_26" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 edu Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_26" xlink:to="roleLabel_26"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_edu_StatementOfChangesInNetAssets-ListOfAccounts" xlink:label="src_27"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_27" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 edu Statement of changes in net assets-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_27" xlink:to="roleLabel_27"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_edu_StatementOfIncome-ListOfAccounts" xlink:label="src_28"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_28" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 edu Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_28" xlink:to="roleLabel_28"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_elc_BalanceSheet-ListOfAccounts" xlink:label="src_29"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_29" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 elc Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_29" xlink:to="roleLabel_29"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_elc_StatementOfCashFlows-ListOfAccounts" xlink:label="src_30"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_30" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 elc Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_30" xlink:to="roleLabel_30"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_elc_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_31"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_31" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 elc Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_31" xlink:to="roleLabel_31"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_elc_StatementOfIncome-ListOfAccounts" xlink:label="src_32"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_32" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 elc Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_32" xlink:to="roleLabel_32"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ele_BalanceSheet-ListOfAccounts" xlink:label="src_33"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_33" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 ele Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_33" xlink:to="roleLabel_33"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ele_StatementOfCashFlows-ListOfAccounts" xlink:label="src_34"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_34" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 ele Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_34" xlink:to="roleLabel_34"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ele_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_35"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_35" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 ele Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_35" xlink:to="roleLabel_35"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ele_StatementOfIncome-ListOfAccounts" xlink:label="src_36"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_36" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 ele Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_36" xlink:to="roleLabel_36"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_fnd_BalanceSheet-ListOfAccounts" xlink:label="src_37"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_37" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 fnd Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_37" xlink:to="roleLabel_37"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_fnd_StatementOfIncomeAndRetainedEarnings-ListOfAccounts" xlink:label="src_38"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_38" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 fnd Statement of income and retained earnings-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_38" xlink:to="roleLabel_38"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_gas_BalanceSheet-ListOfAccounts" xlink:label="src_39"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_39" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 gas Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_39" xlink:to="roleLabel_39"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_gas_StatementOfCashFlows-ListOfAccounts" xlink:label="src_40"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_40" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 gas Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_40" xlink:to="roleLabel_40"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_gas_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_41"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_41" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 gas Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_41" xlink:to="roleLabel_41"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_gas_StatementOfIncome-ListOfAccounts" xlink:label="src_42"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_42" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 gas Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_42" xlink:to="roleLabel_42"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_hwy_BalanceSheet-ListOfAccounts" xlink:label="src_43"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_43" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 hwy Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_43" xlink:to="roleLabel_43"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_hwy_StatementOfCashFlows-ListOfAccounts" xlink:label="src_44"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_44" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 hwy Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_44" xlink:to="roleLabel_44"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_hwy_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_45"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_45" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 hwy Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_45" xlink:to="roleLabel_45"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_hwy_StatementOfIncome-ListOfAccounts" xlink:label="src_46"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_46" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 hwy Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_46" xlink:to="roleLabel_46"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_in1_BalanceSheet-ListOfAccounts" xlink:label="src_47"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_47" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 in1 Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_47" xlink:to="roleLabel_47"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_in1_StatementOfCashFlows-ListOfAccounts" xlink:label="src_48"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_48" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 in1 Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_48" xlink:to="roleLabel_48"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_in1_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_49"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_49" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 in1 Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_49" xlink:to="roleLabel_49"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_in1_StatementOfIncome-ListOfAccounts" xlink:label="src_50"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_50" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 in1 Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_50" xlink:to="roleLabel_50"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_in2_BalanceSheet-ListOfAccounts" xlink:label="src_51"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_51" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 in2 Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_51" xlink:to="roleLabel_51"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_in2_StatementOfCashFlows-ListOfAccounts" xlink:label="src_52"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_52" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 in2 Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_52" xlink:to="roleLabel_52"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_in2_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_53"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_53" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 in2 Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_53" xlink:to="roleLabel_53"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_in2_StatementOfIncome-ListOfAccounts" xlink:label="src_54"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_54" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 in2 Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_54" xlink:to="roleLabel_54"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_inv_BalanceSheet-ListOfAccounts" xlink:label="src_55"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_55" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 inv Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_55" xlink:to="roleLabel_55"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_inv_StatementOfCashFlows-ListOfAccounts" xlink:label="src_56"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_56" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 inv Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_56" xlink:to="roleLabel_56"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_inv_StatementOfIncome-ListOfAccounts" xlink:label="src_57"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_57" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 inv Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_57" xlink:to="roleLabel_57"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_inv_StatementOfUnitholdersEquity-ListOfAccounts" xlink:label="src_58"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_58" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 inv Statement of unitholders' equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_58" xlink:to="roleLabel_58"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ivt_BalanceSheet-ListOfAccounts" xlink:label="src_59"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_59" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 ivt Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_59" xlink:to="roleLabel_59"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ivt_StatementOfCashFlows-ListOfAccounts" xlink:label="src_60"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_60" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 ivt Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_60" xlink:to="roleLabel_60"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ivt_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_61"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_61" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 ivt Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_61" xlink:to="roleLabel_61"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ivt_StatementOfIncome-ListOfAccounts" xlink:label="src_62"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_62" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 ivt Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_62" xlink:to="roleLabel_62"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_lea_BalanceSheet-ListOfAccounts" xlink:label="src_63"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_63" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 lea Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_63" xlink:to="roleLabel_63"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_lea_StatementOfCashFlows-ListOfAccounts" xlink:label="src_64"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_64" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 lea Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_64" xlink:to="roleLabel_64"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_lea_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_65"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_65" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 lea Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_65" xlink:to="roleLabel_65"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_lea_StatementOfIncome-ListOfAccounts" xlink:label="src_66"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_66" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 lea Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_66" xlink:to="roleLabel_66"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_liq_BalanceSheet-ListOfAccounts" xlink:label="src_67"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_67" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 liq Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_67" xlink:to="roleLabel_67"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_liq_StatementOfCashFlows-ListOfAccounts" xlink:label="src_68"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_68" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 liq Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_68" xlink:to="roleLabel_68"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_liq_StatementOfIncome-ListOfAccounts" xlink:label="src_69"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_69" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 liq Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_69" xlink:to="roleLabel_69"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_liq_StatementOfMembersEquity-ListOfAccounts" xlink:label="src_70"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_70" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 liq Statement of members' equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_70" xlink:to="roleLabel_70"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_med_BalanceSheet-ListOfAccounts" xlink:label="src_71"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_71" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 med Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_71" xlink:to="roleLabel_71"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_med_StatementOfCashFlows-ListOfAccounts" xlink:label="src_72"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_72" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 med Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_72" xlink:to="roleLabel_72"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_med_StatementOfChangesInNetAssets-ListOfAccounts" xlink:label="src_73"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_73" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 med Statement of changes in net assets-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_73" xlink:to="roleLabel_73"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_med_StatementOfIncome-ListOfAccounts" xlink:label="src_74"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_74" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 med Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_74" xlink:to="roleLabel_74"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_rwy_BalanceSheet-ListOfAccounts" xlink:label="src_75"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_75" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 rwy Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_75" xlink:to="roleLabel_75"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_rwy_StatementOfCashFlows-ListOfAccounts" xlink:label="src_76"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_76" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 rwy Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_76" xlink:to="roleLabel_76"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_rwy_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_77"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_77" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 rwy Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_77" xlink:to="roleLabel_77"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_rwy_StatementOfIncome-ListOfAccounts" xlink:label="src_78"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_78" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 rwy Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_78" xlink:to="roleLabel_78"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_sec_BalanceSheet-ListOfAccounts" xlink:label="src_79"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_79" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 sec Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_79" xlink:to="roleLabel_79"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_sec_StatementOfCashFlows-ListOfAccounts" xlink:label="src_80"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_80" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 sec Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_80" xlink:to="roleLabel_80"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_sec_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_81"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_81" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 sec Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_81" xlink:to="roleLabel_81"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_sec_StatementOfIncome-ListOfAccounts" xlink:label="src_82"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_82" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 sec Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_82" xlink:to="roleLabel_82"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_spf_BalanceSheet-ListOfAccounts" xlink:label="src_83"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_83" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 spf Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_83" xlink:to="roleLabel_83"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_spf_StatementOfCashFlows-ListOfAccounts" xlink:label="src_84"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_84" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 spf Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_84" xlink:to="roleLabel_84"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_spf_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_85"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_85" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 spf Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_85" xlink:to="roleLabel_85"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_spf_StatementOfIncome-ListOfAccounts" xlink:label="src_86"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_86" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 spf Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_86" xlink:to="roleLabel_86"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_wat_BalanceSheet-ListOfAccounts" xlink:label="src_87"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_87" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310000 wat Balance sheet-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_87" xlink:to="roleLabel_87"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_wat_StatementOfCashFlows-ListOfAccounts" xlink:label="src_88"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_88" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">340000 wat Statement of cash flows-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_88" xlink:to="roleLabel_88"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_wat_StatementOfChangesInEquity-ListOfAccounts" xlink:label="src_89"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_89" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330000 wat Statement of changes in equity-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_89" xlink:to="roleLabel_89"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_wat_StatementOfIncome-ListOfAccounts" xlink:label="src_90"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_90" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321000 wat Statement of income or statement of comprehensive income (single statement)-list of accounts</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_90" xlink:to="roleLabel_90"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_ConsolidatedBalanceSheet" xlink:label="src_91"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_91" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310010 Consolidated balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_91" xlink:to="roleLabel_91"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfIncome" xlink:label="src_92"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_92" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321010 Consolidated statement of income or statement of comprehensive income (single statement)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_92" xlink:to="roleLabel_92"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfChangesInEquity" xlink:label="src_93"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_93" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330010 Consolidated statement of changes in equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_93" xlink:to="roleLabel_93"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfChangesInNetAssets" xlink:label="src_94"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_94" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330010 Consolidated statement of changes in net assets</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_94" xlink:to="roleLabel_94"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfCashFlows-direct" xlink:label="src_95"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_95" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341010 Consolidated statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_95" xlink:to="roleLabel_95"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfCashFlows-indirect" xlink:label="src_96"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_96" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342010 Consolidated statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_96" xlink:to="roleLabel_96"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_ConsolidatedStatementOfComprehensiveIncome" xlink:label="src_97"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_97" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">322010 Consolidated statement of comprehensive income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_97" xlink:to="roleLabel_97"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualConsolidatedBalanceSheet" xlink:label="src_98"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_98" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310020 Type 2 semi-annual consolidated balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_98" xlink:to="roleLabel_98"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualConsolidatedStatementOfIncome" xlink:label="src_99"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_99" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321020 Type 2 semi-annual consolidated statement of income or statement of comprehensive income (single statement)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_99" xlink:to="roleLabel_99"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualConsolidatedStatementOfChangesInEquity" xlink:label="src_100"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_100" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330020 Semi-annual consolidated statement of changes in equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_100" xlink:to="roleLabel_100"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualConsolidatedStatementOfChangesInNetAssets" xlink:label="src_101"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_101" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330020 Semi-annual consolidated statement of changes in net assets</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_101" xlink:to="roleLabel_101"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualConsolidatedStatementOfCashFlows-direct" xlink:label="src_102"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_102" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341020 Type 2 semi-annual consolidated statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_102" xlink:to="roleLabel_102"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualConsolidatedStatementOfCashFlows-indirect" xlink:label="src_103"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_103" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342020 Type 2 semi-annual consolidated statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_103" xlink:to="roleLabel_103"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualConsolidatedStatementOfComprehensiveIncome" xlink:label="src_104"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_104" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">322020 Type 2 semi-annual consolidated statement of comprehensive income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_104" xlink:to="roleLabel_104"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_QuarterlyConsolidatedBalanceSheet" xlink:label="src_105"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_105" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310030 Quarterly consolidated balance sheet (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_105" xlink:to="roleLabel_105"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_QuarterPeriodConsolidatedStatementOfIncome" xlink:label="src_106"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_106" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321032 Quarter period consolidated statement of income or statement of comprehensive income (single statement) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_106" xlink:to="roleLabel_106"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_YearToQuarterEndConsolidatedStatementOfIncome" xlink:label="src_107"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_107" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321031 Year to quarter end consolidated statement of income or statement of comprehensive income (single statement) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_107" xlink:to="roleLabel_107"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_QuarterlyConsolidatedStatementOfCashFlows-direct" xlink:label="src_108"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_108" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341030 Quarterly consolidated statement of cash flows-direct (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_108" xlink:to="roleLabel_108"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_QuarterlyConsolidatedStatementOfCashFlows-indirect" xlink:label="src_109"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_109" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342030 Quarterly consolidated statement of cash flows-indirect (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_109" xlink:to="roleLabel_109"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_QuarterPeriodConsolidatedStatementOfComprehensiveIncome" xlink:label="src_110"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_110" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">322032 Quarter period consolidated statement of comprehensive income (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_110" xlink:to="roleLabel_110"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_YearToQuarterEndConsolidatedStatementOfComprehensiveIncome" xlink:label="src_111"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_111" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">322031 Year to quarter end consolidated statement of comprehensive income (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_111" xlink:to="roleLabel_111"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_BalanceSheet" xlink:label="src_112"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_112" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310040 Balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_112" xlink:to="roleLabel_112"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfIncome" xlink:label="src_113"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_113" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321040 Statement of income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_113" xlink:to="roleLabel_113"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfChangesInEquity" xlink:label="src_114"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_114" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330040 Statement of changes in equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_114" xlink:to="roleLabel_114"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfChangesInNetAssets" xlink:label="src_115"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_115" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330040 Statement of changes in net assets</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_115" xlink:to="roleLabel_115"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfCashFlows-direct" xlink:label="src_116"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_116" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341040 Statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_116" xlink:to="roleLabel_116"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfCashFlows-indirect" xlink:label="src_117"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_117" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342040 Statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_117" xlink:to="roleLabel_117"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfMembersEquity" xlink:label="src_118"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_118" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330040 Statement of members' equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_118" xlink:to="roleLabel_118"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfUnitholdersEquity" xlink:label="src_119"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_119" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330040 Statement of unitholders' equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_119" xlink:to="roleLabel_119"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfIncomeAndRetainedEarnings" xlink:label="src_120"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_120" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321040 Statement of income and retained earnings</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_120" xlink:to="roleLabel_120"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualBalanceSheet" xlink:label="src_121"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_121" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310050 Type 2 semi-annual balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_121" xlink:to="roleLabel_121"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualStatementOfIncome" xlink:label="src_122"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_122" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321050 Type 2 semi-annual statement of income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_122" xlink:to="roleLabel_122"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualStatementOfChangesInEquity" xlink:label="src_123"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_123" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330050 Semi-annual statement of changes in equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_123" xlink:to="roleLabel_123"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualStatementOfChangesInNetAssets" xlink:label="src_124"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_124" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330050 Semi-annual statement of changes in net assets</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_124" xlink:to="roleLabel_124"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualStatementOfCashFlows-direct" xlink:label="src_125"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_125" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341050 Type 2 semi-annual statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_125" xlink:to="roleLabel_125"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualStatementOfCashFlows-indirect" xlink:label="src_126"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_126" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342050 Type 2 semi-annual statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_126" xlink:to="roleLabel_126"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualStatementOfMembersEquity" xlink:label="src_127"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_127" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330050 Semi-annual statement of members' equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_127" xlink:to="roleLabel_127"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualStatementOfUnitholdersEquity" xlink:label="src_128"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_128" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330050 Semi-annual statement of unitholders' equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_128" xlink:to="roleLabel_128"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_SemiAnnualStatementOfIncomeAndRetainedEarnings" xlink:label="src_129"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_129" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321050 Type 2 semi-annual statement of income and retained earnings</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_129" xlink:to="roleLabel_129"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_QuarterlyBalanceSheet" xlink:label="src_130"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_130" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310060 Quarterly balance sheet (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_130" xlink:to="roleLabel_130"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_QuarterPeriodStatementOfIncome" xlink:label="src_131"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_131" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321062 Quarter period statement of income (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_131" xlink:to="roleLabel_131"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_YearToQuarterEndStatementOfIncome" xlink:label="src_132"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_132" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321061 Year to quarter end statement of income (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_132" xlink:to="roleLabel_132"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_QuarterlyStatementOfCashFlows-direct" xlink:label="src_133"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_133" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341060 Quarterly statement of cash flows-direct (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_133" xlink:to="roleLabel_133"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_QuarterlyStatementOfCashFlows-indirect" xlink:label="src_134"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_134" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342060 Quarterly statement of cash flows-indirect (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_134" xlink:to="roleLabel_134"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ConsolidatedBalanceSheet" xlink:label="src_135"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_135" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310010 Consolidated balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_135" xlink:to="roleLabel_135"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfIncome" xlink:label="src_136"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_136" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321010 Consolidated statement of income or statement of comprehensive income (single statement)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_136" xlink:to="roleLabel_136"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfChangesInEquity" xlink:label="src_137"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_137" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330010 Consolidated statement of changes in equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_137" xlink:to="roleLabel_137"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfChangesInNetAssets" xlink:label="src_138"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_138" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330010 Consolidated statement of changes in net assets</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_138" xlink:to="roleLabel_138"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfCashFlows-direct" xlink:label="src_139"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_139" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341010 Consolidated statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_139" xlink:to="roleLabel_139"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfCashFlows-indirect" xlink:label="src_140"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_140" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342010 Consolidated statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_140" xlink:to="roleLabel_140"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_ConsolidatedStatementOfComprehensiveIncome" xlink:label="src_141"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_141" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">322010 Consolidated statement of comprehensive income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_141" xlink:to="roleLabel_141"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualConsolidatedBalanceSheet" xlink:label="src_142"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_142" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310020 Type 2 semi-annual consolidated balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_142" xlink:to="roleLabel_142"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualConsolidatedStatementOfIncome" xlink:label="src_143"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_143" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321020 Type 2 semi-annual consolidated statement of income or statement of comprehensive income (single statement)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_143" xlink:to="roleLabel_143"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualConsolidatedStatementOfChangesInEquity" xlink:label="src_144"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_144" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330020 Semi-annual consolidated statement of changes in equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_144" xlink:to="roleLabel_144"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualConsolidatedStatementOfChangesInNetAssets" xlink:label="src_145"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_145" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330020 Semi-annual consolidated statement of changes in net assets</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_145" xlink:to="roleLabel_145"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualConsolidatedStatementOfCashFlows-direct" xlink:label="src_146"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_146" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341020 Type 2 semi-annual consolidated statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_146" xlink:to="roleLabel_146"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualConsolidatedStatementOfCashFlows-indirect" xlink:label="src_147"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_147" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342020 Type 2 semi-annual consolidated statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_147" xlink:to="roleLabel_147"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualConsolidatedStatementOfComprehensiveIncome" xlink:label="src_148"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_148" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">322020 Type 2 semi-annual consolidated statement of comprehensive income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_148" xlink:to="roleLabel_148"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_QuarterlyConsolidatedBalanceSheet" xlink:label="src_149"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_149" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310030 Quarterly consolidated balance sheet (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_149" xlink:to="roleLabel_149"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_QuarterPeriodConsolidatedStatementOfIncome" xlink:label="src_150"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_150" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321032 Quarter period consolidated statement of income or statement of comprehensive income (single statement) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_150" xlink:to="roleLabel_150"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_YearToQuarterEndConsolidatedStatementOfIncome" xlink:label="src_151"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_151" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321031 Year to quarter end consolidated statement of income or statement of comprehensive income (single statement) (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_151" xlink:to="roleLabel_151"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_QuarterlyConsolidatedStatementOfCashFlows-direct" xlink:label="src_152"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_152" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341030 Quarterly consolidated statement of cash flows-direct (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_152" xlink:to="roleLabel_152"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_QuarterlyConsolidatedStatementOfCashFlows-indirect" xlink:label="src_153"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_153" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342030 Quarterly consolidated statement of cash flows-indirect (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_153" xlink:to="roleLabel_153"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_QuarterPeriodConsolidatedStatementOfComprehensiveIncome" xlink:label="src_154"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_154" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">322032 Quarter period consolidated statement of comprehensive income (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_154" xlink:to="roleLabel_154"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_YearToQuarterEndConsolidatedStatementOfComprehensiveIncome" xlink:label="src_155"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_155" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">322031 Year to quarter end consolidated statement of comprehensive income (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_155" xlink:to="roleLabel_155"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_BalanceSheet" xlink:label="src_156"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_156" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310040 Balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_156" xlink:to="roleLabel_156"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_StatementOfIncome" xlink:label="src_157"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_157" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321040 Statement of income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_157" xlink:to="roleLabel_157"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_StatementOfChangesInEquity" xlink:label="src_158"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_158" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330040 Statement of changes in equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_158" xlink:to="roleLabel_158"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_StatementOfChangesInNetAssets" xlink:label="src_159"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_159" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330040 Statement of changes in net assets</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_159" xlink:to="roleLabel_159"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_StatementOfCashFlows-direct" xlink:label="src_160"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_160" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341040 Statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_160" xlink:to="roleLabel_160"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_StatementOfCashFlows-indirect" xlink:label="src_161"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_161" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342040 Statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_161" xlink:to="roleLabel_161"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_StatementOfMembersEquity" xlink:label="src_162"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_162" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330040 Statement of members' equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_162" xlink:to="roleLabel_162"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_StatementOfUnitholdersEquity" xlink:label="src_163"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_163" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330040 Statement of unitholders' equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_163" xlink:to="roleLabel_163"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_StatementOfIncomeAndRetainedEarnings" xlink:label="src_164"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_164" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321040 Statement of income and retained earnings</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_164" xlink:to="roleLabel_164"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualBalanceSheet" xlink:label="src_165"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_165" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310050 Type 2 semi-annual balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_165" xlink:to="roleLabel_165"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualStatementOfIncome" xlink:label="src_166"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_166" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321050 Type 2 semi-annual statement of income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_166" xlink:to="roleLabel_166"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualStatementOfChangesInEquity" xlink:label="src_167"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_167" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330050 Semi-annual statement of changes in equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_167" xlink:to="roleLabel_167"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualStatementOfChangesInNetAssets" xlink:label="src_168"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_168" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330050 Semi-annual statement of changes in net assets</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_168" xlink:to="roleLabel_168"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualStatementOfCashFlows-direct" xlink:label="src_169"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_169" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341050 Type 2 semi-annual statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_169" xlink:to="roleLabel_169"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualStatementOfCashFlows-indirect" xlink:label="src_170"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_170" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342050 Type 2 semi-annual statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_170" xlink:to="roleLabel_170"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualStatementOfMembersEquity" xlink:label="src_171"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_171" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330050 Semi-annual statement of members' equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_171" xlink:to="roleLabel_171"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualStatementOfUnitholdersEquity" xlink:label="src_172"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_172" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">330050 Semi-annual statement of unitholders' equity</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_172" xlink:to="roleLabel_172"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_SemiAnnualStatementOfIncomeAndRetainedEarnings" xlink:label="src_173"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_173" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321050 Type 2 semi-annual statement of income and retained earnings</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_173" xlink:to="roleLabel_173"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_QuarterlyBalanceSheet" xlink:label="src_174"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_174" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310060 Quarterly balance sheet (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_174" xlink:to="roleLabel_174"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_QuarterPeriodStatementOfIncome" xlink:label="src_175"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_175" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321062 Quarter period statement of income (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_175" xlink:to="roleLabel_175"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_YearToQuarterEndStatementOfIncome" xlink:label="src_176"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_176" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321061 Year to quarter end statement of income (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_176" xlink:to="roleLabel_176"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_QuarterlyStatementOfCashFlows-direct" xlink:label="src_177"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_177" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341060 Quarterly statement of cash flows-direct (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_177" xlink:to="roleLabel_177"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_QuarterlyStatementOfCashFlows-indirect" xlink:label="src_178"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_178" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342060 Quarterly statement of cash flows-indirect (Deprecated in 2025 version)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_178" xlink:to="roleLabel_178"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_Type1SemiAnnualConsolidatedBalanceSheet" xlink:label="src_179"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_179" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310021 Type 1 semi-annual consolidated balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_179" xlink:to="roleLabel_179"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_Type1SemiAnnualConsolidatedBalanceSheet" xlink:label="src_180"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_180" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310021 Type 1 semi-annual consolidated balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_180" xlink:to="roleLabel_180"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_Type1SemiAnnualBalanceSheet" xlink:label="src_181"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_181" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310051 Type 1 semi-annual balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_181" xlink:to="roleLabel_181"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_Type1SemiAnnualBalanceSheet" xlink:label="src_182"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_182" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">310051 Type 1 semi-annual balance sheet</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_182" xlink:to="roleLabel_182"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_Type1SemiAnnualConsolidatedStatementOfIncome" xlink:label="src_183"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_183" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321021 Type 1 semi-annual consolidated statement of income or statement of comprehensive income (single statement)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_183" xlink:to="roleLabel_183"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_Type1SemiAnnualConsolidatedStatementOfIncome" xlink:label="src_184"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_184" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321021 Type 1 semi-annual consolidated statement of income or statement of comprehensive income (single statement)</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_184" xlink:to="roleLabel_184"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_Type1SemiAnnualStatementOfIncome" xlink:label="src_185"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_185" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321051 Type 1 semi-annual statement of income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_185" xlink:to="roleLabel_185"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_Type1SemiAnnualStatementOfIncome" xlink:label="src_186"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_186" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">321051 Type 1 semi-annual statement of income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_186" xlink:to="roleLabel_186"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_Type1SemiAnnualConsolidatedStatementOfComprehensiveIncome" xlink:label="src_187"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_187" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">322021 Type 1 semi-annual consolidated statement of comprehensive income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_187" xlink:to="roleLabel_187"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_Type1SemiAnnualConsolidatedStatementOfComprehensiveIncome" xlink:label="src_188"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_188" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">322021 Type 1 semi-annual consolidated statement of comprehensive income</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_188" xlink:to="roleLabel_188"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_Type1SemiAnnualConsolidatedStatementOfCashFlows-direct" xlink:label="src_189"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_189" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341021 Type 1 semi-annual consolidated statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_189" xlink:to="roleLabel_189"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_Type1SemiAnnualConsolidatedStatementOfCashFlows-direct" xlink:label="src_190"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_190" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341021 Type 1 semi-annual consolidated statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_190" xlink:to="roleLabel_190"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_Type1SemiAnnualStatementOfCashFlows-direct" xlink:label="src_191"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_191" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341051 Type 1 semi-annual statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_191" xlink:to="roleLabel_191"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_Type1SemiAnnualStatementOfCashFlows-direct" xlink:label="src_192"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_192" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">341051 Type 1 semi-annual statement of cash flows-direct</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_192" xlink:to="roleLabel_192"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_Type1SemiAnnualConsolidatedStatementOfCashFlows-indirect" xlink:label="src_193"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_193" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342021 Type 1 semi-annual consolidated statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_193" xlink:to="roleLabel_193"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_Type1SemiAnnualConsolidatedStatementOfCashFlows-indirect" xlink:label="src_194"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_194" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342021 Type 1 semi-annual consolidated statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_194" xlink:to="roleLabel_194"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_std_Type1SemiAnnualStatementOfCashFlows-indirect" xlink:label="src_195"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_195" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342051 Type 1 semi-annual statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_195" xlink:to="roleLabel_195"/>
+    <link:loc xlink:type="locator" xlink:href="../jppfs_rt_2025-11-01.xsd#rol_Type1SemiAnnualStatementOfCashFlows-indirect" xlink:label="src_196"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_196" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">342051 Type 1 semi-annual statement of cash flows-indirect</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_196" xlink:to="roleLabel_196"/>
+  </gen:link>
+</link:linkbase>

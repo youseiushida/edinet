@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_StatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfIncome"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_StatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonConsolidatedMember" xlink:label="NonConsolidatedMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="NonConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeTable" xlink:label="StatementOfIncomeTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="StatementOfIncomeTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeLineItems" xlink:label="StatementOfIncomeLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOrReversalOfReserveForFluctuationInWaterLevelsELE" xlink:label="ProvisionOrReversalOfReserveForFluctuationInWaterLevelsELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="ProvisionOrReversalOfReserveForFluctuationInWaterLevelsELE" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfReserveForFluctuationInWaterLevelsELE" xlink:label="ProvisionOfReserveForFluctuationInWaterLevelsELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ProvisionOrReversalOfReserveForFluctuationInWaterLevelsELE" xlink:to="ProvisionOfReserveForFluctuationInWaterLevelsELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ReversalOfReserveForFluctuationInWaterLevelsELE" xlink:label="ReversalOfReserveForFluctuationInWaterLevelsELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ProvisionOrReversalOfReserveForFluctuationInWaterLevelsELE" xlink:to="ReversalOfReserveForFluctuationInWaterLevelsELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOrReversalOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE" xlink:label="ProvisionOrReversalOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="ProvisionOrReversalOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE" xlink:label="ProvisionOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ProvisionOrReversalOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE" xlink:to="ProvisionOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ReversalOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE" xlink:label="ReversalOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ProvisionOrReversalOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE" xlink:to="ReversalOfReserveForPreparationOfTheDepreciationOfNuclearPowerConstructionELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesCurrent" xlink:label="IncomeTaxesCurrent"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesCurrent" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesForGlobalMinimumTax" xlink:label="IncomeTaxesForGlobalMinimumTax"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesForGlobalMinimumTax" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesDeferred" xlink:label="IncomeTaxesDeferred"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesDeferred" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueELE" xlink:label="OperatingRevenueELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingRevenueELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ElectricUtilityOperatingRevenueELE" xlink:label="ElectricUtilityOperatingRevenueELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OperatingRevenueELE" xlink:to="ElectricUtilityOperatingRevenueELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ResidentialORElectricELE" xlink:label="ResidentialORElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingRevenueELE" xlink:to="ResidentialORElectricELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CommercialAndIndustrialORElectricELE" xlink:label="CommercialAndIndustrialORElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingRevenueELE" xlink:to="CommercialAndIndustrialORElectricELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SoldPowerToOtherUtilitiesORElectricELE" xlink:label="SoldPowerToOtherUtilitiesORElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingRevenueELE" xlink:to="SoldPowerToOtherUtilitiesORElectricELE" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SoldPowerToOtherSuppliersORElectricELE" xlink:label="SoldPowerToOtherSuppliersORElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingRevenueELE" xlink:to="SoldPowerToOtherSuppliersORElectricELE" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransmissionRevenueORElectricELE" xlink:label="TransmissionRevenueORElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingRevenueELE" xlink:to="TransmissionRevenueORElectricELE" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueEquivalentToContributionForNuclearDamageCompensationORElectricELE" xlink:label="RevenueEquivalentToContributionForNuclearDamageCompensationORElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingRevenueELE" xlink:to="RevenueEquivalentToContributionForNuclearDamageCompensationORElectricELE" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueEquivalentToContributionForFacilitatingNuclearReactorDecommissioningORElectricELE" xlink:label="RevenueEquivalentToContributionForFacilitatingNuclearReactorDecommissioningORElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingRevenueELE" xlink:to="RevenueEquivalentToContributionForFacilitatingNuclearReactorDecommissioningORElectricELE" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SettlementRevenueAmongUtilitiesORElectricELE" xlink:label="SettlementRevenueAmongUtilitiesORElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingRevenueELE" xlink:to="SettlementRevenueAmongUtilitiesORElectricELE" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherElectricityRevenueORElectricELE" xlink:label="OtherElectricityRevenueORElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingRevenueELE" xlink:to="OtherElectricityRevenueORElectricELE" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueFromLoanedFacilitiesORElectricELE" xlink:label="RevenueFromLoanedFacilitiesORElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingRevenueELE" xlink:to="RevenueFromLoanedFacilitiesORElectricELE" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncidentalBusinessOperatingRevenueELE" xlink:label="IncidentalBusinessOperatingRevenueELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OperatingRevenueELE" xlink:to="IncidentalBusinessOperatingRevenueELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueOtherBusinessesORIncidentalELE" xlink:label="OperatingRevenueOtherBusinessesORIncidentalELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="IncidentalBusinessOperatingRevenueELE" xlink:to="OperatingRevenueOtherBusinessesORIncidentalELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesELE" xlink:label="OperatingExpensesELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingExpensesELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ElectricUtilityOperatingExpensesELE" xlink:label="ElectricUtilityOperatingExpensesELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OperatingExpensesELE" xlink:to="ElectricUtilityOperatingExpensesELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_HydroelectricPowerProductionExpensesELE" xlink:label="HydroelectricPowerProductionExpensesELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="HydroelectricPowerProductionExpensesELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ThermalPowerProductionExpensesOEElectricELE" xlink:label="ThermalPowerProductionExpensesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="ThermalPowerProductionExpensesOEElectricELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NuclearPowerProductionExpensesELE" xlink:label="NuclearPowerProductionExpensesELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="NuclearPowerProductionExpensesELE" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InternalCombustionEnginePowerProductionExpensesOEElectricELE" xlink:label="InternalCombustionEnginePowerProductionExpensesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="InternalCombustionEnginePowerProductionExpensesOEElectricELE" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RenewablePowerProductionAndRelatedExpensesOEElectricELE" xlink:label="RenewablePowerProductionAndRelatedExpensesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="RenewablePowerProductionAndRelatedExpensesOEElectricELE" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PurchasedPowerFromOtherUtilitiesOEElectricELE" xlink:label="PurchasedPowerFromOtherUtilitiesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="PurchasedPowerFromOtherUtilitiesOEElectricELE" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_PurchasedPowerFromOtherSuppliersOEElectricELE" xlink:label="PurchasedPowerFromOtherSuppliersOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="PurchasedPowerFromOtherSuppliersOEElectricELE" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransmissionExpensesOEElectricELE" xlink:label="TransmissionExpensesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="TransmissionExpensesOEElectricELE" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransformationExpensesOEElectricELE" xlink:label="TransformationExpensesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="TransformationExpensesOEElectricELE" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DistributionExpensesOEElectricELE" xlink:label="DistributionExpensesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="DistributionExpensesOEElectricELE" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SellingExpensesOEElectricELE" xlink:label="SellingExpensesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="SellingExpensesOEElectricELE" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InactiveFacilitiesExpensesOEElectricELE" xlink:label="InactiveFacilitiesExpensesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="InactiveFacilitiesExpensesOEElectricELE" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfLoanedFacilitiesOEElectricELE" xlink:label="CostOfLoanedFacilitiesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="CostOfLoanedFacilitiesOEElectricELE" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GeneralAndAdministrativeExpensesOEElectricELE" xlink:label="GeneralAndAdministrativeExpensesOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="GeneralAndAdministrativeExpensesOEElectricELE" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExpensesForThirdPartysPowerTransmissionServiceOEElectricELE" xlink:label="ExpensesForThirdPartysPowerTransmissionServiceOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="ExpensesForThirdPartysPowerTransmissionServiceOEElectricELE" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfSuspenseAccountRelatedToNuclearPowerDecommissioningOEElectricELE" xlink:label="AmortizationOfSuspenseAccountRelatedToNuclearPowerDecommissioningOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="AmortizationOfSuspenseAccountRelatedToNuclearPowerDecommissioningOEElectricELE" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExpensesIncurredByContractsToBearBackEndCostsRelatedToPastYearsPowerGenerationOEElectricELE" xlink:label="ExpensesIncurredByContractsToBearBackEndCostsRelatedToPastYearsPowerGenerationOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="ExpensesIncurredByContractsToBearBackEndCostsRelatedToPastYearsPowerGenerationOEElectricELE" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExpensesEquivalentToContributionForNuclearDamageCompensationOEElectricELE" xlink:label="ExpensesEquivalentToContributionForNuclearDamageCompensationOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="ExpensesEquivalentToContributionForNuclearDamageCompensationOEElectricELE" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExpensesEquivalentToContributionForFacilitatingNuclearReactorDecommissioningOEElectricELE" xlink:label="ExpensesEquivalentToContributionForFacilitatingNuclearReactorDecommissioningOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="ExpensesEquivalentToContributionForFacilitatingNuclearReactorDecommissioningOEElectricELE" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ElectricPowerDevelopmentPromotionTaxOEElectricELE" xlink:label="ElectricPowerDevelopmentPromotionTaxOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="ElectricPowerDevelopmentPromotionTaxOEElectricELE" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_EnterpriseTaxOEElectricELE" xlink:label="EnterpriseTaxOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="EnterpriseTaxOEElectricELE" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DevelopmentExpensesOEELE" xlink:label="DevelopmentExpensesOEELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="DevelopmentExpensesOEELE" order="22.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfDevelopmentExpensesOEELE" xlink:label="AmortizationOfDevelopmentExpensesOEELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="AmortizationOfDevelopmentExpensesOEELE" order="23.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransferredCostOfElectricityForConstructionAndIncidentalBusinessOEElectricELE" xlink:label="TransferredCostOfElectricityForConstructionAndIncidentalBusinessOEElectricELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ElectricUtilityOperatingExpensesELE" xlink:to="TransferredCostOfElectricityForConstructionAndIncidentalBusinessOEElectricELE" order="24.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncidentalBusinessOperatingExpensesELE" xlink:label="IncidentalBusinessOperatingExpensesELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="OperatingExpensesELE" xlink:to="IncidentalBusinessOperatingExpensesELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesOtherBusinessesOEIncidentalELE" xlink:label="OperatingExpensesOtherBusinessesOEIncidentalELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="IncidentalBusinessOperatingExpensesELE" xlink:to="OperatingExpensesOtherBusinessesOEIncidentalELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncome" xlink:label="OperatingIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="OperatingIncome" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingIncome" xlink:label="NonOperatingIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="NonOperatingIncome" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_FinancialRevenueNORELE" xlink:label="FinancialRevenueNORELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NonOperatingIncome" xlink:to="FinancialRevenueNORELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsIncomeNOI" xlink:label="DividendsIncomeNOI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialRevenueNORELE" xlink:to="DividendsIncomeNOI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestIncomeNOI" xlink:label="InterestIncomeNOI"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialRevenueNORELE" xlink:to="InterestIncomeNOI" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingRevenueNORELE" xlink:label="NonOperatingRevenueNORELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NonOperatingIncome" xlink:to="NonOperatingRevenueNORELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfNoncurrentAssetsNOIELE" xlink:label="GainOnSalesOfNoncurrentAssetsNOIELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NonOperatingRevenueNORELE" xlink:to="GainOnSalesOfNoncurrentAssetsNOIELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MiscellaneousRevenueNORELE" xlink:label="MiscellaneousRevenueNORELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NonOperatingRevenueNORELE" xlink:to="MiscellaneousRevenueNORELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingExpenses" xlink:label="NonOperatingExpenses"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="NonOperatingExpenses" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_FinancialExpensesNOEELE" xlink:label="FinancialExpensesNOEELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NonOperatingExpenses" xlink:to="FinancialExpensesNOEELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestExpensesNOE" xlink:label="InterestExpensesNOE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesNOEELE" xlink:to="InterestExpensesNOE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StockIssuanceCostNOE" xlink:label="StockIssuanceCostNOE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesNOEELE" xlink:to="StockIssuanceCostNOE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfStockIssuanceCostNOE" xlink:label="AmortizationOfStockIssuanceCostNOE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesNOEELE" xlink:to="AmortizationOfStockIssuanceCostNOE" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BondIssuanceCostNOE" xlink:label="BondIssuanceCostNOE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesNOEELE" xlink:to="BondIssuanceCostNOE" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfBondIssuanceCostNOE" xlink:label="AmortizationOfBondIssuanceCostNOE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="FinancialExpensesNOEELE" xlink:to="AmortizationOfBondIssuanceCostNOE" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingExpensesNOEELE" xlink:label="NonOperatingExpensesNOEELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NonOperatingExpenses" xlink:to="NonOperatingExpensesNOEELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfNoncurrentAssetsNOEELE" xlink:label="LossOnSalesOfNoncurrentAssetsNOEELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NonOperatingExpensesNOEELE" xlink:to="LossOnSalesOfNoncurrentAssetsNOEELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MiscellaneousExpensesNOEELE" xlink:label="MiscellaneousExpensesNOEELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NonOperatingExpensesNOEELE" xlink:to="MiscellaneousExpensesNOEELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryRevenueELE" xlink:label="OrdinaryRevenueELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="OrdinaryRevenueELE" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryExpensesELE" xlink:label="OrdinaryExpensesELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="OrdinaryExpensesELE" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncome" xlink:label="OrdinaryIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="OrdinaryIncome" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryIncome" xlink:label="ExtraordinaryIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="ExtraordinaryIncome" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NuclearPowerCompensationSubsidyELE" xlink:label="NuclearPowerCompensationSubsidyELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ExtraordinaryIncome" xlink:to="NuclearPowerCompensationSubsidyELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GrantsInAidFromNuclearDamageCompensationFacilitationCorporationEIELE" xlink:label="GrantsInAidFromNuclearDamageCompensationFacilitationCorporationEIELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ExtraordinaryIncome" xlink:to="GrantsInAidFromNuclearDamageCompensationFacilitationCorporationEIELE" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryLoss" xlink:label="ExtraordinaryLoss"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="ExtraordinaryLoss" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ContingentLossELELE" xlink:label="ContingentLossELELE"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ExtraordinaryLoss" xlink:to="ContingentLossELELE" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeBeforeIncomeTaxes" xlink:label="IncomeBeforeIncomeTaxes"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeBeforeIncomeTaxes" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeLineItems" xlink:to="ProfitLoss" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeHeading" xlink:label="StatementOfIncomeHeading"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="StatementOfIncomeHeading" xlink:to="StatementOfIncomeTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="StatementOfIncomeHeading" xlink:to="StatementOfIncomeLineItems" order="1.0"/>
+  </link:definitionLink>
+</link:linkbase>

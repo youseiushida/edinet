@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRS" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRS"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRS">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfPropertyPlantAndEquipmentIFRSTable" xlink:label="ComponentsOfPropertyPlantAndEquipmentIFRSTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="ComponentsOfPropertyPlantAndEquipmentIFRSTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ComponentsOfPropertyPlantAndEquipmentIFRSLineItems" xlink:label="ComponentsOfPropertyPlantAndEquipmentIFRSLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AcquisitionCostPropertyPlantAndEquipmentIFRSAbstract" xlink:label="AcquisitionCostPropertyPlantAndEquipmentIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ComponentsOfPropertyPlantAndEquipmentIFRSLineItems" xlink:to="AcquisitionCostPropertyPlantAndEquipmentIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LandAcquisitionCostIFRS" xlink:label="LandAcquisitionCostIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AcquisitionCostPropertyPlantAndEquipmentIFRSAbstract" xlink:to="LandAcquisitionCostIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_BuildingsAndStructuresAcquisitionCostIFRS" xlink:label="BuildingsAndStructuresAcquisitionCostIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AcquisitionCostPropertyPlantAndEquipmentIFRSAbstract" xlink:to="BuildingsAndStructuresAcquisitionCostIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_MachineryAndEquipmentAcquisitionCostIFRS" xlink:label="MachineryAndEquipmentAcquisitionCostIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AcquisitionCostPropertyPlantAndEquipmentIFRSAbstract" xlink:to="MachineryAndEquipmentAcquisitionCostIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FurnitureAndFixturesAcquisitionCostIFRS" xlink:label="FurnitureAndFixturesAcquisitionCostIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AcquisitionCostPropertyPlantAndEquipmentIFRSAbstract" xlink:to="FurnitureAndFixturesAcquisitionCostIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ConstructionInProgressAcquisitionCostIFRS" xlink:label="ConstructionInProgressAcquisitionCostIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AcquisitionCostPropertyPlantAndEquipmentIFRSAbstract" xlink:to="ConstructionInProgressAcquisitionCostIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PropertyPlantAndEquipmentAcquisitionCostIFRS" xlink:label="PropertyPlantAndEquipmentAcquisitionCostIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AcquisitionCostPropertyPlantAndEquipmentIFRSAbstract" xlink:to="PropertyPlantAndEquipmentAcquisitionCostIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AccumulatedDepreciationAndImpairmentLossesPropertyPlantAndEquipmentIFRSAbstract" xlink:label="AccumulatedDepreciationAndImpairmentLossesPropertyPlantAndEquipmentIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ComponentsOfPropertyPlantAndEquipmentIFRSLineItems" xlink:to="AccumulatedDepreciationAndImpairmentLossesPropertyPlantAndEquipmentIFRSAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LandAccumulatedImpairmentLossesIFRS" xlink:label="LandAccumulatedImpairmentLossesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AccumulatedDepreciationAndImpairmentLossesPropertyPlantAndEquipmentIFRSAbstract" xlink:to="LandAccumulatedImpairmentLossesIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_BuildingsAndStructuresAccumulatedDepreciationAndImpairmentLossesIFRS" xlink:label="BuildingsAndStructuresAccumulatedDepreciationAndImpairmentLossesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AccumulatedDepreciationAndImpairmentLossesPropertyPlantAndEquipmentIFRSAbstract" xlink:to="BuildingsAndStructuresAccumulatedDepreciationAndImpairmentLossesIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_MachineryAndEquipmentAccumulatedDepreciationAndImpairmentLossesIFRS" xlink:label="MachineryAndEquipmentAccumulatedDepreciationAndImpairmentLossesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AccumulatedDepreciationAndImpairmentLossesPropertyPlantAndEquipmentIFRSAbstract" xlink:to="MachineryAndEquipmentAccumulatedDepreciationAndImpairmentLossesIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FurnitureAndFixturesAccumulatedDepreciationAndImpairmentLossesIFRS" xlink:label="FurnitureAndFixturesAccumulatedDepreciationAndImpairmentLossesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AccumulatedDepreciationAndImpairmentLossesPropertyPlantAndEquipmentIFRSAbstract" xlink:to="FurnitureAndFixturesAccumulatedDepreciationAndImpairmentLossesIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ConstructionInProgressAccumulatedImpairmentLossesIFRS" xlink:label="ConstructionInProgressAccumulatedImpairmentLossesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AccumulatedDepreciationAndImpairmentLossesPropertyPlantAndEquipmentIFRSAbstract" xlink:to="ConstructionInProgressAccumulatedImpairmentLossesIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PropertyPlantAndEquipmentAccumulatedDepreciationAndImpairmentLossesIFRS" xlink:label="PropertyPlantAndEquipmentAccumulatedDepreciationAndImpairmentLossesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="AccumulatedDepreciationAndImpairmentLossesPropertyPlantAndEquipmentIFRSAbstract" xlink:to="PropertyPlantAndEquipmentAccumulatedDepreciationAndImpairmentLossesIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CarryingAmountPropertyPlantAndEquipmentIFRSAbstract" xlink:label="CarryingAmountPropertyPlantAndEquipmentIFRSAbstract"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="ComponentsOfPropertyPlantAndEquipmentIFRSLineItems" xlink:to="CarryingAmountPropertyPlantAndEquipmentIFRSAbstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_LandIFRS" xlink:label="LandIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CarryingAmountPropertyPlantAndEquipmentIFRSAbstract" xlink:to="LandIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_BuildingsAndStructuresIFRS" xlink:label="BuildingsAndStructuresIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CarryingAmountPropertyPlantAndEquipmentIFRSAbstract" xlink:to="BuildingsAndStructuresIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_MachineryAndEquipmentIFRS" xlink:label="MachineryAndEquipmentIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CarryingAmountPropertyPlantAndEquipmentIFRSAbstract" xlink:to="MachineryAndEquipmentIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FurnitureAndFixturesIFRS" xlink:label="FurnitureAndFixturesIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CarryingAmountPropertyPlantAndEquipmentIFRSAbstract" xlink:to="FurnitureAndFixturesIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ConstructionInProgressIFRS" xlink:label="ConstructionInProgressIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CarryingAmountPropertyPlantAndEquipmentIFRSAbstract" xlink:to="ConstructionInProgressIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_PropertyPlantAndEquipmentIFRS" xlink:label="PropertyPlantAndEquipmentIFRS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="CarryingAmountPropertyPlantAndEquipmentIFRSAbstract" xlink:to="PropertyPlantAndEquipmentIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRSHeading" xlink:label="NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRSHeading"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRSHeading" xlink:to="ComponentsOfPropertyPlantAndEquipmentIFRSTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NotesPropertyPlantAndEquipmentConsolidatedFinancialStatementsIFRSHeading" xlink:to="ComponentsOfPropertyPlantAndEquipmentIFRSLineItems" order="1.0"/>
+  </link:definitionLink>
+</link:linkbase>

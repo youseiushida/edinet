@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesSemiAnnualConsolidatedStatementOfIncome" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_NotesSemiAnnualConsolidatedStatementOfIncome"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesSemiAnnualConsolidatedStatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_MajorComponentsOfSellingGeneralAndAdministrativeExpensesTextBlock" xlink:label="MajorComponentsOfSellingGeneralAndAdministrativeExpensesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_DepreciationSGA" xlink:label="DepreciationSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorComponentsOfSellingGeneralAndAdministrativeExpensesTextBlock" xlink:to="DepreciationSGA" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfAllowanceForDoubtfulAccountsSGA" xlink:label="ProvisionOfAllowanceForDoubtfulAccountsSGA"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MajorComponentsOfSellingGeneralAndAdministrativeExpensesTextBlock" xlink:to="ProvisionOfAllowanceForDoubtfulAccountsSGA" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingIncomeTaxesForGlobalMinimumTaxTextBlock" xlink:label="NotesRegardingIncomeTaxesForGlobalMinimumTaxTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesForGlobalMinimumTax" xlink:label="IncomeTaxesForGlobalMinimumTax"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesRegardingIncomeTaxesForGlobalMinimumTaxTextBlock" xlink:to="IncomeTaxesForGlobalMinimumTax" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesSemiAnnualConsolidatedStatementOfIncomeHeading" xlink:label="NotesSemiAnnualConsolidatedStatementOfIncomeHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesSemiAnnualConsolidatedStatementOfIncomeTable" xlink:label="NotesSemiAnnualConsolidatedStatementOfIncomeTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeHeading" xlink:to="NotesSemiAnnualConsolidatedStatementOfIncomeTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesSemiAnnualConsolidatedStatementOfIncomeLineItems" xlink:label="NotesSemiAnnualConsolidatedStatementOfIncomeLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeHeading" xlink:to="NotesSemiAnnualConsolidatedStatementOfIncomeLineItems" order="2.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeLineItems" xlink:to="MajorComponentsOfSellingGeneralAndAdministrativeExpensesTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingImpairmentLossTextBlock" xlink:label="NotesRegardingImpairmentLossTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeLineItems" xlink:to="NotesRegardingImpairmentLossTextBlock" order="2.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeLineItems" xlink:to="NotesRegardingIncomeTaxesForGlobalMinimumTaxTextBlock" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingReversalOfProvisionIncurredFromBusinessCombinationTextBlock" xlink:label="NotesRegardingReversalOfProvisionIncurredFromBusinessCombinationTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeLineItems" xlink:to="NotesRegardingReversalOfProvisionIncurredFromBusinessCombinationTextBlock" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingGainOnSalesOfPropertyPlantAndEquipmentTextBlock" xlink:label="NotesRegardingGainOnSalesOfPropertyPlantAndEquipmentTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeLineItems" xlink:to="NotesRegardingGainOnSalesOfPropertyPlantAndEquipmentTextBlock" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingLossOnSalesOfPropertyPlantAndEquipmentTextBlock" xlink:label="NotesRegardingLossOnSalesOfPropertyPlantAndEquipmentTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeLineItems" xlink:to="NotesRegardingLossOnSalesOfPropertyPlantAndEquipmentTextBlock" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DescriptionOfFactThatSimplifiedMethodOfTaxEffectAccountingWasAppliedTextBlock" xlink:label="DescriptionOfFactThatSimplifiedMethodOfTaxEffectAccountingWasAppliedTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeLineItems" xlink:to="DescriptionOfFactThatSimplifiedMethodOfTaxEffectAccountingWasAppliedTextBlock" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesWhenThereIsSignificantSeasonalFluctuationInSalesOrOperatingExpensesTextBlock" xlink:label="NotesWhenThereIsSignificantSeasonalFluctuationInSalesOrOperatingExpensesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSemiAnnualConsolidatedStatementOfIncomeLineItems" xlink:to="NotesWhenThereIsSignificantSeasonalFluctuationInSalesOrOperatingExpensesTextBlock" order="8.0"/>
+  </link:presentationLink>
+</link:linkbase>

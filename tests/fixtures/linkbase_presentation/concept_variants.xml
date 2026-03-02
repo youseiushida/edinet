@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  concept 名正規化のテスト用フィクスチャ。
+  各種 prefix パターンからの concept 抽出を検証する。
+-->
+<link:linkbase
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+
+  <link:presentationLink xlink:type="extended"
+      xlink:role="http://example.com/role/concept_test">
+
+    <!-- 標準 prefix: jppfs_cor_ -->
+    <link:loc xlink:type="locator"
+        xlink:href="../taxonomy/jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_StandardItem"
+        xlink:label="loc_Standard"/>
+
+    <!-- ハイフン含み prefix: jpcrp030000-asr_E02144-000_ -->
+    <link:loc xlink:type="locator"
+        xlink:href="jpcrp030000-asr_E02144-000_2025-11-01.xsd#jpcrp030000-asr_E02144-000_FilerCustomItem"
+        xlink:label="loc_Filer"/>
+
+    <!-- bare fragment: prefix なし (#ConceptName のみ) -->
+    <link:loc xlink:type="locator"
+        xlink:href="#BareConceptHeading"
+        xlink:label="loc_Bare"/>
+
+    <!-- _2 サフィックス付き label: 同一 concept の複数参照 -->
+    <link:loc xlink:type="locator"
+        xlink:href="../taxonomy/jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_StandardItem"
+        xlink:label="loc_Standard_2"/>
+
+    <!-- 小文字のみの fragment: フォールバック -->
+    <link:loc xlink:type="locator"
+        xlink:href="file.xsd#alllowercasename"
+        xlink:label="loc_Lower"/>
+
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_Bare" xlink:to="loc_Standard"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_Bare" xlink:to="loc_Filer"
+        order="2"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_Bare" xlink:to="loc_Standard_2"
+        order="3"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_Bare" xlink:to="loc_Lower"
+        order="4"/>
+
+  </link:presentationLink>
+</link:linkbase>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase"
+               xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:calculationLink xlink:type="extended"
+      xlink:role="http://example.com/role/circular">
+
+    <!-- A -> B -> A circular -->
+    <link:loc xlink:type="locator"
+        xlink:href="test.xsd#test_ConceptA"
+        xlink:label="A"/>
+    <link:loc xlink:type="locator"
+        xlink:href="test.xsd#test_ConceptB"
+        xlink:label="B"/>
+
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="A" xlink:to="B"
+        weight="1" order="1"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="B" xlink:to="A"
+        weight="1" order="1"/>
+
+    <!-- C -> C self-reference -->
+    <link:loc xlink:type="locator"
+        xlink:href="test.xsd#test_ConceptC"
+        xlink:label="C"/>
+    <link:calculationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item"
+        xlink:from="C" xlink:to="C"
+        weight="1" order="1"/>
+  </link:calculationLink>
+</link:linkbase>

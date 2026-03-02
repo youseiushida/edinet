@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_DisclosureOfSustainabilityRelatedFinancialInformation-03" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_DisclosureOfSustainabilityRelatedFinancialInformation-03"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_DisclosureOfSustainabilityRelatedFinancialInformation-03">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DisclosureOfSustainabilityRelatedFinancialInformationHeading" xlink:label="DisclosureOfSustainabilityRelatedFinancialInformationHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_GrossScope3GreenhouseGasEmissions" xlink:label="GrossScope3GreenhouseGasEmissions"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="DisclosureOfSustainabilityRelatedFinancialInformationHeading" xlink:to="GrossScope3GreenhouseGasEmissions" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_GrossScope12And3GreenhouseGasEmissions" xlink:label="GrossScope12And3GreenhouseGasEmissions"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="DisclosureOfSustainabilityRelatedFinancialInformationHeading" xlink:to="GrossScope12And3GreenhouseGasEmissions" order="2.0"/>
+  </link:presentationLink>
+</link:linkbase>

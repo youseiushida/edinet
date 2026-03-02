@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_Audits" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_Audits"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_Audits">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditsHeading" xlink:label="AuditsHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NoteOnChangeOfIndependentAuditorsAuditsTextBlock" xlink:label="NoteOnChangeOfIndependentAuditorsAuditsTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="AuditsHeading" xlink:to="NoteOnChangeOfIndependentAuditorsAuditsTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_FeesToPrimaryAuditorAbstract" xlink:label="FeesToPrimaryAuditorAbstract"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="AuditsHeading" xlink:to="FeesToPrimaryAuditorAbstract" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditFeesReportingCompany" xlink:label="AuditFeesReportingCompany"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToPrimaryAuditorAbstract" xlink:to="AuditFeesReportingCompany" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NonAuditFeesReportingCompany" xlink:label="NonAuditFeesReportingCompany"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToPrimaryAuditorAbstract" xlink:to="NonAuditFeesReportingCompany" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditFeesConsolidatedSubsidiaries" xlink:label="AuditFeesConsolidatedSubsidiaries"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToPrimaryAuditorAbstract" xlink:to="AuditFeesConsolidatedSubsidiaries" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NonAuditFeesConsolidatedSubsidiaries" xlink:label="NonAuditFeesConsolidatedSubsidiaries"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToPrimaryAuditorAbstract" xlink:to="NonAuditFeesConsolidatedSubsidiaries" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditFeesTotal" xlink:label="AuditFeesTotal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToPrimaryAuditorAbstract" xlink:to="AuditFeesTotal" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NonAuditFeesTotal" xlink:label="NonAuditFeesTotal"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToPrimaryAuditorAbstract" xlink:to="NonAuditFeesTotal" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_FeesToNetworkFirmsAbstract" xlink:label="FeesToNetworkFirmsAbstract"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="AuditsHeading" xlink:to="FeesToNetworkFirmsAbstract" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditFeesReportingCompanyNetworkFirms" xlink:label="AuditFeesReportingCompanyNetworkFirms"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToNetworkFirmsAbstract" xlink:to="AuditFeesReportingCompanyNetworkFirms" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NonAuditFeesReportingCompanyNetworkFirms" xlink:label="NonAuditFeesReportingCompanyNetworkFirms"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToNetworkFirmsAbstract" xlink:to="NonAuditFeesReportingCompanyNetworkFirms" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditFeesConsolidatedSubsidiariesNetworkFirms" xlink:label="AuditFeesConsolidatedSubsidiariesNetworkFirms"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToNetworkFirmsAbstract" xlink:to="AuditFeesConsolidatedSubsidiariesNetworkFirms" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NonAuditFeesConsolidatedSubsidiariesNetworkFirms" xlink:label="NonAuditFeesConsolidatedSubsidiariesNetworkFirms"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToNetworkFirmsAbstract" xlink:to="NonAuditFeesConsolidatedSubsidiariesNetworkFirms" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AuditFeesTotalNetworkFirms" xlink:label="AuditFeesTotalNetworkFirms"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToNetworkFirmsAbstract" xlink:to="AuditFeesTotalNetworkFirms" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NonAuditFeesTotalNetworkFirms" xlink:label="NonAuditFeesTotalNetworkFirms"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesToNetworkFirmsAbstract" xlink:to="NonAuditFeesTotalNetworkFirms" order="6.0"/>
+  </link:presentationLink>
+</link:linkbase>

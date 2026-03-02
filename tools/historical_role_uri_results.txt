@@ -1,0 +1,98 @@
+
+======================================================================
+Year 2019: S100FP8E
+======================================================================
+  ERROR: EDINET API error 404: Not Found
+
+======================================================================
+Year 2020: S100IU1L
+======================================================================
+  ERROR: EDINET API error 404: Not Found
+
+======================================================================
+Year 2021: S100LNRH
+======================================================================
+  ERROR: EDINET API error 404: Not Found
+
+======================================================================
+Year 2022: S100OOJK
+======================================================================
+  ERROR: EDINET API error 404: Not Found
+
+======================================================================
+Year 2023: S100RYHO
+======================================================================
+  ERROR: EDINET API error 404: Not Found
+
+======================================================================
+Year 2024: S100UOPU
+======================================================================
+  primary XBRL: XBRL/PublicDoc/jpcrp040300-q2r-001_E01719-000_2024-09-30_01_2024-11-11.xbrl
+
+  roleURI 総数: 3
+
+  分類結果:
+    BS: 0 件
+    PL: 1 件
+      http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome
+    CI: 0 件
+    CF: 1 件
+      http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedStatementOfCashFlows-indirect
+    SS: 0 件
+
+  未分類 (非財務諸表): 1 件
+    http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumber
+
+  ZIP 内 _pre ファイル: 2 件
+    財務諸表 _pre: 0 件
+    その他 _pre: 2 件
+      jpcrp040300-q2r-001_E01719-000_2024-09-30_01_2024-11-11_pre.xml
+      jpaud-qrr-cc-001_E01719-000_2024-09-30_01_2024-11-11_pre.xml
+
+======================================================================
+Year 2025: S100W4MW
+======================================================================
+  primary XBRL: XBRL/PublicDoc/jpcrp030000-asr-001_E00355-000_2025-03-31_01_2025-06-26.xbrl
+
+  roleURI 総数: 7
+
+  分類結果:
+    BS: 2 件
+      http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_BalanceSheet
+      http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedBalanceSheet
+    PL: 2 件
+      http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfIncome
+      http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_StatementOfIncome
+    CI: 1 件
+      http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfComprehensiveIncome
+    CF: 1 件
+      http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfCashFlows-indirect
+    SS: 0 件
+
+  未分類 (非財務諸表): 1 件
+    http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumber
+
+  ZIP 内 _pre ファイル: 3 件
+    財務諸表 _pre: 0 件
+    その他 _pre: 3 件
+      jpcrp030000-asr-001_E00355-000_2025-03-31_01_2025-06-26_pre.xml
+      jpaud-aai-cc-001_E00355-000_2025-03-31_01_2025-06-26_pre.xml
+      jpaud-aar-cn-001_E00355-000_2025-03-31_01_2025-06-26_pre.xml
+
+
+======================================================================
+サマリー: 年度別の role URI 分類数 (ユニーク)
+======================================================================
+  Year |   BS |   PL |   CI |   CF |   SS | 分類OK?
+------------------------------------------------------------
+  2024 |    0 |    1 |    0 |    1 |    0 | NG
+  2025 |    2 |    2 |    1 |    1 |    0 | NG
+
+======================================================================
+警告: 一部年度で分類できない roleURI が存在
+
+======================================================================
+サマリー: 年度別 _pre ファイルパターン
+======================================================================
+  2024: [] (2 files total)
+  2025: [] (3 files total)

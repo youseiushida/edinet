@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesConsolidatedStatementOfComprehensiveIncome" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_NotesConsolidatedStatementOfComprehensiveIncome"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-default"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesConsolidatedStatementOfComprehensiveIncome">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember_2"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesConsolidatedStatementOfComprehensiveIncomeHeading" xlink:label="NotesConsolidatedStatementOfComprehensiveIncomeHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesConsolidatedStatementOfComprehensiveIncomeTable" xlink:label="NotesConsolidatedStatementOfComprehensiveIncomeTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="NotesConsolidatedStatementOfComprehensiveIncomeHeading" xlink:to="NotesConsolidatedStatementOfComprehensiveIncomeTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="NotesConsolidatedStatementOfComprehensiveIncomeTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesConsolidatedStatementOfComprehensiveIncomeLineItems" xlink:label="NotesConsolidatedStatementOfComprehensiveIncomeLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NotesConsolidatedStatementOfComprehensiveIncomeHeading" xlink:to="NotesConsolidatedStatementOfComprehensiveIncomeLineItems" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock" xlink:label="NotesRegardingTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NotesConsolidatedStatementOfComprehensiveIncomeLineItems" xlink:to="NotesRegardingTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingIncomeTaxesAndTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock" xlink:label="NotesRegardingIncomeTaxesAndTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NotesConsolidatedStatementOfComprehensiveIncomeLineItems" xlink:to="NotesRegardingIncomeTaxesAndTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingReclassificationAdjustmentsRelatingToOtherComprehensiveIncomeTextBlock" xlink:label="NotesRegardingReclassificationAdjustmentsRelatingToOtherComprehensiveIncomeTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NotesConsolidatedStatementOfComprehensiveIncomeLineItems" xlink:to="NotesRegardingReclassificationAdjustmentsRelatingToOtherComprehensiveIncomeTextBlock" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingReclassificationAdjustmentsAndTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock" xlink:label="NotesRegardingReclassificationAdjustmentsAndTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NotesConsolidatedStatementOfComprehensiveIncomeLineItems" xlink:to="NotesRegardingReclassificationAdjustmentsAndTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesRegardingReclassificationAdjustmentsIncomeTaxesAndTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock" xlink:label="NotesRegardingReclassificationAdjustmentsIncomeTaxesAndTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="NotesConsolidatedStatementOfComprehensiveIncomeLineItems" xlink:to="NotesRegardingReclassificationAdjustmentsIncomeTaxesAndTaxEffectsRelatingToOtherComprehensiveIncomeTextBlock" order="5.0"/>
+  </link:definitionLink>
+</link:linkbase>

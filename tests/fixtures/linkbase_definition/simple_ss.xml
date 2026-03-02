@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xbrldt="http://xbrl.org/2005/xbrldt">
+
+  <link:definitionLink xlink:type="extended"
+    xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_StatementOfChangesInEquity">
+
+    <!-- Heading -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfChangesInEquityHeading"
+      xlink:label="StatementOfChangesInEquityHeading"/>
+
+    <!-- Table -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfChangesInEquityTable"
+      xlink:label="StatementOfChangesInEquityTable"/>
+
+    <!-- Axis: ComponentsOfEquityAxis -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ComponentsOfEquityAxis"
+      xlink:label="ComponentsOfEquityAxis"/>
+
+    <!-- Domain (usable=false) -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ComponentsOfEquityDomain"
+      xlink:label="ComponentsOfEquityDomain"/>
+
+    <!-- Default member -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetAssetsMember"
+      xlink:label="NetAssetsMember"/>
+
+    <!-- Abstract member (usable=false, level 1) -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ShareholdersEquityAbstract"
+      xlink:label="ShareholdersEquityAbstract"/>
+
+    <!-- Concrete members (level 2) -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ShareCapital"
+      xlink:label="ShareCapital"/>
+
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RetainedEarnings"
+      xlink:label="RetainedEarnings"/>
+
+    <!-- Another level 1 member -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedOtherComprehensiveIncome"
+      xlink:label="AccumulatedOtherComprehensiveIncome"/>
+
+    <!-- LineItems -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfChangesInEquityLineItems"
+      xlink:label="StatementOfChangesInEquityLineItems"/>
+
+    <!-- Line items concepts -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IssuanceOfNewSharesSCE"
+      xlink:label="IssuanceOfNewSharesSCE"/>
+
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsFromSurplusSCE"
+      xlink:label="DividendsFromSurplusSCE"/>
+
+    <!-- all: Heading -> Table -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/all"
+      xlink:from="StatementOfChangesInEquityHeading" xlink:to="StatementOfChangesInEquityTable"
+      order="1.0"
+      xbrldt:closed="true"
+      xbrldt:contextElement="scenario"/>
+
+    <!-- hypercube-dimension: Table -> Axis -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension"
+      xlink:from="StatementOfChangesInEquityTable" xlink:to="ComponentsOfEquityAxis"
+      order="1.0"/>
+
+    <!-- dimension-domain: Axis -> Domain (usable=false) -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain"
+      xlink:from="ComponentsOfEquityAxis" xlink:to="ComponentsOfEquityDomain"
+      order="1.0"
+      usable="false"/>
+
+    <!-- dimension-default: Axis -> Default -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default"
+      xlink:from="ComponentsOfEquityAxis" xlink:to="NetAssetsMember"
+      order="1.0"/>
+
+    <!-- domain-member: Domain -> Abstract (usable=false) -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="ComponentsOfEquityDomain" xlink:to="ShareholdersEquityAbstract"
+      order="1.0"
+      usable="false"/>
+
+    <!-- domain-member: Abstract -> ShareCapital -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="ShareholdersEquityAbstract" xlink:to="ShareCapital"
+      order="1.0"/>
+
+    <!-- domain-member: Abstract -> RetainedEarnings -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="ShareholdersEquityAbstract" xlink:to="RetainedEarnings"
+      order="2.0"/>
+
+    <!-- domain-member: Domain -> AccumulatedOtherComprehensiveIncome -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="ComponentsOfEquityDomain" xlink:to="AccumulatedOtherComprehensiveIncome"
+      order="3.0"/>
+
+    <!-- domain-member: Heading -> LineItems -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="StatementOfChangesInEquityHeading" xlink:to="StatementOfChangesInEquityLineItems"
+      order="2.0"/>
+
+    <!-- domain-member: LineItems -> Concepts -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="StatementOfChangesInEquityLineItems" xlink:to="IssuanceOfNewSharesSCE"
+      order="1.0"/>
+
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="StatementOfChangesInEquityLineItems" xlink:to="DividendsFromSurplusSCE"
+      order="2.0"/>
+
+  </link:definitionLink>
+</link:linkbase>

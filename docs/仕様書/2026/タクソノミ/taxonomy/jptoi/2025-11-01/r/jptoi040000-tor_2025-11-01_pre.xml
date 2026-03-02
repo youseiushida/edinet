@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jptoi/rol_std_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForListedShareCertificatesEtcByIssuerFormNo4TenderOfferReport" xlink:type="simple" xlink:href="../jptoi_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForListedShareCertificatesEtcByIssuerFormNo4TenderOfferReport"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jptoi/rol_std_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForListedShareCertificatesEtcByIssuerFormNo4TenderOfferReport">
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForListedShareCertificatesEtcByIssuerFormNo4TenderOfferReportHeading" xlink:label="CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForListedShareCertificatesEtcByIssuerFormNo4TenderOfferReportHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForListedShareCertificatesEtcByIssuerFormNo4TenderOfferReportHeading" xlink:to="CoverPageHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_InformationOfTenderOfferHeading" xlink:label="InformationOfTenderOfferHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForListedShareCertificatesEtcByIssuerFormNo4TenderOfferReportHeading" xlink:to="InformationOfTenderOfferHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_ClassesOfShareCertificatesRelatedToListedShareCertificatesEtcRelatedToPurchaseEtcHeading" xlink:label="ClassesOfShareCertificatesRelatedToListedShareCertificatesEtcRelatedToPurchaseEtcHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationOfTenderOfferHeading" xlink:to="ClassesOfShareCertificatesRelatedToListedShareCertificatesEtcRelatedToPurchaseEtcHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_ClassesOfShareCertificatesRelatedToListedShareCertificatesEtcRelatedToPurchaseEtcTextBlock" xlink:label="ClassesOfShareCertificatesRelatedToListedShareCertificatesEtcRelatedToPurchaseEtcTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ClassesOfShareCertificatesRelatedToListedShareCertificatesEtcRelatedToPurchaseEtcHeading" xlink:to="ClassesOfShareCertificatesRelatedToListedShareCertificatesEtcRelatedToPurchaseEtcTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_TenderOfferPeriodHeading" xlink:label="TenderOfferPeriodHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InformationOfTenderOfferHeading" xlink:to="TenderOfferPeriodHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_TenderOfferPeriodTextBlock" xlink:label="TenderOfferPeriodTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TenderOfferPeriodHeading" xlink:to="TenderOfferPeriodTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_ResultOfPurchaseEtcHeading" xlink:label="ResultOfPurchaseEtcHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForListedShareCertificatesEtcByIssuerFormNo4TenderOfferReportHeading" xlink:to="ResultOfPurchaseEtcHeading" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_DateOfOfficialAnnouncementOfTenderOfferAndNameOfNewspaperContainingItHeading" xlink:label="DateOfOfficialAnnouncementOfTenderOfferAndNameOfNewspaperContainingItHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ResultOfPurchaseEtcHeading" xlink:to="DateOfOfficialAnnouncementOfTenderOfferAndNameOfNewspaperContainingItHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_DateOfOfficialAnnouncementOfTenderOfferAndNameOfNewspaperContainingItTextBlock" xlink:label="DateOfOfficialAnnouncementOfTenderOfferAndNameOfNewspaperContainingItTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="DateOfOfficialAnnouncementOfTenderOfferAndNameOfNewspaperContainingItHeading" xlink:to="DateOfOfficialAnnouncementOfTenderOfferAndNameOfNewspaperContainingItTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_NumberOfListedShareCertificatesEtcAcquiredByPurchaseEtcHeading" xlink:label="NumberOfListedShareCertificatesEtcAcquiredByPurchaseEtcHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ResultOfPurchaseEtcHeading" xlink:to="NumberOfListedShareCertificatesEtcAcquiredByPurchaseEtcHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_NumberOfListedShareCertificatesEtcAcquiredByPurchaseEtcTextBlock" xlink:label="NumberOfListedShareCertificatesEtcAcquiredByPurchaseEtcTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfListedShareCertificatesEtcAcquiredByPurchaseEtcHeading" xlink:to="NumberOfListedShareCertificatesEtcAcquiredByPurchaseEtcTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_CalculationForPurchaseEtcByMethodOfProportionalDistributionHeading" xlink:label="CalculationForPurchaseEtcByMethodOfProportionalDistributionHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ResultOfPurchaseEtcHeading" xlink:to="CalculationForPurchaseEtcByMethodOfProportionalDistributionHeading" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoi_cor_2025-11-01.xsd#jptoi_cor_CalculationForPurchaseEtcByMethodOfProportionalDistributionTextBlock" xlink:label="CalculationForPurchaseEtcByMethodOfProportionalDistributionTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CalculationForPurchaseEtcByMethodOfProportionalDistributionHeading" xlink:to="CalculationForPurchaseEtcByMethodOfProportionalDistributionTextBlock" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

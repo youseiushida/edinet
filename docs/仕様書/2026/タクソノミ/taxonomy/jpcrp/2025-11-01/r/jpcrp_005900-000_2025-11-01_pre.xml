@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_CoverPage" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_CoverPage"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_CoverPage">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShelfRegistrationSupplementNumberCoverPage" xlink:label="ShelfRegistrationSupplementNumberCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="ShelfRegistrationSupplementNumberCoverPage" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="DocumentTitleCoverPage" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="PlaceOfFilingCoverPage" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="FilingDateCoverPage" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CompanyNameCoverPage" xlink:label="CompanyNameCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="CompanyNameCoverPage" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CompanyNameInEnglishCoverPage" xlink:label="CompanyNameInEnglishCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="CompanyNameInEnglishCoverPage" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TitleAndNameOfRepresentativeCoverPage" xlink:label="TitleAndNameOfRepresentativeCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="TitleAndNameOfRepresentativeCoverPage" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AddressOfRegisteredHeadquarterCoverPage" xlink:label="AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="AddressOfRegisteredHeadquarterCoverPage" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TelephoneNumberAddressOfRegisteredHeadquarterCoverPage" xlink:label="TelephoneNumberAddressOfRegisteredHeadquarterCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="TelephoneNumberAddressOfRegisteredHeadquarterCoverPage" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NameOfContactPersonAddressOfRegisteredHeadquarterCoverPage" xlink:label="NameOfContactPersonAddressOfRegisteredHeadquarterCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NameOfContactPersonAddressOfRegisteredHeadquarterCoverPage" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NearestPlaceOfContactCoverPage" xlink:label="NearestPlaceOfContactCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NearestPlaceOfContactCoverPage" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TelephoneNumberNearestPlaceOfContactCoverPage" xlink:label="TelephoneNumberNearestPlaceOfContactCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="TelephoneNumberNearestPlaceOfContactCoverPage" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NameOfContactPersonNearestPlaceOfContactCoverPage" xlink:label="NameOfContactPersonNearestPlaceOfContactCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="NameOfContactPersonNearestPlaceOfContactCoverPage" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TypesOfSecuritiesToShelfRegisterForOfferingOrDistributionCoverPage" xlink:label="TypesOfSecuritiesToShelfRegisterForOfferingOrDistributionCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="TypesOfSecuritiesToShelfRegisterForOfferingOrDistributionCoverPage" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AmountOfOfferingOrDistributionByThisRegistrationCoverPageTextBlock" xlink:label="AmountOfOfferingOrDistributionByThisRegistrationCoverPageTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="AmountOfOfferingOrDistributionByThisRegistrationCoverPageTextBlock" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ContentsOfShelfRegistrationStatementCoverPageAbstract" xlink:label="ContentsOfShelfRegistrationStatementCoverPageAbstract"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="ContentsOfShelfRegistrationStatementCoverPageAbstract" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_FilingDateContentsOfShelfRegistrationStatementCoverPage" xlink:label="FilingDateContentsOfShelfRegistrationStatementCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ContentsOfShelfRegistrationStatementCoverPageAbstract" xlink:to="FilingDateContentsOfShelfRegistrationStatementCoverPage" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_EffectiveDateContentsOfShelfRegistrationStatementCoverPage" xlink:label="EffectiveDateContentsOfShelfRegistrationStatementCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ContentsOfShelfRegistrationStatementCoverPageAbstract" xlink:to="EffectiveDateContentsOfShelfRegistrationStatementCoverPage" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_EndOfPeriodOfIssueContentsOfShelfRegistrationStatementCoverPage" xlink:label="EndOfPeriodOfIssueContentsOfShelfRegistrationStatementCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ContentsOfShelfRegistrationStatementCoverPageAbstract" xlink:to="EndOfPeriodOfIssueContentsOfShelfRegistrationStatementCoverPage" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ShelfRegistrationNumberContentsOfShelfRegistrationStatementCoverPage" xlink:label="ShelfRegistrationNumberContentsOfShelfRegistrationStatementCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ContentsOfShelfRegistrationStatementCoverPageAbstract" xlink:to="ShelfRegistrationNumberContentsOfShelfRegistrationStatementCoverPage" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PlannedAmountOfIssueOrLimitOnOutstandingBalanceContentsOfShelfRegistrationStatementCoverPage" xlink:label="PlannedAmountOfIssueOrLimitOnOutstandingBalanceContentsOfShelfRegistrationStatementCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ContentsOfShelfRegistrationStatementCoverPageAbstract" xlink:to="PlannedAmountOfIssueOrLimitOnOutstandingBalanceContentsOfShelfRegistrationStatementCoverPage" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OfferingsAndDistributionsInPastCoverPageTextBlock" xlink:label="OfferingsAndDistributionsInPastCoverPageTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="OfferingsAndDistributionsInPastCoverPageTextBlock" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_RemainingAmountCoverPageTextBlock" xlink:label="RemainingAmountCoverPageTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="RemainingAmountCoverPageTextBlock" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_WhenLimitOnOutstandingBalanceWasSpecifiedRemainingAmountCoverPageTextBlock" xlink:label="WhenLimitOnOutstandingBalanceWasSpecifiedRemainingAmountCoverPageTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="WhenLimitOnOutstandingBalanceWasSpecifiedRemainingAmountCoverPageTextBlock" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_RemainingBalanceCoverPage" xlink:label="RemainingBalanceCoverPage"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="RemainingBalanceCoverPage" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_MattersSpecificToStabilizingOperationCoverPageTextBlock" xlink:label="MattersSpecificToStabilizingOperationCoverPageTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="MattersSpecificToStabilizingOperationCoverPageTextBlock" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PlaceForPublicInspectionCoverPageTextBlock" xlink:label="PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="PlaceForPublicInspectionCoverPageTextBlock" order="22.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_FootnotesCoverPageTextBlock" xlink:label="FootnotesCoverPageTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CoverPageHeading" xlink:to="FootnotesCoverPageTextBlock" order="23.0"/>
+  </link:presentationLink>
+</link:linkbase>

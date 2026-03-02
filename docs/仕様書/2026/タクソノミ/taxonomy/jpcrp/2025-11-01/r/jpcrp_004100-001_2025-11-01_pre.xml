@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesSegmentInformationEtcType1SemiAnnualFinancialStatements-01" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_NotesSegmentInformationEtcType1SemiAnnualFinancialStatements-01"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_NotesSegmentInformationEtcType1SemiAnnualFinancialStatements-01">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_NonConsolidatedMember" xlink:label="NonConsolidatedMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="NonConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SegmentInformationAbstract" xlink:label="SegmentInformationAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DescriptionOfFactThatCompanysBusinessComprisesSingleSegment" xlink:label="DescriptionOfFactThatCompanysBusinessComprisesSingleSegment"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationAbstract" xlink:to="DescriptionOfFactThatCompanysBusinessComprisesSingleSegment" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsHeading" xlink:label="NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsTable" xlink:label="NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsHeading" xlink:to="NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsLineItems" xlink:label="NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsHeading" xlink:to="NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsLineItems" order="2.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSegmentInformationEtcType1SemiAnnualFinancialStatementsLineItems" xlink:to="SegmentInformationAbstract" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

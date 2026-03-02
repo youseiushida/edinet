@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_NumberOfStocksEtcHeldSummary" xlink:type="simple" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_NumberOfStocksEtcHeldSummary"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_NumberOfStocksEtcHeldSummary">
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233MainClauseAbstract" xlink:label="Article27233MainClauseAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233MainClause" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="StocksOrInvestmentSecuritiesEtcArticle27233MainClause" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SubscriptionRightsToSharesArticle27233MainClause" xlink:label="SubscriptionRightsToSharesArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="SubscriptionRightsToSharesArticle27233MainClause" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ConvertibleBondsArticle27233MainClause" xlink:label="ConvertibleBondsArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="ConvertibleBondsArticle27233MainClause" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233MainClause" xlink:label="TargetSecurityCoveredWarrantsArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="TargetSecurityCoveredWarrantsArticle27233MainClause" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233MainClause" xlink:label="StockDepositoryReceiptsArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="StockDepositoryReceiptsArticle27233MainClause" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233MainClause" xlink:label="StockRelatedDepositoryReceiptsArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="StockRelatedDepositoryReceiptsArticle27233MainClause" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233MainClause" xlink:label="StockTrustBeneficiaryRightsArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="StockTrustBeneficiaryRightsArticle27233MainClause" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233MainClause" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="StockRelatedTrustBeneficiaryRightsArticle27233MainClause" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233MainClause" xlink:label="TargetSecurityRedeemableBondsArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="TargetSecurityRedeemableBondsArticle27233MainClause" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233MainClause" xlink:label="ExchangeableBondsArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="ExchangeableBondsArticle27233MainClause" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233MainClause" xlink:label="TotalArticle27233MainClause"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233MainClauseAbstract" xlink:to="TotalArticle27233MainClause" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233Item1Abstract" xlink:label="Article27233Item1Abstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233Item1" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233Item1"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item1Abstract" xlink:to="StocksOrInvestmentSecuritiesEtcArticle27233Item1" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233Item1" xlink:label="TargetSecurityCoveredWarrantsArticle27233Item1"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item1Abstract" xlink:to="TargetSecurityCoveredWarrantsArticle27233Item1" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233Item1" xlink:label="StockDepositoryReceiptsArticle27233Item1"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item1Abstract" xlink:to="StockDepositoryReceiptsArticle27233Item1" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233Item1" xlink:label="StockRelatedDepositoryReceiptsArticle27233Item1"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item1Abstract" xlink:to="StockRelatedDepositoryReceiptsArticle27233Item1" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233Item1" xlink:label="StockTrustBeneficiaryRightsArticle27233Item1"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item1Abstract" xlink:to="StockTrustBeneficiaryRightsArticle27233Item1" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233Item1" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233Item1"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item1Abstract" xlink:to="StockRelatedTrustBeneficiaryRightsArticle27233Item1" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233Item1" xlink:label="TargetSecurityRedeemableBondsArticle27233Item1"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item1Abstract" xlink:to="TargetSecurityRedeemableBondsArticle27233Item1" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233Item1" xlink:label="ExchangeableBondsArticle27233Item1"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item1Abstract" xlink:to="ExchangeableBondsArticle27233Item1" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233Item1" xlink:label="TotalArticle27233Item1"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item1Abstract" xlink:to="TotalArticle27233Item1" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233Item2Abstract" xlink:label="Article27233Item2Abstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233Item2" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="StocksOrInvestmentSecuritiesEtcArticle27233Item2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_SubscriptionRightsToSharesArticle27233Item2" xlink:label="SubscriptionRightsToSharesArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="SubscriptionRightsToSharesArticle27233Item2" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ConvertibleBondsArticle27233Item2" xlink:label="ConvertibleBondsArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="ConvertibleBondsArticle27233Item2" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233Item2" xlink:label="TargetSecurityCoveredWarrantsArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="TargetSecurityCoveredWarrantsArticle27233Item2" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233Item2" xlink:label="StockDepositoryReceiptsArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="StockDepositoryReceiptsArticle27233Item2" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233Item2" xlink:label="StockRelatedDepositoryReceiptsArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="StockRelatedDepositoryReceiptsArticle27233Item2" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233Item2" xlink:label="StockTrustBeneficiaryRightsArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="StockTrustBeneficiaryRightsArticle27233Item2" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233Item2" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="StockRelatedTrustBeneficiaryRightsArticle27233Item2" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233Item2" xlink:label="TargetSecurityRedeemableBondsArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="TargetSecurityRedeemableBondsArticle27233Item2" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233Item2" xlink:label="ExchangeableBondsArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="ExchangeableBondsArticle27233Item2" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233Item2" xlink:label="TotalArticle27233Item2"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item2Abstract" xlink:to="TotalArticle27233Item2" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_Article27233Item3Abstract" xlink:label="Article27233Item3Abstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StocksOrInvestmentSecuritiesEtcArticle27233Item3" xlink:label="StocksOrInvestmentSecuritiesEtcArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="StocksOrInvestmentSecuritiesEtcArticle27233Item3" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3" xlink:label="ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="ShareAcquisitionRightsOrInvestmentUnitAcquisitionRightsEtcArticle27233Item3" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ConvertibleBondsArticle27233Item3" xlink:label="ConvertibleBondsArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="ConvertibleBondsArticle27233Item3" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityCoveredWarrantsArticle27233Item3" xlink:label="TargetSecurityCoveredWarrantsArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="TargetSecurityCoveredWarrantsArticle27233Item3" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockDepositoryReceiptsArticle27233Item3" xlink:label="StockDepositoryReceiptsArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="StockDepositoryReceiptsArticle27233Item3" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedDepositoryReceiptsArticle27233Item3" xlink:label="StockRelatedDepositoryReceiptsArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="StockRelatedDepositoryReceiptsArticle27233Item3" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockTrustBeneficiaryRightsArticle27233Item3" xlink:label="StockTrustBeneficiaryRightsArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="StockTrustBeneficiaryRightsArticle27233Item3" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_StockRelatedTrustBeneficiaryRightsArticle27233Item3" xlink:label="StockRelatedTrustBeneficiaryRightsArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="StockRelatedTrustBeneficiaryRightsArticle27233Item3" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TargetSecurityRedeemableBondsArticle27233Item3" xlink:label="TargetSecurityRedeemableBondsArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="TargetSecurityRedeemableBondsArticle27233Item3" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_ExchangeableBondsArticle27233Item3" xlink:label="ExchangeableBondsArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="ExchangeableBondsArticle27233Item3" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalArticle27233Item3" xlink:label="TotalArticle27233Item3"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="Article27233Item3Abstract" xlink:to="TotalArticle27233Item3" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcHeldSummaryHeading" xlink:label="NumberOfStocksEtcHeldSummaryHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="Article27233MainClauseAbstract" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="Article27233Item1Abstract" order="2.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="Article27233Item2Abstract" order="3.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="Article27233Item3Abstract" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcToDeductAsSoldOnMarginTrading" xlink:label="NumberOfStocksEtcToDeductAsSoldOnMarginTrading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="NumberOfStocksEtcToDeductAsSoldOnMarginTrading" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders" xlink:label="NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="NumberOfStocksEtcToDeductAsRightsToDemandExistBetweenJointHolders" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfStocksEtcHeld" xlink:label="TotalNumberOfStocksEtcHeld"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="TotalNumberOfStocksEtcHeld" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld" xlink:label="NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="NumberOfApplicablePortionOfStocksStockDepositoryReceiptsAndStockTrustBeneficiaryRightsToBeAddedToNumberOfResidualStocksEtcHeld" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfResidualStocksHeld" xlink:label="NumberOfResidualStocksHeld"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="NumberOfResidualStocksHeld" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NotesNumberOfStocksEtcHeldTextBlock" xlink:label="NotesNumberOfStocksEtcHeldTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NumberOfStocksEtcHeldSummaryHeading" xlink:to="NotesNumberOfStocksEtcHeldTextBlock" order="10.0"/>
+  </link:presentationLink>
+</link:linkbase>

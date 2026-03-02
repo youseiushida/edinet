@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_IndependentAuditorsReport" xlink:type="simple" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_rt_2025-11-01.xsd#rol_IndependentAuditorsReport"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpsps/rol_IndependentAuditorsReport">
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_cor_2025-11-01.xsd#jpsps_cor_IndependentAuditorsReportHeading" xlink:label="IndependentAuditorsReportHeading"/>
+    <link:loc xlink:type="locator" xlink:href="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_cor_2025-11-01.xsd#jpsps_cor_IndependentAuditorsReportInvestmentTrustManagementCompanySemiAnnualPeriodOfNextFiscalYearTextBlock" xlink:label="IndependentAuditorsReportInvestmentTrustManagementCompanySemiAnnualPeriodOfNextFiscalYearTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="IndependentAuditorsReportHeading" xlink:to="IndependentAuditorsReportInvestmentTrustManagementCompanySemiAnnualPeriodOfNextFiscalYearTextBlock" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

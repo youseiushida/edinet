@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_BalanceSheet"/>
+  <link:calculationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LongTermLoansReceivableNet" xlink:label="LongTermLoansReceivableNet"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LongTermLoansReceivable" xlink:label="LongTermLoansReceivable"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LongTermLoansReceivableNet" xlink:to="LongTermLoansReceivable" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AllowanceForDoubtfulAccountsLongTermLoansReceivable" xlink:label="AllowanceForDoubtfulAccountsLongTermLoansReceivable"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LongTermLoansReceivableNet" xlink:to="AllowanceForDoubtfulAccountsLongTermLoansReceivable" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InvestmentsAndOtherAssets" xlink:label="InvestmentsAndOtherAssets"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentsAndOtherAssets" xlink:to="LongTermLoansReceivableNet" order="6.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LongTermLoansReceivableFromShareholdersDirectorsOrEmployeesNet" xlink:label="LongTermLoansReceivableFromShareholdersDirectorsOrEmployeesNet"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentsAndOtherAssets" xlink:to="LongTermLoansReceivableFromShareholdersDirectorsOrEmployeesNet" order="9.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LongTermLoansReceivableFromShareholdersDirectorsOrEmployees" xlink:label="LongTermLoansReceivableFromShareholdersDirectorsOrEmployees"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LongTermLoansReceivableFromShareholdersDirectorsOrEmployeesNet" xlink:to="LongTermLoansReceivableFromShareholdersDirectorsOrEmployees" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AllowanceForDoubtfulAccountsLongTermLoansReceivableFromShareholdersDirectorsOrEmployees" xlink:label="AllowanceForDoubtfulAccountsLongTermLoansReceivableFromShareholdersDirectorsOrEmployees"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LongTermLoansReceivableFromShareholdersDirectorsOrEmployeesNet" xlink:to="AllowanceForDoubtfulAccountsLongTermLoansReceivableFromShareholdersDirectorsOrEmployees" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LongTermLoansReceivableFromSubsidiariesAndAffiliatesNet" xlink:label="LongTermLoansReceivableFromSubsidiariesAndAffiliatesNet"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentsAndOtherAssets" xlink:to="LongTermLoansReceivableFromSubsidiariesAndAffiliatesNet" order="12.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LongTermLoansReceivableFromSubsidiariesAndAffiliates" xlink:label="LongTermLoansReceivableFromSubsidiariesAndAffiliates"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LongTermLoansReceivableFromSubsidiariesAndAffiliatesNet" xlink:to="LongTermLoansReceivableFromSubsidiariesAndAffiliates" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AllowanceForDoubtfulAccountsLongTermLoansReceivableFromSubsidiariesAndAffiliates" xlink:label="AllowanceForDoubtfulAccountsLongTermLoansReceivableFromSubsidiariesAndAffiliates"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="LongTermLoansReceivableFromSubsidiariesAndAffiliatesNet" xlink:to="AllowanceForDoubtfulAccountsLongTermLoansReceivableFromSubsidiariesAndAffiliates" order="2.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ClaimsProvableInBankruptcyClaimsProvableInRehabilitationAndOtherNet" xlink:label="ClaimsProvableInBankruptcyClaimsProvableInRehabilitationAndOtherNet"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="InvestmentsAndOtherAssets" xlink:to="ClaimsProvableInBankruptcyClaimsProvableInRehabilitationAndOtherNet" order="15.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ClaimsProvableInBankruptcyClaimsProvableInRehabilitationAndOther" xlink:label="ClaimsProvableInBankruptcyClaimsProvableInRehabilitationAndOther"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ClaimsProvableInBankruptcyClaimsProvableInRehabilitationAndOtherNet" xlink:to="ClaimsProvableInBankruptcyClaimsProvableInRehabilitationAndOther" order="1.0" weight="1"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AllowanceForDoubtfulAccountsClaimsInBankruptcyReorganizationClaimsAndOther" xlink:label="AllowanceForDoubtfulAccountsClaimsInBankruptcyReorganizationClaimsAndOther"/>
+    <link:calculationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/summation-item" xlink:from="ClaimsProvableInBankruptcyClaimsProvableInRehabilitationAndOtherNet" xlink:to="AllowanceForDoubtfulAccountsClaimsInBankruptcyReorganizationClaimsAndOther" order="2.0" weight="1"/>
+  </link:calculationLink>
+</link:linkbase>

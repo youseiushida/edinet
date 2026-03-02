@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/samples/jptoo080000-toa_2013-08-31" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:entryPoint_jptoo080000-toa_2013-08-31="http://disclosure.edinet-fsa.go.jp/samples/jptoo080000-toa_2013-08-31" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jptoo-toa/2013-08-31/label/jptoo-toa_2013-08-31_gla.xml" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jptoo-toa/2013-08-31/r/jptoo080000-toa_2013-08-31_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jptoo-toa/2013-08-31/r/jptoo-toa_000100-000_2013-08-31_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jptoo-toa/2013-08-31/label/jptoo-toa_2013-08-31_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jptoo-toa/2013-08-31/label/jptoo-toa_2013-08-31_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jptoo-toa/2013-08-31/reference/jptoo-toa_2013-08-31_ref.xml" xlink:role="http://www.xbrl.org/2003/role/referenceLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jptoo-toa/2013-08-31/jptoo-toa_cor" schemaLocation="../../taxonomy/jptoo-toa/2013-08-31/jptoo-toa_cor_2013-08-31.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jptoo-toa/2013-08-31/jptoo-toa_rt" schemaLocation="../../taxonomy/jptoo-toa/2013-08-31/jptoo-toa_rt_2013-08-31.xsd"/>
+</xsd:schema>

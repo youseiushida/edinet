@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrldt="http://xbrl.org/2005/xbrldt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_BusinessResultsOfReportingCompany" xlink:type="simple" xlink:href="../jpcrp_rt_2025-11-01.xsd#rol_std_BusinessResultsOfReportingCompany"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/all" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#all"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#dimension-domain"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/domain-member" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#domain-member"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:type="simple" xlink:href="http://www.xbrl.org/2005/xbrldt-2005.xsd#hypercube-dimension"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_std_BusinessResultsOfReportingCompany">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_NonConsolidatedMember" xlink:label="NonConsolidatedMember"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="NonConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_BusinessResultsOfReportingCompanyHeading" xlink:label="BusinessResultsOfReportingCompanyHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_BusinessResultsOfReportingCompanyTable" xlink:label="BusinessResultsOfReportingCompanyTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="BusinessResultsOfReportingCompanyHeading" xlink:to="BusinessResultsOfReportingCompanyTable" order="1.0" xbrldt:contextElement="scenario" xbrldt:closed="true"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="BusinessResultsOfReportingCompanyTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_BusinessResultsOfReportingCompanyLineItems" xlink:label="BusinessResultsOfReportingCompanyLineItems"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyHeading" xlink:to="BusinessResultsOfReportingCompanyLineItems" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetSalesSummaryOfBusinessResults" xlink:label="NetSalesSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetSalesSummaryOfBusinessResults" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_RevenueKeyFinancialData" xlink:label="RevenueKeyFinancialData"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="RevenueKeyFinancialData" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OperatingRevenue1SummaryOfBusinessResults" xlink:label="OperatingRevenue1SummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="OperatingRevenue1SummaryOfBusinessResults" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OperatingRevenue2SummaryOfBusinessResults" xlink:label="OperatingRevenue2SummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="OperatingRevenue2SummaryOfBusinessResults" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_GrossOperatingRevenueSummaryOfBusinessResults" xlink:label="GrossOperatingRevenueSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="GrossOperatingRevenueSummaryOfBusinessResults" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OrdinaryIncomeSummaryOfBusinessResults" xlink:label="OrdinaryIncomeSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="OrdinaryIncomeSummaryOfBusinessResults" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetPremiumsWrittenSummaryOfBusinessResultsINS" xlink:label="NetPremiumsWrittenSummaryOfBusinessResultsINS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetPremiumsWrittenSummaryOfBusinessResultsINS" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OrdinaryIncomeLossSummaryOfBusinessResults" xlink:label="OrdinaryIncomeLossSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="OrdinaryIncomeLossSummaryOfBusinessResults" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetIncomeLossSummaryOfBusinessResults" xlink:label="NetIncomeLossSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetIncomeLossSummaryOfBusinessResults" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetLossRatioSummaryOfBusinessResultsINS" xlink:label="NetLossRatioSummaryOfBusinessResultsINS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetLossRatioSummaryOfBusinessResultsINS" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetOperatingExpenseRatioSummaryOfBusinessResultsINS" xlink:label="NetOperatingExpenseRatioSummaryOfBusinessResultsINS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetOperatingExpenseRatioSummaryOfBusinessResultsINS" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InterestAndDividendIncomeSummaryOfBusinessResultsINS" xlink:label="InterestAndDividendIncomeSummaryOfBusinessResultsINS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="InterestAndDividendIncomeSummaryOfBusinessResultsINS" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InvestmentAssetsYieldIncomeYieldSummaryOfBusinessResultsINS" xlink:label="InvestmentAssetsYieldIncomeYieldSummaryOfBusinessResultsINS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="InvestmentAssetsYieldIncomeYieldSummaryOfBusinessResultsINS" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InvestmentYieldRealizedYieldSummaryOfBusinessResultsINS" xlink:label="InvestmentYieldRealizedYieldSummaryOfBusinessResultsINS"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="InvestmentYieldRealizedYieldSummaryOfBusinessResultsINS" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_EquityInEarningsLossesOfAffiliatesIfEquityMethodIsAppliedSummaryOfBusinessResults" xlink:label="EquityInEarningsLossesOfAffiliatesIfEquityMethodIsAppliedSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="EquityInEarningsLossesOfAffiliatesIfEquityMethodIsAppliedSummaryOfBusinessResults" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CapitalStockSummaryOfBusinessResults" xlink:label="CapitalStockSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="CapitalStockSummaryOfBusinessResults" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalNumberOfIssuedSharesSummaryOfBusinessResults" xlink:label="TotalNumberOfIssuedSharesSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="TotalNumberOfIssuedSharesSummaryOfBusinessResults" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetAssetsSummaryOfBusinessResults" xlink:label="NetAssetsSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetAssetsSummaryOfBusinessResults" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalAssetsSummaryOfBusinessResults" xlink:label="TotalAssetsSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="TotalAssetsSummaryOfBusinessResults" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DepositsSummaryOfBusinessResults" xlink:label="DepositsSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="DepositsSummaryOfBusinessResults" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_LoansAndBillsDiscountedSummaryOfBusinessResults" xlink:label="LoansAndBillsDiscountedSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="LoansAndBillsDiscountedSummaryOfBusinessResults" order="21.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_SecuritiesSummaryOfBusinessResults" xlink:label="SecuritiesSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="SecuritiesSummaryOfBusinessResults" order="22.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetAssetsPerShareSummaryOfBusinessResults" xlink:label="NetAssetsPerShareSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetAssetsPerShareSummaryOfBusinessResults" order="23.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DividendPaidPerShareSummaryOfBusinessResults" xlink:label="DividendPaidPerShareSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="DividendPaidPerShareSummaryOfBusinessResults" order="24.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_InterimDividendPaidPerShareSummaryOfBusinessResults" xlink:label="InterimDividendPaidPerShareSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="InterimDividendPaidPerShareSummaryOfBusinessResults" order="25.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_BasicEarningsLossPerShareSummaryOfBusinessResults" xlink:label="BasicEarningsLossPerShareSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="BasicEarningsLossPerShareSummaryOfBusinessResults" order="26.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_DilutedEarningsPerShareSummaryOfBusinessResults" xlink:label="DilutedEarningsPerShareSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="DilutedEarningsPerShareSummaryOfBusinessResults" order="27.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_EquityToAssetRatioSummaryOfBusinessResults" xlink:label="EquityToAssetRatioSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="EquityToAssetRatioSummaryOfBusinessResults" order="28.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CapitalAdequacyRatioInternationalStandardSummaryOfBusinessResults" xlink:label="CapitalAdequacyRatioInternationalStandardSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="CapitalAdequacyRatioInternationalStandardSummaryOfBusinessResults" order="29.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CapitalAdequacyRatioDomesticStandardSummaryOfBusinessResults" xlink:label="CapitalAdequacyRatioDomesticStandardSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="CapitalAdequacyRatioDomesticStandardSummaryOfBusinessResults" order="30.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CapitalAdequacyRatioBISStandardSummaryOfBusinessResults" xlink:label="CapitalAdequacyRatioBISStandardSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="CapitalAdequacyRatioBISStandardSummaryOfBusinessResults" order="31.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CapitalAdequacyRatioDomesticStandard2SummaryOfBusinessResults" xlink:label="CapitalAdequacyRatioDomesticStandard2SummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="CapitalAdequacyRatioDomesticStandard2SummaryOfBusinessResults" order="32.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_RateOfReturnOnEquitySummaryOfBusinessResults" xlink:label="RateOfReturnOnEquitySummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="RateOfReturnOnEquitySummaryOfBusinessResults" order="33.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PriceEarningsRatioSummaryOfBusinessResults" xlink:label="PriceEarningsRatioSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="PriceEarningsRatioSummaryOfBusinessResults" order="34.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_PayoutRatioSummaryOfBusinessResults" xlink:label="PayoutRatioSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="PayoutRatioSummaryOfBusinessResults" order="35.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetCashProvidedByUsedInOperatingActivitiesSummaryOfBusinessResults" xlink:label="NetCashProvidedByUsedInOperatingActivitiesSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetCashProvidedByUsedInOperatingActivitiesSummaryOfBusinessResults" order="36.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetCashProvidedByUsedInInvestingActivitiesSummaryOfBusinessResults" xlink:label="NetCashProvidedByUsedInInvestingActivitiesSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetCashProvidedByUsedInInvestingActivitiesSummaryOfBusinessResults" order="37.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NetCashProvidedByUsedInFinancingActivitiesSummaryOfBusinessResults" xlink:label="NetCashProvidedByUsedInFinancingActivitiesSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NetCashProvidedByUsedInFinancingActivitiesSummaryOfBusinessResults" order="38.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_CashAndCashEquivalentsSummaryOfBusinessResults" xlink:label="CashAndCashEquivalentsSummaryOfBusinessResults"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="CashAndCashEquivalentsSummaryOfBusinessResults" order="39.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_NumberOfEmployees" xlink:label="NumberOfEmployees"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="NumberOfEmployees" order="40.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_AverageNumberOfTemporaryWorkers" xlink:label="AverageNumberOfTemporaryWorkers"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="AverageNumberOfTemporaryWorkers" order="41.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalShareholderReturn" xlink:label="TotalShareholderReturn"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="TotalShareholderReturn" order="42.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalReturnOnSharePriceIndex" xlink:label="TotalReturnOnSharePriceIndex"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member" xlink:from="BusinessResultsOfReportingCompanyLineItems" xlink:to="TotalReturnOnSharePriceIndex" order="43.0"/>
+  </link:definitionLink>
+</link:linkbase>

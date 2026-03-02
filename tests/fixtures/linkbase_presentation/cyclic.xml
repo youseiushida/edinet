@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+
+  <link:presentationLink xlink:type="extended"
+      xlink:role="http://example.com/role/cyclic">
+
+    <link:loc xlink:type="locator"
+        xlink:href="test.xsd#test_NodeA"
+        xlink:label="loc_A"/>
+    <link:loc xlink:type="locator"
+        xlink:href="test.xsd#test_NodeB"
+        xlink:label="loc_B"/>
+    <link:loc xlink:type="locator"
+        xlink:href="test.xsd#test_NodeC"
+        xlink:label="loc_C"/>
+
+    <!-- A → B → C → A の循環 -->
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_A" xlink:to="loc_B"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_B" xlink:to="loc_C"
+        order="1"/>
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_C" xlink:to="loc_A"
+        order="1"/>
+
+  </link:presentationLink>
+</link:linkbase>

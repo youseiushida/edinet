@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_BalanceSheet"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_BalanceSheet">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsHighwayBusinessNCAHWY" xlink:label="BuildingsHighwayBusinessNCAHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossBuildingsHighwayBusinessNCAHWY" xlink:label="AccumulatedImpairmentLossBuildingsHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BuildingsHighwayBusinessNCAHWY" xlink:to="AccumulatedImpairmentLossBuildingsHighwayBusinessNCAHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresHighwayBusinessNCAHWY" xlink:label="StructuresHighwayBusinessNCAHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossStructuresHighwayBusinessNCAHWY" xlink:label="AccumulatedImpairmentLossStructuresHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StructuresHighwayBusinessNCAHWY" xlink:to="AccumulatedImpairmentLossStructuresHighwayBusinessNCAHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentHighwayBusinessNCAHWY" xlink:label="MachineryAndEquipmentHighwayBusinessNCAHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossMachineryAndEquipmentHighwayBusinessNCAHWY" xlink:label="AccumulatedImpairmentLossMachineryAndEquipmentHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MachineryAndEquipmentHighwayBusinessNCAHWY" xlink:to="AccumulatedImpairmentLossMachineryAndEquipmentHighwayBusinessNCAHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesHighwayBusinessNCAHWY" xlink:label="VehiclesHighwayBusinessNCAHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossVehiclesHighwayBusinessNCAHWY" xlink:label="AccumulatedImpairmentLossVehiclesHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="VehiclesHighwayBusinessNCAHWY" xlink:to="AccumulatedImpairmentLossVehiclesHighwayBusinessNCAHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesHighwayBusinessNCAHWY" xlink:label="ToolsFurnitureAndFixturesHighwayBusinessNCAHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossToolsFurnitureAndFixturesHighwayBusinessNCAHWY" xlink:label="AccumulatedImpairmentLossToolsFurnitureAndFixturesHighwayBusinessNCAHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ToolsFurnitureAndFixturesHighwayBusinessNCAHWY" xlink:to="AccumulatedImpairmentLossToolsFurnitureAndFixturesHighwayBusinessNCAHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsNCARelatedHWY" xlink:label="BuildingsNCARelatedHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossBuildingsNCARelatedHWY" xlink:label="AccumulatedImpairmentLossBuildingsNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BuildingsNCARelatedHWY" xlink:to="AccumulatedImpairmentLossBuildingsNCARelatedHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresNCARelatedHWY" xlink:label="StructuresNCARelatedHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossStructuresNCARelatedHWY" xlink:label="AccumulatedImpairmentLossStructuresNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StructuresNCARelatedHWY" xlink:to="AccumulatedImpairmentLossStructuresNCARelatedHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentNCARelatedHWY" xlink:label="MachineryAndEquipmentNCARelatedHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossMachineryAndEquipmentNCARelatedHWY" xlink:label="AccumulatedImpairmentLossMachineryAndEquipmentNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MachineryAndEquipmentNCARelatedHWY" xlink:to="AccumulatedImpairmentLossMachineryAndEquipmentNCARelatedHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesNCARelatedHWY" xlink:label="VehiclesNCARelatedHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossVehiclesNCARelatedHWY" xlink:label="AccumulatedImpairmentLossVehiclesNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="VehiclesNCARelatedHWY" xlink:to="AccumulatedImpairmentLossVehiclesNCARelatedHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesNCARelatedHWY" xlink:label="ToolsFurnitureAndFixturesNCARelatedHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossToolsFurnitureAndFixturesNCARelatedHWY" xlink:label="AccumulatedImpairmentLossToolsFurnitureAndFixturesNCARelatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ToolsFurnitureAndFixturesNCARelatedHWY" xlink:to="AccumulatedImpairmentLossToolsFurnitureAndFixturesNCARelatedHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BuildingsNCAAffiliatedHWY" xlink:label="BuildingsNCAAffiliatedHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossBuildingsNCAAffiliatedHWY" xlink:label="AccumulatedImpairmentLossBuildingsNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="BuildingsNCAAffiliatedHWY" xlink:to="AccumulatedImpairmentLossBuildingsNCAAffiliatedHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StructuresNCAAffiliatedHWY" xlink:label="StructuresNCAAffiliatedHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossStructuresNCAAffiliatedHWY" xlink:label="AccumulatedImpairmentLossStructuresNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StructuresNCAAffiliatedHWY" xlink:to="AccumulatedImpairmentLossStructuresNCAAffiliatedHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_MachineryAndEquipmentNCAAffiliatedHWY" xlink:label="MachineryAndEquipmentNCAAffiliatedHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossMachineryAndEquipmentNCAAffiliatedHWY" xlink:label="AccumulatedImpairmentLossMachineryAndEquipmentNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="MachineryAndEquipmentNCAAffiliatedHWY" xlink:to="AccumulatedImpairmentLossMachineryAndEquipmentNCAAffiliatedHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_VehiclesNCAAffiliatedHWY" xlink:label="VehiclesNCAAffiliatedHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossVehiclesNCAAffiliatedHWY" xlink:label="AccumulatedImpairmentLossVehiclesNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="VehiclesNCAAffiliatedHWY" xlink:to="AccumulatedImpairmentLossVehiclesNCAAffiliatedHWY" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ToolsFurnitureAndFixturesNCAAffiliatedHWY" xlink:label="ToolsFurnitureAndFixturesNCAAffiliatedHWY"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AccumulatedImpairmentLossToolsFurnitureAndFixturesNCAAffiliatedHWY" xlink:label="AccumulatedImpairmentLossToolsFurnitureAndFixturesNCAAffiliatedHWY"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ToolsFurnitureAndFixturesNCAAffiliatedHWY" xlink:to="AccumulatedImpairmentLossToolsFurnitureAndFixturesNCAAffiliatedHWY" order="2.0"/>
+  </link:presentationLink>
+</link:linkbase>

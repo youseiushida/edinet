@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd http://xbrl.org/2008/label http://www.xbrl.org/2008/generic-label.xsd http://xbrl.org/2008/generic http://www.xbrl.org/2008/generic-link.xsd http://www.w3.org/1999/xlink http://www.xbrl.org/2003/xlink-2003-12-31.xsd" xmlns:gen="http://xbrl.org/2008/generic" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:label="http://xbrl.org/2008/label" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://www.xbrl.org/2008/role/label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#standard-label"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2008/role/link" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-link.xsd#standard-link-role"/>
+  <link:arcroleRef arcroleURI="http://xbrl.org/arcrole/2008/element-label" xlink:type="simple" xlink:href="http://www.xbrl.org/2008/generic-label.xsd#element-label"/>
+  <gen:link xlink:type="extended" xlink:role="http://www.xbrl.org/2008/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1ReportOfLargeVolumeHolding" xlink:label="src"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Status of Large Volume Holding of Share Certificates, etc. Form No. 1 Report of Large Volume Holding</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src" xlink:to="roleLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHolding" xlink:label="src_2"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_2" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Status of Large Volume Holding of Share Certificates, etc. Form No. 1 and No. 2 Report of Large Volume Holding</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_2" xlink:to="roleLabel_2"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo3ReportOfLargeVolumeHolding" xlink:label="src_3"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_3" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Status of Large Volume Holding of Share Certificates, etc. Form No. 3 Report of Large Volume Holding</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_3" xlink:to="roleLabel_3"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_CoverPage" xlink:label="src_4"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_4" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cover page</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_4" xlink:to="roleLabel_4"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_InformationAboutIssuer" xlink:label="src_5"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_5" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Information about issuer</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_5" xlink:to="roleLabel_5"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_InformationAboutFilers" xlink:label="src_6"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_6" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Information about filers</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_6" xlink:to="roleLabel_6"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_InformationAboutJointHolders" xlink:label="src_7"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_7" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Information about joint holders</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_7" xlink:to="roleLabel_7"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_FilersAndJointHolders" xlink:label="src_8"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_8" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Filers and joint holders</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_8" xlink:to="roleLabel_8"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_NumberOfStocksEtcHeldSummary" xlink:label="src_9"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_9" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Number of stocks, etc. held, Summary</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_9" xlink:to="roleLabel_9"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_HoldingRatioOfShareCertificatesEtcSummary" xlink:label="src_10"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_10" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Holding ratio of share certificates, etc., Summary</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_10" xlink:to="roleLabel_10"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_HoldingRatioOfShareCertificatesEtcHeldByJointHolding" xlink:label="src_11"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_11" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Holding ratio of share certificates, etc. held by joint holding</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_11" xlink:to="roleLabel_11"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_AdditionalDEIForReportOfLargeVolumeHolding" xlink:label="src_12"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_12" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Additional DEI for report of large volume holding</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_12" xlink:to="roleLabel_12"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1ReportOfLargeVolumeHolding" xlink:label="src_13"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_13" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Status of Large Volume Holding of Share Certificates, etc. Form No. 1 Report of Large Volume Holding</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_13" xlink:to="roleLabel_13"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo1AndNo2ReportOfLargeVolumeHolding" xlink:label="src_14"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_14" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Status of Large Volume Holding of Share Certificates, etc. Form No. 1 and No. 2 Report of Large Volume Holding</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_14" xlink:to="roleLabel_14"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_CabinetOfficeOrdinanceOnDisclosureOfStatusOfLargeVolumeHoldingOfShareCertificatesEtcFormNo3ReportOfLargeVolumeHolding" xlink:label="src_15"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_15" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cabinet Office Ordinance on Disclosure of Status of Large Volume Holding of Share Certificates, etc. Form No. 3 Report of Large Volume Holding</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_15" xlink:to="roleLabel_15"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_CoverPage" xlink:label="src_16"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_16" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Cover page</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_16" xlink:to="roleLabel_16"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_InformationAboutIssuer" xlink:label="src_17"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_17" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Information about issuer</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_17" xlink:to="roleLabel_17"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_InformationAboutFilers" xlink:label="src_18"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_18" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Information about filers</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_18" xlink:to="roleLabel_18"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_InformationAboutJointHolders" xlink:label="src_19"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_19" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Information about joint holders</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_19" xlink:to="roleLabel_19"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_FilersAndJointHolders" xlink:label="src_20"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_20" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Filers and joint holders</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_20" xlink:to="roleLabel_20"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_NumberOfStocksEtcHeldSummary" xlink:label="src_21"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_21" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Number of stocks, etc. held, Summary</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_21" xlink:to="roleLabel_21"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_HoldingRatioOfShareCertificatesEtcSummary" xlink:label="src_22"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_22" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Holding ratio of share certificates, etc., Summary</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_22" xlink:to="roleLabel_22"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_HoldingRatioOfShareCertificatesEtcHeldByJointHolding" xlink:label="src_23"/>
+    <label:label xlink:type="resource" xlink:label="roleLabel_23" xlink:role="http://www.xbrl.org/2008/role/label" xml:lang="en">Holding ratio of share certificates, etc. held by joint holding</label:label>
+    <gen:arc xlink:type="arc" xlink:arcrole="http://xbrl.org/arcrole/2008/element-label" xlink:from="src_23" xlink:to="roleLabel_23"/>
+  </gen:link>
+</link:linkbase>

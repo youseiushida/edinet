@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/jppfs/bnk/role/label" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_BNKLabel"/>
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_StatementOfIncome" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_std_StatementOfIncome"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_StatementOfIncome">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonConsolidatedMember" xlink:label="NonConsolidatedMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="NonConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeTable" xlink:label="StatementOfIncomeTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeLineItems" xlink:label="StatementOfIncomeLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncomeBNK" xlink:label="OrdinaryIncomeBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="OrdinaryIncomeBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestIncomeOIBNK" xlink:label="InterestIncomeOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinaryIncomeBNK" xlink:to="InterestIncomeOIBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnCallLoansOIBNK" xlink:label="InterestOnCallLoansOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestIncomeOIBNK" xlink:to="InterestOnCallLoansOIBNK" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnReceivablesUnderResaleAgreementsOIBNK" xlink:label="InterestOnReceivablesUnderResaleAgreementsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestIncomeOIBNK" xlink:to="InterestOnReceivablesUnderResaleAgreementsOIBNK" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnReceivablesUnderSecuritiesBorrowingTransactionsOIBNK" xlink:label="InterestOnReceivablesUnderSecuritiesBorrowingTransactionsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestIncomeOIBNK" xlink:to="InterestOnReceivablesUnderSecuritiesBorrowingTransactionsOIBNK" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnBillsBoughtOIBNK" xlink:label="InterestOnBillsBoughtOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestIncomeOIBNK" xlink:to="InterestOnBillsBoughtOIBNK" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnDepositsWithBanksOIBNK" xlink:label="InterestOnDepositsWithBanksOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestIncomeOIBNK" xlink:to="InterestOnDepositsWithBanksOIBNK" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnInterestSwapsOIBNK" xlink:label="InterestOnInterestSwapsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestIncomeOIBNK" xlink:to="InterestOnInterestSwapsOIBNK" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherInterestIncomeOIBNK" xlink:label="OtherInterestIncomeOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestIncomeOIBNK" xlink:to="OtherInterestIncomeOIBNK" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnLoansAndDiscountsOIBNK" xlink:label="InterestOnLoansAndDiscountsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestIncomeOIBNK" xlink:to="InterestOnLoansAndDiscountsOIBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestAndDividendsOnSecuritiesOIBNK" xlink:label="InterestAndDividendsOnSecuritiesOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestIncomeOIBNK" xlink:to="InterestAndDividendsOnSecuritiesOIBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_FeesAndCommissionsOIBNK" xlink:label="FeesAndCommissionsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinaryIncomeBNK" xlink:to="FeesAndCommissionsOIBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_FeesAndCommissionsOnDomesticAndForeignExchangesOIBNK" xlink:label="FeesAndCommissionsOnDomesticAndForeignExchangesOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesAndCommissionsOIBNK" xlink:to="FeesAndCommissionsOnDomesticAndForeignExchangesOIBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherFeesAndCommissionsOIBNK" xlink:label="OtherFeesAndCommissionsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesAndCommissionsOIBNK" xlink:to="OtherFeesAndCommissionsOIBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOrdinaryIncomeOIBNK" xlink:label="OtherOrdinaryIncomeOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinaryIncomeBNK" xlink:to="OtherOrdinaryIncomeOIBNK" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainsOnForeignExchangeTransactionsOIBNK" xlink:label="GainsOnForeignExchangeTransactionsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryIncomeOIBNK" xlink:to="GainsOnForeignExchangeTransactionsOIBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnTradingAccountSecuritiesTransactionsOIBNK" xlink:label="GainOnTradingAccountSecuritiesTransactionsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryIncomeOIBNK" xlink:to="GainOnTradingAccountSecuritiesTransactionsOIBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainsOnSalesOfBondsOIBNK" xlink:label="GainsOnSalesOfBondsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryIncomeOIBNK" xlink:to="GainsOnSalesOfBondsOIBNK" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainsOnRedemptionOfBondsOIBNK" xlink:label="GainsOnRedemptionOfBondsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryIncomeOIBNK" xlink:to="GainsOnRedemptionOfBondsOIBNK" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeFromDerivativesOtherThanForTradingOrHedgingOIBNK" xlink:label="IncomeFromDerivativesOtherThanForTradingOrHedgingOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryIncomeOIBNK" xlink:to="IncomeFromDerivativesOtherThanForTradingOrHedgingOIBNK" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOtherOrdinaryIncomeOIBNK" xlink:label="OtherOtherOrdinaryIncomeOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryIncomeOIBNK" xlink:to="OtherOtherOrdinaryIncomeOIBNK" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherIncomeOIBNK" xlink:label="OtherIncomeOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinaryIncomeBNK" xlink:to="OtherIncomeOIBNK" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ReversalOfAllowanceForLoanLossesOIBNK" xlink:label="ReversalOfAllowanceForLoanLossesOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherIncomeOIBNK" xlink:to="ReversalOfAllowanceForLoanLossesOIBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RecoveriesOfWrittenOffClaimsOIBNK" xlink:label="RecoveriesOfWrittenOffClaimsOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherIncomeOIBNK" xlink:to="RecoveriesOfWrittenOffClaimsOIBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSalesOfStocksAndOtherSecuritiesOIBNK" xlink:label="GainOnSalesOfStocksAndOtherSecuritiesOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherIncomeOIBNK" xlink:to="GainOnSalesOfStocksAndOtherSecuritiesOIBNK" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnMoneyHeldInTrustOIBNK" xlink:label="GainOnMoneyHeldInTrustOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherIncomeOIBNK" xlink:to="GainOnMoneyHeldInTrustOIBNK" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOtherIncomeOIBNK" xlink:label="OtherOtherIncomeOIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherIncomeOIBNK" xlink:to="OtherOtherIncomeOIBNK" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryExpensesBNK" xlink:label="OrdinaryExpensesBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="OrdinaryExpensesBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestExpensesOEBNK" xlink:label="InterestExpensesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinaryExpensesBNK" xlink:to="InterestExpensesOEBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnNegotiableCertificatesOfDepositOEBNK" xlink:label="InterestOnNegotiableCertificatesOfDepositOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnNegotiableCertificatesOfDepositOEBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnCallMoneyOEBNK" xlink:label="InterestOnCallMoneyOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnCallMoneyOEBNK" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnPayablesUnderRepurchaseAgreementsOEBNK" xlink:label="InterestOnPayablesUnderRepurchaseAgreementsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnPayablesUnderRepurchaseAgreementsOEBNK" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnPayablesUnderSecuritiesLendingTransactionsOEBNK" xlink:label="InterestOnPayablesUnderSecuritiesLendingTransactionsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnPayablesUnderSecuritiesLendingTransactionsOEBNK" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnBillsSoldOEBNK" xlink:label="InterestOnBillsSoldOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnBillsSoldOEBNK" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnCommercialPapersNOE" xlink:label="InterestOnCommercialPapersNOE"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnCommercialPapersNOE" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnBorrowingsAndRediscountsOEBNK" xlink:label="InterestOnBorrowingsAndRediscountsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnBorrowingsAndRediscountsOEBNK" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnShortTermBondsNOE" xlink:label="InterestOnShortTermBondsNOE"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnShortTermBondsNOE" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnBondsNOE" xlink:label="InterestOnBondsNOE"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnBondsNOE" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnBondsWithSubscriptionRightsToSharesOEBNK" xlink:label="InterestOnBondsWithSubscriptionRightsToSharesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnBondsWithSubscriptionRightsToSharesOEBNK" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnInterestSwapsOEBNK" xlink:label="InterestOnInterestSwapsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnInterestSwapsOEBNK" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherInterestExpensesOEBNK" xlink:label="OtherInterestExpensesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="OtherInterestExpensesOEBNK" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestOnDepositsOEBNK" xlink:label="InterestOnDepositsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="InterestExpensesOEBNK" xlink:to="InterestOnDepositsOEBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_FeesAndCommissionsPaymentsOEBNK" xlink:label="FeesAndCommissionsPaymentsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinaryExpensesBNK" xlink:to="FeesAndCommissionsPaymentsOEBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_FeesAndCommissionsOnDomesticAndForeignExchangesOEBNK" xlink:label="FeesAndCommissionsOnDomesticAndForeignExchangesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesAndCommissionsPaymentsOEBNK" xlink:to="FeesAndCommissionsOnDomesticAndForeignExchangesOEBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherFeesAndCommissionsOEBNK" xlink:label="OtherFeesAndCommissionsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="FeesAndCommissionsPaymentsOEBNK" xlink:to="OtherFeesAndCommissionsOEBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOrdinaryExpensesOEBNK" xlink:label="OtherOrdinaryExpensesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinaryExpensesBNK" xlink:to="OtherOrdinaryExpensesOEBNK" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnForeignExchangeTransactionsOEBNK" xlink:label="LossOnForeignExchangeTransactionsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryExpensesOEBNK" xlink:to="LossOnForeignExchangeTransactionsOEBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnTradingAccountSecuritiesTransactionsOEBNK" xlink:label="LossOnTradingAccountSecuritiesTransactionsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryExpensesOEBNK" xlink:to="LossOnTradingAccountSecuritiesTransactionsOEBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSalesOfBondsOEBNK" xlink:label="LossOnSalesOfBondsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryExpensesOEBNK" xlink:to="LossOnSalesOfBondsOEBNK" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnRedemptionOfBondsOEBNK" xlink:label="LossOnRedemptionOfBondsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryExpensesOEBNK" xlink:to="LossOnRedemptionOfBondsOEBNK" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnDevaluationOfBondsOEBNK" xlink:label="LossOnDevaluationOfBondsOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryExpensesOEBNK" xlink:to="LossOnDevaluationOfBondsOEBNK" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_AmortizationOfBondIssuanceCostNOE" xlink:label="AmortizationOfBondIssuanceCostNOE"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryExpensesOEBNK" xlink:to="AmortizationOfBondIssuanceCostNOE" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExpensesOnDerivativesOtherThanForTradingOrHedgingOEBNK" xlink:label="ExpensesOnDerivativesOtherThanForTradingOrHedgingOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryExpensesOEBNK" xlink:to="ExpensesOnDerivativesOtherThanForTradingOrHedgingOEBNK" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOtherOperatingExpensesOEBNK" xlink:label="OtherOtherOperatingExpensesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherOrdinaryExpensesOEBNK" xlink:to="OtherOtherOperatingExpensesOEBNK" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GeneralAndAdministrativeExpensesOEBNK" xlink:label="GeneralAndAdministrativeExpensesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinaryExpensesBNK" xlink:to="GeneralAndAdministrativeExpensesOEBNK" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherExpensesOEBNK" xlink:label="OtherExpensesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OrdinaryExpensesBNK" xlink:to="OtherExpensesOEBNK" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfAllowanceForLoanLossesOEBNK" xlink:label="ProvisionOfAllowanceForLoanLossesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherExpensesOEBNK" xlink:to="ProvisionOfAllowanceForLoanLossesOEBNK" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_WrittenOffOfLoansOEBNK" xlink:label="WrittenOffOfLoansOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherExpensesOEBNK" xlink:to="WrittenOffOfLoansOEBNK" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossesOnSalesOfStocksAndOtherSecuritiesOEBNK" xlink:label="LossesOnSalesOfStocksAndOtherSecuritiesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherExpensesOEBNK" xlink:to="LossesOnSalesOfStocksAndOtherSecuritiesOEBNK" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossesOnDevaluationOfStocksAndOtherSecuritiesOEBNK" xlink:label="LossesOnDevaluationOfStocksAndOtherSecuritiesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherExpensesOEBNK" xlink:to="LossesOnDevaluationOfStocksAndOtherSecuritiesOEBNK" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnMoneyHeldInTrustOEBNK" xlink:label="LossOnMoneyHeldInTrustOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherExpensesOEBNK" xlink:to="LossOnMoneyHeldInTrustOEBNK" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherOtherExpensesOEBNK" xlink:label="OtherOtherExpensesOEBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OtherExpensesOEBNK" xlink:to="OtherOtherExpensesOEBNK" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncome" xlink:label="OrdinaryIncome"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="OrdinaryIncome" order="3.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/bnk/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryIncome" xlink:label="ExtraordinaryIncome"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="ExtraordinaryIncome" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnDisposalOfNoncurrentAssetsEI" xlink:label="GainOnDisposalOfNoncurrentAssetsEI"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExtraordinaryIncome" xlink:to="GainOnDisposalOfNoncurrentAssetsEI" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnNegativeGoodwillEI" xlink:label="GainOnNegativeGoodwillEI"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExtraordinaryIncome" xlink:to="GainOnNegativeGoodwillEI" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransferFromReserveForFinancialProductsTransactionLiabilitiesEIBNK" xlink:label="TransferFromReserveForFinancialProductsTransactionLiabilitiesEIBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExtraordinaryIncome" xlink:to="TransferFromReserveForFinancialProductsTransactionLiabilitiesEIBNK" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherEI" xlink:label="OtherEI"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExtraordinaryIncome" xlink:to="OtherEI" order="4.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/bnk/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryLoss" xlink:label="ExtraordinaryLoss"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="ExtraordinaryLoss" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnDisposalOfNoncurrentAssetsEL" xlink:label="LossOnDisposalOfNoncurrentAssetsEL"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExtraordinaryLoss" xlink:to="LossOnDisposalOfNoncurrentAssetsEL" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ImpairmentLossEL" xlink:label="ImpairmentLossEL"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExtraordinaryLoss" xlink:to="ImpairmentLossEL" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TransferToReserveForFinancialProductsTransactionLiabilitiesELBNK" xlink:label="TransferToReserveForFinancialProductsTransactionLiabilitiesELBNK"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExtraordinaryLoss" xlink:to="TransferToReserveForFinancialProductsTransactionLiabilitiesELBNK" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherEL" xlink:label="OtherEL"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ExtraordinaryLoss" xlink:to="OtherEL" order="4.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jppfs/bnk/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeBeforeIncomeTaxes" xlink:label="IncomeBeforeIncomeTaxes"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeBeforeIncomeTaxes" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesCurrent" xlink:label="IncomeTaxesCurrent"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesCurrent" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesForGlobalMinimumTax" xlink:label="IncomeTaxesForGlobalMinimumTax"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesForGlobalMinimumTax" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesDeferred" xlink:label="IncomeTaxesDeferred"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxesDeferred" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxes" xlink:label="IncomeTaxes"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="IncomeTaxes" order="10.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeLineItems" xlink:to="ProfitLoss" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeHeading" xlink:label="StatementOfIncomeHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeHeading" xlink:to="StatementOfIncomeTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="StatementOfIncomeHeading" xlink:to="StatementOfIncomeLineItems" order="2.0"/>
+  </link:presentationLink>
+</link:linkbase>

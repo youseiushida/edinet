@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:iso4217="http://www.xbrl.org/2003/iso4217" xmlns:jpdei_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" xmlns:jplvh010000-lvh_X99014-000="http://disclosure.edinet-fsa.go.jp/jplvh010000/lvh/001/X99014-000/2026-08-07/01/2026-08-10" xmlns:jplvh_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2025-11-01/jplvh_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrldi="http://xbrl.org/2006/xbrldi" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <link:schemaRef xlink:href="jplvh010000-lvh-001_X99014-000_2026-08-07_01_2026-08-10.xsd" xlink:type="simple"/>
+  <xbrli:context id="FilingDateInstant">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">X99014-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2026-08-10</xbrli:instant>
+</xbrli:period>
+</xbrli:context>
+  <xbrli:context id="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">X99014-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2026-08-10</xbrli:instant>
+</xbrli:period>
+<xbrli:scenario>
+<xbrldi:explicitMember dimension="jplvh_cor:FilersLargeVolumeHoldersAndJointHoldersAxis">jplvh010000-lvh_X99014-000:FilerLargeVolumeHolder1Member</xbrldi:explicitMember>
+</xbrli:scenario>
+</xbrli:context>
+  <xbrli:context id="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">X99014-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2026-08-10</xbrli:instant>
+</xbrli:period>
+<xbrli:scenario>
+<xbrldi:explicitMember dimension="jplvh_cor:FilersLargeVolumeHoldersAndJointHoldersAxis">jplvh010000-lvh_X99014-000:FilerLargeVolumeHolder2Member</xbrldi:explicitMember>
+</xbrli:scenario>
+</xbrli:context>
+  <xbrli:unit id="JPY">
+<xbrli:measure>iso4217:JPY</xbrli:measure>
+</xbrli:unit>
+  <xbrli:unit id="pure">
+<xbrli:measure>xbrli:pure</xbrli:measure>
+</xbrli:unit>
+  <xbrli:unit id="shares">
+<xbrli:measure>xbrli:shares</xbrli:measure>
+</xbrli:unit>
+  <jplvh_cor:TotalNumberOfFilersAndJointHoldersCoverPage contextRef="FilingDateInstant" decimals="0" unitRef="pure">2</jplvh_cor:TotalNumberOfFilersAndJointHoldersCoverPage>
+  <jpdei_cor:NumberOfSubmissionDEI contextRef="FilingDateInstant" decimals="0" unitRef="pure">1</jpdei_cor:NumberOfSubmissionDEI>
+  <jplvh_cor:StocksOrInvestmentSecuritiesEtcArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" decimals="0" unitRef="shares">980000</jplvh_cor:StocksOrInvestmentSecuritiesEtcArticle27233MainClause>
+  <jplvh_cor:TotalArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" decimals="0" unitRef="shares">980000</jplvh_cor:TotalArticle27233MainClause>
+  <jplvh_cor:TotalNumberOfStocksEtcHeld contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" decimals="0" unitRef="shares">980000</jplvh_cor:TotalNumberOfStocksEtcHeld>
+  <jplvh_cor:TotalNumberOfOutstandingStocksEtc contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" decimals="0" unitRef="shares">23000000</jplvh_cor:TotalNumberOfOutstandingStocksEtc>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtc contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" decimals="4" unitRef="pure">0.0426</jplvh_cor:HoldingRatioOfShareCertificatesEtc>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtcPerLastReport contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" unitRef="pure" xsi:nil="true"/>
+  <jplvh_cor:AmountOfOwnFund contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" decimals="-3" unitRef="JPY">285180000</jplvh_cor:AmountOfOwnFund>
+  <jplvh_cor:TotalAmountOfFundingForAcquisition contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" decimals="-3" unitRef="JPY">285180000</jplvh_cor:TotalAmountOfFundingForAcquisition>
+  <jplvh_cor:StocksOrInvestmentSecuritiesEtcArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" decimals="0" unitRef="shares">200000</jplvh_cor:StocksOrInvestmentSecuritiesEtcArticle27233MainClause>
+  <jplvh_cor:TotalArticle27233MainClause contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" decimals="0" unitRef="shares">200000</jplvh_cor:TotalArticle27233MainClause>
+  <jplvh_cor:TotalNumberOfStocksEtcHeld contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" decimals="0" unitRef="shares">200000</jplvh_cor:TotalNumberOfStocksEtcHeld>
+  <jplvh_cor:TotalNumberOfOutstandingStocksEtc contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" decimals="0" unitRef="shares">23000000</jplvh_cor:TotalNumberOfOutstandingStocksEtc>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtc contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" decimals="4" unitRef="pure">0.0087</jplvh_cor:HoldingRatioOfShareCertificatesEtc>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtcPerLastReport contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" unitRef="pure" xsi:nil="true"/>
+  <jplvh_cor:AmountOfOwnFund contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" decimals="-3" unitRef="JPY">61400000</jplvh_cor:AmountOfOwnFund>
+  <jplvh_cor:TotalAmountOfFundingForAcquisition contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" decimals="-3" unitRef="JPY">61400000</jplvh_cor:TotalAmountOfFundingForAcquisition>
+  <jplvh_cor:StocksOrInvestmentSecuritiesEtcArticle27233MainClause contextRef="FilingDateInstant" decimals="0" unitRef="shares">1180000</jplvh_cor:StocksOrInvestmentSecuritiesEtcArticle27233MainClause>
+  <jplvh_cor:TotalArticle27233MainClause contextRef="FilingDateInstant" decimals="0" unitRef="shares">1180000</jplvh_cor:TotalArticle27233MainClause>
+  <jplvh_cor:TotalNumberOfStocksEtcHeld contextRef="FilingDateInstant" decimals="0" unitRef="shares">1180000</jplvh_cor:TotalNumberOfStocksEtcHeld>
+  <jplvh_cor:TotalNumberOfOutstandingStocksEtc contextRef="FilingDateInstant" decimals="0" unitRef="shares">23000000</jplvh_cor:TotalNumberOfOutstandingStocksEtc>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtc contextRef="FilingDateInstant" decimals="4" unitRef="pure">0.0513</jplvh_cor:HoldingRatioOfShareCertificatesEtc>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtcPerLastReport contextRef="FilingDateInstant" unitRef="pure" xsi:nil="true"/>
+  <jplvh_cor:TotalNumberOfStocksEtcHeld contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" decimals="0" unitRef="shares">980000</jplvh_cor:TotalNumberOfStocksEtcHeld>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtc contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" decimals="4" unitRef="pure">0.0426</jplvh_cor:HoldingRatioOfShareCertificatesEtc>
+  <jplvh_cor:TotalNumberOfStocksEtcHeld contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" decimals="0" unitRef="shares">200000</jplvh_cor:TotalNumberOfStocksEtcHeld>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtc contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" decimals="4" unitRef="pure">0.0087</jplvh_cor:HoldingRatioOfShareCertificatesEtc>
+  <jplvh_cor:TotalNumberOfStocksEtcHeld contextRef="FilingDateInstant" decimals="0" unitRef="shares">1180000</jplvh_cor:TotalNumberOfStocksEtcHeld>
+  <jplvh_cor:HoldingRatioOfShareCertificatesEtc contextRef="FilingDateInstant" decimals="4" unitRef="pure">0.0513</jplvh_cor:HoldingRatioOfShareCertificatesEtc>
+  <jplvh_cor:DocumentTitleCoverPage contextRef="FilingDateInstant">大量保有報告書</jplvh_cor:DocumentTitleCoverPage>
+  <jplvh_cor:ClauseOfStipulationCoverPage contextRef="FilingDateInstant">法第27条の23第１項</jplvh_cor:ClauseOfStipulationCoverPage>
+  <jplvh_cor:PlaceOfFilingCoverPage contextRef="FilingDateInstant">関東財務局長</jplvh_cor:PlaceOfFilingCoverPage>
+  <jplvh_cor:NameCoverPage contextRef="FilingDateInstant">Ｚ株式会社代表取締役社長  ○○  ○○</jplvh_cor:NameCoverPage>
+  <jplvh_cor:ResidentialAddressOrAddressOfRegisteredHeadquarterCoverPage contextRef="FilingDateInstant">東京都千代田区霞が関三丁目２番１号</jplvh_cor:ResidentialAddressOrAddressOfRegisteredHeadquarterCoverPage>
+  <jplvh_cor:DateWhenFilingRequirementAroseCoverPage contextRef="FilingDateInstant">2026-08-07</jplvh_cor:DateWhenFilingRequirementAroseCoverPage>
+  <jplvh_cor:FilingDateCoverPage contextRef="FilingDateInstant">2026-08-10</jplvh_cor:FilingDateCoverPage>
+  <jplvh_cor:ArrangementOfFilingCoverPage contextRef="FilingDateInstant">連名</jplvh_cor:ArrangementOfFilingCoverPage>
+  <jplvh_cor:ReasonForFilingChangeReportCoverPage contextRef="FilingDateInstant">－</jplvh_cor:ReasonForFilingChangeReportCoverPage>
+  <jpdei_cor:EDINETCodeDEI contextRef="FilingDateInstant">X99014</jpdei_cor:EDINETCodeDEI>
+  <jpdei_cor:FundCodeDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:SecurityCodeDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:FilerNameInJapaneseDEI contextRef="FilingDateInstant">Ｚ株式会社</jpdei_cor:FilerNameInJapaneseDEI>
+  <jpdei_cor:FilerNameInEnglishDEI contextRef="FilingDateInstant">Z Corporation</jpdei_cor:FilerNameInEnglishDEI>
+  <jpdei_cor:FundNameInJapaneseDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:FundNameInEnglishDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CabinetOfficeOrdinanceDEI contextRef="FilingDateInstant">株券等の大量保有の状況の開示に関する内閣府令</jpdei_cor:CabinetOfficeOrdinanceDEI>
+  <jpdei_cor:DocumentTypeDEI contextRef="FilingDateInstant">第一号様式</jpdei_cor:DocumentTypeDEI>
+  <jpdei_cor:AccountingStandardsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:WhetherConsolidatedFinancialStatementsArePreparedDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentPeriodEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:TypeOfCurrentPeriodDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentFiscalYearEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:PreviousFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ComparativePeriodEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:PreviousFiscalYearEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:NextFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:AmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:AmendmentFlagDEI>
+  <jpdei_cor:IdentificationOfDocumentSubjectToAmendmentDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ReportAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:ReportAmendmentFlagDEI>
+  <jpdei_cor:XBRLAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:XBRLAmendmentFlagDEI>
+  <jplvh_cor:EDINETCodeDEI contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">X99015</jplvh_cor:EDINETCodeDEI>
+  <jplvh_cor:SecurityCodeDEI contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:FilerNameInJapaneseDEI contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">株式会社Ｊ産業</jplvh_cor:FilerNameInJapaneseDEI>
+  <jplvh_cor:FilerNameInEnglishDEI contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member" xsi:nil="true"/>
+  <jplvh_cor:EDINETCodeDEI contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">X99016</jplvh_cor:EDINETCodeDEI>
+  <jplvh_cor:SecurityCodeDEI contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" xsi:nil="true"/>
+  <jplvh_cor:FilerNameInJapaneseDEI contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">株式会社Ｋ製作所</jplvh_cor:FilerNameInJapaneseDEI>
+  <jplvh_cor:FilerNameInEnglishDEI contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member" xsi:nil="true"/>
+  <jplvh_cor:NameOfIssuer contextRef="FilingDateInstant">○○○株式会社</jplvh_cor:NameOfIssuer>
+  <jplvh_cor:SecurityCodeOfIssuer contextRef="FilingDateInstant">8888</jplvh_cor:SecurityCodeOfIssuer>
+  <jplvh_cor:ListedOrOTC contextRef="FilingDateInstant">上場</jplvh_cor:ListedOrOTC>
+  <jplvh_cor:StockListing contextRef="FilingDateInstant">東京証券取引所</jplvh_cor:StockListing>
+  <jplvh_cor:IndividualOrCorporation contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">法人（株式会社）</jplvh_cor:IndividualOrCorporation>
+  <jplvh_cor:Name contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">株式会社Ｊ産業</jplvh_cor:Name>
+  <jplvh_cor:ResidentialAddressOrAddressOfRegisteredHeadquarter contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">東京都港区○○一丁目２番２号</jplvh_cor:ResidentialAddressOrAddressOfRegisteredHeadquarter>
+  <jplvh_cor:DateOfEstablishment contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">1935-06-20</jplvh_cor:DateOfEstablishment>
+  <jplvh_cor:NameOfRepresentative contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">○○  ○○</jplvh_cor:NameOfRepresentative>
+  <jplvh_cor:JobTitleOfRepresentative contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">代表取締役社長</jplvh_cor:JobTitleOfRepresentative>
+  <jplvh_cor:DescriptionOfBusiness contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">………………………………………………………………………………………………………………………………………………………………</jplvh_cor:DescriptionOfBusiness>
+  <jplvh_cor:ContactInformationAndPerson contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">株式会社Ｊ産業  取締役社長室長  ○○  ○○</jplvh_cor:ContactInformationAndPerson>
+  <jplvh_cor:TelephoneNumber contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">03（8888）8888</jplvh_cor:TelephoneNumber>
+  <jplvh_cor:PurposeOfHolding contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">政策投資</jplvh_cor:PurposeOfHolding>
+  <jplvh_cor:ActOfMakingImportantProposalEtc contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">該当事項はありません。</jplvh_cor:ActOfMakingImportantProposalEtc>
+  <jplvh_cor:BaseDate contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">2026-08-07</jplvh_cor:BaseDate>
+  <jplvh_cor:DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">
+&lt;h4&gt;（５）【当該株券等の発行者の発行する株券等に関する最近60日間の取得又は処分の状況】&lt;/h4&gt;
+&lt;div&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 84.0pt; min-width: 84.0pt"/&gt;
+&lt;col style="width: 84.0pt; min-width: 84.0pt"/&gt;
+&lt;col style="width: 61.5pt; min-width: 61.5pt"/&gt;
+&lt;col style="width: 46.5pt; min-width: 46.5pt"/&gt;
+&lt;col style="width: 82.5pt; min-width: 82.5pt"/&gt;
+&lt;col style="width: 82.5pt; min-width: 82.5pt"/&gt;
+&lt;col style="width: 48.0pt; min-width: 48.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;年月日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;株券等の種類&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;数量&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;割合&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;市場内外取引の別&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;取得又は処分の別&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;単価&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: center"&gt;令和８年７月24日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;株券（普通株式）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"&gt;70,000株&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"&gt;0.30％&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;市場内&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;取得&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: center"&gt;令和８年８月３日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;株券（普通株式）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"&gt;60,000株&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"&gt;0.26％&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;市場内&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;取得&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: center"&gt;令和８年８月７日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;株券（普通株式）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"&gt;50,000株&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"&gt;0.22％&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;市場内&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;取得&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jplvh_cor:DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock>
+  <jplvh_cor:SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">該当事項はありません。</jplvh_cor:SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock>
+  <jplvh_cor:BreakdownOfBorrowingsTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">
+&lt;div class="content"&gt;②【借入金の内訳】&lt;/div&gt;
+&lt;div&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 111.0pt; min-width: 111.0pt"/&gt;
+&lt;col style="width: 64.5pt; min-width: 64.5pt"/&gt;
+&lt;col style="width: 72.0pt; min-width: 72.0pt"/&gt;
+&lt;col style="width: 84.75pt; min-width: 84.75pt"/&gt;
+&lt;col style="width: 72.0pt; min-width: 72.0pt"/&gt;
+&lt;col style="width: 84.75pt; min-width: 84.75pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;名称（支店名）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;業種&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;代表者氏名&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;所在地&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;借入目的&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;金額（千円）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;該当事項はありません。&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jplvh_cor:BreakdownOfBorrowingsTextBlock>
+  <jplvh_cor:NamesEtcOfCreditorsTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">
+&lt;div class="content"&gt;③【借入先の名称等】&lt;/div&gt;
+&lt;div class="pageBreakAfter"&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 190.0pt; min-width: 190.0pt"/&gt;
+&lt;col style="width: 91.0pt; min-width: 91.05pt"/&gt;
+&lt;col style="width: 208.0pt; min-width: 208.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;名称（支店名）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;代表者氏名&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;所在地&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.0pt"&gt;該当事項はありません。&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.0pt"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.0pt"/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jplvh_cor:NamesEtcOfCreditorsTextBlock>
+  <jplvh_cor:IndividualOrCorporation contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">法人（株式会社）</jplvh_cor:IndividualOrCorporation>
+  <jplvh_cor:Name contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">株式会社Ｋ製作所</jplvh_cor:Name>
+  <jplvh_cor:ResidentialAddressOrAddressOfRegisteredHeadquarter contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">東京都中央区○○五丁目４番３号</jplvh_cor:ResidentialAddressOrAddressOfRegisteredHeadquarter>
+  <jplvh_cor:DateOfEstablishment contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">1947-05-01</jplvh_cor:DateOfEstablishment>
+  <jplvh_cor:NameOfRepresentative contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">○○  ○○</jplvh_cor:NameOfRepresentative>
+  <jplvh_cor:JobTitleOfRepresentative contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">代表取締役社長</jplvh_cor:JobTitleOfRepresentative>
+  <jplvh_cor:DescriptionOfBusiness contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">………………………………………………………………………………………………………………………………………………………………</jplvh_cor:DescriptionOfBusiness>
+  <jplvh_cor:ContactInformationAndPerson contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">株式会社Ｋ製作所  総務部長  ○○  ○○</jplvh_cor:ContactInformationAndPerson>
+  <jplvh_cor:TelephoneNumber contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">03（8888）8888</jplvh_cor:TelephoneNumber>
+  <jplvh_cor:PurposeOfHolding contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">政策投資</jplvh_cor:PurposeOfHolding>
+  <jplvh_cor:ActOfMakingImportantProposalEtc contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">該当事項はありません。</jplvh_cor:ActOfMakingImportantProposalEtc>
+  <jplvh_cor:BaseDate contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">2026-08-07</jplvh_cor:BaseDate>
+  <jplvh_cor:DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">
+&lt;h4&gt;（５）【当該株券等の発行者の発行する株券等に関する最近60日間の取得又は処分の状況】&lt;/h4&gt;
+&lt;div&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 111.0pt; min-width: 111.0pt"/&gt;
+&lt;col style="width: 75.0pt; min-width: 75.0pt"/&gt;
+&lt;col style="width: 61.5pt; min-width: 61.5pt"/&gt;
+&lt;col style="width: 46.5pt; min-width: 46.5pt"/&gt;
+&lt;col style="width: 82.5pt; min-width: 82.5pt"/&gt;
+&lt;col style="width: 82.5pt; min-width: 82.5pt"/&gt;
+&lt;col style="width: 30.0pt; min-width: 30.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;年月日&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;株券等の種類&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;数量&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;割合&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;市場内外取引の別&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;取得又は処分の別&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;単価&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: center"&gt;該当事項はありません。&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left "/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left "/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left "/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jplvh_cor:DetailsOfAcquisitionsAndDisposalsOfStocksEtcIssuedByIssuerOfSaidStocksEtcDuringLast60DaysTextBlock>
+  <jplvh_cor:SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">該当事項はありません。</jplvh_cor:SignificantContractsRelatedToSaidStocksEtcSuchAsCollateralAgreementsTextBlock>
+  <jplvh_cor:BreakdownOfBorrowingsTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">
+&lt;div class="content"&gt;②【借入金の内訳】&lt;/div&gt;
+&lt;div&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 111.0pt; min-width: 111.0pt"/&gt;
+&lt;col style="width: 64.5pt; min-width: 64.5pt"/&gt;
+&lt;col style="width: 72.0pt; min-width: 72.0pt"/&gt;
+&lt;col style="width: 84.75pt; min-width: 84.75pt"/&gt;
+&lt;col style="width: 72.0pt; min-width: 72.0pt"/&gt;
+&lt;col style="width: 84.75pt; min-width: 84.75pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;名称（支店名）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;業種&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;代表者氏名&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;所在地&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;借入目的&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;金額（千円）&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"&gt;該当事項はありません。&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: left"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt; text-align: right"/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jplvh_cor:BreakdownOfBorrowingsTextBlock>
+  <jplvh_cor:NamesEtcOfCreditorsTextBlock contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">
+&lt;div class="content"&gt;③【借入先の名称等】&lt;/div&gt;
+&lt;div class="pageBreakAfter"&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 190.0pt; min-width: 190.0pt"/&gt;
+&lt;col style="width: 91.0pt; min-width: 91.0pt"/&gt;
+&lt;col style="width: 208.0pt; min-width: 208.0pt"/&gt;
+&lt;/colgroup&gt;
+&lt;tbody&gt;
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;名称（支店名）&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;代表者氏名&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; text-align: center; line-height: 10.5pt"&gt;所在地&lt;/p&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr style="height: 20.25pt; min-height: 20.25pt"&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt"&gt;該当事項はありません。&lt;/p&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt"/&gt;
+&lt;/td&gt;
+&lt;td style="border: black 0.75pt solid"&gt;
+&lt;p style="margin-right: 4.5pt; margin-left: 4.5pt; line-height: 10.5pt"/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jplvh_cor:NamesEtcOfCreditorsTextBlock>
+  <jplvh_cor:InformationAboutJointHoldersTextBlock contextRef="FilingDateInstant">該当事項はありません。</jplvh_cor:InformationAboutJointHoldersTextBlock>
+  <jplvh_cor:Name contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">株式会社Ｊ産業</jplvh_cor:Name>
+  <jplvh_cor:Name contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">株式会社Ｋ製作所</jplvh_cor:Name>
+  <jplvh_cor:BaseDate contextRef="FilingDateInstant">2026-08-07</jplvh_cor:BaseDate>
+  <jplvh_cor:Name contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder1Member">株式会社Ｊ産業</jplvh_cor:Name>
+  <jplvh_cor:Name contextRef="FilingDateInstant_jplvh010000-lvh_X99014-000FilerLargeVolumeHolder2Member">株式会社Ｋ製作所</jplvh_cor:Name>
+</xbrli:xbrl>

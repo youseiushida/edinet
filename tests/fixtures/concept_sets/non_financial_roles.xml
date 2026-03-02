@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+
+  <!-- Non-financial role: CoverPage -->
+  <link:presentationLink xlink:type="extended"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_std_CoverPage">
+
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_CoverPageHeading"
+        xlink:label="loc_CoverHeading"/>
+    <link:loc xlink:type="locator"
+        xlink:href="jppfs_cor.xsd#jppfs_cor_CompanyName"
+        xlink:label="loc_CompanyName"/>
+
+    <link:presentationArc xlink:type="arc"
+        xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child"
+        xlink:from="loc_CoverHeading" xlink:to="loc_CompanyName" order="1"/>
+  </link:presentationLink>
+</link:linkbase>

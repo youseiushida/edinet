@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://disclosure.edinet-fsa.go.jp/2013/manifest">
+	<tocComposition>
+		<title xml:lang="ja">独立監査人の報告書</title>
+		<title xml:lang="en">Independent Auditor's Report</title>
+		<item ref="jpaud" extrole="http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_IndependentAuditorsReport" in="presentation"/>
+	</tocComposition>
+	<list>
+		<instance id="jpaud" type="AuditDoc" preferredFilename="jpaud-qrr-cn-001_X99005-000_2026-09-30_01_2026-11-14.xbrl">
+			<ixbrl>jpaud-qrr-cn-001_X99005-000_2026-09-30_01_2026-11-14_ixbrl.htm</ixbrl>
+		</instance>
+	</list>
+</manifest>

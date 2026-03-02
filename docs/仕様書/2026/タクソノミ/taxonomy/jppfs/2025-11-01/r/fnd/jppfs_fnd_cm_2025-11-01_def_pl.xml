@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_fnd_StatementOfIncomeAndRetainedEarnings-ListOfAccounts" xlink:type="simple" xlink:href="../../jppfs_rt_2025-11-01.xsd#rol_fnd_StatementOfIncomeAndRetainedEarnings-ListOfAccounts"/>
+  <link:definitionLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_fnd_StatementOfIncomeAndRetainedEarnings-ListOfAccounts">
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingIncomeAbstract" xlink:label="NonOperatingIncomeAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingIncome" xlink:label="NonOperatingIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingIncomeAbstract" xlink:to="NonOperatingIncome" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingExpensesAbstract" xlink:label="NonOperatingExpensesAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonOperatingExpenses" xlink:label="NonOperatingExpenses"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="NonOperatingExpensesAbstract" xlink:to="NonOperatingExpenses" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryIncomeAbstract" xlink:label="ExtraordinaryIncomeAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryIncome" xlink:label="ExtraordinaryIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryIncomeAbstract" xlink:to="ExtraordinaryIncome" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryLossAbstract" xlink:label="ExtraordinaryLossAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ExtraordinaryLoss" xlink:label="ExtraordinaryLoss"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="ExtraordinaryLossAbstract" xlink:to="ExtraordinaryLoss" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeAndRetainedEarningsLineItems" xlink:label="StatementOfIncomeAndRetainedEarningsLineItems"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueAbstractFND" xlink:label="OperatingRevenueAbstractFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="OperatingRevenueAbstractFND" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsIncomeOIFND" xlink:label="DividendsIncomeOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="DividendsIncomeOIFND" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsStockOIFND" xlink:label="DividendsStockOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="DividendsStockOIFND" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestIncomeOIFND" xlink:label="InterestIncomeOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="InterestIncomeOIFND" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitAndLossOnBuyingAndSellingOfSecuritiesAndOtherOIFND" xlink:label="ProfitAndLossOnBuyingAndSellingOfSecuritiesAndOtherOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="ProfitAndLossOnBuyingAndSellingOfSecuritiesAndOtherOIFND" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitAndLossOnDealingOfDerivativesOIFND" xlink:label="ProfitAndLossOnDealingOfDerivativesOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="ProfitAndLossOnDealingOfDerivativesOIFND" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ForeignExchangeGainsOrLossesOIFND" xlink:label="ForeignExchangeGainsOrLossesOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="ForeignExchangeGainsOrLossesOIFND" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherRevenueOIFND" xlink:label="OtherRevenueOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="OtherRevenueOIFND" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnSecuritiesTransactionsOIFND" xlink:label="GainOnSecuritiesTransactionsOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="GainOnSecuritiesTransactionsOIFND" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnTransactionsOfFuturesMarketsOIFND" xlink:label="GainOnTransactionsOfFuturesMarketsOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="GainOnTransactionsOfFuturesMarketsOIFND" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnCancellationOIFND" xlink:label="GainOnCancellationOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="GainOnCancellationOIFND" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_GainOnAdditionalSubscriptionsOIFND" xlink:label="GainOnAdditionalSubscriptionsOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="GainOnAdditionalSubscriptionsOIFND" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherForeignCurrencyRevenueOIFND" xlink:label="OtherForeignCurrencyRevenueOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="OtherForeignCurrencyRevenueOIFND" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ReversalOfReserveForStockPriceFluctuationOIFND" xlink:label="ReversalOfReserveForStockPriceFluctuationOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="ReversalOfReserveForStockPriceFluctuationOIFND" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ReversalOfReserveForPriceFluctuationOIFND" xlink:label="ReversalOfReserveForPriceFluctuationOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="ReversalOfReserveForPriceFluctuationOIFND" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueAdjustmentOIFND" xlink:label="RevenueAdjustmentOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="RevenueAdjustmentOIFND" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ValuationGainAdjustmentAccountsOIFND" xlink:label="ValuationGainAdjustmentAccountsOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="ValuationGainAdjustmentAccountsOIFND" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ReversalOfReserveForDividendsOIFND" xlink:label="ReversalOfReserveForDividendsOIFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="ReversalOfReserveForDividendsOIFND" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingRevenueFND" xlink:label="OperatingRevenueFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingRevenueAbstractFND" xlink:to="OperatingRevenueFND" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesAbstractFND" xlink:label="OperatingExpensesAbstractFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="OperatingExpensesAbstractFND" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SubscriptionFeeOEFND" xlink:label="SubscriptionFeeOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="SubscriptionFeeOEFND" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InterestExpensesOEFND" xlink:label="InterestExpensesOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="InterestExpensesOEFND" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TrusteeFeeOEFND" xlink:label="TrusteeFeeOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="TrusteeFeeOEFND" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_InvestmentTrustManagementFeeOEFND" xlink:label="InvestmentTrustManagementFeeOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="InvestmentTrustManagementFeeOEFND" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherExpensesOEFND" xlink:label="OtherExpensesOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="OtherExpensesOEFND" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnSecuritiesTransactionsOEFND" xlink:label="LossOnSecuritiesTransactionsOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="LossOnSecuritiesTransactionsOEFND" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnTransactionsOfFuturesMarketsOEFND" xlink:label="LossOnTransactionsOfFuturesMarketsOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="LossOnTransactionsOfFuturesMarketsOEFND" order="7.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnCancellationOEFND" xlink:label="LossOnCancellationOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="LossOnCancellationOEFND" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_LossOnAdditionalSubscriptionsOEFND" xlink:label="LossOnAdditionalSubscriptionsOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="LossOnAdditionalSubscriptionsOEFND" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OtherForeignCurrencyCostsOEFND" xlink:label="OtherForeignCurrencyCostsOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="OtherForeignCurrencyCostsOEFND" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsOEFND" xlink:label="DividendsOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="DividendsOEFND" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfReserveForStockPriceFluctuationOEFND" xlink:label="ProvisionOfReserveForStockPriceFluctuationOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="ProvisionOfReserveForStockPriceFluctuationOEFND" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfReserveForPriceFluctuationOEFND" xlink:label="ProvisionOfReserveForPriceFluctuationOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="ProvisionOfReserveForPriceFluctuationOEFND" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProvisionOfReserveForDividendsOEFND" xlink:label="ProvisionOfReserveForDividendsOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="ProvisionOfReserveForDividendsOEFND" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RevenueAdjustmentOEFND" xlink:label="RevenueAdjustmentOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="RevenueAdjustmentOEFND" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ValuationLossAdjustmentAccountsOEFND" xlink:label="ValuationLossAdjustmentAccountsOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="ValuationLossAdjustmentAccountsOEFND" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_RepaymentForRetainedLossOEFND" xlink:label="RepaymentForRetainedLossOEFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="RepaymentForRetainedLossOEFND" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingExpensesFND" xlink:label="OperatingExpensesFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="OperatingExpensesAbstractFND" xlink:to="OperatingExpensesFND" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncome" xlink:label="OperatingIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="OperatingIncome" order="3.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="NonOperatingIncomeAbstract" order="4.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="NonOperatingExpensesAbstract" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncome" xlink:label="OrdinaryIncome"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="OrdinaryIncome" order="6.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="ExtraordinaryIncomeAbstract" order="7.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="ExtraordinaryLossAbstract" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeBeforeIncomeTaxes" xlink:label="IncomeBeforeIncomeTaxes"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="IncomeBeforeIncomeTaxes" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesCurrent" xlink:label="IncomeTaxesCurrent"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="IncomeTaxesCurrent" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncomeTaxesDeferred" xlink:label="IncomeTaxesDeferred"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="IncomeTaxesDeferred" order="11.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss" xlink:label="ProfitLoss"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="ProfitLoss" order="12.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DistributionOfNetIncomeFromPartialRedemptionsFND" xlink:label="DistributionOfNetIncomeFromPartialRedemptionsFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="DistributionOfNetIncomeFromPartialRedemptionsFND" order="13.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DistributionOfNetIncomeFromPartialExchangeFND" xlink:label="DistributionOfNetIncomeFromPartialExchangeFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="DistributionOfNetIncomeFromPartialExchangeFND" order="14.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SurplusDeficitAtBeginningOfPeriodBeforeRetrospectiveApplicationAndRetrospectiveRestatementFND" xlink:label="SurplusDeficitAtBeginningOfPeriodBeforeRetrospectiveApplicationAndRetrospectiveRestatementFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="SurplusDeficitAtBeginningOfPeriodBeforeRetrospectiveApplicationAndRetrospectiveRestatementFND" order="15.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CumulativeEffectOfRetrospectiveApplicationAndRetrospectiveRestatementFND" xlink:label="CumulativeEffectOfRetrospectiveApplicationAndRetrospectiveRestatementFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="CumulativeEffectOfRetrospectiveApplicationAndRetrospectiveRestatementFND" order="16.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SurplusDeficitFND" xlink:label="SurplusDeficitFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="SurplusDeficitFND" order="17.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncreaseInSurplusOrDecreaseInDeficitFND" xlink:label="IncreaseInSurplusOrDecreaseInDeficitFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="IncreaseInSurplusOrDecreaseInDeficitFND" order="18.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncreaseInSurplusOrDecreaseInDeficitFromPartialRedemptionsFND" xlink:label="IncreaseInSurplusOrDecreaseInDeficitFromPartialRedemptionsFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IncreaseInSurplusOrDecreaseInDeficitFND" xlink:to="IncreaseInSurplusOrDecreaseInDeficitFromPartialRedemptionsFND" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncreaseInSurplusOrDecreaseInDeficitFromAdditionalSubscriptionsForThePeriodFND" xlink:label="IncreaseInSurplusOrDecreaseInDeficitFromAdditionalSubscriptionsForThePeriodFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IncreaseInSurplusOrDecreaseInDeficitFND" xlink:to="IncreaseInSurplusOrDecreaseInDeficitFromAdditionalSubscriptionsForThePeriodFND" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_IncreaseInSurplusOrDecreaseInDeficitFromPartialExchangeFND" xlink:label="IncreaseInSurplusOrDecreaseInDeficitFromPartialExchangeFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="IncreaseInSurplusOrDecreaseInDeficitFND" xlink:to="IncreaseInSurplusOrDecreaseInDeficitFromPartialExchangeFND" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DecreaseInSurplusOrIncreaseInDeficitFND" xlink:label="DecreaseInSurplusOrIncreaseInDeficitFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="DecreaseInSurplusOrIncreaseInDeficitFND" order="19.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DecreaseInSurplusOrIncreaseInDeficitFromPartialRedemptionsFND" xlink:label="DecreaseInSurplusOrIncreaseInDeficitFromPartialRedemptionsFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="DecreaseInSurplusOrIncreaseInDeficitFND" xlink:to="DecreaseInSurplusOrIncreaseInDeficitFromPartialRedemptionsFND" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DecreaseInSurplusOrIncreaseInDeficitFromAdditionalSubscriptionsForThePeriodFND" xlink:label="DecreaseInSurplusOrIncreaseInDeficitFromAdditionalSubscriptionsForThePeriodFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="DecreaseInSurplusOrIncreaseInDeficitFND" xlink:to="DecreaseInSurplusOrIncreaseInDeficitFromAdditionalSubscriptionsForThePeriodFND" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DecreaseInSurplusOrIncreaseInDeficitFromPartialExchangeFND" xlink:label="DecreaseInSurplusOrIncreaseInDeficitFromPartialExchangeFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="DecreaseInSurplusOrIncreaseInDeficitFND" xlink:to="DecreaseInSurplusOrIncreaseInDeficitFromPartialExchangeFND" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_DividendsFND" xlink:label="DividendsFND"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsLineItems" xlink:to="DividendsFND" order="20.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeAndRetainedEarningsAbstract" xlink:label="StatementOfIncomeAndRetainedEarningsAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_StatementOfIncomeAndRetainedEarningsTable" xlink:label="StatementOfIncomeAndRetainedEarningsTable"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsAbstract" xlink:to="StatementOfIncomeAndRetainedEarningsTable" order="1.0"/>
+    <link:definitionArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/general-special" xlink:from="StatementOfIncomeAndRetainedEarningsAbstract" xlink:to="StatementOfIncomeAndRetainedEarningsLineItems" order="2.0"/>
+  </link:definitionLink>
+</link:linkbase>

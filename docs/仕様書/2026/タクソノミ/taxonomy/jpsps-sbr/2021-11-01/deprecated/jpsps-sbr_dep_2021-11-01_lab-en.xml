@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/deprecatedDateLabel" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/deprecated-2009-12-16.xsd#deprecatedDateLabel"/>
+  <link:roleRef roleURI="http://www.xbrl.org/2009/role/deprecatedLabel" xlink:type="simple" xlink:href="http://www.xbrl.org/lrr/role/deprecated-2009-12-16.xsd#deprecatedLabel"/>
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="jpsps-sbr_dep_2021-11-01.xsd#jpsps-sbr_cor_PlaceForPublicInspectionCoverPageNA" xlink:label="PlaceForPublicInspectionCoverPageNA"/>
+    <link:label xlink:type="resource" xlink:label="label_PlaceForPublicInspectionCoverPageNA" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="label_PlaceForPublicInspectionCoverPageNA">2021 annual update</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="PlaceForPublicInspectionCoverPageNA" xlink:to="label_PlaceForPublicInspectionCoverPageNA"/>
+    <link:label xlink:type="resource" xlink:label="label_PlaceForPublicInspectionCoverPageNA_2" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="label_PlaceForPublicInspectionCoverPageNA_2">2021-11-09</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="PlaceForPublicInspectionCoverPageNA" xlink:to="label_PlaceForPublicInspectionCoverPageNA_2"/>
+    <link:loc xlink:type="locator" xlink:href="jpsps-sbr_dep_2021-11-01.xsd#jpsps-sbr_cor_AcquisitionsOfTreasurySharesNA" xlink:label="AcquisitionsOfTreasurySharesNA"/>
+    <link:label xlink:type="resource" xlink:label="label_AcquisitionsOfTreasurySharesNA" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="label_AcquisitionsOfTreasurySharesNA">2021 annual update</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="AcquisitionsOfTreasurySharesNA" xlink:to="label_AcquisitionsOfTreasurySharesNA"/>
+    <link:label xlink:type="resource" xlink:label="label_AcquisitionsOfTreasurySharesNA_2" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="label_AcquisitionsOfTreasurySharesNA_2">2021-11-09</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="AcquisitionsOfTreasurySharesNA" xlink:to="label_AcquisitionsOfTreasurySharesNA_2"/>
+    <link:loc xlink:type="locator" xlink:href="jpsps-sbr_dep_2021-11-01.xsd#jpsps-sbr_cor_DisposalsOfTreasurySharesNA" xlink:label="DisposalsOfTreasurySharesNA"/>
+    <link:label xlink:type="resource" xlink:label="label_DisposalsOfTreasurySharesNA" xlink:role="http://www.xbrl.org/2009/role/deprecatedLabel" xml:lang="en" id="label_DisposalsOfTreasurySharesNA">2021 annual update</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="DisposalsOfTreasurySharesNA" xlink:to="label_DisposalsOfTreasurySharesNA"/>
+    <link:label xlink:type="resource" xlink:label="label_DisposalsOfTreasurySharesNA_2" xlink:role="http://www.xbrl.org/2009/role/deprecatedDateLabel" xml:lang="en" id="label_DisposalsOfTreasurySharesNA_2">2021-11-09</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="DisposalsOfTreasurySharesNA" xlink:to="label_DisposalsOfTreasurySharesNA_2"/>
+  </link:labelLink>
+</link:linkbase>

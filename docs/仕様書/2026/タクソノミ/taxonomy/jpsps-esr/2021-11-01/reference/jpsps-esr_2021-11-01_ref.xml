@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock" xlink:label="PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第1号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock" xlink:to="reference_PublicOfferingOrSecondaryDistributionOfSpecifiedSecuritiesOutsideJapanTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_ChangesInMajorPartiesInvolvedTextBlock" xlink:label="ChangesInMajorPartiesInvolvedTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ChangesInMajorPartiesInvolvedTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第2号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ChangesInMajorPartiesInvolvedTextBlock" xlink:to="reference_ChangesInMajorPartiesInvolvedTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_MajorChangesInInvestmentManagementPolicyEtcTextBlock" xlink:label="MajorChangesInInvestmentManagementPolicyEtcTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_MajorChangesInInvestmentManagementPolicyEtcTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第3号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="MajorChangesInInvestmentManagementPolicyEtcTextBlock" xlink:to="reference_MajorChangesInInvestmentManagementPolicyEtcTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock" xlink:label="EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第4号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock" xlink:to="reference_EndOfTrustAccountingPeriodWithinSpecifiedPeriodTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_SignificantDisasterTextBlock" xlink:label="SignificantDisasterTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SignificantDisasterTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第5号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SignificantDisasterTextBlock" xlink:to="reference_SignificantDisasterTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_CommencementOrResolutionOfLitigationTextBlock" xlink:label="CommencementOrResolutionOfLitigationTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CommencementOrResolutionOfLitigationTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第6号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CommencementOrResolutionOfLitigationTextBlock" xlink:to="reference_CommencementOrResolutionOfLitigationTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_DecisionOnAbsorptionTypeMergerOfInvestmentCorporationTextBlock" xlink:label="DecisionOnAbsorptionTypeMergerOfInvestmentCorporationTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnAbsorptionTypeMergerOfInvestmentCorporationTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第7号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnAbsorptionTypeMergerOfInvestmentCorporationTextBlock" xlink:to="reference_DecisionOnAbsorptionTypeMergerOfInvestmentCorporationTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_DecisionOnConsolidationTypeMergerOfInvestmentCorporationTextBlock" xlink:label="DecisionOnConsolidationTypeMergerOfInvestmentCorporationTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnConsolidationTypeMergerOfInvestmentCorporationTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第8号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnConsolidationTypeMergerOfInvestmentCorporationTextBlock" xlink:to="reference_DecisionOnConsolidationTypeMergerOfInvestmentCorporationTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_MergerOfInvestmentTrustTextBlock" xlink:label="MergerOfInvestmentTrustTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_MergerOfInvestmentTrustTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第9号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="MergerOfInvestmentTrustTextBlock" xlink:to="reference_MergerOfInvestmentTrustTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock" xlink:label="PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第10号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock" xlink:to="reference_PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock" xlink:label="LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第11号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock" xlink:to="reference_LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock" xlink:label="EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第12号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock" xlink:to="reference_EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_CancelationOfRegistrationOrOrderForSuspensionOfBusinessEtcTextBlock" xlink:label="CancelationOfRegistrationOrOrderForSuspensionOfBusinessEtcTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CancelationOfRegistrationOrOrderForSuspensionOfBusinessEtcTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第13号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CancelationOfRegistrationOrOrderForSuspensionOfBusinessEtcTextBlock" xlink:to="reference_CancelationOfRegistrationOrOrderForSuspensionOfBusinessEtcTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-esr_cor_2021-11-01.xsd#jpsps-esr_cor_DecisionOnDissolutionEtcTextBlock" xlink:label="DecisionOnDissolutionEtcTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnDissolutionEtcTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第29条第2項第14号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnDissolutionEtcTextBlock" xlink:to="reference_DecisionOnDissolutionEtcTextBlock"/>
+  </link:referenceLink>
+</link:linkbase>

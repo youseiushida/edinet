@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jptoi/2025-11-01/jptoi_cor" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jptoi_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jptoi/2025-11-01/jptoi_cor" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jptoi_dep_2025-11-01_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="jptoi_dep_2025-11-01_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <xsd:import namespace="http://www.xbrl.org/2009/role/deprecated" schemaLocation="http://www.xbrl.org/lrr/role/deprecated-2009-12-16.xsd"/>
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd"/>
+  <xsd:element name="ResidentialAddressOrLocationOfFilerOfNotificationCoverPage" id="jptoi_cor_ResidentialAddressOrLocationOfFilerOfNotificationCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ContentsOfResolutionByShareholdersMeetingNATextBlock" id="jptoi_cor_ContentsOfResolutionByShareholdersMeetingNATextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ContentsOfResolutionByBoardOfDirectorsMeetingNATextBlock" id="jptoi_cor_ContentsOfResolutionByBoardOfDirectorsMeetingNATextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="OtherMattersContentsEtcOfResolutionsEtcByShareholdersMeetingOrBoardOfDirectorsMeetingNATextBlock" id="jptoi_cor_OtherMattersContentsEtcOfResolutionsEtcByShareholdersMeetingOrBoardOfDirectorsMeetingNATextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ShareCertificatesEtcRelatedToOwnSharesAlreadyAcquiredBySaidResolutionNATextBlock" id="jptoi_cor_ShareCertificatesEtcRelatedToOwnSharesAlreadyAcquiredBySaidResolutionNATextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="PermitEtcRegardingAcquisitionOfListedShareCertificatesEtcNA" id="jptoi_cor_PermitEtcRegardingAcquisitionOfListedShareCertificatesEtcNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="InformationReceivedOnFactAboutLaunchOfTenderOfferEtcNA" id="jptoi_cor_InformationReceivedOnFactAboutLaunchOfTenderOfferEtcNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="CalculationForPurchaseEtcByMethodOfProportionalDistributionNA" id="jptoi_cor_CalculationForPurchaseEtcByMethodOfProportionalDistributionNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="NameOfLegalRepresentativeCoverPageNA" id="jptoi_cor_NameOfLegalRepresentativeCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ResidentialAddressOrLocationOfLegalRepresentativeCoverPageNA" id="jptoi_cor_ResidentialAddressOrLocationOfLegalRepresentativeCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="NearestPlaceOfContactLegalRepresentativeCoverPageNA" id="jptoi_cor_NearestPlaceOfContactLegalRepresentativeCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="TelephoneNumberLegalRepresentativeCoverPageNA" id="jptoi_cor_TelephoneNumberLegalRepresentativeCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="NameOfContactPersonLegalRepresentativeCoverPageNA" id="jptoi_cor_NameOfContactPersonLegalRepresentativeCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="PlaceForPublicInspectionCoverPageNA" id="jptoi_cor_PlaceForPublicInspectionCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+</xsd:schema>

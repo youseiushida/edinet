@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+
+    <link:loc xlink:type="locator" xlink:label="CustomItem1"
+      xlink:href="jpcrp030000-asr_X99001-000_2025-11-01.xsd#jpcrp030000-asr_X99001-000_CustomExpense"/>
+    <link:loc xlink:type="locator" xlink:label="CustomItem2"
+      xlink:href="jpcrp030000-asr_X99001-000_2025-11-01.xsd#jpcrp030000-asr_X99001-000_CustomRevenue"/>
+
+    <link:label xlink:type="resource" xlink:label="label_CustomExpense"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Custom expense item</link:label>
+    <link:label xlink:type="resource" xlink:label="label_CustomRevenue"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Custom revenue item</link:label>
+
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="CustomItem1" xlink:to="label_CustomExpense"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="CustomItem2" xlink:to="label_CustomRevenue"/>
+
+  </link:labelLink>
+</link:linkbase>

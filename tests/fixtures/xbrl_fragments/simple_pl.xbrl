@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl
+    xmlns:xbrli="http://www.xbrl.org/2003/instance"
+    xmlns:link="http://www.xbrl.org/2003/linkbase"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
+    xmlns:jppfs_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2023-11-01/jppfs_cor"
+    xmlns:jpdei_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2023-11-01/jpdei_cor"
+    xmlns:jpigp_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpigp/2023-11-01/jpigp_cor"
+    xmlns:xbrldi="http://xbrl.org/2006/xbrldi"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace">
+
+  <link:schemaRef xlink:type="simple" xlink:href="example.xsd"/>
+
+  <xbrli:context id="CurrentYearDuration">
+    <xbrli:entity><xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">E00001</xbrli:identifier></xbrli:entity>
+    <xbrli:period><xbrli:startDate>2024-04-01</xbrli:startDate><xbrli:endDate>2025-03-31</xbrli:endDate></xbrli:period>
+  </xbrli:context>
+
+  <xbrli:context id="CurrentYearInstant">
+    <xbrli:entity><xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">E00001</xbrli:identifier></xbrli:entity>
+    <xbrli:period><xbrli:instant>2025-03-31</xbrli:instant></xbrli:period>
+  </xbrli:context>
+
+  <xbrli:context id="CurrentYearDuration_NonConsolidatedMember">
+    <xbrli:entity><xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">E00001</xbrli:identifier></xbrli:entity>
+    <xbrli:period><xbrli:startDate>2024-04-01</xbrli:startDate><xbrli:endDate>2025-03-31</xbrli:endDate></xbrli:period>
+    <xbrli:scenario>
+      <xbrldi:explicitMember dimension="jppfs_cor:ConsolidatedOrNonConsolidatedAxis">jppfs_cor:NonConsolidatedMember</xbrldi:explicitMember>
+    </xbrli:scenario>
+  </xbrli:context>
+
+  <xbrli:context id="Prior1YearDuration">
+    <xbrli:entity><xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">E00001</xbrli:identifier></xbrli:entity>
+    <xbrli:period><xbrli:startDate>2023-04-01</xbrli:startDate><xbrli:endDate>2024-03-31</xbrli:endDate></xbrli:period>
+  </xbrli:context>
+
+  <xbrli:unit id="JPY">
+    <xbrli:measure>iso4217:JPY</xbrli:measure>
+  </xbrli:unit>
+
+  <!-- Fact 1: 通常 numeric (decimals="-6", unitRef="JPY") -->
+  <jppfs_cor:NetSales contextRef="CurrentYearDuration" unitRef="JPY" decimals="-6">1000000000</jppfs_cor:NetSales>
+
+  <!-- Fact 2: 負の値 + id 属性 -->
+  <jppfs_cor:OperatingIncome contextRef="CurrentYearDuration" unitRef="JPY" decimals="-6" id="fact-002">-500000000</jppfs_cor:OperatingIncome>
+
+  <!-- Fact 3: decimals="INF" -->
+  <jppfs_cor:NumberOfSharesIssued contextRef="CurrentYearInstant" unitRef="JPY" decimals="INF">12345678</jppfs_cor:NumberOfSharesIssued>
+
+  <!-- Fact 4: xsi:nil="true" (self-closing) -->
+  <jppfs_cor:ExtraordinaryLoss contextRef="CurrentYearDuration" unitRef="JPY" decimals="-6" xsi:nil="true"/>
+
+  <!-- Fact 5: テキスト Fact (unitRef なし、DEI) -->
+  <jpdei_cor:FilerNameInJapaneseDEI contextRef="CurrentYearDuration" xml:lang="ja">テスト株式会社</jpdei_cor:FilerNameInJapaneseDEI>
+
+  <!-- Fact 6: nil テキスト Fact -->
+  <jpdei_cor:SecurityCodeDEI contextRef="CurrentYearDuration" xsi:nil="true"/>
+
+  <!-- Fact 7: decimals="0" -->
+  <jppfs_cor:TotalAssets contextRef="CurrentYearInstant" unitRef="JPY" decimals="0">9876543210</jppfs_cor:TotalAssets>
+
+  <!-- Fact 8: IFRS namespace (jpigp_cor) -->
+  <jpigp_cor:Revenue contextRef="CurrentYearDuration" unitRef="JPY" decimals="-6">2000000000</jpigp_cor:Revenue>
+
+  <!-- Fact 9: Fact 1 と同一 concept の duplicate -->
+  <jppfs_cor:NetSales contextRef="CurrentYearInstant" unitRef="JPY" decimals="-6">1100000000</jppfs_cor:NetSales>
+
+  <!-- Fact 10: 子要素を含む TextBlock -->
+  <jppfs_cor:NotesRegardingConsolidatedFinancialStatementsTextBlock contextRef="CurrentYearDuration" xml:lang="ja">前期の業績は<sub>注記参照</sub>の通りです。</jppfs_cor:NotesRegardingConsolidatedFinancialStatementsTextBlock>
+
+  <!-- BS 科目: instant context を使用 -->
+  <jppfs_cor:CurrentAssets contextRef="CurrentYearInstant" unitRef="JPY" decimals="-6">5000000000</jppfs_cor:CurrentAssets>
+  <jppfs_cor:NoncurrentAssets contextRef="CurrentYearInstant" unitRef="JPY" decimals="-6">3000000000</jppfs_cor:NoncurrentAssets>
+  <jppfs_cor:Assets contextRef="CurrentYearInstant" unitRef="JPY" decimals="-6">8000000000</jppfs_cor:Assets>
+  <jppfs_cor:CurrentLiabilities contextRef="CurrentYearInstant" unitRef="JPY" decimals="-6">2000000000</jppfs_cor:CurrentLiabilities>
+  <jppfs_cor:Liabilities contextRef="CurrentYearInstant" unitRef="JPY" decimals="-6">3000000000</jppfs_cor:Liabilities>
+  <jppfs_cor:NetAssets contextRef="CurrentYearInstant" unitRef="JPY" decimals="-6">5000000000</jppfs_cor:NetAssets>
+
+  <!-- CF 科目: duration context を使用 -->
+  <jppfs_cor:NetCashProvidedByUsedInOperatingActivities contextRef="CurrentYearDuration" unitRef="JPY" decimals="-6">1200000000</jppfs_cor:NetCashProvidedByUsedInOperatingActivities>
+  <jppfs_cor:NetCashProvidedByUsedInInvestmentActivities contextRef="CurrentYearDuration" unitRef="JPY" decimals="-6">-800000000</jppfs_cor:NetCashProvidedByUsedInInvestmentActivities>
+  <jppfs_cor:NetCashProvidedByUsedInFinancingActivities contextRef="CurrentYearDuration" unitRef="JPY" decimals="-6">-200000000</jppfs_cor:NetCashProvidedByUsedInFinancingActivities>
+  <jppfs_cor:CashAndCashEquivalentsAtEndOfPeriod contextRef="CurrentYearDuration" unitRef="JPY" decimals="-6">1500000000</jppfs_cor:CashAndCashEquivalentsAtEndOfPeriod>
+
+</xbrli:xbrl>

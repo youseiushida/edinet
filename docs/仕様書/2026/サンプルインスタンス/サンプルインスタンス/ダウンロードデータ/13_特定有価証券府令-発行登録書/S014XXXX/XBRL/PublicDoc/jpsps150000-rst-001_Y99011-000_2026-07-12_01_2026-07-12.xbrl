@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbrli:xbrl xmlns:jpdei_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2013-08-31/jpdei_cor" xmlns:jpsps_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpsps/2025-11-01/jpsps_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <link:schemaRef xlink:href="jpsps150000-rst-001_Y99011-000_2026-07-12_01_2026-07-12.xsd" xlink:type="simple"/>
+  <xbrli:context id="FilingDateInstant">
+<xbrli:entity>
+<xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">Y99011-000</xbrli:identifier>
+</xbrli:entity>
+<xbrli:period>
+<xbrli:instant>2026-07-12</xbrli:instant>
+</xbrli:period>
+</xbrli:context>
+  <xbrli:unit id="pure">
+<xbrli:measure>xbrli:pure</xbrli:measure>
+</xbrli:unit>
+  <jpdei_cor:NumberOfSubmissionDEI contextRef="FilingDateInstant" decimals="0" unitRef="pure">1</jpdei_cor:NumberOfSubmissionDEI>
+  <jpsps_cor:ShelfRegistrationNumberCoverPage contextRef="FilingDateInstant">88－投法88</jpsps_cor:ShelfRegistrationNumberCoverPage>
+  <jpsps_cor:DocumentTitleCoverPage contextRef="FilingDateInstant">発行登録書</jpsps_cor:DocumentTitleCoverPage>
+  <jpsps_cor:PlaceOfFilingCoverPage contextRef="FilingDateInstant">関東財務局長</jpsps_cor:PlaceOfFilingCoverPage>
+  <jpsps_cor:FilingDateCoverPage contextRef="FilingDateInstant">2026-07-12</jpsps_cor:FilingDateCoverPage>
+  <jpsps_cor:IssuerNameCoverPage contextRef="FilingDateInstant">ＥＦ投資法人</jpsps_cor:IssuerNameCoverPage>
+  <jpsps_cor:TitleAndNameOfRepresentativeCoverPage contextRef="FilingDateInstant">執行役員    ○○  ○○</jpsps_cor:TitleAndNameOfRepresentativeCoverPage>
+  <jpsps_cor:AddressOfRegisteredHeadquarterCoverPage contextRef="FilingDateInstant">東京都千代田区霞が関三丁目２番１号</jpsps_cor:AddressOfRegisteredHeadquarterCoverPage>
+  <jpsps_cor:NameOfContactPersonCoverPage contextRef="FilingDateInstant">○○  ○○</jpsps_cor:NameOfContactPersonCoverPage>
+  <jpsps_cor:TelephoneNumberCoverPage contextRef="FilingDateInstant">０３（３５０６）６０００</jpsps_cor:TelephoneNumberCoverPage>
+  <jpsps_cor:NameOfInvestmentCorporationRelatedToDomesticInvestmentSecuritiesToShelfRegisterForOfferingOrDistributionCoverPage contextRef="FilingDateInstant">ＥＦ投資法人</jpsps_cor:NameOfInvestmentCorporationRelatedToDomesticInvestmentSecuritiesToShelfRegisterForOfferingOrDistributionCoverPage>
+  <jpsps_cor:LegalFormOfDomesticInvestmentSecuritiesToShelfRegisterForOfferingOrDistributionCoverPage contextRef="FilingDateInstant">投資法人債券（短期投資法人債を除く。）</jpsps_cor:LegalFormOfDomesticInvestmentSecuritiesToShelfRegisterForOfferingOrDistributionCoverPage>
+  <jpsps_cor:PlannedPeriodOfIssueCoverPage contextRef="FilingDateInstant">この発行登録書による発行登録の効力発生予定日（令和８年７月20日）から２年を経過する日（令和10年７月19日）まで</jpsps_cor:PlannedPeriodOfIssueCoverPage>
+  <jpsps_cor:PlannedAmountOfIssueOrLimitOnOutstandingBalanceCoverPage contextRef="FilingDateInstant">発行予定額  80,000百万円</jpsps_cor:PlannedAmountOfIssueOrLimitOnOutstandingBalanceCoverPage>
+  <jpsps_cor:MattersSpecificToStabilizingOperationCoverPageTextBlock contextRef="FilingDateInstant">該当事項はありません。</jpsps_cor:MattersSpecificToStabilizingOperationCoverPageTextBlock>
+  <jpsps_cor:PlaceForPublicInspectionCoverPageTextBlock contextRef="FilingDateInstant">
+&lt;p style="margin: 0pt;  margin-bottom: 0pt; line-height: 13.5pt"&gt;
+株式会社東京証券取引所&lt;br/&gt;（東京都中央区日本橋兜町２番１号）
+&lt;/p&gt;
+</jpsps_cor:PlaceForPublicInspectionCoverPageTextBlock>
+  <jpdei_cor:EDINETCodeDEI contextRef="FilingDateInstant">X99011</jpdei_cor:EDINETCodeDEI>
+  <jpdei_cor:FundCodeDEI contextRef="FilingDateInstant">Y99011</jpdei_cor:FundCodeDEI>
+  <jpdei_cor:SecurityCodeDEI contextRef="FilingDateInstant">11210</jpdei_cor:SecurityCodeDEI>
+  <jpdei_cor:FilerNameInJapaneseDEI contextRef="FilingDateInstant">ＥＦ投資法人</jpdei_cor:FilerNameInJapaneseDEI>
+  <jpdei_cor:FilerNameInEnglishDEI contextRef="FilingDateInstant">EF Investment Corporation</jpdei_cor:FilerNameInEnglishDEI>
+  <jpdei_cor:FundNameInJapaneseDEI contextRef="FilingDateInstant">ＥＦ投資法人</jpdei_cor:FundNameInJapaneseDEI>
+  <jpdei_cor:FundNameInEnglishDEI contextRef="FilingDateInstant">EF Investment Corporation</jpdei_cor:FundNameInEnglishDEI>
+  <jpdei_cor:CabinetOfficeOrdinanceDEI contextRef="FilingDateInstant">特定有価証券の内容等の開示に関する内閣府令</jpdei_cor:CabinetOfficeOrdinanceDEI>
+  <jpdei_cor:DocumentTypeDEI contextRef="FilingDateInstant">第十五号様式</jpdei_cor:DocumentTypeDEI>
+  <jpdei_cor:AccountingStandardsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:WhetherConsolidatedFinancialStatementsArePreparedDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenConsolidatedFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:IndustryCodeWhenFinancialStatementsArePreparedInAccordanceWithIndustrySpecificRegulationsDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentPeriodEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:TypeOfCurrentPeriodDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:CurrentFiscalYearEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:PreviousFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ComparativePeriodEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:PreviousFiscalYearEndDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:NextFiscalYearStartDateDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:EndDateOfQuarterlyOrSemiAnnualPeriodOfNextFiscalYearDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:AmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:AmendmentFlagDEI>
+  <jpdei_cor:IdentificationOfDocumentSubjectToAmendmentDEI contextRef="FilingDateInstant" xsi:nil="true"/>
+  <jpdei_cor:ReportAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:ReportAmendmentFlagDEI>
+  <jpdei_cor:XBRLAmendmentFlagDEI contextRef="FilingDateInstant">false</jpdei_cor:XBRLAmendmentFlagDEI>
+  <jpsps_cor:DomesticInvestmentSecuritiesOtherThanInvestmentUnitAcquisitionRightsAndInvestmentCorporationBondsTextBlock contextRef="FilingDateInstant">
+&lt;h2&gt;第１【内国投資証券（新投資口予約権証券及び投資法人債券を除く。）】&lt;/h2&gt;
+&lt;div&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 9.0pt; line-height: 13.5pt"&gt;  該当事項はありません。&lt;/p&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:DomesticInvestmentSecuritiesOtherThanInvestmentUnitAcquisitionRightsAndInvestmentCorporationBondsTextBlock>
+  <jpsps_cor:InvestmentUnitAcquisitionRightsTextBlock contextRef="FilingDateInstant">
+&lt;h2&gt;第２【新投資口予約権証券】&lt;/h2&gt;
+&lt;div&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 9.0pt; line-height: 13.5pt"&gt;  該当事項はありません。&lt;/p&gt;
+&lt;br/&gt;&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:InvestmentUnitAcquisitionRightsTextBlock>
+  <jpsps_cor:SecurityTitlesTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（１）【銘柄】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 25.0pt; line-height: 13.5pt"&gt;  未定&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:SecurityTitlesTextBlock>
+  <jpsps_cor:LegalFormEtcOfInvestmentCorporationBondsTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（２）【投資法人債券の形態等】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 25.0pt; line-height: 13.5pt"&gt;  未定&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:LegalFormEtcOfInvestmentCorporationBondsTextBlock>
+  <jpsps_cor:OverviewOfUnderwritingEtcInvestmentCorporationBondsOtherThanShortTermInvestmentCorporationBondsTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（３）【引受け等の概要】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 25.0pt; line-height: 13.5pt"&gt;  未定&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:OverviewOfUnderwritingEtcInvestmentCorporationBondsOtherThanShortTermInvestmentCorporationBondsTextBlock>
+  <jpsps_cor:AdministratorOfInvestmentCorporationBondsTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（４）【投資法人債管理者又は投資法人債の管理会社】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 25.0pt; line-height: 13.5pt"&gt;  未定&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:AdministratorOfInvestmentCorporationBondsTextBlock>
+  <jpsps_cor:BookEntryTransferInstitutionInvestmentCorporationBondsOtherThanShortTermInvestmentCorporationBondsTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（５）【振替機関に関する事項】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 25.0pt; line-height: 13.5pt"&gt;  未定&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:BookEntryTransferInstitutionInvestmentCorporationBondsOtherThanShortTermInvestmentCorporationBondsTextBlock>
+  <jpsps_cor:RegistrationDateAndRegistrationNumberOfInvestmentCorporationTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（６）【投資法人の登録年月日及び登録番号】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 36.0pt; line-height: 13.5pt"&gt;  登録年月日：令和88年88月88日&lt;br/&gt;  登録番号：関東財務局長第88号&lt;/p&gt;
+&lt;br/&gt;
+&lt;/div&gt;
+</jpsps_cor:RegistrationDateAndRegistrationNumberOfInvestmentCorporationTextBlock>
+  <jpsps_cor:UseOfNetProceedsInvestmentCorporationBondsOtherThanShortTermInvestmentCorporationBondsTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（７）【手取金の使途】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 36.0pt; line-height: 13.5pt"&gt;  ………………………………………………………………………………………………………………………………&lt;br/&gt;…………………………………………………………………………………………………………………………………&lt;br/&gt;………………………………………………………………………………………………に充当する予定です。&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:UseOfNetProceedsInvestmentCorporationBondsOtherThanShortTermInvestmentCorporationBondsTextBlock>
+  <jpsps_cor:OtherInformationInvestmentCorporationBondsOtherThanShortTermInvestmentCorporationBondsTextBlock contextRef="FilingDateInstant">
+&lt;h4&gt;（８）【その他】&lt;/h4&gt;
+&lt;div class="h4"&gt;
+&lt;p style="margin-left: 25.0pt; line-height: 13.5pt"&gt;  未定&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:OtherInformationInvestmentCorporationBondsOtherThanShortTermInvestmentCorporationBondsTextBlock>
+  <jpsps_cor:AnnualSecuritiesReportAndAttachedDocumentsTextBlock contextRef="FilingDateInstant">
+&lt;h3&gt;１【有価証券報告書及びその添付書類】&lt;/h3&gt;
+&lt;div class="h3"&gt;
+&lt;p style="margin-left: 18.0pt;line-height: 13.5pt"&gt;計算期間  第88期（自  令和７年４月１日  至  令和８年３月31日）  令和８年６月28日関東財務局長に提出&lt;/p&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+
+&lt;/div&gt;
+</jpsps_cor:AnnualSecuritiesReportAndAttachedDocumentsTextBlock>
+  <jpsps_cor:PlaceForPublicInspectionOfReferenceDocumentsTextBlock contextRef="FilingDateInstant">
+&lt;h2&gt;第２【参照書類を縦覧に供している場所】&lt;/h2&gt;
+&lt;br/&gt;
+&lt;p style="margin-left: 18.0pt; line-height: 13.5pt"&gt;  ＥＦ投資法人&lt;br/&gt;  （東京都千代田区霞が関三丁目２番１号）&lt;br/&gt;  株式会社東京証券取引所&lt;br/&gt;  （東京都中央区日本橋兜町２番１号）&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
+&lt;br/&gt;
+
+&lt;div&gt;
+&lt;/div&gt;
+</jpsps_cor:PlaceForPublicInspectionOfReferenceDocumentsTextBlock>
+</xbrli:xbrl>

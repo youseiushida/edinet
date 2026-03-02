@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="jpsps060700-drs-001_Y99009-001_2027-01-31_03_2027-06-26.xsd#jpsps060700-drs_Y99009-001_ReserveForA" xlink:label="ReserveForA"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForA" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Reserve for A</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForA" xlink:to="label_ReserveForA"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForA_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="en">Reserve for A</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForA" xlink:to="label_ReserveForA_2"/>
+  </link:labelLink>
+</link:linkbase>

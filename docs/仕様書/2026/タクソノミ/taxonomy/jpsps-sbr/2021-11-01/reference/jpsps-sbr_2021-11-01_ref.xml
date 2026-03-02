@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CoverPageHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CoverPageHeading" xlink:to="reference_CoverPageHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_AcquisitionsOfTreasurySharesHeading" xlink:label="AcquisitionsOfTreasurySharesHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AcquisitionsOfTreasurySharesHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AcquisitionsOfTreasurySharesHeading" xlink:to="reference_AcquisitionsOfTreasurySharesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_AcquisitionsOfTreasurySharesTextBlock" xlink:label="AcquisitionsOfTreasurySharesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AcquisitionsOfTreasurySharesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AcquisitionsOfTreasurySharesTextBlock" xlink:to="reference_AcquisitionsOfTreasurySharesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_DisposalsOfTreasurySharesHeading" xlink:label="DisposalsOfTreasurySharesHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DisposalsOfTreasurySharesHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DisposalsOfTreasurySharesHeading" xlink:to="reference_DisposalsOfTreasurySharesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_DisposalsOfTreasurySharesTextBlock" xlink:label="DisposalsOfTreasurySharesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DisposalsOfTreasurySharesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DisposalsOfTreasurySharesTextBlock" xlink:to="reference_DisposalsOfTreasurySharesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_HoldingOfTreasurySharesHeading" xlink:label="HoldingOfTreasurySharesHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingOfTreasurySharesHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingOfTreasurySharesHeading" xlink:to="reference_HoldingOfTreasurySharesHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_HoldingOfTreasurySharesTextBlock" xlink:label="HoldingOfTreasurySharesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_HoldingOfTreasurySharesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="HoldingOfTreasurySharesTextBlock" xlink:to="reference_HoldingOfTreasurySharesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DocumentTitleCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DocumentTitleCoverPage" xlink:to="reference_DocumentTitleCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_ClauseOfStipulationCoverPage" xlink:label="ClauseOfStipulationCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ClauseOfStipulationCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ClauseOfStipulationCoverPage" xlink:to="reference_ClauseOfStipulationCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceOfFilingCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceOfFilingCoverPage" xlink:to="reference_PlaceOfFilingCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilingDateCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilingDateCoverPage" xlink:to="reference_FilingDateCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_ReportingPeriodCoverPage" xlink:label="ReportingPeriodCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ReportingPeriodCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ReportingPeriodCoverPage" xlink:to="reference_ReportingPeriodCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_IssuerNameCoverPage" xlink:label="IssuerNameCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_IssuerNameCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="IssuerNameCoverPage" xlink:to="reference_IssuerNameCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_TitleAndNameOfRepresentativeCoverPage" xlink:label="TitleAndNameOfRepresentativeCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TitleAndNameOfRepresentativeCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TitleAndNameOfRepresentativeCoverPage" xlink:to="reference_TitleAndNameOfRepresentativeCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_AddressOfRegisteredHeadquarterCoverPage" xlink:label="AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AddressOfRegisteredHeadquarterCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AddressOfRegisteredHeadquarterCoverPage" xlink:to="reference_AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_NameOfContactPersonCoverPage" xlink:label="NameOfContactPersonCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfContactPersonCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfContactPersonCoverPage" xlink:to="reference_NameOfContactPersonCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_TelephoneNumberCoverPage" xlink:label="TelephoneNumberCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TelephoneNumberCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TelephoneNumberCoverPage" xlink:to="reference_TelephoneNumberCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpsps-sbr_cor_2021-11-01.xsd#jpsps-sbr_cor_PlaceForPublicInspectionCoverPageTextBlock" xlink:label="PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceForPublicInspectionCoverPageTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>特定有価証券の内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2021-02-03</ref:IssueDate>
+      <ref:Article>第二十五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceForPublicInspectionCoverPageTextBlock" xlink:to="reference_PlaceForPublicInspectionCoverPageTextBlock"/>
+  </link:referenceLink>
+</link:linkbase>

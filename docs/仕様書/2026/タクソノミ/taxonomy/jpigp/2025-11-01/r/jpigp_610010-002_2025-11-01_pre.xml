@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/jpcrp/Segment/role/label" xlink:type="simple" xlink:href="../../../jpcrp/2025-11-01/jpcrp_rt_2025-11-01.xsd#rol_SegmentLabel"/>
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/jpcrp/std/alt/Consolidated/role/label" xlink:type="simple" xlink:href="../../../jpcrp/2025-11-01/jpcrp_rt_2025-11-01.xsd#rol_std_altConsolidatedLabel"/>
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-02" xlink:type="simple" xlink:href="../jpigp_rt_2025-11-01.xsd#rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-02"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpigp/rol_std_NotesSegmentInformationConsolidatedFinancialStatementsIFRS-02">
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis" xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jppfs/2025-11-01/jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember" xlink:label="ConsolidatedMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_NotesSegmentInformationConsolidatedFinancialStatementsIFRSHeading" xlink:label="NotesSegmentInformationConsolidatedFinancialStatementsIFRSHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SegmentInformationIFRSTable" xlink:label="SegmentInformationIFRSTable"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSegmentInformationConsolidatedFinancialStatementsIFRSHeading" xlink:to="SegmentInformationIFRSTable" order="1.0"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSTable" xlink:to="ConsolidatedOrNonConsolidatedAxis" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OperatingSegmentsAxis" xlink:label="OperatingSegmentsAxis"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSTable" xlink:to="OperatingSegmentsAxis" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_EntityTotalMember" xlink:label="EntityTotalMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="OperatingSegmentsAxis" xlink:to="EntityTotalMember" order="1.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jpcrp/std/alt/Consolidated/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_TotalOfReportableSegmentsAndOthersMember" xlink:label="TotalOfReportableSegmentsAndOthersMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="EntityTotalMember" xlink:to="TotalOfReportableSegmentsAndOthersMember" order="1.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ReportableSegmentsMember" xlink:label="ReportableSegmentsMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalOfReportableSegmentsAndOthersMember" xlink:to="ReportableSegmentsMember" order="1.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OtherReportableSegmentsMember" xlink:label="OtherReportableSegmentsMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ReportableSegmentsMember" xlink:to="OtherReportableSegmentsMember" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember" xlink:label="OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalOfReportableSegmentsAndOthersMember" xlink:to="OperatingSegmentsNotIncludedInReportableSegmentsAndOtherRevenueGeneratingBusinessActivitiesMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../../../jpcrp/2025-11-01/jpcrp_cor_2025-11-01.xsd#jpcrp_cor_ReconcilingItemsMember" xlink:label="ReconcilingItemsMember"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="EntityTotalMember" xlink:to="ReconcilingItemsMember" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SegmentInformationIFRSLineItems" xlink:label="SegmentInformationIFRSLineItems"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NotesSegmentInformationConsolidatedFinancialStatementsIFRSHeading" xlink:to="SegmentInformationIFRSLineItems" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RevenueIFRSAbstract" xlink:label="RevenueIFRSAbstract"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="RevenueIFRSAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RevenueFromExternalCustomersIFRS" xlink:label="RevenueFromExternalCustomersIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="RevenueIFRSAbstract" xlink:to="RevenueFromExternalCustomersIFRS" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_IntersegmentRevenueIFRS" xlink:label="IntersegmentRevenueIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="RevenueIFRSAbstract" xlink:to="IntersegmentRevenueIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_RevenueIFRS" xlink:label="RevenueIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="RevenueIFRSAbstract" xlink:to="RevenueIFRS" order="3.0" preferredLabel="http://www.xbrl.org/2003/role/totalLabel"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_SegmentProfitLossIFRS" xlink:label="SegmentProfitLossIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="SegmentProfitLossIFRS" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_OtherIncomeAndExpensesNetIFRS" xlink:label="OtherIncomeAndExpensesNetIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="OtherIncomeAndExpensesNetIFRS" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_FinanceIncomeAndExpensesNetIFRS" xlink:label="FinanceIncomeAndExpensesNetIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="FinanceIncomeAndExpensesNetIFRS" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ShareOfProfitLossOfInvestmentsAccountedForUsingEquityMethodIFRS" xlink:label="ShareOfProfitLossOfInvestmentsAccountedForUsingEquityMethodIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="ShareOfProfitLossOfInvestmentsAccountedForUsingEquityMethodIFRS" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ProfitLossBeforeTaxIFRS" xlink:label="ProfitLossBeforeTaxIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="ProfitLossBeforeTaxIFRS" order="6.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_AssetsIFRS" xlink:label="AssetsIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="AssetsIFRS" order="7.0" preferredLabel="http://disclosure.edinet-fsa.go.jp/jpcrp/Segment/role/label"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_InvestmentsAccountedForUsingEquityMethodIFRS" xlink:label="InvestmentsAccountedForUsingEquityMethodIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="InvestmentsAccountedForUsingEquityMethodIFRS" order="8.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_DepreciationAndAmortizationOperatingExpensesIFRS" xlink:label="DepreciationAndAmortizationOperatingExpensesIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="DepreciationAndAmortizationOperatingExpensesIFRS" order="9.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_ImpairmentLossesPLIFRS" xlink:label="ImpairmentLossesPLIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="ImpairmentLossesPLIFRS" order="10.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpigp_cor_2025-11-01.xsd#jpigp_cor_CapitalExpendituresIFRS" xlink:label="CapitalExpendituresIFRS"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="SegmentInformationIFRSLineItems" xlink:to="CapitalExpendituresIFRS" order="11.0"/>
+  </link:presentationLink>
+</link:linkbase>

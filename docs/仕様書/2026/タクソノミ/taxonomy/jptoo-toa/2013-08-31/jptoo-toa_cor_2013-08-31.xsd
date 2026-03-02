@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jptoo-toa/2013-08-31/jptoo-toa_cor" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jptoo-toa_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jptoo-toa/2013-08-31/jptoo-toa_cor" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:iod="http://disclosure.edinet-fsa.go.jp/taxonomy/common/2013-08-31/iod" xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric">
+  <xsd:import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <xsd:import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/common/2013-08-31/iod" schemaLocation="../../common/2013-08-31/identificationAndOrdering_2013-08-31.xsd"/>
+  <xsd:element name="CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo8TenderOfferorSAnswerHeading" id="jptoo-toa_cor_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo8TenderOfferorSAnswerHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="CoverPageHeading" id="jptoo-toa_cor_CoverPageHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="NameOfSubjectCompanyHeading" id="jptoo-toa_cor_NameOfSubjectCompanyHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="NameOfSubjectCompanyTextBlock" id="jptoo-toa_cor_NameOfSubjectCompanyTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ResponsesToInquiriesHeading" id="jptoo-toa_cor_ResponsesToInquiriesHeading" type="xbrli:stringItemType" substitutionGroup="iod:identifierItem" abstract="true" nillable="true" xbrli:periodType="duration"/>
+  <xsd:element name="ResponsesToInquiriesTextBlock" id="jptoo-toa_cor_ResponsesToInquiriesTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="DocumentTitleCoverPage" id="jptoo-toa_cor_DocumentTitleCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="PlaceOfFilingCoverPage" id="jptoo-toa_cor_PlaceOfFilingCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="DateWhenPositionStatementWasReceivedCoverPage" id="jptoo-toa_cor_DateWhenPositionStatementWasReceivedCoverPage" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="FilingDateCoverPage" id="jptoo-toa_cor_FilingDateCoverPage" type="xbrli:dateItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="FullNameOrNameOfFilerCoverPage" id="jptoo-toa_cor_FullNameOrNameOfFilerCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="ResidentialAddressOrLocationOfFilerCoverPage" id="jptoo-toa_cor_ResidentialAddressOrLocationOfFilerCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="NearestPlaceOfContactCoverPage" id="jptoo-toa_cor_NearestPlaceOfContactCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="NearestPlaceOfContactCoverPageNA" id="jptoo-toa_cor_NearestPlaceOfContactCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="TelephoneNumberCoverPage" id="jptoo-toa_cor_TelephoneNumberCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="TelephoneNumberCoverPageNA" id="jptoo-toa_cor_TelephoneNumberCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="NameOfContactPersonCoverPage" id="jptoo-toa_cor_NameOfContactPersonCoverPage" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="PlaceForPublicInspectionCoverPageTextBlock" id="jptoo-toa_cor_PlaceForPublicInspectionCoverPageTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="PlaceForPublicInspectionCoverPageNA" id="jptoo-toa_cor_PlaceForPublicInspectionCoverPageNA" type="xbrli:stringItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+  <xsd:element name="NotesCoverPageTextBlock" id="jptoo-toa_cor_NotesCoverPageTextBlock" type="nonnum:textBlockItemType" substitutionGroup="xbrli:item" abstract="false" nillable="true" xbrli:periodType="instant"/>
+</xsd:schema>

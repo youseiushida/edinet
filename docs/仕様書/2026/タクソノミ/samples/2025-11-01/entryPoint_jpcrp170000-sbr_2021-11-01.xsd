@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<xsd:schema targetNamespace="http://disclosure.edinet-fsa.go.jp/samples/jpcrp170000-sbr_2021-11-01" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:entryPoint_jpcrp170000-sbr_2021-11-01="http://disclosure.edinet-fsa.go.jp/samples/jpcrp170000-sbr_2021-11-01" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <xsd:annotation>
+    <xsd:appinfo>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jpcrp-sbr/2021-11-01/label/jpcrp-sbr_2021-11-01_gla.xml" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jpcrp-sbr/2021-11-01/r/jpcrp170000-sbr_2021-11-01_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jpcrp-sbr/2021-11-01/r/jpcrp-sbr_000100-000_2021-11-01_pre.xml" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jpcrp-sbr/2021-11-01/label/jpcrp-sbr_2021-11-01_lab.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jpcrp-sbr/2021-11-01/label/jpcrp-sbr_2021-11-01_lab-en.xml" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+      <link:linkbaseRef xlink:type="simple" xlink:href="../../taxonomy/jpcrp-sbr/2021-11-01/reference/jpcrp-sbr_2021-11-01_ref.xml" xlink:role="http://www.xbrl.org/2003/role/referenceLinkbaseRef" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase"/>
+    </xsd:appinfo>
+  </xsd:annotation>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp-sbr/2021-11-01/jpcrp-sbr_cor" schemaLocation="../../taxonomy/jpcrp-sbr/2021-11-01/jpcrp-sbr_cor_2021-11-01.xsd"/>
+  <xsd:import namespace="http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp-sbr/2021-11-01/jpcrp-sbr_rt" schemaLocation="../../taxonomy/jpcrp-sbr/2021-11-01/jpcrp-sbr_rt_2021-11-01.xsd"/>
+</xsd:schema>

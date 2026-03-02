@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="jpcrp040300-ssr-001_X99005-000_2026-09-30_01_2026-11-14.xsd#jpcrp040300-ssr_X99005-000_ReserveForA" xlink:label="ReserveForA"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForA" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_ReserveForA">A引当金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForA" xlink:to="label_ReserveForA"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForA_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_ReserveForA_2">A引当金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForA" xlink:to="label_ReserveForA_2"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp040300-ssr-001_X99005-000_2026-09-30_01_2026-11-14.xsd#jpcrp040300-ssr_X99005-000_ConstructionReportableSegmentMember" xlink:label="ConstructionReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_ConstructionReportableSegmentMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_ConstructionReportableSegmentMember">建設</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ConstructionReportableSegmentMember" xlink:to="label_ConstructionReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_ConstructionReportableSegmentMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_ConstructionReportableSegmentMember_2">建設、報告セグメント [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ConstructionReportableSegmentMember" xlink:to="label_ConstructionReportableSegmentMember_2"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp040300-ssr-001_X99005-000_2026-09-30_01_2026-11-14.xsd#jpcrp040300-ssr_X99005-000_CivilEngineeringReportableSegmentMember" xlink:label="CivilEngineeringReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_CivilEngineeringReportableSegmentMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_CivilEngineeringReportableSegmentMember">土木</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="CivilEngineeringReportableSegmentMember" xlink:to="label_CivilEngineeringReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_CivilEngineeringReportableSegmentMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_CivilEngineeringReportableSegmentMember_2">土木、報告セグメント [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="CivilEngineeringReportableSegmentMember" xlink:to="label_CivilEngineeringReportableSegmentMember_2"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp040300-ssr-001_X99005-000_2026-09-30_01_2026-11-14.xsd#jpcrp040300-ssr_X99005-000_RealEstateLeasingReportableSegmentMember" xlink:label="RealEstateLeasingReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_RealEstateLeasingReportableSegmentMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja" id="label_RealEstateLeasingReportableSegmentMember">不動産賃貸</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="RealEstateLeasingReportableSegmentMember" xlink:to="label_RealEstateLeasingReportableSegmentMember"/>
+    <link:label xlink:type="resource" xlink:label="label_RealEstateLeasingReportableSegmentMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja" id="label_RealEstateLeasingReportableSegmentMember_2">不動産賃貸、報告セグメント [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="RealEstateLeasingReportableSegmentMember" xlink:to="label_RealEstateLeasingReportableSegmentMember_2"/>
+  </link:labelLink>
+</link:linkbase>

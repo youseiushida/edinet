@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd">
+
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+
+    <!-- ===== loc: concept 参照 ===== -->
+    <link:loc xlink:type="locator" xlink:label="CurrentAssets"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_CurrentAssets"/>
+    <link:loc xlink:type="locator" xlink:label="Assets"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_Assets"/>
+    <link:loc xlink:type="locator" xlink:label="CurrentLiabilities"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_CurrentLiabilities"/>
+    <link:loc xlink:type="locator" xlink:label="Liabilities"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_Liabilities"/>
+    <link:loc xlink:type="locator" xlink:label="NetAssets"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetAssets"/>
+    <link:loc xlink:type="locator" xlink:label="NoncurrentAssets"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_NoncurrentAssets"/>
+    <link:loc xlink:type="locator" xlink:label="NetCashProvidedByUsedInInvestmentActivities"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInInvestmentActivities"/>
+    <link:loc xlink:type="locator" xlink:label="NetCashProvidedByUsedInFinancingActivities"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInFinancingActivities"/>
+    <link:loc xlink:type="locator" xlink:label="CashAndCashEquivalentsAtEndOfPeriod"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_CashAndCashEquivalentsAtEndOfPeriod"/>
+    <link:loc xlink:type="locator" xlink:label="NetSales"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetSales"/>
+    <link:loc xlink:type="locator" xlink:label="CostOfSales"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_CostOfSales"/>
+    <link:loc xlink:type="locator" xlink:label="GrossProfit"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_GrossProfit"/>
+    <link:loc xlink:type="locator" xlink:label="OperatingIncome"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_OperatingIncome"/>
+    <link:loc xlink:type="locator" xlink:label="OrdinaryIncome"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_OrdinaryIncome"/>
+    <link:loc xlink:type="locator" xlink:label="ProfitLoss"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_ProfitLoss"/>
+    <link:loc xlink:type="locator" xlink:label="NetCashProvidedByUsedInOperatingActivities"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_NetCashProvidedByUsedInOperatingActivities"/>
+    <link:loc xlink:type="locator" xlink:label="CashAndCashEquivalents"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_CashAndCashEquivalents"/>
+    <link:loc xlink:type="locator" xlink:label="CashAndDeposits"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_CashAndDeposits"/>
+    <link:loc xlink:type="locator" xlink:label="Assets_2"
+      xlink:href="../jppfs_cor_2025-11-01.xsd#jppfs_cor_Assets"/>
+
+    <!-- ===== label: 標準ラベル (英語) ===== -->
+    <link:label xlink:type="resource" xlink:label="label_CurrentAssets"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Current assets</link:label>
+    <link:label xlink:type="resource" xlink:label="label_Assets"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Assets</link:label>
+    <link:label xlink:type="resource" xlink:label="label_CurrentLiabilities"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Current liabilities</link:label>
+    <link:label xlink:type="resource" xlink:label="label_Liabilities"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Liabilities</link:label>
+    <link:label xlink:type="resource" xlink:label="label_NetAssets"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Net assets</link:label>
+    <link:label xlink:type="resource" xlink:label="label_NetSales"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Net sales</link:label>
+    <link:label xlink:type="resource" xlink:label="label_CostOfSales"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Cost of sales</link:label>
+    <link:label xlink:type="resource" xlink:label="label_GrossProfit"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Gross profit</link:label>
+    <link:label xlink:type="resource" xlink:label="label_OperatingIncome"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Operating income</link:label>
+    <link:label xlink:type="resource" xlink:label="label_OrdinaryIncome"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Ordinary income</link:label>
+    <link:label xlink:type="resource" xlink:label="label_ProfitLoss"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Profit (loss)</link:label>
+    <link:label xlink:type="resource" xlink:label="label_NoncurrentAssets"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Non-current assets</link:label>
+    <link:label xlink:type="resource" xlink:label="label_NetCashProvidedByUsedInOperatingActivities"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Net cash provided by (used in) operating activities</link:label>
+    <link:label xlink:type="resource" xlink:label="label_NetCashProvidedByUsedInInvestmentActivities"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Net cash provided by (used in) investing activities</link:label>
+    <link:label xlink:type="resource" xlink:label="label_NetCashProvidedByUsedInFinancingActivities"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Net cash provided by (used in) financing activities</link:label>
+    <link:label xlink:type="resource" xlink:label="label_CashAndCashEquivalentsAtEndOfPeriod"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Cash and cash equivalents at end of period</link:label>
+    <link:label xlink:type="resource" xlink:label="label_CashAndCashEquivalents"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Cash and cash equivalents</link:label>
+    <link:label xlink:type="resource" xlink:label="label_CashAndDeposits"
+      xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="en">Cash and deposits</link:label>
+
+    <!-- ===== label: 冗長ラベル (英語) ===== -->
+    <link:label xlink:type="resource" xlink:label="verbose_CurrentAssets"
+      xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="en">Current assets</link:label>
+    <link:label xlink:type="resource" xlink:label="verbose_Assets"
+      xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="en">Total assets</link:label>
+    <link:label xlink:type="resource" xlink:label="verbose_NetSales"
+      xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="en">Net sales</link:label>
+    <link:label xlink:type="resource" xlink:label="verbose_OperatingIncome"
+      xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="en">Operating income (loss)</link:label>
+    <link:label xlink:type="resource" xlink:label="verbose_ProfitLoss"
+      xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="en">Profit (loss) attributable to owners of parent</link:label>
+
+    <!-- ===== label: 合計ラベル (英語) ===== -->
+    <link:label xlink:type="resource" xlink:label="total_Assets"
+      xlink:role="http://www.xbrl.org/2003/role/totalLabel" xml:lang="en">Total assets</link:label>
+
+    <!-- ===== labelArc: 標準ラベル接続 ===== -->
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="CurrentAssets" xlink:to="label_CurrentAssets"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="Assets" xlink:to="label_Assets"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="CurrentLiabilities" xlink:to="label_CurrentLiabilities"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="Liabilities" xlink:to="label_Liabilities"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="NetAssets" xlink:to="label_NetAssets"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="NetSales" xlink:to="label_NetSales"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="CostOfSales" xlink:to="label_CostOfSales"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="GrossProfit" xlink:to="label_GrossProfit"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="OperatingIncome" xlink:to="label_OperatingIncome"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="OrdinaryIncome" xlink:to="label_OrdinaryIncome"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="ProfitLoss" xlink:to="label_ProfitLoss"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="NoncurrentAssets" xlink:to="label_NoncurrentAssets"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="NetCashProvidedByUsedInOperatingActivities" xlink:to="label_NetCashProvidedByUsedInOperatingActivities"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="NetCashProvidedByUsedInInvestmentActivities" xlink:to="label_NetCashProvidedByUsedInInvestmentActivities"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="NetCashProvidedByUsedInFinancingActivities" xlink:to="label_NetCashProvidedByUsedInFinancingActivities"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="CashAndCashEquivalentsAtEndOfPeriod" xlink:to="label_CashAndCashEquivalentsAtEndOfPeriod"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="CashAndCashEquivalents" xlink:to="label_CashAndCashEquivalents"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="CashAndDeposits" xlink:to="label_CashAndDeposits"/>
+
+    <!-- ===== labelArc: 冗長ラベル接続 ===== -->
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="CurrentAssets" xlink:to="verbose_CurrentAssets"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="Assets" xlink:to="verbose_Assets"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="NetSales" xlink:to="verbose_NetSales"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="OperatingIncome" xlink:to="verbose_OperatingIncome"/>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="ProfitLoss" xlink:to="verbose_ProfitLoss"/>
+
+    <!-- ===== labelArc: 合計ラベル接続 ===== -->
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+      xlink:from="Assets_2" xlink:to="total_Assets"/>
+
+  </link:labelLink>
+</link:linkbase>

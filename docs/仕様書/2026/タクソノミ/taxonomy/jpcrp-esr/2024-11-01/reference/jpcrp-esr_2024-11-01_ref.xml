@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2006/ref http://www.xbrl.org/2006/ref-2006-02-27.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:ref="http://www.xbrl.org/2006/ref" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:referenceLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CoverPageHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CoverPageHeading" xlink:to="reference_CoverPageHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_ReasonForFilingHeading" xlink:label="ReasonForFilingHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ReasonForFilingHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ReasonForFilingHeading" xlink:to="reference_ReasonForFilingHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_ReasonForFilingTextBlock" xlink:label="ReasonForFilingTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ReasonForFilingTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ReasonForFilingTextBlock" xlink:to="reference_ReasonForFilingTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_BodyOfReportHeading" xlink:label="BodyOfReportHeading"/>
+    <link:reference xlink:type="resource" xlink:label="reference_BodyOfReportHeading" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第五号の三様式</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="BodyOfReportHeading" xlink:to="reference_BodyOfReportHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_PublicOfferingOrSecondaryDistributionOfSecuritiesOutsideJapanTextBlock" xlink:label="PublicOfferingOrSecondaryDistributionOfSecuritiesOutsideJapanTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PublicOfferingOrSecondaryDistributionOfSecuritiesOutsideJapanTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第1号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PublicOfferingOrSecondaryDistributionOfSecuritiesOutsideJapanTextBlock" xlink:to="reference_PublicOfferingOrSecondaryDistributionOfSecuritiesOutsideJapanTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_PrivatePlacementOfSecuritiesTextBlock" xlink:label="PrivatePlacementOfSecuritiesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PrivatePlacementOfSecuritiesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第2号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PrivatePlacementOfSecuritiesTextBlock" xlink:to="reference_PrivatePlacementOfSecuritiesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_IssueOfStockOptionsNotSubjectToSecuritiesRegistrationTextBlock" xlink:label="IssueOfStockOptionsNotSubjectToSecuritiesRegistrationTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_IssueOfStockOptionsNotSubjectToSecuritiesRegistrationTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第2号の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="IssueOfStockOptionsNotSubjectToSecuritiesRegistrationTextBlock" xlink:to="reference_IssueOfStockOptionsNotSubjectToSecuritiesRegistrationTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_ChangesInParentCompaniesOrSpecifiedSubsidiariesTextBlock" xlink:label="ChangesInParentCompaniesOrSpecifiedSubsidiariesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ChangesInParentCompaniesOrSpecifiedSubsidiariesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第3号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ChangesInParentCompaniesOrSpecifiedSubsidiariesTextBlock" xlink:to="reference_ChangesInParentCompaniesOrSpecifiedSubsidiariesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_ChangesInMajorShareholderTextBlock" xlink:label="ChangesInMajorShareholderTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ChangesInMajorShareholderTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第4号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ChangesInMajorShareholderTextBlock" xlink:to="reference_ChangesInMajorShareholderTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_NotificationOfRequestForSaleOfSharesFromSpecialControllingShareholdersOrDecisionOnWhetherToApproveRequestForSaleOfSharesOrNotTextBlock" xlink:label="NotificationOfRequestForSaleOfSharesFromSpecialControllingShareholdersOrDecisionOnWhetherToApproveRequestForSaleOfSharesOrNotTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NotificationOfRequestForSaleOfSharesFromSpecialControllingShareholdersOrDecisionOnWhetherToApproveRequestForSaleOfSharesOrNotTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第4号の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NotificationOfRequestForSaleOfSharesFromSpecialControllingShareholdersOrDecisionOnWhetherToApproveRequestForSaleOfSharesOrNotTextBlock" xlink:to="reference_NotificationOfRequestForSaleOfSharesFromSpecialControllingShareholdersOrDecisionOnWhetherToApproveRequestForSaleOfSharesOrNotTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnHoldingShareholdersMeetingToAcquireAllClassSharesSubjectToWhollyCallTextBlock" xlink:label="DecisionOnHoldingShareholdersMeetingToAcquireAllClassSharesSubjectToWhollyCallTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnHoldingShareholdersMeetingToAcquireAllClassSharesSubjectToWhollyCallTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第4号の3</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnHoldingShareholdersMeetingToAcquireAllClassSharesSubjectToWhollyCallTextBlock" xlink:to="reference_DecisionOnHoldingShareholdersMeetingToAcquireAllClassSharesSubjectToWhollyCallTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnHoldingShareholdersMeetingForPurposeOfReverseStockSplitTextBlock" xlink:label="DecisionOnHoldingShareholdersMeetingForPurposeOfReverseStockSplitTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnHoldingShareholdersMeetingForPurposeOfReverseStockSplitTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第4号の4</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnHoldingShareholdersMeetingForPurposeOfReverseStockSplitTextBlock" xlink:to="reference_DecisionOnHoldingShareholdersMeetingForPurposeOfReverseStockSplitTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_SignificantDisasterTextBlock" xlink:label="SignificantDisasterTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SignificantDisasterTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第5号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SignificantDisasterTextBlock" xlink:to="reference_SignificantDisasterTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_CommencementOrResolutionOfLitigationTextBlock" xlink:label="CommencementOrResolutionOfLitigationTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CommencementOrResolutionOfLitigationTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第6号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CommencementOrResolutionOfLitigationTextBlock" xlink:to="reference_CommencementOrResolutionOfLitigationTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnShareExchangeTextBlock" xlink:label="DecisionOnShareExchangeTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnShareExchangeTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第6号の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnShareExchangeTextBlock" xlink:to="reference_DecisionOnShareExchangeTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnShareTransferTextBlock" xlink:label="DecisionOnShareTransferTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnShareTransferTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第6号の3</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnShareTransferTextBlock" xlink:to="reference_DecisionOnShareTransferTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnAbsorptionTypeSplitTextBlock" xlink:label="DecisionOnAbsorptionTypeSplitTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnAbsorptionTypeSplitTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第7号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnAbsorptionTypeSplitTextBlock" xlink:to="reference_DecisionOnAbsorptionTypeSplitTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnIncorporationTypeSplitTextBlock" xlink:label="DecisionOnIncorporationTypeSplitTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnIncorporationTypeSplitTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第7号の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnIncorporationTypeSplitTextBlock" xlink:to="reference_DecisionOnIncorporationTypeSplitTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnAbsorptionTypeMergerTextBlock" xlink:label="DecisionOnAbsorptionTypeMergerTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnAbsorptionTypeMergerTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第7号の3</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnAbsorptionTypeMergerTextBlock" xlink:to="reference_DecisionOnAbsorptionTypeMergerTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnConsolidationTypeMergerTextBlock" xlink:label="DecisionOnConsolidationTypeMergerTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnConsolidationTypeMergerTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第7号の4</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnConsolidationTypeMergerTextBlock" xlink:to="reference_DecisionOnConsolidationTypeMergerTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnTransferOrAcquisitionOfBusinessTextBlock" xlink:label="DecisionOnTransferOrAcquisitionOfBusinessTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnTransferOrAcquisitionOfBusinessTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第8号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnTransferOrAcquisitionOfBusinessTextBlock" xlink:to="reference_DecisionOnTransferOrAcquisitionOfBusinessTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnAcquisitionOfSubsidiaryTextBlock" xlink:label="DecisionOnAcquisitionOfSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnAcquisitionOfSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第8号の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnAcquisitionOfSubsidiaryTextBlock" xlink:to="reference_DecisionOnAcquisitionOfSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_ChangesInRepresentativeDirectorsTextBlock" xlink:label="ChangesInRepresentativeDirectorsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ChangesInRepresentativeDirectorsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第9号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ChangesInRepresentativeDirectorsTextBlock" xlink:to="reference_ChangesInRepresentativeDirectorsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_ResolutionOfShareholdersMeetingTextBlock" xlink:label="ResolutionOfShareholdersMeetingTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ResolutionOfShareholdersMeetingTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第9号の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ResolutionOfShareholdersMeetingTextBlock" xlink:to="reference_ResolutionOfShareholdersMeetingTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_AmendmentOrRejectionByShareholdersMeetingTextBlock" xlink:label="AmendmentOrRejectionByShareholdersMeetingTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AmendmentOrRejectionByShareholdersMeetingTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第9号の3</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AmendmentOrRejectionByShareholdersMeetingTextBlock" xlink:to="reference_AmendmentOrRejectionByShareholdersMeetingTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_ChangeInIndependentAuditorsTextBlock" xlink:label="ChangeInIndependentAuditorsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ChangeInIndependentAuditorsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第9号の4</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ChangeInIndependentAuditorsTextBlock" xlink:to="reference_ChangeInIndependentAuditorsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock" xlink:label="PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第10号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock" xlink:to="reference_PetitionEtcForCommencementOfBankruptcyProceedingsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock" xlink:label="LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第11号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock" xlink:to="reference_LikelihoodOfUncollectibleOrDelinquentAccountsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock" xlink:label="EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第12号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock" xlink:to="reference_EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_SignificantDisasterAffectingConsolidatedSubsidiaryTextBlock" xlink:label="SignificantDisasterAffectingConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_SignificantDisasterAffectingConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第13号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="SignificantDisasterAffectingConsolidatedSubsidiaryTextBlock" xlink:to="reference_SignificantDisasterAffectingConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_CommencementOrResolutionOfLitigationAgainstConsolidatedSubsidiaryTextBlock" xlink:label="CommencementOrResolutionOfLitigationAgainstConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CommencementOrResolutionOfLitigationAgainstConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第14号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CommencementOrResolutionOfLitigationAgainstConsolidatedSubsidiaryTextBlock" xlink:to="reference_CommencementOrResolutionOfLitigationAgainstConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnShareExchangeOfConsolidatedSubsidiaryTextBlock" xlink:label="DecisionOnShareExchangeOfConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnShareExchangeOfConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第14号の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnShareExchangeOfConsolidatedSubsidiaryTextBlock" xlink:to="reference_DecisionOnShareExchangeOfConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnShareTransferOfConsolidatedSubsidiaryTextBlock" xlink:label="DecisionOnShareTransferOfConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnShareTransferOfConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第14号の3</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnShareTransferOfConsolidatedSubsidiaryTextBlock" xlink:to="reference_DecisionOnShareTransferOfConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnAbsorptionTypeSplitOfConsolidatedSubsidiaryTextBlock" xlink:label="DecisionOnAbsorptionTypeSplitOfConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnAbsorptionTypeSplitOfConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第15号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnAbsorptionTypeSplitOfConsolidatedSubsidiaryTextBlock" xlink:to="reference_DecisionOnAbsorptionTypeSplitOfConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnIncorporationTypeSplitOfConsolidatedSubsidiaryTextBlock" xlink:label="DecisionOnIncorporationTypeSplitOfConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnIncorporationTypeSplitOfConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第15号の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnIncorporationTypeSplitOfConsolidatedSubsidiaryTextBlock" xlink:to="reference_DecisionOnIncorporationTypeSplitOfConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnAbsorptionTypeMergerOfConsolidatedSubsidiaryTextBlock" xlink:label="DecisionOnAbsorptionTypeMergerOfConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnAbsorptionTypeMergerOfConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第15号の3</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnAbsorptionTypeMergerOfConsolidatedSubsidiaryTextBlock" xlink:to="reference_DecisionOnAbsorptionTypeMergerOfConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnConsolidationTypeMergerOfConsolidatedSubsidiaryTextBlock" xlink:label="DecisionOnConsolidationTypeMergerOfConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnConsolidationTypeMergerOfConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第15号の4</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnConsolidationTypeMergerOfConsolidatedSubsidiaryTextBlock" xlink:to="reference_DecisionOnConsolidationTypeMergerOfConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnTransferOrAcquisitionOfBusinessOfConsolidatedSubsidiaryTextBlock" xlink:label="DecisionOnTransferOrAcquisitionOfBusinessOfConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnTransferOrAcquisitionOfBusinessOfConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第16号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnTransferOrAcquisitionOfBusinessOfConsolidatedSubsidiaryTextBlock" xlink:to="reference_DecisionOnTransferOrAcquisitionOfBusinessOfConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DecisionOnAcquisitionOfSubsidiaryByConsolidatedSubsidiaryTextBlock" xlink:label="DecisionOnAcquisitionOfSubsidiaryByConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DecisionOnAcquisitionOfSubsidiaryByConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第16号の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DecisionOnAcquisitionOfSubsidiaryByConsolidatedSubsidiaryTextBlock" xlink:to="reference_DecisionOnAcquisitionOfSubsidiaryByConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_PetitionForCommencementOfBankruptcyProceedingsAgainstConsolidatedSubsidiaryTextBlock" xlink:label="PetitionForCommencementOfBankruptcyProceedingsAgainstConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PetitionForCommencementOfBankruptcyProceedingsAgainstConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第17号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PetitionForCommencementOfBankruptcyProceedingsAgainstConsolidatedSubsidiaryTextBlock" xlink:to="reference_PetitionForCommencementOfBankruptcyProceedingsAgainstConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_LikelihoodOfUncollectibleOrDelinquentAccountsOfConsolidatedSubsidiaryTextBlock" xlink:label="LikelihoodOfUncollectibleOrDelinquentAccountsOfConsolidatedSubsidiaryTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_LikelihoodOfUncollectibleOrDelinquentAccountsOfConsolidatedSubsidiaryTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第18号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="LikelihoodOfUncollectibleOrDelinquentAccountsOfConsolidatedSubsidiaryTextBlock" xlink:to="reference_LikelihoodOfUncollectibleOrDelinquentAccountsOfConsolidatedSubsidiaryTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsOfGroupTextBlock" xlink:label="EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsOfGroupTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsOfGroupTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第19号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsOfGroupTextBlock" xlink:to="reference_EventWithSignificantEffectsOnFinancialPositionBusinessPerformanceAndCashFlowsOfGroupTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_NewMattersOrChangesInPublicOfferingInformationThroughToLastDayBeforeIPOTextBlock" xlink:label="NewMattersOrChangesInPublicOfferingInformationThroughToLastDayBeforeIPOTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NewMattersOrChangesInPublicOfferingInformationThroughToLastDayBeforeIPOTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NewMattersOrChangesInPublicOfferingInformationThroughToLastDayBeforeIPOTextBlock" xlink:to="reference_NewMattersOrChangesInPublicOfferingInformationThroughToLastDayBeforeIPOTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_DocumentTitleCoverPage" xlink:label="DocumentTitleCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_DocumentTitleCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="DocumentTitleCoverPage" xlink:to="reference_DocumentTitleCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_PlaceOfFilingCoverPage" xlink:label="PlaceOfFilingCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceOfFilingCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceOfFilingCoverPage" xlink:to="reference_PlaceOfFilingCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_FilingDateCoverPage" xlink:label="FilingDateCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FilingDateCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FilingDateCoverPage" xlink:to="reference_FilingDateCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_CompanyNameCoverPage" xlink:label="CompanyNameCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CompanyNameCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CompanyNameCoverPage" xlink:to="reference_CompanyNameCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_CompanyNameInEnglishCoverPage" xlink:label="CompanyNameInEnglishCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CompanyNameInEnglishCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CompanyNameInEnglishCoverPage" xlink:to="reference_CompanyNameInEnglishCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_TitleAndNameOfRepresentativeCoverPage" xlink:label="TitleAndNameOfRepresentativeCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TitleAndNameOfRepresentativeCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TitleAndNameOfRepresentativeCoverPage" xlink:to="reference_TitleAndNameOfRepresentativeCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_AddressOfRegisteredHeadquarterCoverPage" xlink:label="AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_AddressOfRegisteredHeadquarterCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="AddressOfRegisteredHeadquarterCoverPage" xlink:to="reference_AddressOfRegisteredHeadquarterCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_TelephoneNumberCoverPage" xlink:label="TelephoneNumberCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TelephoneNumberCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TelephoneNumberCoverPage" xlink:to="reference_TelephoneNumberCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_NameOfContactPersonCoverPage" xlink:label="NameOfContactPersonCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfContactPersonCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfContactPersonCoverPage" xlink:to="reference_NameOfContactPersonCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_NearestPlaceOfContactCoverPage" xlink:label="NearestPlaceOfContactCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NearestPlaceOfContactCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NearestPlaceOfContactCoverPage" xlink:to="reference_NearestPlaceOfContactCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_TelephoneNumberNearestPlaceOfContactCoverPage" xlink:label="TelephoneNumberNearestPlaceOfContactCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_TelephoneNumberNearestPlaceOfContactCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="TelephoneNumberNearestPlaceOfContactCoverPage" xlink:to="reference_TelephoneNumberNearestPlaceOfContactCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_NameOfContactPersonNearestPlaceOfContactCoverPage" xlink:label="NameOfContactPersonNearestPlaceOfContactCoverPage"/>
+    <link:reference xlink:type="resource" xlink:label="reference_NameOfContactPersonNearestPlaceOfContactCoverPage" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="NameOfContactPersonNearestPlaceOfContactCoverPage" xlink:to="reference_NameOfContactPersonNearestPlaceOfContactCoverPage"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_PlaceForPublicInspectionCoverPageTextBlock" xlink:label="PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_PlaceForPublicInspectionCoverPageTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="PlaceForPublicInspectionCoverPageTextBlock" xlink:to="reference_PlaceForPublicInspectionCoverPageTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_CorporateShareholderGovernanceAgreementTextBlock" xlink:label="CorporateShareholderGovernanceAgreementTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CorporateShareholderGovernanceAgreementTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第12号の2</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CorporateShareholderGovernanceAgreementTextBlock" xlink:to="reference_CorporateShareholderGovernanceAgreementTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_CorporateShareholderAgreementOnShareTransferEtcTextBlock" xlink:label="CorporateShareholderAgreementOnShareTransferEtcTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_CorporateShareholderAgreementOnShareTransferEtcTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第12号の3</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="CorporateShareholderAgreementOnShareTransferEtcTextBlock" xlink:to="reference_CorporateShareholderAgreementOnShareTransferEtcTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_FinancialCovenantsTextBlock" xlink:label="FinancialCovenantsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FinancialCovenantsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第12号の4</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FinancialCovenantsTextBlock" xlink:to="reference_FinancialCovenantsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_ModificationOfFinancialCovenantsTextBlock" xlink:label="ModificationOfFinancialCovenantsTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ModificationOfFinancialCovenantsTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第12号の5</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ModificationOfFinancialCovenantsTextBlock" xlink:to="reference_ModificationOfFinancialCovenantsTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_FinancialCovenantsOfConsolidatedSubsidiariesTextBlock" xlink:label="FinancialCovenantsOfConsolidatedSubsidiariesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_FinancialCovenantsOfConsolidatedSubsidiariesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第20号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="FinancialCovenantsOfConsolidatedSubsidiariesTextBlock" xlink:to="reference_FinancialCovenantsOfConsolidatedSubsidiariesTextBlock"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-esr_cor_2024-11-01.xsd#jpcrp-esr_cor_ModificationOfFinancialCovenantsOfConsolidatedSubsidiariesTextBlock" xlink:label="ModificationOfFinancialCovenantsOfConsolidatedSubsidiariesTextBlock"/>
+    <link:reference xlink:type="resource" xlink:label="reference_ModificationOfFinancialCovenantsOfConsolidatedSubsidiariesTextBlock" xlink:role="http://www.xbrl.org/2003/role/reference">
+      <ref:Publisher>内閣府</ref:Publisher>
+      <ref:Name>企業内容等の開示に関する内閣府令</ref:Name>
+      <ref:IssueDate>2024-03-27</ref:IssueDate>
+      <ref:Article>第19条第2項第21号</ref:Article>
+    </link:reference>
+    <link:referenceArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-reference" xlink:from="ModificationOfFinancialCovenantsOfConsolidatedSubsidiariesTextBlock" xlink:to="reference_ModificationOfFinancialCovenantsOfConsolidatedSubsidiariesTextBlock"/>
+  </link:referenceLink>
+</link:linkbase>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jpcrp-sbr/rol_std_CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo17ShareBuybackReport" xlink:type="simple" xlink:href="../jpcrp-sbr_rt_2021-11-01.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo17ShareBuybackReport"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jpcrp-sbr/rol_std_CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo17ShareBuybackReport">
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo17ShareBuybackReportHeading" xlink:label="CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo17ShareBuybackReportHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo17ShareBuybackReportHeading" xlink:to="CoverPageHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_ClassesOfSharesHeading" xlink:label="ClassesOfSharesHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo17ShareBuybackReportHeading" xlink:to="ClassesOfSharesHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_ClassesOfSharesTextBlock" xlink:label="ClassesOfSharesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ClassesOfSharesHeading" xlink:to="ClassesOfSharesTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AcquisitionsOfTreasurySharesHeading" xlink:label="AcquisitionsOfTreasurySharesHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo17ShareBuybackReportHeading" xlink:to="AcquisitionsOfTreasurySharesHeading" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AcquisitionsByResolutionOfShareholdersMeetingHeading" xlink:label="AcquisitionsByResolutionOfShareholdersMeetingHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="AcquisitionsOfTreasurySharesHeading" xlink:to="AcquisitionsByResolutionOfShareholdersMeetingHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AcquisitionsByResolutionOfShareholdersMeetingTextBlock" xlink:label="AcquisitionsByResolutionOfShareholdersMeetingTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="AcquisitionsByResolutionOfShareholdersMeetingHeading" xlink:to="AcquisitionsByResolutionOfShareholdersMeetingTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AcquisitionsByResolutionOfBoardOfDirectorsMeetingHeading" xlink:label="AcquisitionsByResolutionOfBoardOfDirectorsMeetingHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="AcquisitionsOfTreasurySharesHeading" xlink:to="AcquisitionsByResolutionOfBoardOfDirectorsMeetingHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_AcquisitionsByResolutionOfBoardOfDirectorsMeetingTextBlock" xlink:label="AcquisitionsByResolutionOfBoardOfDirectorsMeetingTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="AcquisitionsByResolutionOfBoardOfDirectorsMeetingHeading" xlink:to="AcquisitionsByResolutionOfBoardOfDirectorsMeetingTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_DisposalsOfTreasurySharesHeading" xlink:label="DisposalsOfTreasurySharesHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo17ShareBuybackReportHeading" xlink:to="DisposalsOfTreasurySharesHeading" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_DisposalsOfTreasurySharesTextBlock" xlink:label="DisposalsOfTreasurySharesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="DisposalsOfTreasurySharesHeading" xlink:to="DisposalsOfTreasurySharesTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_HoldingOfTreasurySharesHeading" xlink:label="HoldingOfTreasurySharesHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo17ShareBuybackReportHeading" xlink:to="HoldingOfTreasurySharesHeading" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jpcrp-sbr_cor_2021-11-01.xsd#jpcrp-sbr_cor_HoldingOfTreasurySharesTextBlock" xlink:label="HoldingOfTreasurySharesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="HoldingOfTreasurySharesHeading" xlink:to="HoldingOfTreasurySharesTextBlock" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>

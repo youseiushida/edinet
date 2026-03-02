@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xbrldt="http://xbrl.org/2005/xbrldt">
+
+  <link:definitionLink xlink:type="extended"
+    xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedBalanceSheet">
+
+    <!-- Heading -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedBalanceSheetHeading"
+      xlink:label="ConsolidatedBalanceSheetHeading"/>
+
+    <!-- Table -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BalanceSheetTable"
+      xlink:label="BalanceSheetTable"/>
+
+    <!-- Axis 1 (order=2.0) -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedAxis"
+      xlink:label="ConsolidatedOrNonConsolidatedAxis"/>
+
+    <!-- Axis 2 (order=1.0) — to test order sorting -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SequentialNumbersAxis"
+      xlink:label="SequentialNumbersAxis"/>
+
+    <!-- Domain for Axis 1 -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedOrNonConsolidatedDomain"
+      xlink:label="ConsolidatedOrNonConsolidatedDomain"/>
+
+    <!-- Default member for Axis 1 -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_ConsolidatedMember"
+      xlink:label="ConsolidatedMember"/>
+
+    <!-- Member under domain for Axis 1 -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_NonConsolidatedMember"
+      xlink:label="NonConsolidatedMember"/>
+
+    <!-- Domain for Axis 2 -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_SequentialNumbersDomain"
+      xlink:label="SequentialNumbersDomain"/>
+
+    <!-- LineItems -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_BalanceSheetLineItems"
+      xlink:label="BalanceSheetLineItems"/>
+
+    <!-- Concepts under LineItems -->
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_CurrentAssets"
+      xlink:label="CurrentAssets"/>
+
+    <link:loc xlink:type="locator"
+      xlink:href="../../jppfs_cor_2025-11-01.xsd#jppfs_cor_TotalCurrentAssets"
+      xlink:label="TotalCurrentAssets"/>
+
+    <!-- all: Heading -> Table -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/all"
+      xlink:from="ConsolidatedBalanceSheetHeading" xlink:to="BalanceSheetTable"
+      order="1.0"
+      xbrldt:closed="true"
+      xbrldt:contextElement="scenario"/>
+
+    <!-- hypercube-dimension: Table -> Axis 1 (order=2.0) -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension"
+      xlink:from="BalanceSheetTable" xlink:to="ConsolidatedOrNonConsolidatedAxis"
+      order="2.0"/>
+
+    <!-- hypercube-dimension: Table -> Axis 2 (order=1.0) -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension"
+      xlink:from="BalanceSheetTable" xlink:to="SequentialNumbersAxis"
+      order="1.0"/>
+
+    <!-- dimension-domain: Axis 1 -> Domain -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain"
+      xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedOrNonConsolidatedDomain"
+      order="1.0"/>
+
+    <!-- dimension-default: Axis 1 -> Default -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default"
+      xlink:from="ConsolidatedOrNonConsolidatedAxis" xlink:to="ConsolidatedMember"
+      order="1.0"/>
+
+    <!-- domain-member: Domain -> Member 1 -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="ConsolidatedOrNonConsolidatedDomain" xlink:to="ConsolidatedMember"
+      order="1.0"/>
+
+    <!-- domain-member: Domain -> Member 2 -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="ConsolidatedOrNonConsolidatedDomain" xlink:to="NonConsolidatedMember"
+      order="2.0"/>
+
+    <!-- dimension-domain: Axis 2 -> Domain -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain"
+      xlink:from="SequentialNumbersAxis" xlink:to="SequentialNumbersDomain"
+      order="1.0"/>
+
+    <!-- domain-member: Heading -> LineItems -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="ConsolidatedBalanceSheetHeading" xlink:to="BalanceSheetLineItems"
+      order="2.0"/>
+
+    <!-- domain-member: LineItems -> Concepts -->
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="BalanceSheetLineItems" xlink:to="CurrentAssets"
+      order="1.0"/>
+
+    <link:definitionArc xlink:type="arc"
+      xlink:arcrole="http://xbrl.org/int/dim/arcrole/domain-member"
+      xlink:from="BalanceSheetLineItems" xlink:to="TotalCurrentAssets"
+      order="2.0"/>
+
+  </link:definitionLink>
+</link:linkbase>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_HoldingRatioOfShareCertificatesEtcSummary" xlink:type="simple" xlink:href="../jplvh_rt_2025-11-01.xsd#rol_std_HoldingRatioOfShareCertificatesEtcSummary"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jplvh/rol_std_HoldingRatioOfShareCertificatesEtcSummary">
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfOutstandingStocksEtcAbstract" xlink:label="TotalNumberOfOutstandingStocksEtcAbstract"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_BaseDate" xlink:label="BaseDate"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalNumberOfOutstandingStocksEtcAbstract" xlink:to="BaseDate" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_TotalNumberOfOutstandingStocksEtc" xlink:label="TotalNumberOfOutstandingStocksEtc"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="TotalNumberOfOutstandingStocksEtcAbstract" xlink:to="TotalNumberOfOutstandingStocksEtc" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:label="HoldingRatioOfShareCertificatesEtcSummaryHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:to="TotalNumberOfOutstandingStocksEtcAbstract" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfResidualStocksEtcHeldByFilersAndJointHolders" xlink:label="NumberOfResidualStocksEtcHeldByFilersAndJointHolders"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:to="NumberOfResidualStocksEtcHeldByFilersAndJointHolders" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders" xlink:label="NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:to="NumberOfResidualStocksEtcToBeDeductedFromNumberOfResidualStocksEtcHeldDueToExistenceOfRightsSuchAsRightsToClaimDeliveryAmongJointHolders" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtc" xlink:label="HoldingRatioOfShareCertificatesEtc"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:to="HoldingRatioOfShareCertificatesEtc" order="4.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_HoldingRatioOfShareCertificatesEtcPerLastReport" xlink:label="HoldingRatioOfShareCertificatesEtcPerLastReport"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:to="HoldingRatioOfShareCertificatesEtcPerLastReport" order="5.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jplvh_cor_2025-11-01.xsd#jplvh_cor_NotesHoldingRatioOfShareCertificatesEtcTextBlock" xlink:label="NotesHoldingRatioOfShareCertificatesEtcTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="HoldingRatioOfShareCertificatesEtcSummaryHeading" xlink:to="NotesHoldingRatioOfShareCertificatesEtcTextBlock" order="6.0"/>
+  </link:presentationLink>
+</link:linkbase>

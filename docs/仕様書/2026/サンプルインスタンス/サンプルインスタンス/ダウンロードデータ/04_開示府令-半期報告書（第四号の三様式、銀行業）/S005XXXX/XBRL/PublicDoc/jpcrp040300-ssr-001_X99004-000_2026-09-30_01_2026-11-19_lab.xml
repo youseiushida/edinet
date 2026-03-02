@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<link:linkbase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xbrl.org/2003/linkbase http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd" xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xbrli="http://www.xbrl.org/2003/instance" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <link:labelLink xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+    <link:loc xlink:type="locator" xlink:href="jpcrp040300-ssr-001_X99004-000_2026-09-30_01_2026-11-19.xsd#jpcrp040300-ssr_X99004-000_TotalNumberOfIssuedSharesClassAPreferredStockSummaryOfBusinessResults" xlink:label="TotalNumberOfIssuedSharesClassAPreferredStockSummaryOfBusinessResults"/>
+    <link:label xlink:type="resource" xlink:label="label_TotalNumberOfIssuedSharesClassAPreferredStockSummaryOfBusinessResults" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">発行済株式総数、A種優先株式</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="TotalNumberOfIssuedSharesClassAPreferredStockSummaryOfBusinessResults" xlink:to="label_TotalNumberOfIssuedSharesClassAPreferredStockSummaryOfBusinessResults" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_TotalNumberOfIssuedSharesClassAPreferredStockSummaryOfBusinessResults_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">発行済株式総数、A種優先株式、経営指標等</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="TotalNumberOfIssuedSharesClassAPreferredStockSummaryOfBusinessResults" xlink:to="label_TotalNumberOfIssuedSharesClassAPreferredStockSummaryOfBusinessResults_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp040300-ssr-001_X99004-000_2026-09-30_01_2026-11-19.xsd#jpcrp040300-ssr_X99004-000_DividendPaidPerShareClassAPreferredStockSummaryOfBusinessResults" xlink:label="DividendPaidPerShareClassAPreferredStockSummaryOfBusinessResults"/>
+    <link:label xlink:type="resource" xlink:label="label_DividendPaidPerShareClassAPreferredStockSummaryOfBusinessResults" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">１株当たり配当額、A種優先株式</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="DividendPaidPerShareClassAPreferredStockSummaryOfBusinessResults" xlink:to="label_DividendPaidPerShareClassAPreferredStockSummaryOfBusinessResults" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_DividendPaidPerShareClassAPreferredStockSummaryOfBusinessResults_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">１株当たり配当額、A種優先株式、経営指標等</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="DividendPaidPerShareClassAPreferredStockSummaryOfBusinessResults" xlink:to="label_DividendPaidPerShareClassAPreferredStockSummaryOfBusinessResults_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp040300-ssr-001_X99004-000_2026-09-30_01_2026-11-19.xsd#jpcrp040300-ssr_X99004-000_ReserveForA" xlink:label="ReserveForA"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForA" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">A引当金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForA" xlink:to="label_ReserveForA" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_ReserveForA_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">A引当金</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ReserveForA" xlink:to="label_ReserveForA_2" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="jpcrp040300-ssr-001_X99004-000_2026-09-30_01_2026-11-19.xsd#jpcrp040300-ssr_X99004-000_ClassAPreferredSharesSharesWithNoVotingRightsMember" xlink:label="ClassAPreferredSharesSharesWithNoVotingRightsMember"/>
+    <link:label xlink:type="resource" xlink:label="label_ClassAPreferredSharesSharesWithNoVotingRightsMember" xlink:role="http://www.xbrl.org/2003/role/label" xml:lang="ja">Ａ種優先株式</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ClassAPreferredSharesSharesWithNoVotingRightsMember" xlink:to="label_ClassAPreferredSharesSharesWithNoVotingRightsMember" order="1.0"/>
+    <link:label xlink:type="resource" xlink:label="label_ClassAPreferredSharesSharesWithNoVotingRightsMember_2" xlink:role="http://www.xbrl.org/2003/role/verboseLabel" xml:lang="ja">Ａ種優先株式、無議決権株式 [メンバー]</link:label>
+    <link:labelArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label" xlink:from="ClassAPreferredSharesSharesWithNoVotingRightsMember" xlink:to="label_ClassAPreferredSharesSharesWithNoVotingRightsMember_2" order="1.0"/>
+  </link:labelLink>
+</link:linkbase>

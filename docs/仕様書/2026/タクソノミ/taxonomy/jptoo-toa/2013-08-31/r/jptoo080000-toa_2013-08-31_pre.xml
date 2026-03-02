@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  (c) Financial Services Agency, The Japanese Government.
+      All Rights Reserved.
+      For intellectual property policy and authorized uses of EDINET Taxonomy,
+      refer to “EDINET Taxonomy Legal Statement” at http://www.fsa.go.jp/search/EDINET_Taxonomy_Legal_Statement.html
+-->
+<link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xbrli="http://www.xbrl.org/2003/instance">
+  <link:roleRef roleURI="http://disclosure.edinet-fsa.go.jp/role/jptoo-toa/rol_std_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo8TenderOfferorSAnswer" xlink:type="simple" xlink:href="../jptoo-toa_rt_2013-08-31.xsd#rol_std_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo8TenderOfferorSAnswer"/>
+  <link:presentationLink xlink:type="extended" xlink:role="http://disclosure.edinet-fsa.go.jp/role/jptoo-toa/rol_std_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo8TenderOfferorSAnswer">
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo8TenderOfferorSAnswerHeading" xlink:label="CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo8TenderOfferorSAnswerHeading"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_CoverPageHeading" xlink:label="CoverPageHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo8TenderOfferorSAnswerHeading" xlink:to="CoverPageHeading" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_NameOfSubjectCompanyHeading" xlink:label="NameOfSubjectCompanyHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo8TenderOfferorSAnswerHeading" xlink:to="NameOfSubjectCompanyHeading" order="2.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_NameOfSubjectCompanyTextBlock" xlink:label="NameOfSubjectCompanyTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="NameOfSubjectCompanyHeading" xlink:to="NameOfSubjectCompanyTextBlock" order="1.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_ResponsesToInquiriesHeading" xlink:label="ResponsesToInquiriesHeading"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="CabinetOfficeOrdinanceOnDisclosureOfTenderOfferForShareCertificatesEtcByThoseOtherThanIssuerFormNo8TenderOfferorSAnswerHeading" xlink:to="ResponsesToInquiriesHeading" order="3.0"/>
+    <link:loc xlink:type="locator" xlink:href="../jptoo-toa_cor_2013-08-31.xsd#jptoo-toa_cor_ResponsesToInquiriesTextBlock" xlink:label="ResponsesToInquiriesTextBlock"/>
+    <link:presentationArc xlink:type="arc" xlink:arcrole="http://www.xbrl.org/2003/arcrole/parent-child" xlink:from="ResponsesToInquiriesHeading" xlink:to="ResponsesToInquiriesTextBlock" order="1.0"/>
+  </link:presentationLink>
+</link:linkbase>
