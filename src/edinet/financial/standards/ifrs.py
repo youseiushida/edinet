@@ -143,8 +143,8 @@ class IFRSProfile:
 # XSD 検証済み: jpigp_cor_2025-11-01.xsd
 _PL = StatementType.INCOME_STATEMENT
 _PL_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
-    IFRSConceptMapping("NetSalesIFRS", CK.REVENUE, _PL, mapping_note="ソニー・ソフトバンクG等が使用する売上高"),
-    IFRSConceptMapping("SalesAndFinancialServicesRevenueIFRS", CK.REVENUE, _PL, mapping_note="ソニーG: 売上高及び金融ビジネス収入"),
+    IFRSConceptMapping("NetSalesIFRS", CK.REVENUE, _PL, mapping_note="IFRS 企業が使用する売上高の代替概念"),
+    IFRSConceptMapping("SalesAndFinancialServicesRevenueIFRS", CK.REVENUE, _PL, mapping_note="ソニーG 提出者独自: 売上高及び金融ビジネス収入"),
     IFRSConceptMapping("RevenueIFRS", CK.REVENUE, _PL, jgaap_concept="NetSales"),
     IFRSConceptMapping("CostOfSalesIFRS", CK.COST_OF_SALES, _PL, jgaap_concept="CostOfSales"),
     IFRSConceptMapping("GrossProfitIFRS", CK.GROSS_PROFIT, _PL, jgaap_concept="GrossProfit"),
@@ -254,10 +254,10 @@ _SUMMARY_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
     IFRSConceptMapping("CashFlowsFromUsedInInvestingActivitiesIFRSSummaryOfBusinessResults", CK.INVESTING_CF, None, mapping_note="jpcrp_cor 経営指標サマリー"),
     IFRSConceptMapping("CashFlowsFromUsedInFinancingActivitiesIFRSSummaryOfBusinessResults", CK.FINANCING_CF, None, mapping_note="jpcrp_cor 経営指標サマリー"),
     IFRSConceptMapping("CashAndCashEquivalentsIFRSSummaryOfBusinessResults", CK.CASH_END, None, mapping_note="jpcrp_cor 経営指標サマリー"),
-    # Revenue 代替概念（トヨタ等が使用）
-    IFRSConceptMapping("OperatingRevenuesIFRSKeyFinancialData", CK.REVENUE, None, mapping_note="jpcrp_cor KeyFinancialData（営業収益）"),
-    IFRSConceptMapping("TotalNetRevenuesIFRS", CK.REVENUE, None, mapping_note="jpigp_cor 営業収益合計"),
-    IFRSConceptMapping("SalesRevenuesIFRS", CK.REVENUE, None, mapping_note="jpigp_cor 営業収益"),
+    # 提出者独自タクソノミの Revenue 代替概念（標準 XSD に存在しないが実データに出現）
+    IFRSConceptMapping("OperatingRevenuesIFRSKeyFinancialData", CK.REVENUE, None, mapping_note="トヨタ等 提出者独自: 営業収益"),
+    IFRSConceptMapping("TotalNetRevenuesIFRS", CK.REVENUE, None, mapping_note="トヨタ等 提出者独自: 営業収益合計"),
+    IFRSConceptMapping("SalesRevenuesIFRS", CK.REVENUE, None, mapping_note="提出者独自: 営業収益"),
 )
 
 # --- CI マッピング（包括利益。statement_type=None: 独立した CI 計算書は未対応） ---

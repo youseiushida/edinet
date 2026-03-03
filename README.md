@@ -3,6 +3,9 @@
 [![PyPI version](https://img.shields.io/pypi/v/edinet.svg)](https://pypi.org/project/edinet/)
 [![Python](https://img.shields.io/pypi/pyversions/edinet.svg)](https://pypi.org/project/edinet/)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![Context7 Indexed](https://img.shields.io/badge/Context7-Indexed-047857)](https://context7.com/youseiushida/edinet)
+[![Context7 llms.txt](https://img.shields.io/badge/Context7-llms.txt-047857)](https://context7.com/youseiushida/edinet/llms.txt)
+
 
 **edinet** は、[EDINET（金融庁 電子開示システム）](https://disclosure.edinet-fsa.go.jp/)の開示データを Python から扱うためのライブラリです。書類一覧の取得から XBRL パース、財務三表（PL/BS/CF）の組み立て、会計基準の自動判別、23 業種対応、タクソノミラベル解決、DataFrame 変換までをワンストップで提供します。全 42 書類タイプに対応し、J-GAAP / IFRS / US-GAAP の 3 会計基準を統一的に扱えます。内部の HTTP 通信には [httpx](https://github.com/encode/httpx) を使用しています。
 

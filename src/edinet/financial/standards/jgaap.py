@@ -244,7 +244,7 @@ _SUMMARY_MAPPINGS: tuple[ConceptMapping, ...] = (
     ConceptMapping("OperatingRevenue2SummaryOfBusinessResults", CK.REVENUE, None),
     ConceptMapping("GrossOperatingRevenueSummaryOfBusinessResults", CK.REVENUE, None),
     ConceptMapping("RevenueKeyFinancialData", CK.REVENUE, None),
-    # Operating Income
+    # Operating Income（提出者独自タクソノミ。標準 XSD に存在しないが実データに出現）
     ConceptMapping("OperatingIncomeSummaryOfBusinessResults", CK.OPERATING_INCOME, None),
     # Ordinary Income
     ConceptMapping("OrdinaryIncomeLossSummaryOfBusinessResults", CK.ORDINARY_INCOME, None),

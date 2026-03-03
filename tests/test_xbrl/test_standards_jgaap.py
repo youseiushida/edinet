@@ -316,15 +316,21 @@ class TestTaxonomyExistence:
         assert _TAXONOMY_ROOT is not None
         return _collect_xsd_concepts_jgaap(_TAXONOMY_ROOT)
 
+    # 提出者独自タクソノミの concept（標準 XSD に存在しないが実データに出現する）
+    _FILER_SPECIFIC_CONCEPTS = frozenset({
+        "OperatingIncomeSummaryOfBusinessResults",  # 一部企業が独自定義
+    })
+
     def test_all_jgaap_concepts_exist_in_taxonomy(
         self,
         xsd_concepts: frozenset[str],
     ) -> None:
-        """全 J-GAAP concept がタクソノミ XSD に実在する。"""
+        """標準タクソノミの J-GAAP concept が XSD に実在する（提出者独自は除外）。"""
         missing = [
             m.concept
             for m in all_mappings()
             if m.concept not in xsd_concepts
+            and m.concept not in self._FILER_SPECIFIC_CONCEPTS
         ]
         assert not missing, (
             f"タクソノミ XSD に存在しない J-GAAP concept: {missing}"

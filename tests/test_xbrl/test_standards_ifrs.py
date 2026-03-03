@@ -430,7 +430,7 @@ class TestAllMappingsAndKeys:
         )
         kpi_ci_count = len([m for m in total if m.statement_type is None])
         assert len(total) == pl_count + bs_count + cf_count + kpi_ci_count
-        assert len(total) == 77  # 57 (詳細) + 20 (Summary + KeyFinancialData)
+        assert len(total) == 77  # 57 (詳細) + 20 (Summary + KeyFinancialData + 提出者独自)
 
     def test_all_canonical_keys_is_frozenset(self) -> None:
         """all_canonical_keys() が frozenset を返す。"""
@@ -556,26 +556,37 @@ class TestTaxonomyExistence:
         assert _TAXONOMY_ROOT is not None
         return _collect_xsd_concepts_ifrs(_TAXONOMY_ROOT)
 
+    # 提出者独自タクソノミの concept（標準 XSD に存在しないが実データに出現する）
+    _FILER_SPECIFIC_CONCEPTS = frozenset({
+        "OperatingRevenuesIFRSKeyFinancialData",  # トヨタ独自
+        "TotalNetRevenuesIFRS",  # トヨタ独自
+        "SalesRevenuesIFRS",  # トヨタ独自
+        "SalesAndFinancialServicesRevenueIFRS",  # ソニー独自
+        "NetSalesIFRS",  # 複数 IFRS 企業が使用
+    })
+
     def test_all_ifrs_concepts_exist_in_taxonomy(
         self,
         xsd_concepts: frozenset[str],
     ) -> None:
-        """全 IFRS concept がタクソノミ XSD に実在する。"""
+        """標準タクソノミの IFRS concept が XSD に実在する（提出者独自は除外）。"""
         missing = [
             m.concept
             for m in all_mappings()
             if m.concept not in xsd_concepts
+            and m.concept not in self._FILER_SPECIFIC_CONCEPTS
         ]
         assert not missing, (
             f"タクソノミ XSD に存在しない IFRS concept: {missing}"
         )
 
     def test_pl_concepts_exist(self, xsd_concepts: frozenset[str]) -> None:
-        """PL concept が全てタクソノミに実在する。"""
+        """PL concept が全てタクソノミに実在する（提出者独自は除外）。"""
         missing = [
             m.concept
             for m in mappings_for_statement(StatementType.INCOME_STATEMENT)
             if m.concept not in xsd_concepts
+            and m.concept not in self._FILER_SPECIFIC_CONCEPTS
         ]
         assert not missing, f"PL で不在: {missing}"
 
