@@ -235,10 +235,10 @@ df = pd.DataFrame([
     {
         "ticker": f.ticker,
         "filer": f.filer_name,
-        **extracted_to_dict({
-            **extract_values(f.xbrl().income_statement(), keys),
-            **extract_values(f.xbrl().balance_sheet(), keys),
-        }),
+        **extracted_to_dict(
+            extract_values(f.xbrl().income_statement(), keys),
+            extract_values(f.xbrl().balance_sheet(), keys),
+        ),
     }
     for f in filings if f.has_xbrl
 ])

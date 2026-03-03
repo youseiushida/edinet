@@ -128,25 +128,32 @@ def extract_values(
 
 
 def extracted_to_dict(
-    extracted: dict[str, ExtractedValue | None],
+    *extracted_dicts: dict[str, ExtractedValue | None],
 ) -> dict[str, Decimal | str | None]:
     """``extract_values()`` の結果を ``{key: value}`` 辞書に変換する。
 
-    pandas の ``DataFrame`` 構築や JSON シリアライズ向けの軽量変換。
+    複数の辞書を渡すとマージされる。値が見つかったキーが優先され、
+    ``None`` で上書きされることはない（PL + BS を安全にマージ可能）。
 
     Args:
-        extracted: ``extract_values()`` の戻り値。
+        *extracted_dicts: ``extract_values()`` の戻り値（1つ以上）。
 
     Returns:
         ``{canonical_key: value}`` の辞書。
-        ``ExtractedValue`` が ``None`` のキーは値も ``None``。
 
     Example:
-        >>> row = extracted_to_dict(extract_values(pl, [CK.REVENUE]))
+        >>> row = extracted_to_dict(
+        ...     extract_values(pl, [CK.REVENUE, CK.TOTAL_ASSETS]),
+        ...     extract_values(bs, [CK.REVENUE, CK.TOTAL_ASSETS]),
+        ... )
         >>> row
-        {'revenue': Decimal('1234567000')}
+        {'revenue': Decimal('1234567000'), 'total_assets': Decimal('5000000000')}
     """
-    return {
-        k: (ev.value if ev is not None else None)
-        for k, ev in extracted.items()
-    }
+    result: dict[str, Decimal | str | None] = {}
+    for extracted in extracted_dicts:
+        for k, ev in extracted.items():
+            if ev is not None:
+                result[k] = ev.value
+            elif k not in result:
+                result[k] = None
+    return result
