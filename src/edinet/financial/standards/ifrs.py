@@ -234,7 +234,8 @@ _KPI_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
 # canonical key による横断取得を可能にするためのマッピング。
 _SUMMARY_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
     IFRSConceptMapping("RevenueIFRSSummaryOfBusinessResults", CK.REVENUE, None, mapping_note="jpcrp_cor 経営指標サマリー"),
-    IFRSConceptMapping("OperatingProfitLossIFRSSummaryOfBusinessResults", CK.OPERATING_INCOME, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    # 注: OperatingProfitLossIFRSSummaryOfBusinessResults は jpcrp_cor XSD に存在しない。
+    # IFRS の営業利益は PL 本体の jpigp_cor:OperatingProfitLossIFRS のみ。
     IFRSConceptMapping("ProfitLossBeforeTaxIFRSSummaryOfBusinessResults", CK.INCOME_BEFORE_TAX, None, mapping_note="jpcrp_cor 経営指標サマリー"),
     IFRSConceptMapping("ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults", CK.NET_INCOME_PARENT, None, mapping_note="jpcrp_cor 経営指標サマリー"),
     IFRSConceptMapping("ComprehensiveIncomeIFRSSummaryOfBusinessResults", CK.COMPREHENSIVE_INCOME, None, mapping_note="jpcrp_cor 経営指標サマリー"),

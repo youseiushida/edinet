@@ -46,7 +46,7 @@
 |---|---|---|---|
 | `xbrl/standards/canonical_keys.py` | **93 CK 定数** | — | 全 canonical_key の StrEnum 定数 |
 | `xbrl/standards/jgaap.py` | 83 | `jppfs_cor`, `jpcrp_cor` | PL16 + BS24 + CF35 + KPI8 |
-| `xbrl/standards/ifrs.py` | 65 | `jpigp_cor`, `jpcrp_cor` | PL15 + BS19 + CF16 + KPI2 + Summary10 + CI3 |
+| `xbrl/standards/ifrs.py` | 64 | `jpigp_cor`, `jpcrp_cor` | PL15 + BS19 + CF16 + KPI2 + Summary9 + CI3 |
 | `xbrl/standards/usgaap.py` | 20 + 14 | `jpcrp_cor` | Summary20（label_ja + label_en）+ TextBlock14 |
 | `xbrl/sector/banking.py` | 45 | `jpbki_cor`, `jppfs_cor` | PL20 + BS15 + CF10 |
 | `xbrl/sector/insurance.py` | 49 | `jpins_cor` | PL32 + BS17 (in1/in2 分割) |

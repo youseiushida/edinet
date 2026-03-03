@@ -430,7 +430,7 @@ class TestAllMappingsAndKeys:
         )
         kpi_ci_count = len([m for m in total if m.statement_type is None])
         assert len(total) == pl_count + bs_count + cf_count + kpi_ci_count
-        assert len(total) == 65  # 55 (詳細) + 10 (SummaryOfBusinessResults)
+        assert len(total) == 64  # 55 (詳細) + 9 (SummaryOfBusinessResults)
 
     def test_all_canonical_keys_is_frozenset(self) -> None:
         """all_canonical_keys() が frozenset を返す。"""
@@ -440,7 +440,7 @@ class TestAllMappingsAndKeys:
     def test_all_canonical_keys_count(self) -> None:
         """all_canonical_keys() の数（サマリーと詳細で重複があるため mappings 数より少ない）。"""
         assert len(all_canonical_keys()) == 55  # ユニークな CK 数は変わらない
-        assert len(all_mappings()) == 65  # concept 数は 65
+        assert len(all_mappings()) == 64  # concept 数は 64
 
     def test_ifrs_specific_concepts_are_marked(self) -> None:
         """ifrs_specific_concepts() が is_ifrs_specific=True のみ含む。"""
@@ -520,17 +520,23 @@ _SKIP_REASON = "EDINET_TAXONOMY_ROOT が未設定"
 
 
 def _collect_xsd_concepts_ifrs(taxonomy_root: str) -> frozenset[str]:
-    """jpigp_cor の XSD から全 concept 名を抽出する。"""
+    """jpigp_cor + jpcrp_cor の XSD から全 concept 名を抽出する。
+
+    IFRS マッピングには jpigp_cor（詳細科目）と jpcrp_cor
+    （SummaryOfBusinessResults サマリー科目）の両方が含まれるため、
+    両方の XSD をスキャンする。
+    """
     concepts: set[str] = set()
     pattern = re.compile(r'name="([^"]+)"')
-    target = Path(taxonomy_root) / "taxonomy" / "jpigp"
-    if not target.exists():
-        return frozenset()
-    for xsd_file in target.rglob("*.xsd"):
-        for line in xsd_file.read_text(encoding="utf-8").splitlines():
-            m = pattern.search(line)
-            if m:
-                concepts.add(m.group(1))
+    for module_group in ("jpigp", "jpcrp"):
+        target = Path(taxonomy_root) / "taxonomy" / module_group
+        if not target.exists():
+            continue
+        for xsd_file in target.rglob("*.xsd"):
+            for line in xsd_file.read_text(encoding="utf-8").splitlines():
+                m = pattern.search(line)
+                if m:
+                    concepts.add(m.group(1))
     return frozenset(concepts)
 
 
