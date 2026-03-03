@@ -1,7 +1,7 @@
 """会計基準横断の正規化キー定数。
 
-jgaap.py, ifrs.py, sector/*.py が共有する canonical_key の
-文字列リテラルを定数化し、typo を防止する。
+``summary_mappings.py`` と ``statement_mappings.py`` が共有する
+canonical_key の文字列リテラルを定数化し、typo を防止する。
 
 ``CK`` は ``StrEnum`` であり、``CK.REVENUE == "revenue"`` が True。
 ``isinstance(CK.REVENUE, str)`` も True のため、文字列を期待する
@@ -11,8 +11,8 @@ dict キーやフィールド値にそのまま使用できる。
 
     from edinet.financial.standards.canonical_keys import CK
 
-    # マッピング定義
-    ConceptMapping(concept="NetSales", canonical_key=CK.REVENUE, ...)
+    # extract_values で使用
+    result = extract_values(stmts, [CK.REVENUE, CK.OPERATING_INCOME])
 
     # 比較（StrEnum なので .value 不要）
     assert CK.REVENUE == "revenue"
@@ -60,6 +60,9 @@ class CK(StrEnum):
     FINANCE_INCOME = "finance_income"                      # IFRS
     FINANCE_COSTS = "finance_costs"                        # IFRS
     EQUITY_METHOD_INCOME_IFRS = "equity_method_income_ifrs"  # IFRS
+    INTEREST_INCOME_PL = "interest_income_pl"              # J-GAAP (営業外収益)
+    INTEREST_EXPENSE_PL = "interest_expense_pl"            # J-GAAP (営業外費用)
+    RD_EXPENSES = "rd_expenses"                            # 研究開発費
     INCOME_BEFORE_TAX = "income_before_tax"
     INCOME_TAXES = "income_taxes"
     INCOME_TAXES_DEFERRED = "income_taxes_deferred"        # J-GAAP
@@ -76,11 +79,15 @@ class CK(StrEnum):
     NONCURRENT_ASSETS = "noncurrent_assets"
     PPE = "ppe"
     INTANGIBLE_ASSETS = "intangible_assets"
+    GOODWILL = "goodwill"
     INVESTMENTS_AND_OTHER = "investments_and_other"        # J-GAAP
     DEFERRED_ASSETS = "deferred_assets"                    # J-GAAP
     TOTAL_ASSETS = "total_assets"
     TRADE_PAYABLES = "trade_payables"
+    SHORT_TERM_LOANS = "short_term_loans"
     CURRENT_LIABILITIES = "current_liabilities"
+    LONG_TERM_LOANS = "long_term_loans"
+    BONDS_PAYABLE = "bonds_payable"
     NONCURRENT_LIABILITIES = "noncurrent_liabilities"
     TOTAL_LIABILITIES = "total_liabilities"
     CAPITAL_STOCK = "capital_stock"
@@ -143,8 +150,30 @@ class CK(StrEnum):
     ROE = "roe"                                            # J-GAAP
     PER = "per"                                            # J-GAAP
     EMPLOYEES = "employees"                                # J-GAAP
+    INTERIM_DPS = "interim_dps"                            # J-GAAP
+    PAYOUT_RATIO = "payout_ratio"                          # J-GAAP
+    TOTAL_SHARES_ISSUED = "total_shares_issued"            # J-GAAP
+    EQUITY_METHOD_INCOME = "equity_method_income"          # J-GAAP
+    CONTINUING_OPERATIONS_INCOME = "continuing_operations_income"  # IFRS/JMIS
 
     # --- CI (包括利益 — IFRS) ---
     COMPREHENSIVE_INCOME = "comprehensive_income"          # IFRS (is_ifrs_specific=True)
     COMPREHENSIVE_INCOME_PARENT = "comprehensive_income_parent"  # IFRS (is_ifrs_specific=False)
     COMPREHENSIVE_INCOME_MINORITY = "comprehensive_income_minority"  # IFRS (is_ifrs_specific=True)
+
+    # --- BANKING (銀行業固有) ---
+    CAPITAL_ADEQUACY_RATIO_BIS = "capital_adequacy_ratio_bis"
+    CAPITAL_ADEQUACY_RATIO_DOMESTIC = "capital_adequacy_ratio_domestic"
+    CAPITAL_ADEQUACY_RATIO_DOMESTIC_2 = "capital_adequacy_ratio_domestic_2"
+    CAPITAL_ADEQUACY_RATIO_INTERNATIONAL = "capital_adequacy_ratio_international"
+    DEPOSITS = "deposits"
+    LOANS_AND_BILLS_DISCOUNTED = "loans_and_bills_discounted"
+    SECURITIES_BANKING = "securities_banking"
+
+    # --- INSURANCE (保険業固有) ---
+    NET_PREMIUMS_WRITTEN = "net_premiums_written"
+    INTEREST_DIVIDEND_INCOME_INS = "interest_dividend_income_ins"
+    INVESTMENT_YIELD_INCOME = "investment_yield_income"
+    INVESTMENT_YIELD_REALIZED = "investment_yield_realized"
+    NET_LOSS_RATIO = "net_loss_ratio"
+    NET_OPERATING_EXPENSE_RATIO = "net_operating_expense_ratio"

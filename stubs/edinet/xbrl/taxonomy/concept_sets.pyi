@@ -18,7 +18,7 @@ class StatementCategory(enum.Enum):
     STATEMENT_OF_CHANGES_IN_EQUITY = 'statement_of_changes_in_equity'
     COMPREHENSIVE_INCOME = 'comprehensive_income'
     def to_statement_type(self) -> StatementType | None:
-        """対応する ``StatementType`` を返す。SS/CI は ``None``。"""
+        """対応する ``StatementType`` を返す。"""
     @classmethod
     def from_statement_type(cls, st: StatementType) -> StatementCategory:
         """``StatementType`` から変換する。

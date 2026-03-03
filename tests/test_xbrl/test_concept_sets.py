@@ -66,16 +66,16 @@ class TestStatementCategory:
             == StatementType.CASH_FLOW_STATEMENT
         )
 
-    def test_to_statement_type_ss_is_none(self) -> None:
+    def test_to_statement_type_ss(self) -> None:
         assert (
             StatementCategory.STATEMENT_OF_CHANGES_IN_EQUITY.to_statement_type()
-            is None
+            == StatementType.STATEMENT_OF_CHANGES_IN_EQUITY
         )
 
-    def test_to_statement_type_ci_is_none(self) -> None:
+    def test_to_statement_type_ci(self) -> None:
         assert (
             StatementCategory.COMPREHENSIVE_INCOME.to_statement_type()
-            is None
+            == StatementType.COMPREHENSIVE_INCOME
         )
 
     def test_from_statement_type_pl(self) -> None:

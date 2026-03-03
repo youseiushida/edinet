@@ -26,8 +26,8 @@ class Statements:
     Attributes:
         _items: 全 LineItem（全期間・全 dimension）。
         _detected_standard: 判別された会計基準。
-        _facts: 元の RawFact（US-GAAP サマリー抽出用）。
-        _contexts: コンテキストマッピング（US-GAAP 用）。
+        _facts: 元の RawFact（テキストブロック抽出・会計基準判別用）。
+        _contexts: コンテキストマッピング（テキストブロック抽出用）。
         _taxonomy_root: タクソノミルートパス。
         _industry_code: 業種コード（例: ``"bk1"``）。
             ``None`` は一般事業会社。
@@ -199,6 +199,46 @@ class Statements:
 
         Returns:
             組み立て済みのキャッシュフロー計算書。
+        '''
+    def equity_statement(self, *, consolidated: bool = True, period: DurationPeriod | Literal['current', 'prior'] | None = None, strict: bool = False) -> FinancialStatement:
+        '''株主資本等変動計算書を組み立てる。
+
+        ConceptSet（Presentation Linkbase 自動導出）により SS の
+        全科目を取得する。taxonomy_root が未設定の場合は空を返す。
+
+        Note:
+            SS のタクソノミ定義は 5 業種（cai, edu, inv, liq, med）のみ。
+            未定義の業種では空の FinancialStatement を返す。
+
+        Args:
+            consolidated: True なら連結、False なら個別。
+            period: 対象期間。``"current"`` / ``"prior"`` で当期/前期を
+                DEI ベースで自動選択。None なら最新期間を自動選択。
+            strict: True の場合、要求した連結/個別データが存在しないとき
+                フォールバックせず空を返す。
+
+        Returns:
+            組み立て済みの株主資本等変動計算書。
+        '''
+    def comprehensive_income(self, *, consolidated: bool = True, period: DurationPeriod | Literal['current', 'prior'] | None = None, strict: bool = False) -> FinancialStatement:
+        '''包括利益計算書を組み立てる。
+
+        ConceptSet（Presentation Linkbase 自動導出）により CI の
+        全科目を取得する。taxonomy_root が未設定の場合は空を返す。
+
+        Note:
+            CI のタクソノミ定義は 1 業種（cai）のみ。
+            未定義の業種では空の FinancialStatement を返す。
+
+        Args:
+            consolidated: True なら連結、False なら個別。
+            period: 対象期間。``"current"`` / ``"prior"`` で当期/前期を
+                DEI ベースで自動選択。None なら最新期間を自動選択。
+            strict: True の場合、要求した連結/個別データが存在しないとき
+                フォールバックせず空を返す。
+
+        Returns:
+            組み立て済みの包括利益計算書。
         '''
 
 def build_statements(items: Sequence[LineItem], *, facts: tuple[RawFact, ...] | None = None, contexts: dict[str, StructuredContext] | None = None, taxonomy_root: Path | None = None, industry_code: str | None = None, resolver: TaxonomyResolver | None = None) -> Statements:

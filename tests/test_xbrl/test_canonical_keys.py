@@ -65,77 +65,24 @@ class TestCKProperties:
 @pytest.mark.small
 @pytest.mark.unit
 class TestCKIntegrity:
-    """CK と jgaap/ifrs/sector の整合性テスト。"""
+    """CK と summary_mappings の整合性テスト。"""
 
-    def test_t08_jgaap_all_canonical_keys_in_ck(self) -> None:
-        """jgaap の全 canonical_key が CK に存在する。"""
-        from edinet.financial.standards import jgaap
+    def test_t08_summary_mappings_all_canonical_keys_in_ck(self) -> None:
+        """summary_mappings の全 canonical_key が CK に存在する。"""
+        from edinet.financial.standards.summary_mappings import all_summary_mappings
 
         ck_values = set(CK)
-        for m in jgaap.all_mappings():
+        for m in all_summary_mappings():
             assert m.canonical_key in ck_values, (
-                f"jgaap の canonical_key '{m.canonical_key}' が CK に存在しない"
+                f"summary_mappings の canonical_key '{m.canonical_key}' "
+                f"が CK に存在しない（concept: {m.concept}）"
             )
 
-    def test_t09_ifrs_all_canonical_keys_in_ck(self) -> None:
-        """ifrs の全 canonical_key が CK に存在する。"""
-        from edinet.financial.standards import ifrs
+    def test_t09_summary_keys_subset_of_ck(self) -> None:
+        """summary_mappings で使用される CK が全て有効。"""
+        from edinet.financial.standards.summary_mappings import all_summary_mappings
 
+        summary_keys = {m.canonical_key for m in all_summary_mappings()}
         ck_values = set(CK)
-        for m in ifrs.all_mappings():
-            assert m.canonical_key in ck_values, (
-                f"ifrs の canonical_key '{m.canonical_key}' が CK に存在しない"
-            )
-
-    def test_t10_sector_all_general_equivalents_in_ck(self) -> None:
-        """sector の全 general_equivalent が CK に存在する。"""
-        from edinet.financial.sector import (
-            banking,
-            construction,
-            insurance,
-            railway,
-            securities,
-        )
-
-        ck_values = set(CK)
-        for module in (banking, construction, insurance, railway, securities):
-            for m in module.all_mappings():
-                if m.general_equivalent is not None:
-                    assert m.general_equivalent in ck_values, (
-                        f"{module.__name__} の general_equivalent "
-                        f"'{m.general_equivalent}' が CK に存在しない"
-                    )
-
-    def test_t11_jgaap_ifrs_shared_keys_use_same_ck(self) -> None:
-        """jgaap と ifrs で共有するキーが同一の CK メンバーとして有効。"""
-        from edinet.financial.standards import ifrs, jgaap
-
-        jgaap_keys = jgaap.all_canonical_keys()
-        ifrs_keys = ifrs.all_canonical_keys()
-        shared = jgaap_keys & ifrs_keys
-        assert len(shared) > 0, "共有キーが 0 件"
-        for key in shared:
-            assert key in set(CK), f"共有キー '{key}' が CK に存在しない"
-
-    def test_t12_ck_covers_exactly_union(self) -> None:
-        """set(CK) == jgaap_keys | ifrs_keys | _UNMAPPED_CKS（過不足なし）。
-
-        CK は jgaap と ifrs の canonical_key の和集合に加え、
-        ConceptMapping で表現できない CK（1 concept : N key のケース）
-        を含む。CASH_BEGINNING / CASH_END は CashAndCashEquivalents を
-        期首/期末で共有するため ConceptMapping に登録できず、
-        statements._absorb_cf_instant_balances() が直接使用する。
-        """
-        from edinet.financial.standards import ifrs, jgaap
-
-        # ConceptMapping に登録できない CK 定数
-        _UNMAPPED_CKS = {CK.CASH_BEGINNING, CK.CASH_END}
-
-        jgaap_keys = jgaap.all_canonical_keys()
-        ifrs_keys = ifrs.all_canonical_keys()
-        expected = jgaap_keys | ifrs_keys | _UNMAPPED_CKS
-        actual = set(CK)
-        assert actual == expected, (
-            f"差分: CK にのみ存在={actual - expected}, "
-            f"jgaap|ifrs にのみ存在={expected - actual}"
-        )
+        orphan = summary_keys - ck_values
+        assert not orphan, f"CK に存在しないキー: {orphan}"

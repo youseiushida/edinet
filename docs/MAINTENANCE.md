@@ -44,16 +44,19 @@
 
 | ファイル | concept 数 | 参照タクソノミ | 内容 |
 |---|---|---|---|
-| `xbrl/standards/canonical_keys.py` | **93 CK 定数** | — | 全 canonical_key の StrEnum 定数 |
-| `xbrl/standards/jgaap.py` | 102 | `jppfs_cor`, `jpcrp_cor` | PL16 + BS24 + CF35 + KPI8 + Summary19 |
-| `xbrl/standards/ifrs.py` | 77 | `jpigp_cor`, `jpcrp_cor` | PL17 + BS19 + CF16 + KPI2 + Summary20 + CI3 |
-| `xbrl/standards/usgaap.py` | 20 + 14 | `jpcrp_cor` | Summary20（label_ja + label_en）+ TextBlock14 |
-| `xbrl/sector/banking.py` | 45 | `jpbki_cor`, `jppfs_cor` | PL20 + BS15 + CF10 |
-| `xbrl/sector/insurance.py` | 49 | `jpins_cor` | PL32 + BS17 (in1/in2 分割) |
-| `xbrl/sector/construction.py` | 20 | `jpcns_cor` | PL12 + BS8 |
-| `xbrl/sector/railway.py` | 11 | `jprwy_cor` | PL11 |
-| `xbrl/sector/securities.py` | 13 | `jpsec_cor` | PL8 + BS5 |
-| **合計** | **301 + 93 CK** | | |
+| `financial/standards/canonical_keys.py` | **100 CK 定数** | — | 全 canonical_key の StrEnum 定数 |
+| `financial/standards/summary_mappings.py` | 77 | `jpcrp_cor` | SummaryOfBusinessResults → CK（4基準統合） |
+| `financial/standards/statement_mappings.py` | ~130 | `jppfs_cor`, `jpigp_cor` | PL/BS/CF 本体 → CK（J-GAAP + IFRS）+ 正規化レイヤー |
+| **合計** | **~207 + 100 CK** | | |
+
+#### statement_mappings.py の 3 層マッチング
+
+`lookup_statement()` は防御的 2 段マッチングを使用:
+
+1. **辞書完全一致** (`lookup_statement_exact`): `_CONCEPT_INDEX` から O(1) で取得
+2. **正規化フォールバック** (`lookup_statement_normalized`): EDINET サフィックス（`IFRS`, `JGAAP` 等）+ ポジションタグ（`CA`, `CL` 等）を剥離後に辞書引き
+
+`extract_values()` は `_items` を 2 パスで走査し、exact の結果を normalized が上書きしない。
 
 ### 法令・API 仕様（手動保守、低頻度）
 
@@ -221,7 +224,8 @@ SectorConceptMapping(
 |----------|------|
 | `taxonomy/concept_sets.py` | Presentation Linkbase を毎回スキャンして動的導出。**自動追従** |
 | `taxonomy/__init__.py` (TaxonomyResolver) | ラベルリンクベースを動的読み込み。**自動追従** |
-| `standards/normalize.py` | jgaap/ifrs/sector へのファサード。自身に concept 名なし |
+| `standards/normalize.py` | statement_mappings へのファサード。自身に concept 名なし |
+| `financial/extract.py` | 3 層信頼度モデル（summary → exact → normalized）で抽出。マッピングデータなし |
 | `xbrl/statements.py` | normalize 経由で概念セットを取得。直接の concept 依存なし |
 | `xbrl/parser.py` | XML 構造のパースのみ |
 | `xbrl/_namespaces.py` | namespace URI をバージョン非依存の正規表現で処理 |
@@ -291,11 +295,16 @@ Wave 3 完了時点では、jgaap.py / ifrs.py / sector/*.py の各 ConceptMappi
 ## 現在の保守コスト
 
 ```
-タクソノミ年次更新:
-  concept_sets             → 変更不要（自動追従）
-  taxonomy/labels          → 変更不要（自動追従）
-  standards/ canonical_key → 新概念の追加のみ（年に 0〜数件）
-  sector/ general_equiv    → 新概念の追加のみ（同上）
+タクソノミ年次更新（タクソノミ追従が必要なファイル）:
+  summary_mappings.py      → Summary concept 名の変更追従（77件）
+  statement_mappings.py    → PL/BS/CF concept 名の変更追従（~130件）
+  canonical_keys.py        → 新 CK の追加のみ（年に 0〜数件）
+
+タクソノミ追従不要（安定コード）:
+  concept_sets             → 変更不要（Presentation Linkbase 動的導出）
+  taxonomy/labels          → 変更不要（動的読み込み）
+  normalize.py             → statement_mappings へのファサード
+  extract.py               → 3 層信頼度モデル（ロジックのみ）
 
 マスタデータ更新:
   edinet_code              → スクリプト実行

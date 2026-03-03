@@ -73,12 +73,16 @@ class StatementType(enum.Enum):
     INCOME_STATEMENT = "income_statement"
     BALANCE_SHEET = "balance_sheet"
     CASH_FLOW_STATEMENT = "cash_flow_statement"
+    STATEMENT_OF_CHANGES_IN_EQUITY = "statement_of_changes_in_equity"
+    COMPREHENSIVE_INCOME = "comprehensive_income"
 
 
 STATEMENT_TYPE_LABELS: Final[dict[StatementType, str]] = {
     StatementType.INCOME_STATEMENT: "損益計算書 (Income Statement)",
     StatementType.BALANCE_SHEET: "貸借対照表 (Balance Sheet)",
     StatementType.CASH_FLOW_STATEMENT: "キャッシュ・フロー計算書 (Cash Flow Statement)",
+    StatementType.STATEMENT_OF_CHANGES_IN_EQUITY: "株主資本等変動計算書 (Statement of Changes in Equity)",
+    StatementType.COMPREHENSIVE_INCOME: "包括利益計算書 (Statement of Comprehensive Income)",
 }
 
 _DATAFRAME_COLUMNS: Final[list[str]] = [

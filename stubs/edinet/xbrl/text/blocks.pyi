@@ -2,6 +2,7 @@ from collections.abc import Sequence
 from dataclasses import dataclass
 from edinet.xbrl.contexts import Period, StructuredContext
 from edinet.xbrl.parser import RawFact
+from typing import Any
 
 __all__ = ['TextBlock', 'extract_text_blocks']
 
@@ -34,15 +35,19 @@ class TextBlock:
     is_consolidated: bool
     fact_id: str | None = ...
 
-def extract_text_blocks(facts: Sequence[RawFact], context_map: dict[str, StructuredContext]) -> tuple[TextBlock, ...]:
+def extract_text_blocks(source: Sequence[RawFact] | Any, context_map: dict[str, StructuredContext] | None = None) -> tuple[TextBlock, ...]:
     '''RawFact 群から textBlockItemType の Fact を抽出する。
+
+    ``Statements`` を渡す場合は ``context_map`` は不要（内部で自動取得）。
 
     textBlockItemType の判定は concept のローカル名が ``"TextBlock"`` で
     終わることを条件とする（EDINET タクソノミの命名慣例）。
 
     Args:
-        facts: ``parse_xbrl_facts()`` が返した RawFact のシーケンス。
+        source: ``Statements`` または ``parse_xbrl_facts()`` が返した
+            RawFact のシーケンス。
         context_map: ``structure_contexts()`` が返した Context 辞書。
+            ``Statements`` を渡す場合は省略可。
 
     Returns:
         TextBlock のタプル。元の facts の出現順を保持する。
@@ -50,5 +55,5 @@ def extract_text_blocks(facts: Sequence[RawFact], context_map: dict[str, Structu
     Raises:
         EdinetParseError: ``context_ref`` が ``context_map`` に
             見つからない RawFact が存在した場合。
-            既存の ``build_line_items()`` と同一の動作。
+        TypeError: 低レベル呼び出し時に ``context_map`` が ``None`` の場合。
     '''

@@ -1472,36 +1472,16 @@ def _make_usgaap_contexts() -> dict:
 @pytest.mark.small
 @pytest.mark.unit
 class TestUSGAAPSummaryStatements:
-    """US-GAAP サマリー経由の財務諸表組み立てテスト（T-S06, T-S11, T-S12）。"""
+    """US-GAAP BLOCK_ONLY 時のテスト（v0.2.0: 空 + 警告を返す）。"""
 
-    def test_s06_usgaap_returns_summary_with_warning(self) -> None:
-        """T-S06: US-GAAP でサマリー形式 + 警告メッセージ。"""
+    def test_s06_usgaap_returns_empty_with_warning(self) -> None:
+        """T-S06: US-GAAP BLOCK_ONLY は空 + BLOCK_ONLY 警告。"""
         from edinet.financial.standards.detect import (
             DetectedStandard,
             DetailLevel,
             DetectionMethod,
         )
 
-        facts = (
-            _make_usgaap_raw_fact(
-                local_name="RevenuesUSGAAPSummaryOfBusinessResults",
-                context_ref="CurrentYearDuration",
-                value_raw="5000000000",
-            ),
-            _make_usgaap_raw_fact(
-                local_name="OperatingIncomeLossUSGAAPSummaryOfBusinessResults",
-                context_ref="CurrentYearDuration",
-                value_raw="1000000000",
-                order=1,
-            ),
-            _make_usgaap_raw_fact(
-                local_name="TotalAssetsUSGAAPSummaryOfBusinessResults",
-                context_ref="CurrentYearInstant",
-                value_raw="20000000000",
-                order=2,
-            ),
-        )
-        contexts = _make_usgaap_contexts()
         detected = DetectedStandard(
             standard=AccountingStandard.US_GAAP,
             method=DetectionMethod.DEI,
@@ -1510,127 +1490,14 @@ class TestUSGAAPSummaryStatements:
         stmts = Statements(
             _items=(),
             _detected_standard=detected,
-            _facts=facts,
-            _contexts=contexts,
         )
 
-        # PL: revenue + operating_income が含まれる
-        pl = stmts.income_statement()
+        with pytest.warns(EdinetWarning, match="BLOCK_ONLY"):
+            pl = stmts.income_statement()
         assert pl.statement_type == StatementType.INCOME_STATEMENT
-        assert len(pl.items) >= 2
-        pl_names = [item.local_name for item in pl.items]
-        assert "RevenuesUSGAAPSummaryOfBusinessResults" in pl_names
-        assert "OperatingIncomeLossUSGAAPSummaryOfBusinessResults" in pl_names
+        assert len(pl.items) == 0
         assert len(pl.warnings_issued) > 0
         assert any("BLOCK_ONLY" in w for w in pl.warnings_issued)
-
-        # BS: total_assets が含まれる
-        bs = stmts.balance_sheet()
-        assert bs.statement_type == StatementType.BALANCE_SHEET
-        bs_names = [item.local_name for item in bs.items]
-        assert "TotalAssetsUSGAAPSummaryOfBusinessResults" in bs_names
-
-    def test_s11_usgaap_period_filtering(self) -> None:
-        """T-S11: US-GAAP で period 指定時に該当期間のみ返される。"""
-        from edinet.financial.standards.detect import (
-            DetectedStandard,
-            DetailLevel,
-            DetectionMethod,
-        )
-
-        facts = (
-            # 当期の revenue
-            _make_usgaap_raw_fact(
-                local_name="RevenuesUSGAAPSummaryOfBusinessResults",
-                context_ref="CurrentYearDuration",
-                value_raw="5000000000",
-            ),
-            # 前期の revenue
-            _make_usgaap_raw_fact(
-                local_name="RevenuesUSGAAPSummaryOfBusinessResults",
-                context_ref="PriorYearDuration",
-                value_raw="4000000000",
-                order=1,
-            ),
-        )
-        contexts = _make_usgaap_contexts()
-        detected = DetectedStandard(
-            standard=AccountingStandard.US_GAAP,
-            method=DetectionMethod.DEI,
-            detail_level=DetailLevel.BLOCK_ONLY,
-        )
-        stmts = Statements(
-            _items=(),
-            _detected_standard=detected,
-            _facts=facts,
-            _contexts=contexts,
-        )
-
-        # 前期を明示指定
-        pl = stmts.income_statement(period=_PREV_DURATION)
-        assert pl.period == _PREV_DURATION
-        assert len(pl.items) == 1
-        assert pl.items[0].value == Decimal("4000000000")
-
-    def test_s12_usgaap_latest_period_auto_select(self) -> None:
-        """T-S12: US-GAAP で period=None 時に最新期間が自動選択される。"""
-        from edinet.financial.standards.detect import (
-            DetectedStandard,
-            DetailLevel,
-            DetectionMethod,
-        )
-
-        facts = (
-            # 当期の revenue
-            _make_usgaap_raw_fact(
-                local_name="RevenuesUSGAAPSummaryOfBusinessResults",
-                context_ref="CurrentYearDuration",
-                value_raw="5000000000",
-            ),
-            # 前期の revenue
-            _make_usgaap_raw_fact(
-                local_name="RevenuesUSGAAPSummaryOfBusinessResults",
-                context_ref="PriorYearDuration",
-                value_raw="4000000000",
-                order=1,
-            ),
-            # 当期の total_assets (instant)
-            _make_usgaap_raw_fact(
-                local_name="TotalAssetsUSGAAPSummaryOfBusinessResults",
-                context_ref="CurrentYearInstant",
-                value_raw="20000000000",
-                order=2,
-            ),
-            # 前期の total_assets (instant)
-            _make_usgaap_raw_fact(
-                local_name="TotalAssetsUSGAAPSummaryOfBusinessResults",
-                context_ref="PriorYearInstant",
-                value_raw="18000000000",
-                order=3,
-            ),
-        )
-        contexts = _make_usgaap_contexts()
-        detected = DetectedStandard(
-            standard=AccountingStandard.US_GAAP,
-            method=DetectionMethod.DEI,
-            detail_level=DetailLevel.BLOCK_ONLY,
-        )
-        stmts = Statements(
-            _items=(),
-            _detected_standard=detected,
-            _facts=facts,
-            _contexts=contexts,
-        )
-
-        # PL: 最新の DurationPeriod が自動選択される
-        pl = stmts.income_statement()
-        assert pl.period == _CUR_DURATION
-        assert pl.items[0].value == Decimal("5000000000")
-
-        # BS: 最新の InstantPeriod が自動選択される
-        bs = stmts.balance_sheet()
-        assert bs.period == _CUR_INSTANT
-        assert bs.items[0].value == Decimal("20000000000")
 
 
 # ---------------------------------------------------------------------------

@@ -94,8 +94,12 @@ for filing in filings:
 
         print(f"{filing.filer_name}（{filing.ticker}）")
         print(f"  売上高: {pl['売上高'].value:,}")
-        print(f"  営業利益: {pl['営業利益'].value:,}")
-        print(f"  総資産: {bs['資産合計'].value:,}")
+
+        # extract_values を使えば会計基準・ラベル表記を問わず取得可能
+        from edinet import extract_values, CK
+        result = extract_values(stmts, [CK.OPERATING_INCOME, CK.TOTAL_ASSETS])
+        print(f"  営業利益: {result[CK.OPERATING_INCOME].value:,}")
+        print(f"  総資産: {result[CK.TOTAL_ASSETS].value:,}")
         break
 ```
 
@@ -106,8 +110,8 @@ for filing in filings:
 ```python
 from edinet import Company
 
-# 企業名で検索
-results = Company.search("トヨタ")
+# 企業名で検索（部分一致、複数ヒット）
+results = Company.search("トヨタ自動車")
 toyota = results[0]
 print(toyota.name_ja)      # "トヨタ自動車株式会社"
 print(toyota.ticker)       # "7203"
@@ -118,9 +122,10 @@ sony = Company.from_sec_code("6758")
 # EDINET コードから
 company = Company.from_edinet_code("E02144")
 
-# 最新の有報を取得
+# 最新の有報を取得（デフォルト: 過去90日間を検索）
 filing = toyota.latest(doc_type=edinet.DocType.ANNUAL_SECURITIES_REPORT)
-stmts = filing.xbrl()
+if filing is not None:
+    stmts = filing.xbrl()
 ```
 
 ## 書類タイプ
@@ -218,7 +223,7 @@ print(hits[0].label_ja.text)  # "営業利益又は営業損失（△）"
 
 # canonical key: 会計基準・ラベル表記に依存しない安定的な取得方法
 from edinet import extract_values, CK
-result = extract_values(pl, [CK.OPERATING_INCOME])
+result = extract_values(stmts, [CK.OPERATING_INCOME])
 print(result[CK.OPERATING_INCOME].value)  # 確実に取得
 ```
 
@@ -227,8 +232,8 @@ print(result[CK.OPERATING_INCOME].value)  # 確実に取得
 会計基準は DEI から自動判別されます。J-GAAP・IFRS・US-GAAP のいずれでも同じ API で操作できます。
 
 ```python
-print(stmts.detected_standard)
-# DetectedStandard(standard=<JAPAN_GAAP>, method=<DEI>, detail_level=<DETAILED>)
+print(stmts.detected_standard)       # "J-GAAP"
+print(repr(stmts.detected_standard))  # DetectedStandard(standard=<...>, method=<DEI>, ...)
 
 # IFRS 企業でも同じコードで動く
 sony_stmts = sony_filing.xbrl()
@@ -242,12 +247,11 @@ sony_pl["売上収益"].value  # IFRS の Revenue
 
 | | `income_statement()` 等 | `extract_values()` |
 |:---|:---|:---|
-| **データソース** | Presentation Linkbase（タクソノミ定義） | 正規化キー辞書（手動マッピング） |
-| **取得範囲** | PL/BS/CF の全詳細科目（数十行） | 主要指標のみ（売上高・営業利益等） |
+| **データソース** | Presentation Linkbase（タクソノミ定義） | 3 層信頼度モデル（Summary → 辞書 → 正規化） |
+| **取得範囲** | PL/BS/CF の全詳細科目（数十行） | 主要指標（売上高・営業利益・のれん・有利子負債等） |
 | **表示順** | タクソノミの表示順序付き | なし（辞書） |
 | **基準横断** | 基準ごとに科目名が異なる | 基準を問わず同じキーで取得 |
-| **入力** | — | `FinancialStatement`（PL のみ等）または `Statements`（全科目横断） |
-| **用途** | 財務諸表の表示・分析 | スクリーナー・複数企業の横並び比較 |
+| **用途** | 財務諸表の表示・分析 | スクリーナー・DB 永続化・複数企業の横並び比較 |
 
 ```python
 # 方式1: 財務諸表として取得（全科目・表示順付き）
@@ -256,34 +260,41 @@ for item in pl:
     print(f"{item.label_ja.text}: {item.value}")
 
 # 方式2: 正規化キーで横断取得（主要指標・基準不問）
-# Statements を渡すと PL/BS/CF を横断して検索（推奨）
 result = extract_values(stmts, [CK.REVENUE, CK.TOTAL_ASSETS])
-
-# FinancialStatement を渡すとその表の科目のみ
-result = extract_values(pl, [CK.REVENUE, CK.OPERATING_INCOME])
 ```
 
 ### 正規化キーによる基準横断アクセス
 
-canonical key を使うと、会計基準を意識せずに値を取得できます。スクリーナーの構築に最適です。
+canonical key (CK) を使うと、会計基準を意識せずに値を取得できます。スクリーナーや DB 永続化に最適です。
 
 ```python
 from edinet import extract_values, extracted_to_dict, CK
 
-# J-GAAP でも IFRS でも US-GAAP でも同じキーで取得
-# Statements を渡すと PL/BS/CF を横断して全科目から検索
 stmts = filing.xbrl()
-result = extract_values(stmts, [CK.REVENUE, CK.OPERATING_INCOME, CK.NET_INCOME])
+
+# 当期・連結（デフォルト: period=None, consolidated=None で全期間・全区分から先頭マッチ）
+result = extract_values(stmts, [CK.REVENUE, CK.OPERATING_INCOME, CK.GOODWILL])
+
+# 当期・連結を明示指定
+result = extract_values(stmts, [CK.REVENUE], period="current", consolidated=True)
+
+# 前期
+result = extract_values(stmts, [CK.REVENUE], period="prior")
+
+# 個別（非連結）
+result = extract_values(stmts, [CK.REVENUE], consolidated=False)
 
 rev = result[CK.REVENUE]
 print(rev.value)                 # Decimal('1234567000000')
+print(rev.source)                # "summary" / "exact" / "normalized"
 print(rev.item.label_ja.text)    # "売上高"（J-GAAP）or "売上収益"（IFRS）
-print(rev.item.source_line)      # XML の行番号（トレーサビリティ）
 print(rev.item.local_name)       # マッチした concept 名
 
-# FinancialStatement を渡すと、その表の科目のみから検索
-pl = stmts.income_statement()
-pl_result = extract_values(pl, [CK.REVENUE, CK.OPERATING_INCOME])
+# 信頼度でフィルタ（normalized を除外）
+safe = {k: v for k, v in result.items() if v and v.source != "normalized"}
+
+# Summary のみ（PL/BS/CF 本体からの補完を無効化）
+result = extract_values(stmts, [CK.REVENUE], include_statements=False)
 
 # pandas で複数企業を横並び
 import pandas as pd
@@ -293,11 +304,32 @@ df = pd.DataFrame([
     {
         "ticker": f.ticker,
         "filer": f.filer_name,
-        **extracted_to_dict(extract_values(f.xbrl(), keys)),
+        **extracted_to_dict(extract_values(f.xbrl(), keys, period="current", consolidated=True)),
     }
     for f in filings if f.has_xbrl
 ])
 ```
+
+#### パラメータ
+
+| パラメータ | デフォルト | 説明 |
+|:---|:---|:---|
+| `keys` | `None` | 抽出するキー。`None` で全マッピング可能科目 |
+| `period` | `None` | `"current"` / `"prior"` / `None`（全期間から先頭マッチ） |
+| `consolidated` | `None` | `True`（連結）/ `False`（個別）/ `None`（全区分） |
+| `include_statements` | `True` | `False` で層 2・3 を無効化（Summary のみ） |
+
+#### 3 層信頼度モデル
+
+`extract_values()` は 3 層で値を探索し、`source` フィールドで出所を明示します。
+
+| 層 | `source` | データソース | 信頼度 |
+|:---|:---|:---|:---|
+| 1 | `"summary"` | SummaryOfBusinessResults（完全一致） | 最高 |
+| 2 | `"exact"` | PL/BS/CF 本体 + 注記の辞書完全一致 | 高 |
+| 3 | `"normalized"` | EDINET サフィックス剥離後に辞書引き | 低 |
+
+上位層の結果は下位層で上書きされません。
 
 ## DataFrame 変換・エクスポート
 
@@ -391,10 +423,10 @@ footnote_map = parse_footnote_links(parsed.footnote_links)
 Presentation Linkbase をスキャンして 23 業種 × PL/BS/CF/SS/CI の科目セットを自動導出します。
 
 ```python
-from edinet.xbrl.taxonomy.concept_sets import derive_concept_sets, StatementCategory
+from edinet.xbrl.taxonomy.concept_sets import derive_concept_sets, StatementType
 
 registry = derive_concept_sets(taxonomy_path)
-cs = registry.get(StatementCategory.INCOME_STATEMENT, consolidated=True, industry_code="cai")
+cs = registry.get(StatementType.INCOME_STATEMENT, consolidated=True, industry_code="cai")
 for entry in cs.concepts[:5]:
     print(entry.concept, entry.depth, entry.is_total)
 ```
@@ -695,7 +727,7 @@ latest = consolidated.latest_duration_contexts()
 | エクスポート | DataFrame / CSV / Parquet / Excel |
 | 表示 | Rich ターミナル / Jupyter HTML |
 | I/O | sync / async 完全対応 |
-| テスト | 1,771+ |
+| テスト | 1,398+ |
 
 ## 動作要件
 

@@ -35,8 +35,14 @@ dev = [
     "openpyxl>=3",
     "pytest>=9.0.2",
     "pytest-asyncio>=0.25",
-    "ruff>=0.15.0",
+    "ruff>=0.15.0","vulture>=2.14",
 ]
+
+[tool.vulture]
+exclude = ["tests/","tools/","stubs/",".venv/"] # チェックしたくないディレクトリ
+ignore_decorators = [""] # Flask等のルート関数を除外
+ignore_names = ["test_*"] # 特定の命名規則を除外
+min_confidence = 80 # 確信度が低いものは表示しない
 
 [build-system]
 requires = ["hatchling"]
@@ -46,7 +52,7 @@ build-backend = "hatchling.build"
 path = "src/edinet/_version.py"
 
 [tool.hatch.build.targets.sdist]
-exclude = ["tests","tests.*"]
+exclude = ["tests","tests.*","tools","docs","data"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

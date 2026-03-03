@@ -2,6 +2,7 @@ from collections.abc import Sequence
 from dataclasses import dataclass
 from edinet.xbrl.taxonomy import TaxonomyResolver
 from edinet.xbrl.text.blocks import TextBlock
+from typing import Any
 
 __all__ = ['SectionMap', 'build_section_map']
 
@@ -49,8 +50,12 @@ class SectionMap:
     def unmatched(self) -> tuple[TextBlock, ...]:
         """セクション名を推定できなかった TextBlock を返す。"""
 
-def build_section_map(blocks: Sequence[TextBlock], resolver: TaxonomyResolver) -> SectionMap:
+def build_section_map(source: Sequence[TextBlock] | Any, resolver: TaxonomyResolver | None = None) -> SectionMap:
     '''TextBlock 群をセクション名でグルーピングする。
+
+    ``Statements`` を渡す場合は ``resolver`` は不要（内部で自動取得）。
+    内部で ``extract_text_blocks()`` を呼び出してから
+    セクション名のグルーピングを行う。
 
     セクション名の解決は以下の優先順位で行う:
 
@@ -64,9 +69,15 @@ def build_section_map(blocks: Sequence[TextBlock], resolver: TaxonomyResolver) -
        ``TextBlock`` を構築した場合のセーフティネット。
 
     Args:
-        blocks: ``extract_text_blocks()`` が返した TextBlock のシーケンス。
+        source: ``Statements``、``extract_text_blocks()`` が返した
+            TextBlock のシーケンス。
         resolver: TaxonomyResolver インスタンス。
+            ``Statements`` を渡す場合は省略可。
 
     Returns:
         SectionMap。
+
+    Raises:
+        TypeError: 低レベル呼び出し時に ``resolver`` が ``None`` の場合。
+        ValueError: Statements に facts / resolver が設定されていない場合。
     '''

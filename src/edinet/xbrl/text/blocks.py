@@ -9,12 +9,47 @@ from __future__ import annotations
 import logging
 from collections.abc import Sequence
 from dataclasses import dataclass
+from typing import Any
 
 from edinet.exceptions import EdinetParseError
 from edinet.xbrl.contexts import Period, StructuredContext
 from edinet.xbrl.parser import RawFact
 
 logger = logging.getLogger(__name__)
+
+
+def _resolve_text_source(
+    source: Sequence[RawFact] | Any,
+    context_map: dict[str, StructuredContext] | None,
+) -> tuple[Sequence[RawFact], dict[str, StructuredContext]]:
+    """Statements または低レベル引数から (facts, context_map) を取得する。
+
+    Args:
+        source: ``Statements`` または ``Sequence[RawFact]``。
+        context_map: コンテキストマッピング。Statements 時は None 可。
+
+    Returns:
+        ``(facts, context_map)`` のタプル。
+
+    Raises:
+        TypeError: 低レベル呼び出し時に必須引数が欠落した場合。
+        ValueError: Statements に facts が設定されていない場合。
+    """
+    from edinet.financial.statements import Statements as _Statements
+
+    if isinstance(source, _Statements):
+        if source._facts is None:  # noqa: SLF001
+            raise ValueError(
+                "Statements に facts が設定されていません。"
+                "facts を指定して build_statements() を実行してください。"
+            )
+        return source._facts, source._contexts or {}  # noqa: SLF001
+
+    if context_map is None:
+        raise TypeError(
+            "Sequence[RawFact] を渡す場合は context_map が必須です"
+        )
+    return source, context_map
 
 __all__ = ["TextBlock", "extract_text_blocks"]
 
@@ -53,17 +88,21 @@ class TextBlock:
 
 
 def extract_text_blocks(
-    facts: Sequence[RawFact],
-    context_map: dict[str, StructuredContext],
+    source: Sequence[RawFact] | Any,
+    context_map: dict[str, StructuredContext] | None = None,
 ) -> tuple[TextBlock, ...]:
     """RawFact 群から textBlockItemType の Fact を抽出する。
+
+    ``Statements`` を渡す場合は ``context_map`` は不要（内部で自動取得）。
 
     textBlockItemType の判定は concept のローカル名が ``"TextBlock"`` で
     終わることを条件とする（EDINET タクソノミの命名慣例）。
 
     Args:
-        facts: ``parse_xbrl_facts()`` が返した RawFact のシーケンス。
+        source: ``Statements`` または ``parse_xbrl_facts()`` が返した
+            RawFact のシーケンス。
         context_map: ``structure_contexts()`` が返した Context 辞書。
+            ``Statements`` を渡す場合は省略可。
 
     Returns:
         TextBlock のタプル。元の facts の出現順を保持する。
@@ -71,8 +110,10 @@ def extract_text_blocks(
     Raises:
         EdinetParseError: ``context_ref`` が ``context_map`` に
             見つからない RawFact が存在した場合。
-            既存の ``build_line_items()`` と同一の動作。
+        TypeError: 低レベル呼び出し時に ``context_map`` が ``None`` の場合。
     """
+    facts, resolved_ctx = _resolve_text_source(source, context_map)
+
     blocks: list[TextBlock] = []
     for fact in facts:
         # TextBlock 判定（4 条件）
@@ -86,7 +127,7 @@ def extract_text_blocks(
             continue
 
         # Context 解決（build_line_items と同一パターン）
-        ctx = context_map.get(fact.context_ref)
+        ctx = resolved_ctx.get(fact.context_ref)
         if ctx is None:
             raise EdinetParseError(
                 f"TextBlock '{fact.local_name}' (line {fact.source_line}): "

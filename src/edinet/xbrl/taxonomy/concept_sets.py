@@ -63,7 +63,7 @@ class StatementCategory(enum.Enum):
     COMPREHENSIVE_INCOME = "comprehensive_income"
 
     def to_statement_type(self) -> StatementType | None:
-        """対応する ``StatementType`` を返す。SS/CI は ``None``。"""
+        """対応する ``StatementType`` を返す。"""
         return _CATEGORY_TO_STATEMENT_TYPE.get(self)
 
     @classmethod
@@ -83,12 +83,16 @@ _CATEGORY_TO_STATEMENT_TYPE: dict[StatementCategory, StatementType] = {
     StatementCategory.BALANCE_SHEET: StatementType.BALANCE_SHEET,
     StatementCategory.INCOME_STATEMENT: StatementType.INCOME_STATEMENT,
     StatementCategory.CASH_FLOW_STATEMENT: StatementType.CASH_FLOW_STATEMENT,
+    StatementCategory.STATEMENT_OF_CHANGES_IN_EQUITY: StatementType.STATEMENT_OF_CHANGES_IN_EQUITY,
+    StatementCategory.COMPREHENSIVE_INCOME: StatementType.COMPREHENSIVE_INCOME,
 }
 
 _STATEMENT_TYPE_TO_CATEGORY: dict[StatementType, StatementCategory] = {
     StatementType.BALANCE_SHEET: StatementCategory.BALANCE_SHEET,
     StatementType.INCOME_STATEMENT: StatementCategory.INCOME_STATEMENT,
     StatementType.CASH_FLOW_STATEMENT: StatementCategory.CASH_FLOW_STATEMENT,
+    StatementType.STATEMENT_OF_CHANGES_IN_EQUITY: StatementCategory.STATEMENT_OF_CHANGES_IN_EQUITY,
+    StatementType.COMPREHENSIVE_INCOME: StatementCategory.COMPREHENSIVE_INCOME,
 }
 
 

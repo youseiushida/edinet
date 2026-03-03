@@ -43,7 +43,6 @@ from edinet.financial.standards.normalize import (
     get_concept_order,
     get_known_concepts,
 )
-from edinet.financial.standards.usgaap import USGAAPSummaryItem as _USGAAPSummaryItemType
 
 if TYPE_CHECKING:
     from edinet.xbrl.dei import DEI
@@ -574,182 +573,6 @@ def _build_single_statement(
 
 
 # ---------------------------------------------------------------------------
-# US-GAAP サマリー組み立て
-# ---------------------------------------------------------------------------
-
-
-def _select_latest_usgaap_period(
-    items: Sequence[_USGAAPSummaryItemType],
-    statement_type: StatementType,
-) -> Period | None:
-    """US-GAAP サマリーアイテムから最新期間を選択する。
-
-    Args:
-        items: USGAAPSummaryItem のシーケンス。
-        statement_type: 財務諸表の種類。
-
-    Returns:
-        最新の期間。候補がなければ ``None``。
-    """
-    if statement_type == StatementType.BALANCE_SHEET:
-        instants = [si.period for si in items if isinstance(si.period, InstantPeriod)]
-        if not instants:
-            return None
-        return max(instants, key=lambda p: p.instant)
-    else:
-        durations = [si.period for si in items if isinstance(si.period, DurationPeriod)]
-        if not durations:
-            return None
-        return max(
-            durations,
-            key=lambda p: (p.end_date, -p.start_date.toordinal()),
-        )
-
-
-def _resolve_jpcrp_namespace(
-    facts: tuple[RawFact, ...],
-) -> str:
-    """facts から jpcrp_cor の名前空間 URI を検出する。
-
-    US-GAAP サマリー要素は全て jpcrp_cor 名前空間に属するため、
-    LineItem 構築時に正確な名前空間 URI を設定するために使用する。
-
-    Args:
-        facts: RawFact のタプル。
-
-    Returns:
-        jpcrp_cor の名前空間 URI。見つからなければ空文字列。
-    """
-    from edinet.xbrl._namespaces import classify_namespace
-
-    for f in facts:
-        info = classify_namespace(f.namespace_uri)
-        if info.module_group == "jpcrp":
-            return f.namespace_uri
-    return ""
-
-
-def _build_usgaap_statement(
-    summary_items: Sequence[_USGAAPSummaryItemType],
-    statement_type: StatementType,
-    contexts: dict[str, StructuredContext],
-    *,
-    consolidated: bool = True,
-    period: Period | None = None,
-    jpcrp_namespace: str = "",
-) -> FinancialStatement:
-    """US-GAAP サマリーから FinancialStatement を組み立てる。
-
-    Args:
-        summary_items: USGAAPSummaryItem のシーケンス。
-        statement_type: 財務諸表の種類。
-        contexts: contextRef → StructuredContext のマッピング。
-        consolidated: 連結/個別。
-        period: 対象期間。None なら最新を自動選択。
-        jpcrp_namespace: jpcrp_cor の名前空間 URI。
-            LineItem の namespace_uri / concept（Clark notation）に使用。
-
-    Returns:
-        組み立て済みの FinancialStatement。
-    """
-    from edinet.financial.standards import jgaap as _jgaap
-    from edinet.xbrl.taxonomy import LabelInfo, LabelSource
-
-    ROLE_LABEL = "http://www.xbrl.org/2003/role/label"
-
-    # 定義順ベースの order 辞書を構築
-    _order_map = {
-        m.concept: i
-        for i, m in enumerate(_jgaap.mappings_for_statement(statement_type))
-    }
-
-    issued_warnings: list[str] = []
-    msg = (
-        f"{statement_type.value}: US-GAAP は BLOCK_ONLY のため"
-        f"サマリー項目のみ（詳細な科目分解は不可）"
-    )
-    issued_warnings.append(msg)
-
-    # statement_type に該当するサマリー項目をフィルタ
-    type_items = []
-    for si in summary_items:
-        jm = _jgaap.reverse_lookup(si.key)
-        if jm is None:
-            continue
-        if jm.statement_type == statement_type:
-            type_items.append((si, jm))
-
-    if not type_items:
-        return FinancialStatement(
-            statement_type=statement_type,
-            period=period,
-            items=(),
-            consolidated=consolidated,
-            entity_id="",
-            warnings_issued=tuple(issued_warnings),
-        )
-
-    # 期間フィルタ
-    if period is None:
-        period = _select_latest_usgaap_period(
-            [si for si, _ in type_items], statement_type
-        )
-    if period is not None:
-        type_items = [(si, jm) for si, jm in type_items if si.period == period]
-
-    # LineItem 変換
-    line_items: list[LineItem] = []
-    for si, jm in type_items:
-        if not isinstance(si.value, Decimal):
-            continue
-        ctx = contexts.get(si.context_id)
-        entity_id = ctx.entity_id if ctx is not None else ""
-        concept_clark = (
-            f"{{{jpcrp_namespace}}}{si.concept}"
-            if jpcrp_namespace
-            else si.concept
-        )
-        li = LineItem(
-            concept=concept_clark,
-            namespace_uri=jpcrp_namespace,
-            local_name=si.concept,
-            label_ja=LabelInfo(
-                text=si.label_ja, role=ROLE_LABEL, lang="ja",
-                source=LabelSource.FALLBACK,
-            ),
-            label_en=LabelInfo(
-                text=si.label_en, role=ROLE_LABEL, lang="en",
-                source=LabelSource.FALLBACK,
-            ),
-            value=si.value,
-            unit_ref=si.unit_ref,
-            decimals=0,
-            context_id=si.context_id,
-            period=si.period,
-            entity_id=entity_id,
-            dimensions=(),
-            is_nil=False,
-            source_line=0,
-            order=_order_map.get(jm.concept, 0),
-        )
-        line_items.append(li)
-
-    # ソート
-    line_items.sort(key=lambda item: item.order)
-
-    entity_id = line_items[0].entity_id if line_items else ""
-
-    return FinancialStatement(
-        statement_type=statement_type,
-        period=period,
-        items=tuple(line_items),
-        consolidated=consolidated,
-        entity_id=entity_id,
-        warnings_issued=tuple(issued_warnings),
-    )
-
-
-# ---------------------------------------------------------------------------
 # 公開 API
 # ---------------------------------------------------------------------------
 
@@ -770,8 +593,8 @@ class Statements:
     Attributes:
         _items: 全 LineItem（全期間・全 dimension）。
         _detected_standard: 判別された会計基準。
-        _facts: 元の RawFact（US-GAAP サマリー抽出用）。
-        _contexts: コンテキストマッピング（US-GAAP 用）。
+        _facts: 元の RawFact（テキストブロック抽出・会計基準判別用）。
+        _contexts: コンテキストマッピング（テキストブロック抽出用）。
         _taxonomy_root: タクソノミルートパス。
         _industry_code: 業種コード（例: ``"bk1"``）。
             ``None`` は一般事業会社。
@@ -915,32 +738,15 @@ class Statements:
             else None
         )
 
-        # BLOCK_ONLY の処理
-        # US-GAAP 企業は連結が BLOCK_ONLY だが、個別は J-GAAP で
-        # 詳細タグ付けされている。consolidated=False の場合は
-        # DETAILED パスに落として J-GAAP の ConceptSet で処理する。
+        # BLOCK_ONLY の処理（US-GAAP / JMIS 等）
+        # v0.2.0: US-GAAP も空 + 警告を返す。
+        # extract_values(stmts, ...) で SummaryOfBusinessResults から取得すること。
+        # US-GAAP 個別（consolidated=False）は J-GAAP の ConceptSet で処理する。
         if detail_level == DetailLevel.BLOCK_ONLY and consolidated:
-            if (
-                standard_enum == AccountingStandard.US_GAAP
-                and self._facts is not None
-                and self._contexts is not None
-            ):
-                from edinet.financial.standards.usgaap import extract_usgaap_summary
-
-                summary = extract_usgaap_summary(self._facts, self._contexts)
-                ns = _resolve_jpcrp_namespace(self._facts)
-                return _build_usgaap_statement(
-                    summary.summary_items,
-                    statement_type,
-                    self._contexts,
-                    consolidated=consolidated,
-                    period=period,
-                    jpcrp_namespace=ns,
-                )
-            # JMIS 等: 空 + 警告
             msg = (
                 f"{statement_type.value}: {standard_enum} は BLOCK_ONLY のため"
                 f"詳細な財務諸表を生成できません"
+                f"（extract_values() で SummaryOfBusinessResults を使用してください）"
             )
             warnings.warn(msg, EdinetWarning, stacklevel=3)
             return FinancialStatement(
@@ -1269,6 +1075,78 @@ class Statements:
         )
         return self._build_for_type(
             StatementType.CASH_FLOW_STATEMENT,
+            consolidated=consolidated,
+            period=resolved,
+            strict=strict,
+        )
+
+    def equity_statement(
+        self,
+        *,
+        consolidated: bool = True,
+        period: DurationPeriod | Literal["current", "prior"] | None = None,
+        strict: bool = False,
+    ) -> FinancialStatement:
+        """株主資本等変動計算書を組み立てる。
+
+        ConceptSet（Presentation Linkbase 自動導出）により SS の
+        全科目を取得する。taxonomy_root が未設定の場合は空を返す。
+
+        Note:
+            SS のタクソノミ定義は 5 業種（cai, edu, inv, liq, med）のみ。
+            未定義の業種では空の FinancialStatement を返す。
+
+        Args:
+            consolidated: True なら連結、False なら個別。
+            period: 対象期間。``"current"`` / ``"prior"`` で当期/前期を
+                DEI ベースで自動選択。None なら最新期間を自動選択。
+            strict: True の場合、要求した連結/個別データが存在しないとき
+                フォールバックせず空を返す。
+
+        Returns:
+            組み立て済みの株主資本等変動計算書。
+        """
+        resolved = self._resolve_period_variant(
+            period, StatementType.STATEMENT_OF_CHANGES_IN_EQUITY,
+        )
+        return self._build_for_type(
+            StatementType.STATEMENT_OF_CHANGES_IN_EQUITY,
+            consolidated=consolidated,
+            period=resolved,
+            strict=strict,
+        )
+
+    def comprehensive_income(
+        self,
+        *,
+        consolidated: bool = True,
+        period: DurationPeriod | Literal["current", "prior"] | None = None,
+        strict: bool = False,
+    ) -> FinancialStatement:
+        """包括利益計算書を組み立てる。
+
+        ConceptSet（Presentation Linkbase 自動導出）により CI の
+        全科目を取得する。taxonomy_root が未設定の場合は空を返す。
+
+        Note:
+            CI のタクソノミ定義は 1 業種（cai）のみ。
+            未定義の業種では空の FinancialStatement を返す。
+
+        Args:
+            consolidated: True なら連結、False なら個別。
+            period: 対象期間。``"current"`` / ``"prior"`` で当期/前期を
+                DEI ベースで自動選択。None なら最新期間を自動選択。
+            strict: True の場合、要求した連結/個別データが存在しないとき
+                フォールバックせず空を返す。
+
+        Returns:
+            組み立て済みの包括利益計算書。
+        """
+        resolved = self._resolve_period_variant(
+            period, StatementType.COMPREHENSIVE_INCOME,
+        )
+        return self._build_for_type(
+            StatementType.COMPREHENSIVE_INCOME,
             consolidated=consolidated,
             period=resolved,
             strict=strict,

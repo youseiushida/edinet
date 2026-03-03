@@ -13,11 +13,58 @@ from __future__ import annotations
 from collections import defaultdict
 from collections.abc import Sequence
 from dataclasses import dataclass
+from typing import Any
 
 from edinet.xbrl.taxonomy import LabelSource, TaxonomyResolver
 from edinet.xbrl.text.blocks import TextBlock, _TEXTBLOCK_SUFFIX
 
 __all__ = ["SectionMap", "build_section_map"]
+
+
+def _resolve_section_source(
+    source: Sequence[TextBlock] | Any,
+    resolver: TaxonomyResolver | None,
+) -> tuple[Sequence[TextBlock], TaxonomyResolver]:
+    """Statements または低レベル引数から (blocks, resolver) を取得する。
+
+    ``Statements`` を渡すと内部で ``extract_text_blocks()`` を実行し、
+    TextBlock を自動抽出する。
+
+    Args:
+        source: ``Statements`` または ``Sequence[TextBlock]``。
+        resolver: TaxonomyResolver。Statements 時は None 可。
+
+    Returns:
+        ``(blocks, resolver)`` のタプル。
+
+    Raises:
+        TypeError: 低レベル呼び出し時に ``resolver`` が ``None`` の場合。
+        ValueError: Statements に facts / resolver が設定されていない場合。
+    """
+    from edinet.financial.statements import Statements as _Statements
+
+    if isinstance(source, _Statements):
+        res = resolver or source._resolver  # noqa: SLF001
+        if res is None:
+            raise ValueError(
+                "Statements に resolver が設定されていません。"
+                "taxonomy_root を指定して xbrl() を実行してください。"
+            )
+        if source._facts is None:  # noqa: SLF001
+            raise ValueError(
+                "Statements に facts が設定されていません。"
+                "facts を指定して build_statements() を実行してください。"
+            )
+        from edinet.xbrl.text.blocks import extract_text_blocks
+
+        blocks = extract_text_blocks(source)
+        return blocks, res
+
+    if resolver is None:
+        raise TypeError(
+            "Sequence[TextBlock] を渡す場合は resolver が必須です"
+        )
+    return source, resolver
 
 
 @dataclass(frozen=True, slots=True)
@@ -126,10 +173,14 @@ def _fallback_section_name(concept: str) -> str | None:
 
 
 def build_section_map(
-    blocks: Sequence[TextBlock],
-    resolver: TaxonomyResolver,
+    source: Sequence[TextBlock] | Any,
+    resolver: TaxonomyResolver | None = None,
 ) -> SectionMap:
     """TextBlock 群をセクション名でグルーピングする。
+
+    ``Statements`` を渡す場合は ``resolver`` は不要（内部で自動取得）。
+    内部で ``extract_text_blocks()`` を呼び出してから
+    セクション名のグルーピングを行う。
 
     セクション名の解決は以下の優先順位で行う:
 
@@ -143,18 +194,26 @@ def build_section_map(
        ``TextBlock`` を構築した場合のセーフティネット。
 
     Args:
-        blocks: ``extract_text_blocks()`` が返した TextBlock のシーケンス。
+        source: ``Statements``、``extract_text_blocks()`` が返した
+            TextBlock のシーケンス。
         resolver: TaxonomyResolver インスタンス。
+            ``Statements`` を渡す場合は省略可。
 
     Returns:
         SectionMap。
+
+    Raises:
+        TypeError: 低レベル呼び出し時に ``resolver`` が ``None`` の場合。
+        ValueError: Statements に facts / resolver が設定されていない場合。
     """
+    blocks, resolved_resolver = _resolve_section_source(source, resolver)
+
     index: dict[str, list[TextBlock]] = defaultdict(list)
     unmatched: list[TextBlock] = []
 
     for block in blocks:
         # 優先順位 1: TaxonomyResolver
-        section_name = _resolve_section_name(block, resolver)
+        section_name = _resolve_section_name(block, resolved_resolver)
 
         # 優先順位 2: 英語フォールバック
         if section_name is None:
