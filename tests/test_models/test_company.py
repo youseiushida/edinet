@@ -212,7 +212,7 @@ def test_latest_returns_filing(monkeypatch: pytest.MonkeyPatch) -> None:
     company = Company(edinet_code="E02144", name_ja="トヨタ", sec_code="72030")
     monkeypatch.setattr("edinet.models.company._today_jst", lambda: DateType(2026, 2, 16))
 
-    def fake_documents(date=None, *, start=None, end=None, doc_type=None, edinet_code=None):
+    def fake_documents(date=None, *, doc_type=None, edinet_code=None, **kw):
         return [
             Filing.from_api_response(
                 _sample_doc_with_datetime(doc_id="S100T001", submit_dt="2026-02-10 10:00"),
@@ -226,36 +226,39 @@ def test_latest_returns_filing(monkeypatch: pytest.MonkeyPatch) -> None:
 
 
 def test_latest_returns_newest(monkeypatch: pytest.MonkeyPatch) -> None:
-    """L-2: 複数 Filing がある場合に最新のものを返すこと。"""
+    """L-2: 末尾から探索するため、最新日の Filing が返ること。"""
     company = Company(edinet_code="E02144")
     monkeypatch.setattr("edinet.models.company._today_jst", lambda: DateType(2026, 2, 16))
 
-    def fake_documents(date=None, *, start=None, end=None, doc_type=None, edinet_code=None):
-        return [
-            Filing.from_api_response(
-                _sample_doc_with_datetime(doc_id="OLD", submit_dt="2026-01-01 09:00"),
-            ),
-            Filing.from_api_response(
-                _sample_doc_with_datetime(doc_id="NEW", submit_dt="2026-02-15 15:00"),
-            ),
-            Filing.from_api_response(
-                _sample_doc_with_datetime(doc_id="MID", submit_dt="2026-01-20 12:00"),
-            ),
-        ]
+    call_dates: list[DateType] = []
+
+    def fake_documents(date=None, *, doc_type=None, edinet_code=None, **kw):
+        call_dates.append(date)
+        if date == DateType(2026, 2, 16):
+            return []
+        if date == DateType(2026, 2, 15):
+            return [
+                Filing.from_api_response(
+                    _sample_doc_with_datetime(doc_id="NEW", submit_dt="2026-02-15 15:00"),
+                ),
+            ]
+        return []
 
     monkeypatch.setattr("edinet.documents", fake_documents)
     result = company.latest()
     assert result is not None
     assert result.doc_id == "NEW"
+    # 末尾から探索: 2/16（空）→ 2/15（見つかって即return）
+    assert call_dates == [DateType(2026, 2, 16), DateType(2026, 2, 15)]
 
 
 def test_latest_with_doc_type_filter(monkeypatch: pytest.MonkeyPatch) -> None:
-    """L-3: doc_type フィルタが get_filings() に渡されること。"""
+    """L-3: doc_type フィルタが documents() に渡されること。"""
     company = Company(edinet_code="E02144")
     monkeypatch.setattr("edinet.models.company._today_jst", lambda: DateType(2026, 2, 16))
     captured: dict[str, object] = {}
 
-    def fake_documents(date=None, *, start=None, end=None, doc_type=None, edinet_code=None):
+    def fake_documents(date=None, *, doc_type=None, edinet_code=None, **kw):
         captured["doc_type"] = doc_type
         return []
 
@@ -269,7 +272,7 @@ def test_latest_returns_none_when_empty(monkeypatch: pytest.MonkeyPatch) -> None
     company = Company(edinet_code="E02144")
     monkeypatch.setattr("edinet.models.company._today_jst", lambda: DateType(2026, 2, 16))
 
-    def fake_documents(date=None, *, start=None, end=None, doc_type=None, edinet_code=None):
+    def fake_documents(date=None, *, doc_type=None, edinet_code=None, **kw):
         return []
 
     monkeypatch.setattr("edinet.documents", fake_documents)
@@ -277,64 +280,66 @@ def test_latest_returns_none_when_empty(monkeypatch: pytest.MonkeyPatch) -> None
 
 
 def test_latest_with_start_end(monkeypatch: pytest.MonkeyPatch) -> None:
-    """L-5: start / end 引数が get_filings() に渡されること。"""
+    """L-5: start / end 引数で探索範囲が制御されること。"""
     company = Company(edinet_code="E02144")
-    captured: dict[str, object] = {}
+    call_dates: list[DateType] = []
 
-    def fake_documents(date=None, *, start=None, end=None, doc_type=None, edinet_code=None):
-        captured["start"] = start
-        captured["end"] = end
+    def fake_documents(date=None, *, doc_type=None, edinet_code=None, **kw):
+        call_dates.append(date)
         return []
 
     monkeypatch.setattr("edinet.documents", fake_documents)
-    company.latest(start="2025-06-01", end="2025-06-30")
-    assert captured["start"] == "2025-06-01"
-    assert captured["end"] == "2025-06-30"
+    company.latest(start="2025-06-01", end="2025-06-03")
+    # 末尾から: 6/3, 6/2, 6/1
+    assert call_dates == [DateType(2025, 6, 3), DateType(2025, 6, 2), DateType(2025, 6, 1)]
 
 
 def test_latest_default_range_90_days(monkeypatch: pytest.MonkeyPatch) -> None:
-    """L-6: start / end 未指定時に inclusive 90 日間が get_filings() に渡されること。"""
-    from datetime import timedelta
-
+    """L-6: start / end 未指定時に末尾 (today) から探索すること。"""
     company = Company(edinet_code="E02144")
     today = DateType(2026, 2, 16)
     monkeypatch.setattr("edinet.models.company._today_jst", lambda: today)
-    captured: dict[str, object] = {}
+    call_dates: list[DateType] = []
 
-    def fake_documents(date=None, *, start=None, end=None, doc_type=None, edinet_code=None):
-        captured["start"] = start
-        captured["end"] = end
+    def fake_documents(date=None, *, doc_type=None, edinet_code=None, **kw):
+        call_dates.append(date)
+        if date == today:
+            return [
+                Filing.from_api_response(
+                    _sample_doc_with_datetime(doc_id="TODAY", submit_dt="2026-02-16 10:00"),
+                ),
+            ]
         return []
 
     monkeypatch.setattr("edinet.documents", fake_documents)
-    company.latest()
-    assert captured["end"] == today
-    # timedelta(days=89) + inclusive iteration = 90 日間
-    assert captured["start"] == today - timedelta(days=89)
+    result = company.latest()
+    assert result is not None
+    assert result.doc_id == "TODAY"
+    # 最新日で見つかったので1回で終了
+    assert len(call_dates) == 1
 
 
 def test_latest_auto_completes_partial_range(monkeypatch: pytest.MonkeyPatch) -> None:
     """L-7: 片方指定時に自動補完されること。"""
-    from datetime import timedelta
-
     company = Company(edinet_code="E02144")
     today = DateType(2026, 2, 16)
     monkeypatch.setattr("edinet.models.company._today_jst", lambda: today)
-    captured: dict[str, object] = {}
+    call_dates: list[DateType] = []
 
-    def fake_documents(date=None, *, start=None, end=None, doc_type=None, edinet_code=None):
-        captured["start"] = start
-        captured["end"] = end
+    def fake_documents(date=None, *, doc_type=None, edinet_code=None, **kw):
+        call_dates.append(date)
         return []
 
     monkeypatch.setattr("edinet.documents", fake_documents)
 
-    # start のみ指定 → end = _today_jst()
-    company.latest(start="2025-06-01")
-    assert captured["end"] == today
-    assert captured["start"] == "2025-06-01"
+    # start のみ指定 → end = _today_jst()、末尾から探索
+    company.latest(start="2026-02-14")
+    # 2/16, 2/15, 2/14 の3日間を探索
+    assert call_dates[0] == today
+    assert call_dates[-1] == DateType(2026, 2, 14)
 
-    # end のみ指定 → start = end - 89日 (inclusive 90日間)
-    company.latest(end="2026-01-01")
-    assert captured["end"] == DateType(2026, 1, 1)
-    assert captured["start"] == DateType(2026, 1, 1) - timedelta(days=89)
+    call_dates.clear()
+
+    # end のみ指定 → start = end - 89日
+    company.latest(end="2026-01-03")
+    assert call_dates[0] == DateType(2026, 1, 3)

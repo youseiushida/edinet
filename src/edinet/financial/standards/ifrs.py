@@ -228,6 +228,23 @@ _KPI_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
     IFRSConceptMapping("DilutedEarningsLossPerShareIFRS", CK.EPS_DILUTED, None, jgaap_concept="DilutedEarningsPerShareSummaryOfBusinessResults"),
 )
 
+# --- SummaryOfBusinessResults マッピング（jpcrp_cor 由来の経営指標サマリー） ---
+# 一部の IFRS 企業は PL の詳細科目（RevenueIFRS 等）を XBRL でタグ付けせず、
+# SummaryOfBusinessResults のみを提出する。extract_values() で
+# canonical key による横断取得を可能にするためのマッピング。
+_SUMMARY_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
+    IFRSConceptMapping("RevenueIFRSSummaryOfBusinessResults", CK.REVENUE, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("OperatingProfitLossIFRSSummaryOfBusinessResults", CK.OPERATING_INCOME, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("ProfitLossBeforeTaxIFRSSummaryOfBusinessResults", CK.INCOME_BEFORE_TAX, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults", CK.NET_INCOME_PARENT, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("ComprehensiveIncomeIFRSSummaryOfBusinessResults", CK.COMPREHENSIVE_INCOME, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("ComprehensiveIncomeAttributableToOwnersOfParentIFRSSummaryOfBusinessResults", CK.COMPREHENSIVE_INCOME_PARENT, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("EquityAttributableToOwnersOfParentIFRSSummaryOfBusinessResults", CK.EQUITY_PARENT, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("TotalAssetsIFRSSummaryOfBusinessResults", CK.TOTAL_ASSETS, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("BasicEarningsLossPerShareIFRSSummaryOfBusinessResults", CK.EPS, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("DilutedEarningsLossPerShareIFRSSummaryOfBusinessResults", CK.EPS_DILUTED, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+)
+
 # --- CI マッピング（包括利益。statement_type=None: 独立した CI 計算書は未対応） ---
 _CI_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
     IFRSConceptMapping("ComprehensiveIncomeIFRS", CK.COMPREHENSIVE_INCOME, None, is_ifrs_specific=True),
@@ -237,6 +254,7 @@ _CI_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
 
 # --- 全マッピング ---
 _ALL_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
+    *_SUMMARY_MAPPINGS,  # サマリーを先に → 詳細科目が後勝ちで reverse_lookup 優先
     *_PL_MAPPINGS,
     *_BS_MAPPINGS,
     *_CF_MAPPINGS,
@@ -318,8 +336,9 @@ def _validate_registry() -> None:
     """
     if len(_CONCEPT_INDEX) != len(_ALL_MAPPINGS):
         raise ValueError("concept ローカル名に重複があります")
-    if len(_CANONICAL_INDEX) != len(_ALL_MAPPINGS):
-        raise ValueError("canonical_key に重複があります")
+    # canonical_key の重複は許容する（同一 CK に詳細科目とサマリー科目の
+    # 両方がマッピングされるケース: RevenueIFRS + RevenueIFRSSummaryOfBusinessResults）。
+    # concept ローカル名の一意性のみ検証する。
     # _JGAAP_ONLY_CONCEPTS と jgaap_concept の重複検知
     # 重複があると jgaap_to_ifrs_map() で有効なマッピングが None で上書きされる
     jgaap_concepts_in_mappings = {

@@ -20,6 +20,32 @@ from edinet.financial.statements import (
     Statements as Statements,
     build_statements as build_statements,
 )
+from edinet.financial.diff import (
+    DiffItem as DiffItem,
+    DiffResult as DiffResult,
+    diff_periods as diff_periods,
+    diff_revisions as diff_revisions,
+)
+from edinet.financial.dimensions.segments import (
+    DimensionAxisSummary as DimensionAxisSummary,
+    SegmentData as SegmentData,
+    SegmentItem as SegmentItem,
+    extract_segments as extract_segments,
+    list_dimension_axes as list_dimension_axes,
+)
+from edinet.financial.notes.employees import (
+    EmployeeInfo as EmployeeInfo,
+    extract_employee_info as extract_employee_info,
+)
+from edinet.financial.extract import (
+    ExtractedValue as ExtractedValue,
+    extract_values as extract_values,
+    extracted_to_dict as extracted_to_dict,
+)
+from edinet.financial.summary import (
+    FilingSummary as FilingSummary,
+    build_summary as build_summary,
+)
 
 __all__ = [
     "Statements",
@@ -30,4 +56,25 @@ __all__ = [
     "classify_periods",
     "FiscalYearInfo",
     "detect_fiscal_year",
+    # Wave 7: 差分比較 (L8)
+    "DiffItem",
+    "DiffResult",
+    "diff_revisions",
+    "diff_periods",
+    # Wave 7: セグメント (L6)
+    "DimensionAxisSummary",
+    "SegmentItem",
+    "SegmentData",
+    "list_dimension_axes",
+    "extract_segments",
+    # 正規化キー抽出
+    "ExtractedValue",
+    "extract_values",
+    "extracted_to_dict",
+    # Wave 7: サマリー (L4)
+    "FilingSummary",
+    "build_summary",
+    # Wave 7: 従業員情報 (L4)
+    "EmployeeInfo",
+    "extract_employee_info",
 ]

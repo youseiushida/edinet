@@ -8,6 +8,13 @@ from edinet.financial.dimensions.period_variants import (
     PeriodClassification as PeriodClassification,
     classify_periods as classify_periods,
 )
+from edinet.financial.dimensions.segments import (
+    DimensionAxisSummary as DimensionAxisSummary,
+    SegmentData as SegmentData,
+    SegmentItem as SegmentItem,
+    extract_segments as extract_segments,
+    list_dimension_axes as list_dimension_axes,
+)
 
 __all__ = [
     "PeriodClassification",
@@ -15,4 +22,10 @@ __all__ = [
     # Wave 6: 決算期判定 (L6)
     "FiscalYearInfo",
     "detect_fiscal_year",
+    # Wave 7: セグメント (L6)
+    "DimensionAxisSummary",
+    "SegmentItem",
+    "SegmentData",
+    "list_dimension_axes",
+    "extract_segments",
 ]

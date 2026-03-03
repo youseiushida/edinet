@@ -1,0 +1,18 @@
+<link:footnoteLink xmlns:link="http://www.xbrl.org/2003/linkbase"
+                   xmlns:xlink="http://www.w3.org/1999/xlink"
+                   xlink:type="extended"
+                   xlink:role="http://www.xbrl.org/2003/role/link">
+  <link:loc xlink:type="locator" xlink:href="#IdFact500" xlink:label="loc_x"/>
+  <link:footnote xlink:type="resource" xlink:label="fn_x1"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumber"
+      xml:lang="ja">※1 有形固定資産の減損</link:footnote>
+  <link:footnote xlink:type="resource" xlink:label="fn_x2"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumberPeriodStart"
+      xml:lang="ja">※2 前期末における再評価</link:footnote>
+  <link:footnoteArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote"
+      xlink:from="loc_x" xlink:to="fn_x1"/>
+  <link:footnoteArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote"
+      xlink:from="loc_x" xlink:to="fn_x2"/>
+</link:footnoteLink>

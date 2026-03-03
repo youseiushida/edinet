@@ -1,0 +1,454 @@
+{
+  "1. J-GAAP 建設業（鹿島建設）": {
+    "lookup": {
+      "method": "sec_code",
+      "status": "OK",
+      "name": "鹿島建設株式会社"
+    },
+    "filing": {
+      "status": "OK",
+      "time": 345.13,
+      "doc_id": "S100W14C",
+      "filer_name": "鹿島建設株式会社",
+      "filing_date": "2025-06-25",
+      "has_xbrl": true,
+      "period_start": "2024-04-01",
+      "period_end": "2025-03-31"
+    },
+    "xbrl": {
+      "status": "OK",
+      "time": 12.13,
+      "detected_standard": "DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+      "has_consolidated": true,
+      "has_non_consolidated": true,
+      "standard_match": false
+    },
+    "pl": {
+      "status": "OK",
+      "item_count": 34,
+      "warnings": [],
+      "売上高": "2911816000000",
+      "営業利益": "NOT_FOUND",
+      "経常利益": "NOT_FOUND",
+      "当期純利益": "NOT_FOUND"
+    },
+    "bs": {
+      "status": "OK",
+      "item_count": 45,
+      "資産合計": "NOT_FOUND",
+      "純資産合計": "NOT_FOUND",
+      "負債合計": "NOT_FOUND"
+    },
+    "cf": {
+      "status": "OK",
+      "item_count": 34
+    },
+    "dataframe": {
+      "status": "OK",
+      "shape": [
+        34,
+        5
+      ],
+      "columns": [
+        "label_ja",
+        "label_en",
+        "value",
+        "unit",
+        "concept"
+      ]
+    },
+    "total_time": 400.98,
+    "overall": "OK"
+  },
+  "2. J-GAAP 銀行業（MUFG）": {
+    "lookup": {
+      "method": "edinet_code",
+      "status": "OK",
+      "name": "株式会社三菱ＵＦＪフィナンシャル・グループ"
+    },
+    "filing": {
+      "status": "OK",
+      "time": 347.41,
+      "doc_id": "S100W4FB",
+      "filer_name": "株式会社三菱ＵＦＪフィナンシャル・グループ",
+      "filing_date": "2025-06-25",
+      "has_xbrl": true,
+      "period_start": "2024-04-01",
+      "period_end": "2025-03-31"
+    },
+    "xbrl": {
+      "status": "OK",
+      "time": 5.33,
+      "detected_standard": "DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+      "has_consolidated": true,
+      "has_non_consolidated": true,
+      "standard_match": false
+    },
+    "pl": {
+      "status": "OK",
+      "item_count": 20,
+      "warnings": [],
+      "経常収益": "NOT_FOUND",
+      "経常利益": "NOT_FOUND",
+      "当期純利益": "NOT_FOUND"
+    },
+    "bs": {
+      "status": "OK",
+      "item_count": 29,
+      "資産合計": "NOT_FOUND",
+      "純資産合計": "NOT_FOUND"
+    },
+    "cf": {
+      "status": "OK",
+      "item_count": 25
+    },
+    "dataframe": {
+      "status": "OK",
+      "shape": [
+        20,
+        5
+      ],
+      "columns": [
+        "label_ja",
+        "label_en",
+        "value",
+        "unit",
+        "concept"
+      ]
+    },
+    "total_time": 353.09,
+    "overall": "OK"
+  },
+  "3. IFRS 製造業（トヨタ）": {
+    "lookup": {
+      "method": "sec_code",
+      "status": "OK",
+      "name": "トヨタ自動車株式会社"
+    },
+    "filing": {
+      "status": "OK",
+      "time": 341.31,
+      "doc_id": "S100VWVY",
+      "filer_name": "トヨタ自動車株式会社",
+      "filing_date": "2025-06-18",
+      "has_xbrl": true,
+      "period_start": "2024-04-01",
+      "period_end": "2025-03-31"
+    },
+    "xbrl": {
+      "status": "OK",
+      "time": 8.6,
+      "detected_standard": "DetectedStandard(standard=<AccountingStandard.IFRS: 'IFRS'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+      "has_consolidated": true,
+      "has_non_consolidated": true,
+      "standard_match": true
+    },
+    "pl": {
+      "status": "OK",
+      "item_count": 9,
+      "warnings": [],
+      "売上収益": "NOT_FOUND",
+      "営業利益": "NOT_FOUND",
+      "当期利益": "NOT_FOUND"
+    },
+    "bs": {
+      "status": "OK",
+      "item_count": 34,
+      "資産合計": "NOT_FOUND",
+      "負債合計": "NOT_FOUND",
+      "資本合計": "NOT_FOUND"
+    },
+    "cf": {
+      "status": "OK",
+      "item_count": 18
+    },
+    "dataframe": {
+      "status": "OK",
+      "shape": [
+        9,
+        5
+      ],
+      "columns": [
+        "label_ja",
+        "label_en",
+        "value",
+        "unit",
+        "concept"
+      ]
+    },
+    "total_time": 349.96,
+    "overall": "OK"
+  },
+  "4. US-GAAP 証券業（野村HD）": {
+    "lookup": {
+      "method": "sec_code",
+      "status": "OK",
+      "name": "野村ホールディングス株式会社"
+    },
+    "filing": {
+      "status": "OK",
+      "time": 344.69,
+      "doc_id": "S100VXTD",
+      "filer_name": "野村ホールディングス株式会社",
+      "filing_date": "2025-06-23",
+      "has_xbrl": true,
+      "period_start": "2024-04-01",
+      "period_end": "2025-03-31"
+    },
+    "xbrl": {
+      "status": "OK",
+      "time": 5.97,
+      "detected_standard": "DetectedStandard(standard=<AccountingStandard.US_GAAP: 'US GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.BLOCK_ONLY: 'block_only'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+      "has_consolidated": true,
+      "has_non_consolidated": true,
+      "standard_match": false
+    },
+    "pl": {
+      "status": "OK",
+      "item_count": 3,
+      "warnings": [
+        "income_statement: US-GAAP は BLOCK_ONLY のためサマリー項目のみ（詳細な科目分解は不可）"
+      ],
+      "収益": "NOT_FOUND",
+      "当期純利益": "NOT_FOUND"
+    },
+    "bs": {
+      "status": "OK",
+      "item_count": 2,
+      "資産合計": "NOT_FOUND",
+      "純資産合計": "NOT_FOUND"
+    },
+    "cf": {
+      "status": "OK",
+      "item_count": 3
+    },
+    "dataframe": {
+      "status": "OK",
+      "shape": [
+        3,
+        5
+      ],
+      "columns": [
+        "label_ja",
+        "label_en",
+        "value",
+        "unit",
+        "concept"
+      ]
+    },
+    "total_time": 350.68,
+    "overall": "OK"
+  },
+  "5. J-GAAP 鉄道業（JR東日本）": {
+    "lookup": {
+      "method": "sec_code",
+      "status": "OK",
+      "name": "東日本旅客鉄道株式会社"
+    },
+    "filing": {
+      "status": "OK",
+      "time": 350.1,
+      "doc_id": "S100VYOS",
+      "filer_name": "東日本旅客鉄道株式会社",
+      "filing_date": "2025-06-18",
+      "has_xbrl": true,
+      "period_start": "2024-04-01",
+      "period_end": "2025-03-31"
+    },
+    "xbrl": {
+      "status": "OK",
+      "time": 2.73,
+      "detected_standard": "DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+      "has_consolidated": true,
+      "has_non_consolidated": true,
+      "standard_match": false
+    },
+    "pl": {
+      "status": "OK",
+      "item_count": 32,
+      "warnings": [],
+      "営業収益": "NOT_FOUND",
+      "営業利益": "NOT_FOUND",
+      "経常利益": "NOT_FOUND",
+      "当期純利益": "NOT_FOUND"
+    },
+    "bs": {
+      "status": "OK",
+      "item_count": 45,
+      "資産合計": "NOT_FOUND",
+      "純資産合計": "NOT_FOUND"
+    },
+    "cf": {
+      "status": "OK",
+      "item_count": 28
+    },
+    "dataframe": {
+      "status": "OK",
+      "shape": [
+        32,
+        5
+      ],
+      "columns": [
+        "label_ja",
+        "label_en",
+        "value",
+        "unit",
+        "concept"
+      ]
+    },
+    "total_time": 353.44,
+    "overall": "OK"
+  },
+  "6. IFRS 保険業（SOMPO HD）": {
+    "lookup": {
+      "method": "sec_code",
+      "status": "OK",
+      "name": "ＳＯＭＰＯホールディングス株式会社"
+    },
+    "filing": {
+      "status": "OK",
+      "time": 346.88,
+      "doc_id": "S100W7EG",
+      "filer_name": "ＳＯＭＰＯホールディングス株式会社",
+      "filing_date": "2025-06-30",
+      "has_xbrl": true,
+      "period_start": "2024-04-01",
+      "period_end": "2025-03-31"
+    },
+    "xbrl": {
+      "status": "OK",
+      "time": 8.7,
+      "detected_standard": "DetectedStandard(standard=<AccountingStandard.IFRS: 'IFRS'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+      "has_consolidated": true,
+      "has_non_consolidated": true,
+      "standard_match": true
+    },
+    "pl": {
+      "status": "OK",
+      "item_count": 11,
+      "warnings": [],
+      "保険収益": "NOT_FOUND",
+      "営業利益": "NOT_FOUND",
+      "当期利益": "NOT_FOUND"
+    },
+    "bs": {
+      "status": "OK",
+      "item_count": 17,
+      "資産合計": "NOT_FOUND",
+      "負債合計": "NOT_FOUND"
+    },
+    "cf": {
+      "status": "OK",
+      "item_count": 28
+    },
+    "dataframe": {
+      "status": "OK",
+      "shape": [
+        11,
+        5
+      ],
+      "columns": [
+        "label_ja",
+        "label_en",
+        "value",
+        "unit",
+        "concept"
+      ]
+    },
+    "total_time": 355.64,
+    "overall": "OK"
+  },
+  "search_tests": {
+    "三菱UFJ(半角UFJ)": {
+      "count": 0,
+      "names": []
+    },
+    "三菱ＵＦＪ(全角ＵＦＪ)": {
+      "count": 12,
+      "names": [
+        "三菱ＵＦＪ信託銀行株式会社",
+        "三菱ＵＦＪ証券ホールディングス株式会社",
+        "三菱ＵＦＪｅスマート証券株式会社"
+      ]
+    },
+    "トヨタ(カタカナ)": {
+      "count": 13,
+      "names": [
+        "トヨタ紡織株式会社",
+        "トヨタ自動車株式会社",
+        "トヨタファイナンス株式会社"
+      ]
+    },
+    "toyota(英語小文字)": {
+      "count": 5,
+      "names": [
+        "トヨタ紡織株式会社",
+        "株式会社豊田自動織機",
+        "トヨタ自動車株式会社"
+      ]
+    },
+    "TOYOTA(英語大文字)": {
+      "count": 5,
+      "names": [
+        "トヨタ紡織株式会社",
+        "株式会社豊田自動織機",
+        "トヨタ自動車株式会社"
+      ]
+    },
+    "ソニー(カタカナ)": {
+      "count": 6,
+      "names": [
+        "ソニーグループ株式会社",
+        "ソニーネットワークコミュニケーションズ株式会社",
+        "ソニーフィナンシャルグループ株式会社"
+      ]
+    },
+    "Sony(英語)": {
+      "count": 3,
+      "names": [
+        "ソニーグループ株式会社",
+        "ソニーネットワークコミュニケーションズ株式会社",
+        "ソニーフィナンシャルグループ株式会社"
+      ]
+    }
+  },
+  "industry_tests": {
+    "銀行": {
+      "count": 0,
+      "names": []
+    },
+    "銀行業": {
+      "count": 5,
+      "names": [
+        "株式会社ＳＢＩ新生銀行",
+        "株式会社あおぞら銀行",
+        "株式会社みずほ銀行"
+      ]
+    },
+    "建設": {
+      "count": 0,
+      "names": []
+    },
+    "建設業": {
+      "count": 5,
+      "names": [
+        "住友林業株式会社",
+        "大和ハウス工業株式会社",
+        "株式会社ＮＩＰＰＯ"
+      ]
+    },
+    "証券": {
+      "count": 0,
+      "names": []
+    },
+    "保険": {
+      "count": 0,
+      "names": []
+    },
+    "鉄道": {
+      "count": 0,
+      "names": []
+    }
+  },
+  "total_time": 2164.34
+}

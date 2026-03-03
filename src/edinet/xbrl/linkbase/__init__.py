@@ -23,6 +23,11 @@ from edinet.xbrl.linkbase.definition import (
     MemberNode,
     parse_definition_linkbase,
 )
+from edinet.xbrl.linkbase.footnotes import (
+    Footnote,
+    FootnoteMap,
+    parse_footnote_links,
+)
 from edinet.xbrl.linkbase.presentation import (
     PresentationNode,
     PresentationTree,
@@ -48,6 +53,10 @@ __all__ = [
     "HypercubeInfo",
     "DefinitionTree",
     "parse_definition_linkbase",
+    # Footnotes (Wave 7: L3)
+    "Footnote",
+    "FootnoteMap",
+    "parse_footnote_links",
     # ラベルロール定数
     "ROLE_LABEL",
     "ROLE_TOTAL_LABEL",

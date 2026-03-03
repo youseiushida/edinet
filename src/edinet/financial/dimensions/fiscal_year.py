@@ -12,7 +12,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from datetime import date
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 from edinet.xbrl.dei import PeriodType
 
@@ -79,8 +79,10 @@ def _calc_months(start: date, end: date) -> int:
     return round(delta_days / _DAYS_PER_MONTH)
 
 
-def detect_fiscal_year(dei: DEI) -> FiscalYearInfo:
+def detect_fiscal_year(dei_or_stmts: DEI | Any) -> FiscalYearInfo:
     """DEI の日付情報から決算期メタデータを抽出する。
+
+    ``Statements`` を渡すと内部の DEI を自動取得する。
 
     DEI の各日付フィールド（current_fiscal_year_start_date,
     current_period_end_date, current_fiscal_year_end_date,
@@ -90,11 +92,27 @@ def detect_fiscal_year(dei: DEI) -> FiscalYearInfo:
     None または False となる（graceful degradation）。
 
     Args:
-        dei: ``extract_dei()`` で取得した DEI。
+        dei_or_stmts: ``extract_dei()`` で取得した DEI、
+            または ``Statements`` オブジェクト。
 
     Returns:
         FiscalYearInfo。
     """
+    # Statements を受け付ける
+    from edinet.financial.statements import Statements as _Statements
+
+    if isinstance(dei_or_stmts, _Statements):
+        dei = dei_or_stmts._dei  # noqa: SLF001
+        if dei is None:
+            # DEI なしの Statements → 全フィールド None の FiscalYearInfo を返す
+            return FiscalYearInfo(
+                start_date=None, end_date=None,
+                fiscal_year_end_date=None, period_months=None,
+                period_type=None, is_full_year=False, is_irregular=False,
+                fiscal_year_end_month=None,
+            )
+    else:
+        dei = dei_or_stmts
     start = dei.current_fiscal_year_start_date
     end = dei.current_period_end_date
     fy_end = dei.current_fiscal_year_end_date

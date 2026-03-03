@@ -3,11 +3,11 @@ name = "edinet"
 dynamic = ["version"]
 description = "EDINET API client & XBRL parser for Japanese financial disclosures"
 readme = "README.md"
-license = {text = "MIT"}
+license = {text = "AGPL-3.0-or-later"}
 keywords = ["edinet", "xbrl", "japan", "financial", "disclosure", "sec"]
 classifiers = [
     "Development Status :: 3 - Alpha",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
     "Topic :: Office/Business :: Financial",

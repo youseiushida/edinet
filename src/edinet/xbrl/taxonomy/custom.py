@@ -39,6 +39,9 @@ from edinet.xbrl._namespaces import (
     classify_namespace,
     is_standard_taxonomy,
 )
+from edinet.xbrl.linkbase.calculation import (
+    CalculationLinkbase,
+)
 from edinet.xbrl.linkbase.definition import DefinitionTree
 from edinet.financial.statements import Statements
 
@@ -70,6 +73,22 @@ _FILER_XSD_RE = re.compile(r"jpcrp\d+")
 
 
 @dataclass(frozen=True, slots=True)
+class _CalcMappingResult:
+    """CalculationLinkbase ベースのマッピング結果（内部用）。
+
+    Attributes:
+        ancestor: summation-item 由来の最近接標準科目のローカル名。
+            標準科目が見つからない場合は None。
+        path: 非標準科目からの経路（ローカル名のタプル）。
+        role_uri: マッピングが特定された role URI。
+    """
+
+    ancestor: str | None
+    path: tuple[str, ...]
+    role_uri: str
+
+
+@dataclass(frozen=True, slots=True)
 class CustomItemInfo:
     """非標準（拡張）科目の分析結果。
 
@@ -79,11 +98,24 @@ class CustomItemInfo:
         parent_standard_concept: general-special arcrole で推定した
             親標準科目のローカル名。DefinitionLinkbase が未指定、
             または該当する関係がない場合は None。
+        calculation_ancestor: Calculation Linkbase (summation-item) 由来の
+            最近接標準科目のローカル名。CalculationLinkbase が未指定、
+            または該当する計算関係がない場合は None。
+        calculation_path: 非標準科目から calculation_ancestor までの経路
+            （ローカル名のタプル）。先頭が非標準科目、末尾が
+            calculation_ancestor。calculation_ancestor が None の場合は
+            ルートまでの経路。CalculationLinkbase が未指定の場合は None。
+        calculation_role_uri: マッピングが特定された Calculation Linkbase の
+            role URI。CalculationLinkbase が未指定の場合は None。
     """
 
     item: LineItem
     namespace_info: NamespaceInfo
     parent_standard_concept: str | None
+
+    calculation_ancestor: str | None = None
+    calculation_path: tuple[str, ...] | None = None
+    calculation_role_uri: str | None = None
 
 
 @dataclass(frozen=True, slots=True)
@@ -114,6 +146,7 @@ def detect_custom_items(
     statements: Statements,
     *,
     definition_linkbase: dict[str, DefinitionTree] | None = None,
+    calculation_linkbase: CalculationLinkbase | None = None,
 ) -> CustomDetectionResult:
     """各 LineItem を標準/非標準に分類する。
 
@@ -121,6 +154,9 @@ def detect_custom_items(
     標準タクソノミか提出者別タクソノミかを判定する。
     非標準科目については NamespaceInfo と、Definition Linkbase が
     利用可能な場合は親標準科目の推定結果を付与する。
+
+    Calculation Linkbase が指定された場合は、summation-item arcrole を
+    辿って「どの標準科目の計算内訳か」も推定する。
 
     Note:
         本関数は XBRL インスタンス内の Fact（LineItem）のみを対象とする。
@@ -137,6 +173,10 @@ def detect_custom_items(
         definition_linkbase: parse_definition_linkbase() の戻り値。
             指定した場合、general-special arcrole を用いて
             拡張科目の親標準科目を推定する。None の場合は推定しない。
+        calculation_linkbase: parse_calculation_linkbase() の戻り値。
+            指定した場合、summation-item arcrole を用いて
+            拡張科目の計算上の最近接標準科目を推定する。
+            None の場合は推定しない。
 
     Returns:
         CustomDetectionResult。
@@ -147,6 +187,9 @@ def detect_custom_items(
     # DefinitionLinkbase から逆引きインデックスを構築（optional）
     parent_index = _build_parent_index(definition_linkbase)
 
+    # CalculationLinkbase から逆引きインデックスを構築（optional）
+    calc_index = _build_calculation_index(calculation_linkbase)
+
     # Statements の公開イテレーションプロトコル（__iter__）でアクセスする。
     # _items への直接アクセスはリファクタリング耐性を損なうため避ける。
     for item in statements:
@@ -155,11 +198,15 @@ def detect_custom_items(
         else:
             ns_info = classify_namespace(item.namespace_uri)
             parent = parent_index.get(item.local_name)
+            calc = calc_index.get(item.local_name)
             custom.append(
                 CustomItemInfo(
                     item=item,
                     namespace_info=ns_info,
                     parent_standard_concept=parent,
+                    calculation_ancestor=calc.ancestor if calc else None,
+                    calculation_path=calc.path if calc else None,
+                    calculation_role_uri=calc.role_uri if calc else None,
                 )
             )
 
@@ -174,9 +221,108 @@ def detect_custom_items(
     )
 
 
+def find_custom_concepts(
+    calc_linkbase: CalculationLinkbase,
+) -> tuple[str, ...]:
+    """Calculation Linkbase 内の全非標準科目を自動検出する。
+
+    全 CalculationArc の parent/child の href を走査し、
+    提出者タクソノミに属する concept を抽出する。
+
+    Args:
+        calc_linkbase: パース済みの CalculationLinkbase。
+
+    Returns:
+        非標準科目ローカル名のタプル（重複除去・ソート済み）。
+    """
+    return tuple(sorted(_find_custom_in_calc(calc_linkbase)))
+
+
 # ============================================================
 # 内部関数
 # ============================================================
+
+
+def _find_custom_in_calc(calc_linkbase: CalculationLinkbase) -> set[str]:
+    """CalculationLinkbase 内の全非標準科目を検出する（内部用）。
+
+    全ロールの全 CalculationArc を走査し、child_href / parent_href が
+    提出者タクソノミの XSD を参照している concept を収集する。
+
+    Args:
+        calc_linkbase: パース済みの CalculationLinkbase。
+
+    Returns:
+        非標準科目ローカル名の集合。
+    """
+    custom: set[str] = set()
+    for tree in calc_linkbase.trees.values():
+        for arc in tree.arcs:
+            if not _is_standard_href(arc.child_href):
+                custom.add(arc.child)
+            if not _is_standard_href(arc.parent_href):
+                custom.add(arc.parent)
+    return custom
+
+
+def _build_calculation_index(
+    calculation_linkbase: CalculationLinkbase | None,
+) -> dict[str, _CalcMappingResult]:
+    """CalculationLinkbase の summation-item を辿り、全非標準科目のマッピングを構築する。
+
+    各非標準科目について parent_of() で 1 段ずつ祖先を辿り、
+    CalculationArc.parent_href から _is_standard_href() で
+    標準/非標準を判定する。最初に標準科目が見つかった時点で停止する。
+
+    Args:
+        calculation_linkbase: パース済みの CalculationLinkbase。
+            None の場合は空辞書を返す。
+
+    Returns:
+        非標準科目ローカル名 → _CalcMappingResult の辞書。
+    """
+    if calculation_linkbase is None:
+        return {}
+
+    custom_concepts = _find_custom_in_calc(calculation_linkbase)
+    result: dict[str, _CalcMappingResult] = {}
+
+    for concept in custom_concepts:
+        for role_uri in calculation_linkbase.role_uris:
+            path: list[str] = [concept]
+            standard_ancestor: str | None = None
+            current = concept
+            visited: set[str] = {concept}
+
+            while True:
+                parent_arcs = calculation_linkbase.parent_of(
+                    current, role_uri=role_uri,
+                )
+                if not parent_arcs:
+                    break  # ルートに到達
+                arc = parent_arcs[0]
+                parent = arc.parent
+                if parent in visited:
+                    break  # 循環検出
+                visited.add(parent)
+                path.append(parent)
+
+                if _is_standard_href(arc.parent_href):
+                    standard_ancestor = parent
+                    break  # 最も近い標準科目で停止
+
+                current = parent
+
+            if standard_ancestor is not None or len(path) > 1:
+                result[concept] = _CalcMappingResult(
+                    ancestor=standard_ancestor,
+                    path=tuple(path),
+                    role_uri=role_uri,
+                )
+                if standard_ancestor is not None:
+                    break  # 最初に標準科目が見つかった role を採用
+
+    return result
 
 
 def _is_standard_href(href: str) -> bool:

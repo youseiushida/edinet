@@ -37,8 +37,8 @@ class LineItem:
         value: 変換済みの値。数値 Fact は ``Decimal``、テキスト Fact は ``str``、
             nil Fact は ``None``。テキスト Fact の値は ``RawFact.value_raw``
             （``itertext()`` によるタグ除去済みプレーンテキスト）を使用する。
-            HTML タグを含む原文が必要な場合は ``RawFact.value_inner_xml`` を
-            直接参照すること（TextBlock 等、v0.2.0 の ``text_blocks`` モジュールで対応予定）。
+            HTML タグを含む原文が必要な場合は ``RawFact.value_raw`` を参照するか、
+            ``edinet.xbrl.text`` パッケージの ``extract_text_blocks()`` を使用すること。
         unit_ref: unitRef 属性値。テキスト Fact は ``None``。
         decimals: decimals 属性値。``int`` / ``"INF"`` / ``None``。
         context_id: contextRef 属性値（トレーサビリティ用）。
@@ -400,6 +400,33 @@ class FinancialStatement:
         from edinet.dataframe.export import to_excel
 
         to_excel(self.to_dataframe(full=True), path, **kwargs)
+
+    def _repr_html_(self) -> str:
+        """Jupyter Notebook でのインライン HTML 表示。
+
+        ``_concept_set`` が設定されている場合は階層表示を使用する。
+        表示モジュールの import に失敗した場合は ``__repr__`` の
+        プレーンテキスト HTML をフォールバックとして返す。
+        """
+        from html import escape as _escape
+
+        try:
+            from edinet.display.html import to_html
+
+            if self._concept_set is not None:
+                from edinet.display.statements import _resolve_abstract_labels
+
+                labels = _resolve_abstract_labels(
+                    self._concept_set, self._taxonomy_root,
+                )
+                return to_html(
+                    self,
+                    concept_set=self._concept_set,
+                    abstract_labels=labels,
+                )
+            return to_html(self)
+        except Exception:
+            return f"<pre>{_escape(str(self))}</pre>"
 
     def __rich_console__(self, console, options):  # noqa: ANN001
         """Rich Console Protocol。

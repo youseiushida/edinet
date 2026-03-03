@@ -53,30 +53,28 @@ class CacheStore:
     @property
     def cache_dir(self) -> Path:
         """キャッシュのルートディレクトリ。"""
-    def cache_path(self, doc_id: str) -> Path:
-        """doc_id に対応するキャッシュファイルのパスを返す。
+    def cache_path(self, doc_id: str, *, suffix: str = '.zip') -> Path:
+        '''doc_id に対応するキャッシュファイルのパスを返す。
 
         Args:
             doc_id: 書類管理番号。
+            suffix: ファイル拡張子。デフォルトは ``".zip"``。
 
         Returns:
-            ``{cache_dir}/downloads/{doc_id}.zip``
-
-        Note:
-            現在は file_type=XBRL_AND_AUDIT 固定のため doc_id のみでキー化。
-            fetch_pdf 対応時にキャッシュキーの拡張が必要。
-        """
-    def get(self, doc_id: str) -> bytes | None:
-        """キャッシュから ZIP バイナリを取得する。
+            ``{cache_dir}/downloads/{doc_id}{suffix}``
+        '''
+    def get(self, doc_id: str, *, suffix: str = '.zip') -> bytes | None:
+        '''キャッシュからバイナリを取得する。
 
         Args:
             doc_id: 書類管理番号。
+            suffix: ファイル拡張子。デフォルトは ``".zip"``。
 
         Returns:
             キャッシュヒット時は bytes。ミス時は ``None``。
-        """
-    def put(self, doc_id: str, data: bytes) -> None:
-        """ZIP バイナリをキャッシュに保存する。
+        '''
+    def put(self, doc_id: str, data: bytes, *, suffix: str = '.zip') -> None:
+        '''バイナリをキャッシュに保存する。
 
         原子的書き込み: tempfile に書き込み後、``os.replace()`` でリネーム。
 
@@ -87,14 +85,16 @@ class CacheStore:
 
         Args:
             doc_id: 書類管理番号。
-            data: ZIP バイナリ。
-        """
-    def delete(self, doc_id: str) -> None:
-        """指定した doc_id のキャッシュを削除する。
+            data: 保存するバイナリ。
+            suffix: ファイル拡張子。デフォルトは ``".zip"``。
+        '''
+    def delete(self, doc_id: str, *, suffix: str = '.zip') -> None:
+        '''指定した doc_id のキャッシュを削除する。
 
         Args:
             doc_id: 書類管理番号。
-        """
+            suffix: ファイル拡張子。デフォルトは ``".zip"``。
+        '''
     def clear(self) -> None:
         """``downloads/`` サブディレクトリを削除する。
 

@@ -243,6 +243,7 @@ class Filing(BaseModel):
     # --- Day 6: fetch キャッシュ ---
     _zip_cache: bytes | None = PrivateAttr(default=None)
     _xbrl_cache: tuple[str, bytes] | None = PrivateAttr(default=None)
+    _pdf_cache: bytes | None = PrivateAttr(default=None)
 
     # --- 計算フィールド ---
 
@@ -292,9 +293,10 @@ class Filing(BaseModel):
         return Company.from_filing(self)
 
     def clear_fetch_cache(self) -> None:
-        """`fetch()` のキャッシュを破棄する。"""
+        """`fetch()` / `fetch_pdf()` のキャッシュを破棄する。"""
         object.__setattr__(self, "_zip_cache", None)
         object.__setattr__(self, "_xbrl_cache", None)
+        object.__setattr__(self, "_pdf_cache", None)
 
     def _get_from_disk_cache(self) -> bytes | None:
         """ディスクキャッシュから ZIP を読み込む。
@@ -335,6 +337,153 @@ class Filing(BaseModel):
         if store is None:
             return
         store.delete(self.doc_id)
+
+    def _get_pdf_from_disk_cache(self) -> bytes | None:
+        """ディスクキャッシュから PDF を読み込む。
+
+        Returns:
+            キャッシュヒット時は bytes。キャッシュ無効またはミス時は ``None``。
+        """
+        from edinet.api.cache import _get_cache_store
+
+        store = _get_cache_store()
+        if store is None:
+            return None
+        return store.get(self.doc_id, suffix=".pdf")
+
+    def _save_pdf_to_disk_cache(self, data: bytes) -> None:
+        """PDF をディスクキャッシュに保存する。
+
+        Args:
+            data: 保存する PDF バイナリ。
+        """
+        from edinet.api.cache import _get_cache_store
+
+        store = _get_cache_store()
+        if store is None:
+            return
+        store.put(self.doc_id, data, suffix=".pdf")
+
+    def _delete_pdf_disk_cache(self) -> None:
+        """ディスクキャッシュの PDF エントリを削除する。"""
+        from edinet.api.cache import _get_cache_store
+
+        store = _get_cache_store()
+        if store is None:
+            return
+        store.delete(self.doc_id, suffix=".pdf")
+
+    def fetch_pdf(self, *, refresh: bool = False) -> bytes:
+        """提出書類の PDF をダウンロードして返す。
+
+        3層キャッシュ（メモリ → ディスク → ネットワーク）を使用する。
+
+        Args:
+            refresh: ``True`` の場合は PDF キャッシュを破棄して再取得する。
+
+        Returns:
+            PDF のバイト列。
+
+        Raises:
+            EdinetAPIError: 当該書類に PDF が含まれていない場合。
+            EdinetParseError: ダウンロードの入力不正の正規化。
+            EdinetError: 通信層失敗。
+        """
+        from edinet.api.download import DownloadFileType, download_document
+        from edinet.exceptions import EdinetAPIError, EdinetParseError
+
+        if not self.has_pdf:
+            raise EdinetAPIError(
+                0,
+                f"書類に PDF が含まれていません (doc_id={self.doc_id}, pdfFlag=0)。",
+            )
+
+        if refresh:
+            object.__setattr__(self, "_pdf_cache", None)
+            self._delete_pdf_disk_cache()
+
+        # Layer 1: メモリキャッシュ
+        if self._pdf_cache is not None:
+            return self._pdf_cache
+
+        # Layer 2: ディスクキャッシュ
+        if not refresh:
+            disk_data = self._get_pdf_from_disk_cache()
+            if disk_data is not None:
+                object.__setattr__(self, "_pdf_cache", disk_data)
+                return disk_data
+
+        # Layer 3: ネットワーク
+        try:
+            pdf_bytes = download_document(
+                self.doc_id,
+                file_type=DownloadFileType.PDF,
+            )
+        except ValueError as exc:
+            raise EdinetParseError(
+                f"PDF のダウンロードに失敗しました "
+                f"(doc_id={self.doc_id!r}): {exc}",
+            ) from exc
+
+        object.__setattr__(self, "_pdf_cache", pdf_bytes)
+        self._save_pdf_to_disk_cache(pdf_bytes)
+        return pdf_bytes
+
+    async def afetch_pdf(self, *, refresh: bool = False) -> bytes:
+        """提出書類の PDF を非同期でダウンロードして返す。
+
+        ``fetch_pdf()`` の非同期版。
+
+        Args:
+            refresh: ``True`` の場合は PDF キャッシュを破棄して再取得する。
+
+        Returns:
+            PDF のバイト列。
+
+        Raises:
+            EdinetAPIError: 当該書類に PDF が含まれていない場合。
+            EdinetParseError: ダウンロードの入力不正の正規化。
+            EdinetError: 通信層失敗。
+        """
+        from edinet.api.download import DownloadFileType, adownload_document
+        from edinet.exceptions import EdinetAPIError, EdinetParseError
+
+        if not self.has_pdf:
+            raise EdinetAPIError(
+                0,
+                f"書類に PDF が含まれていません (doc_id={self.doc_id}, pdfFlag=0)。",
+            )
+
+        if refresh:
+            object.__setattr__(self, "_pdf_cache", None)
+            self._delete_pdf_disk_cache()
+
+        # Layer 1: メモリキャッシュ
+        if self._pdf_cache is not None:
+            return self._pdf_cache
+
+        # Layer 2: ディスクキャッシュ
+        if not refresh:
+            disk_data = self._get_pdf_from_disk_cache()
+            if disk_data is not None:
+                object.__setattr__(self, "_pdf_cache", disk_data)
+                return disk_data
+
+        # Layer 3: ネットワーク
+        try:
+            pdf_bytes = await adownload_document(
+                self.doc_id,
+                file_type=DownloadFileType.PDF,
+            )
+        except ValueError as exc:
+            raise EdinetParseError(
+                f"PDF のダウンロードに失敗しました "
+                f"(doc_id={self.doc_id!r}): {exc}",
+            ) from exc
+
+        object.__setattr__(self, "_pdf_cache", pdf_bytes)
+        self._save_pdf_to_disk_cache(pdf_bytes)
+        return pdf_bytes
 
     def fetch(self, *, refresh: bool = False) -> tuple[str, bytes]:
         """提出本文書 ZIP から代表 XBRL を取得する。
@@ -645,6 +794,7 @@ class Filing(BaseModel):
                 contexts=ctx_map,
                 taxonomy_root=_Path(taxonomy_path),
                 industry_code=industry_code,
+                resolver=resolver,
             )
         except EdinetError:
             raise
@@ -677,9 +827,11 @@ class Filing(BaseModel):
             EdinetError: 通信層の失敗。
 
         Note:
-            v0.1.0 は **J-GAAP の一般事業会社** のみ対応。IFRS / US-GAAP 企業の
-            XBRL を渡した場合、科目がマッチせず空または不完全な Statement が返り、
-            ``UserWarning`` を発行する。スレッドセーフではない。
+            J-GAAP / IFRS / US-GAAP の 3 会計基準に対応。
+            23 業種の ConceptSet を自動導出し、銀行・保険・証券・建設・鉄道の
+            5 業種は専用科目マッピングを提供する。
+            有報・四半期報告書・半期報告書など XBRL を含む全書類タイプで動作する。
+            スレッドセーフではない。
         """
         from edinet.exceptions import EdinetAPIError
 
@@ -712,9 +864,11 @@ class Filing(BaseModel):
             EdinetError: 通信層の失敗。
 
         Note:
-            v0.1.0 は **J-GAAP の一般事業会社** のみ対応。IFRS / US-GAAP 企業の
-            XBRL を渡した場合、科目がマッチせず空または不完全な Statement が返り、
-            ``UserWarning`` を発行する。スレッドセーフではない。
+            J-GAAP / IFRS / US-GAAP の 3 会計基準に対応。
+            23 業種の ConceptSet を自動導出し、銀行・保険・証券・建設・鉄道の
+            5 業種は専用科目マッピングを提供する。
+            有報・四半期報告書・半期報告書など XBRL を含む全書類タイプで動作する。
+            スレッドセーフではない。
         """
         from edinet.exceptions import EdinetAPIError
 

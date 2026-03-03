@@ -1,0 +1,19 @@
+{
+  "company_search": {
+    "status": "OK",
+    "count": 1,
+    "time": 3.34,
+    "names": [
+      "鹿島建設株式会社"
+    ]
+  },
+  "latest_filing": {
+    "status": "ERROR",
+    "error": "Date range too large: 731 days. Maximum is 366 days."
+  },
+  "xbrl_parse": {
+    "status": "SKIP",
+    "reason": "no filing or no XBRL"
+  },
+  "total_time": 3.59
+}

@@ -1,0 +1,15 @@
+<link:footnoteLink xmlns:link="http://www.xbrl.org/2003/linkbase"
+                   xmlns:xlink="http://www.w3.org/1999/xlink"
+                   xlink:type="extended"
+                   xlink:role="http://www.xbrl.org/2003/role/link">
+  <!-- EDINET 典型パターン: 複数 loc が同一 label を共有 -->
+  <link:loc xlink:type="locator" xlink:href="#IdFactAAA" xlink:label="fact"/>
+  <link:loc xlink:type="locator" xlink:href="#IdFactBBB" xlink:label="fact"/>
+  <link:loc xlink:type="locator" xlink:href="#IdFactCCC" xlink:label="fact"/>
+  <link:footnote xlink:type="resource" xlink:label="footnote"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumber"
+      xml:lang="ja">※1</link:footnote>
+  <link:footnoteArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote"
+      xlink:from="fact" xlink:to="footnote"/>
+</link:footnoteLink>

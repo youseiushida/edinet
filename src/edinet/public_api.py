@@ -71,12 +71,20 @@ def documents(
     from edinet.api.documents import get_documents
     from edinet.models.filing import Filing
 
+    from edinet.exceptions import EdinetAPIError
+
     filings: list[Filing] = []
     for current in _iter_dates_inclusive(start_date, end_date):
-        api_response = get_documents(
-            current.isoformat(),
-            include_details=True,
-        )
+        try:
+            api_response = get_documents(
+                current.isoformat(),
+                include_details=True,
+            )
+        except EdinetAPIError as exc:
+            # 未来の日付や存在しない日付で 404 が返る場合 → 空として扱う
+            if exc.status_code == 404:
+                continue
+            raise
         filtered_results = _prepare_response_for_filing_parse(
             api_response,
             doc_type_code=doc_type_code,

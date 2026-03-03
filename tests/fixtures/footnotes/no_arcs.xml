@@ -1,0 +1,10 @@
+<link:footnoteLink xmlns:link="http://www.xbrl.org/2003/linkbase"
+                   xmlns:xlink="http://www.w3.org/1999/xlink"
+                   xlink:type="extended"
+                   xlink:role="http://www.xbrl.org/2003/role/link">
+  <link:loc xlink:type="locator" xlink:href="#IdFactOrphan" xlink:label="loc_orphan"/>
+  <link:footnote xlink:type="resource" xlink:label="fn_orphan"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumber"
+      xml:lang="ja">※1 紐付けなし脚注</link:footnote>
+  <!-- arc なし: loc と footnote は紐付けられない -->
+</link:footnoteLink>

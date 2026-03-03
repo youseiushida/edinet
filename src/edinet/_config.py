@@ -17,7 +17,7 @@ class _Config:
     base_url: str = "https://api.edinet-fsa.go.jp/api/v2"
     timeout: float = 30.0
     max_retries: int = 3
-    rate_limit: float = 1.0
+    rate_limit: float = 0.0
     taxonomy_path: str | None = None
     cache_dir: str | None = None
 

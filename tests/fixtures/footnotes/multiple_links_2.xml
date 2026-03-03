@@ -1,0 +1,17 @@
+<!-- LINK2: PL 用（multiple_links.xml と対で使用） -->
+<link:footnoteLink xmlns:link="http://www.xbrl.org/2003/linkbase"
+                   xmlns:xlink="http://www.w3.org/1999/xlink"
+                   xlink:type="extended"
+                   xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedStatementOfIncome">
+  <link:loc xlink:type="locator" xlink:href="#IdFactPL1" xlink:label="loc_pl1"/>
+  <link:loc xlink:type="locator" xlink:href="#IdFactBoth" xlink:label="loc_both2"/>
+  <link:footnote xlink:type="resource" xlink:label="fn_pl"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumber"
+      xml:lang="ja">※2 PL脚注</link:footnote>
+  <link:footnoteArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote"
+      xlink:from="loc_pl1" xlink:to="fn_pl"/>
+  <link:footnoteArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote"
+      xlink:from="loc_both2" xlink:to="fn_pl"/>
+</link:footnoteLink>

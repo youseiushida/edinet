@@ -29,12 +29,39 @@ if TYPE_CHECKING:
     from edinet.xbrl.taxonomy.custom import (
         detect_custom_items as detect_custom_items,
     )
+    from edinet.xbrl.taxonomy.custom import (
+        find_custom_concepts as find_custom_concepts,
+    )
     from edinet.xbrl.validation.calc_check import (
         CalcValidationResult as CalcValidationResult,
     )
     from edinet.xbrl.validation.calc_check import (
         validate_calculations as validate_calculations,
     )
+    from edinet.financial.diff import DiffResult as DiffResult
+    from edinet.financial.diff import diff_periods as diff_periods
+    from edinet.financial.diff import diff_revisions as diff_revisions
+    from edinet.financial.dimensions.segments import (
+        extract_segments as extract_segments,
+    )
+    from edinet.financial.dimensions.segments import (
+        list_dimension_axes as list_dimension_axes,
+    )
+    from edinet.financial.summary import FilingSummary as FilingSummary
+    from edinet.financial.summary import build_summary as build_summary
+    from edinet.exceptions import (
+        EdinetError as EdinetError,
+        EdinetConfigError as EdinetConfigError,
+        EdinetAPIError as EdinetAPIError,
+        EdinetParseError as EdinetParseError,
+        EdinetWarning as EdinetWarning,
+    )
+    from edinet.financial.extract import (
+        ExtractedValue as ExtractedValue,
+        extract_values as extract_values,
+        extracted_to_dict as extracted_to_dict,
+    )
+    from edinet.financial.standards.canonical_keys import CK as CK
 
 _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
     # --- 設定・ユーティリティ ---
@@ -77,6 +104,38 @@ _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
         "detect_fiscal_year",
     ),
     "FiscalYearInfo": ("edinet.financial.dimensions.fiscal_year", "FiscalYearInfo"),
+    # --- Wave 7: 拡張科目検出の拡張 (L5) ---
+    "find_custom_concepts": (
+        "edinet.xbrl.taxonomy.custom",
+        "find_custom_concepts",
+    ),
+    # --- Wave 7: 差分比較 (L8) ---
+    "diff_revisions": ("edinet.financial.diff", "diff_revisions"),
+    "diff_periods": ("edinet.financial.diff", "diff_periods"),
+    "DiffResult": ("edinet.financial.diff", "DiffResult"),
+    # --- Wave 7: セグメント (L6) ---
+    "extract_segments": (
+        "edinet.financial.dimensions.segments",
+        "extract_segments",
+    ),
+    "list_dimension_axes": (
+        "edinet.financial.dimensions.segments",
+        "list_dimension_axes",
+    ),
+    # --- Wave 7: サマリー (L4) ---
+    "build_summary": ("edinet.financial.summary", "build_summary"),
+    "FilingSummary": ("edinet.financial.summary", "FilingSummary"),
+    # --- 例外 ---
+    "EdinetError": ("edinet.exceptions", "EdinetError"),
+    "EdinetConfigError": ("edinet.exceptions", "EdinetConfigError"),
+    "EdinetAPIError": ("edinet.exceptions", "EdinetAPIError"),
+    "EdinetParseError": ("edinet.exceptions", "EdinetParseError"),
+    "EdinetWarning": ("edinet.exceptions", "EdinetWarning"),
+    # --- 正規化キー抽出 ---
+    "CK": ("edinet.financial.standards.canonical_keys", "CK"),
+    "extract_values": ("edinet.financial.extract", "extract_values"),
+    "extracted_to_dict": ("edinet.financial.extract", "extracted_to_dict"),
+    "ExtractedValue": ("edinet.financial.extract", "ExtractedValue"),
 }
 
 
@@ -131,4 +190,27 @@ __all__ = [
     # Wave 6: 決算期判定 (L6)
     "detect_fiscal_year",
     "FiscalYearInfo",
+    # Wave 7: 拡張科目検出の拡張 (L5)
+    "find_custom_concepts",
+    # Wave 7: 差分比較 (L8)
+    "diff_revisions",
+    "diff_periods",
+    "DiffResult",
+    # Wave 7: セグメント (L6)
+    "extract_segments",
+    "list_dimension_axes",
+    # Wave 7: サマリー (L4)
+    "build_summary",
+    "FilingSummary",
+    # 例外
+    "EdinetError",
+    "EdinetConfigError",
+    "EdinetAPIError",
+    "EdinetParseError",
+    "EdinetWarning",
+    # 正規化キー抽出
+    "CK",
+    "extract_values",
+    "extracted_to_dict",
+    "ExtractedValue",
 ]

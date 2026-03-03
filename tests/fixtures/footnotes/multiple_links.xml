@@ -1,0 +1,18 @@
+<!-- このファイルは 2 つの footnoteLink を含む。テストコードで分割して使用する。 -->
+<!-- LINK1: BS 用 -->
+<link:footnoteLink xmlns:link="http://www.xbrl.org/2003/linkbase"
+                   xmlns:xlink="http://www.w3.org/1999/xlink"
+                   xlink:type="extended"
+                   xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_ConsolidatedBalanceSheet">
+  <link:loc xlink:type="locator" xlink:href="#IdFactBS1" xlink:label="loc_bs1"/>
+  <link:loc xlink:type="locator" xlink:href="#IdFactBoth" xlink:label="loc_both"/>
+  <link:footnote xlink:type="resource" xlink:label="fn_bs"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumber"
+      xml:lang="ja">※1 BS脚注</link:footnote>
+  <link:footnoteArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote"
+      xlink:from="loc_bs1" xlink:to="fn_bs"/>
+  <link:footnoteArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote"
+      xlink:from="loc_both" xlink:to="fn_bs"/>
+</link:footnoteLink>

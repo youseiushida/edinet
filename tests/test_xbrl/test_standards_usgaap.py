@@ -23,10 +23,12 @@ from edinet.xbrl.contexts import (
 )
 from edinet.xbrl.parser import RawFact
 from edinet.financial.standards.usgaap import (
+    canonical_key,
     extract_usgaap_summary,
     get_jgaap_mapping,
     get_usgaap_concept_names,
     is_usgaap_element,
+    reverse_lookup,
 )
 
 # ---------------------------------------------------------------------------
@@ -920,3 +922,51 @@ class TestTaxonomyExistence:
         assert not missing, (
             f"jpcrp_cor XSD に存在しない US-GAAP concept: {missing}"
         )
+
+
+# =========================================================================
+# canonical_key / reverse_lookup テスト
+# =========================================================================
+
+
+class TestCanonicalKeyAndReverseLookup:
+    """canonical_key() / reverse_lookup() のテスト。"""
+
+    def test_canonical_key_returns_key(self) -> None:
+        """concept ローカル名から正規化キーが返る。"""
+        assert canonical_key("RevenuesUSGAAPSummaryOfBusinessResults") == "revenue"
+
+    def test_canonical_key_operating_income(self) -> None:
+        """営業利益の正規化キーが返る。"""
+        result = canonical_key(
+            "OperatingIncomeLossUSGAAPSummaryOfBusinessResults"
+        )
+        assert result == "operating_income"
+
+    def test_canonical_key_unknown_returns_none(self) -> None:
+        """未登録 concept では None が返る。"""
+        assert canonical_key("UnknownConcept") is None
+
+    def test_reverse_lookup_revenue(self) -> None:
+        """正規化キーから概念定義が取得できる。"""
+        d = reverse_lookup("revenue")
+        assert d is not None
+        assert d.concept_local_name == "RevenuesUSGAAPSummaryOfBusinessResults"
+        assert d.label_ja == "売上高"
+        assert d.label_en == "Revenue"
+
+    def test_reverse_lookup_unknown_returns_none(self) -> None:
+        """未登録キーでは None が返る。"""
+        assert reverse_lookup("unknown_key") is None
+
+    def test_label_en_on_all_concepts(self) -> None:
+        """全 19 概念に label_en が設定されている。"""
+        mapping = get_jgaap_mapping()
+        for key in mapping:
+            d = reverse_lookup(key)
+            assert d is not None, f"reverse_lookup({key!r}) が None"
+            assert d.label_en, f"{key} の label_en が空"
+            # 英語ラベルは大文字始まり（canonical key と区別）
+            assert d.label_en[0].isupper(), (
+                f"{key} の label_en={d.label_en!r} が大文字始まりでない"
+            )

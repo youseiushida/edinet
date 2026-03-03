@@ -1,9 +1,9 @@
 from collections.abc import Iterator, Sequence
 from dataclasses import dataclass
+from edinet.financial.standards.detect import DetectedStandard
 from edinet.models.financial import FinancialStatement, LineItem
 from edinet.xbrl.contexts import DurationPeriod, InstantPeriod, StructuredContext
 from edinet.xbrl.parser import RawFact
-from edinet.financial.standards.detect import DetectedStandard
 from pathlib import Path
 from typing import Literal
 

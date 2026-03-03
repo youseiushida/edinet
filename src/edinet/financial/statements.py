@@ -47,6 +47,7 @@ from edinet.financial.standards.usgaap import USGAAPSummaryItem as _USGAAPSummar
 
 if TYPE_CHECKING:
     from edinet.xbrl.dei import DEI
+    from edinet.xbrl.taxonomy import TaxonomyResolver
 
 __all__ = ["build_statements", "Statements"]
 
@@ -717,7 +718,7 @@ def _build_usgaap_statement(
                 source=LabelSource.FALLBACK,
             ),
             label_en=LabelInfo(
-                text=si.key, role=ROLE_LABEL, lang="en",
+                text=si.label_en, role=ROLE_LABEL, lang="en",
                 source=LabelSource.FALLBACK,
             ),
             value=si.value,
@@ -771,9 +772,13 @@ class Statements:
         _detected_standard: 判別された会計基準。
         _facts: 元の RawFact（US-GAAP サマリー抽出用）。
         _contexts: コンテキストマッピング（US-GAAP 用）。
-        _taxonomy_root: タクソノミルートパス（将来拡張用）。
+        _taxonomy_root: タクソノミルートパス。
         _industry_code: 業種コード（例: ``"bk1"``）。
             ``None`` は一般事業会社。
+        _resolver: ラベル解決済みの TaxonomyResolver。
+            パイプライン中に ``load_filer_labels()`` で提出者固有ラベルが
+            ロードされた状態で保持される。セグメント分析等の
+            事後ラベル解決に使用する。
     """
 
     _items: tuple[LineItem, ...]
@@ -783,6 +788,7 @@ class Statements:
     _taxonomy_root: Path | None = None
     _industry_code: str | None = None
     _dei: DEI | None = None
+    _resolver: TaxonomyResolver | None = None
 
     @property
     def detected_standard(self) -> DetectedStandard | None:
@@ -910,7 +916,10 @@ class Statements:
         )
 
         # BLOCK_ONLY の処理
-        if detail_level == DetailLevel.BLOCK_ONLY:
+        # US-GAAP 企業は連結が BLOCK_ONLY だが、個別は J-GAAP で
+        # 詳細タグ付けされている。consolidated=False の場合は
+        # DETAILED パスに落として J-GAAP の ConceptSet で処理する。
+        if detail_level == DetailLevel.BLOCK_ONLY and consolidated:
             if (
                 standard_enum == AccountingStandard.US_GAAP
                 and self._facts is not None
@@ -1269,6 +1278,7 @@ def build_statements(
     contexts: dict[str, StructuredContext] | None = None,
     taxonomy_root: Path | None = None,
     industry_code: str | None = None,
+    resolver: TaxonomyResolver | None = None,
 ) -> Statements:
     """LineItem 群から Statements コンテナを構築する。
 
@@ -1279,9 +1289,11 @@ def build_statements(
         items: ``build_line_items()`` が返した LineItem のシーケンス。
         facts: 元の RawFact タプル（会計基準判別・US-GAAP 抽出用）。
         contexts: ``structure_contexts()`` の戻り値（US-GAAP 抽出用）。
-        taxonomy_root: タクソノミルートパス（将来拡張用）。
+        taxonomy_root: タクソノミルートパス。
         industry_code: 業種コード（例: ``"bk1"``）。
             ``None`` は一般事業会社として扱う。
+        resolver: 提出者ラベルロード済みの TaxonomyResolver。
+            セグメント分析等の事後ラベル解決に使用する。
 
     Returns:
         Statements コンテナ。
@@ -1300,4 +1312,5 @@ def build_statements(
         _taxonomy_root=taxonomy_root,
         _industry_code=industry_code,
         _dei=dei,
+        _resolver=resolver,
     )

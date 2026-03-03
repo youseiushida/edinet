@@ -39,6 +39,8 @@ __all__ = [
     "is_usgaap_element",
     "get_jgaap_mapping",
     "get_usgaap_concept_names",
+    "canonical_key",
+    "reverse_lookup",
 ]
 
 # ---------------------------------------------------------------------------
@@ -56,12 +58,14 @@ class _SummaryConceptDef:
             例: ``"RevenuesUSGAAPSummaryOfBusinessResults"``。
         jgaap_concept: 対応する J-GAAP の concept ローカル名。None は対応なし。
         label_ja: 日本語ラベル（jpcrp_cor ラベルファイルで検証済み）。
+        label_en: 英語ラベル（jpcrp_cor ラベルファイルで検証済み）。
     """
 
     key: str
     concept_local_name: str
     jgaap_concept: str | None
     label_ja: str
+    label_en: str
 
 
 _USGAAP_SUMMARY_CONCEPTS: tuple[_SummaryConceptDef, ...] = (
@@ -71,36 +75,42 @@ _USGAAP_SUMMARY_CONCEPTS: tuple[_SummaryConceptDef, ...] = (
         "RevenuesUSGAAPSummaryOfBusinessResults",
         "NetSales",
         "売上高",
+        "Revenue",
     ),
     _SummaryConceptDef(
         "operating_income",
         "OperatingIncomeLossUSGAAPSummaryOfBusinessResults",
         "OperatingIncome",
         "営業利益又は営業損失（△）",
+        "Operating income (loss)",
     ),
     _SummaryConceptDef(
         "income_before_tax",
         "ProfitLossBeforeTaxUSGAAPSummaryOfBusinessResults",
         "IncomeBeforeIncomeTaxes",
         "税引前利益又は税引前損失（△）",
+        "Profit (loss) before tax",
     ),
     _SummaryConceptDef(
         "net_income_parent",
         "NetIncomeLossAttributableToOwnersOfParentUSGAAPSummaryOfBusinessResults",
         "ProfitLossAttributableToOwnersOfParent",
         "当社株主に帰属する純利益又は純損失（△）",
+        "Net income (loss) attributable to owners of parent",
     ),
     _SummaryConceptDef(
         "comprehensive_income",
         "ComprehensiveIncomeUSGAAPSummaryOfBusinessResults",
         "ComprehensiveIncome",
         "包括利益",
+        "Comprehensive income",
     ),
     _SummaryConceptDef(
         "comprehensive_income_parent",
         "ComprehensiveIncomeAttributableToOwnersOfParentUSGAAPSummaryOfBusinessResults",
         "ComprehensiveIncomeAttributableToOwnersOfParent",
         "当社株主に帰属する包括利益",
+        "Comprehensive income attributable to owners of parent",
     ),
     # --- BS 系 ---
     _SummaryConceptDef(
@@ -108,18 +118,21 @@ _USGAAP_SUMMARY_CONCEPTS: tuple[_SummaryConceptDef, ...] = (
         "EquityAttributableToOwnersOfParentUSGAAPSummaryOfBusinessResults",
         None,
         "株主資本",
+        "Equity attributable to owners of parent",
     ),
     _SummaryConceptDef(
         "net_assets",
         "EquityIncludingPortionAttributableToNonControllingInterestUSGAAPSummaryOfBusinessResults",
         "NetAssets",
         "純資産額",
+        "Equity including portion attributable to non-controlling interest",
     ),
     _SummaryConceptDef(
         "total_assets",
         "TotalAssetsUSGAAPSummaryOfBusinessResults",
         "Assets",
         "総資産額",
+        "Total assets",
     ),
     # --- 比率 ---
     _SummaryConceptDef(
@@ -127,18 +140,21 @@ _USGAAP_SUMMARY_CONCEPTS: tuple[_SummaryConceptDef, ...] = (
         "EquityToAssetRatioUSGAAPSummaryOfBusinessResults",
         None,
         "自己資本比率",
+        "Equity to asset ratio",
     ),
     _SummaryConceptDef(
         "roe",
         "RateOfReturnOnEquityUSGAAPSummaryOfBusinessResults",
         None,
         "株主資本利益率",
+        "Rate of return on equity",
     ),
     _SummaryConceptDef(
         "per",
         "PriceEarningsRatioUSGAAPSummaryOfBusinessResults",
         None,
         "株価収益率",
+        "Price earnings ratio",
     ),
     # --- CF 系 ---
     _SummaryConceptDef(
@@ -146,24 +162,28 @@ _USGAAP_SUMMARY_CONCEPTS: tuple[_SummaryConceptDef, ...] = (
         "CashFlowsFromUsedInOperatingActivitiesUSGAAPSummaryOfBusinessResults",
         "NetCashProvidedByUsedInOperatingActivities",
         "営業活動によるキャッシュ・フロー",
+        "Cash flows from (used in) operating activities",
     ),
     _SummaryConceptDef(
         "investing_cf",
         "CashFlowsFromUsedInInvestingActivitiesUSGAAPSummaryOfBusinessResults",
         "NetCashProvidedByUsedInInvestingActivities",
         "投資活動によるキャッシュ・フロー",
+        "Cash flows from (used in) investing activities",
     ),
     _SummaryConceptDef(
         "financing_cf",
         "CashFlowsFromUsedInFinancingActivitiesUSGAAPSummaryOfBusinessResults",
         "NetCashProvidedByUsedInFinancingActivities",
         "財務活動によるキャッシュ・フロー",
+        "Cash flows from (used in) financing activities",
     ),
     _SummaryConceptDef(
         "cash_end",
         "CashAndCashEquivalentsUSGAAPSummaryOfBusinessResults",
         "CashAndCashEquivalents",
         "現金及び現金同等物",
+        "Cash and cash equivalents",
     ),
     # --- 1株当たり ---
     _SummaryConceptDef(
@@ -171,18 +191,21 @@ _USGAAP_SUMMARY_CONCEPTS: tuple[_SummaryConceptDef, ...] = (
         "BasicEarningsLossPerShareUSGAAPSummaryOfBusinessResults",
         None,
         "基本的１株当たり当社株主に帰属する利益又は損失（△）",
+        "Basic earnings (loss) per share",
     ),
     _SummaryConceptDef(
         "eps_diluted",
         "DilutedEarningsLossPerShareUSGAAPSummaryOfBusinessResults",
         None,
         "希薄化後１株当たり当社株主に帰属する利益又は損失（△）",
+        "Diluted earnings (loss) per share",
     ),
     _SummaryConceptDef(
         "bps",
         "EquityAttributableToOwnersOfParentPerShareUSGAAPSummaryOfBusinessResults",
         None,
         "１株当たり株主資本",
+        "Equity attributable to owners of parent per share",
     ),
 )
 
@@ -197,6 +220,11 @@ _CONCEPT_NAMES: frozenset[str] = frozenset(_CONCEPT_LOOKUP)
 # 正規化キー → J-GAAP concept の対応辞書（事前構築）
 _JGAAP_MAPPING: dict[str, str | None] = {
     d.key: d.jgaap_concept for d in _USGAAP_SUMMARY_CONCEPTS
+}
+
+# 正規化キー → _SummaryConceptDef の逆引きテーブル
+_KEY_LOOKUP: dict[str, _SummaryConceptDef] = {
+    d.key: d for d in _USGAAP_SUMMARY_CONCEPTS
 }
 
 # ---------------------------------------------------------------------------
@@ -302,6 +330,7 @@ class USGAAPSummaryItem:
         concept: XBRL concept のローカル名。
             例: ``"RevenuesUSGAAPSummaryOfBusinessResults"``。
         label_ja: 日本語ラベル。
+        label_en: 英語ラベル。
         value: 値。数値の場合は ``Decimal``、テキストの場合は ``str``、
             nil の場合は ``None``。
         unit_ref: unitRef 属性値。
@@ -312,6 +341,7 @@ class USGAAPSummaryItem:
     key: str
     concept: str
     label_ja: str
+    label_en: str
     value: Decimal | str | None
     unit_ref: str | None
     period: Period
@@ -598,6 +628,7 @@ def _extract_summary_items(
                 key=defn.key,
                 concept=fact.local_name,
                 label_ja=defn.label_ja,
+                label_en=defn.label_en,
                 value=value,
                 unit_ref=fact.unit_ref,
                 period=period,
@@ -734,3 +765,35 @@ def get_usgaap_concept_names() -> frozenset[str]:
         concept ローカル名のフローズンセット。
     """
     return _CONCEPT_NAMES
+
+
+def canonical_key(concept: str) -> str | None:
+    """US-GAAP concept ローカル名を正規化キーにマッピングする。
+
+    jgaap.canonical_key / ifrs.canonical_key と同一パターンの
+    インターフェースを提供し、normalize.get_canonical_key() から
+    呼び出される。
+
+    Args:
+        concept: jpcrp_cor の US-GAAP 固有 concept ローカル名
+            （例: ``"RevenuesUSGAAPSummaryOfBusinessResults"``）。
+
+    Returns:
+        正規化キー文字列（例: ``"revenue"``）。
+        登録されていない concept の場合は ``None``。
+    """
+    d = _CONCEPT_LOOKUP.get(concept)
+    return d.key if d is not None else None
+
+
+def reverse_lookup(key: str) -> _SummaryConceptDef | None:
+    """正規化キーから US-GAAP の概念定義を取得する（逆引き）。
+
+    Args:
+        key: 正規化キー（例: ``"revenue"``）。
+
+    Returns:
+        対応する ``_SummaryConceptDef``。
+        該当するマッピングがない場合は ``None``。
+    """
+    return _KEY_LOOKUP.get(key)

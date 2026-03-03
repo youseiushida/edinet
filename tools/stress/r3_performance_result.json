@@ -1,0 +1,93 @@
+{
+  "single_date": {
+    "2025-06-25": {
+      "count": 1784,
+      "time": 5.64,
+      "has_xbrl_count": 1309
+    },
+    "2025-03-31": {
+      "count": 767,
+      "time": 0.71,
+      "has_xbrl_count": 574
+    },
+    "2025-01-06": {
+      "count": 180,
+      "time": 0.93,
+      "has_xbrl_count": 161
+    },
+    "2024-12-20": {
+      "count": 556,
+      "time": 1.03,
+      "has_xbrl_count": 482
+    }
+  },
+  "date_range": {
+    "1ヶ月": {
+      "count": 14724,
+      "time": 27.99,
+      "per_day_avg": 0.965
+    },
+    "3ヶ月": {
+      "count": 25893,
+      "time": 84.77,
+      "per_day_avg": 0.942
+    },
+    "6ヶ月": {
+      "count": 42163,
+      "time": 175.77,
+      "per_day_avg": 0.977
+    }
+  },
+  "multi_year": {
+    "2025": {
+      "doc_id": "S100W4HN",
+      "filing_date": "2025-06-26",
+      "time": 259.02
+    },
+    "2024": {
+      "doc_id": "S100TP3N",
+      "filing_date": "2024-06-21",
+      "time": 343.1
+    },
+    "2023": {
+      "doc_id": "S100TP3N",
+      "filing_date": "2024-06-21",
+      "time": 351.19
+    }
+  },
+  "cache_effect": {
+    "first": 8.12,
+    "second": 0.31,
+    "speedup": 26.2
+  },
+  "iteration": {
+    "error": "Date range too large: 395 days. Maximum is 366 days."
+  },
+  "doc_type_filter": {
+    "120": {
+      "name": "ANNUAL_SECURITIES_REPORT",
+      "count": 489,
+      "time": 1.64
+    },
+    "140": {
+      "name": "QUARTERLY_REPORT",
+      "count": 0,
+      "time": 0.15
+    },
+    "160": {
+      "name": "SEMIANNUAL_REPORT",
+      "count": 10,
+      "time": 0.99
+    },
+    "180": {
+      "name": "EXTRAORDINARY_REPORT",
+      "count": 280,
+      "time": 1.05
+    }
+  },
+  "all_listed": {
+    "count": 3885,
+    "time": 0.07
+  },
+  "total_time": 1606.45
+}

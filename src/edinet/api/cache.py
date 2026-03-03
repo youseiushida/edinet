@@ -89,31 +89,29 @@ class CacheStore:
         """キャッシュのルートディレクトリ。"""
         return self._cache_dir
 
-    def cache_path(self, doc_id: str) -> Path:
+    def cache_path(self, doc_id: str, *, suffix: str = ".zip") -> Path:
         """doc_id に対応するキャッシュファイルのパスを返す。
 
         Args:
             doc_id: 書類管理番号。
+            suffix: ファイル拡張子。デフォルトは ``".zip"``。
 
         Returns:
-            ``{cache_dir}/downloads/{doc_id}.zip``
-
-        Note:
-            現在は file_type=XBRL_AND_AUDIT 固定のため doc_id のみでキー化。
-            fetch_pdf 対応時にキャッシュキーの拡張が必要。
+            ``{cache_dir}/downloads/{doc_id}{suffix}``
         """
-        return self._downloads_dir / f"{doc_id}.zip"
+        return self._downloads_dir / f"{doc_id}{suffix}"
 
-    def get(self, doc_id: str) -> bytes | None:
-        """キャッシュから ZIP バイナリを取得する。
+    def get(self, doc_id: str, *, suffix: str = ".zip") -> bytes | None:
+        """キャッシュからバイナリを取得する。
 
         Args:
             doc_id: 書類管理番号。
+            suffix: ファイル拡張子。デフォルトは ``".zip"``。
 
         Returns:
             キャッシュヒット時は bytes。ミス時は ``None``。
         """
-        path = self.cache_path(doc_id)
+        path = self.cache_path(doc_id, suffix=suffix)
         if not path.exists():
             return None
         try:
@@ -124,8 +122,8 @@ class CacheStore:
             logger.warning("キャッシュ読み込み失敗: %s", doc_id, exc_info=True)
             return None
 
-    def put(self, doc_id: str, data: bytes) -> None:
-        """ZIP バイナリをキャッシュに保存する。
+    def put(self, doc_id: str, data: bytes, *, suffix: str = ".zip") -> None:
+        """バイナリをキャッシュに保存する。
 
         原子的書き込み: tempfile に書き込み後、``os.replace()`` でリネーム。
 
@@ -136,10 +134,11 @@ class CacheStore:
 
         Args:
             doc_id: 書類管理番号。
-            data: ZIP バイナリ。
+            data: 保存するバイナリ。
+            suffix: ファイル拡張子。デフォルトは ``".zip"``。
         """
         self._downloads_dir.mkdir(parents=True, exist_ok=True)
-        target = self.cache_path(doc_id)
+        target = self.cache_path(doc_id, suffix=suffix)
         tmp_name: str | None = None
         try:
             # 同一ディレクトリに一時ファイルを作成（os.replace のクロスデバイス問題を回避）
@@ -169,13 +168,14 @@ class CacheStore:
                 except OSError:
                     pass
 
-    def delete(self, doc_id: str) -> None:
+    def delete(self, doc_id: str, *, suffix: str = ".zip") -> None:
         """指定した doc_id のキャッシュを削除する。
 
         Args:
             doc_id: 書類管理番号。
+            suffix: ファイル拡張子。デフォルトは ``".zip"``。
         """
-        path = self.cache_path(doc_id)
+        path = self.cache_path(doc_id, suffix=suffix)
         try:
             path.unlink(missing_ok=True)
             logger.debug("キャッシュ削除: %s", doc_id)
@@ -209,12 +209,13 @@ class CacheStore:
             )
         count = 0
         total = 0
-        for f in self._downloads_dir.glob("*.zip"):
-            try:
-                total += f.stat().st_size
-                count += 1
-            except OSError:
-                pass
+        for f in self._downloads_dir.iterdir():
+            if f.is_file() and not f.name.endswith(".tmp"):
+                try:
+                    total += f.stat().st_size
+                    count += 1
+                except OSError:
+                    pass
         return CacheInfo(
             enabled=True,
             cache_dir=self._cache_dir,

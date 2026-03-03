@@ -1,0 +1,26 @@
+<link:footnoteLink xmlns:link="http://www.xbrl.org/2003/linkbase"
+                   xmlns:xlink="http://www.w3.org/1999/xlink"
+                   xlink:type="extended"
+                   xlink:role="http://www.xbrl.org/2003/role/link">
+  <link:loc xlink:type="locator" xlink:href="#IdFact100" xlink:label="loc_a"/>
+  <link:loc xlink:type="locator" xlink:href="#IdFact200" xlink:label="loc_b"/>
+  <link:loc xlink:type="locator" xlink:href="#IdFact300" xlink:label="loc_c"/>
+  <link:footnote xlink:type="resource" xlink:label="fn_a"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumber"
+      xml:lang="ja">※1 棚卸資産の評価</link:footnote>
+  <link:footnote xlink:type="resource" xlink:label="fn_b"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumber"
+      xml:lang="ja">※2 減価償却方法の変更</link:footnote>
+  <link:footnote xlink:type="resource" xlink:label="fn_c"
+      xlink:role="http://disclosure.edinet-fsa.go.jp/role/jppfs/role/NotesNumberPeriodEnd"
+      xml:lang="ja">※3 担保資産</link:footnote>
+  <link:footnoteArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote"
+      xlink:from="loc_a" xlink:to="fn_a"/>
+  <link:footnoteArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote"
+      xlink:from="loc_b" xlink:to="fn_b"/>
+  <link:footnoteArc xlink:type="arc"
+      xlink:arcrole="http://www.xbrl.org/2003/arcrole/fact-footnote"
+      xlink:from="loc_c" xlink:to="fn_c"/>
+</link:footnoteLink>

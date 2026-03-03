@@ -156,37 +156,53 @@ class Company(BaseModel):
             最新の Filing。見つからない場合は ``None``。
 
         Note:
-            内部で ``get_filings()`` を呼び出すため、検索期間分の API コール
-            が発生する（EDINET API は 1 日ずつ取得、レート制限 1.0s/call）。
-            期間の目安: 30 日 → 約 30 秒、90 日（デフォルト） → 約 1.5 分、
-            365 日 → 約 6 分。
+            末尾（最新日）から1日ずつ探索し、該当書類が見つかった時点で返す。
+            有報は決算期末の3ヶ月後（6月末）に集中するため、直近から探すと
+            高速に見つかる。最悪ケースでも検索期間分の API コールが発生する。
         """
         import logging
+
+        from edinet import documents as _documents
 
         logger = logging.getLogger(__name__)
 
         # start/end の自動補完
         if start is None and end is None:
-            end = _today_jst()
-            start = end - timedelta(days=89)
+            end_date = _today_jst()
+            start_date = end_date - timedelta(days=89)
             logger.debug(
                 "latest(): start/end 未指定のため過去 90 日間 (%s 〜 %s) を検索します",
-                start, end,
+                start_date, end_date,
             )
-        elif start is not None and end is None:
-            end = _today_jst()
-            logger.debug("latest(): end 未指定のため today (%s) を使用します", end)
-        elif start is None and end is not None:
+        else:
+            if isinstance(start, str):
+                from datetime import date as _date
+                start = _date.fromisoformat(start)
             if isinstance(end, str):
                 from datetime import date as _date
                 end = _date.fromisoformat(end)
-            start = end - timedelta(days=89)
-            logger.debug("latest(): start 未指定のため end - 89日 (%s) を使用します", start)
+            end_date = end if end is not None else _today_jst()
+            start_date = start if start is not None else end_date - timedelta(days=89)
 
-        filings = self.get_filings(start=start, end=end, doc_type=doc_type)
-        if not filings:
-            return None
-        return max(filings, key=lambda f: f.submit_date_time)
+        # 末尾から1日ずつ探索（最新の Filing を高速に見つける）
+        current = end_date
+        best: Filing | None = None
+        while current >= start_date:
+            try:
+                day_filings = _documents(
+                    current,
+                    doc_type=doc_type,
+                    edinet_code=self.edinet_code,
+                )
+            except Exception:
+                day_filings = []
+            if day_filings:
+                # この日の最新を候補にして即 return
+                best = max(day_filings, key=lambda f: f.submit_date_time)
+                return best
+            current -= timedelta(days=1)
+
+        return None
 
     # ------------------------------------------------------------------
     # 検索 API（Wave 6 Lane 1）

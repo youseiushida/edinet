@@ -114,6 +114,20 @@ class DetectedStandard:
     period_type: PeriodType | str | None = None
     namespace_modules: frozenset[str] = frozenset()
 
+    def __str__(self) -> str:
+        """短い文字列表現を返す（例: ``"J-GAAP"``、``"IFRS"``）。"""
+        _SHORT_NAMES: dict[AccountingStandard, str] = {
+            AccountingStandard.JAPAN_GAAP: "J-GAAP",
+            AccountingStandard.IFRS: "IFRS",
+            AccountingStandard.US_GAAP: "US-GAAP",
+            AccountingStandard.JMIS: "JMIS",
+        }
+        if isinstance(self.standard, AccountingStandard):
+            return _SHORT_NAMES.get(self.standard, self.standard.value)
+        if self.standard is not None:
+            return str(self.standard)
+        return "Unknown"
+
 
 # ---------------------------------------------------------------------------
 # 定数

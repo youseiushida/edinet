@@ -308,10 +308,10 @@ class TestIFRSStructuralFeatures:
 class TestDataIntegrity:
     """マッピングデータの整合性テスト。"""
 
-    def test_all_canonical_keys_unique(self) -> None:
-        """T37: 全 canonical_key がユニーク。"""
-        keys = [m.canonical_key for m in all_mappings()]
-        assert len(keys) == len(set(keys))
+    def test_all_concepts_unique(self) -> None:
+        """T37: 全 concept ローカル名がユニーク。"""
+        concepts = [m.concept for m in all_mappings()]
+        assert len(concepts) == len(set(concepts))
 
     def test_all_concepts_nonempty(self) -> None:
         """T38: 全 mapping の concept / canonical_key が空文字列でない。"""
@@ -430,7 +430,7 @@ class TestAllMappingsAndKeys:
         )
         kpi_ci_count = len([m for m in total if m.statement_type is None])
         assert len(total) == pl_count + bs_count + cf_count + kpi_ci_count
-        assert len(total) == 55
+        assert len(total) == 65  # 55 (詳細) + 10 (SummaryOfBusinessResults)
 
     def test_all_canonical_keys_is_frozenset(self) -> None:
         """all_canonical_keys() が frozenset を返す。"""
@@ -438,9 +438,9 @@ class TestAllMappingsAndKeys:
         assert isinstance(keys, frozenset)
 
     def test_all_canonical_keys_count(self) -> None:
-        """all_canonical_keys() の数が all_mappings() と一致（55 件）。"""
-        assert len(all_canonical_keys()) == len(all_mappings())
-        assert len(all_canonical_keys()) == 55
+        """all_canonical_keys() の数（サマリーと詳細で重複があるため mappings 数より少ない）。"""
+        assert len(all_canonical_keys()) == 55  # ユニークな CK 数は変わらない
+        assert len(all_mappings()) == 65  # concept 数は 65
 
     def test_ifrs_specific_concepts_are_marked(self) -> None:
         """ifrs_specific_concepts() が is_ifrs_specific=True のみ含む。"""

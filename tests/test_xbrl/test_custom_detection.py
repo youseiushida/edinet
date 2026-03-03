@@ -22,7 +22,12 @@ from edinet.xbrl.contexts import DimensionMember, DurationPeriod, InstantPeriod
 from edinet.xbrl.linkbase.definition import DefinitionArc, DefinitionTree
 from edinet.financial.statements import build_statements
 from edinet.xbrl.taxonomy import LabelInfo, LabelSource
-from edinet.xbrl.taxonomy.custom import detect_custom_items
+from edinet.xbrl.linkbase.calculation import (
+    CalculationArc,
+    CalculationLinkbase,
+    CalculationTree,
+)
+from edinet.xbrl.taxonomy.custom import detect_custom_items, find_custom_concepts
 
 # ============================================================
 # テスト用定数
@@ -55,6 +60,10 @@ _ARCROLE_GS = "http://www.xbrl.org/2003/arcrole/general-special"
 # テスト用 XSD パス定数（_is_standard_href() の判定を制御する）
 _STANDARD_XSD = "../jppfs_cor_2025-11-01.xsd"
 _FILER_XSD = "jpcrp030000-asr-001_E02144-000.xsd"
+
+# Calculation Linkbase テスト用 XSD 定数
+_STANDARD_CAL_XSD = "jppfs_cor_2025-11-01.xsd"
+_FILER_CAL_XSD = "jpcrp030000-asr-001_E02144-000.xsd"
 
 # 共通期間
 _CUR_DURATION = DurationPeriod(
@@ -653,3 +662,561 @@ class TestDetectCustomItems:
         )
 
         assert result.custom_items[0].parent_standard_concept is None
+
+
+# ============================================================
+# Calculation Linkbase テスト用ヘルパー
+# ============================================================
+
+
+def _make_calc_linkbase(
+    arcs: list[tuple[str, str]],
+    *,
+    filer_concepts: set[str] | None = None,
+    role_uri: str = "http://example.com/role/test",
+) -> CalculationLinkbase:
+    """テスト用の CalculationLinkbase をインメモリ構築する。
+
+    Args:
+        arcs: (parent, child) タプルのリスト。
+        filer_concepts: 提出者別タクソノミとして扱う concept 名の集合。
+            指定しない場合、全ての href は標準タクソノミ XSD を参照する。
+            指定した場合、集合に含まれる concept の href は提出者別 XSD を参照する。
+        role_uri: ロール URI。
+    """
+    if filer_concepts is None:
+        filer_concepts = set()
+
+    def _href_for(concept: str) -> str:
+        xsd = _FILER_CAL_XSD if concept in filer_concepts else _STANDARD_CAL_XSD
+        return f"{xsd}#{concept}"
+
+    calc_arcs = tuple(
+        CalculationArc(
+            parent=parent,
+            child=child,
+            parent_href=_href_for(parent),
+            child_href=_href_for(child),
+            weight=1,
+            order=float(i),
+            role_uri=role_uri,
+        )
+        for i, (parent, child) in enumerate(arcs)
+    )
+    parents_order: list[str] = []
+    children: set[str] = set()
+    seen: set[str] = set()
+    for p, c in arcs:
+        if p not in seen:
+            seen.add(p)
+            parents_order.append(p)
+        children.add(c)
+    roots = tuple(p for p in parents_order if p not in children)
+
+    tree = CalculationTree(role_uri=role_uri, arcs=calc_arcs, roots=roots)
+    return CalculationLinkbase(source_path=None, trees={role_uri: tree})
+
+
+# ============================================================
+# TestCalculationMapping
+# ============================================================
+
+
+class TestCalculationMapping:
+    """detect_custom_items() の calculation_linkbase 引数に関するテスト。"""
+
+    def test_single_custom_to_standard(self):
+        """非標準科目 1 つが直接の標準親にマッピングされる。"""
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="CustomExpense",
+            ),
+        ]
+        calc = _make_calc_linkbase(
+            [("SellingExpenses", "CustomExpense")],
+            filer_concepts={"CustomExpense"},
+        )
+        result = detect_custom_items(
+            _make_statements(items),
+            calculation_linkbase=calc,
+        )
+
+        ci = result.custom_items[0]
+        assert ci.calculation_ancestor == "SellingExpenses"
+        assert ci.calculation_path == ("CustomExpense", "SellingExpenses")
+
+    def test_deep_custom_to_standard(self):
+        """非標準科目が 2 段階上の標準科目にマッピングされる。"""
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="CustomLeafExpense",
+            ),
+        ]
+        calc = _make_calc_linkbase(
+            [
+                ("StandardTotal", "CustomMiddle"),
+                ("CustomMiddle", "CustomLeafExpense"),
+            ],
+            filer_concepts={"CustomMiddle", "CustomLeafExpense"},
+        )
+        result = detect_custom_items(
+            _make_statements(items),
+            calculation_linkbase=calc,
+        )
+
+        ci = result.custom_items[0]
+        assert ci.calculation_ancestor == "StandardTotal"
+        assert ci.calculation_path == (
+            "CustomLeafExpense",
+            "CustomMiddle",
+            "StandardTotal",
+        )
+
+    def test_path_includes_intermediates(self):
+        """calculation_path が custom → intermediate → standard の完全な経路を含む。"""
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="Leaf",
+            ),
+        ]
+        calc = _make_calc_linkbase(
+            [("Root", "Mid"), ("Mid", "Leaf")],
+            filer_concepts={"Leaf", "Mid"},
+        )
+        result = detect_custom_items(
+            _make_statements(items),
+            calculation_linkbase=calc,
+        )
+
+        ci = result.custom_items[0]
+        assert ci.calculation_path == ("Leaf", "Mid", "Root")
+        assert ci.calculation_path[0] == "Leaf"  # 先頭が非標準科目
+        assert ci.calculation_path[-1] == "Root"  # 末尾が標準科目
+
+    def test_no_standard_ancestor(self):
+        """ルートまで標準科目がない場合 calculation_ancestor が None、path はルートまで。"""
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="FilerChild",
+            ),
+        ]
+        calc = _make_calc_linkbase(
+            [("FilerRoot", "FilerChild")],
+            filer_concepts={"FilerRoot", "FilerChild"},
+        )
+        result = detect_custom_items(
+            _make_statements(items),
+            calculation_linkbase=calc,
+        )
+
+        ci = result.custom_items[0]
+        assert ci.calculation_ancestor is None
+        assert ci.calculation_path == ("FilerChild", "FilerRoot")
+
+    def test_multiple_custom_concepts(self):
+        """複数の非標準科目がそれぞれマッピングされる。"""
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="CustomA",
+                order=0,
+            ),
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="CustomB",
+                order=1,
+            ),
+        ]
+        calc = _make_calc_linkbase(
+            [("StandardParent", "CustomA"), ("StandardParent", "CustomB")],
+            filer_concepts={"CustomA", "CustomB"},
+        )
+        result = detect_custom_items(
+            _make_statements(items),
+            calculation_linkbase=calc,
+        )
+
+        ancestors = {
+            ci.item.local_name: ci.calculation_ancestor
+            for ci in result.custom_items
+        }
+        assert ancestors["CustomA"] == "StandardParent"
+        assert ancestors["CustomB"] == "StandardParent"
+
+    def test_role_uri_preserved(self):
+        """calculation_role_uri にマッピング元の role URI が記録される。"""
+        role = "http://example.com/role/pl"
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="CustomX",
+            ),
+        ]
+        calc = _make_calc_linkbase(
+            [("StandardY", "CustomX")],
+            filer_concepts={"CustomX"},
+            role_uri=role,
+        )
+        result = detect_custom_items(
+            _make_statements(items),
+            calculation_linkbase=calc,
+        )
+
+        assert result.custom_items[0].calculation_role_uri == role
+
+    def test_without_calculation_linkbase(self):
+        """calculation_linkbase 未指定時は全 calculation フィールドが None（後方互換）。"""
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="CustomSales",
+            ),
+        ]
+        result = detect_custom_items(_make_statements(items))
+
+        ci = result.custom_items[0]
+        assert ci.calculation_ancestor is None
+        assert ci.calculation_path is None
+        assert ci.calculation_role_uri is None
+
+    def test_with_both_linkbases(self):
+        """definition_linkbase と calculation_linkbase を同時に渡した場合、
+        parent_standard_concept と calculation_ancestor が独立に設定される。"""
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="FilerConcept",
+            ),
+        ]
+        gs_tree = _make_gs_tree(
+            [("DefParent", "FilerConcept")],
+            filer_concepts={"FilerConcept"},
+        )
+        calc = _make_calc_linkbase(
+            [("CalcParent", "FilerConcept")],
+            filer_concepts={"FilerConcept"},
+        )
+        result = detect_custom_items(
+            _make_statements(items),
+            definition_linkbase=gs_tree,
+            calculation_linkbase=calc,
+        )
+
+        ci = result.custom_items[0]
+        assert ci.parent_standard_concept == "DefParent"
+        assert ci.calculation_ancestor == "CalcParent"
+
+    def test_empty_calculation_linkbase(self):
+        """空の CalculationLinkbase で calculation フィールドが全て None。"""
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="CustomSales",
+            ),
+        ]
+        empty_calc = CalculationLinkbase(source_path=None, trees={})
+        result = detect_custom_items(
+            _make_statements(items),
+            calculation_linkbase=empty_calc,
+        )
+
+        ci = result.custom_items[0]
+        assert ci.calculation_ancestor is None
+        assert ci.calculation_path is None
+        assert ci.calculation_role_uri is None
+
+    def test_concept_not_in_calculation(self):
+        """CalculationLinkbase に存在しない非標準科目は calculation フィールドが None。"""
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="UnrelatedCustom",
+            ),
+        ]
+        # 別の科目のみを含む CalculationLinkbase
+        calc = _make_calc_linkbase(
+            [("StandardA", "StandardB")],
+        )
+        result = detect_custom_items(
+            _make_statements(items),
+            calculation_linkbase=calc,
+        )
+
+        ci = result.custom_items[0]
+        assert ci.calculation_ancestor is None
+        assert ci.calculation_path is None
+        assert ci.calculation_role_uri is None
+
+    def test_custom_parent_only(self):
+        """非標準科目が親（サブトータル）としてのみ出現する場合。
+
+        calculation_ancestor は None であること（§5.6）。
+        """
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="FilerSubtotal",
+            ),
+        ]
+        # FilerSubtotal は parent としてのみ出現（child として登場しない）
+        calc = _make_calc_linkbase(
+            [("FilerSubtotal", "StandardChild")],
+            filer_concepts={"FilerSubtotal"},
+        )
+        result = detect_custom_items(
+            _make_statements(items),
+            calculation_linkbase=calc,
+        )
+
+        ci = result.custom_items[0]
+        assert ci.calculation_ancestor is None
+        assert ci.calculation_path is None
+
+    def test_existing_fields_unchanged_with_calc(self):
+        """calculation_linkbase を渡しても custom_ratio, total_count 等の
+        既存フィールドが calculation_linkbase なしの場合と同一であること。"""
+        items = [
+            _make_line_item(local_name="NetSales", order=0),
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="CustomExpense",
+                order=1,
+            ),
+        ]
+        stmts = _make_statements(items)
+
+        result_without = detect_custom_items(stmts)
+        calc = _make_calc_linkbase(
+            [("SellingExpenses", "CustomExpense")],
+            filer_concepts={"CustomExpense"},
+        )
+        result_with = detect_custom_items(stmts, calculation_linkbase=calc)
+
+        assert result_without.custom_ratio == result_with.custom_ratio
+        assert result_without.total_count == result_with.total_count
+        assert len(result_without.custom_items) == len(result_with.custom_items)
+        assert len(result_without.standard_items) == len(
+            result_with.standard_items
+        )
+
+    def test_multi_role_any_role_accepted(self):
+        """同一非標準科目が複数 role に出現する場合。
+
+        calculation_role_uri がいずれかの role URI であること（順序非依存）。
+        """
+        role_a = "http://example.com/role/bs"
+        role_b = "http://example.com/role/notes"
+
+        items = [
+            _make_line_item(
+                namespace_uri=_NS_FILER_E02144,
+                local_name="CustomItem",
+            ),
+        ]
+
+        # 2 つの role に同じ非標準科目を配置
+        arc_a = CalculationArc(
+            parent="StandardA",
+            child="CustomItem",
+            parent_href=f"{_STANDARD_CAL_XSD}#StandardA",
+            child_href=f"{_FILER_CAL_XSD}#CustomItem",
+            weight=1,
+            order=0.0,
+            role_uri=role_a,
+        )
+        tree_a = CalculationTree(
+            role_uri=role_a, arcs=(arc_a,), roots=("StandardA",),
+        )
+        arc_b = CalculationArc(
+            parent="StandardB",
+            child="CustomItem",
+            parent_href=f"{_STANDARD_CAL_XSD}#StandardB",
+            child_href=f"{_FILER_CAL_XSD}#CustomItem",
+            weight=1,
+            order=0.0,
+            role_uri=role_b,
+        )
+        tree_b = CalculationTree(
+            role_uri=role_b, arcs=(arc_b,), roots=("StandardB",),
+        )
+        calc = CalculationLinkbase(
+            source_path=None,
+            trees={role_a: tree_a, role_b: tree_b},
+        )
+        result = detect_custom_items(
+            _make_statements(items),
+            calculation_linkbase=calc,
+        )
+
+        ci = result.custom_items[0]
+        assert ci.calculation_role_uri in {role_a, role_b}
+        assert ci.calculation_ancestor in {"StandardA", "StandardB"}
+
+
+# ============================================================
+# TestFindCustomConcepts
+# ============================================================
+
+
+class TestFindCustomConcepts:
+    """find_custom_concepts() のテスト。"""
+
+    def test_find_all_custom(self):
+        """非標準科目が正しく検出される。"""
+        calc = _make_calc_linkbase(
+            [("StandardParent", "CustomChild")],
+            filer_concepts={"CustomChild"},
+        )
+        result = find_custom_concepts(calc)
+        assert "CustomChild" in result
+
+    def test_standard_concepts_excluded(self):
+        """標準科目が結果に含まれない。"""
+        calc = _make_calc_linkbase(
+            [("StandardParent", "CustomChild")],
+            filer_concepts={"CustomChild"},
+        )
+        result = find_custom_concepts(calc)
+        assert "StandardParent" not in result
+
+    def test_no_duplicates(self):
+        """重複した非標準科目名が除去される。"""
+        # 同一の非標準科目が parent と child の両方で出現
+        calc = _make_calc_linkbase(
+            [
+                ("StandardRoot", "CustomMid"),
+                ("CustomMid", "CustomLeaf"),
+            ],
+            filer_concepts={"CustomMid", "CustomLeaf"},
+        )
+        result = find_custom_concepts(calc)
+        assert len(result) == len(set(result))
+
+    def test_sorted_result(self):
+        """結果がソート済み。"""
+        calc = _make_calc_linkbase(
+            [
+                ("StandardP", "Zebra"),
+                ("StandardP", "Alpha"),
+            ],
+            filer_concepts={"Zebra", "Alpha"},
+        )
+        result = find_custom_concepts(calc)
+        assert result == tuple(sorted(result))
+        assert result == ("Alpha", "Zebra")
+
+    def test_empty_linkbase(self):
+        """空の CalculationLinkbase で空タプルが返る。"""
+        calc = CalculationLinkbase(source_path=None, trees={})
+        result = find_custom_concepts(calc)
+        assert result == ()
+
+    def test_all_standard_concepts(self):
+        """全て標準科目の CalculationLinkbase で空タプルが返る。"""
+        calc = _make_calc_linkbase(
+            [("StandardA", "StandardB")],
+        )
+        result = find_custom_concepts(calc)
+        assert result == ()
+
+    def test_filer_with_date_suffix(self):
+        """jpcrp030000-asr_X99001-000_2025-11-01.xsd 形式が非標準として検出される。"""
+        filer_xsd_with_date = "jpcrp030000-asr_X99001-000_2025-11-01.xsd"
+        arc = CalculationArc(
+            parent="StandardConcept",
+            child="FilerConcept",
+            parent_href=f"{_STANDARD_CAL_XSD}#StandardConcept",
+            child_href=f"{filer_xsd_with_date}#FilerConcept",
+            weight=1,
+            order=0.0,
+            role_uri="http://example.com/role/test",
+        )
+        tree = CalculationTree(
+            role_uri="http://example.com/role/test",
+            arcs=(arc,),
+            roots=("StandardConcept",),
+        )
+        calc = CalculationLinkbase(
+            source_path=None,
+            trees={"http://example.com/role/test": tree},
+        )
+        result = find_custom_concepts(calc)
+        assert "FilerConcept" in result
+        assert "StandardConcept" not in result
+
+
+# ============================================================
+# TestIsStandardHrefIntegration
+# ============================================================
+
+
+class TestIsStandardHrefIntegration:
+    """_is_standard_href() の統合確認（find_custom_concepts 経由）。"""
+
+    def _make_single_arc_linkbase(
+        self, parent_xsd: str, child_xsd: str,
+    ) -> CalculationLinkbase:
+        """1 arc の CalculationLinkbase を構築するヘルパー。"""
+        role = "http://example.com/role/test"
+        arc = CalculationArc(
+            parent="ParentConcept",
+            child="ChildConcept",
+            parent_href=f"{parent_xsd}#ParentConcept",
+            child_href=f"{child_xsd}#ChildConcept",
+            weight=1,
+            order=0.0,
+            role_uri=role,
+        )
+        tree = CalculationTree(role_uri=role, arcs=(arc,), roots=("ParentConcept",))
+        return CalculationLinkbase(source_path=None, trees={role: tree})
+
+    def test_standard_jppfs_excluded(self):
+        """jppfs_cor_2025-11-01.xsd の概念が non-custom として除外される。"""
+        calc = self._make_single_arc_linkbase(
+            "jppfs_cor_2025-11-01.xsd", "jppfs_cor_2025-11-01.xsd",
+        )
+        assert find_custom_concepts(calc) == ()
+
+    def test_standard_jpcrp_cor_excluded(self):
+        """jpcrp_cor_2025-11-01.xsd（標準 jpcrp_cor）が除外される。"""
+        calc = self._make_single_arc_linkbase(
+            "jpcrp_cor_2025-11-01.xsd", "jpcrp_cor_2025-11-01.xsd",
+        )
+        assert find_custom_concepts(calc) == ()
+
+    def test_filer_custom_e_code_detected(self):
+        """jpcrp030000-asr_E02144-000.xsd の概念が非標準として検出される。"""
+        calc = self._make_single_arc_linkbase(
+            "jppfs_cor_2025-11-01.xsd",
+            "jpcrp030000-asr_E02144-000.xsd",
+        )
+        result = find_custom_concepts(calc)
+        assert "ChildConcept" in result
+        assert "ParentConcept" not in result
+
+    def test_filer_custom_with_date_suffix_detected(self):
+        """jpcrp030000-asr_X99001-000_2025-11-01.xsd が非標準として検出される。"""
+        calc = self._make_single_arc_linkbase(
+            "jppfs_cor_2025-11-01.xsd",
+            "jpcrp030000-asr_X99001-000_2025-11-01.xsd",
+        )
+        result = find_custom_concepts(calc)
+        assert "ChildConcept" in result
+
+    def test_standard_jpbki_excluded(self):
+        """jpbki_cor_2025-11-01.xsd（銀行業）が除外される。"""
+        calc = self._make_single_arc_linkbase(
+            "jpbki_cor_2025-11-01.xsd", "jpbki_cor_2025-11-01.xsd",
+        )
+        assert find_custom_concepts(calc) == ()
+
+    def test_standard_jpigp_excluded(self):
+        """jpigp_cor_2025-11-01.xsd（IFRS）が除外される。"""
+        calc = self._make_single_arc_linkbase(
+            "jpigp_cor_2025-11-01.xsd", "jpigp_cor_2025-11-01.xsd",
+        )
+        assert find_custom_concepts(calc) == ()

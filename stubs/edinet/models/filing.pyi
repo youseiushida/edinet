@@ -1,10 +1,10 @@
 from _typeshed import Incomplete
 from datetime import date, datetime
+from edinet.financial.statements import Statements as Statements
 from edinet.models.company import Company as Company
 from edinet.models.doc_types import DocType as DocType
 from edinet.models.form_code import FormCodeEntry as FormCodeEntry
 from edinet.models.ordinance_code import OrdinanceCode as OrdinanceCode
-from edinet.financial.statements import Statements as Statements
 from pydantic import BaseModel, computed_field
 from typing import Any
 
@@ -95,7 +95,39 @@ class Filing(BaseModel):
     def company(self) -> Company | None:
         """提出者 Company を返す。"""
     def clear_fetch_cache(self) -> None:
-        """`fetch()` のキャッシュを破棄する。"""
+        """`fetch()` / `fetch_pdf()` のキャッシュを破棄する。"""
+    def fetch_pdf(self, *, refresh: bool = False) -> bytes:
+        """提出書類の PDF をダウンロードして返す。
+
+        3層キャッシュ（メモリ → ディスク → ネットワーク）を使用する。
+
+        Args:
+            refresh: ``True`` の場合は PDF キャッシュを破棄して再取得する。
+
+        Returns:
+            PDF のバイト列。
+
+        Raises:
+            EdinetAPIError: 当該書類に PDF が含まれていない場合。
+            EdinetParseError: ダウンロードの入力不正の正規化。
+            EdinetError: 通信層失敗。
+        """
+    async def afetch_pdf(self, *, refresh: bool = False) -> bytes:
+        """提出書類の PDF を非同期でダウンロードして返す。
+
+        ``fetch_pdf()`` の非同期版。
+
+        Args:
+            refresh: ``True`` の場合は PDF キャッシュを破棄して再取得する。
+
+        Returns:
+            PDF のバイト列。
+
+        Raises:
+            EdinetAPIError: 当該書類に PDF が含まれていない場合。
+            EdinetParseError: ダウンロードの入力不正の正規化。
+            EdinetError: 通信層失敗。
+        """
     def fetch(self, *, refresh: bool = False) -> tuple[str, bytes]:
         """提出本文書 ZIP から代表 XBRL を取得する。
 

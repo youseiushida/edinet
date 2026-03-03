@@ -1,0 +1,96 @@
+{
+  "period_split": {
+    "status": "OK",
+    "current_items": 34,
+    "prior_items": 34,
+    "current_sales": "2620101000000",
+    "prior_sales": "2325162000000"
+  },
+  "non_consolidated": {
+    "status": "OK",
+    "pl_items": 41,
+    "bs_items": 39,
+    "sales": "1660662000000"
+  },
+  "quarterly": {
+    "status": "NOT_FOUND"
+  },
+  "amendments": {
+    "status": "OK",
+    "count": 3,
+    "items": [
+      {
+        "doc_id": "S100VUQV",
+        "filer_name": "株式会社ライズ・コンサルティング・グループ",
+        "date": "2025-05-30",
+        "parent_doc_id": "S100VUDE"
+      },
+      {
+        "doc_id": "S100VTNB",
+        "filer_name": "グローバル・ファンズ・トラスト・カンパニー",
+        "date": "2025-05-30",
+        "parent_doc_id": "S100QV0J"
+      },
+      {
+        "doc_id": "S100VTNC",
+        "filer_name": "グローバル・ファンズ・トラスト・カンパニー",
+        "date": "2025-05-30",
+        "parent_doc_id": "S100TIEG"
+      }
+    ]
+  },
+  "error_invalid_edinet_code": {
+    "status": "OK_NONE",
+    "returned": "None"
+  },
+  "error_invalid_sec_code": {
+    "status": "OK_NONE",
+    "returned": "None"
+  },
+  "error_empty_search": {
+    "status": "OK",
+    "count": 0
+  },
+  "error_long_search": {
+    "status": "OK",
+    "count": 0
+  },
+  "error_bad_date": {
+    "status": "EXCEPTION",
+    "error": "date must be YYYY-MM-DD, got 'not-a-date'",
+    "type": "ValueError"
+  },
+  "error_edge_366": {
+    "status": "OK",
+    "count": 81293
+  },
+  "error_edge_367": {
+    "status": "OK_REJECTED",
+    "error": "Date range too large: 367 days. Maximum is 366 days."
+  },
+  "future_date": {
+    "status": "EXCEPTION",
+    "error": "EDINET API error 404: Not Found",
+    "type": "EdinetAPIError"
+  },
+  "strict_mode": {
+    "status": "OK",
+    "items": 34
+  },
+  "missing_key": {
+    "status": "OK_KEYERROR",
+    "message": "'存在しない項目名XYZ'"
+  },
+  "doc_type_strings": {
+    "japanese_name": 489,
+    "code_string": 489,
+    "enum": 489,
+    "all_equal": true
+  },
+  "ticker_vs_sec": {
+    "4digit": "トヨタ自動車株式会社",
+    "5digit": "トヨタ自動車株式会社",
+    "same": true
+  },
+  "total_time": 1413.71
+}

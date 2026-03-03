@@ -28,8 +28,8 @@ class LineItem:
         value: 変換済みの値。数値 Fact は ``Decimal``、テキスト Fact は ``str``、
             nil Fact は ``None``。テキスト Fact の値は ``RawFact.value_raw``
             （``itertext()`` によるタグ除去済みプレーンテキスト）を使用する。
-            HTML タグを含む原文が必要な場合は ``RawFact.value_inner_xml`` を
-            直接参照すること（TextBlock 等、v0.2.0 の ``text_blocks`` モジュールで対応予定）。
+            HTML タグを含む原文が必要な場合は ``RawFact.value_raw`` を参照するか、
+            ``edinet.xbrl.text`` パッケージの ``extract_text_blocks()`` を使用すること。
         unit_ref: unitRef 属性値。テキスト Fact は ``None``。
         decimals: decimals 属性値。``int`` / ``"INF"`` / ``None``。
         context_id: contextRef 属性値（トレーサビリティ用）。

@@ -57,16 +57,24 @@ def get_canonical_key(
         正規化キー（例: ``"revenue"``）。見つからなければ ``None``。
     """
     if standard is None:
-        # 全基準検索: J-GAAP → IFRS の順
+        # 全基準検索: J-GAAP → IFRS → US-GAAP の順
         result = jgaap.canonical_key(local_name)
         if result is not None:
             return result
-        return ifrs.canonical_key(local_name)
+        result = ifrs.canonical_key(local_name)
+        if result is not None:
+            return result
+        from edinet.financial.standards import usgaap
+
+        return usgaap.canonical_key(local_name)
     if standard == AccountingStandard.JAPAN_GAAP:
         return jgaap.canonical_key(local_name)
     if standard in (AccountingStandard.IFRS, AccountingStandard.JMIS):
         return ifrs.canonical_key(local_name)
-    # US_GAAP — BLOCK_ONLY のため個別概念マッピングなし
+    if standard == AccountingStandard.US_GAAP:
+        from edinet.financial.standards import usgaap
+
+        return usgaap.canonical_key(local_name)
     return None
 
 
@@ -94,6 +102,11 @@ def get_concept_for_key(
     if target_standard in (AccountingStandard.IFRS, AccountingStandard.JMIS):
         m = ifrs.reverse_lookup(canonical_key)
         return m.concept if m is not None else None
+    if target_standard == AccountingStandard.US_GAAP:
+        from edinet.financial.standards import usgaap
+
+        d = usgaap.reverse_lookup(canonical_key)
+        return d.concept_local_name if d is not None else None
     return None
 
 

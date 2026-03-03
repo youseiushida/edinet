@@ -1,0 +1,179 @@
+{
+  "sector_comparison": {
+    "トヨタ": {
+      "status": "OK",
+      "standard": "DetectedStandard(standard=<AccountingStandard.IFRS: 'IFRS'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+      "revenue": "NOT_FOUND",
+      "revenue_label": null,
+      "net_income": "NOT_FOUND",
+      "net_income_label": null,
+      "time": 363.66
+    },
+    "ホンダ": {
+      "status": "OK",
+      "standard": "DetectedStandard(standard=<AccountingStandard.IFRS: 'IFRS'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+      "revenue": "21688767000000",
+      "revenue_label": "売上収益",
+      "net_income": "NOT_FOUND",
+      "net_income_label": null,
+      "time": 350.09
+    },
+    "日産": {
+      "status": "OK",
+      "standard": "DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+      "revenue": "12633214000000",
+      "revenue_label": "売上高",
+      "net_income": "NOT_FOUND",
+      "net_income_label": null,
+      "time": 354.23
+    }
+  },
+  "dataframe_usability": {
+    "status": "OK",
+    "default_shape": [
+      9,
+      5
+    ],
+    "default_columns": [
+      "label_ja",
+      "label_en",
+      "value",
+      "unit",
+      "concept"
+    ],
+    "full_shape": [
+      9,
+      18
+    ],
+    "full_columns": [
+      "concept",
+      "namespace_uri",
+      "local_name",
+      "label_ja",
+      "label_en",
+      "value",
+      "unit_ref",
+      "decimals",
+      "context_id",
+      "period_type",
+      "period_start",
+      "period_end",
+      "entity_id",
+      "consolidated",
+      "dimensions_str",
+      "is_nil",
+      "source_line",
+      "order"
+    ],
+    "numeric_rows": 9
+  },
+  "csv_export": {
+    "status": "OK",
+    "size_bytes": 3513,
+    "time": 0.1
+  },
+  "cross_search": {
+    "date": "2025-06-25",
+    "total_filings": 489,
+    "tested": 5,
+    "results": [
+      {
+        "filer": "野村アセットマネジメント株式会社",
+        "standard": "DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=False, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+        "revenue": "NOT_FOUND"
+      },
+      {
+        "filer": "アムンディ・ジャパン株式会社",
+        "standard": "DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=False, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+        "revenue": "NOT_FOUND"
+      },
+      {
+        "filer": "株式会社ＵＮＩＶＡ・Ｏａｋホールディングス",
+        "standard": "DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+        "revenue": "2882052000"
+      },
+      {
+        "filer": "フィデリティ投信株式会社",
+        "standard": "DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=False, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+        "revenue": "NOT_FOUND"
+      },
+      {
+        "filer": "リョーサン菱洋ホールディングス株式会社",
+        "standard": "DetectedStandard(standard=<AccountingStandard.JAPAN_GAAP: 'Japan GAAP'>, method=<DetectionMethod.DEI: 'dei'>, detail_level=<DetailLevel.DETAILED: 'detailed'>, has_consolidated=True, period_type=<PeriodType.FY: 'FY'>, namespace_modules=frozenset())",
+        "revenue": "359811000000"
+      }
+    ]
+  },
+  "label_overview": {
+    "pl_labels": [
+      "親会社の所有者",
+      "売上原価",
+      "非支配持分",
+      "販売費及び一般管理費",
+      "営業利益（△損失）",
+      "持分法による投資損益（△は損失）",
+      "税引前利益（△損失）",
+      "法人所得税費用",
+      "当期利益（△損失）"
+    ],
+    "pl_total": 9,
+    "bs_labels": [
+      "現金及び現金同等物",
+      "有形固定資産",
+      "営業債務及びその他の債務",
+      "資本金",
+      "営業債権及びその他の債権",
+      "その他の金融負債",
+      "資本剰余金",
+      "非支配持分",
+      "棚卸資産",
+      "無形資産",
+      "資産",
+      "その他の金融負債",
+      "退職給付に係る負債",
+      "負債",
+      "利益剰余金",
+      "資本",
+      "負債及び資本",
+      "その他の金融資産",
+      "未払法人所得税",
+      "自己株式"
+    ],
+    "bs_total": 34,
+    "cf_labels": [
+      "当期利益（△損失）",
+      "減価償却費及び償却費",
+      "持分法による投資損益（△は益）",
+      "現金及び現金同等物の為替変動による影響",
+      "法人所得税費用",
+      "棚卸資産の増減額（△は増加）",
+      "その他",
+      "投資活動によるキャッシュ・フロー",
+      "非支配持分への配当金の支払額",
+      "退職給付に係る負債の増減額（△は減少）",
+      "その他",
+      "その他",
+      "財務活動によるキャッシュ・フロー",
+      "利息の受取額",
+      "配当金の受取額",
+      "利息の支払額",
+      "法人所得税の支払額",
+      "営業活動によるキャッシュ・フロー"
+    ],
+    "cf_total": 18
+  },
+  "dx_test": {
+    "contains_売上高": false,
+    "contains_売上収益": false,
+    "contains_Revenue": false,
+    "contains_営業利益": false,
+    "contains_存在しないXYZ": false,
+    "get_売上高": false,
+    "get_売上収益": false,
+    "get_Revenue": false,
+    "get_営業利益": false,
+    "get_存在しないXYZ": false,
+    "len": 9
+  },
+  "total_time": 1457.14
+}
