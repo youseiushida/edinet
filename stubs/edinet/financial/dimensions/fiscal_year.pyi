@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from datetime import date
 from edinet.xbrl.dei import DEI, PeriodType
+from typing import Any
 
 __all__ = ['FiscalYearInfo', 'detect_fiscal_year']
 
@@ -39,8 +40,10 @@ class FiscalYearInfo:
     is_irregular: bool
     fiscal_year_end_month: int | None
 
-def detect_fiscal_year(dei: DEI) -> FiscalYearInfo:
+def detect_fiscal_year(dei_or_stmts: DEI | Any) -> FiscalYearInfo:
     """DEI の日付情報から決算期メタデータを抽出する。
+
+    ``Statements`` を渡すと内部の DEI を自動取得する。
 
     DEI の各日付フィールド（current_fiscal_year_start_date,
     current_period_end_date, current_fiscal_year_end_date,
@@ -50,7 +53,8 @@ def detect_fiscal_year(dei: DEI) -> FiscalYearInfo:
     None または False となる（graceful degradation）。
 
     Args:
-        dei: ``extract_dei()`` で取得した DEI。
+        dei_or_stmts: ``extract_dei()`` で取得した DEI、
+            または ``Statements`` オブジェクト。
 
     Returns:
         FiscalYearInfo。

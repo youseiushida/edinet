@@ -231,11 +231,49 @@ _KPI_MAPPINGS: tuple[ConceptMapping, ...] = (
     ConceptMapping("NumberOfEmployees", CK.EMPLOYEES, None),
 )
 
+# --- SummaryOfBusinessResults マッピング（jpcrp_cor 由来の経営指標サマリー） ---
+# extract_values() で canonical key による全業種横断取得を可能にする。
+# PL 本体の concept と同じ CK にマッピングするため、canonical_key に重複が生じる。
+# _ALL_MAPPINGS で _SUMMARY_MAPPINGS を先頭に配置し、
+# 詳細科目（PL 本体）が reverse_lookup で優先されるようにする。
+_SUMMARY_MAPPINGS: tuple[ConceptMapping, ...] = (
+    # Revenue（業種別フォールバック）
+    ConceptMapping("NetSalesSummaryOfBusinessResults", CK.REVENUE, None),
+    ConceptMapping("OrdinaryIncomeSummaryOfBusinessResults", CK.REVENUE, None),  # 銀行業（経常収益）
+    ConceptMapping("OperatingRevenue1SummaryOfBusinessResults", CK.REVENUE, None),  # 鉄道業（営業収益）
+    ConceptMapping("OperatingRevenue2SummaryOfBusinessResults", CK.REVENUE, None),
+    ConceptMapping("GrossOperatingRevenueSummaryOfBusinessResults", CK.REVENUE, None),
+    ConceptMapping("RevenueKeyFinancialData", CK.REVENUE, None),
+    # Operating Income
+    ConceptMapping("OperatingIncomeSummaryOfBusinessResults", CK.OPERATING_INCOME, None),
+    # Ordinary Income
+    ConceptMapping("OrdinaryIncomeLossSummaryOfBusinessResults", CK.ORDINARY_INCOME, None),
+    # Net Income
+    ConceptMapping("NetIncomeLossSummaryOfBusinessResults", CK.NET_INCOME, None),
+    ConceptMapping("ProfitLossAttributableToOwnersOfParentSummaryOfBusinessResults", CK.NET_INCOME_PARENT, None),
+    # Comprehensive Income
+    ConceptMapping("ComprehensiveIncomeSummaryOfBusinessResults", CK.COMPREHENSIVE_INCOME, None),
+    # Total Assets
+    ConceptMapping("TotalAssetsSummaryOfBusinessResults", CK.TOTAL_ASSETS, None),
+    # Net Assets
+    ConceptMapping("NetAssetsSummaryOfBusinessResults", CK.NET_ASSETS, None),
+    # Capital Stock
+    ConceptMapping("CapitalStockSummaryOfBusinessResults", CK.CAPITAL_STOCK, None),
+    # Cash Flow
+    ConceptMapping("NetCashProvidedByUsedInOperatingActivitiesSummaryOfBusinessResults", CK.OPERATING_CF, None),
+    ConceptMapping("NetCashProvidedByUsedInInvestingActivitiesSummaryOfBusinessResults", CK.INVESTING_CF, None),
+    ConceptMapping("NetCashProvidedByUsedInFinancingActivitiesSummaryOfBusinessResults", CK.FINANCING_CF, None),
+    ConceptMapping("CashAndCashEquivalentsSummaryOfBusinessResults", CK.CASH_END, None),
+    # Shares / Dividend
+    ConceptMapping("DividendPaidPerShareSummaryOfBusinessResults", CK.DPS, None),
+)
+
 # ---------------------------------------------------------------------------
 # 統合レジストリとインデックス
 # ---------------------------------------------------------------------------
 
 _ALL_MAPPINGS: tuple[ConceptMapping, ...] = (
+    *_SUMMARY_MAPPINGS,  # サマリーを先に → 詳細科目が後勝ちで reverse_lookup 優先
     *_PL_MAPPINGS,
     *_BS_MAPPINGS,
     *_CF_MAPPINGS,
@@ -285,10 +323,9 @@ def _validate_registry() -> None:
         duplicates = [c for c in concepts if concepts.count(c) > 1]
         raise ValueError(f"concept が重複しています: {set(duplicates)}")
 
-    keys = [m.canonical_key for m in _ALL_MAPPINGS]
-    if len(keys) != len(set(keys)):
-        duplicates = [k for k in keys if keys.count(k) > 1]
-        raise ValueError(f"canonical_key が重複しています: {set(duplicates)}")
+    # canonical_key の重複は許容する（同一 CK に詳細科目とサマリー科目の
+    # 両方がマッピングされるケース: NetSales + NetSalesSummaryOfBusinessResults）。
+    # concept ローカル名の一意性のみ検証する。
 
     for m in _ALL_MAPPINGS:
         if not m.concept:

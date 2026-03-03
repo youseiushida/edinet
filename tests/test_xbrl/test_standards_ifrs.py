@@ -99,9 +99,9 @@ class TestMappingsForStatement:
     """mappings_for_statement のテスト。"""
 
     def test_mappings_for_pl(self) -> None:
-        """T8: PL マッピングは 15 件。"""
+        """T8: PL マッピングは 17 件（Revenue 代替2件追加）。"""
         pl = mappings_for_statement(StatementType.INCOME_STATEMENT)
-        assert len(pl) == 15
+        assert len(pl) == 17
 
     def test_mappings_for_bs(self) -> None:
         """T9: BS マッピングは 19 件。"""
@@ -430,7 +430,7 @@ class TestAllMappingsAndKeys:
         )
         kpi_ci_count = len([m for m in total if m.statement_type is None])
         assert len(total) == pl_count + bs_count + cf_count + kpi_ci_count
-        assert len(total) == 64  # 55 (詳細) + 9 (SummaryOfBusinessResults)
+        assert len(total) == 77  # 57 (詳細) + 20 (Summary + KeyFinancialData)
 
     def test_all_canonical_keys_is_frozenset(self) -> None:
         """all_canonical_keys() が frozenset を返す。"""
@@ -439,8 +439,8 @@ class TestAllMappingsAndKeys:
 
     def test_all_canonical_keys_count(self) -> None:
         """all_canonical_keys() の数（サマリーと詳細で重複があるため mappings 数より少ない）。"""
-        assert len(all_canonical_keys()) == 55  # ユニークな CK 数は変わらない
-        assert len(all_mappings()) == 64  # concept 数は 64
+        assert len(all_canonical_keys()) == 59  # ユニークな CK 数
+        assert len(all_mappings()) == 77  # concept 数
 
     def test_ifrs_specific_concepts_are_marked(self) -> None:
         """ifrs_specific_concepts() が is_ifrs_specific=True のみ含む。"""

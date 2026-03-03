@@ -143,6 +143,8 @@ class IFRSProfile:
 # XSD 検証済み: jpigp_cor_2025-11-01.xsd
 _PL = StatementType.INCOME_STATEMENT
 _PL_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
+    IFRSConceptMapping("NetSalesIFRS", CK.REVENUE, _PL, mapping_note="ソニー・ソフトバンクG等が使用する売上高"),
+    IFRSConceptMapping("SalesAndFinancialServicesRevenueIFRS", CK.REVENUE, _PL, mapping_note="ソニーG: 売上高及び金融ビジネス収入"),
     IFRSConceptMapping("RevenueIFRS", CK.REVENUE, _PL, jgaap_concept="NetSales"),
     IFRSConceptMapping("CostOfSalesIFRS", CK.COST_OF_SALES, _PL, jgaap_concept="CostOfSales"),
     IFRSConceptMapping("GrossProfitIFRS", CK.GROSS_PROFIT, _PL, jgaap_concept="GrossProfit"),
@@ -238,12 +240,24 @@ _SUMMARY_MAPPINGS: tuple[IFRSConceptMapping, ...] = (
     # IFRS の営業利益は PL 本体の jpigp_cor:OperatingProfitLossIFRS のみ。
     IFRSConceptMapping("ProfitLossBeforeTaxIFRSSummaryOfBusinessResults", CK.INCOME_BEFORE_TAX, None, mapping_note="jpcrp_cor 経営指標サマリー"),
     IFRSConceptMapping("ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults", CK.NET_INCOME_PARENT, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("ProfitLossIFRSSummaryOfBusinessResults", CK.NET_INCOME, None, mapping_note="jpcrp_cor 経営指標サマリー（当期利益）"),
     IFRSConceptMapping("ComprehensiveIncomeIFRSSummaryOfBusinessResults", CK.COMPREHENSIVE_INCOME, None, mapping_note="jpcrp_cor 経営指標サマリー"),
     IFRSConceptMapping("ComprehensiveIncomeAttributableToOwnersOfParentIFRSSummaryOfBusinessResults", CK.COMPREHENSIVE_INCOME_PARENT, None, mapping_note="jpcrp_cor 経営指標サマリー"),
     IFRSConceptMapping("EquityAttributableToOwnersOfParentIFRSSummaryOfBusinessResults", CK.EQUITY_PARENT, None, mapping_note="jpcrp_cor 経営指標サマリー"),
     IFRSConceptMapping("TotalAssetsIFRSSummaryOfBusinessResults", CK.TOTAL_ASSETS, None, mapping_note="jpcrp_cor 経営指標サマリー"),
     IFRSConceptMapping("BasicEarningsLossPerShareIFRSSummaryOfBusinessResults", CK.EPS, None, mapping_note="jpcrp_cor 経営指標サマリー"),
     IFRSConceptMapping("DilutedEarningsLossPerShareIFRSSummaryOfBusinessResults", CK.EPS_DILUTED, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("RateOfReturnOnEquityIFRSSummaryOfBusinessResults", CK.ROE, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("RatioOfOwnersEquityToGrossAssetsIFRSSummaryOfBusinessResults", CK.EQUITY_RATIO, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("PriceEarningsRatioIFRSSummaryOfBusinessResults", CK.PER, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("CashFlowsFromUsedInOperatingActivitiesIFRSSummaryOfBusinessResults", CK.OPERATING_CF, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("CashFlowsFromUsedInInvestingActivitiesIFRSSummaryOfBusinessResults", CK.INVESTING_CF, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("CashFlowsFromUsedInFinancingActivitiesIFRSSummaryOfBusinessResults", CK.FINANCING_CF, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    IFRSConceptMapping("CashAndCashEquivalentsIFRSSummaryOfBusinessResults", CK.CASH_END, None, mapping_note="jpcrp_cor 経営指標サマリー"),
+    # Revenue 代替概念（トヨタ等が使用）
+    IFRSConceptMapping("OperatingRevenuesIFRSKeyFinancialData", CK.REVENUE, None, mapping_note="jpcrp_cor KeyFinancialData（営業収益）"),
+    IFRSConceptMapping("TotalNetRevenuesIFRS", CK.REVENUE, None, mapping_note="jpigp_cor 営業収益合計"),
+    IFRSConceptMapping("SalesRevenuesIFRS", CK.REVENUE, None, mapping_note="jpigp_cor 営業収益"),
 )
 
 # --- CI マッピング（包括利益。statement_type=None: 独立した CI 計算書は未対応） ---

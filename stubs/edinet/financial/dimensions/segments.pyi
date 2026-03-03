@@ -1,6 +1,7 @@
 from collections.abc import Sequence
 from dataclasses import dataclass
 from decimal import Decimal
+from edinet.financial.statements import Statements
 from edinet.models.financial import LineItem
 from edinet.xbrl.contexts import Period, StructuredContext
 from edinet.xbrl.linkbase.definition import DefinitionTree
@@ -85,35 +86,36 @@ class SegmentData:
     depth: int = ...
     is_default_member: bool = ...
 
-def list_dimension_axes(items: Sequence[LineItem], context_map: dict[str, StructuredContext], resolver: TaxonomyResolver, *, consolidated: bool = True) -> tuple[DimensionAxisSummary, ...]:
+def list_dimension_axes(source: Statements | Sequence[LineItem], context_map: dict[str, StructuredContext] | None = None, resolver: TaxonomyResolver | None = None, *, consolidated: bool = True) -> tuple[DimensionAxisSummary, ...]:
     """Filing 内の全ディメンション軸を日本語/英語ラベル付きで列挙する。
 
-    LineItem.dimensions を走査してユニークな軸を収集し、
-    TaxonomyResolver で各軸のラベルを解決する。
-    ハードコードされた軸名は一切使用しない。
+    ``Statements`` を渡す場合は ``context_map`` / ``resolver`` は不要
+    （内部で自動取得される）。低レベル呼び出しでは3引数全て必須。
 
     Args:
-        items: ``build_line_items()`` が返した全 LineItem。
+        source: ``Statements`` または ``build_line_items()`` が返した全 LineItem。
         context_map: ``structure_contexts()`` が返した Context 辞書。
+            ``Statements`` を渡す場合は省略可。
         resolver: ラベル解決用の TaxonomyResolver。
+            ``Statements`` を渡す場合は省略可。
         consolidated: True なら連結、False なら個別の LineItem のみ対象。
 
     Returns:
         DimensionAxisSummary のタプル。item_count 降順。
         ディメンション軸が存在しなければ空タプル。
     """
-def extract_segments(items: Sequence[LineItem], context_map: dict[str, StructuredContext], resolver: TaxonomyResolver, *, consolidated: bool = True, period: Period | None = None, axis_local_name: str = ..., definition_trees: dict[str, DefinitionTree] | None = None) -> tuple[SegmentData, ...]:
+def extract_segments(source: Statements | Sequence[LineItem], context_map: dict[str, StructuredContext] | None = None, resolver: TaxonomyResolver | None = None, *, consolidated: bool = True, period: Period | None = None, axis_local_name: str = ..., definition_trees: dict[str, DefinitionTree] | None = None) -> tuple[SegmentData, ...]:
     '''LineItem 群からセグメント別データを抽出する。
 
-    指定されたディメンション軸（デフォルト: OperatingSegmentsAxis）の
-    メンバーごとに LineItem をグルーピングし、SegmentData として返す。
+    ``Statements`` を渡す場合は ``context_map`` / ``resolver`` は不要
+    （内部で自動取得される）。低レベル呼び出しでは3引数全て必須。
 
     Args:
-        items: ``build_line_items()`` が返した全 LineItem。
+        source: ``Statements`` または ``build_line_items()`` が返した全 LineItem。
         context_map: ``structure_contexts()`` が返した Context 辞書。
-            連結/個別フィルタに使用。
+            ``Statements`` を渡す場合は省略可。
         resolver: ラベル解決用の TaxonomyResolver。
-            提出者ラベルは事前に ``load_filer_labels()`` しておくこと。
+            ``Statements`` を渡す場合は省略可。
         consolidated: True なら連結、False なら個別。
         period: 対象期間。None なら全期間のセグメントを抽出。
         axis_local_name: ディメンション軸のローカル名。

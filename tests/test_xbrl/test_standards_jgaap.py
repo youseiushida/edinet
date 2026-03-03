@@ -93,13 +93,13 @@ class TestP0Essential:
         assert len(result) == 35
 
     def test_t11_all_mappings_count(self) -> None:
-        """全マッピングが 83 件（PL16 + BS24 + CF35 + KPI8）。"""
-        assert len(all_mappings()) == 83
+        """全マッピングが 102 件（Summary19 + PL16 + BS24 + CF35 + KPI8）。"""
+        assert len(all_mappings()) == 102
 
-    def test_t12_all_canonical_keys_unique(self) -> None:
-        """全 canonical_key が 83 個でユニーク。"""
+    def test_t12_all_canonical_keys_count(self) -> None:
+        """ユニーク CK 数が 85（サマリーと詳細の重複分を除く）。"""
         keys = all_canonical_keys()
-        assert len(keys) == 83
+        assert len(keys) == 85
 
     def test_t13_mappings_for_statement_subset_of_all(self) -> None:
         """各 statement の mappings_for_statement() が all_mappings() のサブセット。"""
@@ -174,9 +174,9 @@ class TestP0Essential:
         assert profile.has_ordinary_income is True
 
     def test_t29_profile_canonical_key_count(self) -> None:
-        """プロファイルの canonical_key_count が 83。"""
+        """プロファイルの canonical_key_count が 102（全マッピング数）。"""
         profile = get_profile()
-        assert profile.canonical_key_count == 83
+        assert profile.canonical_key_count == 102
 
 
 # ===========================================================================
@@ -249,11 +249,9 @@ class TestP1DataIntegrity:
             i for i, st in enumerate(statement_types)
             if st == StatementType.CASH_FLOW_STATEMENT
         )
-        first_kpi = next(
-            i for i, st in enumerate(statement_types)
-            if st is None
-        )
-        assert first_pl < first_bs < first_cf < first_kpi
+        # PL → BS → CF の相対順序が保たれていること
+        # （Summary/KPI は statement_type=None で先頭または末尾に配置）
+        assert first_pl < first_bs < first_cf
 
 
 # ===========================================================================

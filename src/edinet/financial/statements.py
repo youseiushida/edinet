@@ -964,9 +964,13 @@ class Statements:
             )
         if concept_set is not None:
             known = concept_set.non_abstract_concepts()
+            # concepts タプルのインデックスを表示順に使用する。
+            # e.order は同一親の兄弟間の相対順序であり、ツリー全体の
+            # 通し番号ではない。concepts は DFS 順に格納されているため
+            # タプルのインデックスがグローバルな表示順序となる。
             order = {
-                e.concept: int(e.order)
-                for e in concept_set.concepts
+                e.concept: idx
+                for idx, e in enumerate(concept_set.concepts)
                 if not e.is_abstract
             }
         else:

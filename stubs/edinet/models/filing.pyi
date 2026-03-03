@@ -198,9 +198,11 @@ class Filing(BaseModel):
             EdinetError: 通信層の失敗。
 
         Note:
-            v0.1.0 は **J-GAAP の一般事業会社** のみ対応。IFRS / US-GAAP 企業の
-            XBRL を渡した場合、科目がマッチせず空または不完全な Statement が返り、
-            ``UserWarning`` を発行する。スレッドセーフではない。
+            J-GAAP / IFRS / US-GAAP の 3 会計基準に対応。
+            23 業種の ConceptSet を自動導出し、銀行・保険・証券・建設・鉄道の
+            5 業種は専用科目マッピングを提供する。
+            有報・四半期報告書・半期報告書など XBRL を含む全書類タイプで動作する。
+            スレッドセーフではない。
         '''
     async def axbrl(self, *, taxonomy_path: str | None = None) -> Statements:
         """XBRL を非同期で解析し財務諸表コンテナを返す。
@@ -222,9 +224,11 @@ class Filing(BaseModel):
             EdinetError: 通信層の失敗。
 
         Note:
-            v0.1.0 は **J-GAAP の一般事業会社** のみ対応。IFRS / US-GAAP 企業の
-            XBRL を渡した場合、科目がマッチせず空または不完全な Statement が返り、
-            ``UserWarning`` を発行する。スレッドセーフではない。
+            J-GAAP / IFRS / US-GAAP の 3 会計基準に対応。
+            23 業種の ConceptSet を自動導出し、銀行・保険・証券・建設・鉄道の
+            5 業種は専用科目マッピングを提供する。
+            有報・四半期報告書・半期報告書など XBRL を含む全書類タイプで動作する。
+            スレッドセーフではない。
         """
     @classmethod
     def from_api_response(cls, data: dict[str, Any]) -> Filing:

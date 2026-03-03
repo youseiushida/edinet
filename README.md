@@ -199,6 +199,7 @@ sony_pl["売上収益"].value  # IFRS の Revenue
 | **取得範囲** | PL/BS/CF の全詳細科目（数十行） | 主要指標のみ（売上高・営業利益等） |
 | **表示順** | タクソノミの表示順序付き | なし（辞書） |
 | **基準横断** | 基準ごとに科目名が異なる | 基準を問わず同じキーで取得 |
+| **入力** | — | `FinancialStatement`（PL のみ等）または `Statements`（全科目横断） |
 | **用途** | 財務諸表の表示・分析 | スクリーナー・複数企業の横並び比較 |
 
 ```python
@@ -208,6 +209,10 @@ for item in pl:
     print(f"{item.label_ja.text}: {item.value}")
 
 # 方式2: 正規化キーで横断取得（主要指標・基準不問）
+# Statements を渡すと PL/BS/CF を横断して検索（推奨）
+result = extract_values(stmts, [CK.REVENUE, CK.TOTAL_ASSETS])
+
+# FinancialStatement を渡すとその表の科目のみ
 result = extract_values(pl, [CK.REVENUE, CK.OPERATING_INCOME])
 ```
 
@@ -219,13 +224,19 @@ canonical key を使うと、会計基準を意識せずに値を取得できま
 from edinet import extract_values, extracted_to_dict, CK
 
 # J-GAAP でも IFRS でも US-GAAP でも同じキーで取得
-pl = stmts.income_statement()
-result = extract_values(pl, [CK.REVENUE, CK.OPERATING_INCOME, CK.NET_INCOME])
+# Statements を渡すと PL/BS/CF を横断して全科目から検索
+stmts = filing.xbrl()
+result = extract_values(stmts, [CK.REVENUE, CK.OPERATING_INCOME, CK.NET_INCOME])
 
 rev = result[CK.REVENUE]
 print(rev.value)                 # Decimal('1234567000000')
 print(rev.item.label_ja.text)    # "売上高"（J-GAAP）or "売上収益"（IFRS）
 print(rev.item.source_line)      # XML の行番号（トレーサビリティ）
+print(rev.item.local_name)       # マッチした concept 名
+
+# FinancialStatement を渡すと、その表の科目のみから検索
+pl = stmts.income_statement()
+pl_result = extract_values(pl, [CK.REVENUE, CK.OPERATING_INCOME])
 
 # pandas で複数企業を横並び
 import pandas as pd
@@ -235,10 +246,7 @@ df = pd.DataFrame([
     {
         "ticker": f.ticker,
         "filer": f.filer_name,
-        **extracted_to_dict(
-            extract_values(f.xbrl().income_statement(), keys),
-            extract_values(f.xbrl().balance_sheet(), keys),
-        ),
+        **extracted_to_dict(extract_values(f.xbrl(), keys)),
     }
     for f in filings if f.has_xbrl
 ])
@@ -497,9 +505,40 @@ async def main():
             break
 
 asyncio.run(main())
+```
 
-# 非同期 HTTP クライアントの明示的な解放
-await edinet.aclose()
+### 複数企業の並列取得
+
+`asyncio.gather` を使うと、複数企業の XBRL を並列ダウンロードして大幅に高速化できます。
+
+```python
+import asyncio
+import edinet
+from edinet import extract_values, extracted_to_dict, CK
+
+async def screener():
+    edinet.configure(api_key="YOUR_API_KEY", taxonomy_path="...")
+    filings = await edinet.adocuments("2025-06-26", doc_type="120")
+    targets = [f for f in filings if f.has_xbrl][:20]
+
+    # 20社を並列ダウンロード+パース（直列60s → 並列5-10s）
+    stmts_list = await asyncio.gather(*[f.axbrl() for f in targets])
+
+    keys = [CK.REVENUE, CK.OPERATING_INCOME, CK.NET_INCOME, CK.TOTAL_ASSETS]
+    rows = []
+    for f, stmts in zip(targets, stmts_list):
+        rows.append({
+            "ticker": f.ticker,
+            "filer": f.filer_name,
+            **extracted_to_dict(extract_values(stmts, keys)),
+        })
+
+    import pandas as pd
+    df = pd.DataFrame(rows)
+    print(df)
+    await edinet.aclose()
+
+asyncio.run(screener())
 ```
 
 ## 期間分類

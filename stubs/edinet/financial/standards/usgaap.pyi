@@ -3,7 +3,7 @@ from decimal import Decimal
 from edinet.xbrl.contexts import Period, StructuredContext
 from edinet.xbrl.parser import RawFact
 
-__all__ = ['USGAAPSummary', 'USGAAPSummaryItem', 'USGAAPTextBlockItem', 'extract_usgaap_summary', 'is_usgaap_element', 'get_jgaap_mapping', 'get_usgaap_concept_names']
+__all__ = ['USGAAPSummary', 'USGAAPSummaryItem', 'USGAAPTextBlockItem', 'extract_usgaap_summary', 'is_usgaap_element', 'get_jgaap_mapping', 'get_usgaap_concept_names', 'canonical_key', 'reverse_lookup']
 
 @dataclass(frozen=True, slots=True)
 class _SummaryConceptDef:
@@ -15,11 +15,13 @@ class _SummaryConceptDef:
             例: ``"RevenuesUSGAAPSummaryOfBusinessResults"``。
         jgaap_concept: 対応する J-GAAP の concept ローカル名。None は対応なし。
         label_ja: 日本語ラベル（jpcrp_cor ラベルファイルで検証済み）。
+        label_en: 英語ラベル（jpcrp_cor ラベルファイルで検証済み）。
     '''
     key: str
     concept_local_name: str
     jgaap_concept: str | None
     label_ja: str
+    label_en: str
 
 @dataclass(frozen=True, slots=True)
 class USGAAPSummaryItem:
@@ -33,6 +35,7 @@ class USGAAPSummaryItem:
         concept: XBRL concept のローカル名。
             例: ``"RevenuesUSGAAPSummaryOfBusinessResults"``。
         label_ja: 日本語ラベル。
+        label_en: 英語ラベル。
         value: 値。数値の場合は ``Decimal``、テキストの場合は ``str``、
             nil の場合は ``None``。
         unit_ref: unitRef 属性値。
@@ -42,6 +45,7 @@ class USGAAPSummaryItem:
     key: str
     concept: str
     label_ja: str
+    label_en: str
     value: Decimal | str | None
     unit_ref: str | None
     period: Period
@@ -192,4 +196,29 @@ def get_usgaap_concept_names() -> frozenset[str]:
 
     Returns:
         concept ローカル名のフローズンセット。
+    '''
+def canonical_key(concept: str) -> str | None:
+    '''US-GAAP concept ローカル名を正規化キーにマッピングする。
+
+    jgaap.canonical_key / ifrs.canonical_key と同一パターンの
+    インターフェースを提供し、normalize.get_canonical_key() から
+    呼び出される。
+
+    Args:
+        concept: jpcrp_cor の US-GAAP 固有 concept ローカル名
+            （例: ``"RevenuesUSGAAPSummaryOfBusinessResults"``）。
+
+    Returns:
+        正規化キー文字列（例: ``"revenue"``）。
+        登録されていない concept の場合は ``None``。
+    '''
+def reverse_lookup(key: str) -> _SummaryConceptDef | None:
+    '''正規化キーから US-GAAP の概念定義を取得する（逆引き）。
+
+    Args:
+        key: 正規化キー（例: ``"revenue"``）。
+
+    Returns:
+        対応する ``_SummaryConceptDef``。
+        該当するマッピングがない場合は ``None``。
     '''

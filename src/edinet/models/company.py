@@ -282,6 +282,8 @@ class Company(BaseModel):
         """
         from edinet.models.edinet_code import get_edinet_code_by_sec_code
 
+        if sec_code is None:
+            return None
         entry = get_edinet_code_by_sec_code(sec_code)
         if entry is None:
             return None

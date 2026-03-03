@@ -42,16 +42,20 @@ def to_parquet(
 ) -> None:
     """Parquet 出力。
 
-    Note:
-        ``Decimal`` カラムは pyarrow が自動変換する。
-        精度が重要な場合は事前に ``float`` / ``str`` に変換すること。
+    ``value`` 列に ``Decimal`` と ``str`` が混在する場合（Statements 全体の
+    DataFrame 等）、pyarrow の型変換エラーを回避するため ``value`` 列を
+    文字列に変換してから書き出す。
 
     Args:
         df: 出力する DataFrame。
         path: 出力先ファイルパス。
         **kwargs: ``DataFrame.to_parquet()`` に渡す追加引数。
     """
-    df.to_parquet(path, index=False, **kwargs)
+    out = df
+    if "value" in df.columns and df["value"].apply(type).nunique() > 1:
+        out = df.copy()
+        out["value"] = out["value"].astype(str)
+    out.to_parquet(path, index=False, **kwargs)
 
 
 def to_excel(

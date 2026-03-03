@@ -61,10 +61,9 @@ class Company(BaseModel):
             最新の Filing。見つからない場合は ``None``。
 
         Note:
-            内部で ``get_filings()`` を呼び出すため、検索期間分の API コール
-            が発生する（EDINET API は 1 日ずつ取得、レート制限 1.0s/call）。
-            期間の目安: 30 日 → 約 30 秒、90 日（デフォルト） → 約 1.5 分、
-            365 日 → 約 6 分。
+            末尾（最新日）から1日ずつ探索し、該当書類が見つかった時点で返す。
+            有報は決算期末の3ヶ月後（6月末）に集中するため、直近から探すと
+            高速に見つかる。最悪ケースでも検索期間分の API コールが発生する。
         '''
     @classmethod
     def search(cls, query: str, *, limit: int = 20) -> list[Company]:

@@ -26,13 +26,15 @@ from __future__ import annotations
 from collections.abc import Sequence
 from dataclasses import dataclass
 from decimal import Decimal
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 from edinet.financial.standards.normalize import (
     get_canonical_key,
     get_canonical_key_for_sector,
 )
 from edinet.models.financial import FinancialStatement, LineItem
+
+# Statements の型は遅延で解決（循環 import 回避）
 
 if TYPE_CHECKING:
     from edinet.xbrl.dei import AccountingStandard
@@ -58,25 +60,23 @@ class ExtractedValue:
 
 
 def extract_values(
-    fs: FinancialStatement,
+    source: FinancialStatement | Any,
     keys: Sequence[str] | None = None,
     *,
     standard: AccountingStandard | None = None,
     industry_code: str | None = None,
 ) -> dict[str, ExtractedValue | None]:
-    """正規化キーで FinancialStatement から値を抽出する。
+    """正規化キーで財務データから値を抽出する。
 
-    ``fs.items`` を走査し、各 ``LineItem`` の ``local_name`` を
-    canonical key に変換して照合する。会計基準は ``standard`` で
-    明示するか、``None`` で自動判別（J-GAAP → IFRS → US-GAAP）。
+    ``FinancialStatement``（PL/BS/CF）または ``Statements``（全 items）を
+    受け付ける。``Statements`` を渡すと PL/BS/CF の区分を超えて全科目から
+    検索するため、ConceptSet に含まれない概念もマッチする。
 
     Args:
-        fs: 抽出対象の ``FinancialStatement``。
-            ``stmts.income_statement()`` 等で取得したもの。
+        source: 抽出対象の ``FinancialStatement`` または ``Statements``。
         keys: 抽出する正規化キーのシーケンス。
             ``CK`` enum または文字列で指定可能。
-            ``None`` の場合は ``fs.items`` に存在する全マッピング可能
-            科目を抽出する。
+            ``None`` の場合は全マッピング可能科目を抽出する。
         standard: 会計基準。``None`` の場合は自動判別
             （J-GAAP → IFRS → US-GAAP の順で検索）。
         industry_code: 業種コード（銀行業等のセクター固有マッピング用）。
@@ -84,8 +84,8 @@ def extract_values(
 
     Returns:
         ``{canonical_key: ExtractedValue | None}`` の辞書。
-        ``keys`` で指定されたキーが ``fs.items`` に見つからない場合は
-        ``None``。``keys=None`` の場合は見つかった科目のみを含む。
+        ``keys`` で指定されたキーが見つからない場合は ``None``。
+        ``keys=None`` の場合は見つかった科目のみを含む。
 
     Example:
         >>> from edinet.financial.standards.canonical_keys import CK
@@ -93,9 +93,21 @@ def extract_values(
         >>> result["revenue"].value
         Decimal('1234567000')
     """
+    # Statements / FinancialStatement どちらからも items を取得
+    from edinet.financial.statements import Statements as _Statements
+
+    if isinstance(source, _Statements):
+        items = source._items  # noqa: SLF001
+    elif isinstance(source, FinancialStatement):
+        items = source.items
+    else:
+        raise TypeError(
+            f"FinancialStatement または Statements を渡してください（got {type(source).__name__}）"
+        )
+
     # canonical_key → LineItem の逆引きインデックスを構築
     ck_to_item: dict[str, LineItem] = {}
-    for item in fs.items:
+    for item in items:
         if industry_code is not None:
             ck = get_canonical_key_for_sector(
                 item.local_name, standard, industry_code,

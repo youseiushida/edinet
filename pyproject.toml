@@ -45,6 +45,9 @@ build-backend = "hatchling.build"
 [tool.hatch.version]
 path = "src/edinet/_version.py"
 
+[tool.hatch.build.targets.sdist]
+exclude = ["tests","tests.*"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-m 'not large and not slow'"
