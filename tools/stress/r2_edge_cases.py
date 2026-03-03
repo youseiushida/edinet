@@ -23,7 +23,7 @@ def main():
     t0 = time.time()
 
     edinet.configure(
-        api_key=os.environ.get("EDINET_API_KEY", "cb5e960f897943299abf3edf8982e363"),
+        api_key=os.environ.get("EDINET_API_KEY", "your_api_key_here"),
         taxonomy_path=os.environ.get("EDINET_TAXONOMY_ROOT", "/mnt/c/Users/nezow/Downloads/ALL_20251101"),
     )
 

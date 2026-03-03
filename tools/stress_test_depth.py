@@ -29,7 +29,7 @@ from datetime import date
 import edinet
 from edinet import DocType, configure, documents
 
-API_KEY = os.environ.get("EDINET_API_KEY", "cb5e960f897943299abf3edf8982e363")
+API_KEY = os.environ.get("EDINET_API_KEY", "your_api_key_here")
 TAXONOMY_PATH = os.environ.get(
     "EDINET_TAXONOMY_ROOT", "/mnt/c/Users/nezow/Downloads/ALL_20251101"
 )
