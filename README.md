@@ -11,6 +11,8 @@
 
 [GitHub Repository](https://github.com/youseiushida/edinet)
 
+
+
 ## インストール
 
 ```sh
@@ -30,12 +32,54 @@ pip install 'edinet[display]'
 pip install 'edinet[analysis,display]'
 ```
 
+## 設定
+
+### 必要なもの
+
+| 項目 | 用途 | 必須？ |
+|:---|:---|:---|
+| **EDINET API キー** | 書類一覧・ZIP ダウンロード | 必須 |
+| **EDINET タクソノミ** | XBRL 解析（三表・ラベル・CK 抽出すべて） | **XBRL 解析に必須** |
+| キャッシュディレクトリ | ZIP の再ダウンロード防止 | 任意（推奨） |
+
+> **注意**: タクソノミなしでも企業検索（`Company.search`）、書類一覧（`documents()`）、PDF 取得（`fetch_pdf()`）は動作しますが、`filing.xbrl()` 以降の全機能（三表取得・ラベルアクセス・DataFrame 変換・extract_values 等）にはタクソノミが必要です。
+
+### タクソノミのセットアップ
+
+1. [金融庁の EDINET タクソノミページ](https://www.fsa.go.jp/search/20250808.html)から「EDINET タクソノミ」の ZIP をダウンロード（年度により URL が変わります）
+2. ZIP を展開すると、中に `taxonomy/` と `samples/` を子に持つフォルダがあります:
+   ```
+   （ZIP を展開）
+   └── ○○○/                ← フォルダ名は年度により異なる
+       ├── taxonomy/        ← タクソノミ本体
+       └── samples/         ← サンプルインスタンス
+   ```
+3. `taxonomy/` と `samples/` の**親フォルダ**のパスを指定:
+
+```python
+import edinet
+
+edinet.configure(
+    api_key="YOUR_API_KEY",
+    taxonomy_path="/path/to/○○○",  # ← taxonomy/ の親
+    cache_dir="./cache",           # 任意（推奨）
+)
+```
+
+### API キーの取得
+
+[EDINET](https://disclosure.edinet-fsa.go.jp/) にアカウント登録し、API キーを取得してください。
+
+
 ## クイックスタート
 
 ```python
 import edinet
 
-edinet.configure(api_key="YOUR_API_KEY")
+edinet.configure(
+    api_key="YOUR_API_KEY",
+    taxonomy_path="/path/to/○○○"
+)
 
 # 有価証券報告書の一覧を取得
 filings = edinet.documents("2025-06-26", doc_type=edinet.DocType.ANNUAL_SECURITIES_REPORT)
@@ -638,41 +682,6 @@ consolidated = contexts.filter_consolidated().filter_no_extra_dimensions()
 latest = consolidated.latest_duration_contexts()
 ```
 
-## 設定
-
-```python
-import edinet
-
-edinet.configure(
-    api_key="YOUR_API_KEY",           # EDINET API キー（必須）
-    taxonomy_path="/path/to/ALL_20251101",  # ローカルタクソノミ（任意）
-    cache_dir="./cache",              # ZIP キャッシュディレクトリ（任意）
-)
-```
-
-### API キーの取得
-
-[EDINET](https://disclosure.edinet-fsa.go.jp/) にアカウント登録し、API キーを取得してください。
-
-### タクソノミのセットアップ
-
-タクソノミパスを指定すると、科目の階層表示やラベル解決の精度が向上します。指定しない場合は ZIP 内のタクソノミを使用します。
-
-1. [金融庁の EDINET タクソノミページ](https://www.fsa.go.jp/search/20250808.html)から「EDINET タクソノミ」の ZIP をダウンロード（年度により URL が変わります）
-2. ZIP を展開すると、中に `taxonomy/` と `samples/` を子に持つフォルダがあります:
-   ```
-   （ZIP を展開）
-   └── ○○○/                ← フォルダ名は年度により異なる
-       ├── taxonomy/        ← タクソノミ本体
-       └── samples/         ← サンプルインスタンス
-   ```
-3. `taxonomy/` と `samples/` の**親フォルダ**のパスを指定します:
-   ```python
-   edinet.configure(
-       api_key="YOUR_API_KEY",
-       taxonomy_path="/path/to/○○○",  # ← taxonomy/ の親
-   )
-   ```
 
 ## 対応範囲
 
