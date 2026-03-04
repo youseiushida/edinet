@@ -622,6 +622,46 @@ class Statements:
         """判別された会計基準を返す。"""
         return self._detected_standard
 
+    @property
+    def dei(self) -> DEI | None:
+        """DEI 情報を返す。"""
+        return self._dei
+
+    @property
+    def context_map(self) -> dict[str, StructuredContext] | None:
+        """コンテキストマッピングを返す。"""
+        return self._contexts
+
+    @property
+    def resolver(self) -> TaxonomyResolver | None:
+        """TaxonomyResolver を返す。"""
+        return self._resolver
+
+    @property
+    def industry_code(self) -> str | None:
+        """業種コードを返す。"""
+        return self._industry_code
+
+    @property
+    def taxonomy_root(self) -> Path | None:
+        """タクソノミルートパスを返す。"""
+        return self._taxonomy_root
+
+    @property
+    def calculation_linkbase(self) -> CalculationLinkbase | None:
+        """Calculation Linkbase を返す。"""
+        return self._calculation_linkbase
+
+    @property
+    def definition_linkbase(self) -> dict[str, DefinitionTree] | None:
+        """Definition Linkbase を返す。"""
+        return self._definition_linkbase
+
+    @property
+    def raw_facts(self) -> tuple[RawFact, ...] | None:
+        """元の RawFact タプルを返す。"""
+        return self._facts
+
     def _get_standard_enum(self) -> AccountingStandard | None:
         """DetectedStandard から AccountingStandard enum を抽出する。"""
         if self._detected_standard is None:

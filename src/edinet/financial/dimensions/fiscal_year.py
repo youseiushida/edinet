@@ -102,7 +102,7 @@ def detect_fiscal_year(dei_or_stmts: DEI | Any) -> FiscalYearInfo:
     from edinet.financial.statements import Statements as _Statements
 
     if isinstance(dei_or_stmts, _Statements):
-        dei = dei_or_stmts._dei  # noqa: SLF001
+        dei = dei_or_stmts.dei
         if dei is None:
             # DEI なしの Statements → 全フィールド None の FiscalYearInfo を返す
             return FiscalYearInfo(

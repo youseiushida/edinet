@@ -3,6 +3,9 @@ from dataclasses import dataclass
 from edinet.financial.standards.detect import DetectedStandard
 from edinet.models.financial import FinancialStatement, LineItem
 from edinet.xbrl.contexts import DurationPeriod, InstantPeriod, StructuredContext
+from edinet.xbrl.dei import DEI
+from edinet.xbrl.linkbase.calculation import CalculationLinkbase
+from edinet.xbrl.linkbase.definition import DefinitionTree
 from edinet.xbrl.parser import RawFact
 from edinet.xbrl.taxonomy import TaxonomyResolver
 from pathlib import Path
@@ -39,6 +42,30 @@ class Statements:
     @property
     def detected_standard(self) -> DetectedStandard | None:
         """判別された会計基準を返す。"""
+    @property
+    def dei(self) -> DEI | None:
+        """DEI 情報を返す。"""
+    @property
+    def context_map(self) -> dict[str, StructuredContext] | None:
+        """コンテキストマッピングを返す。"""
+    @property
+    def resolver(self) -> TaxonomyResolver | None:
+        """TaxonomyResolver を返す。"""
+    @property
+    def industry_code(self) -> str | None:
+        """業種コードを返す。"""
+    @property
+    def taxonomy_root(self) -> Path | None:
+        """タクソノミルートパスを返す。"""
+    @property
+    def calculation_linkbase(self) -> CalculationLinkbase | None:
+        """Calculation Linkbase を返す。"""
+    @property
+    def definition_linkbase(self) -> dict[str, DefinitionTree] | None:
+        """Definition Linkbase を返す。"""
+    @property
+    def raw_facts(self) -> tuple[RawFact, ...] | None:
+        """元の RawFact タプルを返す。"""
     @property
     def has_consolidated_data(self) -> bool:
         """連結データが存在するかを返す。"""

@@ -69,6 +69,17 @@ if TYPE_CHECKING:
         calc_mapper as calc_mapper,
         dict_mapper as dict_mapper,
     )
+    from edinet.xbrl.text import (
+        extract_text_blocks as extract_text_blocks,
+        build_section_map as build_section_map,
+        clean_html as clean_html,
+        TextBlock as TextBlock,
+        SectionMap as SectionMap,
+    )
+    from edinet.financial.notes.employees import (
+        extract_employee_info as extract_employee_info,
+        EmployeeInfo as EmployeeInfo,
+    )
 
 _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
     # --- 設定・ユーティリティ ---
@@ -149,6 +160,18 @@ _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
     "definition_mapper": ("edinet.financial.mapper", "definition_mapper"),
     "calc_mapper": ("edinet.financial.mapper", "calc_mapper"),
     "dict_mapper": ("edinet.financial.mapper", "dict_mapper"),
+    # --- テキストブロック ---
+    "extract_text_blocks": ("edinet.xbrl.text", "extract_text_blocks"),
+    "build_section_map": ("edinet.xbrl.text", "build_section_map"),
+    "clean_html": ("edinet.xbrl.text", "clean_html"),
+    "TextBlock": ("edinet.xbrl.text", "TextBlock"),
+    "SectionMap": ("edinet.xbrl.text", "SectionMap"),
+    # --- 注記情報 ---
+    "extract_employee_info": (
+        "edinet.financial.notes.employees",
+        "extract_employee_info",
+    ),
+    "EmployeeInfo": ("edinet.financial.notes.employees", "EmployeeInfo"),
 }
 
 
@@ -232,4 +255,13 @@ __all__ = [
     "definition_mapper",
     "calc_mapper",
     "dict_mapper",
+    # テキストブロック
+    "extract_text_blocks",
+    "build_section_map",
+    "clean_html",
+    "TextBlock",
+    "SectionMap",
+    # 注記情報
+    "extract_employee_info",
+    "EmployeeInfo",
 ]

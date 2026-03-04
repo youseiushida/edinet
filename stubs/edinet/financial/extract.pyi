@@ -2,8 +2,9 @@ from collections.abc import Sequence
 from dataclasses import dataclass
 from decimal import Decimal
 from edinet.financial.mapper import ConceptMapper
+from edinet.financial.statements import Statements
 from edinet.models.financial import LineItem
-from typing import Any, Literal
+from typing import Literal
 
 __all__ = ['ExtractedValue', 'extract_values', 'extracted_to_dict']
 
@@ -27,7 +28,7 @@ class ExtractedValue:
     item: LineItem
     mapper_name: str | None
 
-def extract_values(source: Any, keys: Sequence[str] | None = None, *, period: Literal['current', 'prior'] | None = None, consolidated: bool | None = None, mapper: ConceptMapper | Sequence[ConceptMapper] | None = None) -> dict[str, ExtractedValue | None]:
+def extract_values(source: Statements, keys: Sequence[str] | None = None, *, period: Literal['current', 'prior'] | None = None, consolidated: bool | None = None, mapper: ConceptMapper | Sequence[ConceptMapper] | None = None) -> dict[str, ExtractedValue | None]:
     '''正規化キーで財務データから値を抽出する。
 
     ``Statements`` を渡すと ``_items`` 全体をパイプラインマッパーで

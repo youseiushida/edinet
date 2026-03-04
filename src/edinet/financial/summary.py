@@ -66,7 +66,7 @@ def build_summary(stmts: Statements) -> FilingSummary:
         accounting_standard = "不明"
 
     # DEI から期間情報を取得
-    dei = stmts._dei  # noqa: SLF001
+    dei = stmts.dei
     period_start: date | None = None
     period_end: date | None = None
     period_type: str | None = None

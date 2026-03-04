@@ -28,7 +28,10 @@ import warnings
 from collections.abc import Sequence
 from dataclasses import dataclass
 from decimal import Decimal
-from typing import Any, Literal
+from typing import TYPE_CHECKING, Any, Literal
+
+if TYPE_CHECKING:
+    from edinet.financial.statements import Statements
 
 from edinet.exceptions import EdinetWarning
 from edinet.financial.mapper import (
@@ -149,7 +152,7 @@ def _filter_item(
 
 
 def extract_values(
-    source: Any,
+    source: Statements,
     keys: Sequence[str] | None = None,
     *,
     period: Literal["current", "prior"] | None = None,
@@ -214,18 +217,18 @@ def extract_values(
     from edinet.xbrl.taxonomy.custom import _build_parent_index
 
     ctx = MapperContext(
-        dei=source._dei,  # noqa: SLF001
-        detected_standard=source._detected_standard,  # noqa: SLF001
-        industry_code=source._industry_code,  # noqa: SLF001
+        dei=source.dei,
+        detected_standard=source.detected_standard,
+        industry_code=source.industry_code,
         definition_parent_index=_build_parent_index(
-            source._definition_linkbase,  # noqa: SLF001
+            source.definition_linkbase,
         ),
-        calculation_linkbase=source._calculation_linkbase,  # noqa: SLF001
+        calculation_linkbase=source.calculation_linkbase,
     )
 
     # 期間解決（1回のみ）
     target_duration, target_instant = _resolve_periods(
-        period, source._dei,  # noqa: SLF001
+        period, source.dei,
     )
 
     # キーフィルタ
@@ -237,7 +240,7 @@ def extract_values(
     # ck_to_item: {canonical_key: (LineItem, pipeline_position, mapper_name)}
     ck_to_item: dict[str, tuple[LineItem, int, str | None]] = {}
 
-    for item in source._items:  # noqa: SLF001
+    for item in source:
         if not _filter_item(
             item,
             period=period,

@@ -69,6 +69,7 @@ class CK(StrEnum):
     NET_INCOME = "net_income"
     NET_INCOME_PARENT = "net_income_parent"
     NET_INCOME_MINORITY = "net_income_minority"
+    DIVIDEND_INCOME = "dividend_income"                           # 配当収益(IFRS)
 
     # --- BS (貸借対照表) ---
     CASH_AND_DEPOSITS = "cash_and_deposits"                # J-GAAP
@@ -139,6 +140,11 @@ class CK(StrEnum):
     NET_CHANGE_IN_CASH = "net_change_in_cash"
     CONSOLIDATION_SCOPE_CHANGE_CASH = "consolidation_scope_change_cash"  # J-GAAP
     CASH_END = "cash_end"                                                # J-GAAP (instant)
+    SBC_CF = "sbc_cf"                                                    # 株式報酬費用(CF調整)
+    DIVIDENDS_RECEIVED_CF = "dividends_received_cf"                      # 配当金受取額(CF)
+    DIVIDENDS_PAID_NCI_CF = "dividends_paid_nci_cf"                      # 非支配株主配当(CF)
+    NCI_CAPITAL_CONTRIBUTION_CF = "nci_capital_contribution_cf"           # 非支配持分からの払込(CF)
+    SHORT_TERM_BORROWINGS_NET_CF = "short_term_borrowings_net_cf"        # 短期借入金純増減(CF)
 
     # --- KPI (主要経営指標) ---
     EPS = "eps"
@@ -183,10 +189,24 @@ class CK(StrEnum):
     MALE_CHILDCARE_LEAVE_RATE = "male_childcare_leave_rate"
     FEMALE_DIRECTORS_RATIO = "female_directors_ratio"
 
+    # --- セグメント / その他 ---
+    CAPEX = "capex"                                              # 設備投資額
+    INVENTORY_WRITEDOWNS = "inventory_writedowns"                # 棚卸資産評価損
+
     # --- ガバナンス ---
     AUDIT_FEES = "audit_fees"
     CROSS_SHAREHOLDINGS_COUNT = "cross_shareholdings_count"
     CROSS_SHAREHOLDINGS_AMOUNT = "cross_shareholdings_amount"
+
+    # --- IFRS BS (有利子負債・リース) ---
+    INTEREST_BEARING_DEBT_CL = "interest_bearing_debt_cl"        # IFRS 社債及び借入金(流動)
+    INTEREST_BEARING_DEBT_NCL = "interest_bearing_debt_ncl"      # IFRS 社債及び借入金(非流動)
+    INTEREST_BEARING_DEBT = "interest_bearing_debt"              # 有利子負債合計
+    LEASE_LIABILITIES_CL = "lease_liabilities_cl"                # IFRS リース負債(流動)
+    LEASE_LIABILITIES_NCL = "lease_liabilities_ncl"              # IFRS リース負債(非流動)
+    LEASE_LIABILITIES = "lease_liabilities"                      # IFRS リース負債合計
+    INVESTMENT_PROPERTY = "investment_property"                   # IFRS 投資不動産
+    EQUITY_METHOD_INVESTMENTS = "equity_method_investments"       # IFRS 持分法投資
 
     # --- 追加 BS 科目 ---
     DEFERRED_TAX_ASSETS = "deferred_tax_assets"

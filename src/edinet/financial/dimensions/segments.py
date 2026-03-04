@@ -309,9 +309,9 @@ def _resolve_source(
     from edinet.financial.statements import Statements as _Statements
 
     if isinstance(source, _Statements):
-        items = source._items  # noqa: SLF001
-        ctx = source._contexts or {}  # noqa: SLF001
-        res = resolver or source._resolver  # noqa: SLF001
+        items = list(source)
+        ctx = source.context_map or {}
+        res = resolver or source.resolver
         if res is None:
             from edinet.exceptions import EdinetConfigError
 
