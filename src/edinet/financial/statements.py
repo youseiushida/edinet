@@ -46,6 +46,8 @@ from edinet.financial.standards.normalize import (
 
 if TYPE_CHECKING:
     from edinet.xbrl.dei import DEI
+    from edinet.xbrl.linkbase.calculation import CalculationLinkbase
+    from edinet.xbrl.linkbase.definition import DefinitionTree
     from edinet.xbrl.taxonomy import TaxonomyResolver
 
 __all__ = ["build_statements", "Statements"]
@@ -612,6 +614,8 @@ class Statements:
     _industry_code: str | None = None
     _dei: DEI | None = None
     _resolver: TaxonomyResolver | None = None
+    _calculation_linkbase: CalculationLinkbase | None = None
+    _definition_linkbase: dict[str, DefinitionTree] | None = None
 
     @property
     def detected_standard(self) -> DetectedStandard | None:
@@ -1161,6 +1165,8 @@ def build_statements(
     taxonomy_root: Path | None = None,
     industry_code: str | None = None,
     resolver: TaxonomyResolver | None = None,
+    calculation_linkbase: CalculationLinkbase | None = None,
+    definition_linkbase: dict[str, DefinitionTree] | None = None,
 ) -> Statements:
     """LineItem 群から Statements コンテナを構築する。
 
@@ -1176,6 +1182,10 @@ def build_statements(
             ``None`` は一般事業会社として扱う。
         resolver: 提出者ラベルロード済みの TaxonomyResolver。
             セグメント分析等の事後ラベル解決に使用する。
+        calculation_linkbase: 提出者の Calculation Linkbase。
+            ``extract_values()`` の ``calc_mapper`` が使用する。
+        definition_linkbase: 提出者の Definition Linkbase。
+            ``extract_values()`` の ``definition_mapper`` が使用する。
 
     Returns:
         Statements コンテナ。
@@ -1195,4 +1205,6 @@ def build_statements(
         _industry_code=industry_code,
         _dei=dei,
         _resolver=resolver,
+        _calculation_linkbase=calculation_linkbase,
+        _definition_linkbase=definition_linkbase,
     )

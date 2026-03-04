@@ -1,11 +1,12 @@
 """test_extract.py — extract_values() / extracted_to_dict() のテスト。
 
-v0.2.0: extract_values() は Statements のみ受け付け、
-SummaryOfBusinessResults concept のみマッチする。
+v0.3.0: extract_values() はパイプラインマッパーで 1 パス走査する。
+デフォルト [summary_mapper, statement_mapper] は v0.2.0 と同一結果。
 """
 
 from __future__ import annotations
 
+import warnings
 from datetime import date
 from decimal import Decimal
 
@@ -15,6 +16,11 @@ from edinet.financial.extract import (
     ExtractedValue,
     extract_values,
     extracted_to_dict,
+)
+from edinet.financial.mapper import (
+    dict_mapper,
+    statement_mapper,
+    summary_mapper,
 )
 from edinet.financial.standards.canonical_keys import CK
 from edinet.financial.statements import Statements
@@ -101,7 +107,7 @@ def _make_stmts(*items: LineItem) -> Statements:
 
 
 class TestExtractValues:
-    """extract_values() のテスト（v0.2.0: Statements + SummaryOfBusinessResults のみ）。"""
+    """extract_values() のテスト（v0.3.0: パイプラインマッパー）。"""
 
     def test_extract_specific_keys(self) -> None:
         """指定した canonical key の値が正しく返る。"""
@@ -123,10 +129,10 @@ class TestExtractValues:
         assert CK.REVENUE in result
         assert result[CK.REVENUE] is not None
         assert result[CK.REVENUE].value == Decimal("1000000")
-        assert result[CK.REVENUE].source == "summary"
+        assert result[CK.REVENUE].mapper_name == "summary_mapper"
         assert result[CK.ORDINARY_INCOME] is not None
         assert result[CK.ORDINARY_INCOME].value == Decimal("200000")
-        assert result[CK.ORDINARY_INCOME].source == "summary"
+        assert result[CK.ORDINARY_INCOME].mapper_name == "summary_mapper"
 
     def test_extract_missing_key_returns_none(self) -> None:
         """存在しない canonical key は None で返る。"""
@@ -242,12 +248,14 @@ class TestExtractValues:
         assert result[CK.REVENUE] is not None
         assert result[CK.REVENUE].value is None
 
-    def test_pl_concept_not_matched_without_statements(self) -> None:
-        """include_statements=False なら PL 本体の概念名はマッチしない。"""
+    def test_pl_concept_not_matched_with_summary_only(self) -> None:
+        """mapper=[summary_mapper] なら PL 本体の概念名はマッチしない。"""
         stmts = _make_stmts(
             _make_line_item(local_name="NetSales"),
         )
-        result = extract_values(stmts, [CK.REVENUE], include_statements=False)
+        result = extract_values(
+            stmts, [CK.REVENUE], mapper=[summary_mapper],
+        )
 
         assert result[CK.REVENUE] is None
 
@@ -266,15 +274,15 @@ class TestExtractValues:
 
 
 # ---------------------------------------------------------------------------
-# TestIncludeStatements
+# TestPipelineMapper
 # ---------------------------------------------------------------------------
 
 
-class TestIncludeStatements:
-    """include_statements パラメータのテスト。"""
+class TestPipelineMapper:
+    """パイプラインマッパーのテスト（v0.3.0）。"""
 
     def test_operating_income_from_pl(self) -> None:
-        """PL 本体の OperatingIncome が include_statements=True で取得できる。"""
+        """PL 本体の OperatingIncome がデフォルトパイプラインで取得できる。"""
         stmts = _make_stmts(
             _make_line_item(
                 local_name="OperatingIncome",
@@ -287,7 +295,7 @@ class TestIncludeStatements:
 
         assert result[CK.OPERATING_INCOME] is not None
         assert result[CK.OPERATING_INCOME].value == Decimal("500000")
-        assert result[CK.OPERATING_INCOME].source == "exact"
+        assert result[CK.OPERATING_INCOME].mapper_name == "statement_mapper"
 
     def test_summary_priority_over_statement(self) -> None:
         """Summary の値が PL 本体より優先される。"""
@@ -309,10 +317,10 @@ class TestIncludeStatements:
         assert result[CK.REVENUE] is not None
         assert result[CK.REVENUE].value == Decimal("1000000")
         assert result[CK.REVENUE].item is summary_item
-        assert result[CK.REVENUE].source == "summary"
+        assert result[CK.REVENUE].mapper_name == "summary_mapper"
 
-    def test_include_statements_false_skips_pl(self) -> None:
-        """include_statements=False なら PL 本体から取得しない。"""
+    def test_summary_only_mapper_skips_pl(self) -> None:
+        """mapper=[summary_mapper] なら PL 本体から取得しない。"""
         stmts = _make_stmts(
             _make_line_item(
                 local_name="OperatingIncome",
@@ -321,7 +329,7 @@ class TestIncludeStatements:
             ),
         )
         result = extract_values(
-            stmts, [CK.OPERATING_INCOME], include_statements=False,
+            stmts, [CK.OPERATING_INCOME], mapper=[summary_mapper],
         )
 
         assert result[CK.OPERATING_INCOME] is None
@@ -374,7 +382,7 @@ class TestIncludeStatements:
         assert result[CK.BONDS_PAYABLE].value == Decimal("50000000")
 
     def test_all_keys_includes_statements(self) -> None:
-        """keys=None + include_statements=True で PL 本体の科目も含まれる。"""
+        """keys=None でデフォルトパイプラインなら PL 本体の科目も含まれる。"""
         stmts = _make_stmts(
             _make_line_item(
                 local_name="NetSalesSummaryOfBusinessResults",
@@ -391,6 +399,232 @@ class TestIncludeStatements:
 
         assert CK.REVENUE in result
         assert CK.OPERATING_INCOME in result
+
+    def test_single_mapper_no_implicit_fallback(self) -> None:
+        """mapper=単一関数 では暗黙的なフォールバックが追加されない。"""
+        stmts = _make_stmts(
+            _make_line_item(
+                local_name="NetSalesSummaryOfBusinessResults",
+                value=Decimal("1000000"),
+            ),
+            _make_line_item(
+                local_name="OperatingIncome",
+                value=Decimal("500000"),
+                label_ja="営業利益",
+                order=1,
+            ),
+        )
+        # summary_mapper のみ → statement_mapper は使われない
+        result = extract_values(stmts, mapper=summary_mapper)
+
+        assert result[CK.REVENUE] is not None
+        # OperatingIncome は summary_mapper ではマッチしない
+        assert CK.OPERATING_INCOME not in result
+
+    def test_pipeline_explicit_fallback(self) -> None:
+        """カスタム→summary→statement の明示的パイプライン。"""
+        custom = dict_mapper(
+            {"MyCustomConcept": CK.REVENUE}, name="custom",
+        )
+        stmts = _make_stmts(
+            _make_line_item(
+                local_name="MyCustomConcept",
+                value=Decimal("9999"),
+                label_ja="カスタム売上",
+            ),
+            _make_line_item(
+                local_name="OperatingIncome",
+                value=Decimal("500000"),
+                label_ja="営業利益",
+                order=1,
+            ),
+        )
+        result = extract_values(
+            stmts,
+            [CK.REVENUE, CK.OPERATING_INCOME],
+            mapper=[custom, summary_mapper, statement_mapper],
+        )
+
+        assert result[CK.REVENUE] is not None
+        assert result[CK.REVENUE].value == Decimal("9999")
+        assert result[CK.REVENUE].mapper_name == "custom"
+        assert result[CK.OPERATING_INCOME] is not None
+        assert result[CK.OPERATING_INCOME].mapper_name == "statement_mapper"
+
+    def test_priority_earlier_mapper_wins(self) -> None:
+        """パイプライン先頭のマッパーが後方より優先される。"""
+        custom = dict_mapper(
+            {"OperatingIncome": CK.OPERATING_INCOME}, name="custom_oi",
+        )
+        stmts = _make_stmts(
+            _make_line_item(
+                local_name="OperatingIncome",
+                value=Decimal("500000"),
+                label_ja="営業利益",
+            ),
+        )
+        # custom が先 → custom が勝つ
+        result = extract_values(
+            stmts, [CK.OPERATING_INCOME],
+            mapper=[custom, statement_mapper],
+        )
+
+        assert result[CK.OPERATING_INCOME] is not None
+        assert result[CK.OPERATING_INCOME].mapper_name == "custom_oi"
+
+    def test_priority_summary_over_statement(self) -> None:
+        """item 出現順に関係なく summary_mapper が statement_mapper に勝つ。
+
+        回帰テスト: 3パス→1パス移行で優先度逆転が起きないことを検証。
+        """
+        # statement 先、summary 後の item 順序
+        pl_item = _make_line_item(
+            local_name="NetSales",
+            value=Decimal("999999"),
+            label_ja="売上高（PL）",
+            order=0,
+        )
+        summary_item = _make_line_item(
+            local_name="NetSalesSummaryOfBusinessResults",
+            value=Decimal("1000000"),
+            label_ja="売上高（Summary）",
+            order=1,
+        )
+        stmts = _make_stmts(pl_item, summary_item)
+
+        result = extract_values(stmts, [CK.REVENUE])
+
+        assert result[CK.REVENUE] is not None
+        assert result[CK.REVENUE].item is summary_item
+        assert result[CK.REVENUE].mapper_name == "summary_mapper"
+
+    def test_mapper_name_summary(self) -> None:
+        """デフォルトで summary マッチ → mapper_name="summary_mapper"。"""
+        stmts = _make_stmts(
+            _make_line_item(local_name="NetSalesSummaryOfBusinessResults"),
+        )
+        result = extract_values(stmts, [CK.REVENUE])
+
+        assert result[CK.REVENUE] is not None
+        assert result[CK.REVENUE].mapper_name == "summary_mapper"
+
+    def test_mapper_name_statement(self) -> None:
+        """デフォルトで statement マッチ → mapper_name="statement_mapper"。"""
+        stmts = _make_stmts(
+            _make_line_item(
+                local_name="OperatingIncome",
+                value=Decimal("500000"),
+                label_ja="営業利益",
+            ),
+        )
+        result = extract_values(stmts, [CK.OPERATING_INCOME])
+
+        assert result[CK.OPERATING_INCOME] is not None
+        assert result[CK.OPERATING_INCOME].mapper_name == "statement_mapper"
+
+    def test_extract_values_no_mapper(self) -> None:
+        """mapper=None（デフォルト）で従来と同一結果。"""
+        stmts = _make_stmts(
+            _make_line_item(
+                local_name="NetSalesSummaryOfBusinessResults",
+                value=Decimal("1000000"),
+            ),
+            _make_line_item(
+                local_name="OperatingIncome",
+                value=Decimal("500000"),
+                label_ja="営業利益",
+                order=1,
+            ),
+        )
+        result = extract_values(stmts, [CK.REVENUE, CK.OPERATING_INCOME])
+
+        assert result[CK.REVENUE] is not None
+        assert result[CK.REVENUE].value == Decimal("1000000")
+        assert result[CK.OPERATING_INCOME] is not None
+        assert result[CK.OPERATING_INCOME].value == Decimal("500000")
+
+
+# ---------------------------------------------------------------------------
+# TestCKWarning
+# ---------------------------------------------------------------------------
+
+
+class TestCKWarning:
+    """CK typo 警告のテスト。"""
+
+    def test_unknown_ck_warns(self) -> None:
+        """keys=None で未知 CK を返した場合に UserWarning が発行される。"""
+        custom = dict_mapper(
+            {"SomeItem": "unknown_ck_typo"}, name="typo_mapper",
+        )
+        stmts = _make_stmts(
+            _make_line_item(
+                local_name="SomeItem",
+                value=Decimal("100"),
+                label_ja="何か",
+            ),
+        )
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            result = extract_values(stmts, mapper=custom)
+
+        assert "unknown_ck_typo" in result
+        assert any("unknown_ck_typo" in str(warning.message) for warning in w)
+
+    def test_unknown_ck_no_warn_with_keys(self) -> None:
+        """keys を明示指定した場合は CK typo 警告なし。"""
+        custom = dict_mapper(
+            {"SomeItem": "my_custom_key"}, name="custom",
+        )
+        stmts = _make_stmts(
+            _make_line_item(
+                local_name="SomeItem",
+                value=Decimal("100"),
+                label_ja="何か",
+            ),
+        )
+        with warnings.catch_warnings(record=True) as w:
+            warnings.simplefilter("always")
+            result = extract_values(
+                stmts, ["my_custom_key"], mapper=custom,
+            )
+
+        assert result["my_custom_key"] is not None
+        assert not any("タイポ" in str(warning.message) for warning in w)
+
+
+# ---------------------------------------------------------------------------
+# TestRegressionPriorityInversion
+# ---------------------------------------------------------------------------
+
+
+class TestRegressionPriorityInversion:
+    """3パス→1パス移行の回帰テスト。"""
+
+    def test_regression_priority_inversion(self) -> None:
+        """NetSales（statement）と NetSalesSummary（summary）が同じ CK に解決。
+
+        item の出現順に関係なく summary 側が採用される。
+        """
+        # statement item が先に出現
+        pl_item = _make_line_item(
+            local_name="NetSales",
+            value=Decimal("999"),
+            label_ja="売上高（PL）",
+            order=0,
+        )
+        summary_item = _make_line_item(
+            local_name="NetSalesSummaryOfBusinessResults",
+            value=Decimal("1000"),
+            label_ja="売上高（Summary）",
+            order=1,
+        )
+        stmts = _make_stmts(pl_item, summary_item)
+        result = extract_values(stmts, [CK.REVENUE])
+
+        assert result[CK.REVENUE] is not None
+        assert result[CK.REVENUE].value == Decimal("1000")
+        assert result[CK.REVENUE].item is summary_item
 
 
 # ---------------------------------------------------------------------------
@@ -534,7 +768,7 @@ class TestExtractedToDict:
                 canonical_key="revenue",
                 value=Decimal("1000000"),
                 item=_make_line_item(),
-                source="summary",
+                mapper_name="summary_mapper",
             ),
             "ordinary_income": ExtractedValue(
                 canonical_key="ordinary_income",
@@ -543,7 +777,7 @@ class TestExtractedToDict:
                     local_name="OrdinaryIncomeLossSummaryOfBusinessResults",
                     label_ja="経常利益",
                 ),
-                source="summary",
+                mapper_name="summary_mapper",
             ),
         }
         result = extracted_to_dict(extracted)
@@ -560,7 +794,7 @@ class TestExtractedToDict:
                 canonical_key="revenue",
                 value=Decimal("1000000"),
                 item=_make_line_item(),
-                source="summary",
+                mapper_name="summary_mapper",
             ),
             "total_assets": None,
         }
@@ -574,3 +808,143 @@ class TestExtractedToDict:
     def test_empty_dict(self) -> None:
         """空辞書の変換。"""
         assert extracted_to_dict({}) == {}
+
+
+# ---------------------------------------------------------------------------
+# TestLinkbaseMapperPipeline
+# ---------------------------------------------------------------------------
+
+
+class TestLinkbaseMapperPipeline:
+    """definition_mapper / calc_mapper のパイプライン統合テスト。"""
+
+    def test_definition_mapper_fallback(self) -> None:
+        """summary/statement でヒットしない独自概念が definition_mapper でヒット。"""
+        stmts = Statements(
+            _items=(
+                _make_line_item(
+                    local_name="X_CompanySpecificRevenue",
+                    value=Decimal("999999"),
+                    label_ja="独自売上高",
+                ),
+            ),
+            _definition_linkbase={
+                "role/PL": type("FakeTree", (), {
+                    "arcs": (
+                        type("FakeArc", (), {
+                            "from_concept": "NetSales",
+                            "to_concept": "X_CompanySpecificRevenue",
+                            "from_href": "jppfs_cor_2025-11-01.xsd#NetSales",
+                            "to_href": "jpcrp030000.xsd#X_CompanySpecificRevenue",
+                            "arcrole": "http://www.xbrl.org/2003/arcrole/general-special",
+                            "order": 1.0,
+                        })(),
+                    ),
+                    "role_uri": "role/PL",
+                    "hypercubes": (),
+                })(),
+            },
+        )
+        result = extract_values(stmts, [CK.REVENUE])
+
+        assert result[CK.REVENUE] is not None
+        assert result[CK.REVENUE].value == Decimal("999999")
+        assert result[CK.REVENUE].mapper_name == "definition_mapper"
+
+    def test_calc_mapper_fallback(self) -> None:
+        """definition でもヒットしない場合に calc_mapper でヒット。"""
+        from edinet.xbrl.linkbase.calculation import (
+            CalculationArc,
+            CalculationLinkbase,
+            CalculationTree,
+        )
+
+        role = "http://example.com/role/PL"
+        arcs = (
+            CalculationArc(
+                parent="GrossProfit",
+                child="X_FilerSpecificProfit",
+                parent_href="jppfs.xsd#GrossProfit",
+                child_href="filer.xsd#X_FilerSpecificProfit",
+                weight=1,
+                order=1.0,
+                role_uri=role,
+            ),
+        )
+        tree = CalculationTree(
+            role_uri=role, arcs=arcs, roots=("GrossProfit",),
+        )
+        calc_lb = CalculationLinkbase(
+            source_path=None, trees={role: tree},
+        )
+
+        stmts = Statements(
+            _items=(
+                _make_line_item(
+                    local_name="X_FilerSpecificProfit",
+                    value=Decimal("12345"),
+                    label_ja="独自利益",
+                ),
+            ),
+            _calculation_linkbase=calc_lb,
+        )
+        result = extract_values(stmts, [CK.GROSS_PROFIT])
+
+        assert result[CK.GROSS_PROFIT] is not None
+        assert result[CK.GROSS_PROFIT].value == Decimal("12345")
+        assert result[CK.GROSS_PROFIT].mapper_name == "calc_mapper"
+
+    def test_linkbase_mappers_no_data(self) -> None:
+        """linkbase なしでも既存 summary/statement は同一結果。"""
+        stmts = _make_stmts(
+            _make_line_item(
+                local_name="NetSalesSummaryOfBusinessResults",
+                value=Decimal("1000"),
+            ),
+            _make_line_item(
+                local_name="OperatingIncome",
+                value=Decimal("500"),
+                label_ja="営業利益",
+                order=1,
+            ),
+        )
+        result = extract_values(stmts, [CK.REVENUE, CK.OPERATING_INCOME])
+
+        assert result[CK.REVENUE] is not None
+        assert result[CK.REVENUE].value == Decimal("1000")
+        assert result[CK.REVENUE].mapper_name == "summary_mapper"
+        assert result[CK.OPERATING_INCOME] is not None
+        assert result[CK.OPERATING_INCOME].value == Decimal("500")
+
+    def test_standard_concept_wins_over_linkbase(self) -> None:
+        """標準概念が summary/statement でヒットすれば linkbase マッパーは使われない。"""
+        stmts = Statements(
+            _items=(
+                _make_line_item(
+                    local_name="NetSales",
+                    value=Decimal("8888"),
+                    label_ja="売上高",
+                ),
+            ),
+            _definition_linkbase={
+                "role/PL": type("FakeTree", (), {
+                    "arcs": (
+                        type("FakeArc", (), {
+                            "from_concept": "TotalAssets",
+                            "to_concept": "NetSales",
+                            "from_href": "jppfs.xsd#TotalAssets",
+                            "to_href": "jppfs.xsd#NetSales",
+                            "arcrole": "http://www.xbrl.org/2003/arcrole/general-special",
+                            "order": 1.0,
+                        })(),
+                    ),
+                    "role_uri": "role/PL",
+                    "hypercubes": (),
+                })(),
+            },
+        )
+        result = extract_values(stmts, [CK.REVENUE])
+
+        assert result[CK.REVENUE] is not None
+        # statement_mapper で直接マッチするので definition_mapper は使われない
+        assert result[CK.REVENUE].mapper_name == "statement_mapper"

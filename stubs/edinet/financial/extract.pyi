@@ -1,6 +1,7 @@
 from collections.abc import Sequence
 from dataclasses import dataclass
 from decimal import Decimal
+from edinet.financial.mapper import ConceptMapper
 from edinet.models.financial import LineItem
 from typing import Any, Literal
 
@@ -16,23 +17,21 @@ class ExtractedValue:
             ``str``、nil または欠損の場合は ``None``。
         item: 元の ``LineItem``。``source_line``、``label_ja``、
             ``namespace_uri`` 等のトレーサビリティ情報を含む。
-        source: 抽出元レイヤー。
-
-            - ``"summary"``: SummaryOfBusinessResults から完全一致（信頼度最高）。
-            - ``"exact"``: PL/BS/CF 本体から辞書完全一致。
-            - ``"normalized"``: EDINET サフィックス剥離後に辞書引き（信頼度低）。
+        mapper_name: 値を採用したマッパー関数の名前。
+            ``getattr(mapper_fn, "__name__", None)`` で自動取得される。
+            例: ``"summary_mapper"``、``"statement_mapper"``、
+            ``"dict_mapper(3 entries)"``。
     '''
     canonical_key: str
     value: Decimal | str | None
     item: LineItem
-    source: Literal['summary', 'exact', 'normalized']
+    mapper_name: str | None
 
-def extract_values(source: Any, keys: Sequence[str] | None = None, *, period: Literal['current', 'prior'] | None = None, consolidated: bool | None = None, include_statements: bool = True) -> dict[str, ExtractedValue | None]:
+def extract_values(source: Any, keys: Sequence[str] | None = None, *, period: Literal['current', 'prior'] | None = None, consolidated: bool | None = None, mapper: ConceptMapper | Sequence[ConceptMapper] | None = None) -> dict[str, ExtractedValue | None]:
     '''正規化キーで財務データから値を抽出する。
 
-    ``Statements`` を渡すと ``_items`` 全体から SummaryOfBusinessResults
-    concept を走査する。``include_statements=True``（デフォルト）の場合、
-    Summary で取得できなかったキーを PL/BS/CF 本体からも補完する。
+    ``Statements`` を渡すと ``_items`` 全体をパイプラインマッパーで
+    1 パス走査する。
 
     Args:
         source: 抽出対象の ``Statements``。
@@ -45,8 +44,10 @@ def extract_values(source: Any, keys: Sequence[str] | None = None, *, period: Li
         consolidated: 連結フィルタ。
             ``True`` で連結、``False`` で個別。
             ``None`` の場合は全て。
-        include_statements: ``True``（デフォルト）の場合、Summary で
-            取得できなかったキーを PL/BS/CF 本体から補完する。
+        mapper: マッパーまたはマッパーのシーケンス。
+            ``None``（デフォルト）の場合は
+            ``[summary_mapper, statement_mapper]``。
+            単一 callable の場合は ``[callable]`` と同義。
 
     Returns:
         ``{canonical_key: ExtractedValue | None}`` の辞書。

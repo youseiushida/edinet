@@ -19,6 +19,9 @@ from edinet.financial.standards.statement_mappings import (
     normalize_concept,
     statement_concepts,
 )
+from edinet.financial.standards.statement_mappings import (
+    _OTHER as _STATEMENT_OTHER,  # noqa: PLC2701
+)
 
 
 # ===========================================================================
@@ -301,3 +304,32 @@ class TestTaxonomyExistence:
         """IFRS CF の全 concept が jpigp_cor XSD に実在する。"""
         missing = [c for c in statement_concepts("ifrs", "cf") if c not in jpigp_concepts]
         assert not missing, f"jpigp_cor XSD に存在しない IFRS CF concept: {missing}"
+
+    @pytest.fixture(scope="class")
+    def jpcrp_concepts(self) -> frozenset[str]:
+        """jpcrp_cor XSD の全 concept 名。"""
+        assert _TAXONOMY_ROOT is not None
+        return _collect_xsd_concepts(_TAXONOMY_ROOT, "jpcrp")
+
+    def test_other_concepts_exist(self, jpcrp_concepts: frozenset[str]) -> None:
+        """_OTHER の全 concept が jpcrp_cor XSD に実在する。"""
+        missing = [c for c in _STATEMENT_OTHER if c not in jpcrp_concepts]
+        assert not missing, f"jpcrp_cor XSD に存在しない _OTHER concept: {missing}"
+
+    def test_employees_concepts_exist(self, jpcrp_concepts: frozenset[str]) -> None:
+        """employees.py のハードコード概念名が jpcrp_cor XSD に実在する。"""
+        from edinet.financial.notes.employees import (
+            _CONCEPT_AVERAGE_AGE,  # noqa: PLC2701
+            _CONCEPT_AVERAGE_ANNUAL_SALARY,  # noqa: PLC2701
+            _CONCEPT_AVERAGE_SERVICE_YEARS,  # noqa: PLC2701
+            _CONCEPT_NUMBER_OF_EMPLOYEES,  # noqa: PLC2701
+        )
+
+        employee_concepts = [
+            _CONCEPT_NUMBER_OF_EMPLOYEES,
+            _CONCEPT_AVERAGE_AGE,
+            _CONCEPT_AVERAGE_SERVICE_YEARS,
+            _CONCEPT_AVERAGE_ANNUAL_SALARY,
+        ]
+        missing = [c for c in employee_concepts if c not in jpcrp_concepts]
+        assert not missing, f"jpcrp_cor XSD に存在しない employees concept: {missing}"

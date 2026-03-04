@@ -11,7 +11,25 @@
 
 [GitHub Repository](https://github.com/youseiushida/edinet)
 
+## 財務・非財務データ基盤 徹底比較マトリクス
 
+「edinet」ライブラリは、既存のAPIや高額な商用ベンダーとは異なるアプローチ（XBRLのグラフ探索）で財務データを抽出します。それぞれの強みと、依然として商用ベンダーに分がある領域（弱み）を整理しました。
+
+| 比較軸 | edinet (本ライブラリ) | 国内API (jquants等) | 国内商用プラットフォーム (SPEEDA, AstraManager等) | グローバルTier1ベンダー (Bloomberg, FactSet等) |
+| :--- | :--- | :--- | :--- | :--- |
+| **コスト** | **無料**（自社インフラ代のみ） | 月額数千〜数万円 | 年間約150万〜（法人契約・1アカウント、要問い合わせ） | 年間約450〜500万〜/1端末 |
+| **名寄せの仕組み** | **辞書引き＋リンクベース推論の4段パイプライン（100%決定論的）** | 金融庁標準CSVベース（独自科目除外） | ベンダー側の人海戦術 ＋ 独自アルゴリズム | グローバル標準への強制マッピング（アナリスト手作業含む） |
+| **データ反映ラグ** | **EDINET公開直後（パース約0.85秒/社）** | 数時間〜1日（サマリーは早い） | 数時間〜数日（深掘りデータほど遅い） | 同上（主要指標は早いが、注記やESGは遅延する） |
+| **粒度（解像度）** | **独自科目・セグメントを完全保持** | 標準科目のみ（丸め込み） | 業界比較のために丸め込まれる | グローバル比較のために丸め込まれる（日本固有の文脈が消える） |
+| **透明性（トレース）** | **完全（XBRL行番号、概念名まで追跡可能）** | 不可（ブラックボックス） | 不可（ベンダーの調整後数値） | 不可（「なぜこの値？」の検証にベンダーへの問い合わせが必要） |
+| **ESG / 非財務** | **設定（CK追加）次第で無限に抽出可能** | ほぼ非対応 | 別途プレミアムオプション（高額） | 充実しているが、独自のESGスコア化ブラックボックスが強い |
+| **[壁] 過去データの蓄積** | 直近数年〜次世代EDINET以降（調整は自前） | プラン依存：ライト5年〜プレミアム約15年（株式分割等は調整済み） | 20年以上の蓄積（コーポレートアクション調整済み） | Bloomberg 30年超、FactSet/LSEG等は20年程度（ベンダー差あり、コーポレートアクション調整済み） |
+| **[壁] 市場データ連携** | なし（財務・非財務特化。株価等は別途取得）| あり（株価API等とIDで容易に結合可能） | あり（プラットフォーム上で完結） | 完璧（Tickデータ、コンセンサス、マクロ指標とシームレスに結合） |
+| **[壁] 対象カバレッジ** | 日本国内のみ（EDINET提出企業） | 日本国内のみ | 国内中心〜一部アジア・グローバル | 全世界の主要取引所上場企業を網羅 |
+
+### edinet の戦略的ポジショニング
+
+edinet は「世界中の株価と業績を比較するツール」ではありません。日本の開示制度（EDINETタクソノミ）の仕様を極限までハックし、**「日本企業が市場に提出した生の構造化データから、商用ベンダーが切り捨てたアルファ（情報の非対称性）を最速で抽出する最上流エンジン」**です。市場データ連携や過去の株式分割調整などは、本ライブラリの出力結果を元に、利用者側（データサイエンティスト）のパイプラインで解決する設計思想です。
 
 ## インストール
 
@@ -247,7 +265,7 @@ sony_pl["売上収益"].value  # IFRS の Revenue
 
 | | `income_statement()` 等 | `extract_values()` |
 |:---|:---|:---|
-| **データソース** | Presentation Linkbase（タクソノミ定義） | 3 層信頼度モデル（Summary → 辞書 → 正規化） |
+| **データソース** | Presentation Linkbase（タクソノミ定義） | パイプラインマッパー（Summary → Statement） |
 | **取得範囲** | タクソノミ標準科目（提出者拡張は除外） | 主要指標（売上高・営業利益・のれん・有利子負債等） |
 | **表示順** | タクソノミの表示順序付き | なし（辞書） |
 | **基準横断** | 基準ごとに科目名が異なる | 基準を問わず同じキーで取得 |
@@ -286,15 +304,16 @@ result = extract_values(stmts, [CK.REVENUE], consolidated=False)
 
 rev = result[CK.REVENUE]
 print(rev.value)                 # Decimal('1234567000000')
-print(rev.source)                # "summary" / "exact" / "normalized"
+print(rev.mapper_name)           # "summary_mapper" / "statement_mapper"
 print(rev.item.label_ja.text)    # "売上高"（J-GAAP）or "売上収益"（IFRS）
 print(rev.item.local_name)       # マッチした concept 名
 
-# 信頼度でフィルタ（normalized を除外）
-safe = {k: v for k, v in result.items() if v and v.source != "normalized"}
+# マッパー名でフィルタ（summary のみ信頼）
+safe = {k: v for k, v in result.items() if v and v.mapper_name == "summary_mapper"}
 
 # Summary のみ（PL/BS/CF 本体からの補完を無効化）
-result = extract_values(stmts, [CK.REVENUE], include_statements=False)
+from edinet import summary_mapper
+result = extract_values(stmts, [CK.REVENUE], mapper=[summary_mapper])
 
 # pandas で複数企業を横並び
 import pandas as pd
@@ -317,19 +336,47 @@ df = pd.DataFrame([
 | `keys` | `None` | 抽出するキー。`None` で全マッピング可能科目 |
 | `period` | `None` | `"current"` / `"prior"` / `None`（全期間から先頭マッチ） |
 | `consolidated` | `None` | `True`（連結）/ `False`（個別）/ `None`（全区分） |
-| `include_statements` | `True` | `False` で層 2・3 を無効化（Summary のみ） |
+| `mapper` | `None` | マッパーまたはリスト。`None` で `[summary_mapper, statement_mapper, definition_mapper(), calc_mapper()]` |
 
-#### 3 層信頼度モデル
+#### パイプラインマッパー
 
-`extract_values()` は 3 層で値を探索し、`source` フィールドで出所を明示します。
+`extract_values()` はマッパーのパイプライン（リスト）で名寄せを行います。パイプラインの先頭マッパーほど高優先です。
 
-| 層 | `source` | データソース | 信頼度 |
+| デフォルトマッパー | `mapper_name` | データソース | 優先度 |
 |:---|:---|:---|:---|
-| 1 | `"summary"` | SummaryOfBusinessResults（完全一致） | 最高 |
-| 2 | `"exact"` | PL/BS/CF 本体 + 注記の辞書完全一致 | 高 |
-| 3 | `"normalized"` | EDINET サフィックス剥離後に辞書引き | 低 |
+| `summary_mapper` | `"summary_mapper"` | SummaryOfBusinessResults（義務記載） | 最高 |
+| `statement_mapper` | `"statement_mapper"` | PL/BS/CF 本体 + 注記（辞書 → 正規化） | 高 |
+| `definition_mapper()` | `"definition_mapper"` | Definition Linkbase（general-special で標準概念に遡上） | 中 |
+| `calc_mapper()` | `"calc_mapper"` | Calculation Linkbase（summation-item で親標準概念に遡上） | 低 |
 
-上位層の結果は下位層で上書きされません。
+カスタムマッパーを追加してパイプラインを拡張できます:
+
+```python
+from edinet import extract_values, summary_mapper, statement_mapper, dict_mapper
+
+# Excel/CSV のマッピングテーブルをそのまま利用
+my_mapper = dict_mapper({"MyCustomRevenue": "revenue"}, name="my_rules")
+
+# カスタム → summary → statement の順で評価
+result = extract_values(stmts, mapper=[my_mapper, summary_mapper, statement_mapper])
+```
+
+`definition_mapper()` / `calc_mapper()` はファクトリ関数です。デフォルト（`lookup=None`）では、リンクベースで遡上した標準概念名を `statement_mapper` と同じ組み込み辞書（statement_mappings）で CK に変換します。summary_mappings は使用しません（リンクベースの祖先にサマリー概念は出現しないため）。`lookup` 引数を指定すると、この辞書引きを任意の関数に差し替えられます:
+
+```python
+from edinet import definition_mapper, calc_mapper, dict_mapper, extract_values
+
+# 独自の名寄せ辞書
+my_map = {"NetSales": "売上高", "OperatingIncome": "営業利益"}
+
+# リンクベース解決にも同じ辞書を適用
+pipeline = [
+    dict_mapper(my_map),
+    definition_mapper(lookup=my_map.get),
+    calc_mapper(lookup=my_map.get),
+]
+result = extract_values(stmts, mapper=pipeline)
+```
 
 ## DataFrame 変換・エクスポート
 

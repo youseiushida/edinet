@@ -3,11 +3,10 @@
 会計基準（J-GAAP / IFRS / US-GAAP / JMIS）を意識せず、canonical key で
 SummaryOfBusinessResults および PL/BS/CF 本体から値を取り出す。
 
-v0.3.0 設計:
-    ``Statements`` を渡すと ``_items`` 全体をパイプラインマッパーで 1 パス走査する。
-    デフォルトパイプライン
-    ``[summary_mapper, statement_mapper, definition_mapper(), calc_mapper()]``
-    で名寄せを行う。
+v0.2.0 設計:
+    ``Statements`` を渡すと ``_items`` 全体から SummaryOfBusinessResults
+    concept を走査し、``include_statements=True``（デフォルト）の場合は
+    未取得キーを PL/BS/CF 本体からも補完する。
 
 使用例::
 
@@ -31,15 +30,11 @@ from decimal import Decimal
 from typing import Any, Literal
 
 from edinet.exceptions import EdinetWarning
-from edinet.financial.mapper import (
-    ConceptMapper,
-    MapperContext,
-    calc_mapper,
-    definition_mapper,
-    statement_mapper,
-    summary_mapper,
+from edinet.financial.standards.statement_mappings import (
+    lookup_statement_exact,
+    lookup_statement_normalized,
 )
-from edinet.financial.standards.canonical_keys import CK
+from edinet.financial.standards.summary_mappings import lookup_summary
 from edinet.models.financial import LineItem
 from edinet.financial.statements import (
     _is_consolidated as _check_consolidated,
@@ -47,9 +42,6 @@ from edinet.financial.statements import (
 )
 
 __all__ = ["ExtractedValue", "extract_values", "extracted_to_dict"]
-
-_CK_MEMBERS: frozenset[str] = frozenset(CK)
-"""CK enum メンバー集合。typo 警告の O(1) ルックアップ用。"""
 
 
 @dataclass(frozen=True, slots=True)
@@ -62,16 +54,17 @@ class ExtractedValue:
             ``str``、nil または欠損の場合は ``None``。
         item: 元の ``LineItem``。``source_line``、``label_ja``、
             ``namespace_uri`` 等のトレーサビリティ情報を含む。
-        mapper_name: 値を採用したマッパー関数の名前。
-            ``getattr(mapper_fn, "__name__", None)`` で自動取得される。
-            例: ``"summary_mapper"``、``"statement_mapper"``、
-            ``"dict_mapper(3 entries)"``。
+        source: 抽出元レイヤー。
+
+            - ``"summary"``: SummaryOfBusinessResults から完全一致（信頼度最高）。
+            - ``"exact"``: PL/BS/CF 本体から辞書完全一致。
+            - ``"normalized"``: EDINET サフィックス剥離後に辞書引き（信頼度低）。
     """
 
     canonical_key: str
     value: Decimal | str | None
     item: LineItem
-    mapper_name: str | None
+    source: Literal["summary", "exact", "normalized"]
 
 
 # ---------------------------------------------------------------------------
@@ -143,6 +136,133 @@ def _filter_item(
     return True
 
 
+def _extract_from_items(
+    items: tuple[LineItem, ...],
+    *,
+    period: Literal["current", "prior"] | None,
+    consolidated: bool | None,
+    dei: Any | None,
+) -> dict[str, LineItem]:
+    """_items から SummaryOfBusinessResults concept のみ走査する。
+
+    Args:
+        items: Statements._items（全 LineItem）。
+        period: 期間フィルタ。``"current"`` / ``"prior"`` / ``None``（全期間）。
+        consolidated: 連結フィルタ。``True`` / ``False`` / ``None``（全て）。
+        dei: DEI 情報（期間解決用）。
+
+    Returns:
+        ``{canonical_key: LineItem}`` の辞書（先頭優先）。
+    """
+    target_duration, target_instant = _resolve_periods(period, dei)
+
+    ck_to_item: dict[str, LineItem] = {}
+    for item in items:
+        # SummaryOfBusinessResults concept のみ走査
+        ck = lookup_summary(item.local_name)
+        if ck is None:
+            continue
+
+        if not _filter_item(
+            item,
+            period=period,
+            target_duration=target_duration,
+            target_instant=target_instant,
+            consolidated=consolidated,
+        ):
+            continue
+
+        if ck not in ck_to_item:
+            ck_to_item[ck] = item
+
+    return ck_to_item
+
+
+_SourcedItem = tuple[LineItem, Literal["summary", "exact", "normalized"]]
+"""``(LineItem, source)`` のペア。内部でのみ使用。"""
+
+
+def _extract_from_raw_items(
+    items: tuple[LineItem, ...],
+    missing_keys: set[str] | None,
+    *,
+    period: Literal["current", "prior"] | None,
+    target_duration: Any | None,
+    target_instant: Any | None,
+    consolidated: bool | None,
+) -> dict[str, _SourcedItem]:
+    """_items を直接走査して statement_mappings の CK を抽出する。
+
+    PL/BS/CF メソッドを経由せず ``_items`` を走査するため:
+        - ConceptSet 構築コストがゼロ
+        - 注記セクション（R&D 費等）の科目も取得可能
+
+    信頼度を維持するため 2 パスで走査する:
+        1. 辞書完全一致（``lookup_statement_exact``）→ source="exact"
+        2. 正規化フォールバック（``lookup_statement_normalized``、
+           パス 1 で未取得のキーのみ）→ source="normalized"
+
+    Args:
+        items: ``Statements._items``（全 LineItem）。
+        missing_keys: 取得対象のキー集合。
+            ``None`` の場合はキーフィルタなし（全科目走査）。
+        period: 期間フィルタ。
+        target_duration: 解決済み DurationPeriod。
+        target_instant: 解決済み InstantPeriod。
+        consolidated: 連結フィルタ。
+
+    Returns:
+        ``{canonical_key: (LineItem, source)}`` の辞書。
+        辞書完全一致が正規化フォールバックより常に優先される。
+    """
+    ck_to_item: dict[str, _SourcedItem] = {}
+
+    # パス 1: 辞書完全一致（信頼度高）
+    for item in items:
+        ck = lookup_statement_exact(item.local_name)
+        if ck is None:
+            continue
+        if missing_keys is not None and ck not in missing_keys:
+            continue
+        if not _filter_item(
+            item,
+            period=period,
+            target_duration=target_duration,
+            target_instant=target_instant,
+            consolidated=consolidated,
+        ):
+            continue
+        if ck not in ck_to_item:
+            ck_to_item[ck] = (item, "exact")
+
+    # パス 2: 正規化フォールバック（パス 1 で未取得のキーのみ）
+    remaining = (
+        missing_keys - set(ck_to_item) if missing_keys is not None else None
+    )
+    if remaining is not None and not remaining:
+        return ck_to_item  # 全キー取得済み
+
+    for item in items:
+        ck = lookup_statement_normalized(item.local_name)
+        if ck is None:
+            continue
+        if remaining is not None and ck not in remaining:
+            continue
+        if ck in ck_to_item:
+            continue  # パス 1 の結果を上書きしない
+        if not _filter_item(
+            item,
+            period=period,
+            target_duration=target_duration,
+            target_instant=target_instant,
+            consolidated=consolidated,
+        ):
+            continue
+        ck_to_item[ck] = (item, "normalized")
+
+    return ck_to_item
+
+
 # ---------------------------------------------------------------------------
 # 公開 API
 # ---------------------------------------------------------------------------
@@ -154,12 +274,13 @@ def extract_values(
     *,
     period: Literal["current", "prior"] | None = None,
     consolidated: bool | None = None,
-    mapper: ConceptMapper | Sequence[ConceptMapper] | None = None,
+    include_statements: bool = True,
 ) -> dict[str, ExtractedValue | None]:
     """正規化キーで財務データから値を抽出する。
 
-    ``Statements`` を渡すと ``_items`` 全体をパイプラインマッパーで
-    1 パス走査する。
+    ``Statements`` を渡すと ``_items`` 全体から SummaryOfBusinessResults
+    concept を走査する。``include_statements=True``（デフォルト）の場合、
+    Summary で取得できなかったキーを PL/BS/CF 本体からも補完する。
 
     Args:
         source: 抽出対象の ``Statements``。
@@ -172,10 +293,8 @@ def extract_values(
         consolidated: 連結フィルタ。
             ``True`` で連結、``False`` で個別。
             ``None`` の場合は全て。
-        mapper: マッパーまたはマッパーのシーケンス。
-            ``None``（デフォルト）の場合は
-            ``[summary_mapper, statement_mapper, definition_mapper(), calc_mapper()]``。
-            単一 callable の場合は ``[callable]`` と同義。
+        include_statements: ``True``（デフォルト）の場合、Summary で
+            取得できなかったキーを PL/BS/CF 本体から補完する。
 
     Returns:
         ``{canonical_key: ExtractedValue | None}`` の辞書。
@@ -199,93 +318,56 @@ def extract_values(
             f"Statements を渡してください（got {type(source).__name__}）"
         )
 
-    # マッパーパイプライン解決
-    if mapper is None:
-        pipeline: list[ConceptMapper] = [
-            summary_mapper, statement_mapper,
-            definition_mapper(), calc_mapper(),
-        ]
-    elif callable(mapper):
-        pipeline = [mapper]
-    else:
-        pipeline = list(mapper)
-
-    # MapperContext 構築
-    from edinet.xbrl.taxonomy.custom import _build_parent_index
-
-    ctx = MapperContext(
+    # Summary 走査 → source="summary"
+    summary_items = _extract_from_items(
+        source._items,  # noqa: SLF001
+        period=period,
+        consolidated=consolidated,
         dei=source._dei,  # noqa: SLF001
-        detected_standard=source._detected_standard,  # noqa: SLF001
-        industry_code=source._industry_code,  # noqa: SLF001
-        definition_parent_index=_build_parent_index(
-            source._definition_linkbase,  # noqa: SLF001
-        ),
-        calculation_linkbase=source._calculation_linkbase,  # noqa: SLF001
     )
+    ck_sourced: dict[str, _SourcedItem] = {
+        ck: (item, "summary") for ck, item in summary_items.items()
+    }
 
-    # 期間解決（1回のみ）
-    target_duration, target_instant = _resolve_periods(
-        period, source._dei,  # noqa: SLF001
-    )
+    # _items 直接走査で PL/BS/CF + 注記科目を補完
+    if include_statements:
+        if keys is not None:
+            missing: set[str] | None = {str(k) for k in keys} - set(ck_sourced)
+        else:
+            missing = None  # keys=None: 全科目を追加走査
 
-    # キーフィルタ
-    target_keys: set[str] | None = (
-        {str(k) for k in keys} if keys is not None else None
-    )
+        if missing is None or missing:
+            target_duration, target_instant = _resolve_periods(
+                period, source._dei,  # noqa: SLF001
+            )
+            raw_sourced = _extract_from_raw_items(
+                source._items,  # noqa: SLF001
+                missing,
+                period=period,
+                target_duration=target_duration,
+                target_instant=target_instant,
+                consolidated=consolidated,
+            )
+            for ck, sourced in raw_sourced.items():
+                if ck not in ck_sourced:
+                    ck_sourced[ck] = sourced
 
-    # 1パスマッパーループ
-    # ck_to_item: {canonical_key: (LineItem, pipeline_position, mapper_name)}
-    ck_to_item: dict[str, tuple[LineItem, int, str | None]] = {}
-
-    for item in source._items:  # noqa: SLF001
-        if not _filter_item(
-            item,
-            period=period,
-            target_duration=target_duration,
-            target_instant=target_instant,
-            consolidated=consolidated,
-        ):
-            continue
-
-        for idx, mapper_fn in enumerate(pipeline):
-            ck = mapper_fn(item, ctx)
-            if ck is None:
-                continue
-            if target_keys is not None and ck not in target_keys:
-                continue
-            # CK typo 警告（keys=None 時のみ）
-            if target_keys is None and ck not in _CK_MEMBERS:
-                warnings.warn(
-                    f"マッパーが未知の CK '{ck}' を返しました。"
-                    f"タイポの可能性があります。",
-                    UserWarning,
-                    stacklevel=2,
-                )
-            name = getattr(mapper_fn, "__name__", None)
-            existing = ck_to_item.get(ck)
-            if existing is None or idx < existing[1]:
-                ck_to_item[ck] = (item, idx, name)
-            break  # 1 item に対して最初にマッチしたマッパーを採用
-
-    # 結果構築
     if keys is None:
         return {
             ck: ExtractedValue(
-                canonical_key=ck, value=item.value, item=item,
-                mapper_name=name,
+                canonical_key=ck, value=item.value, item=item, source=src,
             )
-            for ck, (item, _idx, name) in ck_to_item.items()
+            for ck, (item, src) in ck_sourced.items()
         }
 
     result: dict[str, ExtractedValue | None] = {}
     for key in keys:
         key_str = str(key)
-        entry = ck_to_item.get(key_str)
-        if entry is not None:
-            item, _idx, name = entry
+        sourced = ck_sourced.get(key_str)
+        if sourced is not None:
+            item, src = sourced
             result[key_str] = ExtractedValue(
-                canonical_key=key_str, value=item.value, item=item,
-                mapper_name=name,
+                canonical_key=key_str, value=item.value, item=item, source=src,
             )
         else:
             result[key_str] = None

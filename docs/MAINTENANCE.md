@@ -1,8 +1,8 @@
-# 運用保守ガイド（Wave 4 完了版）
+# 運用保守ガイド（V030 完了版）
 
-> **作成日**: 2026-03-02
-> **前版**: `MAINTENANCE.md`（タクソノミ年次更新のみ）、`MAINTENANCE.new.md`（Wave 3 完了時点の全量調査）
-> **本版の変更点**: Wave 4（自動化統合 & スリム化）完了後の実態を反映。フィールド構造・concept 数・コード例を全て更新
+> **作成日**: 2026-03-04
+> **前版**: Wave 4 完了版（2026-03-02）
+> **本版の変更点**: V030（パイプラインマッパーリファクタ）完了後の実態を反映。存在しないファイル・dataclass の記述を全面修正。数値を実コードと突合
 
 ---
 
@@ -18,17 +18,17 @@
 
 # Part 1: ハードコード全量マップ
 
-2026-03-02 時点（Wave 4 完了後）のコードベース全量調査に基づく。
+2026-03-04 時点のコードベース全量調査に基づく。
 
 ## サマリ
 
 | 保守頻度 | カテゴリ | エントリ総数 | ファイル数 | 生成方法 |
 |---|---|---|---|---|
 | **月次〜四半期** | 自動生成マスタ | 18,013 | 3 | スクリプト |
-| **年次** | タクソノミ concept マッピング | 301 | 9 | 手動 + CK 定数 |
+| **年次** | タクソノミ concept マッピング | 352 | 3 | 手動 + CK 定数 |
 | **数年に一度** | 法令・API 仕様 | ~100 | 5 | 手動 |
-| **不変** | XBRL/EDINET 構造定数 | ~55 | 8 | — |
-| | **合計** | **~18,439** | **25** | |
+| **不変** | XBRL/EDINET 構造定数 | ~60 | 8 | — |
+| | **合計** | **~18,525** | **19** | |
 
 ## 全ファイル一覧
 
@@ -36,7 +36,7 @@
 
 | ファイル | 行数 | エントリ数 | ソースデータ | 生成スクリプト |
 |---|---|---|---|---|
-| `models/edinet_code.py` | 168,411 | 11,223 | `EdinetcodeDlInfo.csv` | `tools/generate_edinet_codes.py` |
+| `models/edinet_code.py` | 168,580 | 11,223 | `EdinetcodeDlInfo.csv` | `tools/generate_edinet_codes.py` |
 | `models/fund_code.py` | 70,209 | 6,377 | `FundcodeDlInfo.csv` | `tools/generate_fund_codes.py` |
 | `models/form_code.py` | 3,778 | 413 | `ESE140327.xlsx` | `tools/generate_form_codes.py` |
 
@@ -44,19 +44,27 @@
 
 | ファイル | concept 数 | 参照タクソノミ | 内容 |
 |---|---|---|---|
-| `financial/standards/canonical_keys.py` | **100 CK 定数** | — | 全 canonical_key の StrEnum 定数 |
-| `financial/standards/summary_mappings.py` | 77 | `jpcrp_cor` | SummaryOfBusinessResults → CK（4基準統合） |
-| `financial/standards/statement_mappings.py` | ~130 | `jppfs_cor`, `jpigp_cor` | PL/BS/CF 本体 → CK（J-GAAP + IFRS）+ 正規化レイヤー |
-| **合計** | **~207 + 100 CK** | | |
+| `financial/standards/canonical_keys.py` | **120 CK 定数** | — | 全 canonical_key の StrEnum 定数 |
+| `financial/standards/summary_mappings.py` | 97 | `jpcrp_cor` | SummaryOfBusinessResults → CK（4基準統合） |
+| `financial/standards/statement_mappings.py` | 135 | `jppfs_cor`, `jpigp_cor` | PL/BS/CF 本体 → CK（J-GAAP + IFRS）+ 正規化レイヤー |
+| **合計** | **232 + 120 CK** | | |
 
-#### statement_mappings.py の 3 層マッチング
+#### statement_mappings.py のマッチング戦略
 
 `lookup_statement()` は防御的 2 段マッチングを使用:
 
 1. **辞書完全一致** (`lookup_statement_exact`): `_CONCEPT_INDEX` から O(1) で取得
 2. **正規化フォールバック** (`lookup_statement_normalized`): EDINET サフィックス（`IFRS`, `JGAAP` 等）+ ポジションタグ（`CA`, `CL` 等）を剥離後に辞書引き
 
-`extract_values()` は `_items` を 2 パスで走査し、exact の結果を normalized が上書きしない。
+#### パイプラインマッパー（`mapper.py`）
+
+`extract_values()` はパイプラインマッパーで `_items` を 1 パス走査する。デフォルトパイプラインは `[summary_mapper, statement_mapper]`。パイプライン位置（先頭が高優先）で同一 CK の競合を解決する。
+
+| マッパー | 役割 |
+|---|---|
+| `summary_mapper` | `lookup_summary()` を呼ぶ。SummaryOfBusinessResults 概念のマッチ |
+| `statement_mapper` | `lookup_statement_exact()` → `lookup_statement_normalized()` の 2 段フォールバック |
+| `dict_mapper()` | ユーザー辞書からの O(1) ルックアップ（ファクトリ関数） |
 
 ### 法令・API 仕様（手動保守、低頻度）
 
@@ -72,13 +80,13 @@
 
 | ファイル | エントリ数 | 内容 | 依存先 |
 |---|---|---|---|
-| `xbrl/_namespaces.py` | 11 URI + 2 regex | XBRL 標準 NS + EDINET URL パターン | W3C XBRL 仕様 |
+| `xbrl/_namespaces.py` | 13 URI + 2 regex | XBRL 標準 NS + EDINET URL パターン | W3C XBRL 仕様 |
 | `xbrl/taxonomy/concept_sets.py` | 11 キーワード + 1 regex | role URI 分類 | EDINET 設定規約書 |
-| `xbrl/statements.py` | 3 定数 | 連結軸名 | EDINET 次元命名規則 |
+| `financial/statements.py` | 3 定数 | 連結軸名 | EDINET 次元命名規則 |
 | `xbrl/contexts.py` | 2 定数 | 連結軸名（statements.py と重複） | 同上 |
 | `xbrl/units.py` | 3 プレフィクス | iso4217, xbrli, utr | XBRL 仕様 |
 | `xbrl/dei.py` | 2 NS パターン | DEI NS | EDINET 制度 |
-| `models/financial.py` | 3 enum + 3 ラベル | StatementType | 会計の基本構造 |
+| `models/financial.py` | 5 enum + 5 ラベル | StatementType（PL/BS/CF/SS/CI） | 会計の基本構造 |
 | `api/download.py` | 5 サイズ上限 | ZIP 展開制限 | セキュリティ設計 |
 
 ---
@@ -132,61 +140,41 @@ EDINET タクソノミは **年1回（11月1日付）** で改定される。
 5. uv run stubgen src/edinet --include-docstrings -o stubs でスタブ再生成
 ```
 
-### 各マッピングのフィールド構成（Wave 4 後）
+### マッピングデータの構成
 
-Wave 4 で `label_ja`, `label_en`, `display_order`, `period_type`, `is_total` は全て削除済み。各 ConceptMapping は以下のフィールドのみ:
+concept → CK のマッピングは 2 ファイルに集約されている:
 
-**jgaap.py `ConceptMapping`**:
-
-| フィールド | 内容 | 保守方法 |
-|---|---|---|
-| `concept` | タクソノミの concept ローカル名 | タクソノミ突合 |
-| `canonical_key` | CK StrEnum 定数 | 人間の知識（typo は StrEnum が防止） |
-| `statement_type` | PL/BS/CF（KPI は None） | レガシーフォールバック用 |
-| `is_jgaap_specific` | J-GAAP 固有フラグ | 人間の知識 |
-
-**ifrs.py `IFRSConceptMapping`**:
-
-| フィールド | 内容 |
-|---|---|
-| `concept` | タクソノミの concept ローカル名 |
-| `canonical_key` | CK StrEnum 定数 |
-| `statement_type` | PL/BS/CF（KPI/CI は None） |
-| `is_ifrs_specific` | IFRS 固有フラグ |
-| `jgaap_concept` | J-GAAP 対応（jgaap レジストリに実在するか _validate_registry で検証） |
-| `mapping_note` | 補足説明 |
-
-**usgaap.py `_SummaryConceptDef`**:
+**summary_mappings.py `SummaryMapping`**:
 
 | フィールド | 内容 | 保守方法 |
 |---|---|---|
-| `key` | 正規化キー（CK と同一値） | canonical_keys.py と統一 |
-| `concept_local_name` | jpcrp_cor の concept ローカル名 | タクソノミ突合 |
-| `jgaap_concept` | 対応する J-GAAP concept（None 可） | jgaap.py と突合 |
-| `label_ja` | 日本語ラベル | jpcrp_cor ラベルファイル突合 |
-| `label_en` | 英語ラベル | jpcrp_cor ラベルファイル突合 |
+| `concept` | jpcrp_cor のローカル名（例: `"NetSalesSummaryOfBusinessResults"`） | タクソノミ突合 |
+| `canonical_key` | CK StrEnum 定数（例: `CK.REVENUE`） | 人間の知識（typo は StrEnum が防止） |
+| `standard` | 会計基準識別子（`"jgaap"` / `"ifrs"` / `"usgaap"` / `"jmis"`） | タクソノミ突合 |
 
-**sector/*.py `SectorConceptMapping`**:
+エントリは `_JGAAP`（40件）、`_IFRS`（19件）、`_USGAAP`（19件）、`_JMIS`（19件）の 4 タプルに分かれている。
 
-| フィールド | 内容 |
-|---|---|
-| `concept` | タクソノミの concept ローカル名 |
-| `sector_key` | 業種内ローカルの正規化キー |
-| `industry_codes` | 適用業種コード |
-| `general_equivalent` | CK StrEnum 定数（一般事業会社の canonical_key への翻訳） |
-| `mapping_note` | 補足説明 |
+**statement_mappings.py（plain dict）**:
+
+| 構造 | 内容 | 保守方法 |
+|---|---|---|
+| `_JGAAP_PL`, `_JGAAP_BS`, `_JGAAP_CF` | J-GAAP の concept → CK 辞書 | タクソノミ突合 |
+| `_IFRS_PL`, `_IFRS_BS`, `_IFRS_CF` | IFRS の concept → CK 辞書 | タクソノミ突合 |
+| `_CONCEPT_INDEX` | 上記 6 辞書のマージ | 自動（dict の `**` 展開） |
+
+各辞書は `{concept_local_name: CK.XXX}` の plain dict であり、dataclass は使用していない。
 
 ### 修正パターン
 
 **concept 名が変更された場合:**
 
 ```python
-# jgaap.py の _PL_MAPPINGS 内:
+# statement_mappings.py の _JGAAP_PL 内:
 # Before:
-ConceptMapping("NetSales", CK.REVENUE, _PL),
+"NetSales": CK.REVENUE,
 # After:
-ConceptMapping("Revenue", CK.REVENUE, _PL),
-#               ^^^^^^^^ concept だけ変更。CK 定数は不変
+"Revenue": CK.REVENUE,
+# ^^^^^^^^ concept だけ変更。CK 定数は不変
 ```
 
 **新 concept が追加された場合:**
@@ -197,25 +185,14 @@ class CK(StrEnum):
     # --- PL ---
     NEW_CONCEPT = "new_concept"  # 追加
 
-# 2. jgaap.py or ifrs.py のマッピングに追加
-IFRSConceptMapping(
-    "NewConceptIFRS",
-    CK.NEW_CONCEPT,
-    StatementType.BALANCE_SHEET,
-    jgaap_concept="NewConcept",
-)
-```
+# 2. statement_mappings.py の対応辞書に追加
+_JGAAP_PL: dict[str, str] = {
+    ...,
+    "NewConcept": CK.NEW_CONCEPT,  # 追加
+}
 
-**業種モジュールでの追加:**
-
-```python
-# sector/banking.py の _PL_BANKING_MAPPINGS に追加:
-SectorConceptMapping(
-    concept="NewBankingConceptBNK",
-    sector_key="new_banking_concept_bnk",
-    industry_codes=_CODES,
-    general_equivalent=CK.REVENUE,
-),
+# 3. summary 版がある場合は summary_mappings.py にも追加
+SummaryMapping("NewConceptSummaryOfBusinessResults", CK.NEW_CONCEPT, "jgaap"),
 ```
 
 ### 自動追従するファイル（タクソノミ更新の影響を受けない）
@@ -225,17 +202,14 @@ SectorConceptMapping(
 | `taxonomy/concept_sets.py` | Presentation Linkbase を毎回スキャンして動的導出。**自動追従** |
 | `taxonomy/__init__.py` (TaxonomyResolver) | ラベルリンクベースを動的読み込み。**自動追従** |
 | `standards/normalize.py` | statement_mappings へのファサード。自身に concept 名なし |
-| `financial/extract.py` | 3 層信頼度モデル（summary → exact → normalized）で抽出。マッピングデータなし |
-| `xbrl/statements.py` | normalize 経由で概念セットを取得。直接の concept 依存なし |
+| `financial/extract.py` | パイプラインマッパーで 1 パス抽出。マッピングデータなし |
+| `financial/mapper.py` | `summary_mapper` / `statement_mapper` / `dict_mapper` の定義。マッピングデータは summary_mappings / statement_mappings に委譲 |
+| `financial/statements.py` | normalize 経由で概念セットを取得。直接の concept 依存なし |
 | `xbrl/parser.py` | XML 構造のパースのみ |
 | `xbrl/_namespaces.py` | namespace URI をバージョン非依存の正規表現で処理 |
 | `standards/detect.py` | DEI 値とモジュールグループ名で判定。バージョン非依存 |
 | `xbrl/contexts.py`, `xbrl/units.py` | XML 構造解析のみ |
 | `linkbase/*.py` | XML 構造のパースのみ |
-
-### 二重管理の注意点
-
-banking.py の `_COMMON_*` タプル（13件）は `jppfs_cor` の concept 名を使い、`jgaap.py` と同一の名称が重複定義されている。`jppfs_cor` の concept 名が変更された場合は **両方** を修正する必要がある。
 
 ---
 
@@ -278,43 +252,45 @@ concept_sets.py は **concept 名を一切ハードコードしていない**。
 
 # Part 3: 自動化の現状
 
-## Wave 4 で達成された自動化
+## 現在のアーキテクチャ
 
-Wave 3 完了時点では、jgaap.py / ifrs.py / sector/*.py の各 ConceptMapping に 8〜10 フィールドがハードコードされていた。Wave 4 で以下のフィールドを削除し、自動パイプラインに接続した:
+concept → CK のマッピングは以下の 3 ファイルに集約されている。dataclass やメタデータフィールドは最小限で、plain dict + `SummaryMapping`（3 フィールド）のみ:
 
-| フィールド | Wave 3 | Wave 4 後 | 代替パイプライン |
-|---|---|---|---|
-| `label_ja` | ハードコード | **削除済み** | TaxonomyResolver (`taxonomy/__init__.py`) |
-| `label_en` | ハードコード | **削除済み** | TaxonomyResolver |
-| `display_order` | ハードコード | **削除済み** | concept_sets の `ConceptEntry.order` |
-| `period_type` | ハードコード | **削除済み** | どこからも参照されていなかった |
-| `is_total` | ハードコード | **削除済み** | concept_sets の `preferredLabel` |
-| `statement_type` (sector) | ハードコード | **削除済み** | concept_sets で分類 |
-| `canonical_key` (sector) | 名前が misleading | `sector_key` にリネーム | — |
+| ファイル | データ構造 | concept 数 |
+|---|---|---|
+| `canonical_keys.py` | `CK` StrEnum | 120 定数 |
+| `summary_mappings.py` | `SummaryMapping(concept, canonical_key, standard)` | 97 |
+| `statement_mappings.py` | `dict[str, str]` (concept → CK) | 135 |
+
+ラベル（`label_ja` / `label_en`）、表示順（`display_order`）、合計フラグ（`is_total`）等のメタデータはマッピングに含まれず、以下のパイプラインで動的に取得される:
+
+| メタデータ | 取得元 |
+|---|---|
+| ラベル（日本語/英語） | TaxonomyResolver (`taxonomy/__init__.py`) が Linkbase から動的読み込み |
+| 表示順 | concept_sets の `ConceptEntry.order`（Presentation Linkbase から動的導出） |
+| 合計フラグ | concept_sets の `preferredLabel`（Presentation Linkbase から動的導出） |
+| 財務諸表分類（PL/BS/CF） | concept_sets が role URI から動的分類 |
 
 ## 現在の保守コスト
 
 ```
 タクソノミ年次更新（タクソノミ追従が必要なファイル）:
-  summary_mappings.py      → Summary concept 名の変更追従（77件）
-  statement_mappings.py    → PL/BS/CF concept 名の変更追従（~130件）
+  summary_mappings.py      → Summary concept 名の変更追従（97件）
+  statement_mappings.py    → PL/BS/CF concept 名の変更追従（135件）
   canonical_keys.py        → 新 CK の追加のみ（年に 0〜数件）
 
 タクソノミ追従不要（安定コード）:
   concept_sets             → 変更不要（Presentation Linkbase 動的導出）
   taxonomy/labels          → 変更不要（動的読み込み）
   normalize.py             → statement_mappings へのファサード
-  extract.py               → 3 層信頼度モデル（ロジックのみ）
+  extract.py               → パイプラインマッパー（ロジックのみ）
+  mapper.py                → マッパー定義（ロジックのみ）
 
 マスタデータ更新:
   edinet_code              → スクリプト実行
   fund_code                → スクリプト実行
   form_code                → 数年に一度
 ```
-
-## usgaap.py の label_ja について
-
-`usgaap.py` の `_SummaryConceptDef` には `label_ja` が残存している。これは US-GAAP が BLOCK_ONLY（包括タグ付け）であり、`extract_usgaap_summary()` → `USGAAPSummaryItem` の専用パスを持つため。TaxonomyResolver パイプラインを経由しない設計上の制約により、Wave 4 の自動化対象外とした。
 
 ---
 
@@ -326,7 +302,7 @@ Wave 3 完了時点では、jgaap.py / ifrs.py / sector/*.py の各 ConceptMappi
 uv run pytest
 ```
 
-concept 名の不一致はテストで検出できる（全マッピングの整合性テスト、クロスバリデーションテスト `test_sector_cross_validation.py` が存在）。
+concept 名の不一致はテストで検出できる（全マッピングの整合性テストが `test_statement_mappings.py`, `test_summary_mappings.py`, `test_canonical_keys.py` に存在）。
 
 ## 2. タクソノミ実在検証（`EDINET_TAXONOMY_ROOT` 必須）
 
@@ -336,9 +312,8 @@ EDINET_TAXONOMY_ROOT=/path/to/ALL_YYYYMMDD uv run pytest -m integration
 
 | 対象 | テストファイル | テストクラス | 状態 |
 |------|---------------|-------------|------|
-| 業種別 (sector) | `test_sector_cross_validation.py` | `TestSectorConceptExistence` (T16) | 実装済み |
-| 一般事業 (jgaap) | `test_standards_jgaap.py` | `TestTaxonomyExistence` | 実装済み |
-| IFRS | `test_standards_ifrs.py` | `TestTaxonomyExistence` | 実装済み |
+| PL/BS/CF 本体 (J-GAAP + IFRS) | `test_statement_mappings.py` | `TestTaxonomyExistence` | 実装済み |
+| SummaryOfBusinessResults | `test_summary_mappings.py` | `TestTaxonomyExistence` | 実装済み |
 
 Presentation Linkbase + XSD の2段階フォールバックで全 concept 名の実在を検証する。`EDINET_TAXONOMY_ROOT` 未設定時はスキップ。
 
@@ -346,11 +321,7 @@ Presentation Linkbase + XSD の2段階フォールバックで全 concept 名の
 
 | 検証内容 | テスト |
 |---|---|
-| sector の `general_equivalent` が jgaap の canonical_key に存在 | `test_sector_cross_validation.py` T06-T10 |
-| ifrs の `jgaap_concept` が jgaap レジストリに実在 | `ifrs.py` `_validate_registry()` （モジュールロード時） |
-| `_JGAAP_ONLY_CONCEPTS` が jgaap に実在 | `test_standards_ifrs.py` `TestJGAAPOnlyConcepts` |
-| CK が jgaap ∪ ifrs の canonical_key と過不足なし | `test_canonical_keys.py` test_t12 |
-| US-GAAP の `key` が CK に存在し label_en が大文字始まり | `test_standards_usgaap.py` `TestCanonicalKeyAndReverseLookup` |
+| summary_mappings の全 CK が CK enum に存在 | `test_canonical_keys.py` T08-T09 |
 
 ## 4. lint + スタブ
 
@@ -358,4 +329,3 @@ Presentation Linkbase + XSD の2段階フォールバックで全 concept 名の
 uv run ruff check src tests
 uv run stubgen src/edinet --include-docstrings -o stubs
 ```
-

@@ -64,6 +64,8 @@ _JGAAP_PL: dict[str, str] = {
     "ProfitLoss": CK.NET_INCOME,
     "ProfitLossAttributableToOwnersOfParent": CK.NET_INCOME_PARENT,
     "ProfitLossAttributableToNonControllingInterests": CK.NET_INCOME_MINORITY,
+    "ComprehensiveIncomeAttributableToOwnersOfTheParent": CK.COMPREHENSIVE_INCOME_PARENT,
+    "ComprehensiveIncomeAttributableToNonControllingInterests": CK.COMPREHENSIVE_INCOME_MINORITY,
 }
 
 # ---------------------------------------------------------------------------
@@ -99,6 +101,10 @@ _JGAAP_BS: dict[str, str] = {
     "NonControllingInterests": CK.MINORITY_INTERESTS,
     "NetAssets": CK.NET_ASSETS,
     "LiabilitiesAndNetAssets": CK.LIABILITIES_AND_NET_ASSETS,
+    "DeferredTaxAssets": CK.DEFERRED_TAX_ASSETS,
+    "DeferredTaxLiabilities": CK.DEFERRED_TAX_LIABILITIES,
+    "ProvisionForRetirementBenefits": CK.RETIREMENT_BENEFIT_LIABILITY,
+    "NetDefinedBenefitLiability": CK.RETIREMENT_BENEFIT_LIABILITY,
 }
 
 # ---------------------------------------------------------------------------
@@ -164,6 +170,8 @@ _IFRS_PL: dict[str, str] = {
     "ProfitLossIFRS": CK.NET_INCOME,
     "ProfitLossAttributableToOwnersOfParentIFRS": CK.NET_INCOME_PARENT,
     "ProfitLossAttributableToNonControllingInterestsIFRS": CK.NET_INCOME_MINORITY,
+    "ComprehensiveIncomeAttributableToOwnersOfParentIFRS": CK.COMPREHENSIVE_INCOME_PARENT,
+    "ComprehensiveIncomeAttributableToNonControllingInterestsIFRS": CK.COMPREHENSIVE_INCOME_MINORITY,
 }
 
 # ---------------------------------------------------------------------------
@@ -192,6 +200,10 @@ _IFRS_BS: dict[str, str] = {
     "EquityAttributableToOwnersOfParentIFRS": CK.EQUITY_PARENT,
     "NonControllingInterestsIFRS": CK.MINORITY_INTERESTS,
     "EquityIFRS": CK.NET_ASSETS,
+    "DeferredTaxAssetsIFRS": CK.DEFERRED_TAX_ASSETS,
+    "DeferredTaxLiabilitiesIFRS": CK.DEFERRED_TAX_LIABILITIES,
+    "RetirementBenefitLiabilityNCLIFRS": CK.RETIREMENT_BENEFIT_LIABILITY,
+    "DefinedBenefitLiabilityNCLIFRS": CK.RETIREMENT_BENEFIT_LIABILITY,
 }
 
 # ---------------------------------------------------------------------------
@@ -219,12 +231,32 @@ _IFRS_CF: dict[str, str] = {
 
 
 # ---------------------------------------------------------------------------
+# 注記・その他（PL/BS/CF に分類されない概念）
+# ---------------------------------------------------------------------------
+
+_OTHER: dict[str, str] = {
+    "NumberOfEmployees": CK.EMPLOYEES,
+    # --- ESG / 人的資本（2023年有報義務化、jpcrp_cor） ---
+    "RatioOfFemaleEmployeesInManagerialPositionsMetricsOfReportingCompany": CK.FEMALE_MANAGERS_RATIO,
+    "AllEmployeesDifferencesInWagesBetweenMaleAndFemaleEmployeesMetricsOfReportingCompany": CK.GENDER_PAY_GAP,
+    "AllEmployeesCalculatedBasedOnProvisionsOfArticle714Item1OfOrdinanceForEnforcementOfActOnChildcareLeaveCaregiverLeaveAndOtherMeasuresForTheWelfareOfWorkersCaringForChildrenOrOtherFamilyMembersRatioOfMaleEmployeesTakingChildcareLeaveMetricsOfReportingCompany": CK.MALE_CHILDCARE_LEAVE_RATE,
+    "AllEmployeesCalculatedBasedOnProvisionsOfArticle714Item2OfOrdinanceForEnforcementOfActOnChildcareLeaveCaregiverLeaveAndOtherMeasuresForTheWelfareOfWorkersCaringForChildrenOrOtherFamilyMembersRatioOfMaleEmployeesTakingChildcareLeaveMetricsOfReportingCompany": CK.MALE_CHILDCARE_LEAVE_RATE,
+    "AllEmployeesCalculatedBasedOnProvisionsOfActOnPromotionOfWomensActiveEngagementInProfessionalLifeRatioOfMaleEmployeesTakingChildcareLeaveMetricsOfReportingCompany": CK.MALE_CHILDCARE_LEAVE_RATE,
+    "RatioOfFemaleDirectorsAndOtherOfficers": CK.FEMALE_DIRECTORS_RATIO,
+    # --- ガバナンス（jpcrp_cor） ---
+    "AuditFeesTotal": CK.AUDIT_FEES,
+    "NumberOfIssuesSharesOtherThanThoseNotListedInvestmentSharesHeldForPurposesOtherThanPureInvestmentReportingCompany": CK.CROSS_SHAREHOLDINGS_COUNT,
+    "CarryingAmountSharesOtherThanThoseNotListedInvestmentSharesHeldForPurposesOtherThanPureInvestmentReportingCompany": CK.CROSS_SHAREHOLDINGS_AMOUNT,
+}
+
+# ---------------------------------------------------------------------------
 # 統合インデックス
 # ---------------------------------------------------------------------------
 
 _CONCEPT_INDEX: dict[str, str] = {
     **_JGAAP_PL, **_JGAAP_BS, **_JGAAP_CF,
     **_IFRS_PL, **_IFRS_BS, **_IFRS_CF,
+    **_OTHER,
 }
 
 # レガシーフォールバック用: 基準×諸表 → 概念名順序タプル

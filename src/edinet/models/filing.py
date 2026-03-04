@@ -88,6 +88,7 @@ def _extract_filer_taxonomy_files(zip_bytes: bytes | None) -> dict[str, bytes]:
     """ZIP 内から提出者別タクソノミファイルを抽出する。
 
     PublicDoc 配下の ``_lab.xml``（日本語ラベル）、``_lab-en.xml``（英語ラベル）、
+    ``_cal.xml``（計算リンク）、``_def.xml``（定義リンク）、
     ``.xsd``（スキーマ、監査報告書を除く）を探索して返す。
 
     XSD が複数存在する場合は EDINET コードを含むファイルを優先し、
@@ -99,7 +100,7 @@ def _extract_filer_taxonomy_files(zip_bytes: bytes | None) -> dict[str, bytes]:
         zip_bytes: ZIP のバイト列。None の場合は空辞書を返す。
 
     Returns:
-        キーが ``"lab"`` / ``"lab_en"`` / ``"xsd"``、値が bytes の辞書。
+        キーが ``"lab"`` / ``"lab_en"`` / ``"xsd"`` / ``"cal"`` / ``"def"``、値が bytes の辞書。
         対応するファイルが存在しない場合はキーが含まれない。
     """
     if zip_bytes is None:
@@ -139,16 +140,22 @@ def _extract_filer_taxonomy_files(zip_bytes: bytes | None) -> dict[str, bytes]:
             "複数の XSD を検出: %s → %s を選択", xsd_candidates, selected_xsd,
         )
 
-    # 2. ラベルファイルを XSD のベース名から導出
+    # 2. ラベル・リンクベースファイルを XSD のベース名から導出
     if selected_xsd is not None:
         xsd_stem = selected_xsd[:selected_xsd.lower().rfind(".xsd")]
         derived_lab = xsd_stem + "_lab.xml"
         derived_lab_en = xsd_stem + "_lab-en.xml"
+        derived_cal = xsd_stem + "_cal.xml"
+        derived_def = xsd_stem + "_def.xml"
 
         if derived_lab in member_set:
             result["lab"] = extract_zip_member(zip_bytes, derived_lab)
         if derived_lab_en in member_set:
             result["lab_en"] = extract_zip_member(zip_bytes, derived_lab_en)
+        if derived_cal in member_set:
+            result["cal"] = extract_zip_member(zip_bytes, derived_cal)
+        if derived_def in member_set:
+            result["def"] = extract_zip_member(zip_bytes, derived_def)
 
     # 3. XSD から導出できなかった場合はフォールバック
     if "lab" not in result and lab_fallbacks:
@@ -780,6 +787,28 @@ class Filing(BaseModel):
             items = build_line_items(parsed.facts, ctx_map, resolver)
             logger.debug("step 7: built %d line items", len(items))
 
+            # 7b. リンクベースパース（definition_mapper / calc_mapper 用）
+            from edinet.xbrl.linkbase import (
+                parse_calculation_linkbase,
+                parse_definition_linkbase,
+            )
+
+            cal_lb = None
+            cal_bytes = filer_files.get("cal")
+            if cal_bytes is not None:
+                cal_lb = parse_calculation_linkbase(cal_bytes)
+
+            def_trees = None
+            def_bytes = filer_files.get("def")
+            if def_bytes is not None:
+                def_trees = parse_definition_linkbase(def_bytes)
+
+            logger.debug(
+                "step 7b: linkbases cal=%s def=%s",
+                cal_lb is not None,
+                def_trees is not None,
+            )
+
             # 8. Statement 組み立て
             from pathlib import Path as _Path
 
@@ -795,6 +824,8 @@ class Filing(BaseModel):
                 taxonomy_root=_Path(taxonomy_path),
                 industry_code=industry_code,
                 resolver=resolver,
+                calculation_linkbase=cal_lb,
+                definition_linkbase=def_trees,
             )
         except EdinetError:
             raise

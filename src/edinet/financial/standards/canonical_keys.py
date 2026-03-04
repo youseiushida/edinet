@@ -138,7 +138,6 @@ class CK(StrEnum):
     FX_EFFECT_ON_CASH = "fx_effect_on_cash"
     NET_CHANGE_IN_CASH = "net_change_in_cash"
     CONSOLIDATION_SCOPE_CHANGE_CASH = "consolidation_scope_change_cash"  # J-GAAP
-    CASH_BEGINNING = "cash_beginning"                                    # J-GAAP (instant)
     CASH_END = "cash_end"                                                # J-GAAP (instant)
 
     # --- KPI (主要経営指標) ---
@@ -177,3 +176,19 @@ class CK(StrEnum):
     INVESTMENT_YIELD_REALIZED = "investment_yield_realized"
     NET_LOSS_RATIO = "net_loss_ratio"
     NET_OPERATING_EXPENSE_RATIO = "net_operating_expense_ratio"
+
+    # --- ESG / 人的資本（2023年有報義務化） ---
+    FEMALE_MANAGERS_RATIO = "female_managers_ratio"
+    GENDER_PAY_GAP = "gender_pay_gap"
+    MALE_CHILDCARE_LEAVE_RATE = "male_childcare_leave_rate"
+    FEMALE_DIRECTORS_RATIO = "female_directors_ratio"
+
+    # --- ガバナンス ---
+    AUDIT_FEES = "audit_fees"
+    CROSS_SHAREHOLDINGS_COUNT = "cross_shareholdings_count"
+    CROSS_SHAREHOLDINGS_AMOUNT = "cross_shareholdings_amount"
+
+    # --- 追加 BS 科目 ---
+    DEFERRED_TAX_ASSETS = "deferred_tax_assets"
+    DEFERRED_TAX_LIABILITIES = "deferred_tax_liabilities"
+    RETIREMENT_BENEFIT_LIABILITY = "retirement_benefit_liability"

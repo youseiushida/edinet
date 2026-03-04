@@ -62,6 +62,13 @@ if TYPE_CHECKING:
         extracted_to_dict as extracted_to_dict,
     )
     from edinet.financial.standards.canonical_keys import CK as CK
+    from edinet.financial.mapper import (
+        summary_mapper as summary_mapper,
+        statement_mapper as statement_mapper,
+        definition_mapper as definition_mapper,
+        calc_mapper as calc_mapper,
+        dict_mapper as dict_mapper,
+    )
 
 _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
     # --- 設定・ユーティリティ ---
@@ -136,6 +143,12 @@ _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
     "extract_values": ("edinet.financial.extract", "extract_values"),
     "extracted_to_dict": ("edinet.financial.extract", "extracted_to_dict"),
     "ExtractedValue": ("edinet.financial.extract", "ExtractedValue"),
+    # --- マッパー ---
+    "summary_mapper": ("edinet.financial.mapper", "summary_mapper"),
+    "statement_mapper": ("edinet.financial.mapper", "statement_mapper"),
+    "definition_mapper": ("edinet.financial.mapper", "definition_mapper"),
+    "calc_mapper": ("edinet.financial.mapper", "calc_mapper"),
+    "dict_mapper": ("edinet.financial.mapper", "dict_mapper"),
 }
 
 
@@ -213,4 +226,10 @@ __all__ = [
     "extract_values",
     "extracted_to_dict",
     "ExtractedValue",
+    # マッパー
+    "summary_mapper",
+    "statement_mapper",
+    "definition_mapper",
+    "calc_mapper",
+    "dict_mapper",
 ]

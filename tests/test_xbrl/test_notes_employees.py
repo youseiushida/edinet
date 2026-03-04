@@ -97,7 +97,7 @@ class TestExtractEmployeeInfoFound:
                 order=1,
             ),
             _make_item(
-                local_name="AverageServiceYearsYearsInformationAboutReportingCompanyInformationAboutEmployees",
+                local_name="AverageLengthOfServiceYearsInformationAboutReportingCompanyInformationAboutEmployees",
                 value=Decimal("15.3"),
                 label_ja="平均勤続年数",
                 order=2,
