@@ -161,7 +161,7 @@ class ParsedXBRL:
     """
 
     source_path: str | None
-    source_format: Literal["instance"]
+    source_format: Literal["instance", "inline"]
     facts: tuple[RawFact, ...]
     contexts: tuple[RawContext, ...] = ()
     units: tuple[RawUnit, ...] = ()

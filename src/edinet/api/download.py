@@ -283,6 +283,33 @@ def extract_zip_member(zip_bytes: bytes, member_name: str) -> bytes:
             raise ValueError(f"Invalid ZIP member data: {normalized_member_name}") from exc
 
 
+def find_ixbrl_paths(zip_bytes: bytes) -> tuple[str, ...]:
+    """ZIP 内の iXBRL（Inline XBRL）ファイルパスを返す。
+
+    ``PublicDoc/`` 配下の ``_ixbrl.htm`` で終わるファイルを検出する。
+    IXDS（Inline XBRL Document Set）では1つの提出書類に複数の
+    iXBRL ファイルが含まれる。
+
+    Args:
+        zip_bytes: EDINET / TDnet からダウンロードした ZIP の bytes。
+
+    Returns:
+        iXBRL ファイルのパスをソート済みタプルで返す。
+        該当ファイルがない場合は空タプル。
+
+    Raises:
+        ValueError: ZIP として不正な場合。
+    """
+    members = list_zip_members(zip_bytes)
+    paths = [
+        m
+        for m in members
+        if m.lower().endswith("_ixbrl.htm")
+        and "/publicdoc/" in f"/{m.lower()}"
+    ]
+    return tuple(sorted(paths))
+
+
 def extract_primary_xbrl(zip_bytes: bytes) -> tuple[str, bytes] | None:
     """代表 XBRL を (path, bytes) で返す。見つからなければ None。"""
     path = find_primary_xbrl_path(zip_bytes)

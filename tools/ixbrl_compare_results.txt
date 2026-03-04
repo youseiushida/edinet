@@ -1,0 +1,48 @@
+
+========================================================================================================================
+iXBRL vs XBRL 比較結果（改良版: 数値同値・HTML差異を分離）
+========================================================================================================================
+企業名            業種    基準         X件    i件   共通K   Xのみ   iのみ    完全一致   数値同 HTML差   真不一致  htm     秒
+------------------------------------------------------------------------------------------------------------------------
+大林組            建設    JPGAAP   2031  2031  1980     0     0    1785    38   156      1 (0.1%)   10   9.3
+  ResearchAndDevelopmentActivitiesTextBlock: X=['\n<h3>６【研究開発活動】</h3>\n<p style="margin-left: 24px; line-he I=['\n６【研究開発活動】\n（建設事業）\n\u3000当社グループは、多様化する顧客のニーズ、生産性の向上、品質の向
+鹿島建設           建設    JPGAAP   3088  3088  3028     0     0    2772    39   210      7 (0.2%)   23  17.5
+  ManagementAnalysisOfFinancialPositionOperatingResultsAndCashFlowsTextBlock: X=['<p style="page-break-before:always; line-height:0.75pt; wi I=['\xa0\n４ 【経営者による財政状態、経営成績及びキャッシュ・フローの状況の分析】\n(1) 経営成績等の状況の概
+  PolicyOnDevelopmentOfHumanResourcesAndInternalEnvironmentStrategyTextBlock: X=['<p class="smt_text6" style="orphans:0;widows:0;text-align: I=['（１）戦略人財育成方針当社グループは、人財（人的資本）が最大の財産であるとの信念のもと、「創業者精神」を基本軸に、中
+  OverviewOfCorporateGovernanceTextBlock: X=['\n<h4 class="smt_head3">(1) 【コーポレート・ガバナンスの概要】</h4>\n<h5 cl I=['\n(1) 【コーポレート・ガバナンスの概要】\n① コーポレート・ガバナンスに関する基本的な考え方当社は、社会に信
+三菱UFJ FG       銀行    JPGAAP   2919  2919  2879     0     0    2599    48   215     17 (0.6%)   24  14.0
+  GovernanceTextBlock: X=['\n<h4 class="smt_head3" style="line-height:15pt;"><span st I=['\n(1) ガバナンス\n\n①\u3000サステナビリティ\nサステナビリティに関する課題は、取締役会の監督のもと
+  BusinessPolicyBusinessEnvironmentIssuesToAddressEtcTextBlock: X=['\n<h3 class="smt_head2" style="font-family:&apos;ＭＳ ゴシック&a I=['\n１ 【経営方針、経営環境及び対処すべき課題等】\xa0文中の将来に関する事項は、当連結会計年度末現在において、当
+  OutsideDirectorsAndOutsideCorporateAuditorsTextBlock: X=['<p style="page-break-before:always; line-height:0.75pt; wi I=['\xa0②\u3000社外取締役当社は、複数の社外取締役を任用した上で、社外取締役を委員長とする会社法が定める委員会
+三井住友 FG        銀行    JPGAAP   2719  2719  2671     0     0    2422    30   209     10 (0.4%)   23   8.5
+  BusinessPolicyBusinessEnvironmentIssuesToAddressEtcTextBlock: X=['\n<h3 class="smt_head2">１ 【経営方針、経営環境及び対処すべき課題等】</h3><p cla I=['\n１ 【経営方針、経営環境及び対処すべき課題等】文中の将来に関する事項は、当連結会計年度末現在において当社グループ
+  ManagementAnalysisOfFinancialPositionOperatingResultsAndCashFlowsTextBlock: X=['<p style="page-break-before:always; line-height:0.75pt; wi I=["\xa0\n４ 【経営者による財政状態、経営成績及びキャッシュ・フローの状況の分析】当連結会計年度における当社グルー
+  AuditsTextBlock: X=['<p style="page-break-before:always; line-height:0.75pt; wi I=['\xa0(3) 【監査の状況】\n①\u3000監査委員会監査の状況\n（監査委員会の組織、人員および手続）当事業年
+JR東日本          鉄道    JPGAAP    691   691   676     0     0     567     4   105      0 (0.0%)    9   4.7
+東京海上HD         保険    JPGAAP    944   944   925     0     0     772    27   126      0 (0.0%)   15   6.0
+トヨタ自動車         一般    JPGAAP   2173  2173  2099     0     0    1925    40   127      7 (0.3%)   24  10.4
+  CareerSummaryInformationAboutDirectorsAndCorporateAuditorsTextBlock: X=['\n<div class="tbld" style="margin-left:0pt;margin-right:0p I=['\n\n\n\n\n\n\n\n1986年９月\n\n米国上訴裁判所入所\n\n\n\n1987年11月\n\nヒュ
+  GovernanceTextBlock: X=['\n<h4 class="smt_head3" style="line-height:13pt;"><span st I=['\n（１）ガバナンス\n当社は、創業以来、「豊田綱領」の精神を受け継ぎ、「トヨタ基本理念」に基づいて事業活動を通じた
+  ManagementAnalysisOfFinancialPositionOperatingResultsAndCashFlowsTextBlock: X=['\n<h3 class="smt_head2" style="font-family:&apos;ＭＳ ゴシック&a I=["\n４ 【経営者による財政状態、経営成績及びキャッシュ・フローの状況の分析】（１）経営成績等の状況の概要①経営成績の
+NTT            一般    JPGAAP   1552  1552  1504     0     0    1322    23   158      1 (0.1%)   22   7.8
+  AuditsTextBlock: X=['<p class="smt_head4" style="orphans:0;widows:0;">(3)【監査の状況 I=['(3)【監査の状況】\n① 監査等委員会監査の状況当社の監査等委員会監査は、常勤監査等委員１名及び非常勤監査等委員３
+キヤノン           一般    USGAAP   1370  1370  1351     0     0    1188    59    89     15 (1.1%)   10   9.0
+  GovernanceCyberSecurityTextBlock: X=['\n<p style="margin-left: 14px; text-align: left; text-inde I=['\n<ガバナンス/リスク管理>\n当社は、情報セキュリティ担当執行役員である情報通信システム本部長を情報セキュリティ
+  RiskManagementCyberSecurityTextBlock: X=['\n<p style="margin-left: 14px; text-align: left; text-inde I=['\n<ガバナンス/リスク管理>\n当社は、情報セキュリティ担当執行役員である情報通信システム本部長を情報セキュリティ
+  DescriptionOfMetricsRelatedToPolicyOnDevelopmentOfHumanResourcesAndInternalEnvironmentAndTargetsAndPerformanceUsingSuchMetricsMetricsAndTargetsTextBlock: X=['\n<p style="margin-left: 14px; text-align: left">（６）人的資本</ I=['\n（６）人的資本\n当社は、創業以来受け継がれている「人間尊重」の企業DNAのもと、価値創造の源泉は人材にあると考
+日立製作所          一般    IFRS     2634  2634  2554     0     0    2319    76   139     20 (0.8%)   10  12.9
+  CareerSummaryInformationAboutExecutiveDirectorsTextBlock: X=['\n<div>\n<table cellpadding="0" cellspacing="0" style="tab I=['\n\n\n\n\n\n\n\n\n\n2001年４月\n\n\nBioInformatics社 Head of I
+  CareerSummaryInformationAboutDirectorsAndCorporateAuditorsTextBlock: X=['\n<div>\n<table cellpadding="0" cellspacing="0" style="tab I=['\n\n\n\n\n\n\n\n\n\n1993年５月\n\n\n弁護士登録（カナダ ケベック州）\n\n\n\n\
+  CareerSummaryInformationAboutExecutiveDirectorsTextBlock: X=['\n<div>\n<table cellpadding="0" cellspacing="0" style="tab I=['\n\n\n\n\n\n\n\n\n\n2003年１月\n\n\nSiemens社 Senior Vice Pres
+ソフトバンクG        一般    IFRS     2246  2246  2178     0     0    1952    63   153     10 (0.5%)   10   7.5
+  BusinessPolicyBusinessEnvironmentIssuesToAddressEtcTextBlock: X=['\n<h3>１【経営方針、経営環境及び対処すべき課題等】</h3>\n<p style="margin-left:  I=['\n１【経営方針、経営環境及び対処すべき課題等】\n\u3000当社の本有価証券報告書の提出日現在における「経営方針
+  OutsideDirectorsAndOutsideCorporateAuditorsTextBlock: X=['\n<p style="margin-left: 36px; text-align: left">②\u3000社外 I=['\n②\u3000社外役員の状況\n\u3000\u3000以下は、有価証券報告書提出日（2025年６月26日）現在
+  CareerSummaryInformationAboutDirectorsAndCorporateAuditorsTextBlock: X=['\n<div>\n<table cellpadding="0" cellspacing="0" style="tab I=['\n\n\n\n\n\n\n\n\n\n\n1986年８月\n\n\n\n\nMorrison & Foerster
+
+========================================================================================================================
+企業数: 11, 成功: 11
+完全一致: 19623/21845 (89.8%)
+数値同値: 447/21845 (2.0%)  ← 小数末尾ゼロの差
+HTML差異: 1687/21845 (7.7%)  ← TextBlock の HTML タグ有無
+真の不一致: 88/21845 (0.4%)  ← 要調査
+実質一致率: 99.6%

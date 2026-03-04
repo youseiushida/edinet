@@ -497,3 +497,66 @@ async def test_adownload_document_raises_on_invalid_doc_id() -> None:
         await adownload_document("")
     with pytest.raises(ValueError):
         await adownload_document("S100/TEST")
+
+
+# ============================================================
+# find_ixbrl_paths() テスト
+# ============================================================
+
+
+class TestFindIxbrlPaths:
+    """find_ixbrl_paths() の検証。"""
+
+    def test_find_ixbrl_paths_returns_matching_files(self) -> None:
+        """PublicDoc/*_ixbrl.htm が返る。"""
+        zip_bytes = _make_zip({
+            "XBRL/PublicDoc/report_ixbrl.htm": b"<html/>",
+            "XBRL/PublicDoc/notes_ixbrl.htm": b"<html/>",
+            "XBRL/PublicDoc/main.xbrl": b"<xbrl/>",
+        })
+        result = download.find_ixbrl_paths(zip_bytes)
+        assert len(result) == 2
+        assert "XBRL/PublicDoc/report_ixbrl.htm" in result
+        assert "XBRL/PublicDoc/notes_ixbrl.htm" in result
+
+    def test_find_ixbrl_paths_empty_when_no_ixbrl(self) -> None:
+        """.xbrl のみの場合は空タプル。"""
+        zip_bytes = _make_zip({"XBRL/PublicDoc/main.xbrl": b"<xbrl/>"})
+        assert download.find_ixbrl_paths(zip_bytes) == ()
+
+    def test_find_ixbrl_paths_ignores_non_publicdoc(self) -> None:
+        """PublicDoc 外のファイルは除外される。"""
+        zip_bytes = _make_zip({
+            "AttachDoc/report_ixbrl.htm": b"<html/>",
+            "XBRL/PublicDoc/main_ixbrl.htm": b"<html/>",
+        })
+        result = download.find_ixbrl_paths(zip_bytes)
+        assert len(result) == 1
+        assert "XBRL/PublicDoc/main_ixbrl.htm" in result
+
+    def test_find_ixbrl_paths_case_insensitive(self) -> None:
+        """_IXBRL.HTM + PUBLICDOC/ もマッチする。"""
+        zip_bytes = _make_zip({
+            "XBRL/PUBLICDOC/REPORT_IXBRL.HTM": b"<html/>",
+        })
+        result = download.find_ixbrl_paths(zip_bytes)
+        assert len(result) == 1
+
+    def test_find_ixbrl_paths_sorted(self) -> None:
+        """結果がソート済みである。"""
+        zip_bytes = _make_zip({
+            "XBRL/PublicDoc/z_ixbrl.htm": b"<html/>",
+            "XBRL/PublicDoc/a_ixbrl.htm": b"<html/>",
+        })
+        result = download.find_ixbrl_paths(zip_bytes)
+        assert result == tuple(sorted(result))
+
+    def test_find_ixbrl_paths_excludes_plain_htm(self) -> None:
+        """_ixbrl.htm でない .htm は除外される。"""
+        zip_bytes = _make_zip({
+            "XBRL/PublicDoc/report.htm": b"<html/>",
+            "XBRL/PublicDoc/report_ixbrl.htm": b"<html/>",
+        })
+        result = download.find_ixbrl_paths(zip_bytes)
+        assert len(result) == 1
+        assert "XBRL/PublicDoc/report_ixbrl.htm" in result

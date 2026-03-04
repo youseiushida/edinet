@@ -7,6 +7,7 @@ from edinet.api.download import (
     download_document,
     extract_primary_xbrl,
     extract_zip_member,
+    find_ixbrl_paths,
     find_primary_xbrl_path,
     list_zip_members,
 )
@@ -17,6 +18,7 @@ __all__ = [
     "download_document",
     "list_zip_members",
     "find_primary_xbrl_path",
+    "find_ixbrl_paths",
     "extract_zip_member",
     "extract_primary_xbrl",
     # Wave 6: キャッシュ (L2)

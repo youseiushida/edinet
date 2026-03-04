@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ix="http://www.xbrl.org/2008/inlineXBRL"
+      xmlns:ixt="http://www.xbrl.org/inlineXBRL/transformation/2020-02-12"
+      xmlns:xbrli="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:jppfs_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jppfs/2025-11-01/jppfs_cor"
+      xmlns:tse-ed-t="http://www.tse.or.jp/2024/taxonomy/tse-ed-t"
+      xml:lang="ja">
+<head><title>Test</title></head>
+<body>
+  <ix:header>
+    <ix:references>
+      <link:schemaRef xlink:type="simple" xlink:href="test.xsd"/>
+    </ix:references>
+    <ix:resources>
+      <xbrli:context id="CurrentYearDuration">
+        <xbrli:entity><xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">E05070</xbrli:identifier></xbrli:entity>
+        <xbrli:period><xbrli:startDate>2025-04-01</xbrli:startDate><xbrli:endDate>2026-03-31</xbrli:endDate></xbrli:period>
+      </xbrli:context>
+      <xbrli:unit id="JPY"><xbrli:measure>iso4217:JPY</xbrli:measure></xbrli:unit>
+    </ix:resources>
+  </ix:header>
+  <div>
+    <ix:nonFraction name="tse-ed-t:NetSales" contextRef="CurrentYearDuration"
+                    unitRef="JPY" decimals="-6" scale="6"
+                    format="ixt:numdotdecimal">8,225</ix:nonFraction>
+    <ix:nonFraction name="jppfs_cor:CashAndDeposits" contextRef="CurrentYearDuration"
+                    unitRef="JPY" decimals="0" scale="0">500000</ix:nonFraction>
+  </div>
+</body>
+</html>

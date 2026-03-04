@@ -5,6 +5,7 @@ from __future__ import annotations
 from edinet.xbrl.contexts import ContextCollection, structure_contexts
 from edinet.xbrl.dei import DEI, AccountingStandard, PeriodType, extract_dei
 from edinet.xbrl.facts import build_line_items
+from edinet.xbrl.ixbrl_parser import merge_ixbrl_results, parse_ixbrl_facts
 from edinet.xbrl.parser import parse_xbrl_facts
 from edinet.xbrl.taxonomy import TaxonomyResolver
 from edinet.xbrl.taxonomy.custom import (
@@ -48,6 +49,8 @@ def __getattr__(name: str) -> object:
 
 __all__ = [
     "parse_xbrl_facts",
+    "parse_ixbrl_facts",
+    "merge_ixbrl_results",
     "structure_contexts",
     "ContextCollection",
     "TaxonomyResolver",

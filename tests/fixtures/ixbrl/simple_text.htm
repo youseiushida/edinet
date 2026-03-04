@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ix="http://www.xbrl.org/2008/inlineXBRL"
+      xmlns:ixt="http://www.xbrl.org/inlineXBRL/transformation/2020-02-12"
+      xmlns:xbrli="http://www.xbrl.org/2003/instance"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:jpdei_cor="http://disclosure.edinet-fsa.go.jp/taxonomy/jpdei/2025-11-01/jpdei_cor"
+      xmlns:tse-ed-t="http://www.tse.or.jp/2024/taxonomy/tse-ed-t"
+      xml:lang="ja">
+<head><title>Test</title></head>
+<body>
+  <ix:header>
+    <ix:references>
+      <link:schemaRef xlink:type="simple" xlink:href="test.xsd"/>
+    </ix:references>
+    <ix:resources>
+      <xbrli:context id="FilingDateInstant">
+        <xbrli:entity><xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">E05070</xbrli:identifier></xbrli:entity>
+        <xbrli:period><xbrli:instant>2026-03-04</xbrli:instant></xbrli:period>
+      </xbrli:context>
+    </ix:resources>
+  </ix:header>
+  <div>
+    <ix:nonNumeric name="tse-ed-t:DocumentName" contextRef="FilingDateInstant">決算短信</ix:nonNumeric>
+    <ix:nonNumeric name="jpdei_cor:EDINETCodeDEI" contextRef="FilingDateInstant">E05070</ix:nonNumeric>
+    <ix:nonNumeric name="tse-ed-t:FilingDate" contextRef="FilingDateInstant"
+                   format="ixt:dateyearmonthdaycjk">2026年3月4日</ix:nonNumeric>
+    <ix:nonNumeric name="tse-ed-t:BooleanTrue" contextRef="FilingDateInstant"
+                   format="ixt:booleantrue">○</ix:nonNumeric>
+    <ix:nonNumeric name="tse-ed-t:BooleanFalse" contextRef="FilingDateInstant"
+                   format="ixt:booleanfalse">―</ix:nonNumeric>
+  </div>
+</body>
+</html>

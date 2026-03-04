@@ -67,5 +67,22 @@ def find_primary_xbrl_path(zip_bytes: bytes) -> str | None:
     """`PublicDoc/` を含む代表 XBRL ファイルのパスを返す。"""
 def extract_zip_member(zip_bytes: bytes, member_name: str) -> bytes:
     """ZIP 内の指定メンバーを bytes で返す。"""
+def find_ixbrl_paths(zip_bytes: bytes) -> tuple[str, ...]:
+    """ZIP 内の iXBRL（Inline XBRL）ファイルパスを返す。
+
+    ``PublicDoc/`` 配下の ``_ixbrl.htm`` で終わるファイルを検出する。
+    IXDS（Inline XBRL Document Set）では1つの提出書類に複数の
+    iXBRL ファイルが含まれる。
+
+    Args:
+        zip_bytes: EDINET / TDnet からダウンロードした ZIP の bytes。
+
+    Returns:
+        iXBRL ファイルのパスをソート済みタプルで返す。
+        該当ファイルがない場合は空タプル。
+
+    Raises:
+        ValueError: ZIP として不正な場合。
+    """
 def extract_primary_xbrl(zip_bytes: bytes) -> tuple[str, bytes] | None:
     """代表 XBRL を (path, bytes) で返す。見つからなければ None。"""
