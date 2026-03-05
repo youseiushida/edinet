@@ -70,25 +70,40 @@ class CK(StrEnum):
     NET_INCOME_PARENT = "net_income_parent"
     NET_INCOME_MINORITY = "net_income_minority"
     DIVIDEND_INCOME = "dividend_income"                           # 配当収益(IFRS)
+    IMPAIRMENT_LOSS_PL = "impairment_loss_pl"                     # 減損損失（PL）
+    DEPRECIATION_SGA = "depreciation_sga"                         # 減価償却費（販管費）
 
     # --- BS (貸借対照表) ---
     CASH_AND_DEPOSITS = "cash_and_deposits"                # J-GAAP
     CASH_AND_EQUIVALENTS = "cash_and_equivalents"          # IFRS
     TRADE_RECEIVABLES = "trade_receivables"
+    NOTES_RECEIVABLE = "notes_receivable"                  # J-GAAP (受取手形)
     INVENTORIES = "inventories"
+    PREPAID_EXPENSES = "prepaid_expenses"                  # J-GAAP (前払費用)
+    CONTRACT_ASSETS = "contract_assets"                    # 契約資産
     CURRENT_ASSETS = "current_assets"
     NONCURRENT_ASSETS = "noncurrent_assets"
     PPE = "ppe"
+    LAND = "land"                                          # 土地
+    BUILDINGS_NET = "buildings_net"                         # 建物純額
+    CONSTRUCTION_IN_PROGRESS = "construction_in_progress"  # 建設仮勘定
     INTANGIBLE_ASSETS = "intangible_assets"
     GOODWILL = "goodwill"
+    INVESTMENT_SECURITIES = "investment_securities"         # 投資有価証券
     INVESTMENTS_AND_OTHER = "investments_and_other"        # J-GAAP
     DEFERRED_ASSETS = "deferred_assets"                    # J-GAAP
     TOTAL_ASSETS = "total_assets"
     TRADE_PAYABLES = "trade_payables"
+    NOTES_PAYABLE = "notes_payable"                        # J-GAAP (支払手形)
+    CONTRACT_LIABILITIES = "contract_liabilities"          # 契約負債
     SHORT_TERM_LOANS = "short_term_loans"
+    CURRENT_PORTION_OF_BONDS = "current_portion_of_bonds"  # 1年内償還社債
+    CURRENT_PORTION_OF_LONG_TERM_LOANS = "current_portion_of_long_term_loans"  # 1年内返済長期借入金
+    PROVISIONS_CL = "provisions_cl"                        # 引当金（流動）
     CURRENT_LIABILITIES = "current_liabilities"
     LONG_TERM_LOANS = "long_term_loans"
     BONDS_PAYABLE = "bonds_payable"
+    PROVISIONS_NCL = "provisions_ncl"                      # 引当金（固定）
     NONCURRENT_LIABILITIES = "noncurrent_liabilities"
     TOTAL_LIABILITIES = "total_liabilities"
     CAPITAL_STOCK = "capital_stock"
@@ -97,7 +112,7 @@ class CK(StrEnum):
     TREASURY_STOCK = "treasury_stock"
     SHAREHOLDERS_EQUITY = "shareholders_equity"            # J-GAAP
     OCI_ACCUMULATED = "oci_accumulated"                    # J-GAAP
-    STOCK_OPTIONS = "stock_options"                        # J-GAAP
+    SUBSCRIPTION_RIGHTS = "subscription_rights"            # J-GAAP (新株予約権)
     EQUITY_PARENT = "equity_parent"                        # IFRS
     MINORITY_INTERESTS = "minority_interests"
     NET_ASSETS = "net_assets"
@@ -205,7 +220,9 @@ class CK(StrEnum):
     LEASE_LIABILITIES_CL = "lease_liabilities_cl"                # IFRS リース負債(流動)
     LEASE_LIABILITIES_NCL = "lease_liabilities_ncl"              # IFRS リース負債(非流動)
     LEASE_LIABILITIES = "lease_liabilities"                      # IFRS リース負債合計
-    INVESTMENT_PROPERTY = "investment_property"                   # IFRS 投資不動産
+    INVESTMENT_PROPERTY = "investment_property"                   # 投資不動産
+    REAL_ESTATE_FOR_SALE = "real_estate_for_sale"                 # 販売用不動産
+    RIGHT_OF_USE_ASSETS = "right_of_use_assets"                  # 使用権資産 (IFRS 16)
     EQUITY_METHOD_INVESTMENTS = "equity_method_investments"       # IFRS 持分法投資
 
     # --- 追加 BS 科目 ---
