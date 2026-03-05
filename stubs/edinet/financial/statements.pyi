@@ -268,7 +268,7 @@ class Statements:
             組み立て済みの包括利益計算書。
         '''
 
-def build_statements(items: Sequence[LineItem], *, facts: tuple[RawFact, ...] | None = None, contexts: dict[str, StructuredContext] | None = None, taxonomy_root: Path | None = None, industry_code: str | None = None, resolver: TaxonomyResolver | None = None) -> Statements:
+def build_statements(items: Sequence[LineItem], *, facts: tuple[RawFact, ...] | None = None, contexts: dict[str, StructuredContext] | None = None, taxonomy_root: Path | None = None, industry_code: str | None = None, resolver: TaxonomyResolver | None = None, calculation_linkbase: CalculationLinkbase | None = None, definition_linkbase: dict[str, DefinitionTree] | None = None) -> Statements:
     '''LineItem 群から Statements コンテナを構築する。
 
     全 LineItem をそのまま保持し、``income_statement()`` 等の
@@ -283,6 +283,10 @@ def build_statements(items: Sequence[LineItem], *, facts: tuple[RawFact, ...] | 
             ``None`` は一般事業会社として扱う。
         resolver: 提出者ラベルロード済みの TaxonomyResolver。
             セグメント分析等の事後ラベル解決に使用する。
+        calculation_linkbase: 提出者の Calculation Linkbase。
+            ``extract_values()`` の ``calc_mapper`` が使用する。
+        definition_linkbase: 提出者の Definition Linkbase。
+            ``extract_values()`` の ``definition_mapper`` が使用する。
 
     Returns:
         Statements コンテナ。

@@ -47,7 +47,7 @@ def extract_values(source: Statements, keys: Sequence[str] | None = None, *, per
             ``None`` の場合は全て。
         mapper: マッパーまたはマッパーのシーケンス。
             ``None``（デフォルト）の場合は
-            ``[summary_mapper, statement_mapper]``。
+            ``[summary_mapper, statement_mapper, definition_mapper(), calc_mapper()]``。
             単一 callable の場合は ``[callable]`` と同義。
 
     Returns:

@@ -8,11 +8,14 @@ __all__ = ['EmployeeInfo', 'extract_employee_info']
 class EmployeeInfo:
     """従業員情報。
 
+    有価証券報告書「提出会社の状況 ― 従業員の状況」に対応する。
+    全フィールドが **提出会社** の **当期** 値に統一される。
+
     Attributes:
         count: 従業員数。
         average_age: 平均年齢。
         average_service_years: 平均勤続年数。
-        average_annual_salary: 平均年間給与。
+        average_annual_salary: 平均年間給与（円）。
     """
     count: int | None
     average_age: Decimal | None
@@ -22,7 +25,11 @@ class EmployeeInfo:
 def extract_employee_info(stmts: Statements) -> EmployeeInfo:
     """Statements から従業員情報を抽出する。
 
-    提出会社の従業員情報（従業員数、平均年齢、平均勤続年数、平均年間給与）を返す。
+    有価証券報告書の「提出会社の状況 ― 従業員の状況」に対応し、
+    提出会社・当期の値を返す。全4概念で提出会社コンテキスト
+    （NonConsolidatedMember）を優先し、当期（最新 InstantPeriod）を
+    選択する。
+
     該当する Fact が存在しない場合は各フィールドが None になる。
 
     Args:
