@@ -64,23 +64,55 @@ pip install 'edinet[analysis,display]'
 
 ### タクソノミのセットアップ
 
-1. [金融庁の EDINET タクソノミページ](https://www.fsa.go.jp/search/20250808.html)から「EDINET タクソノミ」の ZIP をダウンロード（年度により URL が変わります）
-2. ZIP を展開すると、中に `taxonomy/` と `samples/` を子に持つフォルダがあります:
-   ```
-   （ZIP を展開）
-   └── ○○○/                ← フォルダ名は年度により異なる
-       ├── taxonomy/        ← タクソノミ本体
-       └── samples/         ← サンプルインスタンス
-   ```
-3. `taxonomy/` と `samples/` の**親フォルダ**のパスを指定:
+**方法1: 自動インストール（推奨）**
+
+```python
+import edinet
+
+# 最新版タクソノミを自動ダウンロード・展開（初回のみ、約6MB）
+edinet.install_taxonomy()
+
+# 以降のセッションでも利用可能（パスを覚えておく必要なし）
+info = edinet.taxonomy_info()
+edinet.configure(
+    api_key="YOUR_API_KEY",
+    taxonomy_path=str(info.path),
+)
+```
+
+展開先は OS に応じて自動決定されます（`platformdirs.user_data_dir("edinet")`）:
+- Linux: `~/.local/share/edinet/ALL_20251101/`
+- macOS: `~/Library/Application Support/edinet/ALL_20251101/`
+- Windows: `%LOCALAPPDATA%\edinet\ALL_20251101\`
+
+タクソノミ管理の全機能:
+
+```python
+edinet.install_taxonomy()              # 最新版をインストール
+edinet.install_taxonomy(year=2025)     # 特定年度を指定
+edinet.install_taxonomy(force=True)    # 強制再インストール
+edinet.list_taxonomy_versions()        # 利用可能な年度一覧 [2026, 2025, ..., 2018]
+edinet.taxonomy_info()                 # インストール済み情報
+edinet.uninstall_taxonomy()            # 削除
+```
+
+> **複数年度をインストールした場合**: `taxonomy_info()` は最新年度を返します。
+> 特定年度を使いたい場合は `install_taxonomy(year=2025)` で明示的にインストールすると、
+> そのセッションの `taxonomy_path` が自動的にその年度に設定されます。
+> あるいは手動で `configure(taxonomy_path=str(edinet.taxonomy_info().path))` のように切り替えてください。
+
+**方法2: 手動セットアップ**
+
+1. [金融庁の EDINET タクソノミページ](https://www.fsa.go.jp/search/20251111.html)から「EDINET タクソノミ」の ZIP をダウンロード
+2. ZIP を展開し、`taxonomy/` と `samples/` の**親フォルダ**のパスを指定:
 
 ```python
 import edinet
 
 edinet.configure(
     api_key="YOUR_API_KEY",
-    taxonomy_path="/path/to/○○○",  # ← taxonomy/ の親
-    cache_dir="./cache",           # 任意（推奨）
+    taxonomy_path="/path/to/ALL_20251101",  # ← taxonomy/ の親
+    cache_dir="./cache",                    # 任意（推奨）
 )
 ```
 
@@ -94,9 +126,12 @@ edinet.configure(
 ```python
 import edinet
 
+# 初回のみ: タクソノミを自動インストール
+edinet.install_taxonomy()
+
 edinet.configure(
     api_key="YOUR_API_KEY",
-    taxonomy_path="/path/to/○○○"
+    taxonomy_path=str(edinet.taxonomy_info().path),
 )
 
 # 有価証券報告書の一覧を取得
@@ -774,7 +809,7 @@ latest = consolidated.latest_duration_contexts()
 | エクスポート | DataFrame / CSV / Parquet / Excel |
 | 表示 | Rich ターミナル / Jupyter HTML |
 | I/O | sync / async 完全対応 |
-| テスト | 1,556+ |
+| テスト | 1,584+ |
 
 ## 動作要件
 

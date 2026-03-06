@@ -26,9 +26,10 @@
 |---|---|---|---|---|
 | **月次〜四半期** | 自動生成マスタ | 18,013 | 3 | スクリプト |
 | **年次** | タクソノミ concept マッピング | 352 | 3 | 手動 + CK 定数 |
+| **年次** | タクソノミインストール | 9 | 1 | 手動（`_KNOWN_VERSIONS` にエントリ追加） |
 | **数年に一度** | 法令・API 仕様 | ~100 | 5 | 手動 |
 | **不変** | XBRL/EDINET 構造定数 | ~60 | 8 | — |
-| | **合計** | **~18,525** | **19** | |
+| | **合計** | **~18,534** | **20** | |
 
 ## 全ファイル一覧
 
@@ -65,6 +66,14 @@
 | `summary_mapper` | `lookup_summary()` を呼ぶ。SummaryOfBusinessResults 概念のマッチ |
 | `statement_mapper` | `lookup_statement_exact()` → `lookup_statement_normalized()` の 2 段フォールバック |
 | `dict_mapper()` | ユーザー辞書からの O(1) ルックアップ（ファクトリ関数） |
+
+### タクソノミインストール（年次保守）
+
+| ファイル | エントリ数 | 内容 | ソース |
+|---|---|---|---|
+| `taxonomy_install.py` | 9 バージョン | 年度→FSA公開日→フォルダ名マッピング (`_KNOWN_VERSIONS`) | FSA 公式サイト |
+
+新タクソノミ公開時に `_KNOWN_VERSIONS` にエントリを追加する。
 
 ### 法令・API 仕様（手動保守、低頻度）
 
@@ -130,10 +139,49 @@ uv run stubgen src/edinet --include-docstrings -o stubs
 
 EDINET タクソノミは **年1回（11月1日付）** で改定される。
 
-### 保守フロー
+### タクソノミの自動インストール
+
+`edinet.install_taxonomy()` で金融庁公式サイトからタクソノミをダウンロード・展開できる。
+
+```python
+import edinet
+edinet.install_taxonomy()          # 最新版をインストール（~6MB、初回のみ）
+edinet.install_taxonomy(year=2025) # 特定年度を指定
+edinet.taxonomy_info()             # インストール済み情報の確認
+edinet.uninstall_taxonomy()        # 削除
+```
+
+- 展開先: `platformdirs.user_data_dir("edinet")` (Linux: `~/.local/share/edinet/`, macOS: `~/Library/Application Support/edinet/`, Windows: `%LOCALAPPDATA%\edinet\`)
+- 2回目以降は再ダウンロードせず即座に返る（`force=True` で上書き可能）
+- `install_taxonomy()` は自動的に `configure(taxonomy_path=...)` を呼ぶ
+
+#### ダウンロード元
+
+金融庁公式サイト（`www.fsa.go.jp`）から直接ダウンロード:
+```
+https://www.fsa.go.jp/search/{FSA公開日}/1c_Taxonomy.zip
+```
+CloudFront CDN 配信で安定。2018〜2026年の全9バージョンが利用可能。
+
+#### ライブラリ開発者向け: 新年度の追加
+
+年度→URL マッピングは `taxonomy_install.py` の `_KNOWN_VERSIONS` に静的定義されている。
+FSA 公開日は不規則（11月・12月・2月等）のため動的予測不可。新タクソノミ公開時に手動追加が必要:
+
+```python
+# taxonomy_install.py
+_KNOWN_VERSIONS: dict[int, tuple[str, str]] = {
+    2027: ("2026MMDD", "ALL_2026MMDD"),  # 新年度を追加
+    2026: ("20251111", "ALL_20251101"),
+    ...
+}
+```
+
+### 保守フロー（マッピングデータの年次更新）
 
 ```
-1. 金融庁から新タクソノミ ZIP をダウンロード → EDINET_TAXONOMY_ROOT 設定変更
+1. edinet.install_taxonomy(year=YYYY) でタクソノミをインストール
+   （または手動ダウンロード → EDINET_TAXONOMY_ROOT 設定変更）
 2. uv run pytest で既存テストを実行（概念名の不一致があれば失敗する）
 3. 下記チェックリストに従い Python ファイル内のマッピングを突合・修正
 4. uv run pytest で回帰テストを再実行

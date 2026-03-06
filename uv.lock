@@ -58,7 +58,6 @@ dependencies = [
     { name = "lxml" },
     { name = "platformdirs" },
     { name = "pydantic" },
-    { name = "xbrl-core", extra = ["all"] },
 ]
 
 [package.optional-dependencies]
@@ -89,7 +88,6 @@ requires-dist = [
     { name = "pyarrow", marker = "extra == 'analysis'", specifier = ">=14.0" },
     { name = "pydantic", specifier = ">=2.0" },
     { name = "rich", marker = "extra == 'display'", specifier = ">=13.0" },
-    { name = "xbrl-core", extras = ["all"], specifier = ">=0.1.0" },
 ]
 provides-extras = ["analysis", "display"]
 
@@ -794,24 +792,4 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/8e/25/925f35db758a0f9199113aaf61d703de891676b082bd7cf73ea01d6000f7/vulture-2.14.tar.gz", hash = "sha256:cb8277902a1138deeab796ec5bef7076a6e0248ca3607a3f3dee0b6d9e9b8415", size = 58823, upload-time = "2024-12-08T17:39:43.319Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a0/56/0cc15b8ff2613c1d5c3dc1f3f576ede1c43868c1bc2e5ccaa2d4bcd7974d/vulture-2.14-py2.py3-none-any.whl", hash = "sha256:d9a90dba89607489548a49d557f8bac8112bd25d3cbc8aeef23e860811bd5ed9", size = 28915, upload-time = "2024-12-08T17:39:40.573Z" },
-]
-
-[[package]]
-name = "xbrl-core"
-version = "0.1.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "lxml" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/3a/22/c13eaf4c467c7d1e0fe2ed8887d6ba24781c2eccd7d7b684b51e949bfb29/xbrl_core-0.1.0.tar.gz", hash = "sha256:3ca210162238cf9b30ef593a6124727f4d640e79380b5968c9667570febdcc4f", size = 67412, upload-time = "2026-03-05T23:05:39.132Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/91/eb/0f51a11ca4938e8dc220c7eacf506b1742c9b0bd8195289a57a636908e8f/xbrl_core-0.1.0-py3-none-any.whl", hash = "sha256:02f0eb0ff89b9f8a378d256953aaffc9dfd421ab3d273ffba8e898dce828720d", size = 88269, upload-time = "2026-03-05T23:05:35.947Z" },
-]
-
-[package.optional-dependencies]
-all = [
-    { name = "openpyxl" },
-    { name = "pandas" },
-    { name = "pyarrow" },
-    { name = "rich" },
 ]

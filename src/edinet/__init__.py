@@ -80,6 +80,13 @@ if TYPE_CHECKING:
         extract_employee_info as extract_employee_info,
         EmployeeInfo as EmployeeInfo,
     )
+    from edinet.taxonomy_install import (
+        TaxonomyInfo as TaxonomyInfo,
+        install_taxonomy as install_taxonomy,
+        list_taxonomy_versions as list_taxonomy_versions,
+        taxonomy_info as taxonomy_info,
+        uninstall_taxonomy as uninstall_taxonomy,
+    )
 
 _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
     # --- 設定・ユーティリティ ---
@@ -172,6 +179,15 @@ _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
         "extract_employee_info",
     ),
     "EmployeeInfo": ("edinet.financial.notes.employees", "EmployeeInfo"),
+    # --- タクソノミインストール ---
+    "install_taxonomy": ("edinet.taxonomy_install", "install_taxonomy"),
+    "list_taxonomy_versions": (
+        "edinet.taxonomy_install",
+        "list_taxonomy_versions",
+    ),
+    "taxonomy_info": ("edinet.taxonomy_install", "taxonomy_info"),
+    "TaxonomyInfo": ("edinet.taxonomy_install", "TaxonomyInfo"),
+    "uninstall_taxonomy": ("edinet.taxonomy_install", "uninstall_taxonomy"),
 }
 
 
@@ -264,4 +280,10 @@ __all__ = [
     # 注記情報
     "extract_employee_info",
     "EmployeeInfo",
+    # タクソノミインストール
+    "install_taxonomy",
+    "list_taxonomy_versions",
+    "taxonomy_info",
+    "TaxonomyInfo",
+    "uninstall_taxonomy",
 ]
