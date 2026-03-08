@@ -440,6 +440,32 @@ class TaxonomyResolver:
                 self._normalized_ns_to_prefix.pop(normalized, None)
         self._filer_ns_keys.clear()
 
+    def fork(self) -> TaxonomyResolver:
+        """不変データを共有し可変データを独立コピーした新インスタンスを返す。
+
+        大量の Filing を並列処理する際、``get_taxonomy_resolver()`` で
+        取得した共有インスタンスに ``load_filer_labels()`` した後、
+        ``fork()`` で Filing ごとの独立コピーを作成する。
+        これにより次の filing の ``clear_filer_labels()`` が
+        ``Statements._resolver`` のラベルを破壊しなくなる。
+
+        Returns:
+            ``_standard_labels`` を参照共有し、
+            ``_filer_labels`` / ``_ns_to_prefix`` 等を独立コピーした
+            新しい TaxonomyResolver。
+        """
+        forked = object.__new__(TaxonomyResolver)
+        # 不変 → 参照共有
+        forked._taxonomy_path = self._taxonomy_path
+        forked._taxonomy_version = self._taxonomy_version
+        forked._standard_labels = self._standard_labels
+        # 可変 → 独立コピー
+        forked._filer_labels = dict(self._filer_labels)
+        forked._ns_to_prefix = dict(self._ns_to_prefix)
+        forked._normalized_ns_to_prefix = dict(self._normalized_ns_to_prefix)
+        forked._filer_ns_keys = set(self._filer_ns_keys)
+        return forked
+
 
 # ---------------------------------------------------------------------------
 # 内部: _lab.xml パース

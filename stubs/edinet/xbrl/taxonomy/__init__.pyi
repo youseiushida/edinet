@@ -121,3 +121,17 @@ class TaxonomyResolver:
 
         次の filing を処理する前に呼び出す。
         """
+    def fork(self) -> TaxonomyResolver:
+        """不変データを共有し可変データを独立コピーした新インスタンスを返す。
+
+        大量の Filing を並列処理する際、``get_taxonomy_resolver()`` で
+        取得した共有インスタンスに ``load_filer_labels()`` した後、
+        ``fork()`` で Filing ごとの独立コピーを作成する。
+        これにより次の filing の ``clear_filer_labels()`` が
+        ``Statements._resolver`` のラベルを破壊しなくなる。
+
+        Returns:
+            ``_standard_labels`` を参照共有し、
+            ``_filer_labels`` / ``_ns_to_prefix`` 等を独立コピーした
+            新しい TaxonomyResolver。
+        """

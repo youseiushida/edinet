@@ -256,6 +256,7 @@ class Filing(BaseModel):
     _zip_cache: bytes | None = PrivateAttr(default=None)
     _xbrl_cache: tuple[str, bytes] | None = PrivateAttr(default=None)
     _pdf_cache: bytes | None = PrivateAttr(default=None)
+    _stmts_cache: tuple[str, Statements] | None = PrivateAttr(default=None)
 
     # --- 計算フィールド ---
 
@@ -305,10 +306,11 @@ class Filing(BaseModel):
         return Company.from_filing(self)
 
     def clear_fetch_cache(self) -> None:
-        """`fetch()` / `fetch_pdf()` のキャッシュを破棄する。"""
+        """`fetch()` / `fetch_pdf()` / `xbrl()` のキャッシュを破棄する。"""
         object.__setattr__(self, "_zip_cache", None)
         object.__setattr__(self, "_xbrl_cache", None)
         object.__setattr__(self, "_pdf_cache", None)
+        object.__setattr__(self, "_stmts_cache", None)
 
     def _get_from_disk_cache(self) -> bytes | None:
         """ディスクキャッシュから ZIP を読み込む。
@@ -787,9 +789,10 @@ class Filing(BaseModel):
                 lab_en_xml_bytes=filer_files.get("lab_en"),
                 xsd_bytes=filer_files.get("xsd"),
             )
+            forked_resolver = resolver.fork()
 
             # 7. LineItem 生成
-            items = build_line_items(parsed.facts, ctx_map, resolver)
+            items = build_line_items(parsed.facts, ctx_map, forked_resolver)
             logger.debug("step 7: built %d line items", len(items))
 
             # 7b. リンクベースパース（definition_mapper / calc_mapper 用）
@@ -828,7 +831,7 @@ class Filing(BaseModel):
                 contexts=ctx_map,
                 taxonomy_root=_Path(taxonomy_path),
                 industry_code=industry_code,
-                resolver=resolver,
+                resolver=forked_resolver,
                 calculation_linkbase=cal_lb,
                 definition_linkbase=def_trees,
             )
@@ -877,8 +880,17 @@ class Filing(BaseModel):
                 f"書類に XBRL が含まれていません (doc_id={self.doc_id}, xbrlFlag=0)。",
             )
         resolved_taxonomy_path = self._resolve_taxonomy_path(taxonomy_path)
+
+        # Statements キャッシュチェック
+        cached = self._stmts_cache
+        if cached is not None and cached[0] == resolved_taxonomy_path:
+            return cached[1]
+
         xbrl_path, xbrl_bytes = self.fetch()
-        return self._build_statements(resolved_taxonomy_path, xbrl_path, xbrl_bytes)
+        stmts = self._build_statements(resolved_taxonomy_path, xbrl_path, xbrl_bytes)
+        object.__setattr__(self, "_stmts_cache", (resolved_taxonomy_path, stmts))
+        object.__setattr__(self, "_zip_cache", None)  # ZIP メモリ解放
+        return stmts
 
     async def axbrl(self, *, taxonomy_path: str | None = None) -> Statements:
         """XBRL を非同期で解析し財務諸表コンテナを返す。
@@ -914,8 +926,17 @@ class Filing(BaseModel):
                 f"書類に XBRL が含まれていません (doc_id={self.doc_id}, xbrlFlag=0)。",
             )
         resolved_taxonomy_path = self._resolve_taxonomy_path(taxonomy_path)
+
+        # Statements キャッシュチェック
+        cached = self._stmts_cache
+        if cached is not None and cached[0] == resolved_taxonomy_path:
+            return cached[1]
+
         xbrl_path, xbrl_bytes = await self.afetch()
-        return self._build_statements(resolved_taxonomy_path, xbrl_path, xbrl_bytes)
+        stmts = self._build_statements(resolved_taxonomy_path, xbrl_path, xbrl_bytes)
+        object.__setattr__(self, "_stmts_cache", (resolved_taxonomy_path, stmts))
+        object.__setattr__(self, "_zip_cache", None)  # ZIP メモリ解放
+        return stmts
 
     # --- ファクトリメソッド ---
 

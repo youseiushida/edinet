@@ -997,7 +997,7 @@ def test_xbrl_warns_on_non_jgaap_namespace(monkeypatch: pytest.MonkeyPatch):
     )
     monkeypatch.setattr(
         "edinet.financial.statements.build_statements",
-        lambda items: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=items),
+        lambda items, **kw: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=items),
     )
 
     taxonomy_path = str(
@@ -1088,7 +1088,7 @@ async def test_axbrl_warns_stacklevel_correct(monkeypatch: pytest.MonkeyPatch):
     )
     monkeypatch.setattr(
         "edinet.financial.statements.build_statements",
-        lambda items: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=items),
+        lambda items, **kw: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=items),
     )
 
     taxonomy_path = str(
@@ -1102,3 +1102,124 @@ async def test_axbrl_warns_stacklevel_correct(monkeypatch: pytest.MonkeyPatch):
     assert len(jppfs_warnings) >= 1
     # axbrl() 経由でも stacklevel=3 が正しく呼び出し元を指すこと
     assert jppfs_warnings[0].filename == __file__
+
+
+# =====================================================================
+# Statements キャッシュ + _zip_cache 自動解放テスト
+# =====================================================================
+
+
+def test_xbrl_caches_statements(monkeypatch: pytest.MonkeyPatch):
+    """xbrl() の2回目呼び出しでは _build_statements を呼ばない。"""
+    filing = Filing.from_api_response(SAMPLE_DOC)
+    build_count = {"n": 0}
+
+    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes):
+        build_count["n"] += 1
+        from edinet.financial.statements import Statements
+        return Statements(_items=())
+
+    monkeypatch.setattr(Filing, "_build_statements", fake_build)
+    monkeypatch.setattr("edinet.api.download.download_document", lambda *a, **kw: b"PK\x03\x04dummy")
+    monkeypatch.setattr("edinet.api.download.extract_primary_xbrl", lambda _: ("PublicDoc/main.xbrl", b"<xbrli:xbrl/>"))
+
+    filing.xbrl(taxonomy_path="/dummy")
+    assert build_count["n"] == 1
+
+    filing.xbrl(taxonomy_path="/dummy")
+    assert build_count["n"] == 1  # キャッシュヒット
+
+
+def test_xbrl_clears_zip_cache(monkeypatch: pytest.MonkeyPatch):
+    """xbrl() 完了後に _zip_cache が None になること。"""
+    filing = Filing.from_api_response(SAMPLE_DOC)
+
+    monkeypatch.setattr(Filing, "_build_statements", lambda self, *a: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=()))
+    monkeypatch.setattr("edinet.api.download.download_document", lambda *a, **kw: b"PK\x03\x04dummy")
+    monkeypatch.setattr("edinet.api.download.extract_primary_xbrl", lambda _: ("PublicDoc/main.xbrl", b"<xbrli:xbrl/>"))
+
+    filing.xbrl(taxonomy_path="/dummy")
+    assert filing._zip_cache is None
+
+
+def test_xbrl_cache_invalidated_by_different_taxonomy_path(monkeypatch: pytest.MonkeyPatch):
+    """異なる taxonomy_path で xbrl() を呼ぶとキャッシュミスして再構築する。"""
+    filing = Filing.from_api_response(SAMPLE_DOC)
+    build_count = {"n": 0}
+
+    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes):
+        build_count["n"] += 1
+        from edinet.financial.statements import Statements
+        return Statements(_items=())
+
+    monkeypatch.setattr(Filing, "_build_statements", fake_build)
+    monkeypatch.setattr("edinet.api.download.download_document", lambda *a, **kw: b"PK\x03\x04dummy")
+    monkeypatch.setattr("edinet.api.download.extract_primary_xbrl", lambda _: ("PublicDoc/main.xbrl", b"<xbrli:xbrl/>"))
+
+    filing.xbrl(taxonomy_path="/dummy_a")
+    assert build_count["n"] == 1
+
+    filing.xbrl(taxonomy_path="/dummy_b")
+    assert build_count["n"] == 2  # 別パスでキャッシュミス
+
+
+def test_clear_fetch_cache_clears_stmts(monkeypatch: pytest.MonkeyPatch):
+    """clear_fetch_cache() 後に xbrl() が再構築すること。"""
+    filing = Filing.from_api_response(SAMPLE_DOC)
+    build_count = {"n": 0}
+
+    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes):
+        build_count["n"] += 1
+        from edinet.financial.statements import Statements
+        return Statements(_items=())
+
+    monkeypatch.setattr(Filing, "_build_statements", fake_build)
+    monkeypatch.setattr("edinet.api.download.download_document", lambda *a, **kw: b"PK\x03\x04dummy")
+    monkeypatch.setattr("edinet.api.download.extract_primary_xbrl", lambda _: ("PublicDoc/main.xbrl", b"<xbrli:xbrl/>"))
+
+    filing.xbrl(taxonomy_path="/dummy")
+    assert build_count["n"] == 1
+
+    filing.clear_fetch_cache()
+    filing.xbrl(taxonomy_path="/dummy")
+    assert build_count["n"] == 2
+
+
+def test_fetch_works_after_zip_cleared(monkeypatch: pytest.MonkeyPatch):
+    """xbrl() 後も fetch() は _xbrl_cache から返せること。"""
+    filing = Filing.from_api_response(SAMPLE_DOC)
+    xbrl_data = b"<xbrli:xbrl/>"
+
+    monkeypatch.setattr(Filing, "_build_statements", lambda self, *a: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=()))
+    monkeypatch.setattr("edinet.api.download.download_document", lambda *a, **kw: b"PK\x03\x04dummy")
+    monkeypatch.setattr("edinet.api.download.extract_primary_xbrl", lambda _: ("PublicDoc/main.xbrl", xbrl_data))
+
+    filing.xbrl(taxonomy_path="/dummy")
+    assert filing._zip_cache is None  # ZIP は解放済み
+
+    # _xbrl_cache は残っているので fetch() は動作する
+    path, data = filing.fetch()
+    assert data == xbrl_data
+
+
+async def test_axbrl_caches_statements(monkeypatch: pytest.MonkeyPatch):
+    """axbrl() の2回目呼び出しでもキャッシュが効くこと。"""
+    filing = Filing.from_api_response(SAMPLE_DOC)
+    build_count = {"n": 0}
+
+    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes):
+        build_count["n"] += 1
+        from edinet.financial.statements import Statements
+        return Statements(_items=())
+
+    monkeypatch.setattr(Filing, "_build_statements", fake_build)
+
+    # _xbrl_cache を事前設定して API 呼び出しを回避
+    object.__setattr__(filing, "_xbrl_cache", ("PublicDoc/main.xbrl", b"<xbrli:xbrl/>"))
+    object.__setattr__(filing, "_zip_cache", b"dummy")
+
+    await filing.axbrl(taxonomy_path="/dummy")
+    assert build_count["n"] == 1
+
+    await filing.axbrl(taxonomy_path="/dummy")
+    assert build_count["n"] == 1  # キャッシュヒット

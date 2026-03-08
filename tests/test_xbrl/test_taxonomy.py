@@ -491,3 +491,58 @@ class TestP1Additional:
         label = resolver.resolve_clark(qname, lang="ja")
         assert label.text == "営業利益"
         assert label.source == LabelSource.STANDARD
+
+
+# =====================================================================
+# fork() テスト
+# =====================================================================
+
+
+class TestFork:
+    """TaxonomyResolver.fork() のテスト。"""
+
+    def test_fork_shares_standard_labels(
+        self, resolver: TaxonomyResolver
+    ) -> None:
+        """fork() は _standard_labels を参照共有する。"""
+        forked = resolver.fork()
+        assert forked._standard_labels is resolver._standard_labels
+
+    def test_fork_independent_filer_labels(
+        self, resolver: TaxonomyResolver
+    ) -> None:
+        """fork() 後に original をクリアしても fork のラベルが残る。"""
+        lab_bytes = (_FILER_DIR / "filer_lab.xml").read_bytes()
+        xsd_bytes = (_FILER_DIR / "filer.xsd").read_bytes()
+        resolver.load_filer_labels(lab_bytes, xsd_bytes=xsd_bytes)
+        forked = resolver.fork()
+
+        # original をクリア
+        resolver.clear_filer_labels()
+
+        # original は FALLBACK になる
+        label_orig = resolver.resolve(
+            "jpcrp030000-asr_X99001-000", "CustomExpense"
+        )
+        assert label_orig.source == LabelSource.FALLBACK
+
+        # fork は FILER のまま
+        label_fork = forked.resolve(
+            "jpcrp030000-asr_X99001-000", "CustomExpense"
+        )
+        assert label_fork.text == "独自費用項目"
+        assert label_fork.source == LabelSource.FILER
+
+    def test_fork_resolves_after_original_cleared(
+        self, resolver: TaxonomyResolver
+    ) -> None:
+        """fork で filer ラベルが解決でき、標準ラベルも正常に動作する。"""
+        lab_bytes = (_FILER_DIR / "filer_lab.xml").read_bytes()
+        resolver.load_filer_labels(lab_bytes)
+        forked = resolver.fork()
+        resolver.clear_filer_labels()
+
+        # fork: 標準ラベルも動作する
+        label = forked.resolve("jppfs_cor", "NetSales")
+        assert label.text == "提出者カスタム売上高"
+        assert label.source == LabelSource.FILER

@@ -66,7 +66,7 @@ def statement_mapper(item: LineItem, ctx: MapperContext) -> str | None:
         マッチした canonical key。マッチしない場合は ``None``。
     """
 def standard_concept_mapper(item: LineItem, ctx: MapperContext) -> str | None:
-    """標準タクソノミの科目は local_name をそのまま返すマッパー。
+    '''標準タクソノミの科目は local_name をそのまま返すマッパー。
 
     名前空間 URI で標準タクソノミか企業固有かを判定し、
     標準タクソノミに属する科目は ``item.local_name`` をそのまま返す。
@@ -93,7 +93,7 @@ def standard_concept_mapper(item: LineItem, ctx: MapperContext) -> str | None:
             ]
             result = extract_values(stmts, ["NetSales", "OperatingIncome"],
                                     mapper=pipeline)
-    """
+    '''
 def definition_mapper(lookup: Callable[[str], str | None] | None = None) -> ConceptMapper:
     """Definition Linkbase の general-special で標準概念に遡上し CK を返すマッパーを生成する。
 

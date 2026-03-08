@@ -95,7 +95,7 @@ class Filing(BaseModel):
     def company(self) -> Company | None:
         """提出者 Company を返す。"""
     def clear_fetch_cache(self) -> None:
-        """`fetch()` / `fetch_pdf()` のキャッシュを破棄する。"""
+        """`fetch()` / `fetch_pdf()` / `xbrl()` のキャッシュを破棄する。"""
     def fetch_pdf(self, *, refresh: bool = False) -> bytes:
         """提出書類の PDF をダウンロードして返す。
 
