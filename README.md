@@ -456,6 +456,67 @@ pl.to_excel("pl.xlsx")
 df_all = stmts.to_dataframe()
 ```
 
+## Parquet 永続化・復元（横断分析）
+
+Filing + Statements を Parquet ファイルに永続化し、5 年分の横断比較や GitHub Releases 経由の配信に利用できます。
+
+```sh
+pip install pyarrow
+```
+
+### エクスポート
+
+```python
+from edinet.extension import export_parquet
+
+# Filing + Statements ペアのリストを用意
+data = []
+for filing in filings:
+    if filing.has_xbrl:
+        stmts = filing.xbrl()
+        data.append((filing, stmts))
+    else:
+        data.append((filing, None))  # XBRL なしの書類もメタデータを保持
+
+# Parquet に永続化（最大 6 ファイル）
+paths = export_parquet(data, "./parquet_out", prefix="2026-03-06_")
+# → filings.parquet, line_items.parquet, contexts.parquet,
+#   dei.parquet, calc_edges.parquet, def_parents.parquet
+```
+
+### インポート
+
+```python
+from edinet.extension import import_parquet
+
+# Parquet から復元（タクソノミ・API キー不要）
+restored = import_parquet("./parquet_out", prefix="2026-03-06_")
+
+for filing, stmts in restored:
+    if stmts is not None:
+        pl = stmts.income_statement()
+        bs = stmts.balance_sheet()
+        print(f"{filing.filer_name}: {len(list(pl))} PL items")
+
+        # extract_values も動作する
+        from edinet import extract_values, CK
+        result = extract_values(stmts, [CK.REVENUE, CK.OPERATING_INCOME])
+```
+
+### 保持される情報
+
+| データ | 状態 | 用途 |
+|:---|:---|:---|
+| Filing メタデータ | 完全復元（computed_field 含む） | `filing_date`, `ticker`, `doc_type` 等 |
+| 全 LineItem | 完全復元（Decimal 精度・ラベル情報含む） | PL/BS/CF 組み立て、search、DataFrame |
+| DEI | 完全復元（Enum 含む） | 会計基準・期間分類 |
+| DetectedStandard | 完全復元 | 会計基準判別結果 |
+| Context マッピング | 完全復元 | 期間・連結/個別フィルタ |
+| Calculation Linkbase | 完全復元 | `children_of`/`parent_of`、calc_mapper |
+| Definition parent_index | 永続化（復元はフラット辞書） | definition_mapper |
+
+> **制限**: `equity_statement()` / `comprehensive_income()` はタクソノミが必要なため、復元後は空を返します。`resolver`（ラベル再解決）と `raw_facts`（テキストブロック抽出）は永続化されません。
+
 ## Rich ターミナル表示
 
 ```python
