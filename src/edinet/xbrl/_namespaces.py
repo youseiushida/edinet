@@ -154,7 +154,7 @@ _FILER_TAXONOMY_PATTERN = re.compile(
 # ============================================================
 
 
-@lru_cache(maxsize=256)
+@lru_cache(maxsize=None)
 def classify_namespace(uri: str) -> NamespaceInfo:
     """名前空間 URI を解析し、分類結果を返す。
 

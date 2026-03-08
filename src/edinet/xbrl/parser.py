@@ -929,19 +929,12 @@ def _normalize_optional_attr(raw: str | None) -> str | None:
 
 
 def _serialize_outer_xml(element: etree._Element) -> str:
-    """要素全体（開始/終了タグを含む）を XML 文字列として返す。"""
-    # QName を文字列属性値で持つ場合に備え、in-scope namespace 宣言を明示的に保持する。
-    element_copy = etree.Element(element.tag, nsmap=element.nsmap)
-    for key, value in element.attrib.items():
-        element_copy.set(key, value)
-    element_copy.text = element.text
-    for child in element:
-        element_copy.append(deepcopy(child))
-    return etree.tostring(
-        element_copy,
-        encoding="unicode",
-        with_tail=False,
-    )
+    """要素全体（開始/終了タグを含む）を XML 文字列として返す。
+
+    lxml の ``tostring`` は in-scope namespace 宣言を自動的に
+    出力するため、子要素の deepcopy を伴う再構築は不要。
+    """
+    return etree.tostring(element, encoding="unicode", with_tail=False)
 
 
 def _split_clark_qname(tag: str) -> tuple[str | None, str]:
@@ -1082,7 +1075,11 @@ def _normalize_numeric_lexical(raw: str) -> Decimal | None:
 
 
 def _extract_inner_xml(element: etree._Element) -> str:
-    """要素内の XML 断片（子要素タグ込み）を返す。"""
+    """要素内の XML 断片（子要素タグ込み）を返す。
+
+    子要素は ``deepcopy`` + ``cleanup_namespaces`` で不要な名前空間宣言を除去する。
+    テキストブロック Fact でのみ呼ばれるため影響は限定的。
+    """
     parts: list[str] = []
     if element.text is not None:
         parts.append(element.text)

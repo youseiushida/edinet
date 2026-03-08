@@ -65,6 +65,7 @@ if TYPE_CHECKING:
     from edinet.financial.mapper import (
         summary_mapper as summary_mapper,
         statement_mapper as statement_mapper,
+        standard_concept_mapper as standard_concept_mapper,
         definition_mapper as definition_mapper,
         calc_mapper as calc_mapper,
         dict_mapper as dict_mapper,
@@ -164,6 +165,7 @@ _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
     # --- マッパー ---
     "summary_mapper": ("edinet.financial.mapper", "summary_mapper"),
     "statement_mapper": ("edinet.financial.mapper", "statement_mapper"),
+    "standard_concept_mapper": ("edinet.financial.mapper", "standard_concept_mapper"),
     "definition_mapper": ("edinet.financial.mapper", "definition_mapper"),
     "calc_mapper": ("edinet.financial.mapper", "calc_mapper"),
     "dict_mapper": ("edinet.financial.mapper", "dict_mapper"),
@@ -268,6 +270,7 @@ __all__ = [
     # マッパー
     "summary_mapper",
     "statement_mapper",
+    "standard_concept_mapper",
     "definition_mapper",
     "calc_mapper",
     "dict_mapper",

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "1_TaxonomyResolver_create",
+    "n": 100,
+    "total_sec": 6.167587,
+    "avg_sec": 0.061676,
+    "min_sec": 0.050265,
+    "max_sec": 0.092875
+  },
+  {
+    "name": "3_zip_multi_open",
+    "n": 100,
+    "total_sec": 0.029189,
+    "avg_sec": 0.000292,
+    "min_sec": 0.000222,
+    "max_sec": 0.000754
+  },
+  {
+    "name": "3b_extract_filer_taxonomy_files",
+    "n": 100,
+    "total_sec": 0.023266,
+    "avg_sec": 0.000233,
+    "min_sec": 0.000187,
+    "max_sec": 0.000633
+  },
+  {
+    "name": "4_derive_concept_sets",
+    "n": 100,
+    "total_sec": 6.852252,
+    "avg_sec": 0.068523,
+    "min_sec": 0.047417,
+    "max_sec": 0.128781
+  },
+  {
+    "name": "5_parse_xbrl_facts",
+    "n": 100,
+    "total_sec": 0.096361,
+    "avg_sec": 0.000964,
+    "min_sec": 0.000696,
+    "max_sec": 0.012731
+  },
+  {
+    "name": "6_classify_namespace_500uris",
+    "n": 10,
+    "total_sec": 0.016876,
+    "avg_sec": 0.001688,
+    "min_sec": 0.001512,
+    "max_sec": 0.002073
+  },
+  {
+    "name": "7_select_filer_xsd",
+    "n": 1000,
+    "total_sec": 0.002051,
+    "avg_sec": 2e-06,
+    "min_sec": 2e-06,
+    "max_sec": 0.000184
+  }
+]

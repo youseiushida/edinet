@@ -4,6 +4,7 @@ EDINET API 仕様書 §3-1-2-2 の全29フィールドを保持する。
 """
 from __future__ import annotations
 
+import re
 from datetime import date, datetime
 from typing import TYPE_CHECKING, Any
 
@@ -16,6 +17,9 @@ if TYPE_CHECKING:
     from edinet.models.company import Company
     from edinet.models.form_code import FormCodeEntry
     from edinet.financial.statements import Statements
+
+# EDINET コードパターン（_select_filer_xsd 用）
+_EDINET_CODE_RE = re.compile(r"_E\d{5}", re.IGNORECASE)
 
 # --- ヘルパー関数（モジュールプライベート） ---
 
@@ -75,9 +79,6 @@ def _select_filer_xsd(candidates: list[str]) -> str | None:
     if len(candidates) == 1:
         return candidates[0]
 
-    import re
-
-    _EDINET_CODE_RE = re.compile(r"_E\d{5}", re.IGNORECASE)
     filer_matches = [c for c in candidates if _EDINET_CODE_RE.search(c)]
     if filer_matches:
         return sorted(filer_matches)[0]
@@ -96,6 +97,8 @@ def _extract_filer_taxonomy_files(zip_bytes: bytes | None) -> dict[str, bytes]:
     ラベルファイルは選択された XSD のベース名から導出し、XSD と同じ
     タクソノミに属するラベルを確実に取得する。
 
+    ZIP は一度だけオープンし、必要なメンバーを一括で読み出す。
+
     Args:
         zip_bytes: ZIP のバイト列。None の場合は空辞書を返す。
 
@@ -107,61 +110,63 @@ def _extract_filer_taxonomy_files(zip_bytes: bytes | None) -> dict[str, bytes]:
         return {}
 
     import logging
-
-    from edinet.api.download import extract_zip_member, list_zip_members
+    from io import BytesIO
+    from zipfile import ZipFile
 
     logger = logging.getLogger(__name__)
-    members = list_zip_members(zip_bytes)
-    member_set = set(members)
-    xsd_candidates: list[str] = []
-    lab_fallbacks: list[str] = []
-    lab_en_fallbacks: list[str] = []
 
-    for name in members:
-        lower = name.lower()
-        if "publicdoc/" not in lower.replace("\\", "/"):
-            continue
-        if lower.endswith("_lab.xml") and "_lab-en" not in lower:
-            lab_fallbacks.append(name)
-        elif lower.endswith("_lab-en.xml"):
-            lab_en_fallbacks.append(name)
-        elif lower.endswith(".xsd") and "audit" not in lower:
-            xsd_candidates.append(name)
+    with ZipFile(BytesIO(zip_bytes)) as zf:
+        members = [info.filename for info in zf.infolist() if not info.is_dir()]
+        member_set = set(members)
+        xsd_candidates: list[str] = []
+        lab_fallbacks: list[str] = []
+        lab_en_fallbacks: list[str] = []
 
-    result: dict[str, bytes] = {}
+        for name in members:
+            lower = name.lower()
+            if "publicdoc/" not in lower.replace("\\", "/"):
+                continue
+            if lower.endswith("_lab.xml") and "_lab-en" not in lower:
+                lab_fallbacks.append(name)
+            elif lower.endswith("_lab-en.xml"):
+                lab_en_fallbacks.append(name)
+            elif lower.endswith(".xsd") and "audit" not in lower:
+                xsd_candidates.append(name)
 
-    # 1. XSD を決定的に選択
-    selected_xsd = _select_filer_xsd(xsd_candidates)
-    if selected_xsd is not None:
-        result["xsd"] = extract_zip_member(zip_bytes, selected_xsd)
+        result: dict[str, bytes] = {}
 
-    if len(xsd_candidates) > 1:
-        logger.debug(
-            "複数の XSD を検出: %s → %s を選択", xsd_candidates, selected_xsd,
-        )
+        # 1. XSD を決定的に選択
+        selected_xsd = _select_filer_xsd(xsd_candidates)
+        if selected_xsd is not None:
+            result["xsd"] = zf.read(selected_xsd)
 
-    # 2. ラベル・リンクベースファイルを XSD のベース名から導出
-    if selected_xsd is not None:
-        xsd_stem = selected_xsd[:selected_xsd.lower().rfind(".xsd")]
-        derived_lab = xsd_stem + "_lab.xml"
-        derived_lab_en = xsd_stem + "_lab-en.xml"
-        derived_cal = xsd_stem + "_cal.xml"
-        derived_def = xsd_stem + "_def.xml"
+        if len(xsd_candidates) > 1:
+            logger.debug(
+                "複数の XSD を検出: %s → %s を選択", xsd_candidates, selected_xsd,
+            )
 
-        if derived_lab in member_set:
-            result["lab"] = extract_zip_member(zip_bytes, derived_lab)
-        if derived_lab_en in member_set:
-            result["lab_en"] = extract_zip_member(zip_bytes, derived_lab_en)
-        if derived_cal in member_set:
-            result["cal"] = extract_zip_member(zip_bytes, derived_cal)
-        if derived_def in member_set:
-            result["def"] = extract_zip_member(zip_bytes, derived_def)
+        # 2. ラベル・リンクベースファイルを XSD のベース名から導出
+        if selected_xsd is not None:
+            xsd_stem = selected_xsd[:selected_xsd.lower().rfind(".xsd")]
+            derived_lab = xsd_stem + "_lab.xml"
+            derived_lab_en = xsd_stem + "_lab-en.xml"
+            derived_cal = xsd_stem + "_cal.xml"
+            derived_def = xsd_stem + "_def.xml"
 
-    # 3. XSD から導出できなかった場合はフォールバック
-    if "lab" not in result and lab_fallbacks:
-        result["lab"] = extract_zip_member(zip_bytes, sorted(lab_fallbacks)[0])
-    if "lab_en" not in result and lab_en_fallbacks:
-        result["lab_en"] = extract_zip_member(zip_bytes, sorted(lab_en_fallbacks)[0])
+            if derived_lab in member_set:
+                result["lab"] = zf.read(derived_lab)
+            if derived_lab_en in member_set:
+                result["lab_en"] = zf.read(derived_lab_en)
+            if derived_cal in member_set:
+                result["cal"] = zf.read(derived_cal)
+            if derived_def in member_set:
+                result["def"] = zf.read(derived_def)
+
+        # 3. XSD から導出できなかった場合はフォールバック
+        if "lab" not in result and lab_fallbacks:
+            result["lab"] = zf.read(sorted(lab_fallbacks)[0])
+        if "lab_en" not in result and lab_en_fallbacks:
+            result["lab_en"] = zf.read(sorted(lab_en_fallbacks)[0])
 
     logger.debug("filer taxonomy files found: %s", list(result.keys()))
     return result
@@ -733,12 +738,12 @@ class Filing(BaseModel):
 
         from edinet.exceptions import EdinetError, EdinetParseError
         from edinet.xbrl import (
-            TaxonomyResolver,
             build_line_items,
             build_statements,
             parse_xbrl_facts,
             structure_contexts,
         )
+        from edinet.xbrl.taxonomy import get_taxonomy_resolver
 
         logger = logging.getLogger(__name__)
 
@@ -776,7 +781,7 @@ class Filing(BaseModel):
             logger.debug("step 5: structured %d contexts", len(ctx_map))
 
             # 6. ラベル解決
-            resolver = TaxonomyResolver(taxonomy_path)
+            resolver = get_taxonomy_resolver(taxonomy_path)
             resolver.load_filer_labels(
                 lab_xml_bytes=filer_files.get("lab"),
                 lab_en_xml_bytes=filer_files.get("lab_en"),

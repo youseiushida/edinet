@@ -47,6 +47,7 @@ from edinet.financial.standards.statement_mappings import (
     lookup_statement_normalized,
 )
 from edinet.financial.standards.summary_mappings import lookup_summary
+from edinet.xbrl._namespaces import is_standard_taxonomy
 
 if TYPE_CHECKING:
     from edinet.financial.standards.detect import DetectedStandard
@@ -60,6 +61,7 @@ __all__ = [
     "calc_mapper",
     "definition_mapper",
     "dict_mapper",
+    "standard_concept_mapper",
     "statement_mapper",
     "summary_mapper",
 ]
@@ -140,6 +142,40 @@ def statement_mapper(item: LineItem, ctx: MapperContext) -> str | None:
     if ck is not None:
         return ck
     return lookup_statement_normalized(item.local_name)
+
+
+def standard_concept_mapper(item: LineItem, ctx: MapperContext) -> str | None:
+    """標準タクソノミの科目は local_name をそのまま返すマッパー。
+
+    名前空間 URI で標準タクソノミか企業固有かを判定し、
+    標準タクソノミに属する科目は ``item.local_name`` をそのまま返す。
+    企業固有科目は ``None`` を返し、後続マッパー（``definition_mapper`` /
+    ``calc_mapper``）に委譲する。
+
+    CK（canonical key）を使わず、XBRL の concept ID で直接名寄せしたい
+    場合に使用する。
+
+    Args:
+        item: 走査中の LineItem。
+        ctx: マッパーコンテキスト（未使用だがシグネチャ統一のため受け取る）。
+
+    Returns:
+        標準タクソノミの場合は ``item.local_name``。企業固有の場合は ``None``。
+
+    Example:
+        CK を使わず concept ID で名寄せするパイプライン::
+
+            pipeline = [
+                standard_concept_mapper,
+                definition_mapper(lookup=lambda name: name),
+                calc_mapper(lookup=lambda name: name),
+            ]
+            result = extract_values(stmts, ["NetSales", "OperatingIncome"],
+                                    mapper=pipeline)
+    """
+    if is_standard_taxonomy(item.namespace_uri):
+        return item.local_name
+    return None
 
 
 def _default_statement_lookup(concept_name: str) -> str | None:

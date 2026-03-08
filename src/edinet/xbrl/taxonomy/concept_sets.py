@@ -741,6 +741,10 @@ def _save_cache(registry: ConceptSetRegistry, path: Path) -> None:
 # メインオーケストレーション
 # ---------------------------------------------------------------------------
 
+# プロセス内キャッシュ。ConceptSetRegistry は frozen dataclass なので
+# 同一引数であれば安全に使い回せる。毎回 pickle.load() を避ける。
+_memory_cache: dict[tuple[str, str], ConceptSetRegistry] = {}
+
 
 def derive_concept_sets(
     taxonomy_path: str | Path,
@@ -771,9 +775,19 @@ def derive_concept_sets(
             f"タクソノミパスが存在しません: {path}"
         )
 
+    mem_key = (str(path.resolve()), module_group)
+
+    # Layer 1: プロセス内メモリキャッシュ
+    if use_cache:
+        mem_cached = _memory_cache.get(mem_key)
+        if mem_cached is not None:
+            return mem_cached
+
+    # Layer 2: ディスク pickle キャッシュ
     if use_cache:
         cached = _load_cache(_cache_path(path, module_group))
         if cached is not None:
+            _memory_cache[mem_key] = cached
             return cached
 
     t0 = time.perf_counter()
@@ -825,6 +839,7 @@ def derive_concept_sets(
 
     registry = ConceptSetRegistry(_sets=registry_data)
     if use_cache:
+        _memory_cache[(str(path.resolve()), module_group)] = registry
         _save_cache(registry, _cache_path(path, module_group))
     return registry
 

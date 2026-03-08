@@ -413,6 +413,29 @@ pipeline = [
 result = extract_values(stmts, mapper=pipeline)
 ```
 
+#### CK を使わず XBRL concept ID で直接名寄せする
+
+`standard_concept_mapper` を使うと、CK（canonical key）を介さずに XBRL タクソノミの concept ID（`local_name`）をそのまま返すパイプラインを構築できます。標準タクソノミの科目はそのまま `local_name` が返り、企業固有の拡張科目は Definition / Calculation Linkbase を辿って対応する標準科目の concept ID に解決されます。
+
+```python
+from edinet import standard_concept_mapper, definition_mapper, calc_mapper, extract_values
+
+# CK 不使用パイプライン
+pipeline = [
+    standard_concept_mapper,                    # 標準科目 → そのまま local_name
+    definition_mapper(lookup=lambda name: name), # 企業固有 → 標準 concept ID（def linkbase）
+    calc_mapper(lookup=lambda name: name),       # 企業固有 → 標準 concept ID（calc linkbase）
+]
+
+# concept ID を直接指定して取得
+result = extract_values(stmts, ["NetSales", "OperatingIncome"], mapper=pipeline)
+print(result["NetSales"].value)           # Decimal('1234567000000')
+print(result["NetSales"].item.local_name) # "NetSales"
+
+# keys=None で全科目を取得（返却キーは concept ID）
+all_items = extract_values(stmts, mapper=pipeline)
+```
+
 ## DataFrame 変換・エクスポート
 
 ```python

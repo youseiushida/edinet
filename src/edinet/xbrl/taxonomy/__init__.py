@@ -115,6 +115,44 @@ ROLE_TOTAL = ROLE_TOTAL_LABEL
 
 
 # ---------------------------------------------------------------------------
+# TaxonomyResolver プロセス内キャッシュ
+# ---------------------------------------------------------------------------
+
+# 同一パスの TaxonomyResolver を使い回すためのキャッシュ。
+# 標準ラベル辞書は不変なので、同一 taxonomy_path なら再利用できる。
+# filer_labels はインスタンスごとに load/clear するので競合しない。
+_resolver_cache: dict[Path, TaxonomyResolver] = {}
+
+
+def get_taxonomy_resolver(
+    taxonomy_path: str | Path,
+    *,
+    use_cache: bool = True,
+) -> TaxonomyResolver:
+    """プロセス内キャッシュ付きで TaxonomyResolver を取得する。
+
+    同一 ``taxonomy_path`` に対して 2 回目以降はインスタンスを使い回す。
+    ただし ``filer_labels`` はクリアして返す。
+
+    Args:
+        taxonomy_path: タクソノミのルートディレクトリパス。
+        use_cache: pickle キャッシュを使用するか。
+
+    Returns:
+        TaxonomyResolver インスタンス。
+    """
+    path = Path(taxonomy_path).resolve()
+    cached = _resolver_cache.get(path)
+    if cached is not None and use_cache:
+        cached.clear_filer_labels()
+        return cached
+    resolver = TaxonomyResolver(taxonomy_path, use_cache=use_cache)
+    if use_cache:
+        _resolver_cache[path.resolve()] = resolver
+    return resolver
+
+
+# ---------------------------------------------------------------------------
 # TaxonomyResolver
 # ---------------------------------------------------------------------------
 

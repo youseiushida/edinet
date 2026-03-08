@@ -1,0 +1,66 @@
+[
+  {
+    "name": "1_TaxonomyResolver_create",
+    "n": 100,
+    "total_sec": 7.470052,
+    "avg_sec": 0.074701,
+    "min_sec": 0.060959,
+    "max_sec": 0.116562
+  },
+  {
+    "name": "1b_get_taxonomy_resolver_cached",
+    "n": 100,
+    "total_sec": 1.484133,
+    "avg_sec": 0.014841,
+    "min_sec": 0.005395,
+    "max_sec": 0.135483
+  },
+  {
+    "name": "3_zip_multi_open",
+    "n": 100,
+    "total_sec": 0.029857,
+    "avg_sec": 0.000299,
+    "min_sec": 0.000224,
+    "max_sec": 0.000979
+  },
+  {
+    "name": "3b_extract_filer_taxonomy_files",
+    "n": 100,
+    "total_sec": 0.013323,
+    "avg_sec": 0.000133,
+    "min_sec": 8.5e-05,
+    "max_sec": 0.001587
+  },
+  {
+    "name": "4_derive_concept_sets",
+    "n": 100,
+    "total_sec": 1.739164,
+    "avg_sec": 0.017392,
+    "min_sec": 0.007708,
+    "max_sec": 0.090191
+  },
+  {
+    "name": "5_parse_xbrl_facts",
+    "n": 100,
+    "total_sec": 0.095625,
+    "avg_sec": 0.000956,
+    "min_sec": 0.000537,
+    "max_sec": 0.025691
+  },
+  {
+    "name": "6_classify_namespace_500uris",
+    "n": 10,
+    "total_sec": 0.002067,
+    "avg_sec": 0.000207,
+    "min_sec": 3.5e-05,
+    "max_sec": 0.001744
+  },
+  {
+    "name": "7_select_filer_xsd",
+    "n": 1000,
+    "total_sec": 0.001272,
+    "avg_sec": 1e-06,
+    "min_sec": 1e-06,
+    "max_sec": 3.1e-05
+  }
+]
