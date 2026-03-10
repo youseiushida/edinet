@@ -22,7 +22,7 @@
         --concurrency 4
 
     # 読み込み時のイメージ（別スクリプトで）
-    for prefix in ["120_", "130_", "140_", "150_", "160_", "170_"]:
+    for prefix in ["120_2025-06-01_2025-06-30_", "130_2025-06-01_2025-06-30_", ...]:
         for filing, stmts in iter_parquet("./parquet/securities", prefix=prefix):
             ...
 """
@@ -93,7 +93,7 @@ async def _dump_one(
     """1 書類種別をダンプし、計測結果を返す。"""
     from edinet.extension import adump_to_parquet
 
-    prefix = f"{doc_type_code}_"
+    prefix = f"{doc_type_code}_{start}_{end}_"
     print(f"\n{'─' * 60}")
     print(f"[{doc_type_code}] {label}")
     print(f"  prefix={prefix}, 期間={start}〜{end}")
