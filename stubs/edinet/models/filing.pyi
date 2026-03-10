@@ -176,7 +176,7 @@ class Filing(BaseModel):
         doc_type_code にフォールバックするが、それも None なら空文字を返す。
         UI やログで doc_type の Optional チェックを毎回書かずに済む。
         """
-    def xbrl(self, *, taxonomy_path: str | None = None) -> Statements:
+    def xbrl(self, *, taxonomy_path: str | None = None, strict: bool = True) -> Statements:
         '''XBRL を解析し財務諸表コンテナを返す。
 
         ZIP ダウンロード → XBRL パース → Context 構造化 → ラベル解決 →
@@ -186,6 +186,8 @@ class Filing(BaseModel):
             taxonomy_path: EDINET タクソノミのルートパス
                 （例: ``"/path/to/ALL_20251101"``）。
                 省略時は ``configure(taxonomy_path=...)`` で設定された値を使用する。
+            strict: ``False`` にすると重複 Fact や空値 Fact を警告に
+                降格し、パースを続行する。デフォルトは ``True``。
 
         Returns:
             Statements コンテナ。``income_statement()`` / ``balance_sheet()`` /
@@ -204,7 +206,7 @@ class Filing(BaseModel):
             有報・四半期報告書・半期報告書など XBRL を含む全書類タイプで動作する。
             スレッドセーフではない。
         '''
-    async def axbrl(self, *, taxonomy_path: str | None = None) -> Statements:
+    async def axbrl(self, *, taxonomy_path: str | None = None, strict: bool = True) -> Statements:
         """XBRL を非同期で解析し財務諸表コンテナを返す。
 
         ``xbrl()`` の非同期版。ネットワーク I/O（ZIP ダウンロード）のみ
@@ -213,6 +215,8 @@ class Filing(BaseModel):
         Args:
             taxonomy_path: EDINET タクソノミのルートパス。
                 省略時は ``configure(taxonomy_path=...)`` で設定された値を使用する。
+            strict: ``False`` にすると重複 Fact や空値 Fact を警告に
+                降格し、パースを続行する。デフォルトは ``True``。
 
         Returns:
             Statements コンテナ。

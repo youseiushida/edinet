@@ -880,7 +880,7 @@ def test_xbrl_uses_taxonomy_path_arg(monkeypatch: pytest.MonkeyPatch):
 
     captured_path: list[str] = []
 
-    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes):
+    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes, **kwargs):
         captured_path.append(taxonomy_path)
         from edinet.financial.statements import Statements
         return Statements(_items=())
@@ -943,7 +943,7 @@ def test_xbrl_reuses_zip_cache(monkeypatch: pytest.MonkeyPatch):
         lambda _: ("PublicDoc/main.xbrl", b"<xbrli:xbrl/>"),
     )
 
-    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes):
+    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes, **kwargs):
         from edinet.financial.statements import Statements
         return Statements(_items=())
 
@@ -956,64 +956,6 @@ def test_xbrl_reuses_zip_cache(monkeypatch: pytest.MonkeyPatch):
     # 2回目: xbrl のみ (キャッシュ再利用)
     filing.xbrl(taxonomy_path="/dummy")
     assert called["download"] == 1
-
-
-def test_xbrl_warns_on_non_jgaap_namespace(monkeypatch: pytest.MonkeyPatch):
-    """X-8: jppfs_cor 名前空間がない場合に EdinetWarning が発生すること。"""
-    import io
-    import warnings
-    import zipfile
-
-    # IFRS のみの最小 XBRL（schemaRef 付き）
-    ifrs_xbrl = b"""\
-<?xml version="1.0" encoding="UTF-8"?>
-<xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance"
-            xmlns:link="http://www.xbrl.org/2003/linkbase"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
-            xmlns:ifrs-full="http://xbrl.ifrs.org/taxonomy/2023-03-23/ifrs-full">
-  <link:schemaRef xlink:type="simple" xlink:href="example.xsd"/>
-  <xbrli:context id="ctx1">
-    <xbrli:entity><xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">E00001</xbrli:identifier></xbrli:entity>
-    <xbrli:period><xbrli:startDate>2024-04-01</xbrli:startDate><xbrli:endDate>2025-03-31</xbrli:endDate></xbrli:period>
-  </xbrli:context>
-  <xbrli:unit id="JPY"><xbrli:measure>iso4217:JPY</xbrli:measure></xbrli:unit>
-  <ifrs-full:Revenue contextRef="ctx1" unitRef="JPY" decimals="0">1000</ifrs-full:Revenue>
-</xbrli:xbrl>"""
-
-    # 有効な ZIP を作成
-    buf = io.BytesIO()
-    with zipfile.ZipFile(buf, "w") as zf:
-        zf.writestr("PublicDoc/main.xbrl", ifrs_xbrl)
-    valid_zip = buf.getvalue()
-
-    filing = Filing.from_api_response(SAMPLE_DOC)
-    object.__setattr__(filing, "_xbrl_cache", ("PublicDoc/main.xbrl", ifrs_xbrl))
-    object.__setattr__(filing, "_zip_cache", valid_zip)
-
-    # build_line_items と build_statements をモック
-    monkeypatch.setattr(
-        "edinet.xbrl.facts.build_line_items", lambda *a, **kw: ()
-    )
-    monkeypatch.setattr(
-        "edinet.financial.statements.build_statements",
-        lambda items, **kw: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=items),
-    )
-
-    taxonomy_path = str(
-        __import__("pathlib").Path(__file__).parent.parent / "fixtures" / "taxonomy_mini"
-    )
-    with warnings.catch_warnings(record=True) as w:
-        warnings.simplefilter("always")
-        filing.xbrl(taxonomy_path=taxonomy_path)
-
-    from edinet.exceptions import EdinetWarning
-
-    jppfs_warnings = [x for x in w if "jppfs_cor" in str(x.message)]
-    assert len(jppfs_warnings) >= 1
-    assert issubclass(jppfs_warnings[0].category, EdinetWarning)
-    # stacklevel=3 により、warning の発生元は呼び出し元（このテスト）を指すこと
-    assert jppfs_warnings[0].filename == __file__
 
 
 def test_xbrl_wraps_unexpected_error_with_doc_id(monkeypatch: pytest.MonkeyPatch):
@@ -1052,58 +994,6 @@ async def test_axbrl_raises_api_error_before_config_error():
         await filing.axbrl()
 
 
-async def test_axbrl_warns_stacklevel_correct(monkeypatch: pytest.MonkeyPatch):
-    """AX-4: axbrl() 経由でも warning.filename が呼び出し元を指すこと。"""
-    import io
-    import warnings
-    import zipfile
-
-    ifrs_xbrl = b"""\
-<?xml version="1.0" encoding="UTF-8"?>
-<xbrli:xbrl xmlns:xbrli="http://www.xbrl.org/2003/instance"
-            xmlns:link="http://www.xbrl.org/2003/linkbase"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            xmlns:iso4217="http://www.xbrl.org/2003/iso4217"
-            xmlns:ifrs-full="http://xbrl.ifrs.org/taxonomy/2023-03-23/ifrs-full">
-  <link:schemaRef xlink:type="simple" xlink:href="example.xsd"/>
-  <xbrli:context id="ctx1">
-    <xbrli:entity><xbrli:identifier scheme="http://disclosure.edinet-fsa.go.jp">E00001</xbrli:identifier></xbrli:entity>
-    <xbrli:period><xbrli:startDate>2024-04-01</xbrli:startDate><xbrli:endDate>2025-03-31</xbrli:endDate></xbrli:period>
-  </xbrli:context>
-  <xbrli:unit id="JPY"><xbrli:measure>iso4217:JPY</xbrli:measure></xbrli:unit>
-  <ifrs-full:Revenue contextRef="ctx1" unitRef="JPY" decimals="0">1000</ifrs-full:Revenue>
-</xbrli:xbrl>"""
-
-    buf = io.BytesIO()
-    with zipfile.ZipFile(buf, "w") as zf:
-        zf.writestr("PublicDoc/main.xbrl", ifrs_xbrl)
-    valid_zip = buf.getvalue()
-
-    filing = Filing.from_api_response(SAMPLE_DOC)
-    object.__setattr__(filing, "_xbrl_cache", ("PublicDoc/main.xbrl", ifrs_xbrl))
-    object.__setattr__(filing, "_zip_cache", valid_zip)
-
-    monkeypatch.setattr(
-        "edinet.xbrl.facts.build_line_items", lambda *_a, **_kw: ()
-    )
-    monkeypatch.setattr(
-        "edinet.financial.statements.build_statements",
-        lambda items, **kw: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=items),
-    )
-
-    taxonomy_path = str(
-        __import__("pathlib").Path(__file__).parent.parent / "fixtures" / "taxonomy_mini"
-    )
-    with warnings.catch_warnings(record=True) as w:
-        warnings.simplefilter("always")
-        await filing.axbrl(taxonomy_path=taxonomy_path)
-
-    jppfs_warnings = [x for x in w if "jppfs_cor" in str(x.message)]
-    assert len(jppfs_warnings) >= 1
-    # axbrl() 経由でも stacklevel=3 が正しく呼び出し元を指すこと
-    assert jppfs_warnings[0].filename == __file__
-
-
 # =====================================================================
 # Statements キャッシュ + _zip_cache 自動解放テスト
 # =====================================================================
@@ -1114,7 +1004,7 @@ def test_xbrl_caches_statements(monkeypatch: pytest.MonkeyPatch):
     filing = Filing.from_api_response(SAMPLE_DOC)
     build_count = {"n": 0}
 
-    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes):
+    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes, **kwargs):
         build_count["n"] += 1
         from edinet.financial.statements import Statements
         return Statements(_items=())
@@ -1134,7 +1024,7 @@ def test_xbrl_clears_zip_cache(monkeypatch: pytest.MonkeyPatch):
     """xbrl() 完了後に _zip_cache が None になること。"""
     filing = Filing.from_api_response(SAMPLE_DOC)
 
-    monkeypatch.setattr(Filing, "_build_statements", lambda self, *a: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=()))
+    monkeypatch.setattr(Filing, "_build_statements", lambda self, *a, **kw: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=()))
     monkeypatch.setattr("edinet.api.download.download_document", lambda *a, **kw: b"PK\x03\x04dummy")
     monkeypatch.setattr("edinet.api.download.extract_primary_xbrl", lambda _: ("PublicDoc/main.xbrl", b"<xbrli:xbrl/>"))
 
@@ -1147,7 +1037,7 @@ def test_xbrl_cache_invalidated_by_different_taxonomy_path(monkeypatch: pytest.M
     filing = Filing.from_api_response(SAMPLE_DOC)
     build_count = {"n": 0}
 
-    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes):
+    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes, **kwargs):
         build_count["n"] += 1
         from edinet.financial.statements import Statements
         return Statements(_items=())
@@ -1168,7 +1058,7 @@ def test_clear_fetch_cache_clears_stmts(monkeypatch: pytest.MonkeyPatch):
     filing = Filing.from_api_response(SAMPLE_DOC)
     build_count = {"n": 0}
 
-    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes):
+    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes, **kwargs):
         build_count["n"] += 1
         from edinet.financial.statements import Statements
         return Statements(_items=())
@@ -1190,7 +1080,7 @@ def test_fetch_works_after_zip_cleared(monkeypatch: pytest.MonkeyPatch):
     filing = Filing.from_api_response(SAMPLE_DOC)
     xbrl_data = b"<xbrli:xbrl/>"
 
-    monkeypatch.setattr(Filing, "_build_statements", lambda self, *a: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=()))
+    monkeypatch.setattr(Filing, "_build_statements", lambda self, *a, **kw: __import__("edinet.financial.statements", fromlist=["Statements"]).Statements(_items=()))
     monkeypatch.setattr("edinet.api.download.download_document", lambda *a, **kw: b"PK\x03\x04dummy")
     monkeypatch.setattr("edinet.api.download.extract_primary_xbrl", lambda _: ("PublicDoc/main.xbrl", xbrl_data))
 
@@ -1207,7 +1097,7 @@ async def test_axbrl_caches_statements(monkeypatch: pytest.MonkeyPatch):
     filing = Filing.from_api_response(SAMPLE_DOC)
     build_count = {"n": 0}
 
-    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes):
+    def fake_build(self, taxonomy_path, xbrl_path, xbrl_bytes, **kwargs):
         build_count["n"] += 1
         from edinet.financial.statements import Statements
         return Statements(_items=())

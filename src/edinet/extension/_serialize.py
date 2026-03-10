@@ -18,6 +18,21 @@ from edinet.xbrl.dei import DEI
 from edinet.xbrl.linkbase.calculation import CalculationLinkbase
 from edinet.xbrl.linkbase.definition import DefinitionTree  # noqa: F401
 
+_TEXTBLOCK_SUFFIX = "TextBlock"
+
+
+def is_text_block(local_name: str) -> bool:
+    """TextBlock 系の Fact かどうかを判定する。
+
+    Args:
+        local_name: 概念のローカル名。
+
+    Returns:
+        ``True`` なら TextBlock。
+    """
+    return local_name.endswith(_TEXTBLOCK_SUFFIX)
+
+
 # Filing の computed_field 名（model_dump から除外する）
 _COMPUTED_FIELDS = frozenset(
     {"doc_type", "filing_date", "ticker", "doc_type_label_ja"}
@@ -188,6 +203,7 @@ def serialize_dei(
     doc_id: str,
     *,
     detected_standard: DetectedStandard | None = None,
+    source_path: str | None = None,
 ) -> dict[str, Any]:
     """DEI を dict 行に変換する。
 
@@ -248,6 +264,8 @@ def serialize_dei(
         "report_amendment_flag": dei.report_amendment_flag,
         "xbrl_amendment_flag": dei.xbrl_amendment_flag,
     }
+    # source_path を同梱（Statements レベルのトレーサビリティ）
+    row["source_path"] = source_path
     # DetectedStandard を同梱（DEI のみでは復元できないケース対策）
     if detected_standard is not None:
         row["detected_standard"] = _serialize_enum_or_str(

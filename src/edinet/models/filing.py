@@ -719,6 +719,8 @@ class Filing(BaseModel):
         taxonomy_path: str,
         xbrl_path: str,
         xbrl_bytes: bytes,
+        *,
+        strict: bool = True,
     ) -> Statements:
         """ZIP キャッシュからパイプラインを実行する（同期）。
 
@@ -729,6 +731,8 @@ class Filing(BaseModel):
             taxonomy_path: 解決済みタクソノミパス。
             xbrl_path: XBRL ファイルのパス（トレース用）。
             xbrl_bytes: XBRL ファイルのバイト列。
+            strict: ``False`` にすると重複 Fact や空値 Fact を警告に
+                降格し、パースを続行する。デフォルトは ``True``。
 
         Returns:
             Statements コンテナ。
@@ -754,29 +758,11 @@ class Filing(BaseModel):
             filer_files = _extract_filer_taxonomy_files(self._zip_cache)
 
             # 4. XBRL パース
-            parsed = parse_xbrl_facts(xbrl_bytes, source_path=xbrl_path)
+            parsed = parse_xbrl_facts(xbrl_bytes, source_path=xbrl_path, strict=strict)
             logger.debug(
                 "step 4: parsed %d facts, %d contexts",
                 len(parsed.facts), len(parsed.contexts),
             )
-
-            # 4b. J-GAAP 名前空間チェック（IFRS/US-GAAP 検知）
-            namespaces = {
-                f.concept_qname.split("}")[0]
-                for f in parsed.facts
-                if "}" in f.concept_qname
-            }
-            if not any("jppfs" in ns for ns in namespaces):
-                import warnings
-
-                from edinet.exceptions import EdinetWarning
-
-                warnings.warn(
-                    f"Filing {self.doc_id}: jppfs_cor 名前空間の Fact がありません。"
-                    "IFRS / US-GAAP の Filing は v0.1.0 では未対応です。",
-                    EdinetWarning,
-                    stacklevel=3,
-                )
 
             # 5. Context 構造化
             ctx_map = structure_contexts(parsed.contexts)
@@ -834,6 +820,7 @@ class Filing(BaseModel):
                 resolver=forked_resolver,
                 calculation_linkbase=cal_lb,
                 definition_linkbase=def_trees,
+                source_path=xbrl_path,
             )
         except EdinetError:
             raise
@@ -844,7 +831,12 @@ class Filing(BaseModel):
 
         return stmts
 
-    def xbrl(self, *, taxonomy_path: str | None = None) -> Statements:
+    def xbrl(
+        self,
+        *,
+        taxonomy_path: str | None = None,
+        strict: bool = True,
+    ) -> Statements:
         """XBRL を解析し財務諸表コンテナを返す。
 
         ZIP ダウンロード → XBRL パース → Context 構造化 → ラベル解決 →
@@ -854,6 +846,8 @@ class Filing(BaseModel):
             taxonomy_path: EDINET タクソノミのルートパス
                 （例: ``"/path/to/ALL_20251101"``）。
                 省略時は ``configure(taxonomy_path=...)`` で設定された値を使用する。
+            strict: ``False`` にすると重複 Fact や空値 Fact を警告に
+                降格し、パースを続行する。デフォルトは ``True``。
 
         Returns:
             Statements コンテナ。``income_statement()`` / ``balance_sheet()`` /
@@ -887,12 +881,25 @@ class Filing(BaseModel):
             return cached[1]
 
         xbrl_path, xbrl_bytes = self.fetch()
-        stmts = self._build_statements(resolved_taxonomy_path, xbrl_path, xbrl_bytes)
+        try:
+            stmts = self._build_statements(
+                resolved_taxonomy_path, xbrl_path, xbrl_bytes, strict=strict,
+            )
+        except BaseException:
+            # パース失敗時も ZIP メモリを解放（retry 時はディスクキャッシュから再取得）
+            object.__setattr__(self, "_zip_cache", None)
+            object.__setattr__(self, "_xbrl_cache", None)
+            raise
         object.__setattr__(self, "_stmts_cache", (resolved_taxonomy_path, stmts))
         object.__setattr__(self, "_zip_cache", None)  # ZIP メモリ解放
         return stmts
 
-    async def axbrl(self, *, taxonomy_path: str | None = None) -> Statements:
+    async def axbrl(
+        self,
+        *,
+        taxonomy_path: str | None = None,
+        strict: bool = True,
+    ) -> Statements:
         """XBRL を非同期で解析し財務諸表コンテナを返す。
 
         ``xbrl()`` の非同期版。ネットワーク I/O（ZIP ダウンロード）のみ
@@ -901,6 +908,8 @@ class Filing(BaseModel):
         Args:
             taxonomy_path: EDINET タクソノミのルートパス。
                 省略時は ``configure(taxonomy_path=...)`` で設定された値を使用する。
+            strict: ``False`` にすると重複 Fact や空値 Fact を警告に
+                降格し、パースを続行する。デフォルトは ``True``。
 
         Returns:
             Statements コンテナ。
@@ -933,7 +942,15 @@ class Filing(BaseModel):
             return cached[1]
 
         xbrl_path, xbrl_bytes = await self.afetch()
-        stmts = self._build_statements(resolved_taxonomy_path, xbrl_path, xbrl_bytes)
+        try:
+            stmts = self._build_statements(
+                resolved_taxonomy_path, xbrl_path, xbrl_bytes, strict=strict,
+            )
+        except BaseException:
+            # パース失敗時も ZIP メモリを解放（retry 時はディスクキャッシュから再取得）
+            object.__setattr__(self, "_zip_cache", None)
+            object.__setattr__(self, "_xbrl_cache", None)
+            raise
         object.__setattr__(self, "_stmts_cache", (resolved_taxonomy_path, stmts))
         object.__setattr__(self, "_zip_cache", None)  # ZIP メモリ解放
         return stmts

@@ -330,6 +330,8 @@ def deserialize_statements(
     detected_standard: DetectedStandard | None = None,
     contexts: dict[str, StructuredContext] | None = None,
     calculation_linkbase: CalculationLinkbase | None = None,
+    definition_parent_index: dict[str, str] | None = None,
+    source_path: str | None = None,
 ) -> Statements:
     """復元済みパーツから Statements を直接構築する。
 
@@ -339,6 +341,9 @@ def deserialize_statements(
         detected_standard: 永続化された DetectedStandard。
         contexts: 復元済み context マッピング。
         calculation_linkbase: 復元済み CalculationLinkbase。
+        definition_parent_index: 復元済みの definition parent index。
+            ``extract_values()`` の ``definition_mapper`` が使用する。
+        source_path: 元の XBRL ファイルパス（ZIP 内パス）。
 
     Returns:
         Statements オブジェクト。
@@ -359,6 +364,8 @@ def deserialize_statements(
         _contexts=contexts,
         _industry_code=industry_code,
         _calculation_linkbase=calculation_linkbase,
+        _definition_parent_index=definition_parent_index,
+        _source_path=source_path,
         _facts=None,
         _taxonomy_root=None,
         _resolver=None,

@@ -114,9 +114,14 @@ def _latest_year() -> int:
 def _detect_zip_prefix(zf: zipfile.ZipFile) -> str:
     """ZIP 内のトップレベルプレフィックスを検出する。
 
-    EDINET タクソノミ ZIP はトップレベルに「タクソノミ/」フォルダを持つ。
-    このフォルダ名は Shift-JIS エンコードで格納されており環境依存のため、
-    ``taxonomy/`` や ``samples/`` の親ディレクトリとして検出する。
+    EDINET タクソノミ ZIP はトップレベルに Shift-JIS エンコードの
+    フォルダを持つ（環境依存で文字化けする）。``taxonomy/`` や
+    ``samples/`` の親パス全体をプレフィックスとして検出し、
+    展開時に除去する。
+
+    年度によってネスト深度が異なる（例: 2026年版は1階層、
+    2025年版は2階層の Shift-JIS フォルダを持つ）ため、
+    任意の深さに対応する。
 
     Args:
         zf: 開いた ZipFile オブジェクト。
@@ -127,10 +132,9 @@ def _detect_zip_prefix(zf: zipfile.ZipFile) -> str:
     """
     for name in zf.namelist():
         parts = name.split("/")
-        if len(parts) >= 2 and parts[1] in _EXPECTED_SUBDIRS:
-            return parts[0]
-        if len(parts) >= 1 and parts[0] in _EXPECTED_SUBDIRS:
-            return ""
+        for i, part in enumerate(parts):
+            if part in _EXPECTED_SUBDIRS:
+                return "/".join(parts[:i]) if i > 0 else ""
     return ""
 
 

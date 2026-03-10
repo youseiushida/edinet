@@ -214,15 +214,18 @@ def extract_values(
         pipeline = list(mapper)
 
     # MapperContext 構築
-    from edinet.xbrl.taxonomy.custom import _build_parent_index
+    # 事前計算済み index を優先（Parquet 復元時に設定される）
+    parent_index = source.definition_parent_index  # noqa: SLF001
+    if parent_index is None:
+        from edinet.xbrl.taxonomy.custom import _build_parent_index
+
+        parent_index = _build_parent_index(source.definition_linkbase)
 
     ctx = MapperContext(
         dei=source.dei,
         detected_standard=source.detected_standard,
         industry_code=source.industry_code,
-        definition_parent_index=_build_parent_index(
-            source.definition_linkbase,
-        ),
+        definition_parent_index=parent_index,
         calculation_linkbase=source.calculation_linkbase,
     )
 

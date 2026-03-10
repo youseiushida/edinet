@@ -478,10 +478,10 @@ for filing in filings:
     else:
         data.append((filing, None))  # XBRL なしの書類もメタデータを保持
 
-# Parquet に永続化（最大 6 ファイル）
+# Parquet に永続化（最大 7 ファイル）
 paths = export_parquet(data, "./parquet_out", prefix="2026-03-06_")
-# → filings.parquet, line_items.parquet, contexts.parquet,
-#   dei.parquet, calc_edges.parquet, def_parents.parquet
+# → filings.parquet, line_items.parquet, text_blocks.parquet,
+#   contexts.parquet, dei.parquet, calc_edges.parquet, def_parents.parquet
 ```
 
 ### インポート
@@ -503,19 +503,126 @@ for filing, stmts in restored:
         result = extract_values(stmts, [CK.REVENUE, CK.OPERATING_INCOME])
 ```
 
+### 選択的インポート（doc_ids / concepts フィルタ）
+
+PyArrow の predicate pushdown により、必要な行だけを読み込みます。数万件の Parquet から数件だけ復元する場合に高速です。
+
+```python
+from edinet.extension import import_parquet
+
+# 特定の書類だけ復元（doc_id フィルタ）
+restored = import_parquet("./parquet_out", prefix="2026-03-06_",
+                          doc_ids=["S100XXXX", "S100YYYY"])
+
+# 特定の科目だけ復元（concepts フィルタ）
+restored = import_parquet("./parquet_out", prefix="2026-03-06_",
+                          concepts=["NetSales", "OperatingIncome"])
+
+# 両方を組み合わせ（特定書類の特定科目）
+restored = import_parquet("./parquet_out", prefix="2026-03-06_",
+                          doc_ids=["S100XXXX"],
+                          concepts=["NetSales"])
+```
+
 ### 保持される情報
 
 | データ | 状態 | 用途 |
 |:---|:---|:---|
 | Filing メタデータ | 完全復元（computed_field 含む） | `filing_date`, `ticker`, `doc_type` 等 |
 | 全 LineItem | 完全復元（Decimal 精度・ラベル情報含む） | PL/BS/CF 組み立て、search、DataFrame |
+| TextBlock | 分離テーブルで保存 | `include_text_blocks=False` で軽量ロード可 |
 | DEI | 完全復元（Enum 含む） | 会計基準・期間分類 |
 | DetectedStandard | 完全復元 | 会計基準判別結果 |
 | Context マッピング | 完全復元 | 期間・連結/個別フィルタ |
 | Calculation Linkbase | 完全復元 | `children_of`/`parent_of`、calc_mapper |
-| Definition parent_index | 永続化（復元はフラット辞書） | definition_mapper |
+| Definition parent_index | 完全復元 | definition_mapper（名寄せ） |
+| source_path | 完全復元 | 元 XBRL ファイルパス（トレーサビリティ） |
 
 > **制限**: `equity_statement()` / `comprehensive_income()` はタクソノミが必要なため、復元後は空を返します。`resolver`（ラベル再解決）と `raw_facts`（テキストブロック抽出）は永続化されません。
+
+### TextBlock の分離ロード
+
+TextBlock（数KB〜数十KBの HTML テキスト）は `text_blocks.parquet` に分離保存されます。数値 Fact のみの分析には軽量ロードが有効です。
+
+```python
+# 数値 Fact のみ（TextBlock を除外して高速ロード）
+restored = import_parquet("./parquet_out", prefix="2026-03-06_", include_text_blocks=False)
+
+# TextBlock も含む完全ロード（デフォルト）
+restored = import_parquet("./parquet_out", prefix="2026-03-06_")
+```
+
+### 復元後の extract_values()
+
+Parquet から復元した Statements に対して `extract_values()` が完全に動作します。API の再 fetch もタクソノミパスの設定も不要です。
+
+```python
+from edinet.extension import import_parquet
+from edinet import extract_values, CK
+
+restored = import_parquet("./parquet_out", prefix="2026-03-06_")
+for filing, stmts in restored:
+    if stmts is None:
+        continue
+    result = extract_values(stmts, [CK.REVENUE, CK.OPERATING_INCOME],
+                            period="current", consolidated=True)
+    if result[CK.REVENUE] is not None:
+        print(f"{filing.filer_name}: {result[CK.REVENUE].value:,}")
+```
+
+### 大規模データのバッチ処理（iter_parquet）
+
+`import_parquet()` は全件をメモリにロードするため、数万件規模では `iter_parquet()` を使います。line_items / text_blocks をバッチ単位で読み込むため、メモリ使用量がデータ件数に依存しません。
+
+```python
+from edinet.extension import iter_parquet
+from edinet import extract_values, CK
+
+# バッチ単位でイテレーション（メモリ使用量が一定）
+for filing, stmts in iter_parquet("./parquet_out", prefix="2026-03-06_",
+                                   batch_size=100):
+    if stmts is None:
+        continue
+    result = extract_values(stmts, [CK.REVENUE, CK.OPERATING_INCOME])
+    if result[CK.REVENUE] is not None:
+        print(f"{filing.filer_name}: {result[CK.REVENUE].value:,}")
+
+# concepts フィルタ付き（特定科目だけ読み込み → さらに高速）
+for filing, stmts in iter_parquet("./parquet_out", prefix="2026-03-06_",
+                                   concepts=["NetSales"],
+                                   batch_size=200):
+    if stmts is not None:
+        print(f"{filing.filer_name}: {len(stmts)} items")
+```
+
+| パラメータ | デフォルト | 説明 |
+|:---|:---|:---|
+| `include_text_blocks` | `False` | 大規模処理向けにデフォルト `False` |
+| `batch_size` | `100` | 一度にロードする書類数 |
+| `doc_ids` | `None` | 読み込む doc_id のリスト |
+| `doc_type_codes` | `None` | 書類種別コードのリスト（例: `["120", "130"]`） |
+| `concepts` | `None` | 読み込む科目の `local_name` リスト |
+
+### パフォーマンス特性
+
+- **`adump_to_parquet()` はストリーミング書き出し** — メモリ使用量は件数に依存せず約 170 MB で一定。処理時間は API レート制限が律速
+- **`import_parquet()` は全件メモリロード** — 1,784 件で約 5 GB。数千件規模に適している
+- **`iter_parquet()` はバッチ読み込み** — メモリ使用量はデータ件数に依存しない。数万件規模に適している
+- **1 Filing あたりの Parquet サイズは約 100 KB**（XBRL 有の場合）。1 年分（約 7 万件）で約 6 GB、5 年分で約 30 GB
+- **`text_blocks.parquet` を除外すると合計サイズは約 1/5** に削減。数値分析のみなら `line_items.parquet` だけで十分
+- **大量データの横断分析には DuckDB / Polars で Parquet を直接クエリするのが推奨**。ドメインオブジェクトの復元が不要な分析（売上ランキング等）はこちらが最速
+
+```python
+# DuckDB で Parquet を直接クエリ（数万件でも高速・省メモリ）
+import duckdb
+duckdb.sql("""
+    SELECT f.filer_name, CAST(l.value_numeric AS DOUBLE) / 1e6 AS sales_m
+    FROM 'parquet_out/line_items.parquet' l
+    JOIN 'parquet_out/filings.parquet' f ON l.doc_id = f.doc_id
+    WHERE l.local_name = 'NetSales' AND l.value_type = 'decimal'
+    ORDER BY sales_m DESC LIMIT 10
+""").show()
+```
 
 ## Rich ターミナル表示
 
@@ -893,7 +1000,7 @@ latest = consolidated.latest_duration_contexts()
 | エクスポート | DataFrame / CSV / Parquet / Excel |
 | 表示 | Rich ターミナル / Jupyter HTML |
 | I/O | sync / async 完全対応 |
-| テスト | 1,584+ |
+| テスト | 1,590+ |
 
 ## 動作要件
 

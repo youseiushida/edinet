@@ -1,0 +1,388 @@
+  39件エラーの原因
+
+  1. ZIP 解析失敗（25件）: りそなAM + 野村AM
+
+  投信（ファンド）の有価証券届出書・報告書。extract_primary_xbrl() で PublicDoc/*.xbrl を探すが、ファンド系の ZIP は
+  PublicDoc 内に XBRL が無いか、ZIP 構造が特殊（メンバー数 > 2,000 制限や展開サイズ > 200MB
+  制限に引っかかる可能性もある）。実際 野村AM は大量のファンドを一括提出するので ZIP が巨大。
+
+  → これはライブラリの既知制約。投信系の書類は通常の有報と構造が異なるので対応が別途必要。
+
+  2. 重複 Fact（13件）: Evo Fund, 日産化学, 太平洋セメント 等
+
+  parse_xbrl_facts() が strict=True（デフォルト） で呼ばれている。同一 concept/contextRef/unitRef/lang で値が異なる重複
+  Fact が XBRL 内にあるとエラーになる。これは提出者側の XBRL 作成ミス。
+
+  strict=False なら warning に降格して処理続行できるが、現在 _build_statements() は strict を変更できない。
+
+  3. 空値 Fact（1件）: 大和AM
+
+  xsi:nil="true" でもないのに値が空の Fact がある。これも strict=True でエラー。提出者の XBRL 作成ミス。
+
+  4. 未知の期間種別（warning のみ、エラーではない）
+
+  - FND = ファンド特有の期間種別
+  - Q2 = 四半期
+
+  PeriodType enum に FY/HY しかなく、これらが未登録。
+
+  ---
+  対処の優先度: 重複Fact・空値Fact は strict=False を _build_statements に渡せるようにすれば 14件救済できる。ZIP
+  解析失敗はファンド系の構造調査が必要で別スコープ。やる？
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+[Phase 2] XBRL パース + シリアライズ (concurrency=8)...
+  [WARN] S100VMJV (りそなアセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VMJV)。')
+  XBRL パース+シリアライズ: 20/3984 (10.5s, 1.9 filings/s, ok=19, err=1)
+  [WARN] S100VMJU (りそなアセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VMJU)。')
+C:\Users\nezow\OneDrive - Kyoto University\ドキュメント\edinet\src\edinet\xbrl\taxonomy\__init__.py:556: EdinetWarning:
+ labelArc に use='prohibited' または priority 属性が検出されました。v0.1.0 では arc override の完全処理は行いません
+  return _parse_lab_xml_tree(root)
+  XBRL パース+シリアライズ: 40/3984 (22.5s, 1.8 filings/s, ok=38, err=2)
+  [WARN] S100VMJX (りそなアセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VMJX)。')
+  [WARN] S100VMJW (りそなアセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VMJW)。')
+  [WARN] S100VMJZ (りそなアセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VMJZ)。')
+  XBRL パース+シリアライズ: 60/3984 (34.1s, 1.8 filings/s, ok=55, err=5)
+  [WARN] S100VMJY (りそなアセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VMJY)。')
+  [WARN] S100VMK3 (りそなアセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VMK3)。')
+  XBRL パース+シリアライズ: 80/3984 (46.3s, 1.7 filings/s, ok=73, err=7)
+  [WARN] S100VMK1 (りそなアセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VMK1)。')
+  [WARN] S100VMK5 (りそなアセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VMK5)。')
+  [WARN] S100VMK4 (りそなアセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VMK4)。')
+  XBRL パース+シリアライズ: 100/3984 (55.7s, 1.8 filings/s, ok=90, err=10)
+C:\Users\nezow\OneDrive - Kyoto University\ドキュメント\edinet\src\edinet\models\filing.py:807: EdinetWarning:
+未知の報告期間種別: 'FND'。既知の値: ['FY', 'HY']
+  dei = extract_dei(parsed.facts)
+C:\Users\nezow\OneDrive - Kyoto University\ドキュメント\edinet\src\edinet\financial\standards\detect.py:177:
+EdinetWarning: 未知の報告期間種別: 'FND'。既知の値: ['FY', 'HY']
+  dei = extract_dei(facts)
+C:\Users\nezow\OneDrive - Kyoto University\ドキュメント\edinet\src\edinet\financial\statements.py:1238: EdinetWarning:
+未知の報告期間種別: 'FND'。既知の値: ['FY', 'HY']
+  dei = extract_dei(facts)
+  XBRL パース+シリアライズ: 120/3984 (64.7s, 1.9 filings/s, ok=110, err=10)
+  XBRL パース+シリアライズ: 140/3984 (74.6s, 1.9 filings/s, ok=130, err=10)
+  XBRL パース+シリアライズ: 160/3984 (82.6s, 1.9 filings/s, ok=150, err=10)
+  XBRL パース+シリアライズ: 180/3984 (89.5s, 2.0 filings/s, ok=170, err=10)
+  XBRL パース+シリアライズ: 200/3984 (97.0s, 2.1 filings/s, ok=190, err=10)
+  XBRL パース+シリアライズ: 220/3984 (102.0s, 2.2 filings/s, ok=210, err=10)
+  XBRL パース+シリアライズ: 240/3984 (109.8s, 2.2 filings/s, ok=230, err=10)
+  XBRL パース+シリアライズ: 260/3984 (115.8s, 2.2 filings/s, ok=250, err=10)
+  XBRL パース+シリアライズ: 280/3984 (123.3s, 2.3 filings/s, ok=270, err=10)
+  XBRL パース+シリアライズ: 300/3984 (131.6s, 2.3 filings/s, ok=290, err=10)
+  XBRL パース+シリアライズ: 320/3984 (136.9s, 2.3 filings/s, ok=310, err=10)
+  XBRL パース+シリアライズ: 340/3984 (143.2s, 2.4 filings/s, ok=330, err=10)
+  XBRL パース+シリアライズ: 360/3984 (150.2s, 2.4 filings/s, ok=350, err=10)
+  XBRL パース+シリアライズ: 380/3984 (155.1s, 2.4 filings/s, ok=370, err=10)
+  XBRL パース+シリアライズ: 400/3984 (163.3s, 2.4 filings/s, ok=390, err=10)
+  XBRL パース+シリアライズ: 420/3984 (169.2s, 2.5 filings/s, ok=410, err=10)
+  [WARN] S100W4NM (Ｅｖｏ　Ｆｕｎｄ): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致)
+(concept='{http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2014-07-31/jplvh_cor}Name',
+contextRef='FilingDateInstant_jplvh020000-lvh_E11943-000FilerLargeVolumeHolder1Member', unitRef=None, xml:lang=None,
+first_line=222): XBRL/PublicDoc/jplvh020000-lvh-001_E11943-000_2025-06-18_01_2025-06-25.xbrl:3240")
+  [WARN] S100W4U2 (Ｅｖｏ　Ｆｕｎｄ): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致)
+(concept='{http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2014-07-31/jplvh_cor}Name',
+contextRef='FilingDateInstant_jplvh010000-lvh_E11943-000FilerLargeVolumeHolder1Member', unitRef=None, xml:lang=None,
+first_line=222): XBRL/PublicDoc/jplvh010000-lvh-002_E11943-000_2025-06-18_01_2025-06-25.xbrl:2292")
+  XBRL パース+シリアライズ: 440/3984 (176.3s, 2.5 filings/s, ok=428, err=12)
+  XBRL パース+シリアライズ: 460/3984 (182.7s, 2.5 filings/s, ok=448, err=12)
+  XBRL パース+シリアライズ: 480/3984 (191.5s, 2.5 filings/s, ok=468, err=12)
+  XBRL パース+シリアライズ: 500/3984 (200.2s, 2.5 filings/s, ok=488, err=12)
+  XBRL パース+シリアライズ: 520/3984 (218.3s, 2.4 filings/s, ok=508, err=12)
+  XBRL パース+シリアライズ: 540/3984 (223.0s, 2.4 filings/s, ok=528, err=12)
+  XBRL パース+シリアライズ: 560/3984 (231.0s, 2.4 filings/s, ok=548, err=12)
+  XBRL パース+シリアライズ: 580/3984 (239.4s, 2.4 filings/s, ok=568, err=12)
+  XBRL パース+シリアライズ: 600/3984 (248.3s, 2.4 filings/s, ok=588, err=12)
+  XBRL パース+シリアライズ: 620/3984 (259.4s, 2.4 filings/s, ok=608, err=12)
+  [WARN] S100W56X (Ｅｖｏ　Ｆｕｎｄ): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致)
+(concept='{http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2014-07-31/jplvh_cor}Name',
+contextRef='FilingDateInstant_jplvh020000-lvh_E11943-000FilerLargeVolumeHolder1Member', unitRef=None, xml:lang=None,
+first_line=222): XBRL/PublicDoc/jplvh020000-lvh-004_E11943-000_2025-06-18_01_2025-06-25.xbrl:3852")
+  XBRL パース+シリアライズ: 640/3984 (266.8s, 2.4 filings/s, ok=627, err=13)
+  XBRL パース+シリアライズ: 660/3984 (273.5s, 2.4 filings/s, ok=647, err=13)
+  XBRL パース+シリアライズ: 680/3984 (279.9s, 2.4 filings/s, ok=667, err=13)
+  XBRL パース+シリアライズ: 700/3984 (288.4s, 2.4 filings/s, ok=687, err=13)
+  XBRL パース+シリアライズ: 720/3984 (294.4s, 2.4 filings/s, ok=707, err=13)
+  XBRL パース+シリアライズ: 740/3984 (300.9s, 2.5 filings/s, ok=727, err=13)
+  XBRL パース+シリアライズ: 760/3984 (310.3s, 2.4 filings/s, ok=747, err=13)
+  XBRL パース+シリアライズ: 780/3984 (318.5s, 2.4 filings/s, ok=767, err=13)
+  XBRL パース+シリアライズ: 800/3984 (324.2s, 2.5 filings/s, ok=787, err=13)
+  XBRL パース+シリアライズ: 820/3984 (329.2s, 2.5 filings/s, ok=807, err=13)
+  XBRL パース+シリアライズ: 840/3984 (338.7s, 2.5 filings/s, ok=827, err=13)
+  XBRL パース+シリアライズ: 860/3984 (343.5s, 2.5 filings/s, ok=847, err=13)
+  XBRL パース+シリアライズ: 880/3984 (356.4s, 2.5 filings/s, ok=867, err=13)
+  [WARN] S100W4NI (日産化学株式会社): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致) (concept='{http://disclosure.edinet-fsa.go.jp/jpcrp030000/asr/001/E00
+759-000/2025-03-31/01/2025-06-25}ReferenceToOtherInformationMetricsAndTargetsClimateChange',
+contextRef='FilingDateInstant', unitRef=None, xml:lang=None, first_line=8964):
+XBRL/PublicDoc/jpcrp030000-asr-001_E00759-000_2025-03-31_01_2025-06-25.xbrl:8965")
+  XBRL パース+シリアライズ: 900/3984 (367.3s, 2.5 filings/s, ok=886, err=14)
+  XBRL パース+シリアライズ: 920/3984 (376.5s, 2.4 filings/s, ok=906, err=14)
+  XBRL パース+シリアライズ: 940/3984 (382.5s, 2.5 filings/s, ok=926, err=14)
+  XBRL パース+シリアライズ: 960/3984 (390.6s, 2.5 filings/s, ok=946, err=14)
+  XBRL パース+シリアライズ: 980/3984 (397.2s, 2.5 filings/s, ok=966, err=14)
+  XBRL パース+シリアライズ: 1000/3984 (404.2s, 2.5 filings/s, ok=986, err=14)
+  XBRL パース+シリアライズ: 1020/3984 (410.6s, 2.5 filings/s, ok=1006, err=14)
+  XBRL パース+シリアライズ: 1040/3984 (419.4s, 2.5 filings/s, ok=1026, err=14)
+  XBRL パース+シリアライズ: 1060/3984 (430.1s, 2.5 filings/s, ok=1046, err=14)
+  XBRL パース+シリアライズ: 1080/3984 (436.6s, 2.5 filings/s, ok=1066, err=14)
+  XBRL パース+シリアライズ: 1100/3984 (443.0s, 2.5 filings/s, ok=1086, err=14)
+  XBRL パース+シリアライズ: 1120/3984 (451.3s, 2.5 filings/s, ok=1106, err=14)
+  XBRL パース+シリアライズ: 1140/3984 (457.5s, 2.5 filings/s, ok=1126, err=14)
+  XBRL パース+シリアライズ: 1160/3984 (465.4s, 2.5 filings/s, ok=1146, err=14)
+  XBRL パース+シリアライズ: 1180/3984 (470.4s, 2.5 filings/s, ok=1166, err=14)
+  XBRL パース+シリアライズ: 1200/3984 (483.8s, 2.5 filings/s, ok=1186, err=14)
+  XBRL パース+シリアライズ: 1220/3984 (489.3s, 2.5 filings/s, ok=1206, err=14)
+  XBRL パース+シリアライズ: 1240/3984 (498.2s, 2.5 filings/s, ok=1226, err=14)
+  XBRL パース+シリアライズ: 1260/3984 (504.3s, 2.5 filings/s, ok=1246, err=14)
+  XBRL パース+シリアライズ: 1280/3984 (510.0s, 2.5 filings/s, ok=1266, err=14)
+  XBRL パース+シリアライズ: 1300/3984 (517.9s, 2.5 filings/s, ok=1286, err=14)
+  [WARN] S100VP7L (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VP7L)。')
+  XBRL パース+シリアライズ: 1320/3984 (524.8s, 2.5 filings/s, ok=1305, err=15)
+  [WARN] S100VP7I (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VP7I)。')
+  XBRL パース+シリアライズ: 1340/3984 (533.8s, 2.5 filings/s, ok=1324, err=16)
+  XBRL パース+シリアライズ: 1360/3984 (540.4s, 2.5 filings/s, ok=1344, err=16)
+  [WARN] S100VSHC (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VSHC)。')
+  XBRL パース+シリアライズ: 1380/3984 (548.9s, 2.5 filings/s, ok=1363, err=17)
+  [WARN] S100VSHE (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VSHE)。')
+  [WARN] S100VSHG (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VSHG)。')
+  XBRL パース+シリアライズ: 1400/3984 (560.2s, 2.5 filings/s, ok=1381, err=19)
+  [WARN] S100VSHH (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VSHH)。')
+  XBRL パース+シリアライズ: 1420/3984 (568.8s, 2.5 filings/s, ok=1400, err=20)
+  [WARN] S100VTI4 (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VTI4)。')
+  [WARN] S100VPHH (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VPHH)。')
+  [WARN] S100VTI3 (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VTI3)。')
+  [WARN] S100VPHG (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VPHG)。')
+  [WARN] S100VTJ9 (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VTJ9)。')
+  XBRL パース+シリアライズ: 1440/3984 (578.0s, 2.5 filings/s, ok=1415, err=25)
+  [WARN] S100VTJ7 (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VTJ7)。')
+  [WARN] S100VTIT (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VTIT)。')
+  [WARN] S100VTIV (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VTIV)。')
+  [WARN] S100VTJ6 (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VTJ6)。')
+  XBRL パース+シリアライズ: 1460/3984 (590.1s, 2.5 filings/s, ok=1431, err=29)
+  [WARN] S100VTJ8 (野村アセットマネジメント株式会社): EdinetParseError('EDINET ZIP の解析に失敗しました
+(doc_id=S100VTJ8)。')
+  XBRL パース+シリアライズ: 1480/3984 (598.7s, 2.5 filings/s, ok=1450, err=30)
+  XBRL パース+シリアライズ: 1500/3984 (606.9s, 2.5 filings/s, ok=1470, err=30)
+  XBRL パース+シリアライズ: 1520/3984 (616.2s, 2.5 filings/s, ok=1490, err=30)
+  [WARN] S100W47L (太平洋セメント株式会社): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致) (concept='{http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2024-11-
+01/jpcrp_cor}CareerSummaryInformationAboutDirectorsAndCorporateAuditorsTextBlock',
+contextRef='FilingDateInstant_jpcrp030000-asr_E01130-000TsutsumiShingoMember', unitRef=None, xml:lang=None,
+first_line=14173): XBRL/PublicDoc/jpcrp030000-asr-001_E01130-000_2025-03-31_01_2025-06-26.xbrl:15056")
+  XBRL パース+シリアライズ: 1540/3984 (623.5s, 2.5 filings/s, ok=1509, err=31)
+  XBRL パース+シリアライズ: 1560/3984 (629.3s, 2.5 filings/s, ok=1529, err=31)
+  XBRL パース+シリアライズ: 1580/3984 (635.0s, 2.5 filings/s, ok=1549, err=31)
+  XBRL パース+シリアライズ: 1600/3984 (644.9s, 2.5 filings/s, ok=1569, err=31)
+  XBRL パース+シリアライズ: 1620/3984 (650.4s, 2.5 filings/s, ok=1589, err=31)
+  XBRL パース+シリアライズ: 1640/3984 (659.1s, 2.5 filings/s, ok=1609, err=31)
+  XBRL パース+シリアライズ: 1660/3984 (668.4s, 2.5 filings/s, ok=1629, err=31)
+  XBRL パース+シリアライズ: 1680/3984 (675.7s, 2.5 filings/s, ok=1649, err=31)
+  XBRL パース+シリアライズ: 1700/3984 (681.1s, 2.5 filings/s, ok=1669, err=31)
+  XBRL パース+シリアライズ: 1720/3984 (686.3s, 2.5 filings/s, ok=1689, err=31)
+  XBRL パース+シリアライズ: 1740/3984 (692.0s, 2.5 filings/s, ok=1709, err=31)
+  XBRL パース+シリアライズ: 1760/3984 (697.6s, 2.5 filings/s, ok=1729, err=31)
+  XBRL パース+シリアライズ: 1780/3984 (703.0s, 2.5 filings/s, ok=1749, err=31)
+  XBRL パース+シリアライズ: 1800/3984 (709.3s, 2.5 filings/s, ok=1769, err=31)
+  [WARN] S100W63F (Ｅｖｏ　Ｆｕｎｄ): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致)
+(concept='{http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2014-07-31/jplvh_cor}Name',
+contextRef='FilingDateInstant_jplvh010000-lvh_E11943-000FilerLargeVolumeHolder1Member', unitRef=None, xml:lang=None,
+first_line=222): XBRL/PublicDoc/jplvh010000-lvh-001_E11943-000_2025-06-19_01_2025-06-26.xbrl:3012")
+  XBRL パース+シリアライズ: 1820/3984 (717.3s, 2.5 filings/s, ok=1788, err=32)
+  [WARN] S100W63W (Ｅｖｏ　Ｆｕｎｄ): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致)
+(concept='{http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2014-07-31/jplvh_cor}Name',
+contextRef='FilingDateInstant_jplvh020000-lvh_E11943-000FilerLargeVolumeHolder1Member', unitRef=None, xml:lang=None,
+first_line=222): XBRL/PublicDoc/jplvh020000-lvh-002_E11943-000_2025-06-19_01_2025-06-26.xbrl:3920")
+  XBRL パース+シリアライズ: 1840/3984 (724.1s, 2.5 filings/s, ok=1807, err=33)
+  XBRL パース+シリアライズ: 1860/3984 (731.1s, 2.5 filings/s, ok=1827, err=33)
+  XBRL パース+シリアライズ: 1880/3984 (737.5s, 2.5 filings/s, ok=1847, err=33)
+  XBRL パース+シリアライズ: 1900/3984 (744.3s, 2.6 filings/s, ok=1867, err=33)
+  XBRL パース+シリアライズ: 1920/3984 (750.4s, 2.6 filings/s, ok=1887, err=33)
+  XBRL パース+シリアライズ: 1940/3984 (758.5s, 2.6 filings/s, ok=1907, err=33)
+  XBRL パース+シリアライズ: 1960/3984 (768.1s, 2.6 filings/s, ok=1927, err=33)
+  XBRL パース+シリアライズ: 1980/3984 (774.0s, 2.6 filings/s, ok=1947, err=33)
+  XBRL パース+シリアライズ: 2000/3984 (782.3s, 2.6 filings/s, ok=1967, err=33)
+  [WARN] S100W72C (Ｅｖｏ　Ｆｕｎｄ): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致)
+(concept='{http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2014-07-31/jplvh_cor}Name',
+contextRef='FilingDateInstant_jplvh010000-lvh_E11943-000FilerLargeVolumeHolder1Member', unitRef=None, xml:lang=None,
+first_line=222): XBRL/PublicDoc/jplvh010000-lvh-004_E11943-000_2025-06-19_01_2025-06-26.xbrl:2412")
+  XBRL パース+シリアライズ: 2020/3984 (787.3s, 2.6 filings/s, ok=1986, err=34)
+  XBRL パース+シリアライズ: 2040/3984 (794.4s, 2.6 filings/s, ok=2006, err=34)
+  XBRL パース+シリアライズ: 2060/3984 (800.3s, 2.6 filings/s, ok=2026, err=34)
+  XBRL パース+シリアライズ: 2080/3984 (806.5s, 2.6 filings/s, ok=2046, err=34)
+  XBRL パース+シリアライズ: 2100/3984 (812.7s, 2.6 filings/s, ok=2066, err=34)
+  XBRL パース+シリアライズ: 2120/3984 (818.7s, 2.6 filings/s, ok=2086, err=34)
+  XBRL パース+シリアライズ: 2140/3984 (825.3s, 2.6 filings/s, ok=2106, err=34)
+  XBRL パース+シリアライズ: 2160/3984 (831.9s, 2.6 filings/s, ok=2126, err=34)
+  XBRL パース+シリアライズ: 2180/3984 (841.4s, 2.6 filings/s, ok=2146, err=34)
+  XBRL パース+シリアライズ: 2200/3984 (848.2s, 2.6 filings/s, ok=2166, err=34)
+  [WARN] S100W6R2 (株式会社協和日成): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致) (concept='{http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2024-11-
+01/jpcrp_cor}NotesRegardingAmountsOfNotesAndAccountsReceivableTradeAndContractAssetsTextBlock',
+contextRef='CurrentYearInstant_NonConsolidatedMember', unitRef=None, xml:lang=None, first_line=14477):
+XBRL/PublicDoc/jpcrp030000-asr-001_E00189-000_2025-03-31_01_2025-06-26.xbrl:14521")
+  XBRL パース+シリアライズ: 2220/3984 (857.7s, 2.6 filings/s, ok=2185, err=35)
+  XBRL パース+シリアライズ: 2240/3984 (866.8s, 2.6 filings/s, ok=2205, err=35)
+  XBRL パース+シリアライズ: 2260/3984 (872.9s, 2.6 filings/s, ok=2225, err=35)
+  XBRL パース+シリアライズ: 2280/3984 (879.2s, 2.6 filings/s, ok=2245, err=35)
+  XBRL パース+シリアライズ: 2300/3984 (884.5s, 2.6 filings/s, ok=2265, err=35)
+  XBRL パース+シリアライズ: 2320/3984 (892.5s, 2.6 filings/s, ok=2285, err=35)
+  XBRL パース+シリアライズ: 2340/3984 (902.8s, 2.6 filings/s, ok=2305, err=35)
+  XBRL パース+シリアライズ: 2360/3984 (908.2s, 2.6 filings/s, ok=2325, err=35)
+  XBRL パース+シリアライズ: 2380/3984 (913.2s, 2.6 filings/s, ok=2345, err=35)
+  XBRL パース+シリアライズ: 2400/3984 (919.2s, 2.6 filings/s, ok=2365, err=35)
+  XBRL パース+シリアライズ: 2420/3984 (924.3s, 2.6 filings/s, ok=2385, err=35)
+  XBRL パース+シリアライズ: 2440/3984 (930.8s, 2.6 filings/s, ok=2405, err=35)
+  XBRL パース+シリアライズ: 2460/3984 (941.5s, 2.6 filings/s, ok=2425, err=35)
+  XBRL パース+シリアライズ: 2480/3984 (948.2s, 2.6 filings/s, ok=2445, err=35)
+  XBRL パース+シリアライズ: 2500/3984 (954.9s, 2.6 filings/s, ok=2465, err=35)
+  XBRL パース+シリアライズ: 2520/3984 (960.4s, 2.6 filings/s, ok=2485, err=35)
+  XBRL パース+シリアライズ: 2540/3984 (968.1s, 2.6 filings/s, ok=2505, err=35)
+  XBRL パース+シリアライズ: 2560/3984 (973.8s, 2.6 filings/s, ok=2525, err=35)
+  XBRL パース+シリアライズ: 2580/3984 (978.5s, 2.6 filings/s, ok=2545, err=35)
+  XBRL パース+シリアライズ: 2600/3984 (984.0s, 2.6 filings/s, ok=2565, err=35)
+  XBRL パース+シリアライズ: 2620/3984 (990.4s, 2.6 filings/s, ok=2585, err=35)
+  [WARN] S100W7QV (コムチュア株式会社): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致) (concept='{http://disclosure.edinet-fsa.go.jp/taxonomy/jpcrp/2024-11-
+01/jpcrp_cor}ReferenceToOtherInformationRiskManagement', contextRef='FilingDateInstant', unitRef=None, xml:lang=None,
+first_line=4434): XBRL/PublicDoc/jpcrp030000-asr-001_E05678-000_2025-03-31_01_2025-06-26.xbrl:4435")
+  XBRL パース+シリアライズ: 2640/3984 (997.2s, 2.6 filings/s, ok=2604, err=36)
+  XBRL パース+シリアライズ: 2660/3984 (1002.5s, 2.7 filings/s, ok=2624, err=36)
+C:\Users\nezow\OneDrive - Kyoto University\ドキュメント\edinet\src\edinet\models\filing.py:807: EdinetWarning:
+未知の報告期間種別: 'Q2'。既知の値: ['FY', 'HY']
+  dei = extract_dei(parsed.facts)
+C:\Users\nezow\OneDrive - Kyoto University\ドキュメント\edinet\src\edinet\financial\standards\detect.py:177:
+EdinetWarning: 未知の報告期間種別: 'Q2'。既知の値: ['FY', 'HY']
+  dei = extract_dei(facts)
+C:\Users\nezow\OneDrive - Kyoto University\ドキュメント\edinet\src\edinet\financial\statements.py:1238: EdinetWarning:
+未知の報告期間種別: 'Q2'。既知の値: ['FY', 'HY']
+  dei = extract_dei(facts)
+  XBRL パース+シリアライズ: 2680/3984 (1007.9s, 2.7 filings/s, ok=2644, err=36)
+  XBRL パース+シリアライズ: 2700/3984 (1014.8s, 2.7 filings/s, ok=2664, err=36)
+  XBRL パース+シリアライズ: 2720/3984 (1022.0s, 2.7 filings/s, ok=2684, err=36)
+  XBRL パース+シリアライズ: 2740/3984 (1030.1s, 2.7 filings/s, ok=2704, err=36)
+  XBRL パース+シリアライズ: 2760/3984 (1036.9s, 2.7 filings/s, ok=2724, err=36)
+  [WARN] S100W0AI (大和アセットマネジメント株式会社): EdinetParseError('非 nil Fact の値が空です:
+XBRL/PublicDoc/jpsps000000-esr-001_G13827-000_2025-06-27_01_2025-06-27.xbrl:57')
+  XBRL パース+シリアライズ: 2780/3984 (1044.1s, 2.7 filings/s, ok=2743, err=37)
+  XBRL パース+シリアライズ: 2800/3984 (1050.2s, 2.7 filings/s, ok=2763, err=37)
+  XBRL パース+シリアライズ: 2820/3984 (1057.3s, 2.7 filings/s, ok=2783, err=37)
+  XBRL パース+シリアライズ: 2840/3984 (1063.8s, 2.7 filings/s, ok=2803, err=37)
+  XBRL パース+シリアライズ: 2860/3984 (1070.0s, 2.7 filings/s, ok=2823, err=37)
+  XBRL パース+シリアライズ: 2880/3984 (1078.4s, 2.7 filings/s, ok=2843, err=37)
+  XBRL パース+シリアライズ: 2900/3984 (1083.9s, 2.7 filings/s, ok=2863, err=37)
+  XBRL パース+シリアライズ: 2920/3984 (1090.3s, 2.7 filings/s, ok=2883, err=37)
+  XBRL パース+シリアライズ: 2940/3984 (1095.9s, 2.7 filings/s, ok=2903, err=37)
+  XBRL パース+シリアライズ: 2960/3984 (1101.6s, 2.7 filings/s, ok=2923, err=37)
+  XBRL パース+シリアライズ: 2980/3984 (1105.2s, 2.7 filings/s, ok=2943, err=37)
+  XBRL パース+シリアライズ: 3000/3984 (1111.2s, 2.7 filings/s, ok=2963, err=37)
+  XBRL パース+シリアライズ: 3020/3984 (1121.3s, 2.7 filings/s, ok=2983, err=37)
+  XBRL パース+シリアライズ: 3040/3984 (1127.3s, 2.7 filings/s, ok=3003, err=37)
+  XBRL パース+シリアライズ: 3060/3984 (1133.8s, 2.7 filings/s, ok=3023, err=37)
+  XBRL パース+シリアライズ: 3080/3984 (1139.7s, 2.7 filings/s, ok=3043, err=37)
+  XBRL パース+シリアライズ: 3100/3984 (1144.9s, 2.7 filings/s, ok=3063, err=37)
+  XBRL パース+シリアライズ: 3120/3984 (1149.6s, 2.7 filings/s, ok=3083, err=37)
+  [WARN] S100W7SD (Ｅｖｏ　Ｆｕｎｄ): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致)
+(concept='{http://disclosure.edinet-fsa.go.jp/taxonomy/jplvh/2014-07-31/jplvh_cor}Name',
+contextRef='FilingDateInstant_jplvh020000-lvh_E11943-000FilerLargeVolumeHolder1Member', unitRef=None, xml:lang=None,
+first_line=222): XBRL/PublicDoc/jplvh020000-lvh-003_E11943-000_2025-06-20_01_2025-06-27.xbrl:3342")
+  XBRL パース+シリアライズ: 3140/3984 (1155.8s, 2.7 filings/s, ok=3102, err=38)
+  XBRL パース+シリアライズ: 3160/3984 (1161.9s, 2.7 filings/s, ok=3122, err=38)
+  XBRL パース+シリアライズ: 3180/3984 (1167.0s, 2.7 filings/s, ok=3142, err=38)
+  XBRL パース+シリアライズ: 3200/3984 (1173.2s, 2.7 filings/s, ok=3162, err=38)
+  XBRL パース+シリアライズ: 3220/3984 (1177.7s, 2.7 filings/s, ok=3182, err=38)
+  XBRL パース+シリアライズ: 3240/3984 (1184.3s, 2.7 filings/s, ok=3202, err=38)
+  XBRL パース+シリアライズ: 3260/3984 (1190.5s, 2.7 filings/s, ok=3222, err=38)
+  XBRL パース+シリアライズ: 3280/3984 (1195.8s, 2.7 filings/s, ok=3242, err=38)
+  XBRL パース+シリアライズ: 3300/3984 (1202.9s, 2.7 filings/s, ok=3262, err=38)
+  XBRL パース+シリアライズ: 3320/3984 (1208.2s, 2.7 filings/s, ok=3282, err=38)
+  XBRL パース+シリアライズ: 3340/3984 (1213.6s, 2.8 filings/s, ok=3302, err=38)
+  XBRL パース+シリアライズ: 3360/3984 (1219.0s, 2.8 filings/s, ok=3322, err=38)
+  XBRL パース+シリアライズ: 3380/3984 (1225.0s, 2.8 filings/s, ok=3342, err=38)
+  XBRL パース+シリアライズ: 3400/3984 (1230.8s, 2.8 filings/s, ok=3362, err=38)
+  XBRL パース+シリアライズ: 3420/3984 (1238.3s, 2.8 filings/s, ok=3382, err=38)
+  XBRL パース+シリアライズ: 3440/3984 (1246.5s, 2.8 filings/s, ok=3402, err=38)
+  XBRL パース+シリアライズ: 3460/3984 (1256.3s, 2.8 filings/s, ok=3422, err=38)
+  XBRL パース+シリアライズ: 3480/3984 (1268.9s, 2.7 filings/s, ok=3442, err=38)
+  [WARN] S100W7L9 (日揮ホールディングス株式会社): EdinetParseError("不整合な重複 Fact を検出しました (同一
+concept/contextRef/unitRef/xml:lang で値が不一致) (concept='{http://disclosure.edinet-fsa.go.jp/jpcrp030000/asr/001/E01
+575-000/2025-03-31/01/2025-06-27}ReferenceToOtherInformationDescriptionOfMetricsRelatedToPolicyOnHumanResourceDevelopme
+ntAndImprovementOfInternalEnvironmentAndTargetsAndResultsUsingSuchMetricsHumanResourceDevelopment',
+contextRef='FilingDateInstant', unitRef=None, xml:lang=None, first_line=6864):
+XBRL/PublicDoc/jpcrp030000-asr-001_E01575-000_2025-03-31_01_2025-06-27.xbrl:6865")
+  XBRL パース+シリアライズ: 3500/3984 (1280.0s, 2.7 filings/s, ok=3461, err=39)
+  XBRL パース+シリアライズ: 3520/3984 (1288.1s, 2.7 filings/s, ok=3481, err=39)
+  XBRL パース+シリアライズ: 3540/3984 (1297.3s, 2.7 filings/s, ok=3501, err=39)
+  XBRL パース+シリアライズ: 3560/3984 (1302.9s, 2.7 filings/s, ok=3521, err=39)
+  XBRL パース+シリアライズ: 3580/3984 (1309.6s, 2.7 filings/s, ok=3541, err=39)
+  XBRL パース+シリアライズ: 3600/3984 (1314.4s, 2.7 filings/s, ok=3561, err=39)
+  XBRL パース+シリアライズ: 3620/3984 (1319.5s, 2.7 filings/s, ok=3581, err=39)
+  XBRL パース+シリアライズ: 3640/3984 (1328.0s, 2.7 filings/s, ok=3601, err=39)
+  XBRL パース+シリアライズ: 3660/3984 (1336.4s, 2.7 filings/s, ok=3621, err=39)
+  XBRL パース+シリアライズ: 3680/3984 (1341.7s, 2.7 filings/s, ok=3641, err=39)
+  XBRL パース+シリアライズ: 3700/3984 (1348.8s, 2.7 filings/s, ok=3661, err=39)
+  XBRL パース+シリアライズ: 3720/3984 (1355.0s, 2.7 filings/s, ok=3681, err=39)
+  XBRL パース+シリアライズ: 3740/3984 (1361.4s, 2.7 filings/s, ok=3701, err=39)
+  XBRL パース+シリアライズ: 3760/3984 (1369.8s, 2.7 filings/s, ok=3721, err=39)
+  XBRL パース+シリアライズ: 3780/3984 (1378.3s, 2.7 filings/s, ok=3741, err=39)
+  XBRL パース+シリアライズ: 3800/3984 (1384.2s, 2.7 filings/s, ok=3761, err=39)
+  XBRL パース+シリアライズ: 3820/3984 (1389.5s, 2.7 filings/s, ok=3781, err=39)
+  XBRL パース+シリアライズ: 3840/3984 (1395.3s, 2.8 filings/s, ok=3801, err=39)
+  XBRL パース+シリアライズ: 3860/3984 (1401.7s, 2.8 filings/s, ok=3821, err=39)
+  XBRL パース+シリアライズ: 3880/3984 (1407.0s, 2.8 filings/s, ok=3841, err=39)
+  XBRL パース+シリアライズ: 3900/3984 (1412.3s, 2.8 filings/s, ok=3861, err=39)
+  XBRL パース+シリアライズ: 3920/3984 (1418.0s, 2.8 filings/s, ok=3881, err=39)
+  XBRL パース+シリアライズ: 3940/3984 (1422.9s, 2.8 filings/s, ok=3901, err=39)
+  XBRL パース+シリアライズ: 3960/3984 (1428.5s, 2.8 filings/s, ok=3921, err=39)
+  XBRL パース+シリアライズ: 3980/3984 (1433.4s, 2.8 filings/s, ok=3941, err=39)
+  XBRL パース+シリアライズ: 3984/3984 (1434.2s, 2.8 filings/s, ok=3945, err=39)
+  完了: 3945/3984 パース成功 in 1434.3s

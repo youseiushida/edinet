@@ -10,7 +10,7 @@ import pytest
 
 pa = pytest.importorskip("pyarrow")
 
-from edinet.extension import export_parquet, import_parquet  # noqa: E402
+from edinet.extension import export_parquet, import_parquet, iter_parquet  # noqa: E402
 from edinet.financial.statements import Statements  # noqa: E402
 from edinet.models.filing import Filing  # noqa: E402
 from edinet.models.financial import LineItem  # noqa: E402
@@ -633,3 +633,281 @@ class TestRoundtrip:
         assert rs.detected_standard is not None
         assert rs.context_map is not None
         assert rs.calculation_linkbase is not None
+
+
+class TestCompression:
+    """圧縮・ストリーミング関連テスト。"""
+
+    def test_export_zstd_default(self, tmp_path: Path) -> None:
+        """デフォルト圧縮が zstd であることを確認。"""
+        import pyarrow.parquet as pq
+
+        filing = _make_filing()
+        stmts = _make_statements()
+        export_parquet([(filing, stmts)], tmp_path)
+
+        meta = pq.read_metadata(tmp_path / "filings.parquet")
+        codec = meta.row_group(0).column(0).compression
+        assert codec.lower() == "zstd"
+
+    def test_export_compression_snappy(self, tmp_path: Path) -> None:
+        """snappy 圧縮で書き出し → import が動作する。"""
+        import pyarrow.parquet as pq
+
+        filing = _make_filing()
+        stmts = _make_statements()
+        export_parquet([(filing, stmts)], tmp_path, compression="snappy")
+
+        meta = pq.read_metadata(tmp_path / "filings.parquet")
+        codec = meta.row_group(0).column(0).compression
+        assert codec.lower() == "snappy"
+
+        result = import_parquet(tmp_path)
+        assert result[0][0].doc_id == filing.doc_id
+
+    def test_export_compression_none(self, tmp_path: Path) -> None:
+        """無圧縮で書き出し → import が動作する。"""
+        import pyarrow.parquet as pq
+
+        filing = _make_filing()
+        stmts = _make_statements()
+        export_parquet([(filing, stmts)], tmp_path, compression="none")
+
+        meta = pq.read_metadata(tmp_path / "filings.parquet")
+        codec = meta.row_group(0).column(0).compression
+        assert codec.lower() in ("uncompressed", "none")
+
+        result = import_parquet(tmp_path)
+        assert result[0][0].doc_id == filing.doc_id
+
+    def test_export_doc_aligned_row_groups(self, tmp_path: Path) -> None:
+        """書類ごとに独立した row group が生成される。"""
+        import pyarrow.parquet as pq
+
+        f1 = _make_filing(doc_id="S100AAA1")
+        f2 = _make_filing(doc_id="S100AAA2")
+        s1 = _make_statements(
+            items=tuple(
+                _make_line_item(order=i, value=Decimal(str(i)))
+                for i in range(3)
+            )
+        )
+        s2 = _make_statements(
+            items=tuple(
+                _make_line_item(order=i, value=Decimal(str(i + 10)))
+                for i in range(2)
+            )
+        )
+
+        export_parquet([(f1, s1), (f2, s2)], tmp_path)
+
+        meta = pq.read_metadata(tmp_path / "line_items.parquet")
+        # 2 書類 → 2 row groups
+        assert meta.num_row_groups == 2
+        assert meta.row_group(0).num_rows == 3
+        assert meta.row_group(1).num_rows == 2
+
+    def test_export_full_roundtrip(self, tmp_path: Path) -> None:
+        """全テーブルを含む export → import ラウンドトリップ。"""
+        items = tuple(
+            _make_line_item(order=i, value=Decimal(str(i * 100)))
+            for i in range(10)
+        )
+        dei = _make_dei()
+        contexts = _make_context()
+        calc = _make_calc_linkbase()
+        stmts = _make_statements(
+            items=items, dei=dei, contexts=contexts, calc=calc
+        )
+        filing = _make_filing()
+
+        export_parquet([(filing, stmts)], tmp_path)
+        result = import_parquet(tmp_path)
+
+        assert len(result) == 1
+        rf, rs = result[0]
+        assert rf.doc_id == filing.doc_id
+        assert rs is not None
+        assert len(list(rs)) == 10
+        assert rs.dei is not None
+        assert rs.calculation_linkbase is not None
+
+
+class TestFilters:
+    """doc_ids / concepts フィルタのテスト。"""
+
+    def _setup_two_filings(self, tmp_path: Path) -> None:
+        """2 書類を export する共通セットアップ。"""
+        f1 = _make_filing(doc_id="S100AAA1")
+        f2 = _make_filing(doc_id="S100AAA2")
+        s1 = _make_statements(
+            items=(
+                _make_line_item(
+                    concept="{http://example.com/jppfs}NetSales",
+                    local_name="NetSales",
+                    value=Decimal("1000"),
+                    order=0,
+                ),
+                _make_line_item(
+                    concept="{http://example.com/jppfs}TotalAssets",
+                    local_name="TotalAssets",
+                    value=Decimal("5000"),
+                    order=1,
+                    period=InstantPeriod(
+                        instant=datetime.date(2026, 3, 31)
+                    ),
+                ),
+            ),
+            dei=_make_dei(),
+        )
+        s2 = _make_statements(
+            items=(
+                _make_line_item(
+                    concept="{http://example.com/jppfs}NetSales",
+                    local_name="NetSales",
+                    value=Decimal("2000"),
+                    order=0,
+                ),
+            ),
+            dei=_make_dei(),
+        )
+        export_parquet([(f1, s1), (f2, s2)], tmp_path)
+
+    def test_doc_ids_filter(self, tmp_path: Path) -> None:
+        """doc_ids で特定書類だけ復元できる。"""
+        self._setup_two_filings(tmp_path)
+
+        result = import_parquet(tmp_path, doc_ids=["S100AAA1"])
+        assert len(result) == 1
+        assert result[0][0].doc_id == "S100AAA1"
+        assert result[0][1] is not None
+        assert len(list(result[0][1])) == 2
+
+    def test_concepts_filter(self, tmp_path: Path) -> None:
+        """concepts で特定科目だけ復元できる。"""
+        self._setup_two_filings(tmp_path)
+
+        result = import_parquet(tmp_path, concepts=["NetSales"])
+        assert len(result) == 2
+        # 両方の書類に NetSales があるので Statements は non-None
+        for _, stmts in result:
+            assert stmts is not None
+            items = list(stmts)
+            assert all(i.local_name == "NetSales" for i in items)
+
+    def test_doc_ids_and_concepts(self, tmp_path: Path) -> None:
+        """doc_ids と concepts の組み合わせ。"""
+        self._setup_two_filings(tmp_path)
+
+        result = import_parquet(
+            tmp_path,
+            doc_ids=["S100AAA1"],
+            concepts=["TotalAssets"],
+        )
+        assert len(result) == 1
+        stmts = result[0][1]
+        assert stmts is not None
+        items = list(stmts)
+        assert len(items) == 1
+        assert items[0].local_name == "TotalAssets"
+
+    def test_concepts_no_match(self, tmp_path: Path) -> None:
+        """concepts にマッチしない場合 Statements は None。"""
+        self._setup_two_filings(tmp_path)
+
+        result = import_parquet(tmp_path, concepts=["NonExistent"])
+        assert len(result) == 2
+        for _, stmts in result:
+            assert stmts is None
+
+
+class TestIterParquet:
+    """iter_parquet のテスト。"""
+
+    def test_basic_iteration(self, tmp_path: Path) -> None:
+        """基本的なイテレーションが動作する。"""
+        f1 = _make_filing(doc_id="S100AAA1")
+        f2 = _make_filing(doc_id="S100AAA2", has_xbrl=False)
+        s1 = _make_statements(dei=_make_dei())
+        export_parquet([(f1, s1), (f2, None)], tmp_path)
+
+        results = list(iter_parquet(tmp_path))
+        assert len(results) == 2
+        assert results[0][0].doc_id == "S100AAA1"
+        assert results[0][1] is not None
+        assert results[1][0].doc_id == "S100AAA2"
+        assert results[1][1] is None
+
+    def test_doc_ids_filter(self, tmp_path: Path) -> None:
+        """doc_ids フィルタが効く。"""
+        f1 = _make_filing(doc_id="S100AAA1")
+        f2 = _make_filing(doc_id="S100AAA2")
+        s1 = _make_statements()
+        s2 = _make_statements()
+        export_parquet([(f1, s1), (f2, s2)], tmp_path)
+
+        results = list(iter_parquet(tmp_path, doc_ids=["S100AAA2"]))
+        assert len(results) == 1
+        assert results[0][0].doc_id == "S100AAA2"
+
+    def test_concepts_filter(self, tmp_path: Path) -> None:
+        """concepts フィルタが効く。"""
+        filing = _make_filing()
+        stmts = _make_statements(
+            items=(
+                _make_line_item(local_name="NetSales", order=0),
+                _make_line_item(
+                    concept="{http://example.com/jppfs}TotalAssets",
+                    local_name="TotalAssets",
+                    value=Decimal("5000"),
+                    order=1,
+                    period=InstantPeriod(
+                        instant=datetime.date(2026, 3, 31)
+                    ),
+                ),
+            ),
+        )
+        export_parquet([(filing, stmts)], tmp_path)
+
+        results = list(iter_parquet(tmp_path, concepts=["NetSales"]))
+        assert len(results) == 1
+        items = list(results[0][1])
+        assert len(items) == 1
+        assert items[0].local_name == "NetSales"
+
+    def test_batch_size(self, tmp_path: Path) -> None:
+        """batch_size が小さくても全件取得できる。"""
+        data = []
+        for i in range(5):
+            f = _make_filing(doc_id=f"S100AAA{i}")
+            s = _make_statements()
+            data.append((f, s))
+        export_parquet(data, tmp_path)
+
+        results = list(iter_parquet(tmp_path, batch_size=2))
+        assert len(results) == 5
+
+    def test_roundtrip_values(self, tmp_path: Path) -> None:
+        """iter_parquet で復元した値が import_parquet と一致する。"""
+        filing = _make_filing()
+        dei = _make_dei()
+        calc = _make_calc_linkbase()
+        stmts = _make_statements(
+            items=(_make_line_item(value=Decimal("999")),),
+            dei=dei,
+            calc=calc,
+        )
+        export_parquet([(filing, stmts)], tmp_path)
+
+        import_result = import_parquet(tmp_path)
+        iter_result = list(iter_parquet(
+            tmp_path, include_text_blocks=True
+        ))
+
+        assert len(import_result) == len(iter_result)
+        _, is_ = import_result[0]
+        _, it_ = iter_result[0]
+        assert is_ is not None
+        assert it_ is not None
+        assert list(is_)[0].value == list(it_)[0].value
+        assert is_.dei.edinet_code == it_.dei.edinet_code

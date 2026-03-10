@@ -616,6 +616,17 @@ class Statements:
     _resolver: TaxonomyResolver | None = None
     _calculation_linkbase: CalculationLinkbase | None = None
     _definition_linkbase: dict[str, DefinitionTree] | None = None
+    _definition_parent_index: dict[str, str] | None = None
+    _source_path: str | None = None
+
+    @property
+    def source_path(self) -> str | None:
+        """元の XBRL ファイルパスを返す。
+
+        ZIP 内のパス（例: ``"XBRL/PublicDoc/0101010_honbun.xbrl"``）。
+        Parquet 復元時にも保持される。
+        """
+        return self._source_path
 
     @property
     def detected_standard(self) -> DetectedStandard | None:
@@ -656,6 +667,15 @@ class Statements:
     def definition_linkbase(self) -> dict[str, DefinitionTree] | None:
         """Definition Linkbase を返す。"""
         return self._definition_linkbase
+
+    @property
+    def definition_parent_index(self) -> dict[str, str] | None:
+        """事前計算済みの definition parent index を返す。
+
+        Parquet 復元時など、フル DefinitionTree を持たない場合に
+        ``extract_values()`` の ``definition_mapper`` が使用する。
+        """
+        return self._definition_parent_index
 
     @property
     def raw_facts(self) -> tuple[RawFact, ...] | None:
@@ -1207,6 +1227,8 @@ def build_statements(
     resolver: TaxonomyResolver | None = None,
     calculation_linkbase: CalculationLinkbase | None = None,
     definition_linkbase: dict[str, DefinitionTree] | None = None,
+    definition_parent_index: dict[str, str] | None = None,
+    source_path: str | None = None,
 ) -> Statements:
     """LineItem 群から Statements コンテナを構築する。
 
@@ -1226,6 +1248,10 @@ def build_statements(
             ``extract_values()`` の ``calc_mapper`` が使用する。
         definition_linkbase: 提出者の Definition Linkbase。
             ``extract_values()`` の ``definition_mapper`` が使用する。
+        definition_parent_index: 事前計算済みの parent index。
+            Parquet 復元時に ``_build_parent_index()`` の結果を直接渡す。
+            ``None``（デフォルト）なら ``definition_linkbase`` から導出する。
+        source_path: 元の XBRL ファイルパス（ZIP 内パス）。
 
     Returns:
         Statements コンテナ。
@@ -1247,4 +1273,6 @@ def build_statements(
         _resolver=resolver,
         _calculation_linkbase=calculation_linkbase,
         _definition_linkbase=definition_linkbase,
+        _definition_parent_index=definition_parent_index,
+        _source_path=source_path,
     )

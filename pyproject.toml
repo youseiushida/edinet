@@ -35,7 +35,8 @@ dev = [
     "openpyxl>=3",
     "pytest>=9.0.2",
     "pytest-asyncio>=0.25",
-    "ruff>=0.15.0","vulture>=2.14",
+    "ruff>=0.15.0",
+    "vulture>=2.14",
 ]
 
 [tool.vulture]
