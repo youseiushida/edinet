@@ -749,7 +749,7 @@ class Filing(BaseModel):
             parse_xbrl_facts,
             structure_contexts,
         )
-        from edinet.xbrl.taxonomy import get_taxonomy_resolver
+        from edinet.xbrl.taxonomy import get_and_fork_resolver
 
         logger = logging.getLogger(__name__)
 
@@ -768,14 +768,13 @@ class Filing(BaseModel):
             ctx_map = structure_contexts(parsed.contexts)
             logger.debug("step 5: structured %d contexts", len(ctx_map))
 
-            # 6. ラベル解決
-            resolver = get_taxonomy_resolver(taxonomy_path)
-            resolver.load_filer_labels(
+            # 6. ラベル解決（スレッドセーフ: get + fork をアトミックに実行）
+            forked_resolver = get_and_fork_resolver(taxonomy_path)
+            forked_resolver.load_filer_labels(
                 lab_xml_bytes=filer_files.get("lab"),
                 lab_en_xml_bytes=filer_files.get("lab_en"),
                 xsd_bytes=filer_files.get("xsd"),
             )
-            forked_resolver = resolver.fork()
 
             # 7. LineItem 生成
             items = build_line_items(parsed.facts, ctx_map, forked_resolver)

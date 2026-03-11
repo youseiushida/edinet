@@ -89,6 +89,9 @@ if TYPE_CHECKING:
         uninstall_taxonomy as uninstall_taxonomy,
     )
     from edinet.extension import adump_to_parquet as adump_to_parquet
+    from edinet.extension import (
+        adump_to_parquet_thread_pool as adump_to_parquet_thread_pool,
+    )
     from edinet.extension import DumpResult as DumpResult
 
 _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
@@ -194,6 +197,10 @@ _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
     "uninstall_taxonomy": ("edinet.taxonomy_install", "uninstall_taxonomy"),
     # --- Parquet バッチ永続化 ---
     "adump_to_parquet": ("edinet.extension", "adump_to_parquet"),
+    "adump_to_parquet_thread_pool": (
+        "edinet.extension",
+        "adump_to_parquet_thread_pool",
+    ),
     "DumpResult": ("edinet.extension", "DumpResult"),
 }
 
@@ -296,5 +303,6 @@ __all__ = [
     "uninstall_taxonomy",
     # Parquet バッチ永続化
     "adump_to_parquet",
+    "adump_to_parquet_thread_pool",
     "DumpResult",
 ]

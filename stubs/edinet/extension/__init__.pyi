@@ -7,7 +7,7 @@ from edinet.models.filing import Filing
 from pathlib import Path
 from typing import Any, Literal, Sequence
 
-__all__ = ['export_parquet', 'import_parquet', 'iter_parquet', 'adump_to_parquet', 'DumpResult']
+__all__ = ['export_parquet', 'import_parquet', 'iter_parquet', 'adump_to_parquet', 'adump_to_parquet_thread_pool', 'DumpResult']
 
 def export_parquet(data: Sequence[tuple[Filing, Statements | None]], output_dir: str | Path, *, prefix: str = '', compression: str = 'zstd') -> dict[str, Path]:
     '''Filing + Statements を Parquet ファイルにエクスポートする。
@@ -59,7 +59,7 @@ class _LazyAuxiliaryTables:
             ``_read_auxiliary_tables()`` と同じ 6-tuple。
         """
 
-def import_parquet(input_dir: str | Path, *, prefix: str = '', include_text_blocks: bool = True, doc_ids: Sequence[str] | None = None, concepts: Sequence[str] | None = None) -> list[tuple[Filing, Statements | None]]:
+def import_parquet(input_dir: str | Path, *, prefix: str = '', include_text_blocks: bool = True, doc_ids: Sequence[str] | None = None, doc_type_codes: Sequence[str] | None = None, concepts: Sequence[str] | None = None) -> list[tuple[Filing, Statements | None]]:
     '''Parquet ファイルから Filing + Statements を復元する。
 
     Args:
@@ -70,6 +70,10 @@ def import_parquet(input_dir: str | Path, *, prefix: str = '', include_text_bloc
             軽量ロード。旧形式（text_blocks 未分離）のデータも自動検出して読み込む。
         doc_ids: 読み込む doc_id のリスト。``None`` なら全件読み込み。
             PyArrow の predicate pushdown により対象行だけ読み込まれる。
+        doc_type_codes: 読み込む書類種別コードのリスト
+            （例: ``["120", "130"]`` で有報+半期報告書）。
+            ``None`` なら全種別。filings 読み込み後にフィルタされ、
+            該当 doc_id のみ他テーブルから読み込む。
         concepts: 読み込む科目の ``local_name`` リスト（例: ``["NetSales"]``）。
             ``None`` なら全科目。``line_items`` / ``text_blocks`` に適用される。
 
@@ -80,8 +84,8 @@ def import_parquet(input_dir: str | Path, *, prefix: str = '', include_text_bloc
         ImportError: pyarrow がインストールされていない場合。
         FileNotFoundError: filings.parquet が存在しない場合。
     '''
-def iter_parquet(input_dir: str | Path, *, prefix: str = '', include_text_blocks: bool = False, batch_size: int = 100, doc_ids: Sequence[str] | None = None, concepts: Sequence[str] | None = None) -> Iterator[tuple[Filing, Statements | None]]:
-    """Parquet ファイルから Filing + Statements をイテレータで返す。
+def iter_parquet(input_dir: str | Path, *, prefix: str = '', include_text_blocks: bool = False, batch_size: int = 100, doc_ids: Sequence[str] | None = None, doc_type_codes: Sequence[str] | None = None, concepts: Sequence[str] | None = None) -> Iterator[tuple[Filing, Statements | None]]:
+    '''Parquet ファイルから Filing + Statements をイテレータで返す。
 
     ``import_parquet()`` と異なり、line_items / text_blocks を
     バッチ単位で読み込むため、メモリ使用量が件数に依存しない。
@@ -99,6 +103,10 @@ def iter_parquet(input_dir: str | Path, *, prefix: str = '', include_text_blocks
         batch_size: line_items を一度に読み込む書類数。
             デフォルト ``100``。
         doc_ids: 読み込む doc_id のリスト。``None`` なら全件。
+        doc_type_codes: 読み込む書類種別コードのリスト
+            （例: ``["120", "130"]`` で有報+半期報告書）。
+            ``None`` なら全種別。filings 読み込み後にフィルタされるため、
+            line_items 等の重いテーブルは該当書類分しか読まない。
         concepts: 読み込む科目の ``local_name`` リスト。``None`` なら全科目。
 
     Yields:
@@ -107,7 +115,7 @@ def iter_parquet(input_dir: str | Path, *, prefix: str = '', include_text_blocks
     Raises:
         ImportError: pyarrow がインストールされていない場合。
         FileNotFoundError: filings.parquet が存在しない場合。
-    """
+    '''
 
 @dataclass(frozen=True, slots=True)
 class DumpResult:
@@ -160,6 +168,47 @@ async def adump_to_parquet(date: str | DateType | None = None, *, start: str | D
         prefix: ファイル名プレフィックス（例: ``"2026-01-01_"``）。
         compression: 圧縮アルゴリズム。デフォルト ``"zstd"``。
         concurrency: 同時パース並行数。デフォルト ``8``。
+        taxonomy_path: EDINET タクソノミのルートパス。
+        strict: ``False``（デフォルト）で警告降格。
+
+    Returns:
+        ``DumpResult``: パス・カウントを含む実行結果。
+
+    Raises:
+        ImportError: pyarrow がインストールされていない場合。
+    '''
+async def adump_to_parquet_thread_pool(date: str | DateType | None = None, *, start: str | DateType | None = None, end: str | DateType | None = None, doc_type: DocType | str | None = None, edinet_code: str | None = None, on_invalid: Literal['skip', 'error'] = 'skip', output_dir: str | Path = '.', prefix: str = '', compression: str = 'zstd', concurrency: int = 8, max_workers: int = 4, taxonomy_path: str | None = None, strict: bool = False) -> DumpResult:
+    '''ThreadPoolExecutor で XBRL パースをオフロードするバッチ Parquet 永続化。
+
+    ``adump_to_parquet()`` と同じインターフェースだが、``_build_statements``
+    を ``ThreadPoolExecutor`` でオフロードすることで DL とパースを真に
+    並行化し、パイプライン全体のスループットを向上させる。
+
+    パイプライン構造::
+
+        Main thread (event loop):
+          1. adocuments() → filings
+          2. non-XBRL → 即 write
+          3. XBRL: asyncio.gather([_process_xbrl(f, pool) for f in xbrl_filings])
+
+        _process_xbrl(filing, pool):
+          [main thread]  async with sem: await filing.afetch()
+          [thread pool]  stmts = await loop.run_in_executor(pool, _build_statements, ...)
+          [main thread]  serialize + writers.write_rows(...)
+          [main thread]  filing.clear_fetch_cache()
+
+    Args:
+        date: 単日指定（``YYYY-MM-DD`` 文字列または ``date``）。
+        start: 範囲指定の開始日。
+        end: 範囲指定の終了日。
+        doc_type: ``DocType`` または ``docTypeCode`` 文字列。
+        edinet_code: ``E`` + 5桁の提出者コード。
+        on_invalid: 不正行の扱い（``"skip"`` or ``"error"``）。
+        output_dir: 出力先ディレクトリ。
+        prefix: ファイル名プレフィックス（例: ``"2026-01-01_"``）。
+        compression: 圧縮アルゴリズム。デフォルト ``"zstd"``。
+        concurrency: 同時ダウンロード並行数。デフォルト ``8``。
+        max_workers: ThreadPoolExecutor のワーカー数。デフォルト ``4``。
         taxonomy_path: EDINET タクソノミのルートパス。
         strict: ``False``（デフォルト）で警告降格。
 

@@ -11,6 +11,7 @@ import hashlib
 import logging
 import pickle
 import re
+import threading
 import time
 import warnings
 from dataclasses import dataclass
@@ -55,6 +56,8 @@ __all__ = [
     "derive_concept_sets",
     "derive_concept_sets_from_trees",
     "get_concept_set",
+    # スレッドセーフ resolver 取得
+    "get_and_fork_resolver",
 ]
 
 logger = logging.getLogger(__name__)
@@ -122,6 +125,7 @@ ROLE_TOTAL = ROLE_TOTAL_LABEL
 # 標準ラベル辞書は不変なので、同一 taxonomy_path なら再利用できる。
 # filer_labels はインスタンスごとに load/clear するので競合しない。
 _resolver_cache: dict[Path, TaxonomyResolver] = {}
+_resolver_lock = threading.Lock()
 
 
 def get_taxonomy_resolver(
@@ -144,12 +148,37 @@ def get_taxonomy_resolver(
     path = Path(taxonomy_path).resolve()
     cached = _resolver_cache.get(path)
     if cached is not None and use_cache:
+        # Note: get_and_fork_resolver() 経由の場合、filer labels は常に
+        # fork 後の子インスタンスにロードされるため、ここでの clear は no-op。
+        # シングルスレッドでの直接利用（xbrl() 等）との後方互換のため残す。
         cached.clear_filer_labels()
         return cached
     resolver = TaxonomyResolver(taxonomy_path, use_cache=use_cache)
     if use_cache:
         _resolver_cache[path.resolve()] = resolver
     return resolver
+
+
+def get_and_fork_resolver(
+    taxonomy_path: str | Path,
+    *,
+    use_cache: bool = True,
+) -> TaxonomyResolver:
+    """スレッドセーフに TaxonomyResolver の独立コピーを取得する。
+
+    共有キャッシュからの取得と fork をロック内でアトミックに行い、
+    返された子インスタンスに対して安全に load_filer_labels() できる。
+
+    Args:
+        taxonomy_path: タクソノミのルートディレクトリパス。
+        use_cache: pickle キャッシュを使用するか。
+
+    Returns:
+        独立した TaxonomyResolver インスタンス（filer_labels は空）。
+    """
+    with _resolver_lock:
+        resolver = get_taxonomy_resolver(taxonomy_path, use_cache=use_cache)
+        return resolver.fork()
 
 
 # ---------------------------------------------------------------------------

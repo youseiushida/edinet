@@ -89,13 +89,14 @@ async def _dump_one(
     output_dir: Path,
     concurrency: int,
     taxonomy_path: str | None,
+    use_thread_pool: bool = False,
+    max_workers: int = 4,
 ) -> dict[str, Any]:
     """1 書類種別をダンプし、計測結果を返す。"""
-    from edinet.extension import adump_to_parquet
-
     prefix = f"{doc_type_code}_{start}_{end}_"
+    mode_label = f"thread-pool(workers={max_workers})" if use_thread_pool else "async"
     print(f"\n{'─' * 60}")
-    print(f"[{doc_type_code}] {label}")
+    print(f"[{doc_type_code}] {label}  ({mode_label})")
     print(f"  prefix={prefix}, 期間={start}〜{end}")
     print(f"{'─' * 60}")
 
@@ -103,16 +104,33 @@ async def _dump_one(
     tracemalloc.start()
     t0 = time.perf_counter()
 
-    result = await adump_to_parquet(
-        start=start,
-        end=end,
-        doc_type=doc_type_code,
-        output_dir=output_dir,
-        prefix=prefix,
-        concurrency=concurrency,
-        taxonomy_path=taxonomy_path,
-        strict=False,
-    )
+    if use_thread_pool:
+        from edinet.extension import adump_to_parquet_thread_pool
+
+        result = await adump_to_parquet_thread_pool(
+            start=start,
+            end=end,
+            doc_type=doc_type_code,
+            output_dir=output_dir,
+            prefix=prefix,
+            concurrency=concurrency,
+            max_workers=max_workers,
+            taxonomy_path=taxonomy_path,
+            strict=False,
+        )
+    else:
+        from edinet.extension import adump_to_parquet
+
+        result = await adump_to_parquet(
+            start=start,
+            end=end,
+            doc_type=doc_type_code,
+            output_dir=output_dir,
+            prefix=prefix,
+            concurrency=concurrency,
+            taxonomy_path=taxonomy_path,
+            strict=False,
+        )
 
     elapsed = time.perf_counter() - t0
     _, peak = tracemalloc.get_traced_memory()
@@ -165,6 +183,14 @@ async def main() -> None:
         help="対象の書類種別コード (default: 120 130 140 150 160 170)",
     )
     parser.add_argument(
+        "--thread-pool", action="store_true", default=False,
+        help="ThreadPoolExecutor でパースをオフロードする",
+    )
+    parser.add_argument(
+        "--max-workers", type=int, default=4,
+        help="ThreadPool のワーカー数 (default: 4, --thread-pool 時のみ有効)",
+    )
+    parser.add_argument(
         "--api-key", required=True,
         help="EDINET API キー",
     )
@@ -203,6 +229,10 @@ async def main() -> None:
     print(f"出力先: {output_dir}")
     print(f"並行数: {args.concurrency}")
     print(f"対象: {', '.join(f'{k}({v})' for k, v in doc_types.items())}")
+    if args.thread_pool:
+        print(f"モード: thread-pool (max_workers={args.max_workers})")
+    else:
+        print("モード: async (デフォルト)")
     if taxonomy_path:
         print(f"タクソノミ: {taxonomy_path}")
 
@@ -221,6 +251,8 @@ async def main() -> None:
             output_dir=output_dir,
             concurrency=args.concurrency,
             taxonomy_path=taxonomy_path,
+            use_thread_pool=args.thread_pool,
+            max_workers=args.max_workers,
         )
         results.append(r)
 

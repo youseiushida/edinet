@@ -4,7 +4,7 @@ from edinet.xbrl._linkbase_utils import ROLE_LABEL as ROLE_LABEL, ROLE_TOTAL_LAB
 from edinet.xbrl.taxonomy.concept_sets import ConceptEntry as ConceptEntry, ConceptSet as ConceptSet, ConceptSetRegistry as ConceptSetRegistry, StatementCategory as StatementCategory, classify_role_uri as classify_role_uri, derive_concept_sets as derive_concept_sets, derive_concept_sets_from_trees as derive_concept_sets_from_trees, get_concept_set as get_concept_set
 from pathlib import Path
 
-__all__ = ['LabelInfo', 'LabelSource', 'TaxonomyResolver', 'ROLE_LABEL', 'ROLE_VERBOSE', 'ROLE_TOTAL', 'ConceptEntry', 'ConceptSet', 'ConceptSetRegistry', 'StatementCategory', 'classify_role_uri', 'derive_concept_sets', 'derive_concept_sets_from_trees', 'get_concept_set']
+__all__ = ['LabelInfo', 'LabelSource', 'TaxonomyResolver', 'ROLE_LABEL', 'ROLE_VERBOSE', 'ROLE_TOTAL', 'ConceptEntry', 'ConceptSet', 'ConceptSetRegistry', 'StatementCategory', 'classify_role_uri', 'derive_concept_sets', 'derive_concept_sets_from_trees', 'get_concept_set', 'get_and_fork_resolver']
 
 type _LabelKey = tuple[str, str, str, str]
 class LabelSource(enum.Enum):
@@ -35,6 +35,20 @@ class LabelInfo:
     source: LabelSource
 ROLE_VERBOSE = ROLE_VERBOSE_LABEL
 ROLE_TOTAL = ROLE_TOTAL_LABEL
+
+def get_and_fork_resolver(taxonomy_path: str | Path, *, use_cache: bool = True) -> TaxonomyResolver:
+    """スレッドセーフに TaxonomyResolver の独立コピーを取得する。
+
+    共有キャッシュからの取得と fork をロック内でアトミックに行い、
+    返された子インスタンスに対して安全に load_filer_labels() できる。
+
+    Args:
+        taxonomy_path: タクソノミのルートディレクトリパス。
+        use_cache: pickle キャッシュを使用するか。
+
+    Returns:
+        独立した TaxonomyResolver インスタンス（filer_labels は空）。
+    """
 
 class TaxonomyResolver:
     '''EDINET タクソノミのラベル解決を行うクラス。
