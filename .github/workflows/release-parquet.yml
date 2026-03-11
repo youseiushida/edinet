@@ -8,10 +8,10 @@ on:
         default: "dataset-v1"
         type: string
       max_parallel:
-        description: "同時実行ジョブ数 (EDINET API 負荷に注意)"
-        default: "3"
+        description: "同時実行ジョブ数 (20=全並列, API 429 なら下げる)"
+        default: "20"
         type: choice
-        options: ["1", "2", "3", "4"]
+        options: ["1", "2", "3", "4", "5", "10", "20"]
 
 jobs:
   # ================================================================
