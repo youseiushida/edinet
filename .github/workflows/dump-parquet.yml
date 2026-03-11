@@ -1,4 +1,4 @@
-name: Dump Parquet (process-pool)
+name: Dump Parquet
 
 on:
   workflow_dispatch:
@@ -16,8 +16,17 @@ on:
         required: false
         default: "120"
         type: string
+      mode:
+        description: "実行モード"
+        required: false
+        default: "process-pool"
+        type: choice
+        options:
+          - async
+          - thread-pool
+          - process-pool
       max_workers:
-        description: "ProcessPool ワーカー数"
+        description: "Thread/ProcessPool ワーカー数"
         required: false
         default: "4"
         type: string
@@ -39,6 +48,11 @@ jobs:
       - name: Install dependencies
         run: uv sync --extra analysis
 
+      - name: Speed Test
+        run: |
+          pip install speedtest-cli
+          speedtest-cli --simple
+
       - name: Install taxonomy
         run: |
           uv run python -c "
@@ -49,7 +63,19 @@ jobs:
           " | tee /tmp/taxonomy_env
           echo "TAXONOMY_PATH=$(grep TAXONOMY_PATH /tmp/taxonomy_env | cut -d= -f2)" >> "$GITHUB_ENV"
 
-      - name: Run dump pipeline
+      - name: Build mode flags
+        id: flags
+        run: |
+          MODE="${{ inputs.mode }}"
+          if [ "$MODE" = "thread-pool" ]; then
+            echo "flag=--thread-pool" >> "$GITHUB_OUTPUT"
+          elif [ "$MODE" = "process-pool" ]; then
+            echo "flag=--process-pool" >> "$GITHUB_OUTPUT"
+          else
+            echo "flag=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Run dump pipeline (${{ inputs.mode }})
         env:
           EDINET_API_KEY: ${{ secrets.EDINET_API_KEY }}
         run: |
@@ -57,7 +83,7 @@ jobs:
             --start "${{ inputs.start }}" \
             --end "${{ inputs.end }}" \
             --doc-types ${{ inputs.doc_types }} \
-            --process-pool \
+            ${{ steps.flags.outputs.flag }} \
             --max-workers ${{ inputs.max_workers }} \
             --concurrency ${{ inputs.concurrency }} \
             --api-key "$EDINET_API_KEY" \
@@ -66,7 +92,7 @@ jobs:
       - name: Upload Parquet artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: parquet-${{ inputs.start }}-${{ inputs.end }}
+          name: parquet-${{ inputs.mode }}-${{ inputs.start }}-${{ inputs.end }}
           path: ./parquet_output/
           retention-days: 1
           compression-level: 0  # Parquet は既に zstd 圧縮済み
