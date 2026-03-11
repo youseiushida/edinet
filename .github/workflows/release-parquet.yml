@@ -1,0 +1,184 @@
+name: Release Parquet Dataset (2016-2025)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "リリースタグ"
+        default: "dataset-v1"
+        type: string
+      max_parallel:
+        description: "同時実行ジョブ数 (EDINET API 負荷に注意)"
+        default: "3"
+        type: choice
+        options: ["1", "2", "3", "4"]
+
+jobs:
+  # ================================================================
+  # 1. Draft Release を作成
+  # ================================================================
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ inputs.tag }}" \
+            --draft \
+            --title "EDINET Parquet Dataset 2016-2025" \
+            --notes "$(cat <<'EOF'
+          ## EDINET 有報系統 Parquet データセット (2016-2025)
+
+          2016年〜2025年の有報系統（120/130/140/150/160/170）を
+          半年ごとに Parquet 化したデータセット。
+
+          ### 含まれるテーブル
+          - `filings.parquet` — 書類メタデータ
+          - `line_items.parquet` — 数値 Fact
+          - `text_blocks.parquet` — テキスト Fact
+          - `contexts.parquet` — コンテキスト情報
+          - `dei.parquet` — Document and Entity Information
+          - `calc_edges.parquet` — 計算リンクベース
+          - `def_parents.parquet` — 定義リンクベース
+
+          ### 使い方
+          ```python
+          import tarfile, edinet
+
+          # tar を展開
+          with tarfile.open("edinet-2025-H1.tar") as tf:
+              tf.extractall("./data/2025-H1")
+
+          # 読み込み
+          for prefix in ["120_2025-01-01_2025-06-30_", "130_2025-01-01_2025-06-30_"]:
+              for filing, stmts in edinet.iter_parquet("./data/2025-H1", prefix=prefix):
+                  values = edinet.extract_values(stmts, [edinet.CK.REVENUE])
+          ```
+
+          ### 生成環境
+          - `adump_to_parquet_process_pool(max_workers=4, concurrency=16)`
+          - GitHub Actions `ubuntu-latest` (4 vCPU, 16 GB RAM)
+          - 圧縮: zstd
+          EOF
+          )" \
+            || echo "Release already exists, continuing..."
+
+  # ================================================================
+  # 2. 半年ごとに dump → tar → Release にアップロード
+  # ================================================================
+  dump:
+    needs: create-release
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(inputs.max_parallel) }}
+      matrix:
+        include:
+          # 2016
+          - { start: "2016-01-01", end: "2016-06-30", label: "2016-H1" }
+          - { start: "2016-07-01", end: "2016-12-31", label: "2016-H2" }
+          # 2017
+          - { start: "2017-01-01", end: "2017-06-30", label: "2017-H1" }
+          - { start: "2017-07-01", end: "2017-12-31", label: "2017-H2" }
+          # 2018
+          - { start: "2018-01-01", end: "2018-06-30", label: "2018-H1" }
+          - { start: "2018-07-01", end: "2018-12-31", label: "2018-H2" }
+          # 2019
+          - { start: "2019-01-01", end: "2019-06-30", label: "2019-H1" }
+          - { start: "2019-07-01", end: "2019-12-31", label: "2019-H2" }
+          # 2020
+          - { start: "2020-01-01", end: "2020-06-30", label: "2020-H1" }
+          - { start: "2020-07-01", end: "2020-12-31", label: "2020-H2" }
+          # 2021
+          - { start: "2021-01-01", end: "2021-06-30", label: "2021-H1" }
+          - { start: "2021-07-01", end: "2021-12-31", label: "2021-H2" }
+          # 2022
+          - { start: "2022-01-01", end: "2022-06-30", label: "2022-H1" }
+          - { start: "2022-07-01", end: "2022-12-31", label: "2022-H2" }
+          # 2023
+          - { start: "2023-01-01", end: "2023-06-30", label: "2023-H1" }
+          - { start: "2023-07-01", end: "2023-12-31", label: "2023-H2" }
+          # 2024
+          - { start: "2024-01-01", end: "2024-06-30", label: "2024-H1" }
+          - { start: "2024-07-01", end: "2024-12-31", label: "2024-H2" }
+          # 2025
+          - { start: "2025-01-01", end: "2025-06-30", label: "2025-H1" }
+          - { start: "2025-07-01", end: "2025-12-31", label: "2025-H2" }
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Install dependencies
+        run: uv sync --extra analysis
+
+      - name: Run dump pipeline (${{ matrix.label }})
+        env:
+          EDINET_API_KEY: ${{ secrets.EDINET_API_KEY }}
+        run: |
+          uv run python tools/dump_securities_reports.py \
+            --start "${{ matrix.start }}" \
+            --end "${{ matrix.end }}" \
+            --process-pool \
+            --max-workers 4 \
+            --concurrency 16 \
+            --api-key "$EDINET_API_KEY" \
+            --output-dir ./parquet_output
+
+      - name: Create tar and check size
+        run: |
+          cd parquet_output
+          tar cf "../edinet-${{ matrix.label }}.tar" *.parquet dump_report.txt 2>/dev/null || \
+          tar cf "../edinet-${{ matrix.label }}.tar" *.parquet
+          cd ..
+          SIZE=$(stat --format=%s "edinet-${{ matrix.label }}.tar")
+          SIZE_MB=$((SIZE / 1024 / 1024))
+          echo "edinet-${{ matrix.label }}.tar: ${SIZE_MB} MB"
+          if [ "$SIZE" -gt 2040109465 ]; then
+            echo "::error::tar が 2GB を超えています (${SIZE_MB} MB)。四半期分割が必要です。"
+            exit 1
+          fi
+
+      - name: Upload to release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "${{ inputs.tag }}" \
+            "edinet-${{ matrix.label }}.tar" \
+            --clobber
+
+  # ================================================================
+  # 3. 全アセット確認 → Release を公開
+  # ================================================================
+  finalize:
+    needs: dump
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check and publish release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "=== Uploaded Assets ==="
+          gh release view "${{ inputs.tag }}" --json assets \
+            -q '.assets[] | "\(.name)\t\(.size / 1024 / 1024 | floor) MB"'
+
+          ASSET_COUNT=$(gh release view "${{ inputs.tag }}" --json assets -q '.assets | length')
+          echo ""
+          echo "Assets: ${ASSET_COUNT} / 20"
+
+          if [ "$ASSET_COUNT" -eq 20 ]; then
+            gh release edit "${{ inputs.tag }}" --draft=false
+            echo "Release published!"
+          else
+            echo "::warning::${ASSET_COUNT}/20 assets uploaded. Release remains draft. Re-run failed jobs to complete."
+          fi
