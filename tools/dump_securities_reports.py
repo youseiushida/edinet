@@ -212,12 +212,17 @@ async def main() -> None:
     import edinet
     edinet.configure(api_key=args.api_key)
 
-    # タクソノミ: 環境変数 → install_taxonomy(2025) で自動解決
+    # タクソノミ: 環境変数 → --start の年度で install_taxonomy() 自動解決
     taxonomy_path = os.environ.get("EDINET_TAXONOMY_ROOT")
     if taxonomy_path:
         edinet.configure(taxonomy_path=taxonomy_path)
     else:
-        info = edinet.install_taxonomy(year=2025)
+        start_year = int(args.start[:4])
+        available = edinet.list_taxonomy_versions()
+        taxonomy_year = min(max(start_year, min(available)), max(available))
+        if taxonomy_year != start_year:
+            print(f"タクソノミ年度 {start_year} は範囲外のため {taxonomy_year} にフォールバック")
+        info = edinet.install_taxonomy(year=taxonomy_year)
         taxonomy_path = str(info.path)
         print(f"タクソノミ自動解決: {info.year}年版 @ {info.path}")
 
