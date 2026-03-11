@@ -572,9 +572,10 @@ def import_parquet(
 def _build_rg_mapping(pf: Any) -> dict[str, list[int]]:
     """ParquetFile から doc_id → row_group_indices マッピングを構築する。
 
-    1 書類 = 1 row group の不変条件を前提とし、各 row group の
-    先頭行の doc_id だけを Python 文字列化する。全行の ``to_pylist()``
-    を回避し、年間データ（数億行）でも数 KB のメモリで完結する。
+    1 書類 = 1 row group の不変条件を前提とする。
+    row group 統計情報（min/max）から doc_id を取得し、データ I/O ゼロで
+    マッピングを構築する。統計が利用できない場合は doc_id カラムの
+    先頭行を読むフォールバックに切り替える。
 
     Args:
         pf: ``pq.ParquetFile`` インスタンス。
@@ -582,10 +583,29 @@ def _build_rg_mapping(pf: Any) -> dict[str, list[int]]:
     Returns:
         ``{doc_id: [row_group_index, ...]}`` マッピング。
     """
-    doc_id_col = pf.read(columns=["doc_id"]).column("doc_id")
+    num_rgs = pf.metadata.num_row_groups
+    if num_rgs == 0:
+        return {}
+
+    doc_id_idx = pf.schema_arrow.get_field_index("doc_id")
     rg_map: dict[str, list[int]] = defaultdict(list)
+
+    # 統計ベース（データ I/O ゼロ）
+    for i in range(num_rgs):
+        stats = pf.metadata.row_group(i).column(doc_id_idx).statistics
+        if stats is None or not stats.has_min_max:
+            # 統計が欠けている → フォールバック
+            break
+        rg_map[stats.min].append(i)
+    else:
+        # 全 RG で統計が取れた
+        return dict(rg_map)
+
+    # フォールバック: doc_id カラムの先頭行を読む
+    rg_map.clear()
+    doc_id_col = pf.read(columns=["doc_id"]).column("doc_id")
     offset = 0
-    for i in range(pf.metadata.num_row_groups):
+    for i in range(num_rgs):
         n = pf.metadata.row_group(i).num_rows
         did = doc_id_col[offset].as_py()
         rg_map[did].append(i)
