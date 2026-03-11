@@ -23,7 +23,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, Any, Literal, Sequence
 
 from edinet.financial.statements import Statements
-from edinet.models.filing import Filing
+from edinet.models.filing import Filing, _extract_filer_taxonomy_files
 
 from ._deserialize import (
     deserialize_calc_linkbase,
@@ -54,6 +54,7 @@ __all__ = [
     "iter_parquet",
     "adump_to_parquet",
     "adump_to_parquet_thread_pool",
+    "adump_to_parquet_process_pool",
     "DumpResult",
 ]
 
@@ -1210,6 +1211,333 @@ async def adump_to_parquet_thread_pool(
         with ThreadPoolExecutor(max_workers=max_workers) as pool:
             await asyncio.gather(
                 *[_process_xbrl(f, pool) for f in xbrl_filings]
+            )
+
+    finally:
+        result_paths = writers.close()
+
+    return DumpResult(
+        paths=result_paths,
+        total_filings=total_filings,
+        xbrl_count=xbrl_count,
+        xbrl_ok=xbrl_ok,
+        errors=errors,
+    )
+
+
+# ---------------------------------------------------------------------------
+# adump_to_parquet_process_pool — ProcessPool による真の CPU 並列化
+# ---------------------------------------------------------------------------
+
+
+def _worker_init(taxonomy_path: str) -> None:
+    """ProcessPool ワーカー初期化。TaxonomyResolver をプロセス内キャッシュに載せる。
+
+    ``ProcessPoolExecutor`` の ``initializer`` に渡す。
+    ワーカープロセス起動時に 1 回だけ呼ばれる。
+
+    Args:
+        taxonomy_path: タクソノミのルートディレクトリパス。
+    """
+    from edinet.xbrl.taxonomy import get_taxonomy_resolver
+
+    get_taxonomy_resolver(taxonomy_path, use_cache=True)
+
+
+def _worker_parse_and_serialize(
+    taxonomy_path: str,
+    xbrl_path: str,
+    xbrl_bytes: bytes,
+    filer_files: dict[str, bytes],
+    strict: bool,
+    doc_id: str,
+) -> dict[str, list[dict[str, Any]]]:
+    """ProcessPool ワーカー: XBRL パース → シリアライズ → dict 行を返す。
+
+    ``_build_statements`` (filing.py) と同じ Step 3-8 のパイプラインを
+    Filing インスタンスに依存せずに実行する。Statements はワーカー内で
+    生成・シリアライズ・破棄され、プロセス境界を越えない。
+
+    Args:
+        taxonomy_path: 解決済みタクソノミパス。
+        xbrl_path: XBRL ファイルのパス（トレース用）。
+        xbrl_bytes: XBRL ファイルのバイト列。
+        filer_files: 提出者タクソノミファイル（lab/lab_en/xsd/cal/def）。
+        strict: False で警告降格。
+        doc_id: 書類 ID（シリアライズ用キー）。
+
+    Returns:
+        テーブル名 → dict 行リストの辞書。
+        キー: ``"line_items"``, ``"text_blocks"``, ``"contexts"``, ``"dei"``,
+        ``"calc_edges"``, ``"def_parents"``（データがある場合のみ）。
+
+    Raises:
+        EdinetParseError: パイプラインの各ステップで失敗した場合。
+    """
+    from pathlib import Path
+
+    from edinet.exceptions import EdinetError, EdinetParseError
+    from edinet.xbrl import (
+        build_line_items,
+        build_statements,
+        parse_xbrl_facts,
+        structure_contexts,
+    )
+    from edinet.xbrl.dei import extract_dei, resolve_industry_code
+    from edinet.xbrl.linkbase import (
+        parse_calculation_linkbase,
+        parse_definition_linkbase,
+    )
+    from edinet.xbrl.taxonomy import get_and_fork_resolver
+
+    try:
+        # Step 4: XBRL パース
+        parsed = parse_xbrl_facts(xbrl_bytes, source_path=xbrl_path, strict=strict)
+
+        # Step 5: Context 構造化
+        ctx_map = structure_contexts(parsed.contexts)
+
+        # Step 6: ラベル解決（プロセス内キャッシュから fork）
+        resolver = get_and_fork_resolver(taxonomy_path)
+        resolver.load_filer_labels(
+            lab_xml_bytes=filer_files.get("lab"),
+            lab_en_xml_bytes=filer_files.get("lab_en"),
+            xsd_bytes=filer_files.get("xsd"),
+        )
+
+        # Step 7: LineItem 生成
+        items = build_line_items(parsed.facts, ctx_map, resolver)
+
+        # Step 7b: リンクベースパース
+        cal_lb = None
+        if (cal_bytes := filer_files.get("cal")) is not None:
+            cal_lb = parse_calculation_linkbase(cal_bytes)
+        def_trees = None
+        if (def_bytes := filer_files.get("def")) is not None:
+            def_trees = parse_definition_linkbase(def_bytes)
+
+        # Step 8: Statement 組み立て
+        dei = extract_dei(parsed.facts)
+        industry_code = resolve_industry_code(dei)
+        stmts = build_statements(
+            items,
+            facts=parsed.facts,
+            contexts=ctx_map,
+            taxonomy_root=Path(taxonomy_path),
+            industry_code=industry_code,
+            resolver=resolver,
+            calculation_linkbase=cal_lb,
+            definition_linkbase=def_trees,
+            source_path=xbrl_path,
+        )
+    except EdinetError:
+        raise
+    except Exception as exc:
+        raise EdinetParseError(
+            f"Filing {doc_id}: XBRL パイプラインで予期しないエラーが発生しました"
+        ) from exc
+
+    # シリアライズ（ワーカー内で完結、Statements はプロセス境界を越えない）
+    result: dict[str, list[dict[str, Any]]] = {}
+
+    li_rows: list[dict[str, Any]] = []
+    tb_rows: list[dict[str, Any]] = []
+    for item in stmts:
+        row = serialize_line_item(item, doc_id)
+        if is_text_block(item.local_name):
+            tb_rows.append(row)
+        else:
+            li_rows.append(row)
+    result["line_items"] = li_rows
+    result["text_blocks"] = tb_rows
+
+    if (cm := stmts.context_map):
+        result["contexts"] = [serialize_context(c, doc_id) for c in cm.values()]
+    if (d := stmts.dei) is not None:
+        result["dei"] = [serialize_dei(
+            d, doc_id,
+            detected_standard=stmts.detected_standard,
+            source_path=stmts.source_path,
+        )]
+    if (cal := stmts.calculation_linkbase) is not None:
+        result["calc_edges"] = serialize_calc_edges(cal, doc_id)
+    if (defn := stmts.definition_linkbase) is not None:
+        result["def_parents"] = serialize_def_parents(defn, doc_id)
+
+    return result
+
+
+async def adump_to_parquet_process_pool(
+    date: str | DateType | None = None,
+    *,
+    # --- adocuments() と同じフィルタ引数 ---
+    start: str | DateType | None = None,
+    end: str | DateType | None = None,
+    doc_type: DocType | str | None = None,
+    edinet_code: str | None = None,
+    on_invalid: Literal["skip", "error"] = "skip",
+    # --- 出力設定 ---
+    output_dir: str | Path = ".",
+    prefix: str = "",
+    compression: str = "zstd",
+    # --- パース設定 ---
+    concurrency: int = 16,
+    max_workers: int = 4,
+    taxonomy_path: str | None = None,
+    strict: bool = False,
+) -> DumpResult:
+    """ProcessPoolExecutor で XBRL パースをオフロードするバッチ Parquet 永続化。
+
+    ``adump_to_parquet_thread_pool()`` と同じインターフェースだが、
+    ``ProcessPoolExecutor`` で GIL を完全に回避し、コア数に比例して
+    パーススループットをスケールさせる。
+
+    DL (高速) とパース (低速) の速度差によるメモリ滞留を
+    ``parse_sem`` でバックプレッシャー制御する。
+
+    パイプライン構造::
+
+        Main process (event loop):
+          1. adocuments() → filings
+          2. non-XBRL → 即 write
+          3. XBRL: asyncio.gather([_process_xbrl(f) for f in xbrl_filings])
+
+        _process_xbrl(filing):
+          [main / parse_sem]  async with parse_sem:  ← バックプレッシャー
+            [main / dl_sem]     async with dl_sem: await filing.afetch()
+            [ProcessPool]       result_dicts = run_in_executor(pool, _worker_parse_and_serialize, ...)
+          [main]              writers.write_rows(...)
+
+    Args:
+        date: 単日指定（``YYYY-MM-DD`` 文字列または ``date``）。
+        start: 範囲指定の開始日。
+        end: 範囲指定の終了日。
+        doc_type: ``DocType`` または ``docTypeCode`` 文字列。
+        edinet_code: ``E`` + 5桁の提出者コード。
+        on_invalid: 不正行の扱い（``"skip"`` or ``"error"``）。
+        output_dir: 出力先ディレクトリ。
+        prefix: ファイル名プレフィックス（例: ``"2026-01-01_"``）。
+        compression: 圧縮アルゴリズム。デフォルト ``"zstd"``。
+        concurrency: 同時ダウンロード並行数。デフォルト ``16``。
+        max_workers: ProcessPoolExecutor のワーカー数。デフォルト ``4``。
+        taxonomy_path: EDINET タクソノミのルートパス。
+        strict: ``False``（デフォルト）で警告降格。
+
+    Returns:
+        ``DumpResult``: パス・カウントを含む実行結果。
+
+    Raises:
+        ImportError: pyarrow がインストールされていない場合。
+    """
+    from concurrent.futures import ProcessPoolExecutor
+
+    _require_pyarrow()
+
+    from edinet.public_api import adocuments
+
+    output_path = Path(output_dir)
+    output_path.mkdir(parents=True, exist_ok=True)
+
+    # 1. 書類一覧を取得
+    filings = await adocuments(
+        date,
+        start=start,
+        end=end,
+        doc_type=doc_type,
+        edinet_code=edinet_code,
+        on_invalid=on_invalid,
+    )
+    total_filings = len(filings)
+
+    xbrl_filings = [f for f in filings if f.has_xbrl]
+    non_xbrl_filings = [f for f in filings if not f.has_xbrl]
+    xbrl_count = len(xbrl_filings)
+
+    # taxonomy_path を最初に解決（全ワーカーで共通）
+    if xbrl_filings:
+        resolved_tp = xbrl_filings[0]._resolve_taxonomy_path(taxonomy_path)
+    else:
+        resolved_tp = ""
+
+    # 2. Writer を準備
+    writers = _ParquetWriters(output_path, prefix, compression)
+    loop = asyncio.get_running_loop()
+
+    try:
+        # 3. non-XBRL → 即書き出し
+        if non_xbrl_filings:
+            writers.write_rows(
+                "filings",
+                [serialize_filing(f) for f in non_xbrl_filings],
+            )
+
+        # 4. XBRL をドキュメント単位で処理（ProcessPool でパースオフロード）
+        dl_sem = asyncio.Semaphore(concurrency)
+        parse_sem = asyncio.Semaphore(max_workers * 2)
+        xbrl_ok = 0
+        errors = 0
+        processed = 0
+
+        async def _process_xbrl(filing: Filing) -> None:
+            nonlocal xbrl_ok, errors, processed
+
+            doc_id = filing.doc_id
+            result_dicts = None
+
+            try:
+                # parse_sem を外側に → DL 開始前にゲート → メモリ滞留を制限
+                async with parse_sem:
+                    # DL（イベントループ上、dl_sem で並行数制御）
+                    async with dl_sem:
+                        xbrl_path, xbrl_bytes = await filing.afetch()
+                        filer_files = _extract_filer_taxonomy_files(
+                            filing._zip_cache,
+                        )
+                        filing.clear_fetch_cache()  # ZIP 即解放
+
+                    # パース + シリアライズ（ProcessPool へオフロード）
+                    result_dicts = await loop.run_in_executor(
+                        pool,
+                        _worker_parse_and_serialize,
+                        resolved_tp,
+                        xbrl_path,
+                        xbrl_bytes,
+                        filer_files,
+                        strict,
+                        doc_id,
+                    )
+            except Exception:
+                logger.warning(
+                    "XBRL パース失敗: %s", doc_id, exc_info=True,
+                )
+                errors += 1
+
+            # 書き出し（メインプロセス、_ParquetWriters は非スレッドセーフ）
+            writers.write_rows("filings", [serialize_filing(filing)])
+
+            if result_dicts is not None:
+                for table_name in (
+                    "line_items", "text_blocks", "contexts",
+                    "dei", "calc_edges", "def_parents",
+                ):
+                    rows = result_dicts.get(table_name)
+                    if rows:
+                        writers.write_rows(table_name, rows)
+
+                del result_dicts
+                xbrl_ok += 1
+
+            processed += 1
+            if processed % 20 == 0:
+                gc.collect()
+
+        with ProcessPoolExecutor(
+            max_workers=max_workers,
+            initializer=_worker_init,
+            initargs=(resolved_tp,),
+        ) as pool:
+            await asyncio.gather(
+                *[_process_xbrl(f) for f in xbrl_filings],
             )
 
     finally:

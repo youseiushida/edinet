@@ -7,7 +7,7 @@ from edinet.models.filing import Filing
 from pathlib import Path
 from typing import Any, Literal, Sequence
 
-__all__ = ['export_parquet', 'import_parquet', 'iter_parquet', 'adump_to_parquet', 'adump_to_parquet_thread_pool', 'DumpResult']
+__all__ = ['export_parquet', 'import_parquet', 'iter_parquet', 'adump_to_parquet', 'adump_to_parquet_thread_pool', 'adump_to_parquet_process_pool', 'DumpResult']
 
 def export_parquet(data: Sequence[tuple[Filing, Statements | None]], output_dir: str | Path, *, prefix: str = '', compression: str = 'zstd') -> dict[str, Path]:
     '''Filing + Statements を Parquet ファイルにエクスポートする。
@@ -209,6 +209,50 @@ async def adump_to_parquet_thread_pool(date: str | DateType | None = None, *, st
         compression: 圧縮アルゴリズム。デフォルト ``"zstd"``。
         concurrency: 同時ダウンロード並行数。デフォルト ``8``。
         max_workers: ThreadPoolExecutor のワーカー数。デフォルト ``4``。
+        taxonomy_path: EDINET タクソノミのルートパス。
+        strict: ``False``（デフォルト）で警告降格。
+
+    Returns:
+        ``DumpResult``: パス・カウントを含む実行結果。
+
+    Raises:
+        ImportError: pyarrow がインストールされていない場合。
+    '''
+async def adump_to_parquet_process_pool(date: str | DateType | None = None, *, start: str | DateType | None = None, end: str | DateType | None = None, doc_type: DocType | str | None = None, edinet_code: str | None = None, on_invalid: Literal['skip', 'error'] = 'skip', output_dir: str | Path = '.', prefix: str = '', compression: str = 'zstd', concurrency: int = 16, max_workers: int = 4, taxonomy_path: str | None = None, strict: bool = False) -> DumpResult:
+    '''ProcessPoolExecutor で XBRL パースをオフロードするバッチ Parquet 永続化。
+
+    ``adump_to_parquet_thread_pool()`` と同じインターフェースだが、
+    ``ProcessPoolExecutor`` で GIL を完全に回避し、コア数に比例して
+    パーススループットをスケールさせる。
+
+    DL (高速) とパース (低速) の速度差によるメモリ滞留を
+    ``parse_sem`` でバックプレッシャー制御する。
+
+    パイプライン構造::
+
+        Main process (event loop):
+          1. adocuments() → filings
+          2. non-XBRL → 即 write
+          3. XBRL: asyncio.gather([_process_xbrl(f) for f in xbrl_filings])
+
+        _process_xbrl(filing):
+          [main / parse_sem]  async with parse_sem:  ← バックプレッシャー
+            [main / dl_sem]     async with dl_sem: await filing.afetch()
+            [ProcessPool]       result_dicts = run_in_executor(pool, _worker_parse_and_serialize, ...)
+          [main]              writers.write_rows(...)
+
+    Args:
+        date: 単日指定（``YYYY-MM-DD`` 文字列または ``date``）。
+        start: 範囲指定の開始日。
+        end: 範囲指定の終了日。
+        doc_type: ``DocType`` または ``docTypeCode`` 文字列。
+        edinet_code: ``E`` + 5桁の提出者コード。
+        on_invalid: 不正行の扱い（``"skip"`` or ``"error"``）。
+        output_dir: 出力先ディレクトリ。
+        prefix: ファイル名プレフィックス（例: ``"2026-01-01_"``）。
+        compression: 圧縮アルゴリズム。デフォルト ``"zstd"``。
+        concurrency: 同時ダウンロード並行数。デフォルト ``16``。
+        max_workers: ProcessPoolExecutor のワーカー数。デフォルト ``4``。
         taxonomy_path: EDINET タクソノミのルートパス。
         strict: ``False``（デフォルト）で警告降格。
 

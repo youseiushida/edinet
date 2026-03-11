@@ -92,6 +92,9 @@ if TYPE_CHECKING:
     from edinet.extension import (
         adump_to_parquet_thread_pool as adump_to_parquet_thread_pool,
     )
+    from edinet.extension import (
+        adump_to_parquet_process_pool as adump_to_parquet_process_pool,
+    )
     from edinet.extension import DumpResult as DumpResult
 
 _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
@@ -201,6 +204,10 @@ _LAZY_EXPORTS: dict[str, tuple[str, str]] = {
         "edinet.extension",
         "adump_to_parquet_thread_pool",
     ),
+    "adump_to_parquet_process_pool": (
+        "edinet.extension",
+        "adump_to_parquet_process_pool",
+    ),
     "DumpResult": ("edinet.extension", "DumpResult"),
 }
 
@@ -304,5 +311,6 @@ __all__ = [
     # Parquet バッチ永続化
     "adump_to_parquet",
     "adump_to_parquet_thread_pool",
+    "adump_to_parquet_process_pool",
     "DumpResult",
 ]

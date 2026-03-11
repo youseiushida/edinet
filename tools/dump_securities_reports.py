@@ -90,11 +90,17 @@ async def _dump_one(
     concurrency: int,
     taxonomy_path: str | None,
     use_thread_pool: bool = False,
+    use_process_pool: bool = False,
     max_workers: int = 4,
 ) -> dict[str, Any]:
     """1 書類種別をダンプし、計測結果を返す。"""
     prefix = f"{doc_type_code}_{start}_{end}_"
-    mode_label = f"thread-pool(workers={max_workers})" if use_thread_pool else "async"
+    if use_process_pool:
+        mode_label = f"process-pool(workers={max_workers})"
+    elif use_thread_pool:
+        mode_label = f"thread-pool(workers={max_workers})"
+    else:
+        mode_label = "async"
     print(f"\n{'─' * 60}")
     print(f"[{doc_type_code}] {label}  ({mode_label})")
     print(f"  prefix={prefix}, 期間={start}〜{end}")
@@ -104,7 +110,21 @@ async def _dump_one(
     tracemalloc.start()
     t0 = time.perf_counter()
 
-    if use_thread_pool:
+    if use_process_pool:
+        from edinet.extension import adump_to_parquet_process_pool
+
+        result = await adump_to_parquet_process_pool(
+            start=start,
+            end=end,
+            doc_type=doc_type_code,
+            output_dir=output_dir,
+            prefix=prefix,
+            concurrency=concurrency,
+            max_workers=max_workers,
+            taxonomy_path=taxonomy_path,
+            strict=False,
+        )
+    elif use_thread_pool:
         from edinet.extension import adump_to_parquet_thread_pool
 
         result = await adump_to_parquet_thread_pool(
@@ -187,14 +207,21 @@ async def main() -> None:
         help="ThreadPoolExecutor でパースをオフロードする",
     )
     parser.add_argument(
+        "--process-pool", action="store_true", default=False,
+        help="ProcessPoolExecutor でパースをオフロードする（GIL 完全回避）",
+    )
+    parser.add_argument(
         "--max-workers", type=int, default=4,
-        help="ThreadPool のワーカー数 (default: 4, --thread-pool 時のみ有効)",
+        help="Thread/ProcessPool のワーカー数 (default: 4)",
     )
     parser.add_argument(
         "--api-key", required=True,
         help="EDINET API キー",
     )
     args = parser.parse_args()
+
+    if args.thread_pool and args.process_pool:
+        parser.error("--thread-pool と --process-pool は同時に指定できません")
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -234,7 +261,9 @@ async def main() -> None:
     print(f"出力先: {output_dir}")
     print(f"並行数: {args.concurrency}")
     print(f"対象: {', '.join(f'{k}({v})' for k, v in doc_types.items())}")
-    if args.thread_pool:
+    if args.process_pool:
+        print(f"モード: process-pool (max_workers={args.max_workers})")
+    elif args.thread_pool:
         print(f"モード: thread-pool (max_workers={args.max_workers})")
     else:
         print("モード: async (デフォルト)")
@@ -257,6 +286,7 @@ async def main() -> None:
             concurrency=args.concurrency,
             taxonomy_path=taxonomy_path,
             use_thread_pool=args.thread_pool,
+            use_process_pool=args.process_pool,
             max_workers=args.max_workers,
         )
         results.append(r)

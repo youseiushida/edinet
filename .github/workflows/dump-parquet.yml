@@ -1,0 +1,72 @@
+name: Dump Parquet (process-pool)
+
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "開始日 (YYYY-MM-DD)"
+        required: true
+        type: string
+      end:
+        description: "終了日 (YYYY-MM-DD)"
+        required: true
+        type: string
+      doc_types:
+        description: "書類種別コード (スペース区切り, 空=全有報系)"
+        required: false
+        default: "120"
+        type: string
+      max_workers:
+        description: "ProcessPool ワーカー数"
+        required: false
+        default: "4"
+        type: string
+      concurrency:
+        description: "同時ダウンロード数"
+        required: false
+        default: "16"
+        type: string
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330  # 5.5h (6h 上限に余裕)
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Install dependencies
+        run: uv sync --extra analysis
+
+      - name: Install taxonomy
+        run: |
+          uv run python -c "
+          import edinet
+          edinet.configure(api_key='dummy')
+          info = edinet.install_taxonomy(year=2025)
+          print(f'TAXONOMY_PATH={info.path}')
+          " | tee /tmp/taxonomy_env
+          echo "TAXONOMY_PATH=$(grep TAXONOMY_PATH /tmp/taxonomy_env | cut -d= -f2)" >> "$GITHUB_ENV"
+
+      - name: Run dump pipeline
+        env:
+          EDINET_API_KEY: ${{ secrets.EDINET_API_KEY }}
+        run: |
+          uv run python tools/dump_securities_reports.py \
+            --start "${{ inputs.start }}" \
+            --end "${{ inputs.end }}" \
+            --doc-types ${{ inputs.doc_types }} \
+            --process-pool \
+            --max-workers ${{ inputs.max_workers }} \
+            --concurrency ${{ inputs.concurrency }} \
+            --api-key "$EDINET_API_KEY" \
+            --output-dir ./parquet_output
+
+      - name: Upload Parquet artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: parquet-${{ inputs.start }}-${{ inputs.end }}
+          path: ./parquet_output/
+          retention-days: 1
+          compression-level: 0  # Parquet は既に zstd 圧縮済み
