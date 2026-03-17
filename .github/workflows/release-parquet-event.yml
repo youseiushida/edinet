@@ -1,0 +1,202 @@
+name: Release Event-Driven Parquet Dataset (2021-2026)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "リリースタグ"
+        default: "dataset-event-v1"
+        type: string
+      max_parallel:
+        description: "同時実行ジョブ数 (20=全並列, API 429 なら下げる)"
+        default: "20"
+        type: choice
+        options: ["1", "2", "3", "4", "5", "10", "20"]
+
+# データ存在期間 (2026-03-17 調査):
+#   350/360 大量保有報告書      2021-06〜
+#   030     有価証券届出書       2021-06〜
+#   240     公開買付届出書       2021-03〜 (極少)
+#   180/190 臨時報告書           2024-06〜
+#   220     自己株券買付状況報告書 2025-06〜
+
+jobs:
+  # ================================================================
+  # 1. Draft Release を作成
+  # ================================================================
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ inputs.tag }}" \
+            --draft \
+            --title "EDINET Event-Driven Parquet Dataset 2021-2026" \
+            --notes "$(cat <<'EOF'
+          ## EDINET イベントドリブン Parquet データセット (2021-2026)
+
+          臨時報告書・大量保有報告書・有価証券届出書・自己株券買付状況報告書・
+          公開買付届出書を半年ごとに Parquet 化したデータセット。
+
+          ### 含まれる書類種別
+          | コード | 書類名 | データ開始 |
+          |--------|--------|-----------|
+          | 180 | 臨時報告書 | 2024-H1 |
+          | 190 | 訂正臨時報告書 | 2024-H1 |
+          | 350 | 大量保有報告書 | 2021-H1 |
+          | 360 | 訂正大量保有報告書 | 2021-H1 |
+          | 030 | 有価証券届出書 | 2021-H1 |
+          | 220 | 自己株券買付状況報告書 | 2025-H1 |
+          | 240 | 公開買付届出書 | 2021-H1 |
+
+          ### Parquet テーブル
+          - `filings.parquet` — 書類メタデータ
+          - `line_items.parquet` — 数値 Fact
+          - `text_blocks.parquet` — テキスト Fact
+          - `contexts.parquet` — コンテキスト情報
+          - `dei.parquet` — Document and Entity Information
+          - `calc_edges.parquet` — 計算リンクベース
+          - `def_parents.parquet` — 定義リンクベース
+
+          ### prefix 命名規則
+          `{書類種別コード}_{start}_{end}_` (例: `180_2025-01-01_2025-06-30_`)
+
+          ### 使い方
+          ```python
+          import tarfile, edinet
+
+          with tarfile.open("edinet-event-2025-H1.tar") as tf:
+              tf.extractall("./data/event-2025-H1")
+
+          for prefix in ["180_2025-01-01_2025-06-30_", "350_2025-01-01_2025-06-30_"]:
+              for filing, stmts in edinet.iter_parquet("./data/event-2025-H1", prefix=prefix):
+                  ...
+          ```
+
+          ### 生成環境
+          - `adump_to_parquet_process_pool(max_workers=4, concurrency=16)`
+          - GitHub Actions `ubuntu-latest` (4 vCPU, 16 GB RAM)
+          - 圧縮: zstd
+          EOF
+          )" \
+            || echo "Release already exists, continuing..."
+
+  # ================================================================
+  # 2. 半年ごとに dump → tar → Release にアップロード
+  # ================================================================
+  dump:
+    needs: create-release
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(inputs.max_parallel) }}
+      matrix:
+        include:
+          # ── 2021: 350/360/030/240 のみ ──
+          - { start: "2021-01-01", end: "2021-06-30", label: "2021-H1",
+              doc_types: "350 360 030 240" }
+          - { start: "2021-07-01", end: "2021-12-31", label: "2021-H2",
+              doc_types: "350 360 030 240" }
+          # ── 2022-2023: 同上 ──
+          - { start: "2022-01-01", end: "2022-06-30", label: "2022-H1",
+              doc_types: "350 360 030 240" }
+          - { start: "2022-07-01", end: "2022-12-31", label: "2022-H2",
+              doc_types: "350 360 030 240" }
+          - { start: "2023-01-01", end: "2023-06-30", label: "2023-H1",
+              doc_types: "350 360 030 240" }
+          - { start: "2023-07-01", end: "2023-12-31", label: "2023-H2",
+              doc_types: "350 360 030 240" }
+          # ── 2024: +180/190 (臨時報告書) ──
+          - { start: "2024-01-01", end: "2024-06-30", label: "2024-H1",
+              doc_types: "180 190 350 360 030 240" }
+          - { start: "2024-07-01", end: "2024-12-31", label: "2024-H2",
+              doc_types: "180 190 350 360 030 240" }
+          # ── 2025: +220 (自己株券買付状況報告書) ──
+          - { start: "2025-01-01", end: "2025-06-30", label: "2025-H1",
+              doc_types: "180 190 350 360 030 220 240" }
+          - { start: "2025-07-01", end: "2025-12-31", label: "2025-H2",
+              doc_types: "180 190 350 360 030 220 240" }
+          # ── 2026 ──
+          - { start: "2026-01-01", end: "2026-06-30", label: "2026-H1",
+              doc_types: "180 190 350 360 030 220 240" }
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Install dependencies
+        run: uv sync --extra analysis
+
+      - name: Run dump pipeline (${{ matrix.label }})
+        env:
+          EDINET_API_KEY: ${{ secrets.EDINET_API_KEY }}
+        run: |
+          uv run python tools/dump_securities_reports.py \
+            --start "${{ matrix.start }}" \
+            --end "${{ matrix.end }}" \
+            --doc-types ${{ matrix.doc_types }} \
+            --process-pool \
+            --max-workers 4 \
+            --concurrency 16 \
+            --api-key "$EDINET_API_KEY" \
+            --output-dir ./parquet_output
+
+      - name: Create tar and check size
+        run: |
+          cd parquet_output
+          tar cf "../edinet-event-${{ matrix.label }}.tar" *.parquet dump_report.txt 2>/dev/null || \
+          tar cf "../edinet-event-${{ matrix.label }}.tar" *.parquet
+          cd ..
+          SIZE=$(stat --format=%s "edinet-event-${{ matrix.label }}.tar")
+          SIZE_MB=$((SIZE / 1024 / 1024))
+          echo "edinet-event-${{ matrix.label }}.tar: ${SIZE_MB} MB"
+          if [ "$SIZE" -gt 2040109465 ]; then
+            echo "::error::tar が 2GB を超えています (${SIZE_MB} MB)。四半期分割が必要です。"
+            exit 1
+          fi
+
+      - name: Upload to release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release upload "${{ inputs.tag }}" \
+            "edinet-event-${{ matrix.label }}.tar" \
+            --clobber
+
+  # ================================================================
+  # 3. 全アセット確認 → Release を公開
+  # ================================================================
+  finalize:
+    needs: dump
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check and publish release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "=== Uploaded Assets ==="
+          gh release view "${{ inputs.tag }}" --json assets \
+            -q '.assets[] | "\(.name)\t\(.size / 1024 / 1024 | floor) MB"'
+
+          ASSET_COUNT=$(gh release view "${{ inputs.tag }}" --json assets -q '.assets | length')
+          EXPECTED=11
+          echo ""
+          echo "Assets: ${ASSET_COUNT} / ${EXPECTED}"
+
+          if [ "$ASSET_COUNT" -eq "$EXPECTED" ]; then
+            gh release edit "${{ inputs.tag }}" --draft=false
+            echo "Release published!"
+          else
+            echo "::warning::${ASSET_COUNT}/${EXPECTED} assets uploaded. Release remains draft. Re-run failed jobs to complete."
+          fi

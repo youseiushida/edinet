@@ -628,14 +628,9 @@ def _parse_lab_xml_tree(root: etree._Element) -> dict[_LabelKey, str]:
     # Step 3: labelArc で接続
     result: dict[_LabelKey, str] = {}
     for arc in root.iter(tag_label_arc):
-        # prohibited/priority 検出
-        if arc.get("use") == "prohibited" or arc.get("priority") is not None:
-            warnings.warn(
-                "labelArc に use='prohibited' または priority 属性が検出されました。"
-                "v0.1.0 では arc override の完全処理は行いません",
-                EdinetWarning,
-                stacklevel=2,
-            )
+        # use='prohibited' の arc はラベル無効化を意味するのでスキップ
+        if arc.get("use") == "prohibited":
+            continue
         from_key = arc.get(attr_xlink_from)
         to_key = arc.get(attr_xlink_to)
         if from_key in loc_map and to_key in label_map:

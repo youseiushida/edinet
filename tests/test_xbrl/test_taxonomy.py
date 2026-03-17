@@ -441,8 +441,8 @@ class TestP1Additional:
             result[("jppfs_cor", "Assets", ROLE_TOTAL, "ja")] == "資産合計"
         )
 
-    def test_prohibited_arc_warns(self) -> None:
-        """use='prohibited' の labelArc で EdinetWarning が発行される。"""
+    def test_prohibited_arc_skipped(self) -> None:
+        """use='prohibited' の labelArc はスキップされラベルが登録されない。"""
         xml_str = """\
 <?xml version="1.0" encoding="UTF-8"?>
 <link:linkbase xmlns:link="http://www.xbrl.org/2003/linkbase"
@@ -458,8 +458,8 @@ class TestP1Additional:
       xlink:from="Item1" xlink:to="label_Item1" use="prohibited"/>
   </link:labelLink>
 </link:linkbase>"""
-        with pytest.warns(EdinetWarning, match="prohibited"):
-            _parse_lab_xml_bytes(xml_str.encode("utf-8"))
+        result = _parse_lab_xml_bytes(xml_str.encode("utf-8"))
+        assert result == {}
 
     def test_load_filer_labels_warns_without_clear(
         self, resolver: TaxonomyResolver
