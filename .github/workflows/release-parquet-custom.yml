@@ -1,0 +1,132 @@
+name: Release Parquet Dataset (Custom Range)
+
+on:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: "開始日 (YYYY-MM-DD)"
+        required: true
+        type: string
+      end:
+        description: "終了日 (YYYY-MM-DD)"
+        required: true
+        type: string
+      tag:
+        description: "リリースタグ"
+        required: true
+        type: string
+      label:
+        description: "ファイル名ラベル (edinet-{label}.tar)"
+        required: true
+        type: string
+      doc_type_preset:
+        description: "書類種別プリセット"
+        default: "securities"
+        type: choice
+        options:
+          - "securities"
+          - "event"
+          - "all"
+          - "custom"
+      custom_doc_types:
+        description: "custom 選択時の書類種別コード (スペース区切り, 例: 120 130 350)"
+        default: ""
+        type: string
+
+# プリセット定義:
+#   securities: 120 130 140 150 160 170 (有報系統)
+#   event:      180 190 350 360 030 220 240 (イベントドリブン系)
+#   all:        上記すべて
+#   custom:     custom_doc_types で自由指定
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Install dependencies
+        run: uv sync --extra analysis
+
+      - name: Resolve doc types
+        id: resolve
+        run: |
+          case "${{ inputs.doc_type_preset }}" in
+            securities) DOC_TYPES="120 130 140 150 160 170" ;;
+            event)      DOC_TYPES="180 190 350 360 030 220 240" ;;
+            all)        DOC_TYPES="120 130 140 150 160 170 180 190 350 360 030 220 240" ;;
+            custom)     DOC_TYPES="${{ inputs.custom_doc_types }}" ;;
+          esac
+          if [ -z "$DOC_TYPES" ]; then
+            echo "::error::書類種別が空です。custom の場合は custom_doc_types を指定してください。"
+            exit 1
+          fi
+          echo "doc_types=$DOC_TYPES" >> "$GITHUB_OUTPUT"
+          echo "書類種別: $DOC_TYPES"
+
+      - name: Run dump pipeline (${{ inputs.label }})
+        env:
+          EDINET_API_KEY: ${{ secrets.EDINET_API_KEY }}
+        run: |
+          uv run python tools/dump_securities_reports.py \
+            --start "${{ inputs.start }}" \
+            --end "${{ inputs.end }}" \
+            --doc-types ${{ steps.resolve.outputs.doc_types }} \
+            --process-pool \
+            --max-workers 4 \
+            --concurrency 16 \
+            --api-key "$EDINET_API_KEY" \
+            --output-dir ./parquet_output
+
+      - name: Create tar and check size
+        run: |
+          cd parquet_output
+          tar cf "../edinet-${{ inputs.label }}.tar" *.parquet dump_report.txt 2>/dev/null || \
+          tar cf "../edinet-${{ inputs.label }}.tar" *.parquet
+          cd ..
+          SIZE=$(stat --format=%s "edinet-${{ inputs.label }}.tar")
+          SIZE_MB=$((SIZE / 1024 / 1024))
+          echo "edinet-${{ inputs.label }}.tar: ${SIZE_MB} MB"
+          if [ "$SIZE" -gt 2040109465 ]; then
+            echo "::error::tar が 2GB を超えています (${SIZE_MB} MB)。期間を短くしてください。"
+            exit 1
+          fi
+
+      - name: Create release and upload
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "${{ inputs.tag }}" \
+            --title "EDINET Parquet: ${{ inputs.label }} (${{ inputs.start }} ~ ${{ inputs.end }})" \
+            --notes "$(cat <<EOF
+          ## EDINET Parquet データセット: ${{ inputs.label }}
+
+          | 項目 | 値 |
+          |------|-----|
+          | 期間 | ${{ inputs.start }} ~ ${{ inputs.end }} |
+          | 書類種別 | ${{ steps.resolve.outputs.doc_types }} |
+          | プリセット | ${{ inputs.doc_type_preset }} |
+
+          ### 含まれるテーブル
+          - \`filings.parquet\` — 書類メタデータ
+          - \`line_items.parquet\` — 数値 Fact
+          - \`text_blocks.parquet\` — テキスト Fact
+          - \`contexts.parquet\` — コンテキスト情報
+          - \`dei.parquet\` — Document and Entity Information
+          - \`calc_edges.parquet\` — 計算リンクベース
+          - \`def_parents.parquet\` — 定義リンクベース
+
+          ### 生成環境
+          - \`adump_to_parquet_process_pool(max_workers=4, concurrency=16)\`
+          - GitHub Actions \`ubuntu-latest\`
+          - 圧縮: zstd
+          EOF
+          )" \
+            || echo "Release already exists, uploading to existing..."
+
+          gh release upload "${{ inputs.tag }}" \
+            "edinet-${{ inputs.label }}.tar" \
+            --clobber

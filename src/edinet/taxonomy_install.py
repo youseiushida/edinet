@@ -41,22 +41,23 @@ logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 
 # 金融庁公式サイトのタクソノミ公開ページ URL マッピング。
-# key: 年度 (int), value: (FSA公開日文字列, タクソノミフォルダ名)
+# key: 年度 (int), value: (FSA公開日文字列, タクソノミフォルダ名, ZIPファイル名)
 # フォルダ名は ZIP 内の日付ベース・EDINET ダウンロードページの選択肢に対応。
-_KNOWN_VERSIONS: dict[int, tuple[str, str]] = {
-    2026: ("20251111", "ALL_20251101"),
-    2025: ("20241112", "ALL_20241101"),
-    2024: ("20231211", "ALL_20231201"),
-    2023: ("20221108", "ALL_20221101"),
-    2022: ("20211109", "ALL_20211101"),
-    2021: ("20201110", "ALL_20201101"),
-    2020: ("20191101", "ALL_20191101"),
-    2019: ("20190228", "ALL_20190228"),
-    2018: ("20180228", "ALL_20180228"),
+_KNOWN_VERSIONS: dict[int, tuple[str, str, str]] = {
+    2026: ("20251111", "ALL_20251101", "1c_Taxonomy.zip"),
+    2025: ("20241112", "ALL_20241101", "1c_Taxonomy.zip"),
+    2024: ("20231211", "ALL_20231201", "1c_Taxonomy.zip"),
+    2023: ("20221108", "ALL_20221101", "1c_Taxonomy.zip"),
+    2022: ("20211109", "ALL_20211101", "1c_Taxonomy.zip"),
+    2021: ("20201110", "ALL_20201101", "1c_Taxonomy.zip"),
+    2020: ("20191101", "ALL_20191101", "1c_Taxonomy.zip"),
+    2019: ("20190228", "ALL_20190228", "1c_Taxonomy.zip"),
+    2018: ("20180228", "ALL_20180228", "1c_Taxonomy.zip"),
+    2017: ("20170228", "ALL_20170228", "1c.zip"),
+    2016: ("20160314", "ALL_20160229", "1c.zip"),
 }
 
 _FSA_BASE_URL = "https://www.fsa.go.jp/search"
-_TAXONOMY_ZIP_NAME = "1c_Taxonomy.zip"
 
 # ZIP 内のトップレベルフォルダ名（Shift-JIS エンコードの「タクソノミ」）。
 # ZIP ファイルによって異なる可能性があるため、ヒューリスティックで判定する。
@@ -76,7 +77,7 @@ def _download_url(year: int) -> str:
     """指定年度のタクソノミ ZIP の FSA ダウンロード URL を構築する。
 
     Args:
-        year: タクソノミ年度（2018–2026）。
+        year: タクソノミ年度（2016–2026）。
 
     Returns:
         ダウンロード URL 文字列。
@@ -89,8 +90,8 @@ def _download_url(year: int) -> str:
         raise EdinetConfigError(
             f"タクソノミ年度 {year} は不明です。利用可能な年度: {available}"
         )
-    fsa_date, _ = _KNOWN_VERSIONS[year]
-    return f"{_FSA_BASE_URL}/{fsa_date}/{_TAXONOMY_ZIP_NAME}"
+    fsa_date, _, zip_name = _KNOWN_VERSIONS[year]
+    return f"{_FSA_BASE_URL}/{fsa_date}/{zip_name}"
 
 
 def _folder_name(year: int) -> str:
@@ -102,7 +103,7 @@ def _folder_name(year: int) -> str:
     Returns:
         フォルダ名（例: ``"ALL_20251101"``）。
     """
-    _, folder = _KNOWN_VERSIONS[year]
+    _, folder, _ = _KNOWN_VERSIONS[year]
     return folder
 
 
